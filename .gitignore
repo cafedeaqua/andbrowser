@@ -1,0 +1,44 @@
+# Python bytecode, local environments, and tool caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local secrets (keep sanitized example configuration files)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Generated crawl backups and reports; keep a separate backup outside Git.
+/archive/
+
+# Generated distribution ZIPs at the repository root only.
+# Downloadable files inside static-site/ must remain trackable.
+/andbrowser-backup-*.zip
+/andbrowser-static-*.zip
+
+# Temporary files from initial connectivity checks
+/headers.txt
+/homepage.html
+
+# OS metadata and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.swp
+*.swo
+*~
+
+# Intentionally tracked:
+# static-site/           Public HTML, images, CSS, and downloadable assets
+# *.py                  Migration and validation scripts
+# sitemap-urls.json     Source URL inventory
+# README.md             Project documentation
