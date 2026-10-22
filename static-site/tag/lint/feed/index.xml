@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; lint</title>
+	<atom:link href="http://andbrowser.com/tag/lint/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/lint/feed/" />
+		<item>
+		<title>Android Development Tools(ADT) 21 preview 3,4,5の更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/</link>
+		<comments>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/#comments</comments>
+		<pubDate>Wed, 26 Sep 2012 12:48:15 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1037</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21 preview 3,4,5の更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/09/adt21preview345.png" alt="Android Development Tools-ver21-preview3-4-5" title="adt-ver21-preview3-4-5" width="500" class="aligncenter size-full wp-image-1041" /></p>
+<h4>
+<b>ADT 21 Preview 5の新機能</b><br />
+</h4>
+<div>
+<b>Preview 5 にはたくさんの不具合修正が含まれています。</b>それに加えて、以下の変更が入っています。
+</div>
+<div>
+<ul>
+<li>ビルドシステム</li>
+<ul>
+<li>適切に適用されたライブラリクラスに対するマニフェストの結合に関する修正
+</li>
+<li>ライブラリ群（jarファイルとライブラリプロジェクトの両方）は、ビルド時間を改良するために、pre-dexed されます。
+</li>
+<p><span id="more-1037"></span></p>
+<li>ライブラリクラスの R クラスは ライブラリに必要な ID のみが生成されます。これは フィールドやメソッドの上限に dex ファイルがヒットするリスクを減らすためです。
+</li>
+<li>いくつかの編集機能（コード補完、リソース選択、宣言へ飛ぶ）がライブラリプロジェクトのリソースに対しても適切に実行できる。
+</li>
+</ul>
+<li>Lint</li>
+<ul>
+<li>新規チェック項目が追加<br />
+アプリのバックアップを許可するかどうかを明確に決めるべきであり、そのラベルチェックを実施。<br />
+ライブラリパスの設定に関する新しいコマンドラインフラグを追加。<br />
+編集時の lint 分析に関するたくさん改良を実施。
+</li>
+</ul>
+<li>レイアウト エディタ</li>
+<ul>
+<li>レイアウトエディタはシングルエディタの中のシングルレイアウトのすべての変更を強制しません。例えば、ランドスケープとポートレートの２つのバージョンのレイアウトを異なるエディタで編集可能ですし、それらの間をすぐに切り替え可能です。もしくは、同時にそれらを編集して組み合わせることもできます。もし、以前の振る舞いを希望する場合は、設定のAndroid &gt; Editor で以前の不具合に変更できます。
+</li>
+<li>configuration chooserのデバイスメニューに関する改良</li>
+<li>カスタムビューのレンダリング中や構築中に例外がスローされた場合に、レイアウトエディタのエラーをボトムにスタックトレースの関連部分が表示されますし、スタックフレームがハイパーリンクされます。
+</li>
+</ul>
+<li>エディタ
+</li>
+<ul>
+<li>IDEは最後に編集したXMLかグラフィカルモードかどうかを記憶（たとえば、レイアウト、マニフェスト、値の編集）しますし、新しく開いたファイルに同じモードを適用します。これは、ちょうどXMLファイルを編集しようとしたときに、IDEはエディタの種類をXMLエディタを表示しようとします。
+</li>
+<li>valueの中の属性(Attributes)とリソース(resources)はセーブするたびに有効化されます。
+</li>
+</ul>
+<li>GLトレース
+</li>
+<ul>
+<li>imagesとframesをエクスポートするための能力
+</li>
+</ul>
+</ul>
+</div>
+<h4>
+<b>ADT 21 Preview 4の新機能</b><br />
+</h4>
+<div>Preview 4にはたくさんの不具合修正が含まれています。それに加えて、少しの新規の Lint チェックが追加されてます。
+</div>
+<div>
+<ul>
+<li>Lintは、ロケールに関する破壊を行うコードを検索します。例えば、書式付文字列の定義や、パフォーマンス低下の要因や明確なロケール定義がない場合などです。
+</li>
+<li>マニフェストにクラス定義が存在しないように見える場合。例えば、削除されたり、リネームされたり、マニフェストの更新なしに移動されたり、タイプミスしたような場合。
+</li>
+<li>デフォルトのパブリックコンストラクタが明示されていないマニフェストの中で定義されているアクティビティやサービスやアプリケーションを検出する。誤って登録されたインタークラスもフラグ付します（<code>$</code>をセパレータとして利用する代わりに . を使っている場合）
+</li>
+<li>
+<code>View#setTag()</code> を利用したり、もう１つのViewをpassさせた結果によるリークを検出する。
+</li>
+<li>リソースエイリアスファイルの誤った利用方法を検出
+</li>
+<li>
+<code>SparseArray&lt;Integer&gt;</code>のかわりに<code>SparseIntArray</code>の利用を提案する
+</li>
+<li>最も知られているバージョンのプラットフォームをターゲットとしていないアプリに警告を出します。<br />
+これは、様々な互換性を保つためであり、アプリケーションを広めるためです。
+</li>
+</ul>
+<div>新規lint チェック以外にもいくつかの改良を実施。
+</div>
+<ul>
+<li>Systraceを DDMS に統合
+</li>
+<li>F2を押した場合のレイアウトエディタのデフォルト動作を定義。例えば、ボタンやテキストビューをドラッグした後に F2 を押すとテキストの編集が可能<br />
+<img border="0" src="https://sites.google.com/a/android.com/tools/_/rsrc/1347318021776/download/adt-21-preview/menu.png.1347318021534.png" style="display:block;margin-top:5px;margin-bottom:5px;margin-right:auto" />
+</li>
+<li>
+<i>Rename</i> ショートカットを利用して ID を変更可能</p>
+<li>
+&#8220;<i>Add Locale&#8230;</i>&#8221; アクションを利用して簡単にロケールを追加可能。さらに新しい値をフォルダに追加し、新しいロケール向けの翻訳文字セットを編集できるようにします。<br />
+</p>
+<div style="display:block;text-align:left">
+<a href="https://sites.google.com/a/android.com/tools/download/adt-21-preview/translation2.png.1347318554531.png?attredirects=0" imageanchor="1"><br />
+<img border="0" src="https://sites.google.com/a/android.com/tools/_/rsrc/1347318554817/download/adt-21-preview/translation2.png.1347318554531.png" /><br />
+</a>
+</div>
+</li>
+<li>
+<div style="display:block;text-align:left">
+<div style="display:block;text-align:left">
+<p>初期化中や描画中に例外が投げられたカスタムビュー（もしくは間違った設定をしたビュー）は、レイアウトエディタ内にスタックトレースが表示されて、関連するスタックフレームにジャンプすることができます。
+</p></div>
+</div>
+</li>
+</ul>
+</div>
+<h2><b>ADT 21 Preview 3の新機能</b></h2>
+<ul>
+<li>Preview 3は、<b>たくさんの不具合修正を実施</b><br />
+＃それだけかよ（ｗ
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2 更新情報</a></li><li><a href="http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.1 更新情報</a></li><li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 21.1.0 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/" />
+	</item>
+		<item>
+		<title>Android Lint 解析内容の詳細を調査</title>
+		<link>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/</link>
+		<comments>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/#comments</comments>
+		<pubDate>Sun, 25 Dec 2011 12:54:11 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=787</guid>
+		<description><![CDATA[Android Lint 解析内容の詳細を調査]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_android_list_check.png" alt="android lint check detail" title="android lint check detail" width="578" height="284" class="aligncenter size-full wp-image-809" /></p>
+<h4>Android Lintの解析内容の詳細</h4>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>については、<a href="http://andbrowser.com/development/knowhow/712/android-lint/">前のエントリ</a>をご参照ください。このエントリでは、以下の<code>lintコマンド</code>で表示される lint の解析内容をカテゴリごとに整理し、指摘事項の詳細をまとめました。。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show
+</pre>
+<p><span id="more-787"></span></p>
+<p>以下の詳細を見る前にいくつかポイントを整理しておきます。</p>
+<ul>
+<li>優先度(Priority)は数字が大きい（10が最大）ものが高いことを意味します。
+<li>重要性（severity)は変更可能。全プロジェクトのみではなく、各プロジェクトごとにも設定可能。変更は、eclipse > preference > Android > Lint Error Checking で実施。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_lint_detail.png" alt="android lint preference" title="android lint preference" width="105%"/></p>
+<li>セーブ時に一部チェックの自動適用の可否を設定可能
+<li>アプリパッケージ作成時のフルチェックの可否を設定可可能
+<li>指摘項目は適時更新されて追加しているため、掲載不足のものもあります。それらは、<code>lint --showコマンド</code>か preference の Lint Error Checking で詳細をご覧ください。
+<li>エラーが発生すると apk 作成を中止するため、重要性(severity)を警告からエラーにする場合は熟慮することをお薦めします。
+</ul>
+<h4>Lintの解析項目一覧</h4>
+<table width="100%" class="lint_detail">
+<tr>
+<th width="10%">カテゴリ<br />Category</th>
+<th width="5%">ID</th>
+<th width="15%">概要<br />Name</th>
+<th width="5%">優先度<br />Priority</th>
+<th width="5%">重要性<br />Severity</th>
+<th width="60%">詳細<br />Detail</th>
+</tr>
+<tr>
+<td>正確性</td>
+<td>AdapterViewChildren</td>
+<td>XML内の子Viewとして定義されていない AdapterView かどうかを調査</td>
+<td>10/10</td>
+<td>警告</td>
+<td>ListViewのようなAdapterViewは、ListAdapterのようなもので、Javaコードからデータを設定しなければなりません。より詳細は、<a href="http://developer.android.com/reference/android/widget/AdapterView.html">http://developer.android.com/reference/android/widget/AdapterView.html</a>を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>MissingPrefix</td>
+<td>Androidネームスペースで利用されていないXML属性を発見</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Android viewたちのほとんどは、Androidネームスペースの属性をもっています。これらの属性を参照する場合は、必ずネームスペースの接頭語をつけるべきです。さもないとカスタム属性として aapt に解釈されます。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>MissingTranslation</td>
+<td>全文字列が翻訳済みかどうかの完全性を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>もしアプリが１言語よりも多い言語をサポートする場合、１言語の全文字列が他の言語にも翻訳されているべきです。標準では、この検出は　言語の地域たちに提供されます。ちょど文字列のサブセットとして提供されたり、標準の言語文字列の代替になります。すべての地域に対して、完全な翻訳を提供するために ANDROID_LINT_COMPLETE_REGIONSという環境変数をセットすることによって、強制できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>Proguard</td>
+<td>proguard.cfg ファイルの問題を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>proguard.cfg ファイルで -keepclasseswithmembernames を利用することは、正しくありません。なぜなら、ADTの新しいバージョンで作成される proguard.cfg ファイルは異なるフォーマットになるためです。<br />-keepclasseswithmembernames の代わりにkeepclasseswithmembers を利用してください。なぜなら過去のフラグもまた、XMLからでJava(CustomViewsのようなもの)でなく参照されるシンボルのみの&quot;allow shrinking&quot;を示しているためです。<br />より詳細情報は、<a href="http://code.google.com/p/android/issues/detail?id=16384">http://code.google.com/p/android/issues/detail?id=16384</a> を見てください。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewCount</td>
+<td>ScrollViewが正しく子ウィジェットが保持しているかを調査</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Scrollviewは1つの子ウィジェットのみを保持できます。もし２つ以上の子を持ちたければ、コンテナレイアウトにまとめて保持させましょう。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIds</td>
+<td>シングルレイアウトの中で同じIDが存在するかどうかの調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>レイアウトの中で、IDは一意であるべきです。さもないと findViewById() が予期せぬviewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>InconsistentArrays</td>
+<td>配列の要素数に矛盾がないかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>配列が他の地域向けに翻訳されるときに、一般的にはオリジナルな配列と同様の要素数にすべきです。配列を追加や削除したときに、すべての地域の更新を簡単に忘れてしまいます。そんため、lint の警告はこれらの矛盾を検出します。</p>
+<p>注意：しなしながら本当にそれぞれの設定において（例えば、存在するオプションに相当する配列やそれらのオプションが異なるレイアウトの向きやそれ上の違いがある場合）配列アイテムの要素数が異なるものを利用したい理由がある場合は、自らの判断でエラーかどうかを判断して利用してください。<br />もし間違ったエラーがプロジェクト内にある場合は、そのエラータイプを抑止できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>NestedScrolling</td>
+<td>スクロールするウィジェットが何かのスクロールするウィジェットの中に入っているかかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollViewのようなスクロールするViewは、重要なユーザビリティ問題のため、何かのネストされたスクロールウィジェットを中に含めるべきではありません。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewSize</td>
+<td>ScrollViewがスクロール範囲の中で WRAP_CONTENT を利用しているかどうかをチェック</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollView の子たちは、layout_width か layout_height 属性に wrap_content よりもむしろ fill_parent か match_parent をスクロール領域の中で指定すべきです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIncludedIds</td>
+<td>include tag を利用して結合したレイアウトにわたって同じIDが利用されているかどうかをチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>同じIDを２つの独立したレイアウトに利用することは良いことです。しかしながら、もしレイアウトを include tag して結合した場合、IDはincludeされたレイアウトの連鎖の中で一意な必要性がある、もしくはActivity#findViewById()は期待しないViewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ExtraTranslation</td>
+<td>利用されていない（標準言語向け文字列で存在しない）ように見える翻訳をチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>もし、ある文字列が特定の言語向けの翻訳ファイルで現れた場合で、標準の地域(locale)に同じ文字列が存在しない場合があれば、たぶんこの文字列は利用されていないだろう。（あなたのアプリが特別な地域(locale)のみで動作するように意図したものであれば、技術的にこの可能性がありますが、しかし代替を準備するよりはまだまだ良案です。）</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>ManifestOrder</td>
+<td>&lt;application&gt;タグの後ろに&lt;uses-sdk&gt;が存在するようなマニフェストの問題を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>&lt;application&gt;タグは、必要なversion情報やfeatureやlibrariesなどの宣言タグの後に現れるべきです。<br />&lt;application&gt;タグがいくつかの他のタグより前に現れたときは過去に複雑なバグが存在しました。<br />そのためロジカルな依存順序でマニフェストに並べるのがベストです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>StateListReachable</td>
+<td>&lt;selector&gt;の中で到達できない状態(state)を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>selectorの中で、state list の最後の子のみが state修飾詞を除外すべきです。もしそうでなければ、リストのすべての次にくる項目は与えられた項目がすべてマッチするために無視されるでしょう。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>GridLayout</td>
+<td>行と列が外部で宣言されているような場合のGridLayoutの潜在的なエラーを調査。</td>
+<td>4/10</td>
+<td>エラー</td>
+<td>GridLayoutのrowCountかcolumnCountのサイズの宣言が外部のlayout_rowやlayout_columnで定義されている場合、たいてい故意ではないエラーになります。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>PxUsage</td>
+<td>&quot;px&quot;単位の利用を調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>パフォーマンスの理由とコードをシンプルに保つために、Androidシステムは指定された範囲のスタンダードなユニットや指定された値のためにピクセルを利用します。<br />この意味はviewの範囲はいつもピクセルを利用してコード上から設定されますが、しかしいつも現在のスクリーン density をベースに設定されます。例えば、もし、myView().getWidth() が10を返すとき、viewは現在の画面の10ピクセルの横の長さがありますが、しかしdensityの高い画面の端末の場合、15を返す可能性があります。もしアプリの中で現在のスクリーンdensityに拡大されないビットマップとともにピクセルの値を利用していると、自らのコードでビットマップリソースを画面に合うようにスケールさせる必要があります。</td>
+</tr>
+<tr>
+<td>セキュリティ</td>
+<td>ExportedService</td>
+<td>パーミッションを必要としない exported Service(&lt;service&gt;タグのandroid:exported=&quot;true&quot;の場合）を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>Exported services(exported=true か intent-filder を含んでいるか、exported=falseを明示していないか）はパーミッションを定義すべきです。これはサービスを起動するか、バインドするために必要です。これがない場合、アプリはこのサービスを利用できません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UseCompoundDrawables</td>
+<td>現在のノードが 複合（compound) drawable を利用した TextView に置き換えられるかどうかを調査</td>
+<td>6/10</td>
+<td>警告</td>
+<td>ImageViewとTextViewを含んだLinearLayoutは、結合したdrawableとして扱われて、パフォーマンスが向上します。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>MergeRootFrame</td>
+<td>ルーツの&lt;FrameLayout&gt;が&lt;merge&gt;タグで置き換えられるかどうかを調査</td>
+<td>4/10</td>
+<td>警告</td>
+<td>&lt;FrameLayout&gt;がレイアウトのルートであり、背景やパディングが提供されていない場合、パフォーマンス向上のために&lt;merge&gt;タグに入れ替えできます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>InefficientWeight</td>
+<td>LinearLayout内で無効な weight 指定を調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>LinearLayoutの中の１つのウィジェットしか weight を定義していないとき、残ったすべてのスペースを割り当てるために、0dpをwidth/heightに設定することによりパフォーマンス向上が見込める。Width/heightに 0dp が定義されている場合は、最初に自身のサイズは計算されません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UnusedResources</td>
+<td>未使用リソースを調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>利用していないリソースは、アプリを大きくし、ビルド時の速度が遅くしてしまいます。</p>
+<p>制限事項：<br />-もしEclipseに関わらずコマンドラインからlintを実行している場合、Javaファイルの解析は正確なパースツリーを利用するよりむしろパターンパッチが適応されます。そのため、結果は正確ではありません。（この制限は将来対応予定です。）<br />-解析は、ライブラリプロジェクトで定義されているリソースやライブラリプロジェクトが参照しているリソースの間の依存関係を考慮できません。そのとき、リソースはまだ利用されていませんと通知されます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UselessLeaf</td>
+<td>削除可能な子要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子も背景も持たないレイアウトは、よりフラットにしたり効果的なレイアウト階層にするために削除できます（invisibleなため）。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UselessParent</td>
+<td>削除可能な親要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子を持たないレイアウトは、ルートレイアウトか scrollview ではありませんし、背景を持たず、削除可能であり、子たちを親に移動させたり、より効果的なレイアウト階層に変更することができます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>TooDeepLayout</td>
+<td>レイアウト階層が深すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>レイアウトのネストが深すぎる場合はパフォーマンスを低下させます。そのため（RelativeLayoutやGridLayoutのような）フラットなレイアウトの利用を検討してください。標準の最大の深さは10ですが、この設定は環境変数のANDROID_LINT_MAX_DEPTHで設定できます。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>TooManyViews</td>
+<td>viewの数が多すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>１つのレイアウトにたくさんのViewを使うことは、パフォーマンスを低下させます。統合したdrawableや他の仕組みを利用して、レイアウトのviewの数を減らすように検討してください。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UnusedIds</td>
+<td>未使用のIDを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>重要：この設定はデフォルトで無効です。有効にしたい場合は、&#8211;enable UnusedIds を　してください。</p>
+<p>リソースID定義は、どこからも参照されない場合は必要ありません。ID定義を行う場合は、たとえ利用しない場合であっても、レイアウトやメニュー上で簡単に動作するため、悪い考えであり必要ありません。そのため削除したほうがよいでしょう。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ</td>
+<td>TextFields</td>
+<td>inputTypeやヒント設定の間違ったテキストフィールドを調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>テキストフィールドにinputType属性が提供されていることは、ユーザビリティの改善に有効です。なぜなら入力されるデータが独立していて、最適なキーボードをユーザに提供できるためです（電話番号のための数字のみや文字のみのように）。同様に、ヒント属性はユーザにテキストフィールドに何を期待するかを表示することができます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconNoDpi</td>
+<td>nodpiフォルダとdpiフォルダの両方にアイコンが存在するかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>drawable-nodpiフォルダのビットマップは、Androidフレームワークによってスケールされません。もし同じ名前のdrawableリソースが drawable-hdpiのようなdpiフォルダと同様に-nodpiフォルダに存在する場合、あいまいであり、国際化できない振る舞いになります。<br />１つか他のものを削除して、他のアイコンを利用してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>GifUsage</td>
+<td>GIFファイル（非推奨）が利用されてる画像を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>.gifファイルフォーマットは非推奨です。.pngか.jpgの利用を検討してください。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDipSize</td>
+<td>densityごとのアイコンたちが概ね同じdensity-independentサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>複数のdensityに提供されるすべてのアイコンがチェックされて、すべてが同じdensity非依存ピクセル(dpi)サイズであることを計算します。これは画像が異なるフォルダに入っていたり、アイコンがいくつかのフォルダが忘れられて新しいサイズに変更されるエラーを検出します。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicatesConfig</td>
+<td>様々設定パラメータを通した同一のビットマップのアイコンを探索</td>
+<td>5/10</td>
+<td>警告</td>
+<td>もしアイコンがdrawable-hdpiか-v11のような異なる設定パラメータで提供された場合、それらは一般的に異なるものです。この検出は、同じアイコンが国際化ではなく異なる設定フォルダーに提供されている場合に動作します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconExpectedSize</td>
+<td>ランチャーアイコン、ノーティフィケーションアイコンなどが正しいサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>ランチャーアイコンには事前に定義されたサイズがあります（それぞれのdensityごとに）。これらの規約に従う必要があり、アイコンをプラットフォームごとにフィットさせる必要があります。<br />より詳細は、<a href="http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size">http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size</a> を参照してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconLocation</td>
+<td>densityごとのdrawableフォルダに画像が配置されていないことを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>res/drawableフォルダは、XML内にshapeで定義されたような density非依存なグラフィックスのために定義されています。ビットマップの場合、drawable-mdpiに移動したり、より高い解像度や低い解像度のものをdrawable-ldpiやdrawable-hdpiやdrawable-xhdpiに振り分ける検討を行いますもし、アイコンが&quot;本当に&quot;density 非依存の場合（たとえば、solid color）、drawable-nodpi フォルダに入れられます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDensities</td>
+<td>すべてのサポートされるdensity に対してアイコンのカスタムバージョンを提供することを確認する</td>
+<td>4/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、それぞれのアイコンたちが density の種別を完全にカバーしていないかどうかをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicates</td>
+<td>他の名前でコピーされたアイコンを探索</td>
+<td>3/10</td>
+<td>警告</td>
+<td>もしアイコンが他の名前で再利用されている場合、統合して１つのみを利用するようにしたり、他を削除してアプリをより小さくできます。<br />しかしながら、複製されたアイコンは通常国際化されなかったり、ときどき上書きされたり、更新忘れが発生します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconMissingDensityFolder</td>
+<td>すべてのdensity フォルダが準備さされていることを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、特定フォルダが drawable-hdpi のように間違っていたりすることをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>アクセシビリティ</td>
+<td>ContentDescription</td>
+<td>イメージウィジェットがコンテンツの説明を提供しているかどうかを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>ImageViewやImageButtonのようなテキストではないウィジェットは、画面でよめたり、他のアクセサビリティツールが十分にユーザインタフェースを保持できるようにウィジェットのテキスト説明文で特定できるように、contentDescription属性を利用すべきです。</td>
+</tr>
+<tr>
+<td>国際化</td>
+<td>HardcodedText</td>
+<td>リソースに定義すべき、ハードコードされた文字列属性を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>レイアウトファイル内で直接ハードコードされたテキスト属性は、以下のいくつかの理由により駄目です。<br />-コンフィルレーションの種類が作られたとき（例えば、landscapeかportraitかのような）には、正確なテキストを繰り返し利用すべきです。（変更時に最新の状態をキープするため）<br />-アプリは既存の文字列リソースを新しい言語に翻訳したいとときにすぐに、他の言語に翻訳できない。</td>
+</tr>
+</table>
+<p>Antoid Lint はまだまだ開発が並行して進んでいるため、上記のID以外にもこれからどんどん追加されていくと思います。このスピード感と様々なオープンテクノロジーの採用（Lintもそのうちの１つ）が Android 普及の鍵だと感じているので、もっと進んでいってもらいたいと個人的には思っています。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/2780/20140627_sdk_manager_material_ver3/" rel="bookmark" class="wherego_title">(2014/06/27時点)SDK Managerが取得するXMLデータ一覧（その３）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/" />
+	</item>
+		<item>
+		<title>Android Lint の利用方法</title>
+		<link>http://andbrowser.com/development/knowhow/712/android-lint/</link>
+		<comments>http://andbrowser.com/development/knowhow/712/android-lint/#comments</comments>
+		<pubDate>Sun, 18 Dec 2011 12:55:16 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=712</guid>
+		<description><![CDATA[Android Lint の利用方法を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111218_AndroidLint.png" alt="Android Lint" title="Android Lint" width="508" height="274" class="aligncenter size-full wp-image-713" /></p>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://tools.android.com/tips/lint">Android Lint</a></h4>
+<p>Android Lintは、ADT16(とSDK Tools 16)のための新しいツールです。これは、Androidプロジェクトのソースコードの潜在的な不具合を発見するためのものです。このツールは、Eclipseに統合されて利用されます。アーキテクチャは、意図的に IDE と依存関係を持っていません。そのため、継続的インテグレーションシステム(CI)のようなシステムと同様に他のIDEやビルドツールにも統合されることが望まれています。</p>
+<p><span id="more-712"></span></p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-html-small.png" alt="" title="lint-html-small" width="330" height="294" class="aligncenter size-full wp-image-745" /></p>
+<p>以下に不具合の種類をいくつかの例を交えて紹介します。</p>
+<ul>
+<li>翻訳の失敗（と、利用されていない翻訳）
+<li>レイアウトパフォーマンスの問題（以前の layoutopt ツールで発見されていたものとそれより多くのもの）
+<li>未使用のリソース
+<li>矛盾する配列サイズ（配列がマルチ構成で定義されている場合）
+<li>アイコンに関する問題（densityの間違いやアイコンのコピーや間違ったサイズなど）
+<li>ユーザビリティに関する問題（テキストフィールドに入力種類が指定されていないのようなもの）
+<li>Manifestのエラーに関すること
+<li>その他、たくさんのこと
+</ul>
+<p>2011/11/24：<a href="http://tools.android.com/recent/newlintrules">いくつかの新しい lint ルールを追加</a></p>
+<p>この<a href="http://tools.android.com/tips/lint-checks">ドキュメント</a>を参照してください。これには lint で現在チェックされるすべての項目が掲載されています。<br />
+Lint はまだ開発中のため、このリストは将来追加されていきます。加えて、将来カスタムなチェック項目を（できる限り簡単に）追加できるようなAPIを開発しています。</p>
+<h4>コマンドライン利用方法</h4>
+<p><code>lint</code>というコマンドラインツールが SDK tools/ ディレクトリに提供されています。<br />
+もしSDK tools/ ディレクトリにパスが通っていれば “<code>lint</code>”を実行できます。<br />
+実行時にAndroidプロジェクトディレクトリを指定してください。任意のディレクトリが指定可能で、(Androidプロジェクトではない場合）再帰的に探索されますし、ディレクトリ内のすべてのプロジェクトがチェック対象になります。（さらにスペース区切りで複数のプロジェクトを指定することもできます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint /src/astrid/
+Scanning GreenDroid-GoogleAPIs: ..
+Scanning stream: ...
+Scanning api: ...........................
+Scanning GDCatalog: .......................
+Scanning GreenDroid: ...........................................................
+Scanning tests: ...
+Scanning filters: ....
+Scanning tests: .....
+Scanning astrid: ....................................................................................................................................................
+Scanning simple: .......
+api/res/values-ca: Error: Locale ca is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+astrid/res/values-ca: Error: Locale ca is missing translations for: DLG_cancel, DLG_dismiss, DLG_ok, EPr_deactivated... (117 more) [MissingTranslation]
+api/res/values-cs: Error: Locale cs is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+(many lines omitted)
+43 errors, 466 warnings
+</pre>
+<h5>チェックの無効化</h5>
+<p>エラーメッセージの後に、鍵括弧（[や]）でエラーの様々な種別を表す id が表示されます。<br />
+上記の “MissingTranslation” のようなものです。<br />
+指定したチェック項目やチェックのリストを &#8211;disable オプションを追加することによって無効化できます。<br />
+例えば以下のように。<br />
+<script class="brush: shell;" type="syntaxhighlighter">
+$ lint --disable MissingTranslation,UnusedIds,Usability:Icons /src/astrid/
+</script></p>
+<p>Usability カテゴリーの Icons サブカテゴリーのように、上記の “Usability:Icons” の記載を行い、カテゴリーリストを作成できます。<br />
+デフォルトではいくつかのチェックが無効化されています。それらは、 &#8211;enable フラグを追加することによって有効化できます。<br />
+最終的に、&#8211;check フラグを利用して正確に確認できます。以下のようにコードベース内の特定の問題を見つけられます。<br />
+<script class="brush: shell;" type="syntaxhighlighter">
+$ lint --check MissingPrefix /src/astrid/
+</script></p>
+<p>利用可能な id とカテゴリーは以下のように探せます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --list
+Valid issue categories:
+Correctness
+Security
+Performance
+Usability
+Usability:Icons
+Accessibility
+Internationalization
+
+Valid issue id's:
+"ContentDescription": Ensures that image widgets provide a contentDescription
+"DuplicateIds": Checks for duplicate ids within a single layout
+"StateListReachable": Looks for unreachable states in a &lt;selector&gt;
+"InefficientWeight": Looks for inefficient weight declarations in LinearLayouts
+"ScrollViewSize": Checks that ScrollViews use wrap_content in scrolling dimension
+"MergeRootFrame": Checks whether a root &lt;FrameLayout&gt; can be replaced with a &lt;merge&gt; tag
+...
+</pre>
+<p>各項目の利用方法を取得できます。&#8211;show コマンドオプションに id やカテゴリーを指定してください。（引数を省略するとすべての説明が見れます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show MissingPrefix
+MissingPrefix
+-------------
+Summary: Detect XML attributes not using the Android namespace
+
+Priority: 8 / 10
+Severity: Warning
+Category: Correctness
+
+Most Android views have attributes in the Android namespace. When
+referencing these attributes you *must* include the namespace prefix,
+or your attribute will be interpreted by aapt as just a custom
+attribute.
+</pre>
+<h5>HTML レポート</h5>
+<p>コマンドラインツールからHTMLレポートも作成できます。生の lint 出力よりもいくつかの以下の利点があります。</p>
+<ul>
+<li>各項目ごとにより詳細な説明が記載されます。それにハイパーリンクを用いて各項目の属性やより詳細情報を提供できます。
+<li>エラーが存在する実際のソースコードを掲載できます（エラーの周りの3行程度）
+<li>ソースファイルを結合するリンクを含められます。
+<li>アイコンエラー時に、比較できるようにそれぞれのアイコンをサポートされます。
+</ul>
+<p>HTMLレポートを作成するために、&#8211;html filename の引数を追加してください。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html
+</pre>
+<p>By default, links to source files will just use local file:// path resources. You can remap the URLs to a different prefix with the &#8211;url option. For example:</p>
+<p>デフォルトでは、ローカルファイルの file:// パスを利用してソースファイルをリンクします。&#8211;url オプションを利用して異なる接頭語を利用して URL にリンクできます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html --url /src/MyProj=http://buildserver/src/MyProj
+</pre>
+<h5>その他のコマンドラインオプション</h5>
+<p><code>"lint --help"</code>を実行すれば、詳細情報や利用可能なオプションが表示されます。</p>
+<h4>Eclipse での利用方法</h4>
+<p>Lint は ADT 16 に統合されています。これによって lint のコマンドラインバージョンの上記のような機能が提供されます。</p>
+<ul>
+<li>多数の警告の自動的修正。
+<li>Lint が様々な編集時に自動的に実行されます。
+<li>エラーの特定事例と同様にエラーを抑止する機能があります。
+<li>厳格に項目を設定する機能があります。
+<li>lint view から問題のソースコードに直接ジャンプできます。
+</ul>
+<h5>Lintの自動実行</h5>
+<p>Lint は以下の場合に自動的に実行されます。</p>
+<ul>
+<li>APKを作成時。この場合、lint は致命的なエラーのみの調査を行う特別なモード（高速に実行するため）で実行されます。そして、もし致命的なエラーが有る場合はapk作成が中止されます。この機能は Lint オプションで停止できます。
+<li>レイアウトファイルや manifest ファイルのようなXMLファイルを編集や保存した場合。この場合、すべてのファイル内で調査が実施されて、調査結果がエディタのマーカーとして表示されます。
+<li>レイアウトエディタを利用する場合。UI操作を行うたびに、ファイル内調査（layouoptの様々なルールのような）がレイアウトファイルに実行されて、lint window(レイアウトエディタの上部の左コーナーに表示されるエラーやマーカーから開いたり)が表示されます。
+</ul>
+<h5>Lint Window</h5>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-toolbar.png" alt="" title="lint-toolbar" width="399" height="228" class="aligncenter size-full wp-image-747" /></p>
+<p>プロジェクト上で Lint を実行するために、パッケージエクスプローラからプロジェクトを選択し、Lint ツールバーアクション（画像の左上）をクリックします。</p>
+<p>代わりの方法として、プロジェクト右クリックからAndroid Toolsのサブメニューから&#8221;Run Lint&#8221;を実行。これにより、Lint Windows が開かれてエラーが追加されます。エラーを選択すると、詳細説明が右のテキストエリアに表示されます。</p>
+<p>Lint View でエラーをダブルクリックするとソースファイルのエラーの箇所にジャンプします。それぞれの警告のアイコンは重要性を示しており、警告の修正方法（次のセクションで紹介）が小さな電球で表示されます。</p>
+<p>Windows にはアクションバーがあり（上部の右側の端の角）、以下のことをしてくれます。</p>
+<ul>
+<li>lintを再実行して、結果を更新できます。（更新中の間、ストップボタンで中止もできます）
+<li>もし修正を無視したければ、エラーを修正済みにできます。
+<li>警告のマーカーを削除します。
+<li>すべての警告マーカーを削除します。
+</ul>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-window2.png" alt="" title="lint-window2" width="738" height="285" class="aligncenter size-full wp-image-750" /></p>
+<h5>クイック修正</h5>
+<p>多数の lint 警告は自動修正機能を持っています。たとえば、様々な layoutopt 修正項目は修正候補を出してくれます（例：wap_contentを 0dp に置き換える）</p>
+<ul>
+<li>lint view から、電球をクリックして修正する
+<li>レイアウトエディタの警告から、Fixボタンを押して修正する
+<li>XMLソースエディタから、Quick Fix(Ctrl-1 or Command-1)を実行したり、警告に関連づけられている修正を選択する。
+</ul>
+<h5>エラーの抑止</h5>
+<p>エディタの Quick Fix メニューから以下の選択ができます。</p>
+<ul>
+<li>このファイル内のみ無視する
+<li>このプロジェクト内で無視する
+<li>ある期間、警告を無視する
+</ul>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-fix.png" alt="" title="lint-fix" width="659" height="174" class="aligncenter size-full wp-image-752" /></p>
+<p>（もし quickfix 上の lint 修正アクションが見つからなければ、既知の不具合を見てください。）</p>
+<p>これらの選択肢は、プロジェクトの lint.xml に保存されており、コマンドラインツールによって見ることができます。<br />
+このように、UI上から警告を無視することができ、ソースプロジェクトのlint.xml ファイルを確認し、lint実行時の他の項目も無視設定したものは、表示されなくなります。（たぶん、手動で検証したみた結果）</p>
+<h5>オプション</h5>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid > Lint Options を選択してください。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-options2.png" alt="" title="lint-options2" width="576" height="545" class="aligncenter size-full wp-image-755" /></p>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid > Lint Options を選択してください。</p>
+<p>オプションの項目を選択した場合、右下のドロップダウンから Severity(厳密性）（訳者注釈：errorにするかwarningにするか）を設定できます。これによって正確に項目をエラーにするかどうかを設定できます。（例えば、ダイアログのトップ近くにあるAPK作成時に中止する。など）</p>
+<p>項目のチェックをオフにする場合は、severityで<code>“Ignore”</code>を選択してください。</p>
+<p>lint 設定をプロジェクト毎に編集しないように注意してください。プロジェクト設定ダイアログを開いて（プロジェクト上で右クリック）、Android Lint の設定ページを探してください。オプションダイアログで手動でSeverityを設定するとエラーを抑止すると共に lint.xml ファイルに記録されます。それから、チーム内の他の項目は、プロジェクト内で設定した同じものを利用できます。</p>
+<h5>インストール方法</h5>
+<p>いまわかっていることだけでいうと、ADT16に早くアクセスできるように計画しています。（訳者注：すでにADT16.0.1がリリースされています。）</p>
+<p>ソースコードが待ちきれないときは、git ソースコードリポジトリが sdk/lint フォルダーで利用できます。(手順は、<br />
+<a href="http://source.android.com/source/downloading.html">http://source.android.com/source/downloading.html</a>　をみてください。そして、マスターリポジトリからソースコードを取得してください。</p>
+<h5>既知の不具合</h5>
+<ul>
+<li>この項目(<a href="http://code.google.com/p/android/issues/detail?id=21124">21124</a>)はADT16で修正済み。
+<li>未使用のリソース：未使用のリソースの発見は、いくつかのリソースで利用されている場合に正しく動作しない場合があります。lintがコマンドラインから実行されたとき、リソース参照を探すため内に簡単な文字列分析を利用します。コメントや文字列リテラルなどを無視する間に、まだ切り替えが遅れるかもしれないためです。lintがeclipseで動作しているとき、より正しい結果になるようにパースツリーを利用します。このプランは、lintコアがどのようなところで実行したとしても正しく動作するようなフルパースに統合するためです。
+<li>Overdraw 検出：検出を利用していないような場合に、javaコードを分析する必要があり、現在主要なJavaパースツリーは動作していません。（リソース検出を利用していない場合と違って、eclipse 内で実行することはできます）
+</ul>
+<h4>Lint で解析対象になる項目</h4>
+<p>次のエントリの「<a href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/">Android Lint 解析内容の詳細を調査</a>」で紹介しているので参考にしてください。</p>
+<p>以上</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/712/android-lint/feed/</wfw:commentRss>
+		<slash:comments>19</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/712/android-lint/" />
+	</item>
+	</channel>
+</rss>

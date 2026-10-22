@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; mac</title>
+	<atom:link href="http://andbrowser.com/tag/mac/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/mac/feed/" />
+		<item>
+		<title>Mac Book Pro 13 retinaにインストールする必須アプリ</title>
+		<link>http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/</link>
+		<comments>http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/#comments</comments>
+		<pubDate>Sun, 09 Nov 2014 07:49:09 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[mac]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2913</guid>
+		<description><![CDATA[ClipMenu
+
+
+http://www.clipmenu.com/ja/
+Mac OS X 用クリップボード管理ソフト。windowsのclclのような必須アプリ。私はwindows 時代からclclを愛用しているの [...]]]></description>
+			<content:encoded><![CDATA[<h4>ClipMenu</h4>
+<p><a href="http://www.clipmenu.com/ja/"><img src="http://andbrowser.com/wp-content/uploads/2014/11/b52bae41a0a33db722a2dd0e7cac5fe2.png" alt="" title="スクリーンショット 2014-11-09 16" width="600" class="aligncenter size-medium wp-image-2920" /></a><br />
+<span id="more-2913"></span></p>
+<p><a href="http://www.clipmenu.com/ja/">http://www.clipmenu.com/ja/</a></p>
+<p>Mac OS X 用クリップボード管理ソフト。windowsの<a href="http://www.nakka.com/soft/clcl/">clcl</a>のような必須アプリ。私はwindows 時代から<a href="http://www.nakka.com/soft/clcl/">clcl</a>を愛用しているので、ショートカットキーを clcl と同じ ALT+t に変更しました。</p>
+<p>開発者自身も以下のようにコメントしています。</p>
+<blockquote><p>
+ClipMenuを作ろうと思った動機の一つが、「CLCLのようなソフトが欲しい」でした。CLCLは、Windowsを使う上では欠かせない、クリップボード管理ソフトです。この素晴らしいソフトウェアを公開してくださっている、作者のNakashima Tomoaki氏に改めて感謝いたします。</p></blockquote>
+<h4>BetterTouchTool</h4>
+<p><a href="http://blog.boastr.net/"><img src="http://andbrowser.com/wp-content/uploads/2014/11/83fcd4c9d820a97ec4de070a38a7a038.png" alt="" title="スクリーンショット 2014-11-09 16.40.50" width="600"  class="aligncenter size-full wp-image-2925" /></a><br />
+<a href="http://blog.boastr.net/">http://blog.boastr.net/</a></p>
+<p>トラックパットやmagic mouseやアプリごとのキーボードショートカットをカスタマイズできるアプリです。私が気にっているのは、windowsのwin key + → のようにアプリのwindowを画面の半分にぴったりと配置できる機能と同様のことが提供されているためです。さらに、windowを動かすのにどこにマウスカーソルがある状態でも alt keyを押しながら移動することができる機能も気に入っています。</p>
+<ul>
+<li><a href="http://nori510.com/archives/4194">Winのウインドウを左右に並べて表示、をMacで実現するMacApp「BetterSnapTool」</a></li>
+</ul>
+<h4>Display Menu</h4>
+<p><a href="http://displaymenu.milchimgemuesefach.de/"><img src="http://andbrowser.com/wp-content/uploads/2014/11/83702cf6dbafad3d588b800743555a77.png" alt="" title="スクリーンショット 2014-11-09 16.42.08" width="600" class="aligncenter size-full wp-image-2927" /></a></p>
+<p>
+<a href="http://displaymenu.milchimgemuesefach.de/">http://displaymenu.milchimgemuesefach.de/</a></p>
+<p>このアプリを利用すれば、いつでも好きな解像度に変更できるようになります。プログミングしながらドキュメントを見たい場合などに解像度を高くして、2つの画面を半分ずつ設置したりして利用しています。</p>
+<h4>SymbolicLinker</h4>
+<p><a href="http://seiryu.home.comcast.net/~seiryu/symboliclinker.html"><img src="http://andbrowser.com/wp-content/uploads/2014/11/a2b517da3dd296c33aced2384f63a928.png" alt="" title="スクリーンショット 2014-11-09 16.43.08" width="591" height="402" class="aligncenter size-full wp-image-2929" /></a><br />
+<a href="http://seiryu.home.comcast.net/~seiryu/symboliclinker.html">http://seiryu.home.comcast.net/~seiryu/symboliclinker.html</a></p>
+<p>このアプリは、シンボリックリンクを作成できるアプリです。アプリの設定などをdropboxなどのクラウドストレージでバックアップをしたり、複数台のmacと同期をとって同じ設定で利用できるようにするために利用できます。</p>
+<h4>その他の参考情報</h4>
+<ul>
+<li><a href="http://macwin.org/mac/2013-freeapp50/">おすすめのMac無料アプリ、50個集めてみました。</a>
+<li><a href="http://liginc.co.jp/web/tool/mac-iphone/128453">Mac初心者が最初にインストールしておきたい厳選アプリ10選</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/mac/2949/mondatory-app-from-windows-to-mac/" rel="bookmark" class="wherego_title">WindowsからMACに乗り換えた後に必須なアプリ</a></li><li><a href="http://andbrowser.com/mac/2901/yosemite-golang-liteide-gdb/" rel="bookmark" class="wherego_title">yosemite で golang 開発環境のliteIDEの構築方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/" />
+	</item>
+	</channel>
+</rss>

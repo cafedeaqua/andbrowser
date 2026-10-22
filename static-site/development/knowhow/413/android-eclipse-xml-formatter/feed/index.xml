@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>Androidアプリ開発向け Eclipse XML Formatter へのコメント</title>
+	<atom:link href="http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>admin より</title>
+		<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/comment-page-1/#comment-68</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Mon, 12 Sep 2011 01:57:31 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=413#comment-68</guid>
+		<description>IS06(koji.okb)様
+コメントありがとうございます。ADTのほうですでに改善が実施されているんですね。
+大変有益な情報ありがとうございます。リンクを早速見てみます。
+
+今後の ADT バージョンアップでこの機能が追加されるということで待ち遠しいです。</description>
+		<content:encoded><![CDATA[<p>IS06(koji.okb)様<br />
+コメントありがとうございます。ADTのほうですでに改善が実施されているんですね。<br />
+大変有益な情報ありがとうございます。リンクを早速見てみます。</p>
+<p>今後の ADT バージョンアップでこの機能が追加されるということで待ち遠しいです。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>IS06 より</title>
+		<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/comment-page-1/#comment-67</link>
+		<dc:creator>IS06</dc:creator>
+		<pubDate>Sun, 11 Sep 2011 12:55:22 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=413#comment-67</guid>
+		<description>Android Tools ProjectのRecent Changesを見ると
+XML Formatterの改善について記載されています。
+http://tools.android.com/recent/xmlformatter
+保存時にフォーマットしてくれる機能も追加されるようです。</description>
+		<content:encoded><![CDATA[<p>Android Tools ProjectのRecent Changesを見ると<br />
+XML Formatterの改善について記載されています。<br />
+<a href="http://tools.android.com/recent/xmlformatter" rel="nofollow">http://tools.android.com/recent/xmlformatter</a><br />
+保存時にフォーマットしてくれる機能も追加されるようです。</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

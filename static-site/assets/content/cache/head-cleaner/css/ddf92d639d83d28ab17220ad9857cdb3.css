@@ -1,0 +1,32 @@
+.wp_social_bookmarking_light{
+border: 0 !important;
+padding: 10px 0 20px 0 !important;
+margin: 0 !important;
+}
+.wp_social_bookmarking_light div{
+float: left !important;
+border: 0 !important;
+padding: 0 !important;
+margin: 0 5px 0px 0 !important;
+min-height: 30px !important;
+line-height: 18px !important;
+text-indent: 0 !important;
+}
+.wp_social_bookmarking_light img{
+border: 0 !important;
+padding: 0;
+margin: 0;
+vertical-align: top !important;
+}
+.wp_social_bookmarking_light_clear{
+clear: both !important;
+}
+#fb-root{
+display: none;
+}
+.wsbl_twitter{
+width: 100px;
+}
+.wsbl_facebook_like iframe{
+max-width: none !important;
+}

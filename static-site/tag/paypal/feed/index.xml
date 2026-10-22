@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; paypal</title>
+	<atom:link href="http://andbrowser.com/tag/paypal/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/paypal/feed/" />
+		<item>
+		<title>Androidアプリのadmob収益の受領方法　その２</title>
+		<link>http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/</link>
+		<comments>http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/#comments</comments>
+		<pubDate>Tue, 12 Mar 2013 22:48:22 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[admob]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[paypal]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1562</guid>
+		<description><![CDATA[Androidアプリのadmob収益の受領方法を記載。paypalプレミアになろう！]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-personal-number.png" alt="input personal number to paypal premire" title="input personal number to paypal premire" width="600"  class="aligncenter size-full wp-image-1568" /></p>
+<h4>本人確認書類の提出後</h4>
+<p>
+<a href="http://andbrowser.com/development/1501/receive-admob-profit-for-android-app/">Androidアプリのadmob収益の受領方法</a>でpaypalプレミアにならないと収益の受領ができないため、本人確認書類を提出して、申請を行いました。<br />
+申請が完了すると数日後に本人確認用の暗証番号が以下のように郵送（書留）で送られてきます。<br />
+<span id="more-1562"></span></p>
+<h4>本人確認用暗証番号</h4>
+<p>以下のような圧着ハガキで届きます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-mail1.jpg" alt="personal number from paypal premire" title="personal number from paypal premire" width="480" height="640" class="aligncenter size-full wp-image-1564" /></p>
+<p>これを開けると本人確認用暗証番号が受け取れます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-mail2.jpg" alt="personal number2 for paypal premire" title="personal number2 for paypal premire" width="640" height="480" class="aligncenter size-full wp-image-1566" /></p>
+<p>この本人確認用暗証番号を以下の「暗証番号を入力」出インプットします。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-personal-number.png" alt="input personal number to paypal premire" title="input personal number to paypal premire" width="600"  class="aligncenter size-full wp-image-1568" /></p>
+<p>これで晴れてプレミアになったため、admobから収益の受領ができます。いまから振り込まれるのが楽しみです！</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-premire-start.png" alt="paypal premire start" title="paypal premire start" width="973" height="470" class="aligncenter size-full wp-image-1571" /></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/" />
+	</item>
+		<item>
+		<title>Androidアプリのadmob収益の受領方法</title>
+		<link>http://andbrowser.com/development/1501/receive-admob-profit-for-android-app/</link>
+		<comments>http://andbrowser.com/development/1501/receive-admob-profit-for-android-app/#comments</comments>
+		<pubDate>Sun, 10 Mar 2013 03:17:46 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[admob]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[paypal]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1501</guid>
+		<description><![CDATA[Androidアプリのadmob収益の受領方法。paypalのプレミアになろう（無料です）！]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/receive-admob-profit.png" alt="receive admob profit" title="receive admob profit" width="600" class="aligncenter size-full wp-image-1502" /></p>
+<h4>admobの収益が受け取れない</h4>
+<p>Androidアプリに admob 広告を掲載していて、支払先をにはPaypal を選択していました。今年の2月に初めて支払いの案内が以下のようにありました。（写真は3月となっていますが、2月にも同じ案内がありました。）<br />
+<img src="http://andbrowser.com/wp-content/uploads/2013/03/admob-payment.png" alt="" title="admob-payment" width="208" height="50" class="aligncenter size-full wp-image-1506" /><br />
+がしかし、一向に paypal の残高に反映されませんでした。さすがに1か月立っても反映されないため、調べてみました。同じように困ってる人も以下のようにいるようでした。<br />
+<span id="more-1501"></span><br />
+<img src="http://andbrowser.com/wp-content/uploads/2013/03/admob-paypal-not-receive.png" alt="" title="admob-paypal-not-receive" width="600" class="aligncenter size-full wp-image-1509" /></p>
+<h4>受け取れない原因</h4>
+<p>調査したところ、paypalアカウントには以下の３つの種類があり、admobの支払いを受け取るにはプレミアにしなければならないようです。アカウントを作成すると最初はパーソナルで、ある手続きを行うとプレミアになれるそうです。ただ、今回この手続きが色々と手間取ったのでここにメモっておきます。</p>
+<ol>
+<li>パーソナル</li>
+<li><strong>プレミア</strong></li>
+<li>ビジネス</li>
+</ol>
+<h4>プレミアに変更方法</h4>
+<p>まずこれが結構な手間がかかりました。プレミアにするには、以下の画面の「アップグレード」を選択します。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-upgrade.png" alt="" title="paypal-upgrade" width="600" class="aligncenter size-full wp-image-1515" /></p>
+<p>アップグレードするためには、以下の２つのことを実施することが必要です。まず以下の赤で囲んだところで「本人確認書類の提出」を行います。</p>
+<ol>
+<li>本人確認書類の提出</li>
+<li>暗証番号の入力</li>
+</ol>
+<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-upgrade-confirmation.png" alt="" title="paypal-upgrade-confirmation" width="600" class="aligncenter size-full wp-image-1517" /></p>
+<h5>paypalからの連絡</h5>
+<p>本人確認書類の提出は、pdfで可能なので、私は運転免許証をデジカメで両面を撮影してパワーポイントに張り付けてpdfで出力したものを、フォームから添付で申請しました。これで暗証番号がメールで届くのかなと思っていたところ、以下のようなメールの連絡がありました。</p>
+<blockquote><p>
+誠に申し訳ございませんが、お客様のアカウント制限解除はまだ完了しておりません。<br />
+理由といたしましては、以下の点をご確認の上、ご協力をいただきますようお願いいたします。</p>
+<p>この度は運転免許証をご提出いただき、誠にありがとうございました。</p>
+<p>1.アカウントにご登録いただいているお名前は<br />
+ローマ字表記となっておりまして、ご提出いただいた運転免許証の言語表記方法とは異なっております。</p>
+<p>これらは完全に一致する必要がございますので、恐れ入りますが、<br />
+アカウントにご登録いただいているお名前を運転免許証通りに<br />
+ご変更いただけますでしょうか。</p>
+<p>なお、お名前の変更につきましては、お客様ご自身で変更することは出来かねます。弊社までご連絡いただきますよう、お願いいたします。</p>
+<p>お電話でご連絡いただく場合、音声ガイダンスに従い、電話機の1（アカウント認証）を押してから、<br />
+1（本人確認のお問い合わせ）を押していただきますようお願いいたします。</p>
+<p>2.ご提出いただいた運転免許証のご住所と<br />
+アカウントにご登録いただいているご住所が異なっているようです。</p>
+<p>運転免許証上：漢字で表記　マンション名なし<br />
+アカウント上：ローマ字で表記　マンション名あり</p>
+<p>大変恐れ入りますが、アカウントの住所を漢字に変更してから、<br />
+下記のいずれかの方法でご訂正をお願いいたします。</p>
+<p>●アカウント上の「マンション名」の削除をご希望の場合、<br />
+アカウントにご登録いただいたご住所の「マンション名」を削除していただきますようお願いします。<br />
+この場合、現状の書類にて進行させていただきますので、再提出していただかなくても結構です。<br />
+＊注）ビル名を削除した場合、正確に書留ハガキが届かない場合もございますので、届くことを<br />
+確認した上で、修正いただきますようお願いいたします。
+</p></blockquote>
+<p>要約すると以下の2つを修正しないと、プレミアにアップグレードできないということです。<br />
+私は Paypal アカウントを作成するときに海外からの買い物に利用するだろうと考え、名前、住所などを英語表記で記載していました。<br />
+これが以下の問題を引き起こすことになりました。</p>
+<ol>
+<li>Paypalの登録の名前と免許証の名前が英字と漢字で異なる(*1)</li>
+<li>Paypalの登録住所と免許証の記載がマンション名の有、無で異なる</li>
+</ol>
+<p>但し、(*1)のPaypalの登録の名前を英字表記にしていたものを漢字表記に変更するためには、インターネットからはできずに電話でしかできません。<br />
+電話番号を得るためには、paypalにログインする必要があり、ログインして「一時お問い合わせ番号」をゲットする必要があります。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-tel-number.png" alt="" title="paypal-tel-number" width="519" height="287" class="aligncenter size-full wp-image-1521" /></p>
+<p>上記を選択して、ログインすると以下のような一時お問い合わせ番号をゲットできます。これを手にいれてからその下にある電話番号に電話しましょう。フリーダイヤルも用意されているということで好印象です。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2013/03/paypal-one-number.png" alt="paypal-one-number" title="paypal-one-number" width="600" class="aligncenter size-full wp-image-1526" /></p>
+<p>電話して「一時問い合わせ番号」を入力すると、オペレーターさんがでます。オペレーターさんは個人的な感想でいうと海外の方のようでした。日本語は堪能で少しイントネーションの違いはわかりますが、こちらの言っていることはすべて理解してくれているようなので問題はないと思いました。<br />
+電話でしながら、まず住所を運転免許証と同じになるように修正します。修正完了したことを電話で伝えると、オペレータさん側でも確認できました。<br />
+あとは、名前をオペレーターさんに伝えたところ、英字表記の名前を漢字表記（運転免許証）に変更してもらえました。正しく変更されたかどうかを確認してみると、（名前）（苗字）の表記になっていて、日本人の私から見ると漢字でこの順序で記載されているのは違和感がありますが、paypalの仕様だと思いますので仕方ないですね。我慢しましょう。英語表記ならこの順番でも違和感ないんですけどねぇ。</p>
+<h4>余談：Androidアプリでの言語ごとの文字列対応</h4>
+<p>Androidアプリの場合は、以下のような xml 定義を言語ごと用意して解決できますね。</p>
+<h5>res/value-ja/string.xmlへの記載</h5>
+<pre class="brush: java; first-line: 1;" >
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="myaccount_personal_name">名前：%2$s %1$s</string>
+</resources>
+</pre>
+<h5>res/value/string.xml(英語用)への記載</h5>
+<pre class="brush: java; first-line: 1;" >
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="myaccount_personal_name">NAme: %1$s %2$s</string>
+</resources>
+</pre>
+<h5>コード例</h5>
+<pre class="brush: java; first-line: 1;" >
+String first_name = "名前";
+String family_name = "苗字";
+String myaccount_name  = String.format(getString(R.string.myaccount_personal_name), first_name , family_name );
+</pre>
+<h4>電話後の対応</h4>
+<p>
+電話で情報を修正できたあとは、郵送で暗証番号が送られてくるそうなので、それを入力すれば晴れてプレミアになれます。<br />
+これでadmob の収益が受け取れるようになります。まだ届いてないのですが受け取るのが楽しみです！</p>
+<h5>続き</h5>
+<p>本人確認用暗証番号がハガキで届きました。続きは<a href="http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/">Androidアプリのadmob収益の受領方法　その２</a>をどうぞ。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2515/android-dev-useful-site/" rel="bookmark" class="wherego_title">Android開発向けに役に立つサイト一覧</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/" rel="bookmark" class="wherego_title">Androidアプリのadmob収益の受領方法　その２</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1501/receive-admob-profit-for-android-app/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1501/receive-admob-profit-for-android-app/" />
+	</item>
+	</channel>
+</rss>

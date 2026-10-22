@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>Intel Edison の購入からww05ファームウェアの更新ログ | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/feed/index.xml" rel="alternate" title="Bescottee » Intel Edison の購入からww05ファームウェアの更新ログ のコメントのフィード" type="application/rss+xml"/>
+<link href="/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/index.html" rel="prev" title="Intel Edison 購入時のバージョン"/>
+<link href="/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/index.html" rel="next" title="edison flashall スクリプト利用時のエラー"/>
+<link href="/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-Sy" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/index.html" rel="prev">Intel Edison 購入時のバージョン</a></div>
+<div class="alignright"><a href="/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/index.html" rel="next">edison flashall スクリプト利用時のエラー</a> »</div>
+</div>
+<div class="post-3382 post hentry category-intel-edison" id="post-3382">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">02.28.15</span> <span class="titleName"><a href="/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/index.html" rel="bookmark">Intel Edison の購入からww05ファームウェアの更新ログ</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/intel-edison/index.html" rel="category tag" title="intel edison の投稿をすべて表示">intel edison</a> </span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p>以下のログを記載<br/>
+<span id="more-3382"></span></p>
+<p><code><br/>
+******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</code></p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Aug 20 2014 - 16:08:32)</p>
+<p>       Watchdog enabled<br/>
+DRAM:  980.6 MiB<br/>
+MMC:   tangier_sdhci: 0<br/>
+In:    serial<br/>
+Out:   serial<br/>
+Err:   serial<br/>
+Hit any key to stop autoboot:  0<br/>
+Target:blank<br/>
+Partitioning already done...<br/>
+Flashing already done...<br/>
+GADGET DRIVER: usb_dnl_dfu<br/>
+reading vmlinuz<br/>
+5124192 bytes read in 129 ms (37.9 MiB/s)<br/>
+Valid Boot Flag<br/>
+Setup Size = 0x00003c00<br/>
+Magic signature found<br/>
+Using boot protocol version 2.0c<br/>
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@ncsndgbuild04) #1 SMP PREEMPT Wed Aug 20 16:09:18 CEST 2014<br/>
+Building boot_params at 0x00090000<br/>
+Loading bzImage at address 00100000 (5108832 bytes)<br/>
+Magic signature found<br/>
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=814fcaf161aadd6d4c9c90d53c037acf"</p>
+<p>Starting kernel ...</p>
+<p>[    1.659642] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br/>
+[    1.664928] pmic_ccsm pmic_ccsm: Battery Over heat exception</p>
+<p>Welcome to Linux!</p>
+<p>[  OK  ] Reached target Remote File Systems.<br/>
+         Expecting device dev-ttyMFD2.device...<br/>
+         Expecting device dev-mmcblk1p1.device...<br/>
+[  OK  ] Reached target Paths.<br/>
+[  OK  ] Set up automount Arbitrary Executable File Formats F...utomount Point.<br/>
+[  OK  ] Reached target Swap.<br/>
+[  OK  ] Set up automount boot.automount.<br/>
+[  OK  ] Set up automount home.automount.<br/>
+[  OK  ] Created slice Root Slice.<br/>
+[  OK  ] Listening on Delayed Shutdown Socket.<br/>
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br/>
+[  OK  ] Listening on Syslog Socket.<br/>
+[  OK  ] Listening on udev Kernel Socket.<br/>
+[  OK  ] Listening on udev Control Socket.<br/>
+[  OK  ] Created slice User and Session Slice.<br/>
+[  OK  ] Listening on Journal Socket.<br/>
+[  OK  ] Created slice System Slice.<br/>
+         Starting Remount Root and Kernel File Systems...<br/>
+         Starting Load Kernel Modules...<br/>
+         Starting udev Coldplug all Devices...<br/>
+         Starting Create list of required static device nodes...rrent kernel...<br/>
+         Mounting Debug File System...<br/>
+         Starting Apply Kernel Variables...<br/>
+         Mounting POSIX Message Queue File System...<br/>
+[  OK  ] Created slice system-getty.slice.<br/>
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br/>
+         Starting Journal Service...<br/>
+[  OK  ] Started Journal Service.<br/>
+[  OK  ] Reached target Slices.<br/>
+         Mounting Temporary Directory...<br/>
+[  OK  ] Set up automount factory.automount.<br/>
+[  OK  ] Mounted POSIX Message Queue File System.<br/>
+[  OK  ] Mounted Debug File System.<br/>
+[  OK  ] Mounted Temporary Directory.<br/>
+[  OK  ] Started Remount Root and Kernel File Systems.<br/>
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br/>
+[  OK  ] Started Apply Kernel Variables.<br/>
+[  OK  ] Started Load Kernel Modules.<br/>
+[  OK  ] Started udev Coldplug all Devices.<br/>
+         Mounting FUSE Control File System...<br/>
+         Mounting Configuration File System...<br/>
+         Starting Create Static Device Nodes in /dev...<br/>
+         Starting Load/Save Random Seed...<br/>
+[  OK  ] Mounted Configuration File System.<br/>
+[  OK  ] Mounted FUSE Control File System.<br/>
+[  OK  ] Started Create Static Device Nodes in /dev.<br/>
+[  OK  ] Started Load/Save Random Seed.<br/>
+         Starting udev Kernel Device Manager...<br/>
+[  OK  ] Reached target Local File Systems (Pre).<br/>
+         Mounting /var/volatile...<br/>
+[  OK  ] Started udev Kernel Device Manager.<br/>
+[  OK  ] Mounted /var/volatile.<br/>
+[  OK  ] Reached target Local File Systems.<br/>
+         Starting Trigger Flushing of Journal to Persistent Storage...<br/>
+         Starting Create Volatile Files and Directories...<br/>
+[  OK  ] Started Create Volatile Files and Directories.<br/>
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br/>
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br/>
+         Starting Network Time Synchronization...<br/>
+         Starting Update UTMP about System Boot/Shutdown...<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br/>
+[  OK  ] Started Network Time Synchronization.<br/>
+[  OK  ] Found device /dev/ttyMFD2.<br/>
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br/>
+[  OK  ] Reached target Sound Card.<br/>
+[  OK  ] Reached target System Initialization.<br/>
+[  OK  ] Reached target Timers.<br/>
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br/>
+[  OK  ] Listening on sshd.socket.<br/>
+[  OK  ] Reached target Sockets.<br/>
+[  OK  ] Reached target Basic System.<br/>
+         Starting Watchdog sample daemon...<br/>
+[  OK  ] Started Watchdog sample daemon.<br/>
+         Starting USB Ethernet gadget...<br/>
+[    7.354964] dwc3-device dwc3-device.1: dwc3-gadget is already bound to g_multi<br/>
+         Starting Crashlog service...<br/>
+[  OK  ] Started Crashlog service.<br/>
+         Starting Edison RM button handler...<br/>
+[  OK  ] Started Edison RM button handler.<br/>
+         Starting Kernel Logging Service...<br/>
+[  OK  ] Started Kernel Logging Service.<br/>
+         Starting Bluetooth rf kill event daemon...<br/>
+[  OK  ] Started Bluetooth rf kill event daemon.<br/>
+         Starting Daemon to handle arduino sketches...<br/>
+[  OK  ] Started Daemon to handle arduino sketches.<br/>
+         Starting Daemon to reset sketches...<br/>
+[  OK  ] Started Daemon to reset sketches.<br/>
+         Starting System Logging Service...<br/>
+[  OK  ] Started System Logging Service.<br/>
+         Starting Login Service...<br/>
+         Starting Permit User Sessions...<br/>
+         Starting D-Bus System Message Bus...<br/>
+[  OK  ] Started D-Bus System Message Bus.<br/>
+         Starting Network Service...<br/>
+[  OK  ] Started Permit User Sessions.<br/>
+[  OK  ] Started USB Ethernet gadget.<br/>
+[  OK  ] Started Network Service.<br/>
+[  OK  ] Reached target Network.<br/>
+         Starting Mosquitto - lightweight server implementati...SN protocols...<br/>
+[  OK  ] Started Mosquitto - lightweight server implementatio...T-SN protocols.<br/>
+         Starting Zero-configuration networking...<br/>
+[  OK  ] Started Zero-configuration networking.<br/>
+         Starting Intel_XDK_Daemon...<br/>
+[  OK  ] Started Intel_XDK_Daemon.<br/>
+         Starting Network Name Resolution...<br/>
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br/>
+         Starting File System Check on /dev/disk/by-partlabel/factory...<br/>
+         Starting Getty on tty1...<br/>
+[  OK  ] Started Getty on tty1.<br/>
+         Starting Serial Getty on ttyMFD2...<br/>
+[  OK  ] Started Serial Getty on ttyMFD2.<br/>
+[  OK  ] Reached target Login Prompts.<br/>
+         Starting HSU runtime pm service...<br/>
+[  OK  ] Started Network Name Resolution.<br/>
+[  OK  ] Started HSU runtime pm service.<br/>
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/factory.<br/>
+[  OK  ] Started Login Service.<br/>
+[    9.461928] systemd-fsck[213]: /dev/mmcblk0p5: Superblock last mount time is in the future.<br/>
+[    9.491522] systemd-fsck[213]: (by less than a day, probably due to the hardware clock being incorrectly set)  FIXED.<br/>
+         Mounting /factory...<br/>
+[    9.551725] systemd-fsck[213]: /dev/mmcblk0p5: clean, 13/128 files, 40/1024 blocks<br/>
+[  OK  ] Mounted /factory.</p>
+<p>Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2</p>
+<p>edison login: root<br/>
+[   46.103248] systemd-fsck[234]: /dev/mmcblk0p10: clean, 13/152608 files, 26868/610299 blocks<br/>
+root@edison:~# cat /etc/version<br/>
+edison-weekly_build_56_2014-08-20_15-54-05<br/>
+root@edison:~#<br/>
+root@edison:~#<br/>
+root@edison:~#<br/>
+root@edison:~#<br/>
+root@edison:~# reboot ota<br/>
+         Unmounting /factory...<br/>
+         Unmounting /home...<br/>
+[  OK  ] Stopped target Sound Card.<br/>
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.<br/>
+         Stopping Watchdog sample daemon...<br/>
+[  OK  ] Stopped target Multi-User System.<br/>
+         Stopping Edison RM button handler...<br/>
+         Stopping Daemon to reset sketches...<br/>
+         Stopping Kernel Logging Service...<br/>
+         Stopping Bluetooth rf kill event daemon...<br/>
+         Stopping Mosquitto - lightweight server implementati...SN protocols...<br/>
+         Stopping Zero-configuration networking...<br/>
+         Stopping System Logging Service...<br/>
+         Stopping Intel_XDK_Daemon...<br/>
+         Stopping Network Name Resolution...<br/>
+[  OK  ] Stopped target Login Prompts.<br/>
+         Stopping Getty on tty1...<br/>
+         Stopping Serial Getty on ttyMFD2...<br/>
+                  Stopping D-Bus System Message Bus...<br/>
+[  OK  ] Stopped Watchdog sample daemon.<br/>
+[  OK  ] Stopped Edison RM button handler.<br/>
+[  OK  ] Stopped Kernel Logging Service.<br/>
+[  OK  ] Stopped Bluetooth rf kill event daemon.<br/>
+[  OK  ] Stopped Daemon to reset sketches.<br/>
+[  OK  ] Stopped System Logging Service.<br/>
+[  OK  ] Stopped Login Service.<br/>
+[  OK  ] Stopped D-Bus System Message Bus.<br/>
+[  OK  ] Stopped Mosquitto - lightweight server implementatio...T-SN protocols.<br/>
+[  OK  ] Stopped Zero-configuration networking.<br/>
+[  OK  ] Stopped Intel_XDK_Daemon.<br/>
+[  OK  ] Stopped Network Name Resolution.<br/>
+[  OK  ] Stopped Getty on tty1.<br/>
+[  OK  ] Stopped Serial Getty on ttyMFD2.<br/>
+[  OK  ] Unmounted /factory.<br/>
+[  OK  ] Failed unmounting /home.<br/>
+[  OK  ] Removed slice system-serial\x2dgetty.slice.<br/>
+[  OK  ] Removed slice system-getty.slice.<br/>
+         Stopping Permit User Sessions...<br/>
+[  OK  ] Stopped target Network.<br/>
+         Stopping Daemon to handle arduino sketches...<br/>
+[  OK  ] Stopped Daemon to handle arduino sketches.<br/>
+[  OK  ] Stopped Permit User Sessions.<br/>
+[  OK  ] Stopped target Remote File Systems.<br/>
+[  OK  ] Stopped target Basic System.<br/>
+[  OK  ] Stopped target Slices.<br/>
+[  OK  ] Removed slice User and Session Slice.<br/>
+[  OK  ] Stopped target Paths.<br/>
+[  OK  ] Stopped target Timers.<br/>
+[  OK  ] Stopped target Sockets.<br/>
+[  OK  ] Closed sshd.socket.<br/>
+[  OK  ] Closed Syslog Socket.<br/>
+[  OK  ] Closed D-Bus System Message Bus Socket.<br/>
+[  OK  ] Stopped target System Initialization.<br/>
+         Stopping Load/Save RF Kill Switch Status of rfkill2...<br/>
+         Stopping Load/Save RF Kill Switch Status of rfkill0...<br/>
+         Stopping Load/Save RF Kill Switch Status of rfkill1...<br/>
+         Stopping Network Time Synchronization...<br/>
+         Stopping Load Kernel Modules...<br/>
+[  OK  ] Stopped Load Kernel Modules.<br/>
+         Stopping Update UTMP about System Boot/Shutdown...<br/>
+         Stopping Load/Save Random Seed...<br/>
+         Stopping Apply Kernel Variables...<br/>
+[  OK  ] Stopped Apply Kernel Variables.<br/>
+[  OK  ] Stopped target Swap.<br/>
+[  OK  ] Stopped Network Time Synchronization.<br/>
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill2.<br/>
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill0.<br/>
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill1.<br/>
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.<br/>
+[  OK  ] Stopped Load/Save Random Seed.<br/>
+[  OK  ] Removed slice system-systemd\x2drfkill.slice.<br/>
+         Stopping Create Volatile Files and Directories...<br/>
+[  OK  ] Stopped Create Volatile Files and Directories.<br/>
+[  OK  ] Stopped target Local File Systems.<br/>
+         Unmounting /etc/machine-id...<br/>
+[  OK  ] Unset automount factory.automount.<br/>
+[  OK  ] Unset automount home.automount.<br/>
+[  OK  ] Unset automount boot.automount.<br/>
+         Unmounting /var/volatile...<br/>
+         Unmounting Temporary Directory...<br/>
+[  OK  ] Unmounted /etc/machine-id.<br/>
+[  OK  ] Failed unmounting /var/volatile.<br/>
+[  OK  ] Unmounted Temporary Directory.<br/>
+[  OK  ] Reached target Unmount All Filesystems.<br/>
+[  OK  ] Stopped target Local File Systems (Pre).<br/>
+         Stopping Remount Root and Kernel File Systems...<br/>
+[  OK  ] Stopped Remount Root and Kernel File Systems.<br/>
+[  OK  ] Reached target Shutdown.</p>
+<p>******************************<br/>
+PSH KERNEL VERSION: b0182727<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Aug 20 2014 - 16:08:32)</p>
+<p>       Watchdog enabled<br/>
+DRAM:  980.6 MiB<br/>
+MMC:   tangier_sdhci: 0<br/>
+In:    serial<br/>
+Out:   serial<br/>
+Err:   serial<br/>
+Hit any key to stop autoboot:  0<br/>
+Target:blank<br/>
+Partitioning already done...<br/>
+reading ota_update.scr<br/>
+14747 bytes read in 28 ms (513.7 KiB/s)<br/>
+## Executing script at 00100000<br/>
+=== OTA update script ===<br/>
+Validating Ota package<br/>
+part find mmc 0 label:update u_part_num;<br/>
+ota drive is mmc 0:9</p>
+<p>Validating edison_ifwi-dbg-00-dfu.bin hash for boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br/>
+reading edison_ifwi-dbg-00-dfu.bin<br/>
+4194304 bytes read in 104 ms (38.5 MiB/s)<br/>
+hash sha1 0x6400000 400000 sha1_sum;<br/>
+sha1 for 06400000 ... 067fffff ==&gt; 16af670731ef43d8e415adebd93a841ab6763236<br/>
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block</p>
+<p>Validating u-boot-edison.bin hash for u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br/>
+reading u-boot-edison.bin<br/>
+245760 bytes read in 37 ms (6.3 MiB/s)<br/>
+part find mmc 0 label:u-boot0 u_part_num;<br/>
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br/>
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br/>
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>hash sha1 0x6400000 3c000 sha1_sum;<br/>
+sha1 for 06400000 ... 0643bfff ==&gt; b7a923600f15c369602cd1911e9bc3eaf2ac348d</p>
+<p>Validating edison-image-edison.hddimg hash for boot partition<br/>
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br/>
+reading edison-image-edison.hddimg<br/>
+6029312 bytes read in 156 ms (36.9 MiB/s)<br/>
+part find mmc 0 label:boot u_part_num;<br/>
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br/>
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br/>
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>hash sha1 0x6400000 5c0000 sha1_sum;<br/>
+sha1 for 06400000 ... 069bffff ==&gt; 4ad11552197f84f5f4abaebde55f43acb880f559</p>
+<p>Validating edison-image-edison.ext4 hash for rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br/>
+reading edison-image-edison.ext4<br/>
+536870912 bytes read in 11411 ms (44.9 MiB/s)<br/>
+part find mmc 0 label:rootfs u_part_num;<br/>
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br/>
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br/>
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>hash sha1 0x6400000 20000000 sha1_sum;<br/>
+sha1 for 06400000 ... 263fffff ==&gt; e541cc9f0c81b868942b4ae1e4133cdab41351bf</p>
+<p>Ota Pakage validated going to process it<br/>
+## Executing script at 00100000<br/>
+=== OTA update script ===<br/>
+Processing Ota update<br/>
+part find mmc 0 label:update u_part_num;<br/>
+ota drive is mmc 0:9</p>
+<p>Update IFWI on boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br/>
+reading edison_ifwi-dbg-00-dfu.bin<br/>
+4194304 bytes read in 103 ms (38.8 MiB/s)<br/>
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block<br/>
+mmc dev 0 1;<br/>
+switch to partitions #1, OK<br/>
+mmc0(part 1) is current device<br/>
+mmc write 0x6400000 0x0 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br/>
+mmc dev 0 2;<br/>
+switch to partitions #2, OK<br/>
+mmc0(part 2) is current device<br/>
+mmc write 0x6400000 0x00 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br/>
+switch to partitions #0, OK<br/>
+mmc0(part 0) is current device</p>
+<p>Update of edison_ifwi-dbg-00-dfu.bin to boot0 and boot1 partitions Done</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br/>
+reading u-boot-edison.bin<br/>
+245760 bytes read in 37 ms (6.3 MiB/s)<br/>
+part find mmc 0 label:u-boot0 u_part_num;<br/>
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br/>
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br/>
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>mmc write 0x6400000 800 1e0;</p>
+<p>MMC write: dev # 0, block # 2048, count 480 ... 480 blocks write: OK</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition  Done</p>
+<p>Update of edison-image-edison.hddimg to boot partition<br/>
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br/>
+reading edison-image-edison.hddimg<br/>
+6029312 bytes read in 156 ms (36.9 MiB/s)<br/>
+part find mmc 0 label:boot u_part_num;<br/>
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br/>
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br/>
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>mmc write 0x6400000 10000 2e00;</p>
+<p>MMC write: dev # 0, block # 65536, count 11776 ... 11776 blocks write: OK</p>
+<p>Update of edison-image-edison.hddimg to boot partition  Done</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br/>
+reading edison-image-edison.ext4<br/>
+536870912 bytes read in 11410 ms (44.9 MiB/s)<br/>
+part find mmc 0 label:rootfs u_part_num;<br/>
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br/>
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br/>
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>mmc write 0x6400000 20000 100000;</p>
+<p>MMC write: dev # 0, block # 131072, count 1048576 ... 1048576 blocks write: OK</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition  Done</p>
+<p>Ota Success going to reboot<br/>
+Saving Environment to MMC...<br/>
+Writing to MMC(0)... done<br/>
+Saving Environment to MMC...<br/>
+Writing to redundant MMC(0)... done<br/>
+resetting ...                                                                                                                                                                  �C�<br/>
+******************************<br/>
+PSH KERNEL VERSION: b0182929<br/>
+                WR: 20104000<br/>
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 10:14:01 Jan 13 2015</p>
+<p>******* PSH loader *******<br/>
+PCM page cache size = 192 KB<br/>
+Cache Constraint = 0 Pages<br/>
+Arming IPC driver ..<br/>
+Adding page store pool ..<br/>
+PagestoreAddr(IMR Start Address) = 0x04899000<br/>
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jan 30 2015 - 14:15:53)</p>
+<p>       Watchdog enabled<br/>
+DRAM:  980.6 MiB<br/>
+MMC:   tangier_sdhci: 0<br/>
+In:    serial<br/>
+Out:   serial<br/>
+Err:   serial<br/>
+Hit any key to stop autoboot:  0<br/>
+Target:blank<br/>
+Partitioning already done...<br/>
+Flashing already done...<br/>
+GADGET DRIVER: usb_dnl_dfu<br/>
+reading vmlinuz<br/>
+5348960 bytes read in 132 ms (38.6 MiB/s)<br/>
+Valid Boot Flag<br/>
+Setup Size = 0x00003c00<br/>
+Magic signature found<br/>
+Using boot protocol version 2.0c<br/>
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jan 30 14:16:35 CET 2015<br/>
+Building boot_params at 0x00090000<br/>
+Loading bzImage at address 00100000 (5333600 bytes)<br/>
+Magic signature found<br/>
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=ota-update.target hardware_id=00 g_multi.iSerialNumber=814fcaf161aadd6d4c9c90d53c037acf"</p>
+<p>Starting kernel ...</p>
+<p>[    1.680392] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br/>
+[    1.691348] pmic_ccsm pmic_ccsm: Battery Over heat exception<br/>
+[    1.703818] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device sys-subsystem-net-devices-usb0.device...<br/>
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br/>
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br/>
+[  OK  ] Reached target Paths.<br/>
+[  OK  ] Set up automount Arbitrary Executable File Formats F...utomount Point.<br/>
+[  OK  ] Reached target Swap.<br/>
+[  OK  ] Set up automount boot.automount.<br/>
+[  OK  ] Created slice Root Slice.<br/>
+[  OK  ] Listening on Journal Socket.<br/>
+[  OK  ] Listening on udev Control Socket.<br/>
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br/>
+[  OK  ] Listening on udev Kernel Socket.<br/>
+[  OK  ] Listening on Delayed Shutdown Socket.<br/>
+[  OK  ] Created slice System Slice.<br/>
+         Starting Create list of required static device nodes...rrent kernel...<br/>
+         Starting Apply Kernel Variables...<br/>
+         Starting udev Coldplug all Devices...<br/>
+         Starting Journal Service...<br/>
+[  OK  ] Started Journal Service.<br/>
+         Mounting Debug File System...<br/>
+         Starting Trigger Flushing of Journal to Persistent Storage...<br/>
+         Starting Load Kernel Modules...<br/>
+         Mounting POSIX Message Queue File System...<br/>
+[  OK  ] Reached target Slices.<br/>
+         Starting Remount Root and Kernel File Systems...<br/>
+         Starting Create Volatile Files and Directories...<br/>
+         Mounting Temporary Directory...<br/>
+[  OK  ] Mounted POSIX Message Queue File System.<br/>
+[  OK  ] Mounted Debug File System.<br/>
+[  OK  ] Mounted Temporary Directory.<br/>
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br/>
+[  OK  ] Started Apply Kernel Variables.<br/>
+[  OK  ] Started Remount Root and Kernel File Systems.<br/>
+[  OK  ] Started Create Volatile Files and Directories.<br/>
+[  OK  ] Started udev Coldplug all Devices.<br/>
+[  OK  ] Started Load Kernel Modules.<br/>
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br/>
+         Mounting FUSE Control File System...<br/>
+         Mounting Configuration File System...<br/>
+         Starting Load/Save Random Seed...<br/>
+         Starting Update UTMP about System Boot/Shutdown...<br/>
+         Starting Create Static Device Nodes in /dev...<br/>
+         Starting Network Time Synchronization...<br/>
+         Starting Opkg first boot configure...<br/>
+[  OK  ] Mounted Configuration File System.<br/>
+[  OK  ] Mounted FUSE Control File System.<br/>
+[  OK  ] Started Network Time Synchronization.<br/>
+[  OK  ] Started Load/Save Random Seed.<br/>
+[  OK  ] Started Create Static Device Nodes in /dev.<br/>
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br/>
+[  OK  ] Started Opkg first boot configure.<br/>
+         Starting udev Kernel Device Manager...<br/>
+[  OK  ] Reached target Local File Systems (Pre).<br/>
+         Mounting /var/volatile...<br/>
+[  OK  ] Mounted /var/volatile.<br/>
+[  OK  ] Started udev Kernel Device Manager.<br/>
+[  OK  ] Reached target System Initialization.<br/>
+[  OK  ] Reached target Timers.<br/>
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br/>
+         Starting Restore Sound Card State...<br/>
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br/>
+[  OK  ] Started Restore Sound Card State.<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br/>
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br/>
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br/>
+[  OK  ] Reached target Sound Card.<br/>
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br/>
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br/>
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br/>
+[  OK  ] Listening on sshd.socket.<br/>
+[  OK  ] Reached target Sockets.<br/>
+[  OK  ] Reached target Basic System.<br/>
+         Starting OTA update service...<br/>
+[  OK  ] Started OTA update service.<br/>
+[  OK  ] Reached target OTA update target.<br/>
+         Starting Watchdog sample daemon...<br/>
+[  OK  ] Started Watchdog sample daemon.<br/>
+[    8.387376] sh[189]: ## Error: "ota_update_retry" not defined<br/>
+         Starting Generate unique machine-id...<br/>
+[    8.440996] sh[189]: Starting OTA update (try: 0)<br/>
+         Starting Crashlog service...<br/>
+[  OK  ] Started Crashlog service.<br/>
+         Starting Cleanjournal service...<br/>
+[  OK  ] Started Cleanjournal service.<br/>
+[    8.680611] systemd-machine-id-setup[215]: Initializing machine ID from random generator.<br/>
+[    8.814723] systemctl[222]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br/>
+[  OK  ] Started Generate unique machine-id.<br/>
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br/>
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br/>
+         Starting OpenSSH Key Generation...<br/>
+         Mounting Arbitrary Executable File Formats File System...<br/>
+[    9.906592] systemd-fsck[232]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br/>
+[    9.908927] systemd-fsck[232]: /dev/mmcblk0p7: 5 files, 2700/2931 clusters<br/>
+[  OK  ] Mounted Arbitrary Executable File Formats File System.<br/>
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br/>
+         Mounting /boot...<br/>
+[  OK  ] Mounted /boot.<br/>
+[  OK  ] Started OpenSSH Key Generation.<br/>
+[   36.295960] sh[189]: Generating sshd keys : Success<br/>
+[   36.335943] sh[189]: Update file system table /etc/fstab : Success<br/>
+[   37.684482] sh[189]: Generating Wifi Access Point SSID and passphrase : Success<br/>
+[   37.715267] sh[189]: OTA update success<br/>
+[   37.742440] sh[189]: Rebooting....<br/>
+[   37.792499] sh[189]: No journal files were found.<br/>
+Application available at (physical) address 0x04819000<br/>
+        VRL mapped to 0xff213000<br/>
+        App size = 11484 bytes</p>
+<p>        App Authentication feature is disabled!<br/>
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br/>
+[   38.809674] resize2fs[291]: resize2fs 1.42.9 (28-Dec-2013)<br/>
+[   38.872221] resize2fs[291]: The filesystem is already 131072 blocks long.  Nothing to do!<br/>
+[   39.361215] systemctl[320]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br/>
+[   40.332051] systemd-fsck[346]: /dev/mmcblk0p10: clean, 14/152608 files, 26869/610299 blocks</p>
+<p>Poky (Yocto Project Reference Distro) 1.6.1 edison ttyMFD2</p>
+<p>edison login: root<br/>
+root@edison:~# cat /etc/version<br/>
+weekly-120</p>
+<p></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/intel-edison/3399/result-for-flashall-to-edison-on-mac/index.html" rel="bookmark">mac で edison に flashall.shの失敗</a></li><li><a class="wherego_title" href="/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/index.html" rel="bookmark">edison flashall スクリプト利用時のエラー</a></li><li><a class="wherego_title" href="/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/index.html" rel="bookmark">Intel Edison 購入時のバージョン</a></li></ul></div> </div>
+</div>
+
+
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,888 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,397 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,557 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

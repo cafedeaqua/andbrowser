@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; adt</title>
+	<atom:link href="http://andbrowser.com/tag/adt/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/adt/feed/" />
+		<item>
+		<title>ADT(Android Developer Tools) ダウンロードURL一覧</title>
+		<link>http://andbrowser.com/development/918/old-adt-download-url/</link>
+		<comments>http://andbrowser.com/development/918/old-adt-download-url/#comments</comments>
+		<pubDate>Sun, 21 Dec 2014 05:00:56 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=918</guid>
+		<description><![CDATA[Android SDKの古いADTのダウンロードURLの一覧を記載
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/android_adt_plugin_old.png" alt="" title="android_adt_plugin_old" width="384" height="220" class="aligncenter size-full wp-image-921" /></p>
+<p>
+Android ADTは新しいバージョンが続々と登場してきます。そうすると、Android SDK の <a href="http://developer.android.com/sdk/installing/installing-adt.html">ADT install サイト</a>から古いもののダウンロードリンクが無くなってしまいます。但し、eclipseのバージョンや過去のプロジェクトを古いADTで急にバージョンアップしたい場合などに急に必要になることがあります。そのため、以下に古いADTのリンクを作成しておきます。これでいつでも素早く古いADTもダウンロードできます。<br />
+<span id="more-918"></span></p>
+<p>
+ADTの最新プレビュー版を利用したいという猛者の方は、<a href="http://tools.android.com/preview-channel">Android Tools Project Site Preview Channel</a> にダウンロード方法が記載しているのでご覧ください。</p>
+<p>
+最新版のADTをインストール後に問題が発生して、古いADTに戻したい場合は、<a href="http://www.sakc.jp/blog/archives/1186">[Android TIPS]　旧バージョンで開発環境を構築する</a>や<a href="http://futabooo.hatenablog.com/entry/2012/07/13/125443">AndroidSDKToolsのrevisionとADTのバージョンを下げる方法</a>の記事が参考になると思います。<a href="http://futabooo.hatenablog.com/entry/2012/06/28/235242">AndroidSDKToolsのrevision20にしたらエライ目にあった</a> という方も居られるようですので。
+</p>
+<h4> 過去のADT のダウンロードURL一覧</h4>
+<ul>
+<li>ADT 23.0.4(October 2014)
+<ul>
+<li><a href="https://dl.google.com/android/ADT-23.0.4.zip">https://dl.google.com/android/ADT-23.0.4.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.4(May 2014)
+<ul>
+<li>http://dl.google.com/android/ADT-22.6.4.zip（リンク先ファイル無し）
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.3(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.3.zip">http://dl.google.com/android/ADT-22.6.3.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.2(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.2.zip">http://dl.google.com/android/ADT-22.6.2.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.1 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.1.zip">http://dl.google.com/android/ADT-22.6.1.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.0 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.0.zip">http://dl.google.com/android/ADT-22.6.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6-linux.tgz">https://dl.google.com/android/android-sdk_r22.6-linux.tgz</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-6/">Android Development Tools(ADT) 22.6 更新情報</a>
+	</ul>
+</li>
+<li>ADT 22.3.0 (October 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.3.0.zip">http://dl.google.com/android/ADT-22.3.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.3-linux.tgz">https://dl.google.com/android/android-sdk_r22.3-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.2.1 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.1.zip">http://dl.google.com/android/ADT-22.2.1.zip</a>
+	</ul>
+</li>
+<li>ADT 22.2 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.0.zip">http://dl.google.com/android/ADT-22.2.0.zip</a>
+	</ul>
+</li>
+<li>ADT 22.0.5 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.5.zip</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.4 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.4.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-4/">Android Development Tools(ADT) 22.0.4 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.1 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.1.zip">http://dl.google.com/android/ADT-22.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-1/">Android Development Tools(ADT) 22.0.1 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.0 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.0.zip">http://dl.google.com/android/ADT-22.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-0/">Android Development Tools(ADT) 22.0.0 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 21.1.0 (February  2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.1.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/">Android Development Tools(ADT) 21.1.0 更新情報</a>
+	</ul>
+</li>
+<li>ADT 21.0.1 (December 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 20.0.0 (June 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-20.0.0.zip">http://dl.google.com/android/ADT-20.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/">Android Development Tools(ADT) 20.0.0 更新情報</a>
+<li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/">Android Development Tools(ADT) 20.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 18.0.0 (April 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-18.0.0.zip">http://dl.google.com/android/ADT-18.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 17.0.0 (March 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-17.0.0.zip">http://dl.google.com/android/ADT-17.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 16.0.1 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.1.zip">http://dl.google.com/android/ADT-16.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/">Android Development Tools(ADT) r16.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 16.0.0 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.0.zip">http://dl.google.com/android/ADT-16.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/">Android Development Tools(ADT) 16 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.1 (November 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.1.zip">http://dl.google.com/android/ADT-15.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/">Android Development Tools (ADT) 15.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.0.zip">http://dl.google.com/android/ADT-15.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 14.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-14.0.0.zip">http://dl.google.com/android/ADT-14.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 12.0.0 (July 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-12.0.0.zip">http://dl.google.com/android/ADT-12.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 11.0.0 (June 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-11.0.0.zip">http://dl.google.com/android/ADT-11.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.1 (March 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.1.zip">http://dl.google.com/android/ADT-10.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.0 (February 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.0.zip">http://dl.google.com/android/ADT-10.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 9.0.0 (January 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-9.0.0.zip">http://dl.google.com/android/ADT-9.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.1 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.1.zip">http://dl.google.com/android/ADT-8.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.0 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.0.zip">http://dl.google.com/android/ADT-8.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.9 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.9.zip">http://dl.google.com/android/ADT-0.9.9.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.8 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.8.zip">http://dl.google.com/android/ADT-0.9.8.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.7 (May 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.7.zip">http://dl.google.com/android/ADT-0.9.7.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.6 (March 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.6.zip">http://dl.google.com/android/ADT-0.9.6.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.5 (December 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.5.zip">http://dl.google.com/android/ADT-0.9.5.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.4 (October 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.4.zip">http://dl.google.com/android/ADT-0.9.4.zip</a>
+	</ul>
+</li>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.1 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/" rel="bookmark" class="wherego_title">ADT 22.6.3 and SDK Tools 22.6.3 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/918/old-adt-download-url/feed/</wfw:commentRss>
+		<slash:comments>30</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/918/old-adt-download-url/" />
+	</item>
+		<item>
+		<title>ADT 22.6.3 and SDK Tools 22.6.3 更新情報</title>
+		<link>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/</link>
+		<comments>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/#comments</comments>
+		<pubDate>Thu, 01 May 2014 08:16:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2332</guid>
+		<description><![CDATA[ADT 22.6.3 (2014年4月)
+SDK Tools, Revision 22.6.3 (2014年4月)
+
+
+依存関係
+
+
+Java 1.6 かそれ以降が必要
+Eclipse Indigo (Version 3 [...]]]></description>
+			<content:encoded><![CDATA[<h4>ADT 22.6.3</a> <em>(2014年4月)</em></h4>
+<h4>SDK Tools, Revision 22.6.3</a> <em>(2014年4月)</em></h4>
+<p><span id="more-2332"></span></p>
+<dl>
+<dt>依存関係</dt>
+<dd>
+<ul>
+<li>Java 1.6 かそれ以降が必要</li>
+<li>Eclipse Indigo (Version 3.7.2) かそれ以降が必要</li>
+<li>SDK Tools r22.6.3向けのため、あらかじめAndroid SDK Managerを利用してインストールしてください。</li>
+<li><a href="http://ant.apache.org/">Apache Ant 1.8</a>かそれ以降が必要
+    </ul>
+</dd>
+<dt>一般連絡</dt>
+<dd>
+<ul>
+<li>APIレベルが19以降のAndroid Wear の Virtual Device 作成時のAVD Managerの問題を修正
+<li>SDK ManagerのAndroid Wear システムイメージに説明文を修正
+    </ul>
+</dd>
+<dt>既知の情報</dt>
+<dd>
+<p>AVD ManagerでAndroid WearのVirtual Deviceを作ったときに、Target API Levelが19よりも低いものが設定されている場合があります。その場合、手動で19に変更してください。</p>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/" rel="bookmark" class="wherego_title">CrashlyticsでAndroidアプリの品質向上を実現</a></li><li><a href="http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/" rel="bookmark" class="wherego_title">Mac Book Pro 13 retinaにインストールする必須アプリ</a></li><li><a href="http://andbrowser.com/development/2459/sdk-tools-22-6-3-archieve-is-not-yet/" rel="bookmark" class="wherego_title">SDK Tools 22.6.3 archieve is not yet</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 22.2.1 更新情報</title>
+		<link>http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/</link>
+		<comments>http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/#comments</comments>
+		<pubDate>Mon, 14 Oct 2013 22:13:52 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2148</guid>
+		<description><![CDATA[Android Development Tools(ADT) 22.2.1 更新情報]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/10/20131013_adt2221.png" alt="" title="20131013_adt2221" width="600"  class="aligncenter size-full wp-image-2149" /></p>
+<h4>ADT 22.2.1</a> <em>(2013年9月)</em></h4>
+<p><span id="more-2148"></span></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>Java 1.6 かそれ以降が必要</li>
+<li>Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 22.2.1 は、<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r22.2.1</a> を利用するために設計されています。まだ SDK Tools r22.2.1 をインストールしていない場合は SDK Manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>連絡事項:</dt>
+<dd>
+<ul>
+<li>新規プロジェクトウィザードのテンプレートが原因で発生する問題を修正。 (<a href="http://b.android.com/60149">Issue 60149</a>)
+    </ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2126/september-4-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB45.1%で主流に。2013年9月4日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/" rel="bookmark" class="wherego_title">古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧</a></li><li><a href="http://andbrowser.com/android-sdk/2059/sdk-manager-get-from-xml-file-no2/" rel="bookmark" class="wherego_title">SDK Managerが取得するxmlファイル（その２）(2013/08/16時点)</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 22.2 更新情報</title>
+		<link>http://andbrowser.com/development/2134/android-development-toolsadt-22-2/</link>
+		<comments>http://andbrowser.com/development/2134/android-development-toolsadt-22-2/#comments</comments>
+		<pubDate>Tue, 17 Sep 2013 23:18:54 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2134</guid>
+		<description><![CDATA[Android Development Tools(ADT) 22.2 更新情報]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/07/201309_adt22.2.png" alt="" title="201309_adt22.2" width="600" class="aligncenter size-full wp-image-2135" /></p>
+<h4>ADT 22.2</a> <em>(2013年9月)</em></h4>
+<p><span id="more-2134"></span></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>Java 1.6 かそれ以降が必要</li>
+<li>Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 22.2 は、<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r22.2</a> を利用するために設計されています。まだ SDK Tools r22.2 をインストールしていない場合は SDK Manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>連絡事項:</dt>
+<dd>
+<ul>
+<li><a href="http://developer.android.com/tools/support-library/features.html#v8">Supportライブラリ</a>の中で新しい機能を利用している古いバージョンのAndroid上のRenderScriptの利用を許可するようにビルドツールを更新
+<li>古いプラットフォーム上での署名の検証問題が発生する署名に関する変更を前の状態に戻しました
+<li>Windows プラットフォーム向けに gradle の export 機能に関する問題を修正
+    </ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/" rel="bookmark" class="wherego_title">古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧</a></li><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2140/october-2-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB 4.3が登場。2013年10月2日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2134/android-development-toolsadt-22-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 22.0.4 更新情報</title>
+		<link>http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/</link>
+		<comments>http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/#comments</comments>
+		<pubDate>Wed, 24 Jul 2013 09:55:55 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1869</guid>
+		<description><![CDATA[Android Development Tools(ADT) 22.0.4 更新情報を掲載。]]></description>
+			<content:encoded><![CDATA[<h4>ADT 22.0.4</a> <em>(2013年7月)</em></h4>
+<p><span id="more-1869"></span></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>ADT 22.0.4 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>ADT 22.0.4 を利用するためには Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 22.0.4 は、<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r22.0.4</a> を利用するために設計されています。まだ SDK Tools r22.0.4 をインストールしていない場合は SDK Manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>連絡事項:</dt>
+<dd>
+<ul>
+<li>Renderscriptのコードのコンパイル時の問題を修正
+<li>Gradle export のワークフローやエラー通知を改善
+<li>Gradle multi-module export 機能を改善
+<li>Maven pluginを利用時を除いて、クラスパスコンテナの force exporting のロジックを更新
+    </ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/1905/august-1-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB 40%を超える。ICSも少しずつ減少。2013年8月1日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/1978/asm-jar-is-created-windows-exe-runtime/" rel="bookmark" class="wherego_title">ASM(AndroidScreenMonitor)をexe化する方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 22.0.1 更新情報</title>
+		<link>http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/</link>
+		<comments>http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/#comments</comments>
+		<pubDate>Thu, 30 May 2013 21:55:46 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1784</guid>
+		<description><![CDATA[Android Development Tools(ADT) 22.0.1 更新情報を掲載。]]></description>
+			<content:encoded><![CDATA[<h4>ADT 22.0.1 <em>(2013年5月)</em></h4>
+<p><span id="more-1784"></span></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>ADT 22.0.1 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>ADT 22.0.1 を利用するためには Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 22.0.1 は、SDK tools r22.0.1 を利用するために設計されています。<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r22.0.1</a>. まだSDK Tools r22をインストールしていない場合は、SDK manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>連絡事項</dt>
+<dd>
+<ul>
+<li>LInt の ServiceCast  のチェックやクラス名の完全な正当性チェックを修正。詳細は、(<a href="http://code.google.com/p/android/issues/detail?id=55403">Issue 55403</a>)を参照ください。</li>
+<li>LintのArraySizeDetector チェックに関するクラッシュ不具合を修正。詳細は(<a href="http://code.google.com/p/android/issues/detail?id=54887">Issue 54887</a>)を参照ください。</li>
+<li>Gradle のエクスポート機能に関する問題を修正。</li>
+<li>ADTプラグインのバージョンチェックの不具合修正。</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2.1 更新情報</a></li><li><a href="http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.4 更新情報</a></li><li><a href="http://andbrowser.com/development/918/old-adt-download-url/" rel="bookmark" class="wherego_title">ADT(Android Developer Tools) ダウンロードURL一覧</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 21.1.0 更新情報</title>
+		<link>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/</link>
+		<comments>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/#comments</comments>
+		<pubDate>Wed, 13 Mar 2013 18:13:12 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1578</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21.1.0 更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/person_adt_21.1.0.jpg" alt="Android Development Tools(ADT) 21.1.0" title="Android Development Tools(ADT) 21.1.0" width="640" height="427" class="aligncenter size-full wp-image-1581" /></p>
+<h4>ADT 21.1.0 <em>(2013年2月)</em></h4>
+<p><span id="more-1578"></span></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/03/adt_21.1.0.png"><img src="http://andbrowser.com/wp-content/uploads/2013/03/adt_21.1.0-300x255.png" alt="adt_21.1.0" title="adt_21.1.0" width="300" height="255" class="aligncenter size-medium wp-image-1583" /></a></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>ADT 21.1.0 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>ADT 21.1.0 を利用するためには Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 21.1.0 は、SDK tools r20.0.1 を利用するために設計されています。<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r21.1</a>. まだSDK Tools r21.1をインストールしていない場合は、SDK manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>一般連絡:</dt>
+<dd>
+<ul>
+<li>noticationsと brank fragment と list fragments の新しい<a href="http://andbrowser.com/tools/projects/templates.html">コードテンプレート</a>を追加</li>
+<li>リソースの名前変更のリファクタリングをサポート。XMLファイルや drawable アイコンや <code>R.</code>フィールド名やIDのレイアウトエディタ内のものに対するリファクタリングを実施すると参照しているものも更新されます。</li>
+<li>15以上の新しい Lint check を追加。古い APIの override に関するチェックや、XMLリソースの問題や、graphic asset に関する項目やmanifest タグに関するもの。
+<li><strong>Refactor &gt; Rename</strong>のメニューのようなリファクタリングのショートカットキーをXMLエディタに対して更新。</li>
+<li>ダブルクリックのハンドリングの改良をXMLエディタに対して実施</li>
+<li>カスタムビューやテーマ参照やクラス参照に関するコード補完を追加。例えば、<code>&lt;fragment android:name=””&gt;</code> タグに対して、フラグメントクラスの一覧を提案するようなものです。同様に、マニフェスト上で入力に対する最適な提案も行われます。</li>
+<li>すべてのインポートできるプロジェクトの一覧からプロジェクト名を編集できるようにするための <strong>Project Import</strong>ダイアログの更新。</li>
+<li>レイアウトエディタのlayout aliasesのサポートを追加</li>
+</ul>
+</dd>
+<dt>不具合修正:</dt>
+<dd>
+<ul>
+<li>パッケージやクラスの名前変更や移動に関するリファクタリングに関する項目を修正</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/1606/april-2-2013-android-platform-versions/" rel="bookmark" class="wherego_title">ICS以上で54%に増加。2013年4月2日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/1953/android-app-recommend-color-code/" rel="bookmark" class="wherego_title">Androidアプリ開発時に迷った場合にオススメのカラーコード</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/" />
+	</item>
+		<item>
+		<title>コマンドラインからAndroid SDKをダウンロードするURL一覧</title>
+		<link>http://andbrowser.com/development/1128/android-sdk-download-for-cui/</link>
+		<comments>http://andbrowser.com/development/1128/android-sdk-download-for-cui/#comments</comments>
+		<pubDate>Tue, 25 Dec 2012 00:41:20 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1128</guid>
+		<description><![CDATA[コマンドラインからAndroid SDKをダウンロードするURL一覧を記載]]></description>
+			<content:encoded><![CDATA[<br />
+<style>
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+}
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: #258;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;	
+}
+table th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #258;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+table tr:hover {
+  background: #bbd4ee;
+  cursor:pointer;
+}
+</style>
+<h4><a href="http://developer.android.com/sdk/android-1.1.html">Android SDK Platform 1.1_r1</a>(B?????：コードネーム未公開)(Feb 9, 2009)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>1</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-windows.zip">android-1.1_r1-windows.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-windows.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-macosx.zip">android-1.1_r1-macosx.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-macosx.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-linux.zip">android-1.1_r1-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-1.5.html">Android SDK Platform 1.5_r3</a>(Cupcake)(April 30, 2009)</h4>
+<p><span id="more-1128"></span></p>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>3</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>04</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>6</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-windows.zip">android-1.5_r04-windows.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.5_r04-windows.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-macosx.zip">android-1.5_r04-macosx.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.5_r04-macosx.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-linux.zip">android-1.5_r04-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.5_r04-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-1.6.html">Android SDK Platform 1.6_r2</a>(Donut)(September 15, 2009)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>1.6</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>4</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>03</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>6</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-windows.zip">android-1.6_r03-windows.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.6_r03-windows.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-macosx.zip">android-1.6_r03-macosx.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.6_r03-macosx.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-linux.zip">android-1.6_r03-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.6_r03-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-2.0.html">Android SDK Platform 2.0, revision 1</a>(Eclair)(October 26, 2009)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>5</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>01</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>3</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-linux.zip">android-2.0_r01-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.0_r01-linux.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-macosx.zip">android-2.0_r01-macosx.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.0_r01-macosx.zip
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-windows.zip">android-2.0_r01-windows.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.0_r01-windows.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-2.1.html">Android SDK Platform 2.1_r3</a>(Eclair)(July, 2011)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>7</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>03</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>8</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.1_r03-linux.zip">android-2.1_r03-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.1_r03-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-2.2.html">Android SDK Platform 2.2_r3</a>(Froyo)(May 20, 2010)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>8</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>03</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>8</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.2_r03-linux.zip">android-2.2_r03-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.2_r03-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-2.3.html">Android SDK Platform 2.3.1_r2</a>(Gingerbread)(December 6, 2010)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>2.3.1</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>9</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>02</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>8</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.3.1_r02-linux.zip">android-2.3.1_r02-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.3.1_r02-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-2.3.3.html">Android SDK Platform 2.3.3._r2</a>(Gingerbread)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>2.3.3</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>02</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>8</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.3.3_r02-linux.zip">android-2.3.3_r02-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-2.3.3_r02-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-3.0.html">Android SDK Platform 3.0, revision 2</a>(Honeycomb)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>11</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>02</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>10</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.0_r02-linux.zip">android-3.0_r02-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-3.0_r02-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-3.1.html">Android SDK Platform 3.1, revision 3</a>(Honeycomb)(May 10, 2011)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>3.1</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>12</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>03</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>11</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.1_r03-linux.zip">android-3.1_r03-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-3.1_r03-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-3.2.html">Android SDK Platform 3.2, revision 1</a>(Honeycomb)(July 15, 2011)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>3.2</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>13</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>01</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>12</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.2_r01-linux.zip">android-3.2_r01-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-3.2_r01-linux.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-4.0.html">Android SDK Platform 4.0</a></h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>14</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>01</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-14_r03.zip">android-14_r03.zip</a>(OS any)
+<ul>
+<li>http://dl.google.com/android/repository/android-14_r03.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-4.0.3.html"></a></h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>4.0.3</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>15</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>03</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>15</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-15_r03.zip">android-15_r03.zip</a>(OS any)
+<ul>
+<li>http://dl.google.com/android/repository/android-15_r03.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-4.1.html">Android SDK Platform 4.1.2</a></h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>4.1.2</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>16</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>4</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>21</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-16_r04.zip">android-16_r04.zip</a>(OS any)
+<ul>
+<li>http://dl.google.com/android/repository/android-16_r04.zip
+	</ul>
+</ul>
+<h4><a href="http://developer.android.com/sdk/">Android SDK Platform 4.2</a></h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>17</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SDK min-tools-rev  &gt; SDK major</td>
+<td>21</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-17_r01.zip">android-17_r01.zip</a>(OS any)
+<ul>
+<li>http://dl.google.com/android/repository/android-17_r01.zip
+	</ul>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/1159/android-tablet-app-is-required-bigger-launcher-icon/" rel="bookmark" class="wherego_title">Androidタブレットアプリのホームアイコンは１段階大きなアイコンが必要</a></li><li><a href="http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/" rel="bookmark" class="wherego_title">JB4.3 Android4.3(JellyBean)x86向けエミュレータイメージのインストール方法</a></li><li><a href="http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/" rel="bookmark" class="wherego_title">古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1128/android-sdk-download-for-cui/feed/</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1128/android-sdk-download-for-cui/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 21 preview 3,4,5の更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/</link>
+		<comments>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/#comments</comments>
+		<pubDate>Wed, 26 Sep 2012 12:48:15 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1037</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21 preview 3,4,5の更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/09/adt21preview345.png" alt="Android Development Tools-ver21-preview3-4-5" title="adt-ver21-preview3-4-5" width="500" class="aligncenter size-full wp-image-1041" /></p>
+<h4>
+<b>ADT 21 Preview 5の新機能</b><br />
+</h4>
+<div>
+<b>Preview 5 にはたくさんの不具合修正が含まれています。</b>それに加えて、以下の変更が入っています。
+</div>
+<div>
+<ul>
+<li>ビルドシステム</li>
+<ul>
+<li>適切に適用されたライブラリクラスに対するマニフェストの結合に関する修正
+</li>
+<li>ライブラリ群（jarファイルとライブラリプロジェクトの両方）は、ビルド時間を改良するために、pre-dexed されます。
+</li>
+<p><span id="more-1037"></span></p>
+<li>ライブラリクラスの R クラスは ライブラリに必要な ID のみが生成されます。これは フィールドやメソッドの上限に dex ファイルがヒットするリスクを減らすためです。
+</li>
+<li>いくつかの編集機能（コード補完、リソース選択、宣言へ飛ぶ）がライブラリプロジェクトのリソースに対しても適切に実行できる。
+</li>
+</ul>
+<li>Lint</li>
+<ul>
+<li>新規チェック項目が追加<br />
+アプリのバックアップを許可するかどうかを明確に決めるべきであり、そのラベルチェックを実施。<br />
+ライブラリパスの設定に関する新しいコマンドラインフラグを追加。<br />
+編集時の lint 分析に関するたくさん改良を実施。
+</li>
+</ul>
+<li>レイアウト エディタ</li>
+<ul>
+<li>レイアウトエディタはシングルエディタの中のシングルレイアウトのすべての変更を強制しません。例えば、ランドスケープとポートレートの２つのバージョンのレイアウトを異なるエディタで編集可能ですし、それらの間をすぐに切り替え可能です。もしくは、同時にそれらを編集して組み合わせることもできます。もし、以前の振る舞いを希望する場合は、設定のAndroid &gt; Editor で以前の不具合に変更できます。
+</li>
+<li>configuration chooserのデバイスメニューに関する改良</li>
+<li>カスタムビューのレンダリング中や構築中に例外がスローされた場合に、レイアウトエディタのエラーをボトムにスタックトレースの関連部分が表示されますし、スタックフレームがハイパーリンクされます。
+</li>
+</ul>
+<li>エディタ
+</li>
+<ul>
+<li>IDEは最後に編集したXMLかグラフィカルモードかどうかを記憶（たとえば、レイアウト、マニフェスト、値の編集）しますし、新しく開いたファイルに同じモードを適用します。これは、ちょうどXMLファイルを編集しようとしたときに、IDEはエディタの種類をXMLエディタを表示しようとします。
+</li>
+<li>valueの中の属性(Attributes)とリソース(resources)はセーブするたびに有効化されます。
+</li>
+</ul>
+<li>GLトレース
+</li>
+<ul>
+<li>imagesとframesをエクスポートするための能力
+</li>
+</ul>
+</ul>
+</div>
+<h4>
+<b>ADT 21 Preview 4の新機能</b><br />
+</h4>
+<div>Preview 4にはたくさんの不具合修正が含まれています。それに加えて、少しの新規の Lint チェックが追加されてます。
+</div>
+<div>
+<ul>
+<li>Lintは、ロケールに関する破壊を行うコードを検索します。例えば、書式付文字列の定義や、パフォーマンス低下の要因や明確なロケール定義がない場合などです。
+</li>
+<li>マニフェストにクラス定義が存在しないように見える場合。例えば、削除されたり、リネームされたり、マニフェストの更新なしに移動されたり、タイプミスしたような場合。
+</li>
+<li>デフォルトのパブリックコンストラクタが明示されていないマニフェストの中で定義されているアクティビティやサービスやアプリケーションを検出する。誤って登録されたインタークラスもフラグ付します（<code>$</code>をセパレータとして利用する代わりに . を使っている場合）
+</li>
+<li>
+<code>View#setTag()</code> を利用したり、もう１つのViewをpassさせた結果によるリークを検出する。
+</li>
+<li>リソースエイリアスファイルの誤った利用方法を検出
+</li>
+<li>
+<code>SparseArray&lt;Integer&gt;</code>のかわりに<code>SparseIntArray</code>の利用を提案する
+</li>
+<li>最も知られているバージョンのプラットフォームをターゲットとしていないアプリに警告を出します。<br />
+これは、様々な互換性を保つためであり、アプリケーションを広めるためです。
+</li>
+</ul>
+<div>新規lint チェック以外にもいくつかの改良を実施。
+</div>
+<ul>
+<li>Systraceを DDMS に統合
+</li>
+<li>F2を押した場合のレイアウトエディタのデフォルト動作を定義。例えば、ボタンやテキストビューをドラッグした後に F2 を押すとテキストの編集が可能<br />
+<img border="0" src="https://sites.google.com/a/android.com/tools/_/rsrc/1347318021776/download/adt-21-preview/menu.png.1347318021534.png" style="display:block;margin-top:5px;margin-bottom:5px;margin-right:auto" />
+</li>
+<li>
+<i>Rename</i> ショートカットを利用して ID を変更可能</p>
+<li>
+&#8220;<i>Add Locale&#8230;</i>&#8221; アクションを利用して簡単にロケールを追加可能。さらに新しい値をフォルダに追加し、新しいロケール向けの翻訳文字セットを編集できるようにします。<br />
+</p>
+<div style="display:block;text-align:left">
+<a href="https://sites.google.com/a/android.com/tools/download/adt-21-preview/translation2.png.1347318554531.png?attredirects=0" imageanchor="1"><br />
+<img border="0" src="https://sites.google.com/a/android.com/tools/_/rsrc/1347318554817/download/adt-21-preview/translation2.png.1347318554531.png" /><br />
+</a>
+</div>
+</li>
+<li>
+<div style="display:block;text-align:left">
+<div style="display:block;text-align:left">
+<p>初期化中や描画中に例外が投げられたカスタムビュー（もしくは間違った設定をしたビュー）は、レイアウトエディタ内にスタックトレースが表示されて、関連するスタックフレームにジャンプすることができます。
+</p></div>
+</div>
+</li>
+</ul>
+</div>
+<h2><b>ADT 21 Preview 3の新機能</b></h2>
+<ul>
+<li>Preview 3は、<b>たくさんの不具合修正を実施</b><br />
+＃それだけかよ（ｗ
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2 更新情報</a></li><li><a href="http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.1 更新情報</a></li><li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 21.1.0 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 21 preview 2の更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/</link>
+		<comments>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/#comments</comments>
+		<pubDate>Mon, 27 Aug 2012 11:42:31 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1025</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21 preview 2の更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/08/adt21preview21.png" alt="Android Development Tools(ADT) 21 preview2" title="Android Development Tools(ADT) 21 preview2" width="609" height="342" class="aligncenter size-full wp-image-1034" /></p>
+<h4>ADT 21 Preview</h4>
+<p>2012年8月22日：ADT 21 と SDK Tools, r21 の preview2 向けビルドを更新のうえ、リリースしました。インストール方法は後述しています。</p>
+<h5>ADT 21 Preview 2 の新しいポイント</h5>
+<p>
+preview1のように preview2は不具合修正版リリースです。ADT20から様々な領域においてのたくさんの不具合修正を含んでいます。例えば、新しいテンプレートインフラストラクチャのように。<br />
+20.0.1や20.0.2や来たるべき20.0.3に含まれている少ないがクリティカルな不具合修正が含まれている一方、ADT21は非常にたくさんの不具合修正やインフラストラクチャの改良が含まれています。</p>
+<h5>新機能について</h5>
+<div>
+<ul>
+<li>
+JUnit test runner が接続されているすべてのデバイスに同時にテストを実行可能<br />
+<span id="more-1025"></span><br />
+<img border="0" src="http://tools.android.com/_/rsrc/1344561932557/download/adt-21-preview/fullscreen.png" style="display:inline;float:right;margin:5px 10px" /></li>
+<li>
+新しいテンプレートメカニズムの改良、既存のテンプレートや新しいテンプレートのクリーンナップ
+</li>
+<li>
+XMLコード補完がテーマ参照からすぐに実行可能。例えば、 <code>?android:attr/dividerHeight</code>のように。</p>
+<li>
+設定の選択がメニューや設定ダイアログなどからフルの言語やリージョン名(2文字コードでなく）をすぐに表示
+</li>
+<li>
+新しい lint チェック
+</li>
+<ul>
+<li>
+<code>WakeLock</code>の確かな種類を発見（不必要なバッテリー利用につなげるために）
+</li>
+<li>
+ソースフォルダの中のプライベートなキーファイルを発見（ .apk を分配するフォルダに対して）
+</li>
+<li>
+<code>SecureRandom</code>オブジェクトの間違った利用を発見（seedを初期化がなされているかどうか）
+</li>
+<li>
+無効な drawable selector ファイルを発見（あとの状態(state)が先の状態(state)を完全にカバーしている場合）(故にある状態に到達しない場合）
+</li>
+<li>
+フォントプロパティ<code>textSize</code>と一緒に<code>dp</code> ユニットの利用を発見（むしろ<code>sp</code>を利用すべき）
+</li>
+<li>
+stringリソースのtyposを発見。現在のチェックは、以下の言語に対応。英語、スペイン語、イタリア語、ドイツ語、ハンガリー語、ノルウェー語、ポルトガル語、トルコ語。我々は、他の言語のtypo辞書の構築の助けを必要としています。詳細は、<a href="https://plus.google.com/u/0/116539451797396019960/posts/MvxRsR75uNv">こちら</a>をみてください。
+</li>
+<li>
+いくつかのlintチェックが広がりました。例えば、<code>px</code> checkerは、style 装飾もみます。the String.format checker は<code>getResources(R.string.foo, args)</code>などもみます。
+</li>
+</ul>
+<li>
+たくさんのlint インフラの改良と不具合修正（たとえば、ライブラリプロジェクトはプロジェクト側のチェックに含まれたり、クラスファイルのフローを解析したり、偽反応(false positives)の数を減らしたり、新しい&#8221;<code>lint</code>&#8220;ターゲットをantビルドに追加したり、新しい <code>--sources</code> や <code>--classpath</code>引数を異なるディレクトリ構造のソースコードにlintを適用したり、 <a href="https://wiki.jenkins-ci.org/display/JENKINS/Android+Lint+Plugin" rel="nofollow">Jenkins Lint plugin</a>をサポートするために XML エクスポートを改良。
+</li>
+<li>
+<img border="0" src="http://tools.android.com/_/rsrc/1344562192227/download/adt-21-preview/relative.png" style="display:inline;margin:5px 10px;float:right" /><br />
+レイアウトエディターの中のRelativeLayout を改良、そのためドラッグ中のウィジェットの周りと削除は、直感的な結果が得られる。特に削除中のウィジェットは削除されたウィジェットを通る制約をうける。そして、移動中のウィジェットの制約は、いつでも有効である。（たとえば、cycleを作成していなくても）
+</li>
+<li>
+<b>Preview 2</b>は preview1に追加される機能はありません。不具合修正のみです。ADT21向けにはより機能追加が実施されますが、いくつかの重要な不具合修正は preview として素早く更新されます。
+</li>
+<li>
+<b>注意点:</b> &#8220;multiconfiguration editor&#8221;機能（詳細は<a href="https://plus.google.com/u/0/116539451797396019960/posts/2pjZ4udMZ2X">こちら</a>）は ADT21では提供されません。</li>
+</ul>
+<div>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/990/android-development-tools-adt-20-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.2 更新情報</a></li><li><a href="http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/" rel="bookmark" class="wherego_title">ADT 22 ,Tools 22 リリース情報</a></li><li><a href="http://andbrowser.com/android-sdk/1738/branch_for_adt_r22/" rel="bookmark" class="wherego_title">ADT r22まもなく？</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 20.0.1 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/</link>
+		<comments>http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/#comments</comments>
+		<pubDate>Sat, 21 Jul 2012 13:26:17 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=975</guid>
+		<description><![CDATA[Android Development Tools(ADT) 20.0.1 更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/adt20.0.1.png" alt="Android Development Tools(ADT) 20.0.1" title="Android Development Tools(ADT) 20.0.1" width="811" height="568" class="aligncenter size-full wp-image-980" /></p>
+<h4>ADT 20.0.1 <em>(June 2012)</em></h4>
+<div class="toggleme">
+<dl>
+<dt>依存関係</dt>
+<dd>
+<ul>
+<li>ADT 20.0.1 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>ADT 20.0.1 を利用するためには Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 20.0.1 は、SDK tools r20.0.1 を利用するために設計されています。<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r20.0.1</a>. まだSDK Tools r20.0.1をインストールしていない場合は、SDK manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>不具合修正</dt>
+<p><span id="more-975"></span></p>
+<dd>
+<ul>
+<li>サポートライブラリのインストールに関連する新規プロジェクトウィザード時の問題を修正</li>
+<li>テンプレートを利用する場合の新規プロジェクトウィザードに関するいくつかの問題を修正</li>
+<li>新規プロジェクトウィザードでのテキストベースのランチャーアイコンに関する問題を修正</li>
+<li>Javaファイル内の難解なエラーマーカーに関する問題を修正</li>
+<li><code>.apk</code>ファイルリリースの書き出し時の、マニフェスト結合の問題を修正</li>
+<li>Windows OS上で自動的に include path を探すような NDK サポートを対応</li>
+<li>空白のエディタの新しい設定を開こうとしたときに発生する excetion に対応</li>
+<li>API Level 16に含まれる <code>xxhdpi</code> densityのサポートを追加。</li>
+<li>Androidのデフォルト動作時に unprotected receivers を無視するための unprotected broadcast receivers に関する <code>lint</code>チェックの不具合を修正。</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 21 preview 3,4,5の更新情報</a></li><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/development/knowhow/612/android-ndk-r7-release/" rel="bookmark" class="wherego_title">Android NDK r7 の更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 20.0.0 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/963/android-adt20/</link>
+		<comments>http://andbrowser.com/development/knowhow/963/android-adt20/#comments</comments>
+		<pubDate>Tue, 10 Jul 2012 22:39:25 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=963</guid>
+		<description><![CDATA[Android Development Tools(ADT) 20.0.0 更新情報をわかりやすく掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/adt20.png" alt="Android Development Tools(ADT) 20.0.0 更新情報" title="Android Development Tools(ADT) 20.0.0 更新情報" width="640" height="480" class="aligncenter size-full wp-image-968" /></p>
+<h4>ADT 20.0.0 <em>(2012年6月)</em>リリース</h4>
+<dl>
+<dt>依存関係</dt>
+<dd>
+<ul>
+<li>ADT 20.0.0 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 20.0.0 は、SDK tools r20 を利用するために設計されています。<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r20</a>. まだSDK Tools r20をインストールしていない場合は、SDK manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>一般的な改善点:</dt>
+<p><span id="more-963"></span></p>
+<dd>
+<ul>
+<li>アプリケーション　テンプレート
+<ul>
+<li>Androidアプリのテンプレートを追加。Androidアプリ開発のベストプラクティスを利用するために、開発者が特殊な事例を登録可能にした。</li>
+</ul>
+</li>
+<li>パフォーマンス
+<ul>
+<li>全体的な ADT パフォーマンスを改善し、メモリに関する不具合を修正。SDK dataのロードを30%改善。</li>
+</ul>
+</li>
+<li>GLES向けのTracer
+<ul>
+<li>アプリからのOpenGL callをトレースするための新しいperspective viewを追加し、それぞれのcallの track とビジュアル結果が見れるようになった。 (<a href="http://developer.android.com/tools/help/gltracer.html">詳細はこちら。</a>)</li>
+</ul>
+</li>
+<li>Lint
+<ul>
+<li>新しい Lint ルールを追加。manifest 登録、activity 登録の重複、セキュリティチェック、Toastの正しい利用方法、SharedPreferencesのcommit()忘れの防止、Fragmentクラスのインスタンス化、handlerのメモリリーク対応</li>
+<li>レイアウトエディタに関する Lint のより厳しい統一を追加(<a<br />
+href="http://tools.android.com/recent/lintfeedback">詳細はこちら</a>)</li>
+<li>Javaファイル保存時のオプションに Lint の実行を追加(<a<br />
+href="http://tools.android.com/recent/lintonsave">詳細はこちら</a>)</li>
+</ul>
+</li>
+<li>レイアウトエディタ(<a href="http://tools.android.com/recent/newlayouteditorpropertysheet">詳細はこちら</a>)
+<ul>
+<li>重要な属性、画像やカラーのインラインプレビュー、似ているリソース名がboldでハイライトされる機能を追加</li>
+<li>デフォルト値の表示機能を追加（あれば）</li>
+<li>リソースの値、enum, flagの固定値の補間を追加</li>
+<li>拡張プロパティの表示機能を追加し、ネストされたプロパティをカテゴライズする機能、例えば、レイアウトのパラメータは１段階ネストされたプロパティが最初にリストされます。</li>
+<li>値のないアトリビュート名の上に Tooltips を表示。</li>
+<li>booleanの値のためにチェックボックスのサポートを追加</li>
+<li>アルファベットと数値のソートオーダーを切り替える機能を追加</li>
+<li>より便利に編集できるようにするために、レイアウトエディタのwindows管理を改良</li>
+<li>レイアウトエディタの設定をUIのヘッダから選べるように改良</li>
+</ul>
+</li>
+<li>XML 編集機能
+<ul>
+<li>テーマ参照(?android:attr, ?attr:)されている宣言への移動サポートを追加</li>
+<li>style定義の補間機能を改良</li>
+<li>APIレベルごとにバージョン定義を表示するために、manifest 内の<code>minSdkVersion</code> と <code>targetSdkVersion</code> 属性の補間を改良</li>
+<li>styleファイルを含むカスタムビューのカスタム属性に対しても補間機能を改良。</li>
+<li>XML outline viewでテキストや画像の編集が同期する改良</li>
+</ul>
+</li>
+<li>Build System
+<ul>
+<li>プロジェクトのmanifestの中に library project の manifest が自動的にマージされる機能を追加。 <code>manifestmerger.enabled</code> property を有効にすれば動作する。</li>
+<li><code>aapt -G</code> flagによって、ProGuardの自動サポートを追加。XML files(custom viewsのような）を参照し、テンポラリのProGuard keep-ruleファイルに含まれるクラスを生成するビルドシステムにこの変更は影響する。巨大なライブラリプロジェクト(Android Support libraryのような)の一部を利用する場合により小さな apk を生成することが可能になる。そのため、すべての custom views をkeepするdefault ProGuard 設定ファイルは削除されます。</li>
+</ul>
+</li>
+<li>NDKベースのAndroid project のデバッグ機能を追加</li>
+</li>
+<li>background shapes の調整やパディングを Asset Stdio Wizard で対応追加</li>
+<li>LogCat で異なる優先度に色設定ができるように改良</li>
+<li>複数デバイスが接続されていても、1つのみで実行できるように &#8220;Run&#8221; を改良。launch 設定ダイアログの target tab は接続されているすべてのデバイスを表示し、物理デバイスかエミュレータかを設定可能。（この機能は、&#8221;Run設定&#8221;のみで、DebugやJUnitテストでは利用できません）</li>
+<ul>
+  </dd>
+<dt>不具合修正</dt>
+<dd>
+<ul>
+<li>Lintの間違ったレポートに関する多数の不具合を修正</li>
+<li>レイアウトエディタに関する不具合を修正</li>
+<li>カット・コピー・ペーストを含む、Eclipse 4.x (Juno) の互換性保持に関する不具合を修正</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 21 preview 2の更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/770/android-support-package-r6/" rel="bookmark" class="wherego_title">Android Support Package Rivision6 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/1037/android-development-tools-ver21-preview3-4-5/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 21 preview 3,4,5の更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/963/android-adt20/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/963/android-adt20/" />
+	</item>
+		<item>
+		<title>Android Lint 解析内容の詳細を調査</title>
+		<link>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/</link>
+		<comments>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/#comments</comments>
+		<pubDate>Sun, 25 Dec 2011 12:54:11 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=787</guid>
+		<description><![CDATA[Android Lint 解析内容の詳細を調査]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_android_list_check.png" alt="android lint check detail" title="android lint check detail" width="578" height="284" class="aligncenter size-full wp-image-809" /></p>
+<h4>Android Lintの解析内容の詳細</h4>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>については、<a href="http://andbrowser.com/development/knowhow/712/android-lint/">前のエントリ</a>をご参照ください。このエントリでは、以下の<code>lintコマンド</code>で表示される lint の解析内容をカテゴリごとに整理し、指摘事項の詳細をまとめました。。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show
+</pre>
+<p><span id="more-787"></span></p>
+<p>以下の詳細を見る前にいくつかポイントを整理しておきます。</p>
+<ul>
+<li>優先度(Priority)は数字が大きい（10が最大）ものが高いことを意味します。
+<li>重要性（severity)は変更可能。全プロジェクトのみではなく、各プロジェクトごとにも設定可能。変更は、eclipse > preference > Android > Lint Error Checking で実施。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_lint_detail.png" alt="android lint preference" title="android lint preference" width="105%"/></p>
+<li>セーブ時に一部チェックの自動適用の可否を設定可能
+<li>アプリパッケージ作成時のフルチェックの可否を設定可可能
+<li>指摘項目は適時更新されて追加しているため、掲載不足のものもあります。それらは、<code>lint --showコマンド</code>か preference の Lint Error Checking で詳細をご覧ください。
+<li>エラーが発生すると apk 作成を中止するため、重要性(severity)を警告からエラーにする場合は熟慮することをお薦めします。
+</ul>
+<h4>Lintの解析項目一覧</h4>
+<table width="100%" class="lint_detail">
+<tr>
+<th width="10%">カテゴリ<br />Category</th>
+<th width="5%">ID</th>
+<th width="15%">概要<br />Name</th>
+<th width="5%">優先度<br />Priority</th>
+<th width="5%">重要性<br />Severity</th>
+<th width="60%">詳細<br />Detail</th>
+</tr>
+<tr>
+<td>正確性</td>
+<td>AdapterViewChildren</td>
+<td>XML内の子Viewとして定義されていない AdapterView かどうかを調査</td>
+<td>10/10</td>
+<td>警告</td>
+<td>ListViewのようなAdapterViewは、ListAdapterのようなもので、Javaコードからデータを設定しなければなりません。より詳細は、<a href="http://developer.android.com/reference/android/widget/AdapterView.html">http://developer.android.com/reference/android/widget/AdapterView.html</a>を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>MissingPrefix</td>
+<td>Androidネームスペースで利用されていないXML属性を発見</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Android viewたちのほとんどは、Androidネームスペースの属性をもっています。これらの属性を参照する場合は、必ずネームスペースの接頭語をつけるべきです。さもないとカスタム属性として aapt に解釈されます。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>MissingTranslation</td>
+<td>全文字列が翻訳済みかどうかの完全性を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>もしアプリが１言語よりも多い言語をサポートする場合、１言語の全文字列が他の言語にも翻訳されているべきです。標準では、この検出は　言語の地域たちに提供されます。ちょど文字列のサブセットとして提供されたり、標準の言語文字列の代替になります。すべての地域に対して、完全な翻訳を提供するために ANDROID_LINT_COMPLETE_REGIONSという環境変数をセットすることによって、強制できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>Proguard</td>
+<td>proguard.cfg ファイルの問題を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>proguard.cfg ファイルで -keepclasseswithmembernames を利用することは、正しくありません。なぜなら、ADTの新しいバージョンで作成される proguard.cfg ファイルは異なるフォーマットになるためです。<br />-keepclasseswithmembernames の代わりにkeepclasseswithmembers を利用してください。なぜなら過去のフラグもまた、XMLからでJava(CustomViewsのようなもの)でなく参照されるシンボルのみの&quot;allow shrinking&quot;を示しているためです。<br />より詳細情報は、<a href="http://code.google.com/p/android/issues/detail?id=16384">http://code.google.com/p/android/issues/detail?id=16384</a> を見てください。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewCount</td>
+<td>ScrollViewが正しく子ウィジェットが保持しているかを調査</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Scrollviewは1つの子ウィジェットのみを保持できます。もし２つ以上の子を持ちたければ、コンテナレイアウトにまとめて保持させましょう。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIds</td>
+<td>シングルレイアウトの中で同じIDが存在するかどうかの調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>レイアウトの中で、IDは一意であるべきです。さもないと findViewById() が予期せぬviewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>InconsistentArrays</td>
+<td>配列の要素数に矛盾がないかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>配列が他の地域向けに翻訳されるときに、一般的にはオリジナルな配列と同様の要素数にすべきです。配列を追加や削除したときに、すべての地域の更新を簡単に忘れてしまいます。そんため、lint の警告はこれらの矛盾を検出します。</p>
+<p>注意：しなしながら本当にそれぞれの設定において（例えば、存在するオプションに相当する配列やそれらのオプションが異なるレイアウトの向きやそれ上の違いがある場合）配列アイテムの要素数が異なるものを利用したい理由がある場合は、自らの判断でエラーかどうかを判断して利用してください。<br />もし間違ったエラーがプロジェクト内にある場合は、そのエラータイプを抑止できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>NestedScrolling</td>
+<td>スクロールするウィジェットが何かのスクロールするウィジェットの中に入っているかかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollViewのようなスクロールするViewは、重要なユーザビリティ問題のため、何かのネストされたスクロールウィジェットを中に含めるべきではありません。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewSize</td>
+<td>ScrollViewがスクロール範囲の中で WRAP_CONTENT を利用しているかどうかをチェック</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollView の子たちは、layout_width か layout_height 属性に wrap_content よりもむしろ fill_parent か match_parent をスクロール領域の中で指定すべきです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIncludedIds</td>
+<td>include tag を利用して結合したレイアウトにわたって同じIDが利用されているかどうかをチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>同じIDを２つの独立したレイアウトに利用することは良いことです。しかしながら、もしレイアウトを include tag して結合した場合、IDはincludeされたレイアウトの連鎖の中で一意な必要性がある、もしくはActivity#findViewById()は期待しないViewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ExtraTranslation</td>
+<td>利用されていない（標準言語向け文字列で存在しない）ように見える翻訳をチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>もし、ある文字列が特定の言語向けの翻訳ファイルで現れた場合で、標準の地域(locale)に同じ文字列が存在しない場合があれば、たぶんこの文字列は利用されていないだろう。（あなたのアプリが特別な地域(locale)のみで動作するように意図したものであれば、技術的にこの可能性がありますが、しかし代替を準備するよりはまだまだ良案です。）</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>ManifestOrder</td>
+<td>&lt;application&gt;タグの後ろに&lt;uses-sdk&gt;が存在するようなマニフェストの問題を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>&lt;application&gt;タグは、必要なversion情報やfeatureやlibrariesなどの宣言タグの後に現れるべきです。<br />&lt;application&gt;タグがいくつかの他のタグより前に現れたときは過去に複雑なバグが存在しました。<br />そのためロジカルな依存順序でマニフェストに並べるのがベストです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>StateListReachable</td>
+<td>&lt;selector&gt;の中で到達できない状態(state)を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>selectorの中で、state list の最後の子のみが state修飾詞を除外すべきです。もしそうでなければ、リストのすべての次にくる項目は与えられた項目がすべてマッチするために無視されるでしょう。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>GridLayout</td>
+<td>行と列が外部で宣言されているような場合のGridLayoutの潜在的なエラーを調査。</td>
+<td>4/10</td>
+<td>エラー</td>
+<td>GridLayoutのrowCountかcolumnCountのサイズの宣言が外部のlayout_rowやlayout_columnで定義されている場合、たいてい故意ではないエラーになります。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>PxUsage</td>
+<td>&quot;px&quot;単位の利用を調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>パフォーマンスの理由とコードをシンプルに保つために、Androidシステムは指定された範囲のスタンダードなユニットや指定された値のためにピクセルを利用します。<br />この意味はviewの範囲はいつもピクセルを利用してコード上から設定されますが、しかしいつも現在のスクリーン density をベースに設定されます。例えば、もし、myView().getWidth() が10を返すとき、viewは現在の画面の10ピクセルの横の長さがありますが、しかしdensityの高い画面の端末の場合、15を返す可能性があります。もしアプリの中で現在のスクリーンdensityに拡大されないビットマップとともにピクセルの値を利用していると、自らのコードでビットマップリソースを画面に合うようにスケールさせる必要があります。</td>
+</tr>
+<tr>
+<td>セキュリティ</td>
+<td>ExportedService</td>
+<td>パーミッションを必要としない exported Service(&lt;service&gt;タグのandroid:exported=&quot;true&quot;の場合）を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>Exported services(exported=true か intent-filder を含んでいるか、exported=falseを明示していないか）はパーミッションを定義すべきです。これはサービスを起動するか、バインドするために必要です。これがない場合、アプリはこのサービスを利用できません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UseCompoundDrawables</td>
+<td>現在のノードが 複合（compound) drawable を利用した TextView に置き換えられるかどうかを調査</td>
+<td>6/10</td>
+<td>警告</td>
+<td>ImageViewとTextViewを含んだLinearLayoutは、結合したdrawableとして扱われて、パフォーマンスが向上します。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>MergeRootFrame</td>
+<td>ルーツの&lt;FrameLayout&gt;が&lt;merge&gt;タグで置き換えられるかどうかを調査</td>
+<td>4/10</td>
+<td>警告</td>
+<td>&lt;FrameLayout&gt;がレイアウトのルートであり、背景やパディングが提供されていない場合、パフォーマンス向上のために&lt;merge&gt;タグに入れ替えできます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>InefficientWeight</td>
+<td>LinearLayout内で無効な weight 指定を調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>LinearLayoutの中の１つのウィジェットしか weight を定義していないとき、残ったすべてのスペースを割り当てるために、0dpをwidth/heightに設定することによりパフォーマンス向上が見込める。Width/heightに 0dp が定義されている場合は、最初に自身のサイズは計算されません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UnusedResources</td>
+<td>未使用リソースを調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>利用していないリソースは、アプリを大きくし、ビルド時の速度が遅くしてしまいます。</p>
+<p>制限事項：<br />-もしEclipseに関わらずコマンドラインからlintを実行している場合、Javaファイルの解析は正確なパースツリーを利用するよりむしろパターンパッチが適応されます。そのため、結果は正確ではありません。（この制限は将来対応予定です。）<br />-解析は、ライブラリプロジェクトで定義されているリソースやライブラリプロジェクトが参照しているリソースの間の依存関係を考慮できません。そのとき、リソースはまだ利用されていませんと通知されます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UselessLeaf</td>
+<td>削除可能な子要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子も背景も持たないレイアウトは、よりフラットにしたり効果的なレイアウト階層にするために削除できます（invisibleなため）。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UselessParent</td>
+<td>削除可能な親要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子を持たないレイアウトは、ルートレイアウトか scrollview ではありませんし、背景を持たず、削除可能であり、子たちを親に移動させたり、より効果的なレイアウト階層に変更することができます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>TooDeepLayout</td>
+<td>レイアウト階層が深すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>レイアウトのネストが深すぎる場合はパフォーマンスを低下させます。そのため（RelativeLayoutやGridLayoutのような）フラットなレイアウトの利用を検討してください。標準の最大の深さは10ですが、この設定は環境変数のANDROID_LINT_MAX_DEPTHで設定できます。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>TooManyViews</td>
+<td>viewの数が多すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>１つのレイアウトにたくさんのViewを使うことは、パフォーマンスを低下させます。統合したdrawableや他の仕組みを利用して、レイアウトのviewの数を減らすように検討してください。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UnusedIds</td>
+<td>未使用のIDを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>重要：この設定はデフォルトで無効です。有効にしたい場合は、&#8211;enable UnusedIds を　してください。</p>
+<p>リソースID定義は、どこからも参照されない場合は必要ありません。ID定義を行う場合は、たとえ利用しない場合であっても、レイアウトやメニュー上で簡単に動作するため、悪い考えであり必要ありません。そのため削除したほうがよいでしょう。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ</td>
+<td>TextFields</td>
+<td>inputTypeやヒント設定の間違ったテキストフィールドを調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>テキストフィールドにinputType属性が提供されていることは、ユーザビリティの改善に有効です。なぜなら入力されるデータが独立していて、最適なキーボードをユーザに提供できるためです（電話番号のための数字のみや文字のみのように）。同様に、ヒント属性はユーザにテキストフィールドに何を期待するかを表示することができます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconNoDpi</td>
+<td>nodpiフォルダとdpiフォルダの両方にアイコンが存在するかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>drawable-nodpiフォルダのビットマップは、Androidフレームワークによってスケールされません。もし同じ名前のdrawableリソースが drawable-hdpiのようなdpiフォルダと同様に-nodpiフォルダに存在する場合、あいまいであり、国際化できない振る舞いになります。<br />１つか他のものを削除して、他のアイコンを利用してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>GifUsage</td>
+<td>GIFファイル（非推奨）が利用されてる画像を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>.gifファイルフォーマットは非推奨です。.pngか.jpgの利用を検討してください。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDipSize</td>
+<td>densityごとのアイコンたちが概ね同じdensity-independentサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>複数のdensityに提供されるすべてのアイコンがチェックされて、すべてが同じdensity非依存ピクセル(dpi)サイズであることを計算します。これは画像が異なるフォルダに入っていたり、アイコンがいくつかのフォルダが忘れられて新しいサイズに変更されるエラーを検出します。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicatesConfig</td>
+<td>様々設定パラメータを通した同一のビットマップのアイコンを探索</td>
+<td>5/10</td>
+<td>警告</td>
+<td>もしアイコンがdrawable-hdpiか-v11のような異なる設定パラメータで提供された場合、それらは一般的に異なるものです。この検出は、同じアイコンが国際化ではなく異なる設定フォルダーに提供されている場合に動作します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconExpectedSize</td>
+<td>ランチャーアイコン、ノーティフィケーションアイコンなどが正しいサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>ランチャーアイコンには事前に定義されたサイズがあります（それぞれのdensityごとに）。これらの規約に従う必要があり、アイコンをプラットフォームごとにフィットさせる必要があります。<br />より詳細は、<a href="http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size">http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size</a> を参照してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconLocation</td>
+<td>densityごとのdrawableフォルダに画像が配置されていないことを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>res/drawableフォルダは、XML内にshapeで定義されたような density非依存なグラフィックスのために定義されています。ビットマップの場合、drawable-mdpiに移動したり、より高い解像度や低い解像度のものをdrawable-ldpiやdrawable-hdpiやdrawable-xhdpiに振り分ける検討を行いますもし、アイコンが&quot;本当に&quot;density 非依存の場合（たとえば、solid color）、drawable-nodpi フォルダに入れられます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDensities</td>
+<td>すべてのサポートされるdensity に対してアイコンのカスタムバージョンを提供することを確認する</td>
+<td>4/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、それぞれのアイコンたちが density の種別を完全にカバーしていないかどうかをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicates</td>
+<td>他の名前でコピーされたアイコンを探索</td>
+<td>3/10</td>
+<td>警告</td>
+<td>もしアイコンが他の名前で再利用されている場合、統合して１つのみを利用するようにしたり、他を削除してアプリをより小さくできます。<br />しかしながら、複製されたアイコンは通常国際化されなかったり、ときどき上書きされたり、更新忘れが発生します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconMissingDensityFolder</td>
+<td>すべてのdensity フォルダが準備さされていることを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、特定フォルダが drawable-hdpi のように間違っていたりすることをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>アクセシビリティ</td>
+<td>ContentDescription</td>
+<td>イメージウィジェットがコンテンツの説明を提供しているかどうかを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>ImageViewやImageButtonのようなテキストではないウィジェットは、画面でよめたり、他のアクセサビリティツールが十分にユーザインタフェースを保持できるようにウィジェットのテキスト説明文で特定できるように、contentDescription属性を利用すべきです。</td>
+</tr>
+<tr>
+<td>国際化</td>
+<td>HardcodedText</td>
+<td>リソースに定義すべき、ハードコードされた文字列属性を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>レイアウトファイル内で直接ハードコードされたテキスト属性は、以下のいくつかの理由により駄目です。<br />-コンフィルレーションの種類が作られたとき（例えば、landscapeかportraitかのような）には、正確なテキストを繰り返し利用すべきです。（変更時に最新の状態をキープするため）<br />-アプリは既存の文字列リソースを新しい言語に翻訳したいとときにすぐに、他の言語に翻訳できない。</td>
+</tr>
+</table>
+<p>Antoid Lint はまだまだ開発が並行して進んでいるため、上記のID以外にもこれからどんどん追加されていくと思います。このスピード感と様々なオープンテクノロジーの採用（Lintもそのうちの１つ）が Android 普及の鍵だと感じているので、もっと進んでいってもらいたいと個人的には思っています。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/2780/20140627_sdk_manager_material_ver3/" rel="bookmark" class="wherego_title">(2014/06/27時点)SDK Managerが取得するXMLデータ一覧（その３）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) r16.0.1 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/</link>
+		<comments>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/#comments</comments>
+		<pubDate>Sun, 18 Dec 2011 04:05:26 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=697</guid>
+		<description><![CDATA[Android Development Tools(ADT) r16.0.1 の更新情報を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111218_adt16.0.1.png" alt="Android ADT 16.0.1" title="Android ADT 16.0.1" width="390" height="274" class="aligncenter size-full wp-image-698" /></p>
+<p><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT16.0.1</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4>Android Development Tools(ADT) 16.0.1リリース</h4>
+<p><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/">adt r16.0.0</a> がリリースされてから１週間の時間が経たない間にadt r16.0.1 がリリースされました。r16.0.0リリース後に問題やユーザへの影響の大きい不具合修正がメインのようです。</p>
+<p><span id="more-697"></span></p>
+<h4><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16.0.1</a> <em>(2011年12月)</em></h4>
+<dl>
+<dt>依存関係：</dt>
+<dd>
+<ul>
+<li>ADT 16.0.1 を利用するためには、Eclipse Helios (Version 3.6) や それ以上のバージョンが必須。</li>
+<li>ADT 16.0.1 は <a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools r16</a> を利用する前提で開発されています。もしまだ SDK Tools r16 をインストールしていない場合は、Android SDK Manager を利用してインストールしてください。</li>
+</ul>
+</dd>
+<dt>不具合修正：</dt>
+<dd>
+<ul>
+<li>9-patch は、いくつかのケースで通常のビットマップとしてパッケージされるようにビルドに関する項目を修正
+<li><a href="http://tools.android.com/recent/lint">Lint</a>ツールに関する項目を修正。
+<li>SDK Manager に関する項目を修正。
+    </ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 16 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 16 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/693/android-adt-16/</link>
+		<comments>http://andbrowser.com/development/knowhow/693/android-adt-16/#comments</comments>
+		<pubDate>Fri, 16 Dec 2011 10:03:13 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=693</guid>
+		<description><![CDATA[Android ADT 16.0.0 の更新情報を記載]]></description>
+			<content:encoded><![CDATA[<p><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT16.0.0</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16.0.0</a> <em>(2011年12月)</em></h4>
+<dl>
+<dt>依存関係：</dt>
+<dd>
+<ul>
+<li>ADT 16.0.0 を利用するためには、Eclipse Helios (Version 3.6) や それ以上のバージョンが必須。</li>
+<li>ADT 16.0.0 は <a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools r16</a> を利用する前提で開発されています。もしまだ SDK Tools r16 をインストールしていない場合は、Android SDK Manager を利用してインストールしてください。</li>
+</ul>
+</dd>
+<dt>改良の概要：</dt>
+<dd>
+<ul>
+<li>Android プロジェクト (詳細情報)にエラーを発見するための Lint ツールが追加されます。（<a href="http://andbrowser.com/development/knowhow/712/android-lint/">詳細の日本語訳はこちら</a>）（<a href="http://tools.android.com/recent/lint">原本（英語）の詳細情報はこちら</a>）</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/869/sdk-tools-r17/" rel="bookmark" class="wherego_title">SDK Tools Revision 17更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) r16.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/693/android-adt-16/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/693/android-adt-16/" />
+	</item>
+		<item>
+		<title>Android Development Tools (ADT) 15.0.1 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/</link>
+		<comments>http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/#comments</comments>
+		<pubDate>Thu, 24 Nov 2011 15:33:06 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=638</guid>
+		<description><![CDATA[Android Development Tools (ADT) 15.0.1 更新情報を記載
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/20111125_adt15001.png" alt="ADT 15.0.1" title="ADT 15.0.1" width="620" height="324" class="aligncenter size-full wp-image-639" /></p>
+<p><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT15.0.1</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4>ADT 15.0.1 (2011年11月)</h4>
+<p><a href="http://developer.android.com/sdk/eclipse-adt.html">http://developer.android.com/sdk/eclipse-adt.html</a> によると Android Development Tools (ADT) 15.0.1 がリリースされました。変更点は以下のようなものです。<br />
+<span id="more-638"></span></p>
+<h5>依存関係</h5>
+<p>ADT 15.0.1 は SDK Tools r15 を利用する前提になっています。まだ SDK Tools r15 をインストールされていない場合は、Android SDK と AVD Manager を使ってインストールしてください。</p>
+<h5>不具合修正</h5>
+<ul>
+<li>ライブラリプロジェクトの.jar ファイルに添付されるソースファイル群に関する修正
+<li>ライブラリプロジェクトの bin フォルダの更新に関する不具合を修正
+<li>ライブラリプロジェクトが再コンパイルされるときに、上位プロジェクトのライブラリコンテナも更新される件に関する修正。これはライブラリプロジェクトの変更時に上位プロジェクトの再コンパイルが保障されます。
+<li>ライブラリプロジェクトの res フォルダがチェックされる件の修正。
+<li>これによって、たとえ Eclipse が項目の更新を気にしなくても、すべての res フォルダが正しく含まれることが保障されます。
+<li>XMLファイルが編集されている間に aapt が実行されることを防止する件の修正
+<li>XML フォーマッターに関する項目の修正
+</ul>
+<h4>感想</h4>
+<p>ざっとみた感じ不具合修正のためのリリースでした。こういう小さい不具合も開発環境の違い（Win / Mac / Linux)によっては致命的になるものもあるため、修正されてリリースされることは大変良いことだと思います。自分の開発するアプリでのこのようにきめ細やかなリリースをしていきたいところです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/" rel="bookmark" class="wherego_title">adb shell pm list コマンドの端末ごとの違いについて</a></li><li><a href="http://andbrowser.com/development/918/old-adt-download-url/" rel="bookmark" class="wherego_title">ADT(Android Developer Tools) ダウンロードURL一覧</a></li><li><a href="http://andbrowser.com/development/knowhow/990/android-development-tools-adt-20-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.2 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/" />
+	</item>
+		<item>
+		<title>SDK Tools r15 の ant から proguard 利用方法</title>
+		<link>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/</link>
+		<comments>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/#comments</comments>
+		<pubDate>Thu, 10 Nov 2011 01:04:54 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=589</guid>
+		<description><![CDATA[androud 開発環境のSDK Tools r15 の ant から proguard を利用する方法を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/20111108_android-sdk-tools-r15-ant-proguard-error.png" alt="Android SDK tools-r15 ant proguard error" title="Android SDK tools-r15 ant proguard error" width="640" height="480" class="aligncenter size-full wp-image-593" /></p>
+<p>android SDK Tools r15 での and build に興味がある方は、まず<a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/">android SDK Tools r15 での and build のエラー対処方法</a>を見てみてください。</p>
+<p>このエントリでは、その次のフェーズとして、proguard を利用したい場合の紹介をします。<br />
+<span id="more-589"></span></p>
+<p>既に ant build できる環境が構築できている場合は、以下のどちらかのコマンドを実行したと思います。</p>
+<blockquote><p>android update project</p></blockquote>
+<p>もしくは</p>
+<blockquote><p>android create project</p></blockquote>
+<p>これらのコマンドが成功していれば、例えば以下のように proguard.cfg というファイルが生成されているはずです。</p>
+<blockquote><p>
+# android.bat update project -p ./<br />
+Updated local.properties<br />
+Added file <repo_directory>\toGmail\proguard.cfg
+</p></blockquote>
+<p>このファイルは proguard を利用するうえで、大変重要なファイルです。中身は以下のような内容になっています。<br />
+中身の詳細説明は、<a href="http://d.hatena.ne.jp/hyoromo/20101120/1290216449">ProGuardを使っての難読化方法</a>に詳しい解説がありますのでこちらをご覧ください。</p>
+<blockquote><p>
+# cat proguard.cfg<br />
+-optimizationpasses 5<br />
+-dontusemixedcaseclassnames<br />
+-dontskipnonpubliclibraryclasses<br />
+-dontpreverify<br />
+-verbose<br />
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*</p>
+<p>-keep public class * extends android.app.Activity<br />
+-keep public class * extends android.app.Application<br />
+-keep public class * extends android.app.Service<br />
+-keep public class * extends android.content.BroadcastReceiver<br />
+-keep public class * extends android.content.ContentProvider<br />
+-keep public class * extends android.app.backup.BackupAgentHelper<br />
+-keep public class * extends android.preference.Preference<br />
+-keep public class com.android.vending.licensing.ILicensingService</p>
+<p>-keepclasseswithmembernames class * {<br />
+    native <methods>;<br />
+}</p>
+<p>-keepclasseswithmembers class * {<br />
+    public <init>(android.content.Context, android.util.AttributeSet);<br />
+}</p>
+<p>-keepclasseswithmembers class * {<br />
+    public <init>(android.content.Context, android.util.AttributeSet, int);<br />
+}</p>
+<p>-keepclassmembers class * extends android.app.Activity {<br />
+   public void *(android.view.View);<br />
+}</p>
+<p>-keepclassmembers enum * {<br />
+    public static **[] values();<br />
+    public static ** valueOf(java.lang.String);<br />
+}</p>
+<p>-keep class * implements android.os.Parcelable {<br />
+  public static final android.os.Parcelable$Creator *;<br />
+}
+</p></blockquote>
+<p>まずは特に proguard.cfg はいじらずに標準設定のままで利用するのがよいでしょう。利用方法は以下になります。<br />
+まず、ant.properties の中に以下の１行を追加します。これによって、ant release ビルドのときに proguard が有効になりビルドプロセスの中に組これます。</p>
+<blockquote><p>proguard.config=proguard.cfg</p></blockquote>
+<p>なんとこれだけです。SDK Tools r14 以前では、<a href="http://d.hatena.ne.jp/bs-android/20101129/1291008438">ここ</a>や<a href="http://android-developers.blogspot.com/2010/09/proguard-android-and-licensing-server.html">ここ</a>のように必要なxmlファイルをダウンロードしてきたり、build.xml に追記が必要だったりしましたが、r15（r14からの機能かもしれませんが）からは断然簡単になりました。</p>
+<p>標準状態で作成された ant の target では、releaseビルド時のみ proguard が有効になるため、出来上がった apk には適切な署名でサインしてからインストールしましょう。</p>
+<h4>結論</h4>
+<p>標準設定のままなら proguard を書けるのは大変簡単！ソフトウェア資産を守るだけでなく、バイナリサイズも小さくなるというユーザへのメリットもあるため（Android Market からのダウンロード時間の短縮や、データ通信料の削減（世の中の流れはデータ通信の定額化の廃止のため））是非活用していきましょう。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/" rel="bookmark" class="wherego_title">android SDK Tools r15 での and build のエラー対処方法</a></li><li><a href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2 更新情報</a></li><li><a href="http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/" />
+	</item>
+		<item>
+		<title>Android Development Tools 15(ADT 15)のマイナーバージョンアップ</title>
+		<link>http://andbrowser.com/development/knowhow/597/android-developer-tools-15-preview/</link>
+		<comments>http://andbrowser.com/development/knowhow/597/android-developer-tools-15-preview/#comments</comments>
+		<pubDate>Wed, 09 Nov 2011 02:01:09 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=597</guid>
+		<description><![CDATA[Android Development Tools 15(ADT 15)のマイナーバージョンアップの内容を紹介]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/20111109_blog_adt_15_preview.png" alt="Android Developer Tools 15 (ADT15) Preview Infomation" title="Android Developer Tools 15 (ADT15) Preview Infomation" width="640" height="480" class="aligncenter size-full wp-image-598" /></p>
+<p>Android Development Tools 15(ADT 15)が以下の内容のマイナーバージョンアップを行うようです。<br />
+現在、<a href="http://tools.android.com/">Android Tools Project Site</a>で preview 版が提供されていて、テスト中のようです。</p>
+<p>修正内容は以下のようなものです。</p>
+<ul>
+<li>ADT 15.0.1 preview 2</li>
+<ul>
+<li>いくつかのユーザからレポートのあった以下の３点のエラーを修正</li>
+<ol>
+<li>プロジェクトの clean と refresh に関する項目</li>
+<li>レイアウトエディター上でRelativeLayouts の編集に関する項目</li>
+<li>あるファイルタイプのXML フォーマッティング機能に関する項目</li>
+</ol>
+</ul>
+<li>ADT 15.0.1 preview 1</li>
+<ol>
+<li>ライブラリープロジェクトの中でビルドに関するいくつかの項目を修正
+<li>ライブラリ jar ファイル向けのソース添付設定に関する項目
+<li>メインプロジェクトが変更を取得しやすくするためのライブラリのbin フォルダの自動更新機能
+<li>ライブラリーが再コンパイルされたときにライブラリが含まれる親プロジェクトも自動的に更新。ライブラリのコードが変更された場合に親プロジェクトも再コンパイルが実施される。
+<li>ライブラリの res フォルダが存在しているかどうかのチェック機構を修正。 これは、たとえ Eclipse が更新の必要性に気づいていない場合でも res フォルダからすべてのデータを取得できるようにするため。
+</ol>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/" rel="bookmark" class="wherego_title">android SDK Tools r15 での and build のエラー対処方法</a></li><li><a href="http://andbrowser.com/development/knowhow/869/sdk-tools-r17/" rel="bookmark" class="wherego_title">SDK Tools Revision 17更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/" rel="bookmark" class="wherego_title">Android Development Tools (ADT) 15.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/597/android-developer-tools-15-preview/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/597/android-developer-tools-15-preview/" />
+	</item>
+	</channel>
+</rss>

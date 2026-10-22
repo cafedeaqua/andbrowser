@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; 4.2</title>
+	<atom:link href="http://andbrowser.com/tag/4-2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/4-2/feed/" />
+		<item>
+		<title>Android 4.2の「開発者向けオプション」を削除する方法</title>
+		<link>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/</link>
+		<comments>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/#comments</comments>
+		<pubDate>Sun, 23 Jun 2013 16:13:26 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[4.2]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1246</guid>
+		<description><![CDATA[Android 4.2の「開発者向けオプション」を削除する方法。]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/06/20130623_developer_options.png" alt="android 4.2 hot to remove developer_options" title="20130623_developer_options" width="400" class="alignleft size-full wp-image-1846" /><br />
+<br clear="all"></p>
+<p>
+Android 4.2から以下の記事のように「開発者向けオプション」が最初から表示されなくなり、ある手順を実行しないと選択することができなくなりました。
+</p>
+<p><span id="more-1246"></span></p>
+<ul>
+<li><a href="http://androidlover.net/smartphone/galaxynexus/android-4-2-developer-options.html">Nexus 7 Android 4.2で消えた開発者向けオプションを表示させる方法</a>
+</li>
+<li><a href="http://news.mynavi.jp/articles/2013/04/15/android/index.html">意外に知らないAndroid &#8211; 「開発者向けオプション」は一般ユーザーも活用できる?</a></li>
+<li><a href="http://juggly.cn/archives/75086.html">Android 4.2で「開発者向けオプション」を表示する方法</a></li>
+<li><a href="http://smhn.info/201305-jellybean-android4-2">「Android 4.2」から隠されてしまった「開発者向けオプション」を復活させる方法</a></li>
+</ul>
+<p>
+公式サイトにも以下のような記載があります。</p>
+<blockquote><p><a href="http://developer.android.com/about/versions/jelly-bean.html">http://developer.android.com/about/versions/jelly-bean.html</a></p></blockquote>
+<blockquote><p>
+On devices running Android 4.2, developer options are hidden by default, helping to create a better experience for users. You can reveal the developer options at any time by tapping 7 times on Settings > About phone > Build number on any compatible Android device.
+</p></blockquote>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/06/framed_device-2013-06-23-153207.png"><img src="http://andbrowser.com/wp-content/uploads/2013/06/framed_device-2013-06-23-153207-210x300.png" alt="" title="framed_device-2013-06-23-153207" width="210" height="300" class="alignleft size-medium wp-image-1851" /></a><br />
+<br clear="all"></p>
+<p>
+基本的には選択できる状態のままでよいのですが、他の人（特に開発者じゃない方）に貸す場合に、最初の表示されていない状態にしたくなりました。但し、これを戻す方法がありません（泣）。ということで、これを戻す方法を検討します。
+</p>
+<h4>現状把握</h4>
+<h5>設定アプリのソースコード</h5>
+<p>
+上記の記事からどういう操作を行えば、表示できるようになるかがわかるため、そこから該当するソースコードを検索します。「設定アプリ」->「端末情報」->「ビルド番号」が該当するので、この「端末情報」に該当するソースコードを探します。「設定アプリ」のパッケージ名は、com.android.settings.Settings なので、これで検索して、src ディレクトリの中を探して、「端末情報」を担当しているFragmentは、DeviceInfoSettings.java だとわかりました。
+</p>
+<blockquote><p><a href="http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DeviceInfoSettings.java">http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DeviceInfoSettings.java</a></p></blockquote>
+<h5>ビルド番号を押す回数</h5>
+<p>
+以下のソースコード中のTAPS_TO_BE_A_DEVELOPER という定義が 7 なのでこれがビルド番号をタップする回数に一致するのでこれが定義のようです。
+</p>
+<blockquote><p>
+<a href="http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DeviceInfoSettings.java#TAPS_TO_BE_A_DEVELOPER">http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DeviceInfoSettings.java#TAPS_TO_BE_A_DEVELOPER</a>
+</p></blockquote>
+<pre class="brush: java; first-line: 67;" >
+    static final int TAPS_TO_BE_A_DEVELOPER = 7;
+</pre>
+<p>
+では、この変数の使われ方を見てみます。</p>
+<pre class="brush: java; first-line: 152;" >
+@Override
+public void onResume() {
+    super.onResume();
+    mDevHitCountdown = getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
+            Context.MODE_PRIVATE).getBoolean(DevelopmentSettings.PREF_SHOW,
+                    android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
+    mDevHitToast = null;
+}
+</pre>
+<p>
+上記のように onResume() で mDevHitCountdown 変数を初期化しています。<br />
+初期値は、DevelopmentSettings.PREF_FILEの設定ファイルにDevelopmentSettings.PREF_SHOWのキーのvalueが true なら -1 になります。<br />
+DevelopmentSettings.PREF_SHOWのキーのvalueがない場合は、user or eng の ビルドタイプが eng の場合に true になり、同じく-1になります。<br />
+valueがある場合 trueなら、-1が入って、それ以外の場合、TAPS_TO_BE_A_DEVELOPER(=7)が入ります。</p>
+<p>
+ビルド番号がタップされると以下のコードが実行されます。<br />
+mDevHitCountdown の初期値が7の場合、タップされるたびにこれが減らされていきます。</p>
+<h5>設定の保存先</h5>
+<p>
+以下のコードのように mDevHitCountdown が 0 になると、Preferenceへの保存が発生します。</p>
+<pre class="brush: java; first-line: 176;" >
+ } else if (preference.getKey().equals(KEY_BUILD_NUMBER)) {
+             if (mDevHitCountdown > 0) {
+                 mDevHitCountdown--;
+                 if (mDevHitCountdown == 0) {
+                     getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
+                             Context.MODE_PRIVATE).edit().putBoolean(
+                                     DevelopmentSettings.PREF_SHOW, true).apply();
+</pre>
+<p>
+DevelopmentSettings.PREF_FILE と DevelopmentSettings.PREF_SHOW は、</p>
+<blockquote><p><a href="http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java">http://tools.oesf.biz/android-4.2.0_r1.0/xref/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java</a>
+</p></blockquote>
+<p>で定義されています。ということは、以下の情報から development.xml の中に show のname属性で true が保存されるということです。</p>
+<pre class="brush: java; first-line: 31;" >
+public static final String PREF_FILE = "development";
+</pre>
+<pre class="brush: java; first-line: 36;" >
+public static final String PREF_SHOW = "show";
+</pre>
+<p>
+具体的に見てみると、「設定アプリ」の設定値として<br />
+/data/data/com.android.settings/shared_prefs/development.xml<br />
+のファイルに作成されています。中身は以下です。<br />
+（注意）上記の操作は、rooted なデバイスでしか権限的に見ることができませんのでご注意ください。</p>
+<pre class="brush: xml; first-line: 1;" >
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+<boolean name="show" value="true" />
+</map>
+</pre>
+<h4>開発者オプションの削除方法の検討</h4>
+<h5>設定ファイルの編集</h5>
+<p>
+DevelopmentSettings.PREF_FILE は以下の検索から、他で設定の保存に利用されていないようです。</p>
+<blockquote><p>
+<a href="http://tools.oesf.biz/android-4.2.0_r1.0/search?q=DevelopmentSettings.PREF_FILE&#038;defs=&#038;refs=&#038;path=&#038;hist=">http://tools.oesf.biz/android-4.2.0_r1.0/search?q=DevelopmentSettings.PREF_FILE&#038;defs=&#038;refs=&#038;path=&#038;hist=</a>
+</p></blockquote>
+<p>
+ということで、このvalueをfalseなどのtrue 以外に変更するか、development.xml ファイル自体を削除すれば当初の目的の<br />
+「開発者向けオプション」の削除をできることがわかりました。<br />
+実際に rooted なデバイスで以下の手順で削除を行い、「開発者向けオプション」の項目を削除することができました。<br />
+再度表示したい場合は、同じ手順で「端末情報」の「ビルド情報」を7回タップすれば表示されるようになります。</p>
+<pre class="brush: xml; first-line: 1;" >
+C:\>adb shell
+shell@android:/ $ su
+su
+root@android:/ # cd /data/data/com.android.settings/shared_prefs
+cd /data/data/com.android.settings/shared_prefs
+root@android:/data/data/com.android.settings/shared_prefs # ls -la
+ls -la
+-rw-rw---- system   system       1172 2013-06-23 10:36 com.android.settings_pref
+erences.xml
+-rw-rw---- system   system        107 2013-06-22 20:50 development.xml
+root@android:/data/data/com.android.settings/shared_prefs # cat development.xml
+opment.xml
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+<boolean name="show" value="true" />
+</map>
+
+root@android:/data/data/com.android.settings/shared_prefs # rm development.xml
+pment.xml
+</pre>
+<p>
+私の手元にある rooted な Nexus 7 では上記の方法で削除することができました。再度、「ビルド番号」を7回タップすると復活することも確認できました。
+</p>
+<h4>まとめ</h4>
+<ul>
+<li>「開発者向けオプション」の表示の削除は可能（但し、要rooted)</li>
+<li>設定値は /data/data/com.android.settings/shared_prefs/development.xml の　boolean name=&#8221;show&#8221; の値 </li>
+<li>起動一発でこの処理を実施してくれるアプリ作ってくれないかなぁ（要望）</li>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" rel="bookmark" class="wherego_title">Crashlytics ライブラリの Android Studio対応</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/" />
+	</item>
+	</channel>
+</rss>

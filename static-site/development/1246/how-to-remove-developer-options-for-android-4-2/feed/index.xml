@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>Android 4.2の「開発者向けオプション」を削除する方法 へのコメント</title>
+	<atom:link href="http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>Android Google USBドライバ &#124; android manifest configChanges より</title>
+		<link>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/comment-page-1/#comment-9055</link>
+		<dc:creator>Android Google USBドライバ &#124; android manifest configChanges</dc:creator>
+		<pubDate>Thu, 15 Aug 2013 00:39:56 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=1246#comment-9055</guid>
+		<description>[...] Android 4.2の「開発者向けオプション」を削除する方法  [...]</description>
+		<content:encoded><![CDATA[<p>[...] Android 4.2の「開発者向けオプション」を削除する方法  [...]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

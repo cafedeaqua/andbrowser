@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>SDK Managerが取得するxmlファイル(2013/08/15時点) へのコメント</title>
+	<atom:link href="http://andbrowser.com/android-sdk/2048/sdk-manager-get-from-xml-file/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/android-sdk/2048/sdk-manager-get-from-xml-file/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>Android Google USBドライバ &#124; android manifest configChanges より</title>
+		<link>http://andbrowser.com/android-sdk/2048/sdk-manager-get-from-xml-file/comment-page-1/#comment-10415</link>
+		<dc:creator>Android Google USBドライバ &#124; android manifest configChanges</dc:creator>
+		<pubDate>Thu, 12 Sep 2013 09:20:33 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=2048#comment-10415</guid>
+		<description>[...] SDK Managerが取得するxmlファイル(2013/08/15時点)  [...]</description>
+		<content:encoded><![CDATA[<p>[...] SDK Managerが取得するxmlファイル(2013/08/15時点)  [...]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

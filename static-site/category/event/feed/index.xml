@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; event</title>
+	<atom:link href="http://andbrowser.com/category/event/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/event/feed/" />
+		<item>
+		<title>第23回potatotips参加報告</title>
+		<link>http://andbrowser.com/event/3567/potatotips-23/</link>
+		<comments>http://andbrowser.com/event/3567/potatotips-23/#comments</comments>
+		<pubDate>Tue, 24 Nov 2015 16:01:58 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3567</guid>
+		<description><![CDATA[
+http://connpass.com/event/21750/
+第23回potatotips参加報告
+件名の通り参加してきたのでそのご報告になります。私がAndroidしかできないのと、Android Blog枠とい [...]]]></description>
+			<content:encoded><![CDATA[<p><img alt="" src="https://connpass-tokyo.s3.amazonaws.com/thumbs/7d/1e/7d1edb5e4df606f71c2697a29559014c.png" title="potatotips #23" class="alignnone" width="660" height="280" /><br />
+<a href="http://connpass.com/event/21750/">http://connpass.com/event/21750/</a></p>
+<h1>第23回potatotips参加報告</h1>
+<p>件名の通り参加してきたのでそのご報告になります。私がAndroidしかできないのと、Android Blog枠というのが追加されていたのでそんな感じになります。</p>
+<h3>受付はこんな感じでした。</h3>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a> FiNCさん会場着！ ペッパーくんが出迎えてくれました。 <a href="https://t.co/nPky03sqm0">pic.twitter.com/nPky03sqm0</a></p>
+<p>&mdash; 所 友太 (@tokorom) <a href="https://twitter.com/tokorom/status/669091458838753280">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>AppIndexing API</h2>
+<h3>shaunkawanoさん</h3>
+<p><script async class="speakerdeck-embed" data-id="27bcc207d86c414f839c7415255c672a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>Android端末のGoogle検索の対象として、アプリから情報を提供できる
+<li>Google Play Serviceの一部
+<li>実装がとても簡単なのでそれを紹介したい
+<li>onCreate() で実装することが推奨
+<li>DocumentにonStart(), onStop()で実装してほしいけど、なんでもいいよって記載されている
+<li>AMEBAアプリで実装済み
+<li>TIPS
+<li>APP_URLがnullなら落ちるやmClient.connect()を呼ぶこと
+</ul>
+<h4>発表待ちの方から余裕のつっこみコメントもありました。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">Appindex API 、ちょうど先週に調べてたやつだ <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; hkusu (@hkusu_) <a href="https://twitter.com/hkusu_/status/669096213556256769">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p><span id="more-3567"></span></p>
+<h2>Slackに隕石という名のスクリーンショットを落下させる話</h2>
+<h3>operandoOSさん</h3>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/tfPIH3QJbiJJZ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/shinobuokano7/slack-55455661" title="隕石という名のスクリーンショットをSlackに落下させる話" target="_blank">隕石という名のスクリーンショットをSlackに落下させる話</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/shinobuokano7" target="_blank">Shinobu Okano</a></strong> </div>
+<ul>
+<li>隕石はいる場所によって呼び名が違う！！
+<li>Meteorite
+<li><a href="https://github.com/operando/Meteorite">https://github.com/operando/Meteorite</a>
+<li>Slackに隕石（スクリーンショット）を簡単に遅れる
+<li>デモが完璧に動いていて素晴らしい。歓声が起こりました。
+<li>Meteor
+<li><a href="https://github.com/operando/Meteor">https://github.com/operando/Meteor</a>
+<li>JavaScriptで同じ名前のものがある。かぶっちゃいました。
+<li>Meteoroid
+<li><a href="https://github.com/operando/Meteoroid">https://github.com/operando/Meteoroid</a>
+<li>時間内にプレゼンが終わって素晴らしい発表でした。
+</ul>
+<h2>&#8220;Predictable state container&#8221; and Data Binding</h2>
+<h3>izumin5210</h3>
+<p><script async class="speakerdeck-embed" data-id="9302aa49c25b48b590922f3e84502d01" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>Front-end JavaScript 外から見るとやべー世界（ｗ
+<li>プレゼン資料がすごいいい勢いで消費されていって心地よい。
+<li>Android向けにFront-end JavaScriptを導入してみた。
+<li>Reduxをためしてみた。
+<li>これをDroidux という名前にした。Androidのなにかに名前がかぶってます。
+<li>特にundo, redo が簡単に実装できます
+<li>Data-bindingの仕組みでデータが変わったら自動的に更新されることもできます
+</ul>
+<h4>さすが事前の宣言どおり。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">今日のスライド、15分トークのボリュームうえに話の7割がジャバスクリプトになりそう <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; 不良野良うさぎ (@izumin5210) <a href="https://twitter.com/izumin5210/status/669089277913927680">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h4>からのDroidkaigi向けの宣伝も素晴らしい！</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">つづきは <a href="https://twitter.com/hashtag/droidkaigi?src=hash">#droidkaigi</a> で！（CFPとおれば <a href="https://t.co/wHsc8lGphI">https://t.co/wHsc8lGphI</a> <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; 不良野良うさぎ (@izumin5210) <a href="https://twitter.com/izumin5210/status/669114856935546880">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>手軽にHTTPでJSONにアクセスできる環境を用意する</h2>
+<h3>hkusuさん</h3>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/jQvVuabarsHci" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/hiroyukikusu/potatotips-23httpjson" title="【Potatotips #23】手軽にhttpでjsonにアクセスできる環境を用意する" target="_blank">【Potatotips #23】手軽にhttpでjsonにアクセスできる環境を用意する</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/hiroyukikusu" target="_blank">Hiroyuki Kusu</a></strong> </div>
+<ul>
+<li>Android Studioでローカルサーバを立ち上げて、emulatorからそれにアクセスする
+<li>10.0.3.2:
+<port>/,<json path></p>
+<li>emulatorのみ
+<li>gist を利用
+<li>raw データ表示でURL発行
+<li>実機、emulator,r両方可能
+<li>node.js でローカルサーバ起動
+<li>emulatorのみ
+<li>json は javascript で扱いやすい
+<li>Amazon S3にJSONを置く
+</ul>
+<h4>という追加のつっこみも。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">よいぞ <a href="https://t.co/9uXj9k1c9I">https://t.co/9uXj9k1c9I</a> <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; Yokomarquee (@KeithYokoma) <a href="https://twitter.com/KeithYokoma/status/669108559855009794">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>Design Support Libraryをいじる際に気をつけていること</h2>
+<h3>Yoshida Nozomiさん</h3>
+<p><script async class="speakerdeck-embed" data-id="c64dcb949b234265b4c5c41675582563" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>担当しているアプリの最終更新日が1年前で古くなってきているので、そのマテリアルデザイン対応を担当
+<li>SupportLibraryのソースを読んで解析
+<li>SuportLibでやりにくいこと・できないこと
+<li>Rippleアニメーション
+<li>RippleDrawableでやってください
+</ul>
+<h2>Androidでライブラリを作る</h2>
+<h3>Shigeki Yamatoさん</h3>
+<ul>
+<li>良いライブラリの条件とは
+<li>機能を提供、使うの簡単、容量小さい
+<li>Androidライブラリ特有の問題
+<li>OSバージョン問題、65K問題、非同期処理問題
+<li>結論
+<li>Android2.3からWebViewテスト
+<li>HttpURLConnectionを使う
+<li>JSONParseは標準APIを使う
+<li>HanlderとHandlerThreadで頑張る
+<li>でも、つらい・・・でも、楽しい・・・
+<li>HanlderとHandlerThreadの違いも重要
+</ul>
+<h2>Don&#8217;t Reinvent The Wheel ~ For All Android Beginners ~<br />
+<h2>
+<h3>Kenju</h3>
+<ul>
+<li>Web屋さんだったが、最近AndroidDeveloperになりました。
+<li>CodeReviewで上司から撃沈
+<li>TextUtil.isEmpty()を使おう
+<li>Effective Java 2nd Editionの紹介
+<li>ライブラリーを知り、ライブラリーを使う #47
+<li>3Step for learning
+<li>Know android library
+<li>use library method
+<li>あと1つありましたがメモれず。
+</ul>
+<h2>UI optimization for night</h2>
+<h3>KeithYokoma</h3>
+<p>https://speakerdeck.com/keithyokoma/ui-optimization-for-night</p>
+<ul>
+<li>ムスカ大佐の眼が〜、眼が〜、眼が〜、が受けてました
+<li>動的にThemeを変更することによって実現
+<li>Activity#setTheme()
+<li>Call before calling Activity@onCreate()
+<li>んじゃ、いつ変更するの？
+<li>照度センサーを使う
+<li>日の入り、日の出を計算して実現
+<li>https://en.wikipedia.org/wiki/Sunrise_equation
+<li>実は、AOSPにも実装がある
+<li>UiModeManagerは？
+<li>AndroidAutoのロゴがでてきたり、謎のハンドルアイコンがでたりと使いづらい。
+</ul>
+<p>FiNCさんのオフィスが銀座の一等地にあり、周りの煌びやかな都会のビル群の光に圧倒されながら帰りました。次回はオフィス移転後のすごいところで開催されるそうです！！乞うご期待！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/3567/potatotips-23/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/3567/potatotips-23/" />
+	</item>
+		<item>
+		<title>えびスタ！#1【クックパッド × Retty × VASILY × UZABASE】 参加報告</title>
+		<link>http://andbrowser.com/event/3013/ebista-1/</link>
+		<comments>http://andbrowser.com/event/3013/ebista-1/#comments</comments>
+		<pubDate>Fri, 19 Dec 2014 09:26:12 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3013</guid>
+		<description><![CDATA[マイクロサービスアーキテクチャについて
+発表者は小野 大器（クックパッド株式会社）さん。
+会社が今度様々なサービスを今後生み出していくためには以下の大きな問題がありました。
+
+
+monolithicなアプリのままではテス [...]]]></description>
+			<content:encoded><![CDATA[<h4>マイクロサービスアーキテクチャについて</h4>
+<p>発表者は小野 大器（クックパッド株式会社）さん。</p>
+<p>会社が今度様々なサービスを今後生み出していくためには以下の大きな問題がありました。<br />
+<span id="more-3013"></span></p>
+<ul>
+<li>monolithicなアプリのままではテストが遅い
+<li>monolithicなアプリのままでは軽微な修正を簡単に実施して deploy しにくい
+</ul>
+<p>この問題を解決するために、Microservices を採用することになった。Microservices については、<a href="http://martinfowler.com/articles/microservices.html">Martin Fowler さんが書いた記事</a>で紹介されています。<br />
+Cookpad は Rails アプリとして開発されているため、grage という各サービスに分割して Restfull APIで各サービスが通信しあうようなアーキテクチャに変更しました。<br />
+これによって他に利点もありました。各チームごとに開発言語を切り替えられたり、RDBMSを選択したりできるようになり、採用を効率的に進めることもできました。<br />
+デメリットとしては、各サービスごとに独立して動作しないモジュールなどを作り直したり、チーム構築の<br />
+各サービスとは、OAuth Services, Video Backend, などがあります。</p>
+<h4>Dev が AWS と出会って DevOps を目指した話</h4>
+<p>発表者は梅田 昌太（Retty 株式会社）さん。</p>
+<p>rettyはみんなfavarite なメニューを持っている。梅田さんは炒飯だそうです。</p>
+<p>400万人ユーザに近くなってきたときに問題発生。</p>
+<ul>
+<li>RDSに書き込んでたロギングの限界
+<li>ミドルウェア（rettyの場合、php)をアップデートしていかないとAWSの便利なツールが利用できない
+<li>秘伝のたれがいっぱいで中身のわからないAMI
+</ul>
+<p>AWSを利用してDevOpsを利用する一番の目的。コードを書く時間がほしい。<br />
+そのため、Elastic Beanstalk：オートスケール</p>
+<p>AWS状にherokuのようなサービスを作ってくれるサーボス。</p>
+<p>git aws.push のAWSのコマンドで deploy 簡単。</p>
+<p>EBのCLIも最近更新されて便利になりました。</p>
+<p>s3fsは突然接続が切れるため怖い。</p>
+<p>chat ops も導入。hubotからSQSになえて EBがキューから取得してくれる。これほんと便利！</p>
+<p>スポットインスタンスは 1/10 にコストがなるが、負荷が上がると勝手に落とされる。でも、コストを見ていると楽しい！！</p>
+<p>ec2を自分で負けたら負けだと思っている！結論：AWSを活用してどんどんサービスを開発していきましょう。</p>
+<h4>プッシュ通知大戦争</h4>
+<p>発表者は今村 雅幸（株式会社 VASILY）さん。</p>
+<p>我々の会社はここの１階下にいます。</p>
+<p>大戦争といいたかっただけなのですが！</p>
+<p>iQON：アイコンというファッションアプリを開発している会社です。</p>
+<p>プッシュ通知は、リテンションに効きます！ただ、インフラ屋にはたまったことじゃないが、ビジネス的には重要。</p>
+<p>プッシュ通知への要件。(1)効果的な配信の仕組み。これは決められた時間内に全ユーザに配信したり、エラー対応、リトライ、アンインストールユーザの処理など。(2)分析の仕組み。これは曜日、時間、セグメント、文言を分析して、どんなユーザーがどんなプッシュに反応しているかを次に生かす。</p>
+<p>プッシュ通知の課題。(1)２００万以上に一気に送りたいが、全員には時間がかかる。<br />
+(2)どのデバイスが有効かわからない<br />
+(3)エラーのリトライ処理のライブラリ実装が雑。<br />
+(4)さまざまな条件でプッシュしたい。</p>
+<p>数時間かかっていた配信が１０秒程度に。プッシュの文言にハートを入れるとCTRがあがる！！女の子すごい！CTRはt%～n%ぐらい。</p>
+<h4>NewsPicks を支える技術と怖い話</h4>
+<p>発表者は文字 拓郎（株式会社ユーザベース）さん。</p>
+<p>あのnaoya.ito-sanもほめているアプリ！！</p>
+<blockquote class="twitter-tweet" lang="ja"><p>NewsPicks のコメント欄がウゼーとか放言したところ昨日中の人に会ってしまい、ばれてないか非常にドキドキしたのですが案の定ばれてました。NewsPicks 最高ッス</p>
+<p>&mdash; Naoya Ito (@naoya_ito) <a href="https://twitter.com/naoya_ito/status/544746853481213953">2014, 12月 16</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>news picks はいま３０万人ぐらいのサービス。</p>
+<p>キュレーションだけでなく、編集部があり、そこでコンテンツを作っていく。３年後に１００人態勢にすることが目標。</p>
+<p>NewsPicksを支える技術</p>
+<p>LINEで社長と議論できる会社</p>
+<p>レガシー環境、コードを戦いながらなんとか運用</p>
+<h4>QA セッション</h4>
+<p>みんなで4択の質問に対して、以下の写真のようにリアルタイムに回答しながら、ビール頂きながら、ピザ食べながらの楽しいQAセッションでした。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-12-18-20.42.59-2.png"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-12-18-20.42.59-2.png" alt="" title="2014-12-18 20.42.59-2" width="640" height="480" class="aligncenter size-full wp-image-3033" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/3013/ebista-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/3013/ebista-1/" />
+	</item>
+		<item>
+		<title>Android 開発アンチパターン勉強会 #1</title>
+		<link>http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/</link>
+		<comments>http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/#comments</comments>
+		<pubDate>Sun, 07 Dec 2014 07:53:40 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2994</guid>
+		<description><![CDATA[Android 開発アンチパターン勉強会 #1
+Android 開発アンチパターン勉強会 #1 に参加してきました。本会はフリマアプリを展開されているメルカリさんが主催されているものです。potatotipsなどの他の勉 [...]]]></description>
+			<content:encoded><![CDATA[<h4>Android 開発アンチパターン勉強会 #1</h4>
+<p><a href="http://connpass.com/event/10028/">Android 開発アンチパターン勉強会 #1</a> に参加してきました。本会はフリマアプリを展開されている<a href="http://mercari.jp/">メルカリ</a>さんが主催されているものです。potatotipsなどの他の勉強会と差別化するためにアンチパターン勉強会という方向性にされたそうです。<br />
+<span id="more-2994"></span></p>
+<h5>発表枠：開発効率アンチパターン</h5>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/42344878" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/shinnosukekugimiya/ss-42344878" title="開発効率アンチパターン" target="_blank">開発効率アンチパターン</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/shinnosukekugimiya" target="_blank">Shinnosuke Kugimiya</a></strong> </div>
+<h5>発表枠：AsyncTaskアンチパターン</h5>
+<p><script async class="speakerdeck-embed" data-id="1e269b805dcf0132f3e9521dfa914056" data-ratio="1.29456384323641" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5>発表枠：US進出でのAndroid開発 in メルカリ</h5>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/42349945" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/tomoakiimai2/us-localization" title="US進出でのAndroid開発inメルカリ Mercari US App Development " target="_blank">US進出でのAndroid開発inメルカリ Mercari US App Development </a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/tomoakiimai2" target="_blank">Tomoaki Imai</a></strong> </div>
+<h5>LT枠：Shared Preferences Anti Pattern</h5>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/42352292" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/shinobuokano7/shared-preferences-anti-pattern" title="Shared Preferences Anti Pattern" target="_blank">Shared Preferences Anti Pattern</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/shinobuokano7" target="_blank">Shinobu Okano</a></strong> </div>
+<p>また第2回の開催が楽しみです。メルカリさん良い勉強会をありがとうございました。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/" rel="bookmark" class="wherego_title">ANDROID 3RD PARTY USB VENDOR ID LIST &#8212; DO NOT EDIT</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/" />
+	</item>
+		<item>
+		<title>UI Crunch #2 に参加しました。</title>
+		<link>http://andbrowser.com/event/2973/ui-crunch-2/</link>
+		<comments>http://andbrowser.com/event/2973/ui-crunch-2/#comments</comments>
+		<pubDate>Thu, 04 Dec 2014 14:40:26 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2973</guid>
+		<description><![CDATA[UI Crunch #2 に参加しました。
+UI Crunch #2 UIデザイナー不要説について語る に参加してきたのでそのご報告です。
+特に気にいった以下の3つのプレゼンを紹介します。
+
+風呂場で考えるUIデザイナー [...]]]></description>
+			<content:encoded><![CDATA[<h4>UI Crunch #2 に参加しました。</h4>
+<p><a href="http://ui-crunch.connpass.com/event/9759/">UI Crunch #2 UIデザイナー不要説について語る</a> に参加してきたのでそのご報告です。</p>
+<p>特に気にいった以下の3つのプレゼンを紹介します。<br />
+<span id="more-2973"></span></p>
+<h4>風呂場で考えるUIデザイナーの未来</h4>
+<p>nanapiのCCO兼デザイナーの上谷さんの発表。デザインを論理的に分解して物事を分解、組み合わせて業務を進めていく話が大変おもしろかったです。</p>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/42120130" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/uetanimasayuki/uicrunch" title="風呂場で考えるUIデザイナーの未来" target="_blank">風呂場で考えるUIデザイナーの未来</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/uetanimasayuki" target="_blank">Masayuki Uetani</a></strong> </div>
+<h4>最終防衛マニュアル</h4>
+<p>MACの人は利用者が多い yorufukurou のデザインもされている KAWAKAMI TAIKIさんの発表です。デザイナー視点だけでなくエンジニアの生き方にも通じる発表が印象的でした。最近、<a href="http://uid-lab.tumblr.com/post/58605815304/gunosy-ui">http://uid-lab.tumblr.com/post/58605815304/gunosy-ui</a>のブログポストも今回のイベントの火付け役になりました。</p>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/42158564" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/lsd_jp/ui-42158564" title="UIデザイナー最終防衛マニュアル" target="_blank">UIデザイナー最終防衛マニュアル</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/lsd_jp" target="_blank">Taiki Kawakami</a></strong> </div>
+<h4>経験に基づく、UIデザイナーの必要性</h4>
+<p>「えふしん」さんで有名な藤川真一さんのプレゼン。UIデザインとビジネスとWEBサイトのあり方を論じられた発表でした。さすが数多い経験をベースに話をされる内容は説得力が違いました。大変納得いきました。<br />
+<iframe src="//www.slideshare.net/slideshow/embed_code/42102861" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/fshin2000/ui-crunch-20141128" title="UI crunch 登壇資料 20141128" target="_blank">UI crunch 登壇資料 20141128</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/fshin2000" target="_blank">Shinchi Fujikawa</a></strong> </div>
+<h4>リアルタイム　インフォグラフィックス</h4>
+<p>本会ではデザイナーさんによる発表のインフォグラフィックス化が実施されていました。以下のような素晴らしいまとめがリアルタイムで作成されました。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.32.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.32-1024x768.jpg" alt="" title="2014-11-27 22.45.32" width="1024" height="768" class="aligncenter size-large wp-image-2983" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.38.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.38-1024x768.jpg" alt="" title="2014-11-27 22.46.38" width="1024" height="768" class="aligncenter size-large wp-image-2990" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.30.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.30-1024x768.jpg" alt="" title="2014-11-27 22.46.30" width="1024" height="768" class="aligncenter size-large wp-image-2989" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.23.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.23-1024x768.jpg" alt="" title="2014-11-27 22.46.23" width="1024" height="768" class="aligncenter size-large wp-image-2988" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.16.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.46.16-1024x768.jpg" alt="" title="2014-11-27 22.46.16" width="1024" height="768" class="aligncenter size-large wp-image-2987" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.47.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.47-1024x768.jpg" alt="" title="2014-11-27 22.45.47" width="1024" height="768" class="aligncenter size-large wp-image-2986" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.43.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.43-1024x768.jpg" alt="" title="2014-11-27 22.45.43" width="1024" height="768" class="aligncenter size-large wp-image-2985" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.38.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/12/2014-11-27-22.45.38-1024x768.jpg" alt="" title="2014-11-27 22.45.38" width="1024" height="768" class="aligncenter size-large wp-image-2984" /></a></p>
+<p>いやーこのようなインフォグラフィックスが作れるってすばらしいですね。</p>
+<h4>最後に</h4>
+<p>
+このような面白いUI、デザイナー視点からのイベントを企画頂いてありがとうございました。以下の2社にお礼申し上げます。また第3回を楽しみにしております。</p>
+<p><a href="http://dena.com/jp/">DeNA</a> &#038; <a href="http://goodpatch.com/">Goodpatch</a></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2973/ui-crunch-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2973/ui-crunch-2/" />
+	</item>
+		<item>
+		<title>EngadjetFes2014 Winterで面白かったリンク</title>
+		<link>http://andbrowser.com/event/2954/engadjetfes2014-winter-link/</link>
+		<comments>http://andbrowser.com/event/2954/engadjetfes2014-winter-link/#comments</comments>
+		<pubDate>Mon, 24 Nov 2014 15:09:06 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2954</guid>
+		<description><![CDATA[h2l.jp
+
+http://h2l.jp/
+efax
+http://www.efax.co.jp/
+twilio
+https://www.twilio.com/
+ ]]></description>
+			<content:encoded><![CDATA[<h4>h2l.jp</h4>
+<p><span id="more-2954"></span><br />
+<a href="http://h2l.jp/">http://h2l.jp/</a></p>
+<h4>efax</h4>
+<p><a href="http://www.efax.co.jp/">http://www.efax.co.jp/</a></p>
+<h4>twilio</h4>
+<p><a href="https://www.twilio.com/">https://www.twilio.com/</a></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2954/engadjetfes2014-winter-link/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2954/engadjetfes2014-winter-link/" />
+	</item>
+		<item>
+		<title>Deploygate Bakusoku Iterations Tokyo 1に参加</title>
+		<link>http://andbrowser.com/event/2608/deploygate-bakusouk-iterations-tokyo-1/</link>
+		<comments>http://andbrowser.com/event/2608/deploygate-bakusouk-iterations-tokyo-1/#comments</comments>
+		<pubDate>Sun, 01 Jun 2014 23:16:43 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2608</guid>
+		<description><![CDATA[
+
+
+#142526535 / gettyimages.com
+
+Deploygate Bakusoku Iterations Tokyo 1に参加
+Bakusoku Iterations Tokyo 1に参加してきまし [...]]]></description>
+			<content:encoded><![CDATA[<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:507px;">
+<div style="overflow:hidden;position:relative;height:0;padding:66.666667% 0 49px 0;width:100%;"><iframe src="//embed.gettyimages.com/embed/142526535?et=Bri9VTs5SmBjd1wg8KFQ6Q&#038;sig=XAUov9-JSvprcrduTg52J8jKMEbyO37g-0ej6-JLM1Q=" width="507" height="398" scrolling="no" frameborder="0" style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+<p style="margin:0;">
+<div style="padding:0;margin:0 0 0 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/142526535" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#142526535</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<h4>Deploygate Bakusoku Iterations Tokyo 1に参加</h4>
+<p><a href="http://deploygate.doorkeeper.jp/events/11579">Bakusoku Iterations Tokyo 1</a>に参加してきました。この会は、<a href="https://deploygate.com/">DeployGate</a>が主催する「アプリ開発サイクルをより高速に回すためのノウハウを共有する勉強会」です。Deploygate は以下のようなコンセプトの開発中アプリのテストやドッグフーディング向けのアプリ配信サービスです。</p>
+<blockquote><p>
+開発中のアプリを、<br />
+一瞬で手元へ。</p>
+<p>USBケーブルにさようなら。配布、ログ収集、アップデート、<br />
+すべてをワイヤレス、リアルタイムで。
+</p></blockquote>
+<p><span id="more-2608"></span></p>
+<h4>Deploygate 紹介</h4>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/34195185" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/YukiFujisaki/deploygate-20140225copy" title="DeployGate: Accelerate your mobile app development today (Feb. 25, 2014 @ RocketSpace)" target="_blank">DeployGate: Accelerate your mobile app development today (Feb. 25, 2014 @ RocketSpace)</a> </strong> from <strong><a href="http://www.slideshare.net/YukiFujisaki" target="_blank">Yuki Fujisaki</a></strong> </div>
+<h4>開発を加速させるRetty式チーム開発術 Reloaded</h4>
+<h5>Retty株式会社 櫻井 洋一郎</h5>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/35238824" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/ganbit1021/20140529mixi" title="開発を加速させるRetty式チーム開発術 Reloaded" target="_blank">開発を加速させるRetty式チーム開発術 Reloaded</a> </strong> from <strong><a href="http://www.slideshare.net/ganbit1021" target="_blank">Yoichiro Sakurai</a></strong> </div>
+<h4>DeployGateを使ったiOSアプリのβテスト</h4>
+<h5>株式会社ミクシィ DeployGate 林 和弘</h5>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/35288972" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/kaz3439/bakusoku-iteration01" title="DeployGateを使ったiOSアプリのβテスト" target="_blank">DeployGateを使ったiOSアプリのβテスト</a> </strong> from <strong><a href="http://www.slideshare.net/kaz3439" target="_blank">kaz3439</a></strong> </div>
+<h4>スマホアプリ開発のワークフロー</h4>
+<h5>株式会社ミクシィ ホームG 鈴木康平</h5>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/35290443" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/kouheiszk/bit-35290443" title="スマホアプリ開発のワークフロー" target="_blank">スマホアプリ開発のワークフロー</a> </strong> from <strong><a href="http://www.slideshare.net/kouheiszk" target="_blank">Kouhei Suzuki</a></strong> </div>
+<h4>Mobile First Development at COOKPAD</h4>
+<h5>クックパッド株式会社 藤 吾郎</h5>
+<p><script async class="speakerdeck-embed" data-id="9ae3be00c966013130872e590c444dc4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>関連リンク</h4>
+<ul>
+<li><a href="http://mixi-inc.github.io/guidelines/qa/smartphone/guideline.html">スマホアプリ品質ガイドライン</a>
+<li><a href="https://github.com/nomad/shenzhen">shenzhen</a>
+<li><a href="https://github.com/DeployGate/community">DeployGate　community Chat(gitter)</a>
+<li><a href="http://mizuki-r.hatenablog.com/entry/2013/07/01/jenkins%E7%B5%8C%E7%94%B1%E3%81%A7Build%E3%81%97%E3%81%9FAndroid%E3%81%AEAPK%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92DeployGate%E3%81%ABPush%E3%81%99%E3%82%8B%E5%91%AA%E6%96%87">jenkins経由でBuildしたAndroidのAPKファイルをDeployGateにPushする呪文</a>
+<li><a href="http://qiita.com/k_kinukawa/items/b61cf8d9bb169dc77749">DeployGate SDK for iOSの使い方</a>
+<li><a href="https://speakerdeck.com/henteko/gradlepuraguinzuo-tutemita-number-abc2014spring">gradleプラグイン作ってみた</a>
+<li><a href="http://blog-ja.deploygate.com/post/87151299327">グループ機能の提供を開始しました！</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2608/deploygate-bakusouk-iterations-tokyo-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2608/deploygate-bakusouk-iterations-tokyo-1/" />
+	</item>
+		<item>
+		<title>githubkaigiに参加。発表資料リンク追加</title>
+		<link>http://andbrowser.com/event/2580/atend-githubkaigi/</link>
+		<comments>http://andbrowser.com/event/2580/atend-githubkaigi/#comments</comments>
+		<pubDate>Sun, 01 Jun 2014 13:24:22 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2580</guid>
+		<description><![CDATA[
+githubkaibiに参加
+githubkaigiに参加してきました。500人の参加に加えてまだキャンセル待ちがあったという大人気なイベントでした。githubの中の人も10名弱参加されていて、大変 github の [...]]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2014/06/githubkaigi.png" alt="" title="githubkaigi" width="600"  class="aligncenter size-full wp-image-2582" /></p>
+<h4>githubkaibiに参加</h4>
+<p><a href="http://githubkaigi.org/">githubkaigi</a>に参加してきました。500人の参加に加えてまだキャンセル待ちがあったという大人気なイベントでした。githubの中の人も10名弱参加されていて、大変 github の勢いを感じたイベントでした。<br />
+<span id="more-2580"></span></p>
+<h4>タイムテーブル</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/timetable.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/timetable.png" alt="" title="timetable" width="600"  class="aligncenter size-full wp-image-2583" /></a></p>
+<h4>Github実践入門 ─ Pull Request による開発の変革 (仮) / <a href="https://github.com/hirocasterr">@hirocaster</a></h4>
+<p><script async class="speakerdeck-embed" data-id="f329b280cb820131162202b4824706e4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>:はてなブログの開発フローと Github (仮) / <a href="https://github.com/shibayu36">@shibayu36</a></h4>
+<p><script async class="speakerdeck-embed" data-id="a3f0a2c0cb7f01310e9b6a5281375720" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>OSS と GitHub (仮) / <a href="https://github.com/amatsuda">@amatsuda</a></h4>
+<p><script async class="speakerdeck-embed" data-id="15c49ef0cb8701310e9c6a5281375720" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>How Github Works / 中の人　<a href="https://github.com/cobyism">@cobyism</a></h4>
+<p><script async class="speakerdeck-embed" data-id="eb0cf950cb8c01310e9a6a5281375720" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>@inao:Githubで雑誌記事を作る (仮)</h4>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/35350247" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/inao/githubkaigi" title="GitHubで?雑誌・書籍を作る" target="_blank">GitHubで?雑誌・書籍を作る</a> </strong> from <strong><a href="http://www.slideshare.net/inao" target="_blank">Naonori Inao</a></strong> </div>
+<h4>Atom, the Programmable Text Editor / 中の人　<a href="https://github.com/nathansobo">@nathansobo</a></h4>
+<p><a href="https://www.dropbox.com/s/utaud80bk5egse3/Atom%20%E2%80%93%20GitHub%20Kaigi_jp.pdf">https://www.dropbox.com/s/utaud80bk5egse3/Atom%20%E2%80%93%20GitHub%20Kaigi_jp.pdf</a></p>
+<p><object classid="clsid:166b1bca-3f9c-11cf-8075-444553540000" width="100" height="100" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=8,5,1,0"><param name="sound" value="true" /><param name="progress" value="true" /><param name="autostart" value="true" /><param name="swliveconnect" value="false" /><param name="swstretchstyle" value="none" /><param name="swstretchhalign" value="none" /><param name="swstretchvalign" value="none" /><param name="src" value="https://www.dropbox.com/s/utaud80bk5egse3/Atom%20%E2%80%93%20GitHub%20Kaigi_jp.pdf" /><embed type="application/x-director" width="100" height="100" src="https://www.dropbox.com/s/utaud80bk5egse3/Atom%20%E2%80%93%20GitHub%20Kaigi_jp.pdf" swstretchvalign="none" swstretchhalign="none" swstretchstyle="none" swliveconnect="false" autostart="true" progress="true" sound="true"></embed></object></p>
+<h4>入門書には載ってない Git &#038; GitHub Tips / <a href="https://github.com/yuku-t">@yuku-t</a></h4>
+<p><script async class="speakerdeck-embed" data-id="7f2ecf10cb9f01310e9a6a5281375720" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4><a href="http://rebuild.fm/">Rebuild.fm Live</a>/ <a href="https://github.com/miyagawa">@miyagawa</a></h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/1401613961611.jpg"><img src="http://andbrowser.com/wp-content/uploads/2014/06/1401613961611-1024x614.jpg" alt="" title="1401613961611" width="600" class="aligncenter size-large wp-image-2606" /></a></p>
+<h4>LT</h4>
+<h5><a href="https://speakerdeck.com/kenchan/github-kaigi-2014-lt">新たなるソーシャルコーディング時代の幕開け</a> / <a href="https://github.com/kenchan">@kenchan</a></h5>
+<p><script async class="speakerdeck-embed" data-id="7f872070cba401310e9c6a5281375720" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5><a href="http://qiita.com/sota0805/items/1cf05f2a2be3d6fb3388">Git・Githubに隠された便利な機能</a> / <a href="https://github.com/sota0805">@sota0805</a></h5>
+<p><script async class="speakerdeck-embed" data-id="b418dd70cba401310e9b6a5281375720" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5>GitHub@Ameba (仮）/ <a href="https://github.com/pnsk">@pnsk</a></h5>
+<h5>GitHubで行うreproducible research / <a href="https://github.com/uribo">@uribo</a></h5>
+<h5><a href="https://speakerdeck.com/pwim/using-github-to-get-a-better-job">Using GitHub to get a better job</a> / <a href="https://github.com/pwim">@pwim</a></h5>
+<p><script async class="speakerdeck-embed" data-id="4764f280cba60131162202b4824706e4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5><a href="https://speakerdeck.com/sakatam/hubotrebiyuaomikuzi-at-githubkaigi">Hubot レビュアーおみくじ</a> / <a href="https://github.com/sakatam">@sakatam</a></h5>
+<p><script async class="speakerdeck-embed" data-id="99fee840cba70131501f0625d49fa84f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5><a href="https://speakerdeck.com/yunico/20140601-github-kaigi-yunico">本当は怖くない！デザイナーがGitを大好きになった?５つの理由（仮）</a> / <a href="https://github.com/yunico-jp">@yunico-jp</a></h5>
+<p><script async class="speakerdeck-embed" data-id="99fee840cba70131501f0625d49fa84f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h5><a href="https://speakerdeck.com/ken_c_lo/pplog-dot-net-falsezuo-rifang-vov-yuruhuwa-development-on-github">pplog.net の作り方( ?ω?)</a> / <a href="https://github.com/taea">@taea</a></h5>
+<p><script async class="speakerdeck-embed" data-id="94740e20cba90131501f0625d49fa84f" data-ratio="1.41241379310345" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>感謝</h4>
+<p>開催に尽力されたスタッフの皆様、ありがとうございました！来年も開催されることを楽しみにしています！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2515/android-dev-useful-site/" rel="bookmark" class="wherego_title">Android開発向けに役に立つサイト一覧</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2580/atend-githubkaigi/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2580/atend-githubkaigi/" />
+	</item>
+		<item>
+		<title>build.gradle向けテストカバレッジの取得設定</title>
+		<link>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/</link>
+		<comments>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/#comments</comments>
+		<pubDate>Sun, 01 Jun 2014 03:06:37 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[gradle]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2570</guid>
+		<description><![CDATA[
+
+
+#139503969 / gettyimages.com
+
+Android Gradle Plugin 0.10.0からjacocoを利用できるようになり、テストカバレッジが出力できるようになりました。その設定をメ [...]]]></description>
+			<content:encoded><![CDATA[<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:594px;">
+<div style="overflow:hidden;position:relative;height:0;padding:66.666667% 0 49px 0;width:100%;"><iframe src="//embed.gettyimages.com/embed/139503969?et=aLDPRLGzSVN88_eIejQ74Q&#038;sig=oLXGIztcD-xq9R0tD3vPDV86KMqf-V2SjaGKbcJLkRE=" width="594" height="445" scrolling="no" frameborder="0" style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+<p style="margin:0;">
+<div style="padding:0;margin:0 0 0 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/139503969" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#139503969</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<p>Android Gradle Plugin 0.10.0からjacocoを利用できるようになり、テストカバレッジが出力できるようになりました。その設定をメモしておきます。<br />
+<span id="more-2570"></span></p>
+<h4>利用するgradle pluginを0.10以上に設定する</h4>
+<h5>build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.10.+'
+    }
+</pre>
+<h4>buildTypeとjacoco設定の追加</h4>
+<h5>app/build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+android {
+    jacoco {
+        version = '0.6.2.201302030002'
+    }
+}
+</pre>
+<pre class="brush: java; first-line: 1;" >
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+}
+</pre>
+<h5>修正後のapp/build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 15
+
+        testPackageName "com.andbrowser.foo.test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+
+    jacoco {
+        version = '0.6.2.201302030002'
+    }
+}
+
+dependencies {
+    compile files('libs/bar.jar')
+}
+</pre>
+<h4>実行方法</h4>
+<pre class="brush: java; first-line: 1;" >
+./gradlew connectedAndroidTest
+</pre>
+<p>これで build/reports/coverage 以下にレポートが出力されます。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/event/2580/atend-githubkaigi/" rel="bookmark" class="wherego_title">githubkaigiに参加。発表資料リンク追加</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/" />
+	</item>
+	</channel>
+</rss>

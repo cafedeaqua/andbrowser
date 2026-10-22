@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; Android Stdio</title>
+	<atom:link href="http://andbrowser.com/tag/android-stdio/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/android-stdio/feed/" />
+		<item>
+		<title>Android Studio 0.8.7 リリース（邦訳）</title>
+		<link>http://andbrowser.com/development/2850/android-stdio-0-8-7/</link>
+		<comments>http://andbrowser.com/development/2850/android-stdio-0-8-7/#comments</comments>
+		<pubDate>Sun, 24 Aug 2014 03:16:45 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[Android Stdio]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2850</guid>
+		<description><![CDATA[Android Studio 0.8.7 Releasedが公開されたため、メモっておきます。
+Android Studio 0.8.7 Released
+
+Android Studio 0.8.7 を canary c [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://tools.android.com/recent/androidstudio087released">Android Studio 0.8.7 Released</a>が公開されたため、メモっておきます。</p>
+<h4>Android Studio 0.8.7 Released</h4>
+<p>
+Android Studio 0.8.7 を canary channel にリリースしました。本バージョンには、多数の不具合修正や以下の注目すべき新しい機能があります。
+</p>
+<h4>翻訳エディタ(Translation Editor)</h4>
+<p><span id="more-2850"></span></p>
+<p>
+最初に、新しい Translation Editor を紹介します。これはあなたのアプリの strings を見たり、編集したりすることができます。&#8221;string.xml&#8221; を右クリックしてオープンすると、Open Traslation Editor(将来のリリースで他の起動方法も提供する予定。それぞれのリソースエディタにリンクを追加するなど)がオープンできます。<br />
+
+</p>
+<p><img border="0" src="http://tools.android.com/_/rsrc/1408658785723/recent/androidstudio087released/translations1.png" /></p>
+<p>
+新規の空プロジェクトのように以下のようにみれます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658785796/recent/androidstudio087released/translations5b.png" /></p>
+<p>
+地球アイコンから追加の言語を設定できます。プラスアイコンで追加の文言を設定できます。<br />
+個別の文言を編集するために、テーブルのセルを選択し、以下のテーブルの詳細パネルで編集できます。（将来のリリースでテーブル上で直接編集できる予定）</p>
+<p>
+I/Oスケジュールアプリでより完全なプロジェクトをご確認いただけます。
+</p>
+<p><img border="0" src="http://tools.android.com/_/rsrc/1408658785758/recent/androidstudio087released/translations4.png" /></p>
+<p>
+注意点：赤く表示されたメッセージはすべての言語向けに翻訳されていないことを示すものです。空のセルは別の色で表示されます。マウスをホバーすると、提供されていない言語のリストが確認できます。この機能は多数の言語をもっている場合や各言語は現在の水平状態でスクロールされるviewportで見ることができない場合に有効です。<br />
+さらに多数の言語をもっている場合、テーブルヘッダーをクリックすると、個別の言語のカラムに拡大されます。たとえば、イタリア語をクリックして拡大できますし、再度クリックすると戻せます。
+</p>
+<h4>Bitmap rendering in the debugger</h4>
+<p>デバッグ中に、Bitmapタイプの variable を右クリックして、View Bitmap を実行できます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658785833/recent/androidstudio087released/view-bitmap.png" /></p>
+<p>デバッグプロセスから結合されたデータにフェッチされ、デバッガーのこの場所で bitmap がレンダリングされます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658786124/recent/androidstudio087released/view-bitmap2.png" /><br />
+新しい lint チェックとして、カスタムビューの中で提供されるものがあります。クラス名と同じベース名を利用しているカスタムビューでdeclare-styleable なもの、コード慣習から利用されるものとして例えば、アトリビュートの補完やリファクタリング更新をするものなど。</p>
+<h4>インストール方法</h4>
+<p>
+既にAndroid Stdio version 0.8.x を利用中なら、再起動するか、Help->Check for Updateを手動で選択してください。差分パッチがダウンロードsされてインストールされます。以前のバージョンを利用したい場合は、<a href="http://tools.android.com/download/studio">ダウンロードページ</a>からフルサイズのダウンロードが必要です。</p>
+<p>注意点：0.8.7は現在 canary channelでしか提供されていません。Android Stdio は標準では beta channel から更新されるようになっています。そのため、更新したい場合は、preferenceの Update category を設定を変更してください。</p>
+<h4>問題がある場合</h4>
+<p>問題があった場合、<a href="http://tools.android.com/knownissues">既知のイシュー</a>をご確認ください。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2839/20140713_sdk_manager_material/" rel="bookmark" class="wherego_title">(2014/07/14時点)SDK Managerが取得するXMLデータ一覧</a></li><li><a href="http://andbrowser.com/android-sdk/2733/what-key-point-of-eclipse-export-to-android-stdio-build/" rel="bookmark" class="wherego_title">eclipseの既存アプリをAndroid Stdio形式に変更する場合のポイント</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2850/android-stdio-0-8-7/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2850/android-stdio-0-8-7/" />
+	</item>
+		<item>
+		<title>AndroidStdio 0.8.0 から0.8.1への更新方法</title>
+		<link>http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/</link>
+		<comments>http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/#comments</comments>
+		<pubDate>Sat, 28 Jun 2014 03:12:13 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[Android Stdio]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2804</guid>
+		<description><![CDATA[Android Stdio 0.8.1 への更新方法
+Google IOに合わせて更新されたAndroidStdio 0.8.0 に対して、AndroidWearやSDKTools ver.23向けの不具合修正がなされた [...]]]></description>
+			<content:encoded><![CDATA[<h4>Android Stdio 0.8.1 への更新方法</h4>
+<p>Google IOに合わせて更新されたAndroidStdio 0.8.0 に対して、AndroidWearやSDKTools ver.23向けの不具合修正がなされた 0.8.1 がリリースされました。<br />
+ただ普通にAndroidStdioを利用していると、以下のHelp-> Check Update から更新の確認ができるのですが、Downloadボタンを押してもウェブページに飛ばされるだけで更新されません。<br />
+<span id="more-2804"></span><br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/06/103.png" alt="" title="Check for update" width="438" height="315" class="aligncenter size-full wp-image-2805" /></p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2014/06/112.png" alt="" title="android stdio download" width="565" height="241" class="aligncenter size-full wp-image-2806" /></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/121.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/121.png" alt="" title="12" width="600" class="aligncenter size-full wp-image-2807" /></a></p>
+<h4>Android Stdio の Update Setting</h4>
+<p>その答えは、Android Stdio の設定の中にあります。<br />
+Android Stdioには実は以下の4つのバージョンがあります。Stable は現在まだ公開されていません。</p>
+<h5>Android Stdio の リリースバージョン</h5>
+<ul>
+<li><a href="http://tools.android.com/download/studio/canary">Canary</a>
+<li><a href="http://tools.android.com/download/studio/dev">Dev</a>
+<li><a href="http://tools.android.com/download/studio/beta">Beta</a>
+<li>Stable (coming soonish)
+</ul>
+<p>AndroidStdioではどのバージョンの update を適用するかを設定の中で選択することができます。今回の場合は、「Beta」に変更すれば、0.8.1に更新できるようになります。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/06/14.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/14.png" alt="" title="android stdio setting update" width="600" class="aligncenter size-full wp-image-2815" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/15.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/15.png" alt="" title="android stdio beta update" width="600" class="aligncenter size-full wp-image-2812" /></a></p>
+<p>＃以下のようにCanary Build って書いているのに・・・<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/06/13.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/13.png" alt="" title="android stdio latest download" width="600" class="aligncenter size-full wp-image-2809" /></a></p>
+<p>アプリ本体のほうは beta って書いてますね。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/06/20.png" alt="" title="android stdio beta 0.8.1" width="533" height="79" class="aligncenter size-full wp-image-2829" /></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2770/20140627_sdk_manager_material_ver2/" rel="bookmark" class="wherego_title">(2014/06/27時点)SDK Managerが取得するXMLデータ一覧（その２）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/" />
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; 4.3</title>
+	<atom:link href="http://andbrowser.com/tag/4-3/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/4-3/feed/" />
+		<item>
+		<title>JB4.3 Android4.3(JellyBean)x86向けエミュレータイメージのインストール方法</title>
+		<link>http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/</link>
+		<comments>http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/#comments</comments>
+		<pubDate>Mon, 26 Aug 2013 08:20:09 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[4.3]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2097</guid>
+		<description><![CDATA[JB4.3 Android4.3(JellyBean)x86向けエミュレータイメージのインストール方法]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130823_jb43emulatorImage.png" title="20130823_jb43emulatorImage" width="500" class="aligncenter size-full wp-image-2098" /><br />
+<span id="more-2097"></span></p>
+<h4>JB4.3 Android4.3(JellyBean)x86向けエミュレータイメージ</h4>
+<h5>背景</h5>
+<p>
+2013/08/23時点のAndroid Virtual Device の作成画面では、以下のように4.3(JB MR2)の Intel Atom(x86) が提供されていません。そのため、これを利用できるような環境を構築してみたいと思います。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/08/20130823_jb43armEmulator.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130823_jb43armEmulator.png" title="20130823_jb43armEmulator" width="489" height="172" class="aligncenter size-full wp-image-2099" /></a></p>
+<h4>利用方法</h4>
+<p>
+以下の、intelのサイトの中の「Install Guide &#8211; Recommended Method.」でSDK Manager から4.3 Intel Atom(x86)がダウンロードできるように説明されているのですが、私の環境ではSDK Manager では表示されませんでした。というわけで、「Install Guide &#8211; Alternate Method.」のマニュアルインストールを行います。</p>
+<p>
+以下の4.3 intel版システムイメージをダウンロードします。以下のページの一番したの「Click to Accept EULA &#038; Download sysimg_x86-18_r01.zip」をダウンロードしてください。
+</ul>
+<ul>
+<li><a href="http://software.intel.com/en-us/articles/intel-eula-x86-android-jelly-bean-bin-4-3">http://software.intel.com/en-us/articles/intel-eula-x86-android-jelly-bean-bin-4-3</a>
+</ul>
+<p>（Agreement への承認があるため、直リンは避けました。）</p>
+<p>x86版のエミュレータイメージが端末にインストールされているかどうかは以下のようにAndroid SDKをインストールしたディレクトリのsystem-images の中をみればわかります。</p>
+<h5>x86版のエミュレータイメージがある場合(API Level 17の場合）</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43intel.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43intel.png" alt="" title="android4.3intel emulator image " width="523" height="220" class="aligncenter size-full wp-image-2111" /></a></p>
+<h5>x86版のエミュレータイメージがない場合(API Level 18の場合）</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43intel2.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43intel2.png" alt="" title="android4.3 intel emulator system image for api 18" width="531" height="203" class="aligncenter size-full wp-image-2112" /></a></p>
+<p>
+上記の system-images\android-18 にインストールしていきます。<br />
+ダウンロードした sysimg_x86-18_r01.zip を解凍します。解凍して出てきた x86 ディレクトリを  system-images\android-18 ディレクトリにコピーします。<br />
+これで、AVD Manager を起動して、新規作成を行います。すると以下のように 4.3 の x86 emulator system image が選択できるようになります。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43IntelEmulator_avdmanager.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130826_43IntelEmulator_avdmanager.png" alt="" title="Android4.3IntelEmulator_avdmanager" width="503" height="568" class="aligncenter size-full wp-image-2117" /></a></p>
+<p>
+それでは快適なx86 emulator 開発生活をお楽しみください！</p>
+<h5>関連ページ</h5>
+<ul>
+<li><a href="http://software.intel.com/en-us/articles/android-43-jelly-bean-x86-emulator-system-image">http://software.intel.com/en-us/articles/android-43-jelly-bean-x86-emulator-system-image</a>
+</li>
+<li><a href="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/">http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/" rel="bookmark" class="wherego_title">SDK Tools, Revision 22.6.2 更新情報</a></li><li><a href="http://andbrowser.com/android-sdk/2059/sdk-manager-get-from-xml-file-no2/" rel="bookmark" class="wherego_title">SDK Managerが取得するxmlファイル（その２）(2013/08/16時点)</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/" />
+	</item>
+		<item>
+		<title>android4.3(API 18)で追加されたSparseLongArrayクラス</title>
+		<link>http://andbrowser.com/development/1937/sparselongarray-is-added-on-android4-3/</link>
+		<comments>http://andbrowser.com/development/1937/sparselongarray-is-added-on-android4-3/#comments</comments>
+		<pubDate>Sat, 10 Aug 2013 03:04:49 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[4.3]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1937</guid>
+		<description><![CDATA[android4.3(API 18)で追加されたSparseLongArrayクラス]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130810_SparseLongArray.png" alt="" title="SparseLongArray" width="600" class="aligncenter size-full wp-image-1938" /></p>
+<h4>SparseLongArray Class</h4>
+<p>Android4.3(API revel 18)から SparseLongArray というクラスが追加されていました。<br />
+API reference は以下にあります。</p>
+<blockquote><p>
+<a href="http://developer.android.com/reference/android/util/SparseLongArray.html">http://developer.android.com/reference/android/util/SparseLongArray.html</a>
+</p></blockquote>
+<p><span id="more-1937"></span><br />
+ソースコードは以下にあります。（<a href="https://sites.google.com/site/devcollaboration/aboutus">Developer Collaboration Project</a>を運営されている皆様、いつも利用させて頂きありがとうございます）</p>
+<blockquote><p>
+<a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/util/SparseLongArray.java">http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/util/SparseLongArray.java</a>
+</p></blockquote>
+<h5>クラスの実装内容</h5>
+<p>ソースコードを見てみると、以下のようなクラスの定義になっています。19行目の import を見ると、ArrayUtilsのメソッドを利用しているようなので POJO ではないようです。</p>
+<pre class="brush: java; first-line: 19;" >
+import com.android.internal.util.ArrayUtils;
+</pre>
+<pre class="brush: java; first-line: 26;" >
+public class SparseLongArray implements Cloneable {
+
+    private int[] mKeys;
+    private long[] mValues;
+    private int mSize;
+</pre>
+<p>このクラスは、int をキーとし、Long を Value とする map のようです。 key に int を利用することによって高速なvalueの取得を実現するためのもののようです。<br />
+そのkeyの検索を実現しているのが以下のbinarySearchメソッドです。</p>
+<pre class="brush: java; first-line: 226;" >
+    private static int binarySearch(int[] a, int start, int len, long key) {
+        int high = start + len, low = start - 1, guess;
+
+        while (high - low > 1) {
+            guess = (high + low) / 2;
+
+            if (a[guess] < key)
+                low = guess;
+            else
+                high = guess;
+        }
+
+        if (high == start + len)
+            return ~(start + len);
+        else if (a[high] == key)
+            return high;
+        else
+            return ~high;
+    }
+</pre>
+<p>このクラスは以下のモジュールで利用されています。</p>
+<ul>
+<li><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/view/accessibility/AccessibilityNodeInfoCache.java">AccessibilityNodeInfoCache.java </a>
+<li><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/view/accessibility/AccessibilityNodeInfo.java">AccessibilityNodeInfo.java</a>
+<li><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/view/accessibility/AccessibilityInteractionClient.java">AccessibilityInteractionClient.java</a>
+<li><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/packages/apps/Settings/src/com/android/settings/deviceinfo/StorageMeasurement.java">StorageMeasurement.java</a>
+<li><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/view/AccessibilityInteractionController.java">AccessibilityInteractionController.java</a>
+</ul>
+<p>ざっとみたところ、数値データの保存用のBinaryHashMapに利用されているようです。簡単な作りになっていますが、ふとこれってスレッドセーフになっているのかしら？と疑問が湧きました。以上。</p>
+<p>＃<a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/util/LongSparseLongArray.java">LongSparseLongArray.java</a> というクラスも @hide ながら追加されいたりします。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法</a></li><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/1905/august-1-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB 40%を超える。ICSも少しずつ減少。2013年8月1日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/2097/andorid-jelly-bean-x86-emulator-system-image-to-install/" rel="bookmark" class="wherego_title">JB4.3 Android4.3(JellyBean)x86向けエミュレータイメージのインストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1937/sparselongarray-is-added-on-android4-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1937/sparselongarray-is-added-on-android4-3/" />
+	</item>
+		<item>
+		<title>android4.3(API 18)で追加されたTextToSpeechのAPI</title>
+		<link>http://andbrowser.com/development/1880/android4-3-add-texttospeech-api/</link>
+		<comments>http://andbrowser.com/development/1880/android4-3-add-texttospeech-api/#comments</comments>
+		<pubDate>Sun, 04 Aug 2013 22:36:27 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[4.3]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1880</guid>
+		<description><![CDATA[android4.3(API 18)で追加されたTextToSpeechのAPI]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/08/20130801_tts_api_18_pc-1024x680.png" alt="" title="20130801_tts_api_18_pc" width="640" class="aligncenter size-large wp-image-1928" /></p>
+<h4>android4.3(API 18)で追加されたTextToSpeechのAPI</h4>
+<p>以下の2つのAPIがandroid4.3(API 18)で追加されたTextToSpeechのAPIです。</p>
+<ul>
+<li>Locale getDefaultLanguage()
+<li>int getMaxSpeechInputLength()
+</ul>
+<p><span id="more-1880"></span></p>
+<h5> API reference </h5>
+<p>では、それぞれの API reference を見ていきます。</p>
+<blockquote><p>
+<strong>public Locale getDefaultLanguage ()</strong></p>
+<p>Added in API level 18<br />
+Returns a Locale instance describing the language currently being used as the default Text-to-speech language.<br />
+<strong>Returns</strong><br />
+language, country (if any) and variant (if any) used by the client stored in a Locale instance, or null on error.
+</p></blockquote>
+<p>デフォルトのTextToSpeechの言語として利用している現在の設定のLocale instane を返す</p>
+<blockquote><p>
+<strong>public static int getMaxSpeechInputLength ()</strong></p>
+<p>Added in API level 18<br />
+Limit of length of input string passed to speak and synthesizeToFile.<br />
+<strong>See Also</strong><br />
+speak(String, int, HashMap)<br />
+synthesizeToFile(String, HashMap, String)
+</p></blockquote>
+<p>speakとsynthesizeToFileで出力する入力文字列の長さの上限を返す</p>
+<h5>Locale getDefaultLanguage()のソースコード</h5>
+<pre class="brush: java; first-line: 1094;" >
+/**
+ * Returns a Locale instance describing the language currently being used as the default
+ * Text-to-speech language.
+ *
+ * @return language, country (if any) and variant (if any) used by the client stored in a
+ *     Locale instance, or {@code null} on error.
+ */
+public Locale getDefaultLanguage() {
+    return runAction(new Action<Locale>() {
+        @Override
+        public Locale run(ITextToSpeechService service) throws RemoteException {
+            String[] defaultLanguage = service.getClientDefaultLanguage();
+
+            return new Locale(defaultLanguage[0], defaultLanguage[1], defaultLanguage[2]);
+        }
+    }, null, "getDefaultLanguage");
+}
+</pre>
+<h5>getDefaultLanguage() の利用箇所</h5>
+<p><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/packages/apps/Settings/src/com/android/settings/tts/TextToSpeechSettings.java">http://tools.oesf.biz/android-4.3.0_r2.1/xref/packages/apps/Settings/src/com/android/settings/tts/TextToSpeechSettings.java</a></p>
+<pre class="brush: java; first-line: 218;" >
+Locale defaultLocale = mTts.getDefaultLanguage();
+if (defaultLocale == null) {
+    Log.e(TAG, "Failed to get default language from engine " + currentEngine);
+     return;
+ }
+ mTts.setLanguage(defaultLocale);
+
+ // TODO: This is currently a hidden private API. The intent extras
+// and the intent action should be made public if we intend to make this
+// a public API. We fall back to using a canned set of strings if this
+// doesn't work.
+Intent intent = new Intent(TextToSpeech.Engine.ACTION_GET_SAMPLE_TEXT);
+
+intent.putExtra("language", defaultLocale.getLanguage());
+intent.putExtra("country", defaultLocale.getCountry());
+intent.putExtra("variant", defaultLocale.getVariant());
+</pre>
+<h5>int getMaxSpeechInputLength()のソースコード</h5>
+<pre class="brush: java; first-line: 1642;" >
+/**
+ * Limit of length of input string passed to speak and synthesizeToFile.
+ *
+ * @see #speak
+ * @see #synthesizeToFile
+ */
+public static int getMaxSpeechInputLength() {
+    return 4000;
+}
+</pre>
+<p>入力文字列の上限は、固定値で持たれていて4000文字です。</p>
+<h4>まとめ（というか、雑感）</h4>
+<p>新機能追加ではなく、少しだけの改善のようです。最近のAndroid全体の方向性が機能追加ではなく、ユーザや開発者のための改善ということなので、これもその一環かもしれません。<br />
+（こんなまとめで申し訳ないです）</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/1905/august-1-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB 40%を超える。ICSも少しずつ減少。2013年8月1日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/1937/sparselongarray-is-added-on-android4-3/" rel="bookmark" class="wherego_title">android4.3(API 18)で追加されたSparseLongArrayクラス</a></li><li><a href="http://andbrowser.com/development/1784/android-development-tools-adt-22-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1880/android4-3-add-texttospeech-api/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1880/android4-3-add-texttospeech-api/" />
+	</item>
+		<item>
+		<title>Android4.3 から 4K解像度に対応し、xxxhdpi が追加</title>
+		<link>http://andbrowser.com/development/1873/android4-3-add-xxxhdpi/</link>
+		<comments>http://andbrowser.com/development/1873/android4-3-add-xxxhdpi/#comments</comments>
+		<pubDate>Mon, 29 Jul 2013 10:32:20 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[4.3]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1873</guid>
+		<description><![CDATA[Android4.3から4K解像度に対応し、xxxhdpi が追加されたそうです。というわけで、該当するソースコードの調査を実施]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/07/android4.3_tablet-1024x680.png" alt="" title="android4.3_tablet" width="640" class="aligncenter size-large wp-image-1930" /></p>
+<h4>xxxhdpiの定義が追加</h4>
+<p>Android4.3から4K解像度に対応し、xxxhdpi が追加されたそうです。というわけで、該当するソースコードの調査を行いました。以下のソースコードの中にxxxhdpiに関する定義がありました。具体的に公開されてるアプリのソースコードでは利用されているところは見つかりませんでした。今後増えていくか、ソースコードが非公開のGoogle Apps群(Google Play, youtube, gmail アプリなど）では利用されているかもしれません。</p>
+<p><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/tools/aapt/AaptAssets.cpp">http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/tools/aapt/AaptAssets.cpp</a></p>
+<p><span id="more-1873"></span></p>
+<pre class="brush: java; first-line: 1188;" >
+if (strcmp(name, "xxxhdpi") == 0) {
+    if (out) out->density = ResTable_config::DENSITY_XXXHIGH;
+    return true;
+}
+</pre>
+<p><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/util/DisplayMetrics.java">http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/core/java/android/util/DisplayMetrics.java</a></p>
+<pre class="brush: java; first-line: 76;" >
+/**
+* Standard quantized DPI for extra-extra-extra-high-density screens.  Applications
+* should not generally worry about this density; relying on XHIGH graphics
+* being scaled up to it should be sufficient for almost all cases.  A typical
+* use of this density would be 4K television screens -- 3840x2160, which
+* is 2x a traditional HD 1920x1080 screen which runs at DENSITY_XHIGH.
+*/
+	public static final int DENSITY_XXXHIGH = 640;
+</pre>
+<p><a href="http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/include/androidfw/ResourceTypes.h">http://tools.oesf.biz/android-4.3.0_r2.1/xref/frameworks/base/include/androidfw/ResourceTypes.h</a></p>
+<pre class="brush: java; first-line: 850;" >
+enum {
+    DENSITY_DEFAULT = ACONFIGURATION_DENSITY_DEFAULT,
+    DENSITY_LOW = ACONFIGURATION_DENSITY_LOW,
+    DENSITY_MEDIUM = ACONFIGURATION_DENSITY_MEDIUM,
+    DENSITY_TV = ACONFIGURATION_DENSITY_TV,
+    DENSITY_HIGH = ACONFIGURATION_DENSITY_HIGH,
+    DENSITY_XHIGH = ACONFIGURATION_DENSITY_XHIGH,
+    DENSITY_XXHIGH = ACONFIGURATION_DENSITY_XXHIGH,
+    DENSITY_XXXHIGH = ACONFIGURATION_DENSITY_XXXHIGH,
+    DENSITY_NONE = ACONFIGURATION_DENSITY_NONE
+};
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/2473/au-isai-fl-xxxhdpi/" rel="bookmark" class="wherego_title">au isai FL は XXX High DPI 端末！4.4ソースコード調査</a></li><li><a href="http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1873/android4-3-add-xxxhdpi/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1873/android4-3-add-xxxhdpi/" />
+	</item>
+	</channel>
+</rss>

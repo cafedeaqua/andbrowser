@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>Androidのアプリ開発情報を記載 - Part 17</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/page/17/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/page/17/index.html" rel="canonical"/>
+<link href="http://wp.me/1H3Ev" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="post-1491 post hentry category-android-sdk tag-android tag-platform-versions" id="post-1491">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">03.06.13</span> <span class="titleName"><a href="/android-sdk/1491/march-4-2013-android-platform-versions/index.html" rel="bookmark">JB以外は減少傾向。JB17%,ICS29%,GB44%。2013年3月4日時点のAndroid Platform バージョンの割合</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/platform-versions/index.html" rel="tag">Platform Versions</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="March 4, 2013 Platform Versions Current Distribution" class="aligncenter size-full wp-image-1493" src="/assets/content/uploads/2013/03/March-4-2013.png" title="March 4, 2013 Platform Versions Current Distribution" width="600"/><br/>
+<a class="more-link" href="/android-sdk/1491/march-4-2013-android-platform-versions/index.html#more-1491">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1253 post hentry category-development" id="post-1253">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.16.13</span> <span class="titleName"><a href="/development/1253/android-device-art-generator/index.html" rel="bookmark">Androidアプリのウェブ掲載やプレゼン資料に最適！Device Art Generator</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> </span>   </div>
+</div>
+<div class="storycontent">
+<style>
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+}
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: #258;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;	
+}
+table th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #258;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+table tr:hover {
+  background: #bbd4ee;
+  cursor:pointer;
+}
+</style>
+<p><a href="/assets/content/uploads/2013/02/android-device-art-generator-01.png"><img alt="" class="aligncenter size-medium wp-image-1340" height="365" src="/assets/content/uploads/2013/02/android-device-art-generator-01.png" title="android-device-art-generator" width="600"/></a></p>
+<h4>Device Art Generator</h4>
+<p><a href="http://developer.android.com/distribute/promote/device-art.html">Device Art Generator</a> がAndroidアプリ紹介用のウェブサイトやプレゼンに大変便利です。</p>
+<p>
+これは、フォトショップやイラストレータで作成した画像やスクリーンショットの画像を以下のようなデバイスに埋め込んだ形の画像に変換してくれるウェブサービスです。</p>
+<h4>利用方法</h4>
+<p>
+たとえば、私の開発している<a href="https://play.google.com/store/apps/details?id=com.andbrowser.kanji">「漢字拡大」アプリ</a>の以下のスクリーンショットで試してみます。このスクリーンショットは Galaxy Nexus で取得したものなので解像度は 720×1280 です。<br/>
+<a class="more-link" href="/development/1253/android-device-art-generator/index.html#more-1253">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1330 post hentry category-android-sdk category-development" id="post-1330">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.15.13</span> <span class="titleName"><a href="/development/1330/android-development-tools-adt-21-1-0/index.html" rel="bookmark">Android Development Tools(ADT) 21.1.0 更新情報</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a>, <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> </span>   </div>
+</div>
+<div class="storycontent">
+<p><a href="/assets/content/uploads/2013/02/android-adt-21.1.0.png"><img alt="" class="aligncenter size-medium wp-image-1331" height="256" src="/assets/content/uploads/2013/02/android-adt-21.1.0-300x256.png" title="android-adt-21.1.0" width="300"/></a></p>
+<h4>ADT 21.1.0 <em>(2013年2月)</em></h4>
+<p> <a class="more-link" href="/development/1330/android-development-tools-adt-21-1-0/index.html#more-1330">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1402 post hentry category-android-sdk tag-android tag-platform-versions" id="post-1402">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.04.13</span> <span class="titleName"><a href="/android-sdk/1402/february-4-2013-android-platform-versions/index.html" rel="bookmark">JB14%,ICS29%,GB45%。2013年2月4日時点のAndroid Platform バージョンの割合</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/platform-versions/index.html" rel="tag">Platform Versions</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="February 4, 2013 Platform Versions Current Distribution" class="aligncenter size-full wp-image-1401" src="/assets/content/uploads/2013/02/011.png" title="February 4, 2013 Platform Versions Current Distribution" width="681"/><br/>
+<a class="more-link" href="/android-sdk/1402/february-4-2013-android-platform-versions/index.html#more-1402">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1256 post hentry category-development tag-android tag-xperia" id="post-1256">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.02.13</span> <span class="titleName"><a href="/development/1256/xperia-z-world-touch-and-try/index.html" rel="bookmark">2013年春モデル Xperia Z, Xperia Tablet Z ワールド　タッチ＆トライに参加しました</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/xperia/index.html" rel="tag">xperia</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="Xperia z touch and try" class="aligncenter size-full wp-image-1274" height="300" src="/assets/content/uploads/2013/01/photo00.jpg" title="Xperia z touch and try" width="400"/></p>
+<style>
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+}
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: #258;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;	
+}
+table th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #258;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+table tr:hover {
+  background: #bbd4ee;
+  cursor:pointer;
+}
+</style>
+<p>Xperia のブロガーイベントに参加してきました。<br/>
+紹介があった機種は、</p>
+<ul>
+<li>NTT docomo向け Xperia Z SO-02E</li>
+<li>NTT docomo向け Xperia Tablet Z SO-03E</li>
+</ul>
+<p>の2機種です。</p>
+<h4>NTT docomo向け Xperia Z SO-02E</h4>
+<p>もっとも期待の高いスマートフォンの Xperia Z のスペックは以下の通りです。<br/>
+<a class="more-link" href="/development/1256/xperia-z-world-touch-and-try/index.html#more-1256">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1410 post hentry category-android-sdk tag-android tag-platform-versions" id="post-1410">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">01.03.13</span> <span class="titleName"><a href="/android-sdk/1410/january-3-2013-android-platform-versions/index.html" rel="bookmark">JBが10%を初めて超えた。2013年1月3日時点のAndroid Platform バージョンの割合</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/platform-versions/index.html" rel="tag">Platform Versions</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="January 3, 2013  Platform Versions Current Distribution" class="aligncenter size-full wp-image-1409" src="/assets/content/uploads/2013/02/January-3-2013.png" title="January 3, 2013  Platform Versions Current Distribution" width="675"/><br/>
+<a class="more-link" href="/android-sdk/1410/january-3-2013-android-platform-versions/index.html#more-1410">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1159 post hentry category-development tag-android" id="post-1159">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">12.28.12</span> <span class="titleName"><a href="/development/1159/android-tablet-app-is-required-bigger-launcher-icon/index.html" rel="bookmark">Androidタブレットアプリのホームアイコンは１段階大きなアイコンが必要</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="AndroidDeveloperLiveAndroidTabletApp" class="aligncenter size-full wp-image-1160" height="437" src="/assets/content/uploads/2012/12/AndroidDeveloperLiveAndroidTabletApp2.png" title="AndroidDeveloperLiveAndroidTabletApp" width="652"/></p>
+<p>Google Developer advocate の<a href="https://plus.google.com/105425518837935313061">松内さん</a>が Developer 向けに提供されている動画コンテンツの<a href="https://developers.google.com/live/shows/10709340/">「[JP 日本語] Android アプリ タブレット端末対応 ことはじめ 」</a>を聞いていて、１５分ぐらいのところで「Tabletデバイスでは、ホーム画面では一段階大きなアイコンが利用されます。」という紹介がありました。アプリ開発者視点では、drawable-xxhdpi/ か drawable-480dpi/ に 144px * 144 px(32 bit PNG（透過含む))をホームアイコンを準備しておく必要があります。</p>
+<p>この対応がどのADTから入っているかを調べてみると、<a href="http://developer.android.com/intl/ja/tools/sdk/eclipse-adt.html"> ADT 20.0.1 (July 2012)</a> から対応されていました。<br/>
+<a class="more-link" href="/development/1159/android-tablet-app-is-required-bigger-launcher-icon/index.html#more-1159">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1128 post hentry category-development tag-adt tag-android" id="post-1128">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">12.25.12</span> <span class="titleName"><a href="/development/1128/android-sdk-download-for-cui/index.html" rel="bookmark">コマンドラインからAndroid SDKをダウンロードするURL一覧</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/adt/index.html" rel="tag">adt</a>, <a href="/tag/android/index.html" rel="tag">Android</a></span>   </div>
+</div>
+<div class="storycontent">
+<br/>
+<style>
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+}
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: #258;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;	
+}
+table th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #258;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+table tr:hover {
+  background: #bbd4ee;
+  cursor:pointer;
+}
+</style>
+<h4><a href="http://developer.android.com/sdk/android-1.1.html">Android SDK Platform 1.1_r1</a>(B?????：コードネーム未公開)(Feb 9, 2009)</h4>
+<table>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>SDK version</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>API level</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SDK revision</td>
+<td>1</td>
+</tr>
+</table>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-windows.zip">android-1.1_r1-windows.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-windows.zip
+	</li>
+</ul>
+</li>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-macosx.zip">android-1.1_r1-macosx.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-macosx.zip
+	</li>
+</ul>
+</li>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-linux.zip">android-1.1_r1-linux.zip</a>
+<ul>
+<li>http://dl.google.com/android/repository/android-1.1_r1-linux.zip
+	</li>
+</ul>
+</li>
+</ul>
+<h4><a href="http://developer.android.com/sdk/android-1.5.html">Android SDK Platform 1.5_r3</a>(Cupcake)(April 30, 2009)</h4>
+<p> <a class="more-link" href="/development/1128/android-sdk-download-for-cui/index.html#more-1128">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1064 post hentry category-development tag-android tag-jenkins" id="post-1064">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">12.21.12</span> <span class="titleName"><a href="/development/1064/only-my-jenkins-for-android-app-build/index.html" rel="bookmark">自分専用執事で快適なAndroidアプリ開発を実現</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/jenkins/index.html" rel="tag">jenkins</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="" class="aligncenter size-full wp-image-1237" height="320" src="/assets/content/uploads/2012/12/small__6606385511.jpg" title="only-my-jenkins-for-android-app-build-small__6606385511" width="320"/><br/>
+photo credit: <a href="http://www.flickr.com/photos/hotelfotograf/6606385511/">Hotelfotograf</a> via <a href="http://photopin.com">photopin</a> <a href="http://creativecommons.org/licenses/by-nd/2.0/">cc</a></p>
+<p>
+<a href="http://androidadvent.blogspot.jp/">Android Advent Calender 2012</a> 向けのエントリを書かせて頂います。<br/>
+昨日は、表が<a href="http://twitter.com/stachibana">@stachibana</a>さんの <a href="http://stachibana.biz/?p=1678">【AndEngine】30分でカジュアルゲームを作ってみよう！</a>で、裏が <a href="https://twitter.com/katsummy">@katsummy</a>さんの<a href="http://creadorgranoeste.blogspot.jp/2012/12/viewholdervalidatorforandroid.html?spref=tw"> CREADOR GRANOESTE: ViewHolderとValidatorForAndroid</a> です。</p>
+<p>12/21の表は、<a href="https://twitter.com/out_of_kaya">@out_of_kaya</a>さんによる<a href="http://d.hatena.ne.jp/out-of-kaya/20121221/1356090929"> クズのクズによるクズの為のAndroid入門 – だらだらいこうぜ</a> です。</p>
+<p>現在のソフトウェア開発ではアジャイル、テスト駆動開発、リーンなどの概念が浸透し、様々な組織で活用されている状況になってきていますが、個人事業主やフリーランスやサンデープログラマーとして個人でソフトウェア開発を行っている方々はなかなか上記の環境を整えることが難しい状況にありました。しかしながら、様々なクラウドサービスなどが盛んになり、個人レベルでも組織に負けない環境が構築できるようになってきました。というわけで、今回はAndroidアプリ開発者向けに自分専用の継続的インテグレーション（CI:Continuous Integration) サーバを構築に挑戦してみます。</p>
+<p>利用するクラウドサービスは、<a href="http://aws.amazon.com/jp/">AWS(Amazon Web Service)</a>を利用します。AWSの利点は、他のクラウドサービスと比べるとコストが最も安くて、1年間の無料利用枠があり簡単に利用開始できるところです。</p>
+<p><a href="/assets/content/uploads/2012/12/01.png"><img alt="AWS-amazon-web-service" class="aligncenter size-medium wp-image-1065" height="170" src="/assets/content/uploads/2012/12/01-300x170.png" title="AWS-amazon-web-service" width="300"/></a></p>
+<h4>AWSのインスタンス作成</h4>
+<p>ログインできたら、ダッシュボード(dashboard)という AWS 管理画面が起動します。この画面は、ウェブページなはずなのにアプリのように軽快に動きます。Windowsのように右クリックして、やりたい操作を選択することもできます！（いまの時代は当たり前か！？）<br/>
+<a class="more-link" href="/development/1064/only-my-jenkins-for-android-app-build/index.html#more-1064">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="post-1416 post hentry category-android-sdk tag-android tag-platform-versions" id="post-1416">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">12.03.12</span> <span class="titleName"><a href="/android-sdk/1416/december-3-2012-android-platform-versions/index.html" rel="bookmark">GBがまだ50%存在。2012年12月3日時点のAndroid Platform バージョンの割合</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/platform-versions/index.html" rel="tag">Platform Versions</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="December 3, 2012 Platform Versions Current Distribution" class="aligncenter size-full wp-image-1415" src="/assets/content/uploads/2013/02/December-3-2012.png" title="December 3, 2012 Platform Versions Current Distribution" width="600"/><br/>
+<a class="more-link" href="/android-sdk/1416/december-3-2012-android-platform-versions/index.html#more-1416">(続きを読む…)</a></p>
+</div>
+</div>
+<div class="navi">
+<div class="alignleft"><a href="/page/18/index.html">« Older Entries</a></div>
+<div class="alignright"><a href="/page/16/index.html">Newer Entries »</a></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,888 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,397 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,557 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

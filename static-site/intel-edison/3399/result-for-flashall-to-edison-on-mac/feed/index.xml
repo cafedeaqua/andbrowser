@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>mac で edison に flashall.shの失敗 へのコメント</title>
+	<atom:link href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>admin より</title>
+		<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/comment-page-1/#comment-24114</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Tue, 11 Dec 2018 05:57:20 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=3399#comment-24114</guid>
+		<description>情報ありがとうございます。大変助かります。</description>
+		<content:encoded><![CDATA[<p>情報ありがとうございます。大変助かります。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>edisonuser より</title>
+		<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/comment-page-1/#comment-24031</link>
+		<dc:creator>edisonuser</dc:creator>
+		<pubDate>Thu, 04 Jun 2015 02:50:34 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=3399#comment-24031</guid>
+		<description>こんにちは。
+私も同じ症状になりましたが、
+Ubuntu等のLinux機にxFSTKというツールをインストールし、
+root権限でflushall.sh --recovery と実行するとファームウエアを更新できるようになりました。
+
+参考ページ：　&quot;Building xFSTK on Ubuntu 14.04 (32-bit) for flashing Edison&quot;</description>
+		<content:encoded><![CDATA[<p>こんにちは。<br />
+私も同じ症状になりましたが、<br />
+Ubuntu等のLinux機にxFSTKというツールをインストールし、<br />
+root権限でflushall.sh &#8211;recovery と実行するとファームウエアを更新できるようになりました。</p>
+<p>参考ページ：　&#8221;Building xFSTK on Ubuntu 14.04 (32-bit) for flashing Edison&#8221;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>Bescottee へのコメント</title>
+	<atom:link href="http://andbrowser.com/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>admin より mac で edison に flashall.shの失敗 へのコメント</title>
+		<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/comment-page-1/#comment-24114</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Tue, 11 Dec 2018 05:57:20 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=3399#comment-24114</guid>
+		<description>情報ありがとうございます。大変助かります。</description>
+		<content:encoded><![CDATA[<p>情報ありがとうございます。大変助かります。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>edisonuser より mac で edison に flashall.shの失敗 へのコメント</title>
+		<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/comment-page-1/#comment-24031</link>
+		<dc:creator>edisonuser</dc:creator>
+		<pubDate>Thu, 04 Jun 2015 02:50:34 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=3399#comment-24031</guid>
+		<description>こんにちは。
+私も同じ症状になりましたが、
+Ubuntu等のLinux機にxFSTKというツールをインストールし、
+root権限でflushall.sh --recovery と実行するとファームウエアを更新できるようになりました。
+
+参考ページ：　&quot;Building xFSTK on Ubuntu 14.04 (32-bit) for flashing Edison&quot;</description>
+		<content:encoded><![CDATA[<p>こんにちは。<br />
+私も同じ症状になりましたが、<br />
+Ubuntu等のLinux機にxFSTKというツールをインストールし、<br />
+root権限でflushall.sh &#8211;recovery と実行するとファームウエアを更新できるようになりました。</p>
+<p>参考ページ：　&#8221;Building xFSTK on Ubuntu 14.04 (32-bit) for flashing Edison&#8221;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>admin より メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/comment-page-1/#comment-23849</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Fri, 27 Jun 2014 08:54:55 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=289#comment-23849</guid>
+		<description>kare様、コメントありがとうございます。そのほうがよいですね。更新させて頂きました。</description>
+		<content:encoded><![CDATA[<p>kare様、コメントありがとうございます。そのほうがよいですね。更新させて頂きました。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>kare より メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/comment-page-1/#comment-23848</link>
+		<dc:creator>kare</dc:creator>
+		<pubDate>Thu, 26 Jun 2014 07:43:50 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=289#comment-23848</guid>
+		<description>Duplicate Classesの説明は、「複数のクラスローダからロードされているクラスを発見」の方がいいと思います</description>
+		<content:encoded><![CDATA[<p>Duplicate Classesの説明は、「複数のクラスローダからロードされているクラスを発見」の方がいいと思います</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>himawari より ADT(Android Developer Tools) ダウンロードURL一覧 へのコメント</title>
+		<link>http://andbrowser.com/development/918/old-adt-download-url/comment-page-1/#comment-21567</link>
+		<dc:creator>himawari</dc:creator>
+		<pubDate>Thu, 13 Mar 2014 08:17:48 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=918#comment-21567</guid>
+		<description>ありがとうございます！</description>
+		<content:encoded><![CDATA[<p>ありがとうございます！</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>プログラミング参考サイト &#124; android manifest configChanges より メモリリークを発見！Androidアプリのメモリ解析手法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/comment-page-1/#comment-11263</link>
+		<dc:creator>プログラミング参考サイト &#124; android manifest configChanges</dc:creator>
+		<pubDate>Wed, 25 Sep 2013 09:24:54 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=65#comment-11263</guid>
+		<description>[...] メモリリークを発見！Androidアプリのメモリ解析手法 [...]</description>
+		<content:encoded><![CDATA[<p>[...] メモリリークを発見！Androidアプリのメモリ解析手法 [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Android Google USBドライバ &#124; android manifest configChanges より SDK Managerが取得するxmlファイル(2013/08/15時点) へのコメント</title>
+		<link>http://andbrowser.com/android-sdk/2048/sdk-manager-get-from-xml-file/comment-page-1/#comment-10415</link>
+		<dc:creator>Android Google USBドライバ &#124; android manifest configChanges</dc:creator>
+		<pubDate>Thu, 12 Sep 2013 09:20:33 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=2048#comment-10415</guid>
+		<description>[...] SDK Managerが取得するxmlファイル(2013/08/15時点)  [...]</description>
+		<content:encoded><![CDATA[<p>[...] SDK Managerが取得するxmlファイル(2013/08/15時点)  [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Androidアプリ開発環境を 42分で構築する（1時間切りに挑戦） &#124; android manifest configChanges より ADT(Android Developer Tools) ダウンロードURL一覧 へのコメント</title>
+		<link>http://andbrowser.com/development/918/old-adt-download-url/comment-page-1/#comment-9641</link>
+		<dc:creator>Androidアプリ開発環境を 42分で構築する（1時間切りに挑戦） &#124; android manifest configChanges</dc:creator>
+		<pubDate>Sat, 24 Aug 2013 16:24:24 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=918#comment-9641</guid>
+		<description>[...] CUI環境からのADTダウンロードURL一覧(ADT22情報追加） [...]</description>
+		<content:encoded><![CDATA[<p>[...] CUI環境からのADTダウンロードURL一覧(ADT22情報追加） [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Android Google USBドライバ &#124; android manifest configChanges より Android 4.2の「開発者向けオプション」を削除する方法 へのコメント</title>
+		<link>http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/comment-page-1/#comment-9055</link>
+		<dc:creator>Android Google USBドライバ &#124; android manifest configChanges</dc:creator>
+		<pubDate>Thu, 15 Aug 2013 00:39:56 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=1246#comment-9055</guid>
+		<description>[...] Android 4.2の「開発者向けオプション」を削除する方法  [...]</description>
+		<content:encoded><![CDATA[<p>[...] Android 4.2の「開発者向けオプション」を削除する方法  [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Android用にmozcをUbuntuでビルドする&#160;-&#160;@blog.justoneplanet.info より コマンドラインからAndroid SDKをダウンロードするURL一覧 へのコメント</title>
+		<link>http://andbrowser.com/development/1128/android-sdk-download-for-cui/comment-page-1/#comment-3908</link>
+		<dc:creator>Android用にmozcをUbuntuでビルドする&#160;-&#160;@blog.justoneplanet.info</dc:creator>
+		<pubDate>Thu, 04 Apr 2013 15:05:00 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=1128#comment-3908</guid>
+		<description>[...] コマンドラインからAndroid SDKをダウンロードするURL一覧 [...]</description>
+		<content:encoded><![CDATA[<p>[...] コマンドラインからAndroid SDKをダウンロードするURL一覧 [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>[Android]GC_CONCURRENT freedの対処法 &#124; bobuhiro11&#39;s diary より メモリリークを発見！Androidアプリのメモリ解析手法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/comment-page-1/#comment-1906</link>
+		<dc:creator>[Android]GC_CONCURRENT freedの対処法 &#124; bobuhiro11&#39;s diary</dc:creator>
+		<pubDate>Tue, 29 Jan 2013 13:48:43 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=65#comment-1906</guid>
+		<description>[...] メモリリークを発見！Androidアプリのメモリ解析手法         [...]</description>
+		<content:encoded><![CDATA[<p>[...] メモリリークを発見！Androidアプリのメモリ解析手法         [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Androidアプリ開発環境を 42分で構築する（1時間切りに挑戦） &#124; android manifest configChanges より コマンドラインからAndroid SDKをダウンロードするURL一覧 へのコメント</title>
+		<link>http://andbrowser.com/development/1128/android-sdk-download-for-cui/comment-page-1/#comment-1762</link>
+		<dc:creator>Androidアプリ開発環境を 42分で構築する（1時間切りに挑戦） &#124; android manifest configChanges</dc:creator>
+		<pubDate>Mon, 07 Jan 2013 07:49:14 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=1128#comment-1762</guid>
+		<description>[...] 古いバージョンのAndroid SDKはSDK ArchivesかコマンドラインからAndroid SDKをダウンロードするURL一覧にあります。 [...]</description>
+		<content:encoded><![CDATA[<p>[...] 古いバージョンのAndroid SDKはSDK ArchivesかコマンドラインからAndroid SDKをダウンロードするURL一覧にあります。 [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>プログラミング参考サイト &#124; android manifest configChanges より コマンドラインからAndroid SDKをダウンロードするURL一覧 へのコメント</title>
+		<link>http://andbrowser.com/development/1128/android-sdk-download-for-cui/comment-page-1/#comment-1717</link>
+		<dc:creator>プログラミング参考サイト &#124; android manifest configChanges</dc:creator>
+		<pubDate>Wed, 02 Jan 2013 00:06:56 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=1128#comment-1717</guid>
+		<description>[...] コマンドラインからAndroid SDKをダウンロードするURL一覧 [...]</description>
+		<content:encoded><![CDATA[<p>[...] コマンドラインからAndroid SDKをダウンロードするURL一覧 [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>スマートフォンの場合のみ縦固定に設定できるんじゃないかなって方法 &#8211; Android &#124; ごろつきめも より 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２ へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/comment-page-1/#comment-179</link>
+		<dc:creator>スマートフォンの場合のみ縦固定に設定できるんじゃないかなって方法 &#8211; Android &#124; ごろつきめも</dc:creator>
+		<pubDate>Tue, 13 Mar 2012 03:24:46 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=192#comment-179</guid>
+		<description>[...]  [...]</description>
+		<content:encoded><![CDATA[<p>[...]  [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>1アプリでタブレットと通常のスマホの画面を切り替える &#124; ミラボ より 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/comment-page-1/#comment-172</link>
+		<dc:creator>1アプリでタブレットと通常のスマホの画面を切り替える &#124; ミラボ</dc:creator>
+		<pubDate>Fri, 09 Mar 2012 23:56:17 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=186#comment-172</guid>
+		<description>[...] 考にさせていただきました。 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法 &#8211; Bescottee [...]</description>
+		<content:encoded><![CDATA[<p>[...] 考にさせていただきました。 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法 &#8211; Bescottee [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Androidアプリのメモリリークを調査する &#124; eiKatouの日記 より メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/comment-page-1/#comment-134</link>
+		<dc:creator>Androidアプリのメモリリークを調査する &#124; eiKatouの日記</dc:creator>
+		<pubDate>Sun, 26 Feb 2012 08:51:03 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=289#comment-134</guid>
+		<description>[...] メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法 [...]</description>
+		<content:encoded><![CDATA[<p>[...] メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法 [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Androidアプリのメモリリークを調査する &#124; eiKatouの日記 より メモリリークを発見！Androidアプリのメモリ解析手法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/comment-page-1/#comment-133</link>
+		<dc:creator>Androidアプリのメモリリークを調査する &#124; eiKatouの日記</dc:creator>
+		<pubDate>Sun, 26 Feb 2012 08:48:24 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=65#comment-133</guid>
+		<description>[...] メモリリークを発見！Androidアプリのメモリ解析手法  [...]</description>
+		<content:encoded><![CDATA[<p>[...] メモリリークを発見！Androidアプリのメモリ解析手法  [...]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>admin より Androidアプリ開発向け Eclipse XML Formatter へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/comment-page-1/#comment-68</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Mon, 12 Sep 2011 01:57:31 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=413#comment-68</guid>
+		<description>IS06(koji.okb)様
+コメントありがとうございます。ADTのほうですでに改善が実施されているんですね。
+大変有益な情報ありがとうございます。リンクを早速見てみます。
+
+今後の ADT バージョンアップでこの機能が追加されるということで待ち遠しいです。</description>
+		<content:encoded><![CDATA[<p>IS06(koji.okb)様<br />
+コメントありがとうございます。ADTのほうですでに改善が実施されているんですね。<br />
+大変有益な情報ありがとうございます。リンクを早速見てみます。</p>
+<p>今後の ADT バージョンアップでこの機能が追加されるということで待ち遠しいです。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>IS06 より Androidアプリ開発向け Eclipse XML Formatter へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/comment-page-1/#comment-67</link>
+		<dc:creator>IS06</dc:creator>
+		<pubDate>Sun, 11 Sep 2011 12:55:22 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=413#comment-67</guid>
+		<description>Android Tools ProjectのRecent Changesを見ると
+XML Formatterの改善について記載されています。
+http://tools.android.com/recent/xmlformatter
+保存時にフォーマットしてくれる機能も追加されるようです。</description>
+		<content:encoded><![CDATA[<p>Android Tools ProjectのRecent Changesを見ると<br />
+XML Formatterの改善について記載されています。<br />
+<a href="http://tools.android.com/recent/xmlformatter" rel="nofollow">http://tools.android.com/recent/xmlformatter</a><br />
+保存時にフォーマットしてくれる機能も追加されるようです。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>admin より メモリリークを発見！Androidアプリのメモリ解析手法 へのコメント</title>
+		<link>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/comment-page-1/#comment-32</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Thu, 14 Jul 2011 03:23:42 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=65#comment-32</guid>
+		<description>あつのすけ様
+修正させて頂きました。ご指摘ありがとうございました。</description>
+		<content:encoded><![CDATA[<p>あつのすけ様<br />
+修正させて頂きました。ご指摘ありがとうございました。</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; gradle</title>
+	<atom:link href="http://andbrowser.com/tag/gradle/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/gradle/feed/" />
+		<item>
+		<title>build.gradle向けテストカバレッジの取得設定</title>
+		<link>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/</link>
+		<comments>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/#comments</comments>
+		<pubDate>Sun, 01 Jun 2014 03:06:37 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[event]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[gradle]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2570</guid>
+		<description><![CDATA[
+
+
+#139503969 / gettyimages.com
+
+Android Gradle Plugin 0.10.0からjacocoを利用できるようになり、テストカバレッジが出力できるようになりました。その設定をメ [...]]]></description>
+			<content:encoded><![CDATA[<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:594px;">
+<div style="overflow:hidden;position:relative;height:0;padding:66.666667% 0 49px 0;width:100%;"><iframe src="//embed.gettyimages.com/embed/139503969?et=aLDPRLGzSVN88_eIejQ74Q&#038;sig=oLXGIztcD-xq9R0tD3vPDV86KMqf-V2SjaGKbcJLkRE=" width="594" height="445" scrolling="no" frameborder="0" style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+<p style="margin:0;">
+<div style="padding:0;margin:0 0 0 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/139503969" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#139503969</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<p>Android Gradle Plugin 0.10.0からjacocoを利用できるようになり、テストカバレッジが出力できるようになりました。その設定をメモしておきます。<br />
+<span id="more-2570"></span></p>
+<h4>利用するgradle pluginを0.10以上に設定する</h4>
+<h5>build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.10.+'
+    }
+</pre>
+<h4>buildTypeとjacoco設定の追加</h4>
+<h5>app/build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+android {
+    jacoco {
+        version = '0.6.2.201302030002'
+    }
+}
+</pre>
+<pre class="brush: java; first-line: 1;" >
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+}
+</pre>
+<h5>修正後のapp/build.gradle</h5>
+<pre class="brush: java; first-line: 1;" >
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 15
+
+        testPackageName "com.andbrowser.foo.test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+
+    jacoco {
+        version = '0.6.2.201302030002'
+    }
+}
+
+dependencies {
+    compile files('libs/bar.jar')
+}
+</pre>
+<h4>実行方法</h4>
+<pre class="brush: java; first-line: 1;" >
+./gradlew connectedAndroidTest
+</pre>
+<p>これで build/reports/coverage 以下にレポートが出力されます。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/event/2580/atend-githubkaigi/" rel="bookmark" class="wherego_title">githubkaigiに参加。発表資料リンク追加</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/event/2570/android-test-covarage-for-build-gradle/" />
+	</item>
+	</channel>
+</rss>

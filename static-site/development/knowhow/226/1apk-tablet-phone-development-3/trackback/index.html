@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Android デベロッパーラボ 東京 2011のコードラボで作成したアプリをさらに改良して、Androidタブレットとスマートフォンの両対応可能なアプリを開発する" name="description"/>
+
+<meta content="android,fragment,honeycomb,apk,tablet" name="keywords"/>
+<title>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/development/knowhow/226/1apk-tablet-phone-development-3/feed/index.xml" rel="alternate" title="Bescottee » 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３ のコメントのフィード" type="application/rss+xml"/>
+<link href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" rel="prev" title="1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２"/>
+<link href="/development/knowhow/289/eclipse-android-memory-leak-mat-oql/index.html" rel="next" title="メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法"/>
+<link href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-3E" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" rel="prev">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a></div>
+<div class="alignright"><a href="/development/knowhow/289/eclipse-android-memory-leak-mat-oql/index.html" rel="next">メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法</a> »</div>
+</div>
+<div class="post-226 post hentry category-knowhow category-development tag-android tag-fragment tag-honeycomb tag-tablet" id="post-226">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">07.24.11</span> <span class="titleName"><a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="bookmark">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/knowhow/index.html" rel="category tag" title="KnowHow の投稿をすべて表示">KnowHow</a>, <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/fragment/index.html" rel="tag">fragment</a>, <a href="/tag/honeycomb/index.html" rel="tag">honeycomb</a>, <a href="/tag/tablet/index.html" rel="tag">tablet</a></span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p>「<a href="/development/knowhow/186/1apk-tablet-phone-development/index.html">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a>」で完成後のクラス図を記載しましたが、「<a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">Android デベロッパーラボ 東京 2011</a>」のコードラボ向けソースコードをベースに今回の目的である1apkでタブレット向けとスマートフォン向けアプリを実現するために、大幅な変更が必要なことが判明しました。</p>
+<h4>設計方針の変更</h4>
+<p>そのため、今回はまず1apkでタブレット向けとスマートフォン向けアプリを実現するために、簡素化して実装を進めることにしました。</p>
+<p>以下のものがそのクラス図です。</p>
+<p><a href="/assets/content/uploads/2011/07/ClassDiagram_1apk.png"><img alt="" class="size-full wp-image-227" src="/assets/content/uploads/2011/07/ClassDiagram_1apk.png" title="1apkでタブレット向けとスマートフォン向けアプリを実現するクラス図" width="600"/></a></p>
+<p>緑色のクラスが新規作成のクラスで、青色が変更を行う必要があるクラスです。</p>
+<p>変更のステップは以下のような流れです。</p>
+<ol>
+<li>起動Activityのタブレット、スマートフォンの両対応向けの準備
+<li>スマートフォン向けレイアウト作成
+<li>スマートフォン向けノート編集画面の作成
+<li>Fragment クラスへの機能追加
+</li></li></li></li></ol>
+<h4>起動Activityのタブレット、スマートフォンの両対応向けの準備</h4>
+<h5>スマートフォン向けレイアウトを res/layout におくために、コードラボ完了時のタブレット向け画面レイアウトを res/layout-xlarge-v11 に名前変更を実施</h5>
+<p>起動Activityをタブレット向けとスマートフォン向けの両対応させるためには、Androidプラットフォームがどのようにレイアウトの切り替えを行っているかを知っておく必要があります。以下のアクティビティ図をもとに紹介します。Activity が起動されると onCreate() が呼び出されて、この中でレイアウトファイルを setContentView() するというのがAndroidのもっとも一般的な画面の作り方です。setContentView()を行うとAndroidの仕組みによって端末の固有情報をもとに読みだすレイアウト xmlファイルの読み出し先のディレクトリを変更してくれます。もっと詳しく知りたい場合は<a href="http://developer.android.com/guide/topics/ui/declaring-layout.html#load">、Android SDK:Load the XML Resource（英語）</a>を参照ください。</p>
+<p><a href="/assets/content/uploads/2011/07/ActivityDiagram_NotepadActivityStart.png"><img alt="" class="alignnone size-medium wp-image-236" src="/assets/content/uploads/2011/07/ActivityDiagram_NotepadActivityStart.png" title="初期起動ActivityのonCreate()のアクティビティ図" width="600"/></a></p>
+<h5>layout フォルダの使い方</h5>
+<p>今回の場合は setContentView(R.layout.notepad); と指定しているので、スマートフォンの場合、layout/notepad.xml が対象となり、タブレットの場合は、layout-xlarge-v11/notepad.xml が対象になり、対応したレイアウトファイルを読み込んでくれます。そのため、コードラボ完了時のレイアウトファイルのフォルダを以下のように変更してから、スマートフォン向けのnotepad.xml を新規作成します。</p>
+<table class="table001">
+<caption>表：レイアウトフォルダの変更</caption>
+<tr>
+<th scope="col">変更前のフォルダ</th>
+<th scope="col">変更後のフォルダ</th>
+</tr>
+<tr>
+<td>/res/layout/</td>
+<td>/res/layout-xlarge-v11/</td>
+</tr>
+<tr>
+<td>/res/layout-port/</td>
+<td>/res/layout-xlarge-port-v11/</td>
+</tr>
+</table>
+<p>（※）layoutより後ろに続く識別子（xlargeやportやv11など）の順番は正しい順序で指定しないと正しく動作しません。詳細な項目や並べる順番を知りたい場合は、<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#Compatibility">Providing the Best Device Compatibility with Resources（英語）</a>や<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#BestMatch">How Android Finds the Best-matching Resource（英語）</a>を参照してください。</p>
+<p>続いて、新規作成するスマートフォン向けのレイアウトファイルを紹介します。中身はタブレット向けのものとあまり変化はなく、以下のようになります。</p>
+<p></p>
+<p>タブレット向けの /res/layout-xlarge-v11/notepad.xml と比較してみるために以下の掲載します。</p>
+<p></p>
+<p>もともとの notepad.xml では、２ペイン構成で左側にノートリストがあって、右側に編集画面がでてくるものでした。スマートフォン向けの画面の場合は画面サイズが小さいため、2ペイン構成にはできないため１ペインで画面遷移を発生させるユーザインタフェースにします。そのため、タブレットのレイアウトファイルの &lt;fragment …. NoteListFragment  のみを抜き出したものがスマートフォンの起動画面のノートリストのレイアウトになります。</p>
+<p>タブレット向けのレイアウトファイルのnotepad.xml の中の &lt;LinearLayout android:id=”@+id/note_detail_container” という部分はまだ Fragment 指定になっていないため、あとから Fragment の指定に変更します。コートラボの課題では問題になりませんでしたが、せっかく NoteEdit を Fragment 化したので、ここも Fragment 指定にするように課題に入っていたほうがよかったですね。</p>
+<h5>スマフォでの実行</h5>
+<p>この状態でスマートフォンで実行してみましょう。ノートが１つもないため、真っ黒な画面になると思います。ここでノートを追加するためにメニューボタンを押すと Exception が発生して落ちてしまいます。</p>
+<p>onCreateOptionsMenu() の中のadd.setShowAsAction() で落ちます。理由は、このメソッドは Honeycomb 3.0(API Level 11)からのAPIのため、API Levelが 10 以下のスマートフォンでは提供されておらず、実行時に Exception が発生してしまいます。</p>
+<p>これを避けるために、実行時にAPIレベルの判断ロジックを呼び出して実行するかどうかを制御します。具体的な判断ロジックについては、前回のエントリ「<a href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a>」を参照ください。今回やりたいことはAPIレベルの判断のため、UIUtils.isHoneycomb() を利用して、add.setShowAsAction() メソッドをコールするかどうかを判定します。</p>
+<p>NotepadActivity.java の具体例は以下のようになります。</p>
+<p></p>
+<h5>スマフォ向け対応</h5>
+<p>続いて、「スマートフォンの場合に画面遷移が必要なため、それ向け対応」を行います。</p>
+<p>メニューボタンを押して「Add Note」を実行したときに、タブレットの場合は画面遷移を行わずに右側に新規ノート画面を表示していましたが、スマートフォンの場合はノート編集画面を新しく起動するようにします。「Add Note」を実行したときには、onMenuItemSelected() がコールされるため、その中でタブレットかスマートフォンかの判断ロジックを利用して、処理の振り分けを行います。具体的には以下のようなコードになります。</p>
+<p></p>
+<p></p>
+<p>いまの状態では、スマートフォン向けのノート編集画面(NoteEditActivity)がないため、コンパイルエラーのままなので、これを新規作成します。</p>
+<p>NoteEditActivity はスマートフォン向けのみのActivityのため、明確にわかるように所属するパッケージを変更します。<br/>
+パッケージ名：com.example.android.honeypad.phone の中に以下のように NoteEditActivity.java を新規作成します。</p>
+<p><a href="/assets/content/uploads/2011/07/NoteEditActivityPackage.png.jpg"><img alt="" class="alignnone size-medium wp-image-265" height="234" src="/assets/content/uploads/2011/07/NoteEditActivityPackage.png-300x234.jpg" title="NoteEditActivityのPackage名" width="300"/></a></p>
+<p>現時点で作成される NoteEditActivity は以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditActivity extends FragmentActivity implements
+        NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.note_edit_phone);
+
+        FragmentManager fm = getSupportFragmentManager();
+        NoteEditFragment edit = new NoteEditFragment();
+        // add the NoteEditFragment to the container
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.note_detail_container, edit, "Edit");
+        ft.commit();
+
+    }
+}
+</pre>
+<p> 続いて、NoteEditActivity で参照しているレイアウトファイル(R.layout.note_edit_phone)を以下のように作成します。</p>
+<p></p>
+<p>上記の res/layout/note_edit_phone.xml の中身は、res/layout-xlarge-port-v11/notepad.xml の &lt;LinearLayout android:id=”@+id/note_detail_container” の部分を Fragment 指定に変更したものです。そのためこの機会に res/layout-xlarge-port-v11/notepad.xml の &lt;LinearLayout android:id=”@+id/note_detail_container” の部分をFragment 指定に変更しておきましょう。変更後の res/layout-xlarge-port-v11/notepad.xml は以下のようになります。</p>
+<p></p>
+<p>これでスマートフォンの起動画面（ノートリスト画面）（NotepadActivity)からノート編集画面に遷移することができました。ここでTitleとBodyに文章をいれて、Confirm ボタンを押すと保存されますが、ノートリスト画面に戻りません。これはNoteEdit を Fragment 対応したときにタブレット向けしか想定しておらず、Confirm ボタンを押したときの動作として、保存を行うことしか実装されていないためです。タブレットの場合は、左側にノートリスト画面があるため、保存すればすぐに新しいノートのタイトルが追加されて反映されるので問題ないですが、スマートフォン向けの場合は保存を行ったあとにノートリスト画面に戻ってほしいため、この機能を NoteEditFragment に追加します。</p>
+<p>さて、この機能はどのように実現すればよいでしょうか？何も考えずに実現しようとすると、NoteEditFragment にタブレットかスマートフォンかの判断ロジックをいれて、スマートフォンの場合に Activity を finish() するという以下のような実装を行いそうです。ここで判断ロジックにisHoneycombTablet() を使っている理由は、、前回のエントリ「<a href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a>」を参照ください。</p>
+<pre class="brush:java">
+    private void saveNote() {
+        // save/update the note
+        ContentValues values = new ContentValues(2);
+        values.put(NotesProvider.KEY_TITLE, mTitleText.getText().toString());
+        values.put(NotesProvider.KEY_BODY, mBodyText.getText().toString());
+        if (mCurrentNote != null) {
+            getActivity().getContentResolver().update(mCurrentNote, values,
+                    null, null);
+        } else {
+            getActivity().getContentResolver().insert(
+                    NotesProvider.CONTENT_URI, values);
+        }
+        Toast.makeText(getActivity(), "Note Saved", Toast.LENGTH_SHORT).show();
+        if( UIUtils.isHoneycombTablet(getActivity()) ){
+                getActivity().finish();
+        }
+    }
+</pre>
+<h5>FragmentとActivityの役割分担</h5>
+<p>この方法でも実現は可能ですが、Fragment の導入された目的に照らし合わせるとよろしくありません。</p>
+<p>ここで今一度、ActivityとFragmentの関係について考えてみたいと思います。Fragmentが導入された経緯は、スマートフォンとタブレットという画面サイズが大幅に異なる２つの製品群に対して、いままでのActivityで画面を開発していくというスタイルのままではスマートフォン向けアプリとタブレット向けアプリに対してそれぞれの画面レイアウトをもったActivityを２つ開発していく必要があり、開発者にとっては大変な負担になっていくところでした。</p>
+<p>そこで、honeycomb （<a href="http://android-developers.blogspot.com/2011/03/fragments-for-all.html">Gingerbread 以下向けにも互換パッケージを提供</a>）から Fragment という概念を導入し、画面を構成するActivityよりも概念的に小さく、ユーザに提供する機能単位で実装を行えるFragment の提供を開始しました。</p>
+<p> Fragment はユーザに提供する機能を実装し、ActivityはFragmentの要素をいつ、どこに利用するかの管理や、Androidのお家芸であるIntentの処理を担当することによって、ソフトウェアのコンポーネント化を進めて、再利用性を向上し、ユーザに有用なアプリを提供していけるようになる仕組みです。</p>
+<p>ということから考えると、上記のFragmentのなかでUtils.isHoneycombTablet()の判断ロジックをもって、Activityの画面遷移を操作していることは、Fragment が Activity の役割である画面遷移やIntentの処理を行っていることになり、本来の趣旨から外れてしまいます。</p>
+<p>そのため、これらの処理は、Activity 側で実装を行い、Fragment 側はActivity の機能を呼び出す仕組みにします。</p>
+<p>具体的なやり方としては、Fragment内でコールバックメソッドを定義し、Activityがそのコールバックメソッドを必ず実装するように定義することによって実現します。</p>
+<p>この仕組みについては、<a href="http://developer.android.com/guide/topics/fundamentals/fragments.html#EventCallbacks">Creating event callbacks to the activity（英語）</a>か<a href="http://www.techdoctranslator.com/android/guide/activities/fragments#EventCallbacks">ソフトウェア技術ドキュメントを勝手に翻訳：アクティビティとのやり取り：アクティビティへのイベントコールバックの作成</a>に紹介があります。</p>
+<p>NoteEditFragment.java に追加するコールバックメソッドは以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditFragment extends Fragment {
+
+    public interface OnNoteSavedListener {
+        public void onNoteSaved();
+    }
+</pre>
+<p>これを Activity で implements して実装します。注意点としては、Activityに対して実装を強制するため NoteEditFragment 内でこのコールバックメソッドが実装されていなければ、ClassCastException を発行して実行時例外が発生し、実行できないようにしています。</p>
+<p>上記の実行時例外の発行は、以下のようなコードで実現しています。</p>
+<pre class="brush:java">
+public class NoteEditFragment extends Fragment {
+...
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnNoteSavedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnNoteSavedListener");
+        }
+
+    }
+</pre>
+<p>NoteEditFragment にコールバックインタフェースに追加ができれば、以下のようにそのコールバックを呼び出すように変更します。</p>
+<pre class="brush:java">
+    private void saveNote() {
+        // save/update the note
+        ContentValues values = new ContentValues(2);
+        values.put(NotesProvider.KEY_TITLE, mTitleText.getText().toString());
+        values.put(NotesProvider.KEY_BODY, mBodyText.getText().toString());
+        if (mCurrentNote != null) {
+            getActivity().getContentResolver().update(mCurrentNote, values,
+                    null, null);
+        } else {
+            getActivity().getContentResolver().insert(
+                    NotesProvider.CONTENT_URI, values);
+        }
+        Toast.makeText(getActivity(), "Note Saved", Toast.LENGTH_SHORT).show();
+        // イベントをホストのアクティビティに送信する
+        mListener.onNoteSaved();
+    }
+</pre>
+<p>NoteEditFragment でコールバックの実装を強制することによって、それを利用する２つのActivityで implements する必要がでてきました。</p>
+<p>NoteEditActivity では、本来やりたかった保存時にActivityを終了して、ノートリスト画面に戻るという機能を実現したいため、以下のように onNoteSaved() 内で Activity を終了する finish() を実行します。</p>
+<p></p>
+<p>NotepadActivity では、現状通り特になにもすることはないので、以下のように空のまま実装します。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    public void onNoteSaved() {
+        // do nothing
+    }
+</pre>
+<p>これでスマートフォンとタブレットの両方でノート編集画面でノートを追加することができるようになりました。</p>
+<p>次は、スマートフォンの起動画面のノートリスト画面ですでに作成済みのノートをクリックした場合に追加編集できる機能を実現します。</p>
+<p>現状では、ノートリストを選択した場合、NoteListFragment の onListItemClick() メソッドが呼び出されます。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+...
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Uri noteUri = ContentUris.withAppendedId(NotesProvider.CONTENT_URI, id);
+        mContainerCallback.onNoteSelected(noteUri);
+    }
+</pre>
+<p>onListItemClick() メソッドの中でさきほどもあったような mContainerCallback.onNoteSelected(noteUri); のようにコールバックインタフェースを実行しています。このコールバックは以下のように定義されています。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+
+    public interface NoteListEventsCallback {
+        public void onNoteSelected(Uri noteUri);
+
+        public void onNoteDeleted();
+    }
+</pre>
+<p>このコールバックインターフェースは誰が実装しているかを調べてみると、NoteListFragment を利用している Activity で実装していることが以下からわかります。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+...
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            // check that the containing activity implements our callback
+            mContainerCallback = (NoteListEventsCallback) activity;
+        } catch (ClassCastException e) {
+            activity.finish();
+            throw new ClassCastException(activity.toString()
+                    + " must implement NoteSelectedCallback");
+        }
+    }
+</pre>
+<p>NoteListFragment を利用しているActivityは、NotepadActivity１つのため、こちらを見てみます。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+...
+    @Override
+    public void onNoteSelected(Uri noteUri) {
+            showNote(noteUri);
+    }
+
+    private void showNote(final Uri noteUri) {
+        // check if the NoteEditFragment has been added
+        FragmentManager fm = getFragmentManager();
+        NoteEditFragment edit = (NoteEditFragment) fm.findFragmentByTag("Edit");
+        if (edit == null) {
+            // add the NoteEditFragment to the container
+            FragmentTransaction ft = fm.beginTransaction();
+            edit = new NoteEditFragment();
+            ft.add(R.id.note_detail_container, edit, "Edit");
+            ft.commit();
+        } else if (noteUri == null) {
+            edit.clear();
+        }
+
+        if (noteUri != null) {
+            edit.loadNote(noteUri);
+        }
+    }
+</pre>
+<p> NoteListFragment のリスト項目のクリックから onNoteSelected() コールバックインタフェースが実行されて、showNote(noteUri);が実行されます。</p>
+<p>この中で FragmentManager を利用して fragment の管理を行っています。この処理は、2ペイン構成の場合の処理がモロに記載されているため、スマートフォン向けには不必要な処理です。</p>
+<p>そのため、onNoteSelected() コールバックインタフェース内でスマートフォンかタブレット判断ロジックを利用して、処理を分岐させます。分岐させたスマートフォン側の処理では、ノート編集画面を起動するように実装します。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+...
+    @Override
+    public void onNoteSelected(Uri noteUri) {
+        if (UIUtils.isHoneycombTablet(this)) {
+            showNote(noteUri);
+        } else {
+            showNotePhone(noteUri);
+        }
+    }
+
+    // for phone api
+    private void showNotePhone(final Uri noteUri) {
+        Intent i = new Intent(this, NoteEditActivity.class);
+        i.setData(noteUri);
+        startActivity(i);
+    }
+</pre>
+<p>これでスマートフォンのノートリスト画面からノート編集画面に uri を渡して起動することができました。動作確認を行ってみると、どのノートリストを選択しても、TitleとBodyは表示されずに新規作成扱いになってしまいます。</p>
+<p>これはまだNoteEditActivity 側で受信した Intent の処理を行っていないためです。</p>
+<p>Activity と Fragment の役割分担の上記で話をしましたが、今回のようなバグを追うときにも Intent の処理の場合は、基本的に Activity が担当するため、呼び出す前のActivityが正しく送っていることが確認できていれば、デバッグを呼び出した後のActivityに注力することができます。</p>
+<p><p>NoteEditActivity の onCreate() 内で Intent の受信を行っていないことが原因と判明したため、以下のようなロジックを onCreate() 内に追加します。</p>
+<p></p>
+<p>追加後のNoteEditActivity は以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditActivity extends FragmentActivity implements
+        NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.note_edit_phone);
+        Intent intent = getIntent();
+        Uri uri = intent.getData();
+
+        FragmentManager fm = getSupportFragmentManager();
+        NoteEditFragment edit = new NoteEditFragment();
+        edit.loadNote(uri);
+        // add the NoteEditFragment to the container
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.note_detail_container, edit, "Edit");
+        ft.commit();
+
+    }
+
+    @Override
+    public void onNoteSaved() {
+        finish();
+    }
+
+}
+</pre>
+<h4>おわりに</h4>
+<p>これで目的の1apkでタブレット向けとスマートフォン向けのアプリを作成することができました。今回のコードラボのアプリがActivityベースのスマートフォン向けアプリをスマートフォン向け構成を維持しないままにタブレット向けアプリにするというものでした。そして Fragment 実装に置き換えたうえで２ペイン対応のタブレット向けアプリにするというものでした。それをあとから、1apkでスマートフォンとタブレットの両対応アプリにするという一直線ではなく、横道にそれて一度喫茶店で休憩したあとに戻りながら目的地に歩いていくというやり方でした。</p>
+<p>本来なら、Activity ベースのスマートフォン向けアプリがベースになるなら、スマートフォン向けアプリのままで Fragment 対応を実施して、スマートフォン向け動作を確保しながら、徐々にタブレット向けアプリを開発していくというスタイルがよいと思います。</p>
+<p>今回作ったアプリは eclipse のプロジェクト形式で整理したうえ（まだぐちゃぐちゃなので）で公開したいと思います。もし急ぎでほしいという方は（そんな人いないと思いますが）ご連絡頂ければ先に展開させて頂きます。</p>
+<p>「Android Layout Cookbook アプリの価値を高める開発テクニック」の作者の方も<a href="http://y-anz-m.blogspot.com/2011/07/android-developer-lab-2011-tokyo.html">Y.A.M の 雑記帳：Android Developer Lab Tokyo 2011 のノートパッドをカスタマイズしてみた。</a>（こちらのほうが相当レベルは上ですが。。。大変勉強になります。）でカスタマイズされています。</p>
+<p>Fragment についてはまだ日本でAndroidタブレットが普及していない事情もあり、利用されているアプリは少ないと思います。Fragmentは、画面を持たないものも開発可能ということでタブレットアプリとスマートフォンアプリの両方で利用できる汎用ライブラリ的なものを作るプラットフォームにもなれるのではないかと考えています。ADL2011で google の android developer Advocate の方が次期バージョンの IceCreamSandwich(ICS) でも Fragment は推進していくのでどんどん Fragment を利用すいてアプリを開発してくださいとおっしゃっていました。そういうことを踏まえると、今後Androidアプリを開発していくにあたって Fragment は避けて通れないものになっていく予感がしますし、使いこなせるようになれば大変強い武器になっていくのではないかと考えています。</p>
+<p>今後の色々と調査結果を紹介していければと思っています。Fragment使ってAndroidアプリを作っていきましょう！！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/development/knowhow/393/android-fragment2activity/index.html" rel="bookmark">Android FragmentからのActivity呼び出し方法</a></li><li><a class="wherego_title" href="/android-sdk/2733/what-key-point-of-eclipse-export-to-android-stdio-build/index.html" rel="bookmark">eclipseの既存アプリをAndroid Stdio形式に変更する場合のポイント</a></li><li><a class="wherego_title" href="/development/knowhow/186/1apk-tablet-phone-development/index.html" rel="bookmark">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></li></ul></div> </p></div>
+</div>
+
+<div class="postcomments">
+<h2 id="comments">17件のコメント			<a href="/development/knowhow/226/1apk-tablet-phone-development-3/trackback/index.html#postcomment" title="コメントをどうぞ">»</a>
+</h2>
+<ol id="commentlist">
+<li class="comment even thread-even depth-1 friendfeed" id="comment-friendfeed-6">
+<div class="comment-body" id="div-comment-friendfeed-6">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/androidworld/ea66b59f/android-2011-bescottee" rel="external nofollow">AndroidWorld</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee – <a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow" title="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 hatena" id="comment-hatena-2">
+<div class="comment-body" id="div-comment-hatena-2">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/" rel="external nofollow">kuwalab</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Fragment</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-95322546458738689">
+<div class="comment-body" id="div-comment-tweet-95322546458738689">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/kuwalab/status/95322546458738689" rel="external nofollow">kuwalab</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Fragment / Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee <a href="http://htn.to/52UnSK" rel="nofollow">http://htn.to/52UnSK</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-95326419328053250">
+<div class="comment-body" id="div-comment-tweet-95326419328053250">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/miraidesign/status/95326419328053250" rel="external nofollow">miraidesign</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p><a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow">http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-95330076433981441">
+<div class="comment-body" id="div-comment-tweet-95330076433981441">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/frt1623/status/95330076433981441" rel="external nofollow">frt1623</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Fragment / Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee <a href="http://htn.to/52UnSK" rel="nofollow">http://htn.to/52UnSK</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 hatena" id="comment-hatena-1">
+<div class="comment-body" id="div-comment-hatena-1">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/" rel="external nofollow">Nkzn</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-95345858790436864">
+<div class="comment-body" id="div-comment-tweet-95345858790436864">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/nkzn/status/95345858790436864" rel="external nofollow">nkzn</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ <a href="http://htn.to/RaQVh5" rel="nofollow">http://htn.to/RaQVh5</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-95346431539417088">
+<div class="comment-body" id="div-comment-tweet-95346431539417088">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/dora_kou/status/95346431539417088" rel="external nofollow">dora_kou</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ <a href="http://htn.to/RaQVh5" rel="nofollow">http://htn.to/RaQVh5</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 friendfeed" id="comment-friendfeed-5">
+<div class="comment-body" id="div-comment-friendfeed-5">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/gom/95660926/android-2011-bescottee" rel="external nofollow">gom</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee – <a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow" title="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-95405942757273600">
+<div class="comment-body" id="div-comment-tweet-95405942757273600">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/fonmaster_sho/status/95405942757273600" rel="external nofollow">fonmaster_sho</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ <a href="http://htn.to/RaQVh5" rel="nofollow">http://htn.to/RaQVh5</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-95433625247563777">
+<div class="comment-body" id="div-comment-tweet-95433625247563777">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/hatebu_android/status/95433625247563777" rel="external nofollow">hatebu_android</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee (5 users) <a href="http://goo.gl/6dGh7" rel="nofollow">http://goo.gl/6dGh7</a> #androidjp</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-95435398523785217">
+<div class="comment-body" id="div-comment-tweet-95435398523785217">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/designingsolid/status/95435398523785217" rel="external nofollow">designingsolid</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p><a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow">http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/</a> 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-95439723664908289">
+<div class="comment-body" id="div-comment-tweet-95439723664908289">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/sakura_bird1/status/95439723664908289" rel="external nofollow">sakura_bird1</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ <a href="http://htn.to/RaQVh5" rel="nofollow">http://htn.to/RaQVh5</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 friendfeed" id="comment-friendfeed-4">
+<div class="comment-body" id="div-comment-friendfeed-4">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/srkm/301e76e4/android-2011-bescottee" rel="external nofollow">Masaki Takegami</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee – <a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow" title="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-96745834867212288">
+<div class="comment-body" id="div-comment-tweet-96745834867212288">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/kkogorou/status/96745834867212288" rel="external nofollow">kkogorou</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Honeycomb対応についてメモ <a href="http://htn.to/RaQVh5" rel="nofollow">http://htn.to/RaQVh5</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 friendfeed" id="comment-friendfeed-3">
+<div class="comment-body" id="div-comment-friendfeed-3">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/gom/20407553/android-2011-bescottee" rel="external nofollow">gom</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android デベロッパーラボ 東京 2011の成果をさらに改良してタブレットとスマートフォンの両対応アプリを開発 | Bescottee – <a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="nofollow" title="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 hatena" id="comment-hatena-0">
+<div class="comment-body" id="div-comment-hatena-0">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/" rel="external nofollow">iNo</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>callback</p>
+<div class="reply">
+</div>
+</div>
+</li>
+</ol>
+<p class="commentfeed"><a href="/development/knowhow/226/1apk-tablet-phone-development-3/feed/index.xml">このコメント欄の <abbr title="Really Simple Syndication">RSS</abbr> フィード</a> <a href="/development/knowhow/226/1apk-tablet-phone-development-3/trackback/index.html" rel="trackback">トラックバック <abbr title="Universal Resource Locator">URL</abbr></a>
+</p>
+
+</div>
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,884 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,396 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,554 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+
+<script src="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/scripts/core-min.js" type="text/javascript"></script>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shCore-min.css" id="ash_core-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shThemeDefault-min.css" id="ash_theme_default-css" media="all" rel="stylesheet" type="text/css"/>
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

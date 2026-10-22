@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; SDK Manager</title>
+	<atom:link href="http://andbrowser.com/tag/sdk-manager/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/sdk-manager/feed/" />
+		<item>
+		<title>(2014/02/05時点)SDK Managerが取得するXMLデータ一覧</title>
+		<link>http://andbrowser.com/android-sdk/2250/20140205_sdk_manager_material/</link>
+		<comments>http://andbrowser.com/android-sdk/2250/20140205_sdk_manager_material/#comments</comments>
+		<pubDate>Tue, 04 Feb 2014 22:38:04 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[SDK Manager]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2250</guid>
+		<description><![CDATA[2014/02/05時点のSDK Manager が取得するデータURL一覧
+
+https://dl-ssl.google.com/android/repository/addons_list-2.xml
+https://dl-ssl.google.com/android/repository/repository-8.xml
+https://dl-ssl.google.com/android/repository/addon.xml
+https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+https://dl-ssl.google.com/android/repository/sys-img.xml
+]]></description>
+			<content:encoded><![CDATA[<h4>2014/02/05時点のSDK Manager が取得するデータURL一覧</h4>
+<ul>
+<li><a href="https://dl-ssl.google.com/android/repository/addons_list-2.xml">https://dl-ssl.google.com/android/repository/addons_list-2.xml</a>
+<li><a href="https://dl-ssl.google.com/android/repository/repository-8.xml">https://dl-ssl.google.com/android/repository/repository-8.xml</a>
+<li><a href="https://dl-ssl.google.com/android/repository/addon.xml">https://dl-ssl.google.com/android/repository/addon.xml</a>
+<li><a href="https://dl-ssl.google.com/android/repository/extras/intel/addon.xml">https://dl-ssl.google.com/android/repository/extras/intel/addon.xml</a>
+<li><a href="https://dl-ssl.google.com/android/repository/sys-img.xml">https://dl-ssl.google.com/android/repository/sys-img.xml</a>
+<li><a href=">https://dl-ssl.google.com/android/repository/sys-img/mips/sys-img.xml&#8221;>https://dl-ssl.google.com/android/repository/sys-img/mips/sys-img.xml</a>
+<li><a href="https://dl-ssl.google.com/android/repository/sys-img/x86/sys-img.xml">https://dl-ssl.google.com/android/repository/sys-img/x86/sys-img.xml</a>
+</ul>
+<pre>
+Fetching https://dl-ssl.google.com/android/repository/addons_list-2.xml
+Fetched Add-ons List successfully
+Fetching URL: https://dl-ssl.google.com/android/repository/repository-8.xml
+Done loading packages.
+Fetching https://dl-ssl.google.com/android/repository/addons_list-2.xml
+Validate XML
+Parse XML
+Fetched Add-ons List successfully
+Fetching URL: https://dl-ssl.google.com/android/repository/repository-8.xml
+Validate XML: https://dl-ssl.google.com/android/repository/repository-8.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/repository-8.xml
+  Found SDK Platform Android 1.1, API 2, revision 1 (Obsolete)
+  Found SDK Platform Android 1.5, API 3, revision 4
+  Found SDK Platform Android 1.6, API 4, revision 3
+  Found SDK Platform Android 2.0, API 5, revision 1 (Obsolete)
+  Found SDK Platform Android 2.0.1, API 6, revision 1 (Obsolete)
+  Found SDK Platform Android 2.1, API 7, revision 3
+  Found SDK Platform Android 2.2, API 8, revision 3
+  Found SDK Platform Android 2.3.1, API 9, revision 2 (Obsolete)
+  Found SDK Platform Android 2.3.3, API 10, revision 2
+  Found SDK Platform Android 3.0, API 11, revision 2
+  Found SDK Platform Android 3.1, API 12, revision 3
+  Found SDK Platform Android 3.2, API 13, revision 1
+  Found SDK Platform Android 4.0, API 14, revision 3
+  Found SDK Platform Android 4.0.3, API 15, revision 3
+  Found SDK Platform Android 4.1.2, API 16, revision 4
+  Found SDK Platform Android 4.2.2, API 17, revision 2
+  Found SDK Platform Android 4.3, API 18, revision 2
+  Found SDK Platform Android 4.4.2, API 19, revision 2
+  Found ARM EABI v7a System Image, Android API 14, revision 2
+  Found ARM EABI v7a System Image, Android API 15, revision 2
+  Found ARM EABI v7a System Image, Android API 16, revision 3
+  Found ARM EABI v7a System Image, Android API 17, revision 2
+  Found ARM EABI v7a System Image, Android API 18, revision 2
+  Found ARM EABI v7a System Image, Android API 19, revision 2
+  Found Samples for SDK API 7, revision 1
+  Found Samples for SDK API 8, revision 1
+  Found Samples for SDK API 9, revision 1 (Obsolete)
+  Found Samples for SDK API 10, revision 1
+  Found Samples for SDK API 11, revision 1
+  Found Samples for SDK API 12, revision 1
+  Found Samples for SDK API 13, revision 1
+  Found Samples for SDK API 14, revision 2
+  Found Samples for SDK API 15, revision 2
+  Found Samples for SDK API 16, revision 1
+  Found Samples for SDK API 17, revision 1
+  Found Samples for SDK API 18, revision 1
+  Found Samples for SDK API 19, revision 2
+  Found Android SDK Platform-tools, revision 19.0.1
+  Found Android SDK Build-tools, revision 17
+  Found Android SDK Build-tools, revision 18.0.1
+  Found Android SDK Build-tools, revision 18.1
+  Found Android SDK Build-tools, revision 18.1.1
+  Found Android SDK Build-tools, revision 19
+  Found Android SDK Build-tools, revision 19.0.1
+  Found Android SDK Tools, revision 22.3
+  Found Documentation for Android SDK, API 19, revision 2
+  Found Sources for Android SDK, API 14, revision 1
+  Found Sources for Android SDK, API 15, revision 2
+  Found Sources for Android SDK, API 16, revision 2
+  Found Sources for Android SDK, API 17, revision 1
+  Found Sources for Android SDK, API 18, revision 1
+  Found Sources for Android SDK, API 19, revision 2
+Fetching URL: https://dl-ssl.google.com/android/repository/addon.xml
+Validate XML: https://dl-ssl.google.com/android/repository/addon.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/addon.xml
+  Found Google APIs, Android API 3, revision 3
+  Found Google APIs, Android API 4, revision 2
+  Found Google APIs, Android API 5, revision 1 (Obsolete)
+  Found Google APIs, Android API 6, revision 1 (Obsolete)
+  Found Google APIs, Android API 7, revision 1
+  Found Google APIs, Android API 8, revision 2
+  Found Google APIs, Android API 9, revision 2 (Obsolete)
+  Found Google APIs, Android API 10, revision 2
+  Found Google APIs, Android API 11, revision 1
+  Found Google APIs, Android API 12, revision 1
+  Found Google APIs, Android API 13, revision 1
+  Found Google APIs, Android API 14, revision 2
+  Found Google APIs, Android API 15, revision 2
+  Found Google APIs, Android API 16, revision 3
+  Found Google APIs, Android API 17, revision 3
+  Found Google APIs, Android API 18, revision 3
+  Found Google APIs, Android API 19, revision 2
+  Found Google TV Addon, Android API 12, revision 2
+  Found Google TV Addon, Android API 13, revision 1
+  Found Android Support Library, revision 19
+  Found Android Support Repository, revision 4
+  Found Google Repository, revision 5
+  Found Google Play Licensing Library, revision 2
+  Found Google Play APK Expansion Library, revision 3
+  Found Google Play services for Froyo, revision 12
+  Found Google Play services, revision 14
+  Found Google USB Driver, revision 9
+  Found Google Play Billing Library, revision 5
+  Found Google AdMob Ads SDK, revision 11 (Obsolete)
+  Found Google Analytics App Tracking SDK, revision 3
+  Found Google Web Driver, revision 2
+  Found Google Cloud Messaging for Android Library, revision 3 (Obsolete)
+Fetching URL: https://dl-ssl.google.com/android/repository/addon-6.xml
+Validate XML: https://dl-ssl.google.com/android/repository/addon-6.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/addon-6.xml
+  Found Android Support Library, revision 19.0.1
+Fetching URL: https://dl-ssl.google.com/glass/gdk/addon.xml
+Validate XML: https://dl-ssl.google.com/glass/gdk/addon.xml
+Parse XML:    https://dl-ssl.google.com/glass/gdk/addon.xml
+  Found Glass Development Kit Sneak Peek, Android API 15, revision 2
+Fetching URL: https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+Validate XML: https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+  Found Intel x86 Emulator Accelerator (HAXM), revision 3
+Fetching URL: https://dl-ssl.google.com/android/repository/sys-img.xml
+Validate XML: https://dl-ssl.google.com/android/repository/sys-img.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/sys-img.xml
+Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/mips/sys-img.xml
+Validate XML: https://dl-ssl.google.com/android/repository/sys-img/mips/sys-img.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/mips/sys-img.xml
+  Found MIPS System Image, Android API 15, revision 1
+  Found MIPS System Image, Android API 16, revision 4
+  Found MIPS System Image, Android API 17, revision 1
+Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/x86/sys-img.xml
+Validate XML: https://dl-ssl.google.com/android/repository/sys-img/x86/sys-img.xml
+Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/x86/sys-img.xml
+  Found Intel x86 Atom System Image, Android API 10, revision 2
+  Found Intel x86 Atom System Image, Android API 15, revision 1
+  Found Intel x86 Atom System Image, Android API 16, revision 1
+  Found Intel x86 Atom System Image, Android API 17, revision 1
+  Found Intel x86 Atom System Image, Android API 18, revision 1
+  Found Intel x86 Atom System Image, Android API 19, revision 1
+Done loading packages.
+Preparing to install archives
+Downloading Google APIs, Android API 19, revision 2
+Installing Google APIs, Android API 19, revision 2
+Installed Google APIs, Android API 19, revision 2
+Downloading Android Support Repository, revision 4
+Installing Android Support Repository, revision 4
+Installed Android Support Repository, revision 4
+Downloading Android Support Library, revision 19.0.1
+Installing Android Support Library, revision 19.0.1
+Installed Android Support Library, revision 19.0.1
+Downloading Google Play services, revision 14
+Installing Google Play services, revision 14
+Installed Google Play services, revision 14
+Downloading Google Repository, revision 5
+Installing Google Repository, revision 5
+Installed Google Repository, revision 5
+Downloading Google USB Driver, revision 9
+Installing Google USB Driver, revision 9
+Installed Google USB Driver, revision 9
+Updated ADB to support the USB devices declared in the SDK add-ons.
+Stopping ADB server succeeded.
+Starting ADB server succeeded.
+Done. 6 packages installed.
+Done loading packages.
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2839/20140713_sdk_manager_material/" rel="bookmark" class="wherego_title">(2014/07/14時点)SDK Managerが取得するXMLデータ一覧</a></li><li><a href="http://andbrowser.com/development/918/old-adt-download-url/" rel="bookmark" class="wherego_title">ADT(Android Developer Tools) ダウンロードURL一覧</a></li><li><a href="http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/" rel="bookmark" class="wherego_title">SDK Tools, Revision 22.6.2 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/2250/20140205_sdk_manager_material/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/2250/20140205_sdk_manager_material/" />
+	</item>
+	</channel>
+</rss>

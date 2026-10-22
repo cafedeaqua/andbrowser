@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+  xml:base="http://andbrowser.com/wp-atom.php"
+   >
+	<title type="text">Bescottee</title>
+	<subtitle type="text">苦しいときは伸びてるとき、楽なときは伸びていないとき</subtitle>
+
+	<updated>2018-01-06T14:12:26Z</updated>
+	<generator uri="http://wordpress.org/" version="2.9.2">WordPress</generator>
+
+	<link rel="alternate" type="text/html" href="http://andbrowser.com" />
+	<id>http://andbrowser.com/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://andbrowser.com/feed/atom/" />
+
+			<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/development/3583/hvc-c2wsdk/" />
+		<id>http://andbrowser.com/?p=3583</id>
+		<updated>2016-01-15T13:26:53Z</updated>
+		<published>2016-01-15T13:26:22Z</published>
+		<category scheme="http://andbrowser.com" term="development" />		<summary type="html"><![CDATA[
+https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android
+で公開されている家族目線(HVC-C2W)SDKを試用してみました。
+見守りカメラセンサ「家族 [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/development/3583/hvc-c2wsdk/"><![CDATA[<p><a href="http://plus-sensing.omron.co.jp/egg-project/__wp/wp-content/uploads/fordeveloper20151113_sdk-monitor01.jpg"><img alt="" src="http://plus-sensing.omron.co.jp/egg-project/__wp/wp-content/uploads/fordeveloper20151113_sdk-monitor01.jpg" title="HVC_C2W" class="alignnone" width="600" /></a></p>
+<p><a href="https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android">https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android</a><br />
+で公開されている家族目線(HVC-C2W)SDKを試用してみました。</p>
+<p><a href="http://plus-sensing.omron.co.jp/kazoku-mesen/<br />
+">見守りカメラセンサ「家族目線」</a>というもののSDKです。<br />
+<span id="more-3583"></span></p>
+<p><code><br />
+$ git clone git@github.com:OmronSensingEggProject/HVC_C2W_SDK_Android.git<br />
+</code></p>
+<h1>サンプルアプリのビルド方法</h1>
+<p>サンプルアプリをAndroid Studioとコマンドラインでビルドする方法を紹介します。</p>
+<h2>Android Studio</h2>
+<p>
+Android Studioの Open an existing Android Studio project で HVC_C2W_SDK_Android/sample/demo/base/<br />
+ を選択。よくあるAndroidアプリの場合、git clone して出来たフォルダを指定すればよいが、家族目線(HVC-C2W)SDKの場合はアプリだけの提供だけでなく、docやlibrary も git repository で提供しているため、このような構成になっているようです。</p>
+<p>
+Android Studioへの取込ができれば以下のようになり、Build メニューの Make Project でビルドができます。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2016/01/as01.png"><img src="http://andbrowser.com/wp-content/uploads/2016/01/as01-300x250.png" alt="" title="as01" width="300" height="250" class="aligncenter size-medium wp-image-3588" /></a></p>
+<h2>コマンドライン</h2>
+<p>
+続いてコマンドラインからビルドする方法を紹介します。コマンドラインからのビルドは gradle というビルドツールをします。この gradle のインストールなどを行わなくてもいいような wrapper が用意されています。Windows向けが gradlew.bat で MAC/Linux向けのものが gradlew というコマンドです。このコマンドの中で gradle のダウンロードとその後のビルドを実施してくれます。まずは以下のコマンドでビルドしてみましょう。</p>
+<p><code><br />
+$ cd HVC_C2W_SDK_Android/sample/demo/base/<br />
+$ ./gradlew assemble<br />
+or<br />
+$ gradlew.bat assemble<br />
+</code></p>
+<p>
+コマンドのオプションが他に何があるかどうかを知りたい場合は以下のコマンドで説明が出てきます。</p>
+<p><code><br />
+$ ./gradlew tasks<br />
+</code></p>
+<h1>API keyの設定</h1>
+<p>アプリを動作させるために API key が必要です。取得のうえ、以下の場所に追加を行います。これでアプリを利用できる準備が整いました。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2016/01/as02.png"><img src="http://andbrowser.com/wp-content/uploads/2016/01/as02-300x121.png" alt="" title="as02" width="300" height="121" class="aligncenter size-medium wp-image-3596" /></a></p>
+<p>このAPI Key は何に利用されるかというとクラウドサービスとして提供される HVC-C2W　WebAPIの認証のために利用されます。このWebAPIの詳細についてはHVC-C2W WebAPI仕様書に記載されています。このファイルは、HVC_C2W_SDK_Android/doc/ に以下の2つが提供されており、HVC-C2W_WebAPI仕様書_B.pdfが該当するものです。</p>
+<ul>
+<li>HVC-C2W_OKAOAPI仕様書_A.pdf
+<li>HVC-C2W_WebAPI仕様書_B.pdf
+</ul>
+<p>
+今後サンプルアプリの中身について記載していきたいと思います。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/development/3583/hvc-c2wsdk/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/development/3583/hvc-c2wsdk/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[第23回potatotips参加報告]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/event/3567/potatotips-23/" />
+		<id>http://andbrowser.com/?p=3567</id>
+		<updated>2015-11-24T16:14:13Z</updated>
+		<published>2015-11-24T16:01:58Z</published>
+		<category scheme="http://andbrowser.com" term="event" /><category scheme="http://andbrowser.com" term="Android" />		<summary type="html"><![CDATA[
+http://connpass.com/event/21750/
+第23回potatotips参加報告
+件名の通り参加してきたのでそのご報告になります。私がAndroidしかできないのと、Android Blog枠とい [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/event/3567/potatotips-23/"><![CDATA[<p><img alt="" src="https://connpass-tokyo.s3.amazonaws.com/thumbs/7d/1e/7d1edb5e4df606f71c2697a29559014c.png" title="potatotips #23" class="alignnone" width="660" height="280" /><br />
+<a href="http://connpass.com/event/21750/">http://connpass.com/event/21750/</a></p>
+<h1>第23回potatotips参加報告</h1>
+<p>件名の通り参加してきたのでそのご報告になります。私がAndroidしかできないのと、Android Blog枠というのが追加されていたのでそんな感じになります。</p>
+<h3>受付はこんな感じでした。</h3>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a> FiNCさん会場着！ ペッパーくんが出迎えてくれました。 <a href="https://t.co/nPky03sqm0">pic.twitter.com/nPky03sqm0</a></p>
+<p>&mdash; 所 友太 (@tokorom) <a href="https://twitter.com/tokorom/status/669091458838753280">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>AppIndexing API</h2>
+<h3>shaunkawanoさん</h3>
+<p><script async class="speakerdeck-embed" data-id="27bcc207d86c414f839c7415255c672a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>Android端末のGoogle検索の対象として、アプリから情報を提供できる
+<li>Google Play Serviceの一部
+<li>実装がとても簡単なのでそれを紹介したい
+<li>onCreate() で実装することが推奨
+<li>DocumentにonStart(), onStop()で実装してほしいけど、なんでもいいよって記載されている
+<li>AMEBAアプリで実装済み
+<li>TIPS
+<li>APP_URLがnullなら落ちるやmClient.connect()を呼ぶこと
+</ul>
+<h4>発表待ちの方から余裕のつっこみコメントもありました。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">Appindex API 、ちょうど先週に調べてたやつだ <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; hkusu (@hkusu_) <a href="https://twitter.com/hkusu_/status/669096213556256769">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p><span id="more-3567"></span></p>
+<h2>Slackに隕石という名のスクリーンショットを落下させる話</h2>
+<h3>operandoOSさん</h3>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/tfPIH3QJbiJJZ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/shinobuokano7/slack-55455661" title="隕石という名のスクリーンショットをSlackに落下させる話" target="_blank">隕石という名のスクリーンショットをSlackに落下させる話</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/shinobuokano7" target="_blank">Shinobu Okano</a></strong> </div>
+<ul>
+<li>隕石はいる場所によって呼び名が違う！！
+<li>Meteorite
+<li><a href="https://github.com/operando/Meteorite">https://github.com/operando/Meteorite</a>
+<li>Slackに隕石（スクリーンショット）を簡単に遅れる
+<li>デモが完璧に動いていて素晴らしい。歓声が起こりました。
+<li>Meteor
+<li><a href="https://github.com/operando/Meteor">https://github.com/operando/Meteor</a>
+<li>JavaScriptで同じ名前のものがある。かぶっちゃいました。
+<li>Meteoroid
+<li><a href="https://github.com/operando/Meteoroid">https://github.com/operando/Meteoroid</a>
+<li>時間内にプレゼンが終わって素晴らしい発表でした。
+</ul>
+<h2>&#8220;Predictable state container&#8221; and Data Binding</h2>
+<h3>izumin5210</h3>
+<p><script async class="speakerdeck-embed" data-id="9302aa49c25b48b590922f3e84502d01" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>Front-end JavaScript 外から見るとやべー世界（ｗ
+<li>プレゼン資料がすごいいい勢いで消費されていって心地よい。
+<li>Android向けにFront-end JavaScriptを導入してみた。
+<li>Reduxをためしてみた。
+<li>これをDroidux という名前にした。Androidのなにかに名前がかぶってます。
+<li>特にundo, redo が簡単に実装できます
+<li>Data-bindingの仕組みでデータが変わったら自動的に更新されることもできます
+</ul>
+<h4>さすが事前の宣言どおり。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">今日のスライド、15分トークのボリュームうえに話の7割がジャバスクリプトになりそう <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; 不良野良うさぎ (@izumin5210) <a href="https://twitter.com/izumin5210/status/669089277913927680">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h4>からのDroidkaigi向けの宣伝も素晴らしい！</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">つづきは <a href="https://twitter.com/hashtag/droidkaigi?src=hash">#droidkaigi</a> で！（CFPとおれば <a href="https://t.co/wHsc8lGphI">https://t.co/wHsc8lGphI</a> <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; 不良野良うさぎ (@izumin5210) <a href="https://twitter.com/izumin5210/status/669114856935546880">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>手軽にHTTPでJSONにアクセスできる環境を用意する</h2>
+<h3>hkusuさん</h3>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/jQvVuabarsHci" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="http://andbrowser.com//www.slideshare.net/hiroyukikusu/potatotips-23httpjson" title="【Potatotips #23】手軽にhttpでjsonにアクセスできる環境を用意する" target="_blank">【Potatotips #23】手軽にhttpでjsonにアクセスできる環境を用意する</a> </strong> from <strong><a href="http://andbrowser.com//www.slideshare.net/hiroyukikusu" target="_blank">Hiroyuki Kusu</a></strong> </div>
+<ul>
+<li>Android Studioでローカルサーバを立ち上げて、emulatorからそれにアクセスする
+<li>10.0.3.2:
+<port>/,<json path></p>
+<li>emulatorのみ
+<li>gist を利用
+<li>raw データ表示でURL発行
+<li>実機、emulator,r両方可能
+<li>node.js でローカルサーバ起動
+<li>emulatorのみ
+<li>json は javascript で扱いやすい
+<li>Amazon S3にJSONを置く
+</ul>
+<h4>という追加のつっこみも。</h4>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">よいぞ <a href="https://t.co/9uXj9k1c9I">https://t.co/9uXj9k1c9I</a> <a href="https://twitter.com/hashtag/potatotips?src=hash">#potatotips</a></p>
+<p>&mdash; Yokomarquee (@KeithYokoma) <a href="https://twitter.com/KeithYokoma/status/669108559855009794">2015, 11月 24</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>Design Support Libraryをいじる際に気をつけていること</h2>
+<h3>Yoshida Nozomiさん</h3>
+<p><script async class="speakerdeck-embed" data-id="c64dcb949b234265b4c5c41675582563" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<ul>
+<li>担当しているアプリの最終更新日が1年前で古くなってきているので、そのマテリアルデザイン対応を担当
+<li>SupportLibraryのソースを読んで解析
+<li>SuportLibでやりにくいこと・できないこと
+<li>Rippleアニメーション
+<li>RippleDrawableでやってください
+</ul>
+<h2>Androidでライブラリを作る</h2>
+<h3>Shigeki Yamatoさん</h3>
+<ul>
+<li>良いライブラリの条件とは
+<li>機能を提供、使うの簡単、容量小さい
+<li>Androidライブラリ特有の問題
+<li>OSバージョン問題、65K問題、非同期処理問題
+<li>結論
+<li>Android2.3からWebViewテスト
+<li>HttpURLConnectionを使う
+<li>JSONParseは標準APIを使う
+<li>HanlderとHandlerThreadで頑張る
+<li>でも、つらい・・・でも、楽しい・・・
+<li>HanlderとHandlerThreadの違いも重要
+</ul>
+<h2>Don&#8217;t Reinvent The Wheel ~ For All Android Beginners ~<br />
+<h2>
+<h3>Kenju</h3>
+<ul>
+<li>Web屋さんだったが、最近AndroidDeveloperになりました。
+<li>CodeReviewで上司から撃沈
+<li>TextUtil.isEmpty()を使おう
+<li>Effective Java 2nd Editionの紹介
+<li>ライブラリーを知り、ライブラリーを使う #47
+<li>3Step for learning
+<li>Know android library
+<li>use library method
+<li>あと1つありましたがメモれず。
+</ul>
+<h2>UI optimization for night</h2>
+<h3>KeithYokoma</h3>
+<p>https://speakerdeck.com/keithyokoma/ui-optimization-for-night</p>
+<ul>
+<li>ムスカ大佐の眼が〜、眼が〜、眼が〜、が受けてました
+<li>動的にThemeを変更することによって実現
+<li>Activity#setTheme()
+<li>Call before calling Activity@onCreate()
+<li>んじゃ、いつ変更するの？
+<li>照度センサーを使う
+<li>日の入り、日の出を計算して実現
+<li>https://en.wikipedia.org/wiki/Sunrise_equation
+<li>実は、AOSPにも実装がある
+<li>UiModeManagerは？
+<li>AndroidAutoのロゴがでてきたり、謎のハンドルアイコンがでたりと使いづらい。
+</ul>
+<p>FiNCさんのオフィスが銀座の一等地にあり、周りの煌びやかな都会のビル群の光に圧倒されながら帰りました。次回はオフィス移転後のすごいところで開催されるそうです！！乞うご期待！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/event/3567/potatotips-23/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/event/3567/potatotips-23/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[2015/11/21時点の Intel Edison Firmware]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" />
+		<id>http://andbrowser.com/?p=3556</id>
+		<updated>2015-11-20T18:29:39Z</updated>
+		<published>2015-11-20T18:28:40Z</published>
+		<category scheme="http://andbrowser.com" term="Uncategorized" /><category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。
+Intel® Edison Board Software Downloadsから以下をダウンロードしました。
+
+PhoneFlashToolLite_5.3.2.0_mac64.pkg
+m_iot_dev_kit_2015.0.023.tar.gz
+edison-iotdk-image-280915.zip
+HoRNDIS-rel7.pkg
+
+
+MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。
+逆の場合は./flassall.sh が
+
+Did you plug and reboot your board?
+
+のまま進まない症状が出ました。
+備忘のため、コマンドとログをメモしておきます。
+
+$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820
+Bus 020 Device  [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/"><![CDATA[<p>Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。</p>
+<p><a href="https://software.intel.com/en-us/iot/hardware/edison/downloads">Intel® Edison Board Software Downloads</a>から以下をダウンロードしました。</p>
+<ul>
+<li>PhoneFlashToolLite_5.3.2.0_mac64.pkg
+<li>m_iot_dev_kit_2015.0.023.tar.gz
+<li>edison-iotdk-image-280915.zip
+<li>HoRNDIS-rel7.pkg
+</ul>
+<p><span id="more-3556"></span></p>
+<p>MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。<br />
+逆の場合は./flassall.sh が</p>
+<p><code><br />
+Did you plug and reboot your board?<br />
+</code><br />
+のまま進まない症状が出ました。</p>
+<p>備忘のため、コマンドとログをメモしておきます。</p>
+<p><code><br />
+$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Timed out while waiting for dfu device 8087:0a99<br />
+DEBUG: lsusb<br />
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820<br />
+Bus 020 Device 005: ID 0403:6001 Future Technology Devices International Limited FT232R USB UART  Serial: AJ035GT1<br />
+Bus 020 Device 018: ID 05ac:0259 Apple Inc. Apple Internal Keyboard / Trackpad<br />
+Bus 020 Device 002: ID 0a5c:4500 Broadcom Corp. BRCM20702 Hub<br />
+Bus 020 Device 004: ID 05ac:8289 Apple Inc. Bluetooth USB Host Controller<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+DEBUG: dfu-util -l<br />
+dfu-util 0.8</p>
+<p>Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.<br />
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt<br />
+This program is Free Software and has ABSOLUTELY NO WARRANTY<br />
+Please report bugs to dfu-util@lists.gnumonks.org</p>
+<p>Did you plug and reboot your board?<br />
+If yes, please try a recovery by calling this script with the --recovery option<br />
+taro:edison-iotdk-image-280915 tkawashita$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Flashing IFWI<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Transfer size must be specified<br />
+Flashing U-Boot<br />
+Flashing U-Boot Environment<br />
+Flashing U-Boot Environment Backup<br />
+Rebooting to apply partition changes<br />
+Now waiting for dfu device 8087:0a99<br />
+Flashing boot partition (kernel)<br />
+Flashing rootfs, (it can take up to 5 minutes... Please be patient)<br />
+Rebooting<br />
+U-boot &#038; Kernel System Flash Success...<br />
+Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.<br />
+</code></p>
+<p><code><br />
+*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:ifwi<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Partitioning already done...<br />
+Saving Environment to MMC...<br />
+Writing to MMC(0)... done<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0x6ad212b0<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0xb98db2f8<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+######################################################################################################################<br />
+DFU complete CRC32: 0x5601e158<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5434848 bytes read in 134 ms (38.7 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5419488 bytes)<br />
+Magic signature found<br />
+Kernel command line: "rootwait root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 g_multi.ethernet_config=rndis systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=8211587d07244d27cfb43ab8989dc867 g_multi.dev_addr=02:00:86:9d:c8:67 platform_mrfld_audio.audio_codec=dummy"</p>
+<p>Starting kernel ...</p>
+<p>[    1.602492] snd_soc_sst_platform: Enter:sst_soc_probe<br />
+[    2.006424] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    2.024564] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    2.024656] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device dev-ttyMFD2.device...<br />
+[  OK  ] Reached target Remote File Systems.<br />
+         Expecting device dev-disk-by\x2dpartlabel-rootfs.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-factory.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br />
+         Expecting device sys-subsystem-net-devices-usb0.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Created slice User and Session Slice.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Mounting Temporary Directory...<br />
+         Starting Load Kernel Modules...<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Starting udev Coldplug all Devices...<br />
+[  OK  ] Created slice system-getty.slice.<br />
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br />
+         Mounting Debug File System...<br />
+         Mounting POSIX Message Queue File System...<br />
+         Starting Apply Kernel Variables...<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+         Starting Load/Save Random Seed...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Mounting Configuration File System...<br />
+         Mounting FUSE Control File System...<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Reached target Local File Systems.<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Create Volatile Files and Directories...<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Found device /dev/ttyMFD2.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+         Starting Opkg first boot configure...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/factory.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/rootfs.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+[  OK  ] Started Opkg first boot configure.<br />
+         Mounting Mount for factory...<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Listening on RPCbind Server Activation Socket.<br />
+[  OK  ] Reached target Timers.<br />
+         Starting Restore Sound Card State...<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+[  OK  ] Mounted Mount for factory.<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting Edison PWR button handler...<br />
+[  OK  ] Started Edison PWR button handler.<br />
+         Starting Telephony service...<br />
+         Starting Daemon to load edison mcu app binary...<br />
+[  OK  ] Started Daemon to load edison mcu app binary.<br />
+         Starting Daemon to handle arduino sketches...<br />
+Application available at (physical) address 0x04819000<br />
+        VRL mapped to 0xff217000<br />
+        App size = 11508 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+[  OK  ] Started Daemon to handle arduino sketches.<br />
+         Starting Daemon to reset sketches...<br />
+[  OK  ] Started Daemon to reset sketches.<br />
+         Starting Bluetooth rf kill event daemon...<br />
+[  OK  ] Started Bluetooth rf kill event daemon.<br />
+         Starting Start or stop WiFI AP Mode in Edison...<br />
+[  OK  ] Started Start or stop WiFI AP Mode in Edison.<br />
+         Starting Login Service...<br />
+         Starting Permit User Sessions...<br />
+         Starting Post install service...<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Generate unique machine-id...<br />
+         Starting Cleanjournal service...<br />
+[  OK  ] Started Cleanjournal service.<br />
+         Starting D-Bus System Message Bus...<br />
+[    9.913329] sh[218]: Starting Post Install (try: 0)<br />
+[  OK  ] Started D-Bus System Message Bus.<br />
+[  OK  ] Started Telephony service.<br />
+         Starting Network Service...<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Started Permit User Sessions.<br />
+[  OK  ] Started Network Service.<br />
+[   10.368966] systemd-machine-id-setup[247]: Initializing machine ID from random generator.<br />
+[   10.682053] systemctl[250]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br />
+[  OK  ] Started Generate unique machine-id.<br />
+[  OK  ] Started Login Service.<br />
+         Starting Bluetooth service...<br />
+         Starting Edison Arduino board LED Blinker...<br />
+[  OK  ] Started Edison Arduino board LED Blinker.<br />
+         Starting Network Name Resolution...<br />
+[   11.864772] sh[218]: Backup home/root contents of rootfs : Success<br />
+         Starting PulseAudio Sound System...<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br />
+[  OK  ] Reached target Network.<br />
+         Starting Zero-configuration networking...<br />
+[   11.930911] sh[218]: mke2fs 1.42.9 (28-Dec-2013)<br />
+         Starting Mosquitto - lightweight server implementati...SN protocols...<br />
+         Starting Getty on tty1...<br />
+[  OK  ] Started Getty on tty1.<br />
+[  OK  ] Started Network Name Resolution.<br />
+[  OK  ] Started Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+[  OK  ] Started Bluetooth service.<br />
+[  OK  ] Started Zero-configuration networking.<br />
+[   12.552068] systemd-fsck[271]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[   12.554520] systemd-fsck[271]: /dev/mmcblk0p7: 5 files, 2742/2971 clusters<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+         Mounting /boot...<br />
+         Starting The Edison status and configuration service...<br />
+[  OK  ] Started The Edison status and configuration service.<br />
+         Starting Intel_XDK_Daemon...<br />
+[  OK  ] Started Intel_XDK_Daemon.<br />
+         Starting Hostname Service...<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started Hostname Service.<br />
+[   13.577704] sh[218]: Discarding device blocks: done<br />
+[   13.606481] sh[218]: Filesystem label=<br />
+[   13.649554] sh[218]: OS type: Linux<br />
+[   13.680311] sh[218]: Block size=4096 (log=2)<br />
+[   13.712396] sh[218]: Fragment size=4096 (log=2)<br />
+[   13.782400] sh[218]: Stride=0 blocks, Stripe width=0 blocks<br />
+[   13.815728] sh[218]: 87120 inodes, 348155 blocks<br />
+[   13.892418] sh[218]: 0 blocks (0.00%) reserved for the super user<br />
+[   13.982537] sh[218]: First data block=0<br />
+[   14.052355] sh[218]: Maximum filesystem blocks=356515840<br />
+[   14.082910] sh[218]: 11 block groups<br />
+[   14.152498] sh[218]: 32768 blocks per group, 32768 fragments per group<br />
+[   14.220999] sh[218]: 7920 inodes per group<br />
+[   14.272610] sh[218]: Superblock backups stored on blocks:<br />
+[   14.312192] sh[218]: 32768, 98304, 163840, 229376, 294912<br />
+[   14.344848] sh[218]: Allocating group tables: done<br />
+[   14.432545] sh[218]: Writing inode tables: done<br />
+[   14.508934] sh[218]: Creating journal (8192 blocks): done<br />
+[  OK  ] Started PulseAudio Sound System.<br />
+[   17.161726] sh[218]: Writing superblocks and filesystem accounting information: done<br />
+[   17.236067] sh[218]: Formatting home partition : Success<br />
+[   17.257604] sh[218]: Mount /home partition : Success<br />
+[   17.294885] sh[218]: Restore home/root contents on new /home partition : Success<br />
+[   17.327314] sh[218]: The number of cylinders for this disk is set to 24576.<br />
+[   17.346005] sh[218]: There is nothing wrong with that, but this is larger than 1024,<br />
+[   17.376037] sh[218]: and could in certain setups cause problems with:<br />
+[   17.423802] sh[218]: 1) software that runs at boot time (e.g., old versions of LILO)<br />
+[   17.451555] sh[218]: 2) booting and partitioning software from other OSs<br />
+[   17.493093] sh[218]: (e.g., DOS FDISK, OS/2 FDISK)<br />
+[   17.541465] sh[218]: Command (m for help): Command action<br />
+[   17.590630] sh[218]: e   extended<br />
+[   17.638059] sh[218]: p   primary partition (1-4)<br />
+[   17.700937] sh[218]: Partition number (1-4): Partition 1 is already defined, delete it before re-adding<br />
+[   17.732539] sh[218]: Command (m for help): Command (m for help): Command (m for help): Selected partition 1<br />
+[   17.812052] sh[218]: Hex code (type L to list codes):<br />
+[   17.882447] sh[218]: Command (m for help):<br />
+[   17.971526] sh[218]: Disk /dev/disk/by-partlabel/update: 805 MB, 805306368 bytes<br />
+[   18.032447] sh[218]: 4 heads, 16 sectors/track, 24576 cylinders<br />
+[   18.092569] sh[218]: Units = cylinders of 64 * 512 = 32768 bytes<br />
+[   18.106560] sh[218]: Device Boot      Start         End      Blocks  Id System<br />
+[   18.142419] sh[218]: /dev/disk/by-partlabel/update1               1       24576      786424   b Win95 FAT32<br />
+[   18.497023] sh[218]: Command (m for help): The partition table has been altered.<br />
+[   18.532201] sh[218]: Calling ioctl() to re-read partition table<br />
+[   18.582221] sh[218]: fdisk: WARNING: rereading partition table failed, kernel still uses old table: Invalid argument<br />
+[   18.668649] sh[218]: Formatting update partition Step 1 : Success<br />
+[   18.725650] sh[218]: Formatting update partition Step 2 : Success<br />
+[   18.803499] sh[218]: mkfs.vfat 2.11 (12 Mar 2005)<br />
+[   18.873781] sh[218]: Loop device does not match a floppy size, using default hd params<br />
+[   18.927481] sh[218]: Formatting update partition Step 3 : Success<br />
+[   18.978933] sh[218]: Formatting update partition Step 4 final : Success<br />
+[   32.565980] sh[218]: Generating sshd keys : Success<br />
+[   32.614420] sh[218]: Update file system table /etc/fstab : Success<br />
+[   33.892588] sh[218]: Generating Wifi Access Point SSID and passphrase : Success<br />
+[   33.955371] sh[218]: Post install success<br />
+[   34.075310] sh[218]: No journal files were found.<br />
+[   35.265506] systemctl[389]: rm '/etc/systemd/system/basic.target.wants/post-install.service'<br />
+[  OK  ] Started Post install service.<br />
+         Starting Serial Getty on ttyMFD2...<br />
+[  OK  ] Started Serial Getty on ttyMFD2.<br />
+[  OK  ] Reached target Login Prompts.<br />
+         Starting Increases rootfs image size to fit partition...<br />
+[   36.488949] resize2fs[400]: resize2fs 1.42.9 (28-Dec-2013)<br />
+[   36.556575] resize2fs[400]: Filesystem at /dev/disk/by-partlabel/rootfs is mounted on /; on-line resizing required<br />
+[   36.602177] resize2fs[400]: old_desc_blocks = 1, new_desc_blocks = 1<br />
+[   36.652218] resize2fs[400]: The filesystem on /dev/disk/by-partlabel/rootfs is now 393216 blocks long.<br />
+[   36.774761] systemctl[402]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br />
+[  OK  ] Started Increases rootfs image size to fit partition.<br />
+[  OK  ] Reached target Multi-User System.</p>
+<p>Poky (Yocto Project Reference Distro) 1.7.2 edison ttyMFD2</p>
+<p>edison login: root<br />
+root@edison:~# cat /etc/version<br />
+weekly-159.devkit-2.0<br />
+root@edison:~# uname -a<br />
+Linux edison 3.10.17-poky-edison+ #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015 i686 GNU/Linux<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li><li><a href="http://andbrowser.com/event/3567/potatotips-23/" rel="bookmark" class="wherego_title">第23回potatotips参加報告</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[spoon android maven library URL(as of 20150904)]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/" />
+		<id>http://andbrowser.com/?p=3513</id>
+		<updated>2015-09-06T10:25:43Z</updated>
+		<published>2015-09-03T12:26:54Z</published>
+		<category scheme="http://andbrowser.com" term="Android SDK" /><category scheme="http://andbrowser.com" term="development" /><category scheme="http://andbrowser.com" term="Android" /><category scheme="http://andbrowser.com" term="maven" />		<summary type="html"><![CDATA[spoon android maven library URLです。
+https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/
+
+0.10.0/
+ [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/development/3513/spoon-android-maven-library-url/"><![CDATA[<p>spoon android maven library URLです。</p>
+<p><a href="https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/">https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/</a><br />
+<code><br />
+0.10.0/<br />
+0.14.0/<br />
+0.14.1/<br />
+0.9.0/<br />
+0.9.1/<br />
+0.9.2/<br />
+0.9.3/<br />
+0.9.4/<br />
+0.9.5/<br />
+0.9.6/<br />
+1.0.0/<br />
+1.0.1/<br />
+1.0.2/<br />
+1.0.3/<br />
+maven-metadata.xml<br />
+</code></p>
+<h1>2015/09/06時点</h1>
+<p><a href="https://jcenter.bintray.com/com/squareup/spoon/spoon-client/">https://jcenter.bintray.com/com/squareup/spoon/spoon-client/</a><code><br />
+1.0.0/<br />
+1.0.1/<br />
+1.0.2/<br />
+1.0.3/<br />
+1.0.4/<br />
+1.0.5/<br />
+1.1.0/<br />
+1.1.1/<br />
+1.1.10/<br />
+1.1.2/<br />
+1.1.3/<br />
+1.1.4/<br />
+1.1.5/<br />
+1.1.6/<br />
+1.1.7/<br />
+1.1.8/<br />
+1.1.9/<br />
+1.2.0/<br />
+maven-metadata.xml<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/" />
+		<id>http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/</id>
+		<updated>2015-08-26T12:57:47Z</updated>
+		<published>2015-08-26T12:57:47Z</published>
+		<category scheme="http://andbrowser.com" term="Uncategorized" />		<summary type="html"><![CDATA[
+git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*
+
+このページを見た人は、以下のページも見ています。au one Ma [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/"><![CDATA[<p><code><br />
+git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/uncategorized/3520/3520/" />
+		<id>http://andbrowser.com/?p=3520</id>
+		<updated>2015-08-26T11:46:19Z</updated>
+		<published>2015-08-26T11:46:19Z</published>
+		<category scheme="http://andbrowser.com" term="Uncategorized" />		<summary type="html"><![CDATA[
+export GOPATH=~/
+#export GOROOT=${GOPATH}
+function peco-src () {
+    local selected_dir=$(ghq list -p &#124; peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^[' peco-src
+
+ ]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/uncategorized/3520/3520/"><![CDATA[<p><code><br />
+export GOPATH=~/<br />
+#export GOROOT=${GOPATH}</p>
+<p>function peco-src () {<br />
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")<br />
+    if [ -n "$selected_dir" ]; then<br />
+	BUFFER="cd ${selected_dir}"<br />
+	zle accept-line<br />
+    fi<br />
+    zle clear-screen<br />
+}<br />
+zle -N peco-src<br />
+bindkey '^[' peco-src<br />
+</code></p>
+<div id="wherego_related"> </div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/uncategorized/3520/3520/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/uncategorized/3520/3520/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[support-annotaion and espresso library differentation]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" />
+		<id>http://andbrowser.com/?p=3516</id>
+		<updated>2015-08-15T15:21:51Z</updated>
+		<published>2015-08-15T15:21:51Z</published>
+		<category scheme="http://andbrowser.com" term="Android SDK" /><category scheme="http://andbrowser.com" term="development" />		<summary type="html"><![CDATA[以下のようなエラーがでる場合があります。これは、espressoのライブラリが古いandroid support anotations library を指定しているためです。
+
+Warning:Conflict wit [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/"><![CDATA[<p>以下のようなエラーがでる場合があります。これは、espressoのライブラリが古いandroid support anotations library を指定しているためです。</p>
+<p><code><br />
+Warning:Conflict with dependency 'com.android.support:support-annotations'. Resolved versions for app (22.2.1) and test app (22.2.0) differ.<br />
+</code></p>
+<p>build.gradleに以下を記載すれば解決できます。</p>
+<p><code><br />
+androidTestCompile('com.android.support.test:runner:0.3') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+androidTestCompile('com.android.support.test:rules:0.3') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3520/3520/" rel="bookmark" class="wherego_title"></a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[twitter fabric maven library location]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/" />
+		<id>http://andbrowser.com/?p=3509</id>
+		<updated>2015-08-14T12:04:10Z</updated>
+		<published>2015-08-14T12:04:10Z</published>
+		<category scheme="http://andbrowser.com" term="Android SDK" /><category scheme="http://andbrowser.com" term="development" /><category scheme="http://andbrowser.com" term="Android" /><category scheme="http://andbrowser.com" term="crashlitics" /><category scheme="http://andbrowser.com" term="fablic" />		<summary type="html"><![CDATA[Crashliticsのライブラリをfabric に移行するために build.gradle の対応をしながら、 fabric の最新ライブラリのバージョンが知りたかったので、2015/08/13 時点のmaven repository を以下のように覗いてみました。
+https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/
+
+Index of public/io/fabric/tools/gradle
+Name                Last modified      Size
+../
+1.14.0/              16-Oct-2014 20:46    -
+1.14.1/    [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/"><![CDATA[<p>Crashliticsのライブラリをfabric に移行するために build.gradle の対応をしながら、 fabric の最新ライブラリのバージョンが知りたかったので、2015/08/13 時点のmaven repository を以下のように覗いてみました。</p>
+<p><a href="https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/">https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/</a></p>
+<p><code><br />
+Index of public/io/fabric/tools/gradle</p>
+<p>Name                Last modified      Size<br />
+../<br />
+1.14.0/              16-Oct-2014 20:46    -<br />
+1.14.1/              16-Oct-2014 21:19    -<br />
+1.14.3/              31-Oct-2014 19:23    -<br />
+1.14.4/              24-Nov-2014 15:17    -<br />
+1.15.0/              06-Feb-2015 19:20    -<br />
+1.15.1/              06-Feb-2015 20:50    -<br />
+1.15.2/              10-Feb-2015 17:12    -<br />
+1.16.0/              18-Mar-2015 14:04    -<br />
+1.17.0/              19-Mar-2015 20:26    -<br />
+1.18.0/              24-Mar-2015 20:33    -<br />
+1.19.0/              06-May-2015 17:34    -<br />
+1.19.1/              25-May-2015 21:49    -<br />
+1.19.2/              29-Jun-2015 19:59    -<br />
+maven-metadata.xml  29-Jun-2015 19:59  715 bytes<br />
+</code></p>
+<p><a href="https://twittersdk.artifactoryonline.com/twittersdk/public/com/crashlytics/sdk/android/crashlytics/">https://twittersdk.artifactoryonline.com/twittersdk/public/com/crashlytics/sdk/android/crashlytics/</a></p>
+<p><code><br />
+Index of public/com/crashlytics/sdk/android/crashlytics</p>
+<p>Name                     Last modified      Size<br />
+../<br />
+2.0.0/                    21-Oct-2014 17:30    -<br />
+2.0.1/                    30-Oct-2014 23:46    -<br />
+2.1.0/                    20-Nov-2014 22:10    -<br />
+2.2.0/                    15-Dec-2014 19:13    -<br />
+2.2.1/                    27-Jan-2015 19:04    -<br />
+2.2.2/                    26-Feb-2015 05:10    -<br />
+2.2.3/                    02-Apr-2015 22:27    -<br />
+2.2.4/                    06-May-2015 20:36    -<br />
+2.3.0/                    22-May-2015 20:56    -<br />
+2.3.1/                    27-May-2015 21:12    -<br />
+2.3.2/                    29-May-2015 15:50    -<br />
+2.4.0/                    23-Jun-2015 19:20    -<br />
+2.5.0/                    22-Jul-2015 16:51    -<br />
+2.5.1/                    10-Aug-2015 22:13    -<br />
+maven-metadata.xml       11-Aug-2015 17:39  775 bytes<br />
+maven-metadata.xml.md5   11-Aug-2015 17:39  32 bytes<br />
+maven-metadata.xml.sha1  11-Aug-2015 17:39  40 bytes<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/" rel="bookmark" class="wherego_title">spoon android maven library URL(as of 20150904)</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[Edison で利用できる加速度センサーADXL345]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" />
+		<id>http://andbrowser.com/?p=3500</id>
+		<updated>2015-07-04T10:53:22Z</updated>
+		<published>2015-07-04T08:51:36Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[
+http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)
+お借りした3軸センサー
+http://akizukiden [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/"><![CDATA[<p><a href="http://andbrowser.com/wp-content/uploads/2015/07/391162f6a6452577745387a1fa18ee4b.png"><img src="http://andbrowser.com/wp-content/uploads/2015/07/391162f6a6452577745387a1fa18ee4b-300x264.png" alt="" title="スクリーンショット 2015-07-04 16.52.41" width="300" height="264" class="aligncenter size-medium wp-image-3501" /></a></p>
+<p><a href="http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)">http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)</a></p>
+<p>お借りした3軸センサー<br />
+<a href="http://akizukidenshi.com/catalog/g/gM-05153/">http://akizukidenshi.com/catalog/g/gM-05153/</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[https://jcenter.bintray.com/com/android/tools/build/gradle/]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" />
+		<id>http://andbrowser.com/uncategorized/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/</id>
+		<updated>2015-07-04T07:43:31Z</updated>
+		<published>2015-06-27T01:48:03Z</published>
+		<category scheme="http://andbrowser.com" term="Android SDK" />		<summary type="html"><![CDATA[https://jcenter.bintray.com/com/android/tools/build/gradle/
+
+このページを見た人は、以下のページも見ています。Edison で利用できる加速度センサーADXL3 [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/"><![CDATA[<p><a href="https://jcenter.bintray.com/com/android/tools/build/gradle/<br />
+">https://jcenter.bintray.com/com/android/tools/build/gradle/<br />
+</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[edison image ww18-15]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" />
+		<id>http://andbrowser.com/?p=3496</id>
+		<updated>2015-06-06T15:56:00Z</updated>
+		<published>2015-06-06T15:56:00Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[
+root@edison:~# cat /etc/version
+weekly-146
+root@edison:~# df
+Filesystem           1K-blocks      Used Availab [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/"><![CDATA[<p><code><br />
+root@edison:~# cat /etc/version<br />
+weekly-146<br />
+root@edison:~# df<br />
+Filesystem           1K-blocks      Used Available Use% Mounted on<br />
+/dev/root              1458032    389236    990160  28% /<br />
+devtmpfs                491380         0    491380   0% /dev<br />
+tmpfs                   491688         0    491688   0% /dev/shm<br />
+tmpfs                   491688       520    491168   0% /run<br />
+tmpfs                   491688         0    491688   0% /sys/fs/cgroup<br />
+tmpfs                   491688         4    491684   0% /tmp<br />
+systemd-1                 5894      5434       460  92% /boot<br />
+tmpfs                   491688         0    491688   0% /var/volatile<br />
+/dev/mmcblk0p7            5894      5434       460  92% /boot<br />
+/dev/mmcblk0p10        1337936      2044   1319508   0% /home<br />
+/dev/mmcblk0p5            1003        19       913   2% /factory<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" rel="bookmark" class="wherego_title">ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" />
+		<id>http://andbrowser.com/?p=3477</id>
+		<updated>2015-05-01T14:48:27Z</updated>
+		<published>2015-05-01T14:31:27Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[Roland社のARM-10をお借りする機会が頂けたので、ためしに公開されているjenkinsの3D データを出力してみた。他にもいくつか出力してみたいものがあるので、また利用させてもらいに行こうと考えています。
+さて、 [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/"><![CDATA[<p>Roland社の<a href="http://www.rolanddg.co.jp/product/3d/3d/arm-10/">ARM-10</a>をお借りする機会が頂けたので、ためしに公開されている<a href="http://jenkins-ci.org/content/jenkins-figure-available-shapeways">jenkinsの3D データ</a>を出力してみた。他にもいくつか出力してみたいものがあるので、また利用させてもらいに行こうと考えています。<br />
+さて、それとIntel Edison を組み合わせて何かやりたいと考えていて、ひとまず定番のLチカを試してみました。それだけでは面白くないので、edison にUSBカメラをつけて、jenkinsや人形に仕込んだLEDの様子をedison自身からストリーミング配信できるようにしてみました。配信の様子と仕組みは別途掲載予定です。<br />
+<span id="more-3477"></span></p>
+<h4>Intel EdisonとブレッドボードとUSBカメラで試作</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_edison-led.png"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_edison-led-300x186.png" alt="" title="s_edison-led" width="300" height="186" class="aligncenter size-medium wp-image-3478" /></a></p>
+<h4>ネコ人形に点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.11.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.11-300x168.jpg" alt="" title="s_2015-05-01 23.05.11" width="300" height="168" class="aligncenter size-medium wp-image-3480" /></a></p>
+<h4>Jenkinsおぢさんに点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.21.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.21-300x168.jpg" alt="" title="s_2015-05-01 23.05.21" width="300" height="168" class="aligncenter size-medium wp-image-3481" /></a></p>
+<h4>Jenkinsおぢさんとネコ人形に点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.02.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.02-300x168.jpg" alt="" title="s_2015-05-01 23.05.02" width="300" height="168" class="aligncenter size-medium wp-image-3479" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/" rel="bookmark" class="wherego_title">edison webcam利用方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[Crashlytics ライブラリの Android Studio対応]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" />
+		<id>http://andbrowser.com/?p=3171</id>
+		<updated>2015-04-25T01:42:50Z</updated>
+		<published>2015-04-13T12:24:10Z</published>
+		<category scheme="http://andbrowser.com" term="development" />		<summary type="html"><![CDATA[CrashlyticsのAndroid向けライブラリのバージョンを以下から確認できます。
+as of 2015/04/25
+http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml
+
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+&#60;metadata&#62;
+&#60;groupId&#62;com.crashlytics.tools.gradle&#60;/groupId&#62;
+&#60;artifactId&#62;crashlytics-gradle&#60;/artifactId&#62;
+&#60;versioning&#62;
+&#60;release&#62;1.16.0&#60;/release&#62;
+&#60;versions&#62;
+&#60;version&#62;1.0.0&#60;/version&#62;
+&#60;version&#62;1.0.1&#60;/version&#62;
+&#60;version&#62;1.0.2&#60;/version&#62;
+&#60;version&#62;1.0.3&#60;/version&#62;
+&#60;version&#62;1.0.4&#60;/version&#62;
+&#60;version&#62;1.0.5&#60;/version&#62;
+&#60;version&#62;1.0.6&#60;/version&#62;
+&#60;version&#62;1.0.7&#60;/version&#62;
+&#60;version&#62;1.0.8&#60;/version&#62;
+&#60;version&#62;1.0.9&#60;/version&#62;
+&#60;version&#62;1.1.0&#60;/version&#62;
+&#60;version&#62;1.1.1&#60;/version&#62;
+&#60;version&#62;1.2.0&#60;/version&#62;
+&#60;version&#62;1.2.1&#60;/version&#62;
+&#60;version&#62;1.3.0&#60;/version&#62;
+&#60;version&#62;1.3.1&#60;/version&#62;
+&#60;version&#62;1.3.2&#60;/version&#62;
+&#60;version&#62;1.3.3&#60;/version&#62;
+&#60;version&#62;1.3.4&#60;/version&#62;
+&#60;version&#62;1.4.0&#60;/version&#62;
+&#60;version&#62;1.5.0&#60;/version&#62;
+&#60;version&#62;1.6.1&#60;/version&#62;
+&#60;version&#62;1.7.0&#60;/version&#62;
+&#60;version&#62;1.8.0&#60;/version&#62;
+&#60;version&#62;1.8.1&#60;/version&#62;
+&#60;version&#62;1.9.0&#60;/version&#62;
+&#60;version&#62;1.9.1&#60;/version&#62;
+&#60;version&#62;1.10.1&#60;/version&#62;
+&#60;version&#62;1.10.2&#60;/version&#62;
+&#60;version&#62;1.10.3&#60;/version&#62;
+&#60;version&#62;1.10.5&#60;/version&#62;
+&#60;version&#62;1.10.6&#60;/version&#62;
+&#60;version&#62;1.10.7&#60;/version&#62;
+&#60;version&#62;1.11.0&#60;/version&#62;
+&#60;version&#62;1.11.1&#60;/version&#62;
+&#60;version&#62;1.11.2&#60;/version&#62;
+&#60;version&#62;1.11.3&#60;/version&#62;
+&#60;version&#62;1.11.4&#60;/version&#62;
+&#60;version&#62;1.12.0&#60;/version&#62;
+&#60;version&#62;1.13.0&#60;/version&#62;
+&#60;version&#62;1.13.1&#60;/version&#62;
+&#60;version&#62;1.14.2&#60;/version&#62;
+&#60;version&#62;1.14.3&#60;/version&#62;
+&#60;version&#62;1.14.4&#60;/version&#62;
+&#60;version&#62;1.14.6&#60;/version&#62;
+&#60;version&#62;1.14.7&#60;/version&#62;
+&#60;version&#62;1.16.0&#60;/version&#62;
+&#60;/versions&#62;
+&#60;lastUpdated&#62;20150318172805&#60;/lastUpdated&#62;
+&#60;/versioning&#62;
+&#60;/metadata&#62;
+
+http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml
+
+&#60;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&#62;
+&#60;metadata&#62;
+  &#60;groupId&#62;com.crashlytics.android&#60;/groupId&#62;
+  &#60;artifactId&#62;crashlytics&#60;/artifactId&#62;
+  &#60;versioning&#62;
+    &#60;release&#62;1.0.4&#60;/release&#62;
+    &#60;versions&#62;
+      &#60;version&#62;1.0.0&#60;/version&#62;
+      &#60;version&#62;1.0.1&#60;/version&#62;
+       [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/"><![CDATA[<p>CrashlyticsのAndroid向けライブラリのバージョンを以下から確認できます。</p>
+<p>as of 2015/04/25</p>
+<p><a href="http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml">http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml</a></p>
+<p><code><br />
+This XML file does not appear to have any style information associated with it. The document tree is shown below.<br />
+&lt;metadata&gt;<br />
+&lt;groupId&gt;com.crashlytics.tools.gradle&lt;/groupId&gt;<br />
+&lt;artifactId&gt;crashlytics-gradle&lt;/artifactId&gt;<br />
+&lt;versioning&gt;<br />
+&lt;release&gt;1.16.0&lt;/release&gt;<br />
+&lt;versions&gt;<br />
+&lt;version&gt;1.0.0&lt;/version&gt;<br />
+&lt;version&gt;1.0.1&lt;/version&gt;<br />
+&lt;version&gt;1.0.2&lt;/version&gt;<br />
+&lt;version&gt;1.0.3&lt;/version&gt;<br />
+&lt;version&gt;1.0.4&lt;/version&gt;<br />
+&lt;version&gt;1.0.5&lt;/version&gt;<br />
+&lt;version&gt;1.0.6&lt;/version&gt;<br />
+&lt;version&gt;1.0.7&lt;/version&gt;<br />
+&lt;version&gt;1.0.8&lt;/version&gt;<br />
+&lt;version&gt;1.0.9&lt;/version&gt;<br />
+&lt;version&gt;1.1.0&lt;/version&gt;<br />
+&lt;version&gt;1.1.1&lt;/version&gt;<br />
+&lt;version&gt;1.2.0&lt;/version&gt;<br />
+&lt;version&gt;1.2.1&lt;/version&gt;<br />
+&lt;version&gt;1.3.0&lt;/version&gt;<br />
+&lt;version&gt;1.3.1&lt;/version&gt;<br />
+&lt;version&gt;1.3.2&lt;/version&gt;<br />
+&lt;version&gt;1.3.3&lt;/version&gt;<br />
+&lt;version&gt;1.3.4&lt;/version&gt;<br />
+&lt;version&gt;1.4.0&lt;/version&gt;<br />
+&lt;version&gt;1.5.0&lt;/version&gt;<br />
+&lt;version&gt;1.6.1&lt;/version&gt;<br />
+&lt;version&gt;1.7.0&lt;/version&gt;<br />
+&lt;version&gt;1.8.0&lt;/version&gt;<br />
+&lt;version&gt;1.8.1&lt;/version&gt;<br />
+&lt;version&gt;1.9.0&lt;/version&gt;<br />
+&lt;version&gt;1.9.1&lt;/version&gt;<br />
+&lt;version&gt;1.10.1&lt;/version&gt;<br />
+&lt;version&gt;1.10.2&lt;/version&gt;<br />
+&lt;version&gt;1.10.3&lt;/version&gt;<br />
+&lt;version&gt;1.10.5&lt;/version&gt;<br />
+&lt;version&gt;1.10.6&lt;/version&gt;<br />
+&lt;version&gt;1.10.7&lt;/version&gt;<br />
+&lt;version&gt;1.11.0&lt;/version&gt;<br />
+&lt;version&gt;1.11.1&lt;/version&gt;<br />
+&lt;version&gt;1.11.2&lt;/version&gt;<br />
+&lt;version&gt;1.11.3&lt;/version&gt;<br />
+&lt;version&gt;1.11.4&lt;/version&gt;<br />
+&lt;version&gt;1.12.0&lt;/version&gt;<br />
+&lt;version&gt;1.13.0&lt;/version&gt;<br />
+&lt;version&gt;1.13.1&lt;/version&gt;<br />
+&lt;version&gt;1.14.2&lt;/version&gt;<br />
+&lt;version&gt;1.14.3&lt;/version&gt;<br />
+&lt;version&gt;1.14.4&lt;/version&gt;<br />
+&lt;version&gt;1.14.6&lt;/version&gt;<br />
+&lt;version&gt;1.14.7&lt;/version&gt;<br />
+&lt;version&gt;1.16.0&lt;/version&gt;<br />
+&lt;/versions&gt;<br />
+&lt;lastUpdated&gt;20150318172805&lt;/lastUpdated&gt;<br />
+&lt;/versioning&gt;<br />
+&lt;/metadata&gt;<br />
+</code></p>
+<p><a href="http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml">http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml</a></p>
+<p><code><br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
+&lt;metadata&gt;<br />
+  &lt;groupId&gt;com.crashlytics.android&lt;/groupId&gt;<br />
+  &lt;artifactId&gt;crashlytics&lt;/artifactId&gt;<br />
+  &lt;versioning&gt;<br />
+    &lt;release&gt;1.0.4&lt;/release&gt;<br />
+    &lt;versions&gt;<br />
+      &lt;version&gt;1.0.0&lt;/version&gt;<br />
+      &lt;version&gt;1.0.1&lt;/version&gt;<br />
+      &lt;version&gt;1.0.2&lt;/version&gt;<br />
+      &lt;version&gt;1.0.3&lt;/version&gt;<br />
+      &lt;version&gt;1.0.4&lt;/version&gt;<br />
+      &lt;version&gt;1.1.5&lt;/version&gt;<br />
+      &lt;version&gt;1.1.7&lt;/version&gt;<br />
+      &lt;version&gt;1.1.8&lt;/version&gt;<br />
+      &lt;version&gt;1.1.9&lt;/version&gt;<br />
+      &lt;version&gt;1.1.10&lt;/version&gt;<br />
+      &lt;version&gt;1.1.11&lt;/version&gt;<br />
+      &lt;version&gt;1.1.12&lt;/version&gt;<br />
+      &lt;version&gt;1.1.13&lt;/version&gt;<br />
+    &lt;/versions&gt;<br />
+    &lt;lastUpdated&gt;20140909201431&lt;/lastUpdated&gt;<br />
+  &lt;/versioning&gt;<br />
+&lt;/metadata&gt;</p>
+<p></code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" rel="bookmark" class="wherego_title">See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[A node.js BLE (Bluetooth low energy) central module]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/" />
+		<id>http://andbrowser.com/?p=3432</id>
+		<updated>2015-04-12T06:39:27Z</updated>
+		<published>2015-04-12T06:39:27Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[A node.js BLE (Bluetooth low energy) central module
+https://github.com/sandeepmistry/noble
+このページを見た人は、以下のページも見 [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/"><![CDATA[<p>A node.js BLE (Bluetooth low energy) central module<br />
+<a href="https://github.com/sandeepmistry/noble">https://github.com/sandeepmistry/noble</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" rel="bookmark" class="wherego_title">Crashlytics ライブラリの Android Studio対応</a></li><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[edison webcam利用方法]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/" />
+		<id>http://andbrowser.com/?p=3428</id>
+		<updated>2015-04-29T04:26:42Z</updated>
+		<published>2015-04-11T16:20:11Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[以下のサイトに簡単な説明があります。
+http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/"><![CDATA[<p>以下のサイトに簡単な説明があります。</p>
+<p><a href="http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8811%EF%BC%89%E3%80%80%E7%B6%9A%E3%82%AB%E3%83%A1%E3%83%A9%E7%B7%A8/.html">http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8811%EF%BC%89%E3%80%80%E7%B6%9A%E3%82%AB%E3%83%A1%E3%83%A9%E7%B7%A8/.html</a></p>
+<p><a href="http://d.hatena.ne.jp/yoch/20150322">http://d.hatena.ne.jp/yoch/20150322</a></p>
+<p>Intel EdisonでUSBカメラを使ってみる(go言語実装）<br />
+<a href="http://dev.classmethod.jp/hardware/edison/intel-edison-using-usbcamera/">http://dev.classmethod.jp/hardware/edison/intel-edison-using-usbcamera/</a></p>
+<p>http://neuralassembly.blogspot.jp/2014/12/intel-edisonwebmjpg-streamer.html<a href="http://neuralassembly.blogspot.jp/2014/12/intel-edisonwebmjpg-streamer.html"></p>
+<p><a href="http://www.ideasonboard.org/uvc/">http://www.ideasonboard.org/uvc/</a></p>
+<p><a href="http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8813%EF%BC%89%E3%80%80ffmpeg%E3%81%AB%E3%82%88%E3%82%8B%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0/.html">http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8813%EF%BC%89%E3%80%80ffmpeg%E3%81%AB%E3%82%88%E3%82%8B%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0/.html</a></p>
+<p><a href="https://github.com/drejkim/edi-cam">https://github.com/drejkim/edi-cam</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li><li><a href="http://andbrowser.com/uncategorized/3421/url-for-opkg/" rel="bookmark" class="wherego_title">url for opkg</a></li><li><a href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" rel="bookmark" class="wherego_title">mac で edison に flashall.shの失敗</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[windows flashall.bat execution log]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/" />
+		<id>http://andbrowser.com/?p=3423</id>
+		<updated>2015-03-29T03:27:52Z</updated>
+		<published>2015-03-29T03:27:52Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[flashall.bat の実行ログ
+
+\edison-image-ww05-15>flashall.bat
+Using U-boot target: edison-blankrndis
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Dfu device found
+Flashing IFWI
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Flashing U-Boot
+Download    [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/"><![CDATA[<p>flashall.bat の実行ログ</p>
+<p><code><br />
+\edison-image-ww05-15>flashall.bat<br />
+Using U-boot target: edison-blankrndis<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Dfu device found<br />
+Flashing IFWI<br />
+Download        [=========================] 100%      4194304 bytes<br />
+Download done.<br />
+Download        [=========================] 100%      4194304 bytes<br />
+Download done.<br />
+Flashing U-Boot<br />
+Download        [=========================] 100%       245760 bytes<br />
+Download done.<br />
+Flashing U-Boot Environment<br />
+Download        [=========================] 100%        65536 bytes<br />
+Download done.<br />
+Flashing U-Boot Environment Backup<br />
+Download        [=========================] 100%        65536 bytes<br />
+Download done.<br />
+Rebooting to apply partiton changes<br />
+Dfu device found<br />
+Flashing boot partition (kernel)<br />
+Download        [=========================] 100%      6029312 bytes<br />
+Download done.<br />
+Flashing rootfs, (it can take up to 5 minutes... Please be patient)<br />
+Download        [=========================] 100%    536870912 bytes<br />
+Download done.<br />
+Rebooting<br />
+U-boot &#038; Kernel System Flash Success...<br />
+Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.</p>
+<p>\edison-image-ww05-15><br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" rel="bookmark" class="wherego_title">ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</a></li><li><a href="http://andbrowser.com/device/3413/edison-root-partition-add/" rel="bookmark" class="wherego_title">edison /boot partition を増やす方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[url for opkg]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/uncategorized/3421/url-for-opkg/" />
+		<id>http://andbrowser.com/uncategorized/3421/url-for-opkg/</id>
+		<updated>2015-04-06T13:58:47Z</updated>
+		<published>2015-03-15T12:43:02Z</published>
+		<category scheme="http://andbrowser.com" term="Uncategorized" />		<summary type="html"><![CDATA[
+tee /etc/opkg/base-feeds.conf /dev/null
+src/gz all        http://repo.opkg.net/edison/repo/all
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32
+_EOF_
+
+src/gz edison     http://repo.opkg.net/edison/repo/edison
+を削除。
+
+tee /etc/opkg/intel-iotdk.conf /dev/null
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86
+_EOF_
+
+
+echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf
+opkg update
+opkg  [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/uncategorized/3421/url-for-opkg/"><![CDATA[<p><code><br />
+tee /etc/opkg/base-feeds.conf << _EOF_ >/dev/null<br />
+src/gz all        http://repo.opkg.net/edison/repo/all<br />
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32<br />
+_EOF_<br />
+</code></p>
+<p>src/gz edison     http://repo.opkg.net/edison/repo/edison<br />
+を削除。</p>
+<p><code><br />
+tee /etc/opkg/intel-iotdk.conf << _EOF_ >/dev/null<br />
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all<br />
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic<br />
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark<br />
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586<br />
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86<br />
+_EOF_<br />
+</code></p>
+<p><code><br />
+echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf<br />
+opkg update<br />
+opkg install<br />
+opkg install libmraa0<br />
+</code></p>
+<p>opkg update &#038;&#038; opkg upgrade</p>
+<p>opkg install bash &#038;&#038; opkg install less &#038;&#038; opkg install git</p>
+<p>opkg install bash<br />
+opkg install less<br />
+opkg install git</p>
+<p>chsh -s /bin/bash</p>
+<p>vi /lib/systemd/system/sshd.socket</p>
+<p>add # to BindToDevice=usb0 with a #</p>
+<p>opkg install libmraa0</p>
+<p>ifconfig usb0 down &#038;&#038; ifconfig wlan0 down &#038;&#038; ifconfig wlan0 up</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/uncategorized/3421/url-for-opkg/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/uncategorized/3421/url-for-opkg/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[edison /boot partition を増やす方法]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/device/3413/edison-root-partition-add/" />
+		<id>http://andbrowser.com/?p=3413</id>
+		<updated>2015-04-04T03:07:08Z</updated>
+		<published>2015-03-15T02:22:32Z</published>
+		<category scheme="http://andbrowser.com" term="device" /><category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[実施前
+
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs        [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/device/3413/edison-root-partition-add/"><![CDATA[<h4>実施前</h4>
+<pre>
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs                491736         0    491736   0% /dev
+tmpfs                   492048         0    492048   0% /dev/shm
+tmpfs                   492048       492    491556   0% /run
+tmpfs                   492048         0    492048   0% /sys/fs/cgroup
+tmpfs                   492048       492    491556   0% /etc/machine-id
+systemd-1                 5638      5184       454  92% /boot
+tmpfs                   492048         4    492044   0% /tmp
+systemd-1              2337308     22516   2298408   1% /home
+tmpfs                   492048         0    492048   0% /var/volatile
+/dev/mmcblk0p5            1003        19       913   2% /factory
+/dev/mmcblk0p10        2337308     22516   2298408   1% /home
+/dev/mmcblk0p7            5638      5184       454  92% /boot
+root@edison:~#
+</pre>
+<h4>実施後</h4>
+<pre>
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs                491736         0    491736   0% /dev
+tmpfs                   492048         0    492048   0% /dev/shm
+tmpfs                   492048       492    491556   0% /run
+tmpfs                   492048         0    492048   0% /sys/fs/cgroup
+tmpfs                   492048       492    491556   0% /etc/machine-id
+systemd-1                32686      5184     27502  16% /boot
+tmpfs                   492048         4    492044   0% /tmp
+systemd-1              2337308     27708   2293216   1% /home
+tmpfs                   492048         0    492048   0% /var/volatile
+/dev/mmcblk0p5            1003        19       913   2% /factory
+/dev/mmcblk0p10        2337308     27708   2293216   1% /home
+/dev/mmcblk0p7           32686      5184     27502  16% /boot
+</pre>
+<h4>コマンド</h4>
+<p><code><br />
+df<br />
+mkdir /home/root/boot-backup<br />
+cp -rp /boot/* /home/root/boot-backup/<br />
+umount /boot<br />
+mkfs.vfat -v -nboot -F16 /dev/mmcblk0p7<br />
+mount /boot<br />
+cp -rp /home/root/boot-backup/* /boot<br />
+df<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/device/3413/edison-root-partition-add/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/device/3413/edison-root-partition-add/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[http://iotdk.intel.com/sdk/upm-update/]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/" />
+		<id>http://andbrowser.com/?p=3409</id>
+		<updated>2015-03-11T14:24:29Z</updated>
+		<published>2015-03-11T14:23:40Z</published>
+		<category scheme="http://andbrowser.com" term="Uncategorized" />		<summary type="html"><![CDATA[http://iotdk.intel.com/sdk/mraa-update/
+http://iotdk.intel.com/sdk/upm-update/
+http://iotdk.intel.com/sdk/1.1/ [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/"><![CDATA[<p><a href="http://iotdk.intel.com/sdk/mraa-update/">http://iotdk.intel.com/sdk/mraa-update/</a><br />
+<a href="http://iotdk.intel.com/sdk/upm-update/">http://iotdk.intel.com/sdk/upm-update/</a><br />
+<a href="http://iotdk.intel.com/sdk/1.1/">http://iotdk.intel.com/sdk/1.1/</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/" rel="bookmark" class="wherego_title">windows flashall.bat execution log</a></li><li><a href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" rel="bookmark" class="wherego_title">See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+						<uri>http://www.andbrowser.com/</uri>
+					</author>
+		<title type="html"><![CDATA[See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法]]></title>
+		<link rel="alternate" type="text/html" href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" />
+		<id>http://andbrowser.com/?p=3403</id>
+		<updated>2015-03-15T01:41:17Z</updated>
+		<published>2015-03-10T15:58:33Z</published>
+		<category scheme="http://andbrowser.com" term="intel edison" />		<summary type="html"><![CDATA[http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html
+このページを見た人は、以下のページも見ています。Intel Edi [...]]]></summary>
+		<content type="html" xml:base="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/"><![CDATA[<p><a href="http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html">http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/" rel="bookmark" class="wherego_title">Intel Edison の購入からww05ファームウェアの更新ログ</a></li><li><a href="http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/" rel="bookmark" class="wherego_title">edison flashall スクリプト利用時のエラー</a></li><li><a href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" rel="bookmark" class="wherego_title">mac で edison に flashall.shの失敗</a></li></ul></div>]]></content>
+		<link rel="replies" type="text/html" href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	</feed>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; ageruApp</title>
+	<atom:link href="http://andbrowser.com/category/development/ageruapp/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/development/ageruapp/feed/" />
+		<item>
+		<title>ソフトバンク様のアプリ情報ページで「あげる」アプリ紹介</title>
+		<link>http://andbrowser.com/development/ageruapp/59/ageruapp-sb-intro/</link>
+		<comments>http://andbrowser.com/development/ageruapp/59/ageruapp-sb-intro/#comments</comments>
+		<pubDate>Sun, 27 Feb 2011 14:31:08 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[ageruApp]]></category>
+		<category><![CDATA[felica]]></category>
+		<category><![CDATA[あげる]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=59</guid>
+		<description><![CDATA[ソフトバンク様のサイトで「あげる」アプリを紹介]]></description>
+			<content:encoded><![CDATA[<p>ソフトバンク様より連絡があり、以下のアプリ紹介ページで「あげる」アプリを取り上げて頂きました。</p>
+<p>■ソフトバンク様のおすすめアプリ情報ページ<br />
+<a href="http://ent.mb.softbank.jp/promotion/constant/">http://ent.mb.softbank.jp/promotion/constant/</a></p>
+<p>■「あげる」アプリ紹介ページ<br />
+<a href="http://ent.mb.softbank.jp/promotion/appli/indivisual/appli_1174/index.html">http://ent.mb.softbank.jp/promotion/appli/indivisual/appli_1174/index.html</a></p>
+<p>まだまだおサイフケーター搭載Android機器は少く、さらにpush通信を使ったアプリは認知度が低いのですが、このように一歩ずつでもユーザに知ってもらえる機会が増えてくれればと思っています。</p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/ageruapp/59/ageruapp-sb-intro/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/ageruapp/59/ageruapp-sb-intro/" />
+	</item>
+		<item>
+		<title>おサイフケータイで簡単コミュニケーション「あげる」アプリの詳細紹介</title>
+		<link>http://andbrowser.com/development/ageruapp/9/ageruapp-info/</link>
+		<comments>http://andbrowser.com/development/ageruapp/9/ageruapp-info/#comments</comments>
+		<pubDate>Mon, 31 Jan 2011 16:08:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[ageruApp]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[felica]]></category>
+		<category><![CDATA[あげる]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=9</guid>
+		<description><![CDATA[おサイフケータイで簡単コミュニケーション「あげる」アプリ
+アプリ概要
+本アプリは、おサイフケータイに掲載されている Felica のpush送信機能を利用して、以下の情報を相手のケータイに送信することができます。
+相手の [...]]]></description>
+			<content:encoded><![CDATA[<div class="title"><img src="http://andbrowser.com/wp-content/uploads/2011/02/icon.png" alt="icon" title="icon" width="36" height="36" class="size-full wp-image-12" />おサイフケータイで簡単コミュニケーション「あげる」アプリ</div>
+<h1>アプリ概要</h1>
+<p>本アプリは、おサイフケータイに掲載されている Felica の<a href="http://ap.pitsquare.jp/pc/developers/">push送信機能</a>を利用して、以下の情報を相手のケータイに送信することができます。<br />
+相手のケータイにアプリをインストールしたり、赤外線のように受信動作を行わなくても簡単に送信ができます。</p>
+<ul>
+<li><a href="#url">URL の送信</a></li>
+<li><a href="#map">地図情報の送信</a></li>
+<li><a href="#youtube">youtube動画の送信</a></li>
+<li><a href="#tel">電話番号の送信</a></li>
+<li><a href="#mail">メールアドレスの送信</a></li>
+</ul>
+<h1>アプリの使い方</h1>
+<h2><a name="url"></a></h2>
+<p>現在、ブラウザで開いているウェブサイトのURLを送信できます。<br />
+URLが表示されているところを長押ししてコンテキストメニューを表示</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/01.jpg" /></p>
+<p>「ページの共有」を選択</p>
+<p><img src="http://andbrowser.com//wp-content/uploads/2011/02/02.jpg" /></p>
+<p>「アプリケーションを選択」から「あげる」アプリを選択。<br />
+英字から並ぶため、下のほうにあることが多いです。</p>
+<p><img src="http://andbrowser.com//wp-content/uploads/2011/02/061.jpg" /></p>
+<p>カウントダウンが始まりますので、その間に相手のおサイフケータイにタッチをしてください。<br />
+送信完了すると、送信側に受信ダイアログが表示され、OKを押すと送信したウェブサイトが開きます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/01-3.jpg" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/01-2.jpg" class="sequence" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/01-1.jpg" class="sequence" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/01-0.jpg" class="sequence" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/01-9.jpg" class="sequence" /></p>
+<h3>その他の方法</h3>
+<p>ブラウザのメニューボタンから「その他」→「ページの共有」からでも同じことができます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/04.jpg" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/06.jpg" class="sequence" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/07.jpg" class="sequence" /></p>
+<h2><a name="map"></a></h2>
+<p>マップアプリ上で送信したい場所を選択します。<br />
+今回は、例として「六本木駅（東京）」を押します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/10.jpg" /></p>
+<p>六本木駅の情報が表示されます。右上のボタンを押します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/11.jpg" /></p>
+<p>この場所を共有を押すと、カウントダウンが開始され、相手にタッチすると地図情報が送信されます。<br />
+受信側は、マップアプリで六本木駅（東京）が表示されます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/13.jpg" /></p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/33.jpg" /></p>
+<h2><a name="youtube"></a></h2>
+<p>youtubeの動画を選択します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/21.jpg" /></p>
+<p>youtube動画の再生中です。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/22.jpg" /></p>
+<p>再生中にメニューボタンを押して、「共有」を選択します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/24.jpg" /></p>
+<p>あげるアプリを選択します。<br />
+カウントダウンが始まり、相手側で同じ動画が再生されます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/26.jpg" /></p>
+<h3>その他の方法</h3>
+<p>Youtubeのトップページの動画を長押しするとコンテキストメニューが表示されます。<br />
+その中の「共有」から同じことができます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/21-2.jpg" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/25-2.jpg" class="sequence" /><br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/02/26-2.jpg" class="sequence" /></p>
+<h2><a name="tel"></a></h2>
+<p>電話帳アプリから送信したい人物を開いて、電話ボタンを押す。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/41.jpg" /></p>
+<p>アプリケーション選択画面が表示されるので、あげるアプリを選択する。<br />
+カウントダウンが開始され、電話番号を送信できます。<br />
+受信側で通話アプリが立ち上がり、通話を押してもらうと電話番号の交換ができます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/43.jpg" /></p>
+<h2><a name="mail"></a></h2>
+<p>電話帳アプリから送信したい人物を開いて、メールボタンを押します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/50.jpg" /></p>
+<p>アプリケーション選択画面が表示されるので、あげるアプリを選択します。<br />
+カウントダウンが開始され、メールアドレスを送信できます。<br />
+受信側でメールアプリを選択すれば、送信したメールアドレスが TO に入った状態で立ち上がり、そのまま送信ボタンを押してもらうと相手とメールアドレスの交換ができます。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/02/52.jpg" /></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/ageruapp/3/release-ageruapp/" rel="bookmark" class="wherego_title">「あげる」アプリをリリース</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/ageruapp/9/ageruapp-info/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/ageruapp/9/ageruapp-info/" />
+	</item>
+		<item>
+		<title>「あげる」アプリをリリース</title>
+		<link>http://andbrowser.com/development/ageruapp/3/release-ageruapp/</link>
+		<comments>http://andbrowser.com/development/ageruapp/3/release-ageruapp/#comments</comments>
+		<pubDate>Sat, 08 Jan 2011 18:49:21 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[ageruApp]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[felica]]></category>
+		<category><![CDATA[あげる]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3</guid>
+		<description><![CDATA[「あげる」アプリをリリースしました。
+本アプリは、おサイフケータイに掲載されている Felica のpush送信機能を利用して、以下の情報を相手のケータイに送信することができます。 相手のケータイにアプリをインストールし [...]]]></description>
+			<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-4" title="icon72" src="http://andbrowser.com/wp-content/uploads/2011/01/icon72.png" alt="あげるアプリのアイコン" width="72" height="72" />「あげる」アプリをリリースしました。</p>
+<p>本アプリは、おサイフケータイに掲載されている Felica の<a href="http://ap.pitsquare.jp/pc/developers/">push送信機能</a>を利用して、以下の情報を相手のケータイに送信することができます。 相手のケータイにアプリをインストールしたり、赤外線のように受信動作を行わなくても簡単に送信ができます。</p>
+<ul>
+<li>URL の送信</li>
+<li>地図情報の送信</li>
+<li>youtube動画の送信</li>
+<li>電話番号の送信</li>
+<li>メールアドレスの送信</li>
+</ul>
+<p>以下のQRコードからもインストール可能です。</p>
+<p><img class="alignnone size-full wp-image-5" title="qr_sharefelica" src="http://andbrowser.com/wp-content/uploads/2011/01/qr_sharefelica.gif" alt="" width="147" height="147" /></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/device/3413/edison-root-partition-add/" rel="bookmark" class="wherego_title">edison /boot partition を増やす方法</a></li><li><a href="http://andbrowser.com/development/ageruapp/9/ageruapp-info/" rel="bookmark" class="wherego_title">おサイフケータイで簡単コミュニケーション「あげる」アプリの詳細紹介</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/ageruapp/3/release-ageruapp/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/ageruapp/3/release-ageruapp/" />
+	</item>
+	</channel>
+</rss>

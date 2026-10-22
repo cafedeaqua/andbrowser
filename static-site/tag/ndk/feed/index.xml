@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; ndk</title>
+	<atom:link href="http://andbrowser.com/tag/ndk/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/ndk/feed/" />
+		<item>
+		<title>Android NDK r7 の更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/612/android-ndk-r7-release/</link>
+		<comments>http://andbrowser.com/development/knowhow/612/android-ndk-r7-release/#comments</comments>
+		<pubDate>Sat, 12 Nov 2011 04:21:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[develop]]></category>
+		<category><![CDATA[ndk]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=612</guid>
+		<description><![CDATA[Android NDK r7 が２０１１年１１月にリリースれました。その更新情報を記載しています。
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/android-ndk-r7-release.png" alt="Android NDK r7 Release" title="Android NDK r7 Release" width="522" height="304" class="aligncenter size-full wp-image-613" /></p>
+<p><a href="http://developer.android.com/sdk/ndk/index.html">Android NDK, Revision 7</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/ndk/index.html">Android NDK, Revision 7 (2011年１１月)リリース</a></h4>
+<p><a href="http://android-developers.blogspot.com/2011/11/updated-ndk-for-android-40.html">Android Developer blog</a>で報告があったようにたくさんの追加や改良がおこなわれたAndroid 4.0 プラットフォームでサポートされた新しい機能が含まれたNDK がリリースされました。</p>
+<h4>新機能</h4>
+<p><span id="more-612"></span></p>
+<h5>公式Android 4.0(API level 14)に追加された機能</h5>
+<ul>
+<li> <a href="http://www.khronos.org/openmax/">Khronos Group のOpenMAX AL™ 1.0.1 standard</a> で規定されているネイティブマルチメディアAPIを追加
+<li>新しく追加された<code>&lt;OMXAL/OpenMAXAL.h&gt;</code> と <code>&lt;OMXAL/OpenMAXAL_Android.h&gt;</code>ヘッダーは、Andriod特有のバッファキューインタフェースを利用して、ネイティブコードから直接マルチメディアアウトプットへの出力を API level 14 指定されているものに許可されます。
+<li> Khronos Group OpenSL ES 1.0.1™ standard に規定されちえるネイティブオーディオAPIが更新
+<li>API level 14上で、MP3, AAC, Vorbisなどの圧縮音源を PCM にデコード可能
+<li>詳細は、<code>docs/opensles/index.html</code> か<a href="http://www.khronos.org/opensles/">http://www.khronos.org/opensles/</a>を確認しましょう
+<li><code>CCache</code> サポートを追加
+<li>リビルドの高速化を実現
+<li><code>NDK_CCACHE</code> という環境変数を定義し、ccache(ccache バイナリへのパス）を実行
+<li>定義されていれば、NDK ビルドシステムはコンパイル時に自動的に CCache を利用します。
+<pre>export NDK_CCACHE=ccache</pre>
+<p class="note"><strong>注意：</strong> CCache はNDK には含まれていません。そのため、前もってインストールは準備しておく必要があります。<code>CCache</code>の詳細は、<a href="http://ccache.samba.org">http://ccache.samba.org</a>をご覧ください
+</p>
+<li>APP_ABI 設定のサポートを追加。以下の２行のうちどちらかのように Application.mk に記載することが今回のリリースから可能です。
+<pre>
+APP_ABI := all
+APP_ABI := armeabi armeabi-v7a x86
+</pre>
+<p>APP_ABI が定義されていれば、コマンドラインから<code>ndk-build</code> を実行したときいに機能します。あなたのプロジェクトが ABIs をサポートしているかどうかを <code>Application.mk</code> を変更することなしに、確認するために簡単な方法があります。<br />
+例えば以下のものです。
+<pre>
+ndk-build APP_ABI=all
+</pre>
+<li><code>Android.mk</code> に <code>LOCAL_CPP_FEATURES</code> を追加。これは、C++機能(<code>RTTI</code> や 例外（<code>Exceptions</code>) )を利用している場合に宣言してください。これらの機能がプレビルドするモジュールに依存している場合は、最終的なリンク時に働きます。詳細は、 <code>docs/ANDROID-MK.html</code> や<code>docs/CPLUSPLUS-SUPPORT.html</code> をご覧ください。
+<li>ビルドコマンド利用時に短縮化されたソースファイルとオブジェクトへのパスが利用可能
+<li>プロジェクトパスから <code>$NDK/ndk-build</code> を実行中にソース、オブジェクト、バイナリファイルへのパスは、ビルドコマンドに短縮パスを引き渡します。なぜなら、現在のディレクトリに関連さえるためです。これはたくさんのソースファイルがある場合のプロジェクトをビルドする場合に役立ちます。利用中のOSのコマンドラインの上限値をさけるために有効です。このふるまいは、プロジェクトのツリーから <code>ndk-build</code> を実行する場合に変更することができません。もしくは、環境変数  <code>NDK_PROJECT_PATH</code> を特定のディレクトリに変更してください。
+</ul>
+<h4>実験的な機能(Experimental features)</h4>
+<p>Windows ユーザ向け：<code>ndk-build.cmd</code>スクリプトを利用して、Cygwinなしで NDK ビルドが実現可能になります。このスクリプトは、オリジナルのndk-build スクリプトと同じ引数で利用可能できます。Windows NDK パッケージには、GNU Make や Awkやその他必要なツールが入っています。そのため、別途ビルドに必要なツールをインストールする必要はありません。</p>
+<p class="caution"><strong>重要：</strong> <code>ndk-gdb</code> は Windows では利用できません。それには、まだ Cygwin が必要です。</p>
+<p>この機能はまだ実験中です。そのため、利用した感想や項目のレポートを<a href="public bug database or public forum">公式バグデータベース</a>や<a href="http://groups.google.com/group/android-ndk">公式フォーラム</a>に伝えてください。</p>
+<h4>重要なバグ修正</h4>
+<ul>
+<li>もし <code>APP_MODULES</code>が<code>Application.mk</code>に未定義の場合は、インポートされた共有ライブラリは現在の標準では target installation location ((<code>libs/&lt;abi&gt;</code>))にインストールされます。例えば、<code>foo</code>というトップレベルモジュールが<code>bar</code>モジュールにインポートされる場合、<br />
+<code>libfoo.so</code> と  <code>libbar.so</code> の両方ともインストール場所にコピーされます。以前は、 <code>libfoo.so</code>のみがコピーされ、<br />
+<code>bar</code>を<code>APP_MODULES</code>にリスト追加しておかない限り、そのような動作でした。もし、既に <code>APP_MODULES</code> 定義されている場合は、動作は変わりません。</p>
+<li><code>ndk-gdb</code> は、MAIN intent filters のマルチカテゴリー指定で正しく動作しています。
+<li>スタティックライブラリのインポートは、正しく動作しています。例えば、トップレベルモジュールの<code>ndk-gdb</code> がスタティックライブラリ<code>zoo</code>をインポートしたスタティックライブラリ<code>bar</code>をインポートする場合、 <code>libfoo.so</code>には<code>libbar.a</code> と <code>libzoo.a</code> がリンクされます。
+</ul>
+<h4>その他の変更点</h4>
+<ul>
+<li><code>docs/NATIVE-ACTIVITY.HTML</code>： typo を修正。API levelの下限は 9 です。 8では native activities が動作しません。
+<li><code>docs/STABLE-APIS.html</code>：EGL でサポートされているAPIの記載の誤りを修正。
+<li><code>download-toolchain-sources.sh</code>: <a href="http://android.googlesource.com">android.googlesource.com</a>からのダウンロードツールチェインを更新。AOSPサーバの新しいURLを追加。
+<li><code>gabi++</code> というC++サポートランタイムを新規追加。詳細は、<code>docs/CPLUSPLUS-SUPPORT.html</code> をご覧ください。
+<li><code>gnustl_shared</code> というC++サポートランタイムを新規追加。GNU libstdc++ v3 (GPLv3 license)の共有ライブラリバージョンと同等。詳細は、          <code>docs/CPLUSPLUS-SUPPORT.html</code>をご覧ください。
+<li>STLport C++ runtimes の RTTIを追加サポート。但し、例外（exceptions)は未サポート。
+<li><code>LOCAL_CPP_EXTENSION</code> のマルチ拡張子を追加サポート。例えば、<code>foo.cpp</code> and <code>bar.cxx</code> の両方ともC+++ソースとしてコンパイルしてくれます。以下のような宣言になります。
+<pre>
+LOCAL_CPP_EXTENSION := .cpp .cxx
+</pre>
+<li>NDKで提供されている共有システムライブラリで要求されていないたくさんのシンボルを削除。これによって、non-stable ABIシンボル(例えば、いくつかのlibgcc.a でプラットフォーム毎に異なるもの）に依存したコードが偶発的に生成されることを防ぎます。
+<li>EGLとOpenGLEL ヘッダーの拡張をサポート。注意：NDK ABIs は同等のライブラリで変更がないため、クライアントアプリ側でそれぞれの拡張に対して実行時にケアする必要があります。
+<p>拡張は、デバイスやGPUドライバに依存するため、プラットフォームが未対応の場合は動作しません。ヘッダーの定数やタイプの新しい追加を利用する場合は、<code>eglGetProcAddress()</code> or <code>glGetProcAddress()</code> で確認する必要があります。新しくサポートされた拡張は以下です。</p>
+<dl>
+<dt>GLES 1.x</dt>
+<dd>
+<ul>
+<li><code>GL_OES_vertex_array_object</code></li>
+<li><code>GL_OES_EGL_image_external</code></li>
+<li><code>GL_APPLE_texture_2D_limited_npot</code></li>
+<li><code>GL_EXT_blend_minmax</code></li>
+<li><code>GL_EXT_discard_framebuffer</code></li>
+<li><code>GL_EXT_multi_draw_arrays</code></li>
+<li><code>GL_EXT_read_format_bgra</code></li>
+<li><code>GL_EXT_texture_filter_anisotropic</code></li>
+<li><code>GL_EXT_texture_format_BGRA8888</code></li>
+<li><code>GL_EXT_texture_lod_bias</code></li>
+<li><code>GL_IMG_read_format</code></li>
+<li><code>GL_IMG_texture_compression_pvrtc</code></li>
+<li><code>GL_IMG_texture_env_enhanced_fixed_function</code></li>
+<li><code>GL_IMG_user_clip_plane</code></li>
+<li><code>GL_IMG_multisampled_render_to_texture</code></li>
+<li><code>GL_NV_fence</code></li>
+<li><code>GL_QCOM_driver_control</code></li>
+<li><code>GL_QCOM_extended_get</code></li>
+<li><code>GL_QCOM_extended_get2</code></li>
+<li><code>GL_QCOM_perfmon_global_mode</code></li>
+<li><code>GL_QCOM_writeonly_rendering</code></li>
+<li><code>GL_QCOM_tiled_rendering</code></li>
+</ul>
+</dd>
+<dt>GLES 2.0</dt>
+<dd>
+<ul>
+<li><code>GL_OES_element_index_uint</code></li>
+<li><code>GL_OES_get_program_binary</code></li>
+<li><code>GL_OES_mapbuffer</code></li>
+<li><code>GL_OES_packed_depth_stencil</code></li>
+<li><code>GL_OES_texture_3D</code></li>
+<li><code>GL_OES_texture_float</code></li>
+<li><code>GL_OES_texture_float_linear</code></li>
+<li><code>GL_OES_texture_half_float_linear</code></li>
+<li><code>GL_OES_texture_npot</code></li>
+<li><code>GL_OES_vertex_array_object</code></li>
+<li><code>GL_OES_EGL_image_external</code></li>
+<li><code>GL_AMD_program_binary_Z400</code></li>
+<li><code>GL_EXT_blend_minmax</code></li>
+<li><code>GL_EXT_discard_framebuffer</code></li>
+<li><code>GL_EXT_multi_draw_arrays</code></li>
+<li><code>GL_EXT_read_format_bgra</code></li>
+<li><code>GL_EXT_texture_format_BGRA8888</code></li>
+<li><code>GL_EXT_texture_compression_dxt1</code></li>
+<li><code>GL_IMG_program_binary</code></li>
+<li><code>GL_IMG_read_format</code></li>
+<li><code>GL_IMG_shader_binary</code></li>
+<li><code>GL_IMG_texture_compression_pvrtc</code></li>
+<li><code>GL_IMG_multisampled_render_to_texture</code></li>
+<li><code>GL_NV_coverage_sample</code></li>
+<li><code>GL_NV_depth_nonlinear</code></li>
+<li><code>GL_QCOM_extended_get</code></li>
+<li><code>GL_QCOM_extended_get2</code></li>
+<li><code>GL_QCOM_writeonly_rendering</code></li>
+<li><code>GL_QCOM_tiled_rendering</code></li>
+</ul>
+</dd>
+<dt>EGL</dt>
+<dd>
+<ul>
+<li><code>EGL_ANDROID_recordable</code></li>
+<li><code>EGL_NV_system_time</code></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/development/2473/au-isai-fl-xxxhdpi/" rel="bookmark" class="wherego_title">au isai FL は XXX High DPI 端末！4.4ソースコード調査</a></li><li><a href="http://andbrowser.com/android-sdk/2264/february-4-2014-android-platform-versions/" rel="bookmark" class="wherego_title">JBが主流派。2014年2月4日時点のAndroid Platform バージョンの割合</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/612/android-ndk-r7-release/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/612/android-ndk-r7-release/" />
+	</item>
+	</channel>
+</rss>

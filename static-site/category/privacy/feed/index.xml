@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; privacy</title>
+	<atom:link href="http://andbrowser.com/category/privacy/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/privacy/feed/" />
+		<item>
+		<title>Privacy Policy</title>
+		<link>http://andbrowser.com/privacy/3604/privacy_policy/</link>
+		<comments>http://andbrowser.com/privacy/3604/privacy_policy/#comments</comments>
+		<pubDate>Fri, 01 Jan 2010 14:00:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[privacy]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3604</guid>
+		<description><![CDATA[English is below
+アプリやサイトに掲載されている広告について
+
+アプリやサイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net、Amazonアソシエイト）を利用しています。
+このような [...]]]></description>
+			<content:encoded><![CDATA[<p>English is below</p>
+<h2>アプリやサイトに掲載されている広告について</h2>
+<p>
+アプリやサイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net、Amazonアソシエイト）を利用しています。<br />
+このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他サイトへのアクセスに関する情報 『Cookie』(氏名、住所、メール アドレス、電話番号は含まれません) を使用することがあります。<br />
+またGoogleアドセンスに関して、このプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、<a href="http://www.google.co.jp/policies/technologies/ads/">こちら</a>をご覧ください。</p>
+<h2>アプリやサイトが使用しているアクセス解析ツールについて</h2>
+<p>
+アプリやサイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。<br />
+このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。<br />
+このトラフィックデータは匿名で収集されており、個人を特定するものではありません。<br />
+この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。<br />
+この規約に関して、詳しくは<a href="http://www.google.com/analytics/terms/jp.html">こちら</a>をご覧ください。</p>
+<p>
+お客様の個人情報をお預かりするにあたり、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築します。<br<br />
+我々は個人情報に関する法令を遵守し、個人情報保護の重要性の認識と取組みを徹底し、個人情報の適切な取扱いと保護を推進致します。</p>
+<h2>個人情報の取得</h2>
+<p>
+我々は、適正に個人情報を取得いたします。</p>
+<p><h2>個人情報の管理</h2>
+<p>我々は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
+<p><h2>個人情報の利用目的</h2>
+<p>我々は、個人情報を以下の目的のために利用いたします。<br />
+アプリやサイトの改良・改善のため<br />
+新規サービス開発のため<br />
+上記目的のためのお客様への問い合わせのため</p>
+<h2>個人情報の第三者への開示・提供の禁止</h2>
+<p>我々は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。<br />
+お客さまの同意がある場合<br />
+お客さまが希望されるサービスを行なうために我々が業務を委託する業者に対して開示する場合<br />
+法令に基づき開示することが必要である場合</p>
+<h2>個人情報の安全管理</h2>
+<p>我々は、個人情報の漏えい・紛失防止のため、また正確性及び安全性確保のために、セキュリティに万全の対策を講じています。</p>
+<h2>ご本人の照会</h2>
+<p>お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。</p>
+<h2>法令、規範の遵守と見直し</h2>
+<p>我々は、保有する個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。お客様の個人情報をお預かりするにあたり、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築します。<br />
+我々は個人情報に関する法令を遵守し、個人情報保護の重要性の認識と取組みを徹底し、個人情報の適切な取扱いと保護を推進致します。</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</p>
+<h2>About ads on apps and sites</h2>
+<p>
+For applications and sites, we use a third-party advertisement service (Google Adsense, A8.net, Amazon Associate).<br />
+In order to display advertisements of products and services according to the interests of users, such advertisement distribution businesses include information &#8220;Cookie&#8221; (name, address, e-mail address, telephone number) related to access to this site and other sites We do not use it) may be used.<br />
+Please also refer to Google Adsense regarding details of this process and how to prevent such information from being used by ad serving companies.</p>
+<h2>About access analysis tools used by applications and sites</h2>
+<p>
+On this site, we use &#8220;Google Analytics&#8221; access analysis tool by Google.<br />
+This Google Analytics uses cookies to collect traffic data.<br />
+This traffic data is collected anonymously, it does not identify individuals.<br />
+Since this function can refuse collecting by invalidating cookie, please confirm the setting of your browser.<br />
+For details on this policy, please click here.</p>
+<p>In keeping customer&#8217;s personal information, we will establish the personal information protection policy as follows and construct a mechanism for personal information protection.<br />
+We will comply with laws concerning personal information, thoroughly recognize and address the importance of protecting personal information and promote appropriate handling and protection of personal information.</p>
+<h2>Acquisition of personal information</h2>
+<p>
+We will obtain personal information properly.</p>
+<h2>Management of personal information</h2>
+<p>
+In order to keep customers&#8217; personal information accurate and up to date, to prevent unauthorized access to personal information, loss, damage, alteration, leakage, etc., we maintain a security system · development system · maintain employee education We take necessary measures such as thorough thorough, implement safety measures and strictly manage personal information.</p>
+<h2>Purpose of using personal information</h2>
+<p>
+We will use personal information for the following purposes.<br />
+For improving and improving applications and sites<br />
+For developing new services<br />
+For inquiries to customers for the above purpose</p>
+<h2>Prohibition of disclosure and provision of personal information to third parties</h2>
+<p>
+We will properly manage personal information you keep from customers and will not disclose personal information to any third party unless it falls under any of the following.<br />
+When there is customer consent<br />
+When we disclose to the business entrusted to the business for the customer to do the desired service<br />
+When it is necessary to disclose based on laws and regulations</p>
+<h2>Safety management of personal information</h2>
+<p>
+In order to prevent the leakage / loss of personal information and to ensure accuracy and safety, we take every possible measure for security.</p>
+<h2>Referrals of the principal</h2>
+<p>
+If you wish to inquire, modify or delete personal information of the person himself / herself, we will confirm that you are the principal and will respond.</p>
+<h2>Compliance with laws and regulations, norms and reviews</h2>
+<p>
+We will comply with Japanese laws applicable to the personal information we possess, review the contents of this policy from time to time and make efforts to improve it. In keeping customer&#8217;s personal information, we will establish the personal information protection policy as follows and construct a mechanism for personal information protection.<br />
+We will comply with laws concerning personal information, thoroughly recognize and address the importance of protecting personal information and promote appropriate handling and protection of personal information.</p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/privacy/3604/privacy_policy/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/privacy/3604/privacy_policy/" />
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,2422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; intel edison</title>
+	<atom:link href="http://andbrowser.com/category/intel-edison/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/intel-edison/feed/" />
+		<item>
+		<title>2015/11/21時点の Intel Edison Firmware</title>
+		<link>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/</link>
+		<comments>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/#comments</comments>
+		<pubDate>Fri, 20 Nov 2015 18:28:40 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3556</guid>
+		<description><![CDATA[Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。
+Intel® Edison Board Software Downloadsから以下をダウンロードしました。
+
+PhoneFlashToolLite_5.3.2.0_mac64.pkg
+m_iot_dev_kit_2015.0.023.tar.gz
+edison-iotdk-image-280915.zip
+HoRNDIS-rel7.pkg
+
+
+MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。
+逆の場合は./flassall.sh が
+
+Did you plug and reboot your board?
+
+のまま進まない症状が出ました。
+備忘のため、コマンドとログをメモしておきます。
+
+$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820
+Bus 020 Device  [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。</p>
+<p><a href="https://software.intel.com/en-us/iot/hardware/edison/downloads">Intel® Edison Board Software Downloads</a>から以下をダウンロードしました。</p>
+<ul>
+<li>PhoneFlashToolLite_5.3.2.0_mac64.pkg
+<li>m_iot_dev_kit_2015.0.023.tar.gz
+<li>edison-iotdk-image-280915.zip
+<li>HoRNDIS-rel7.pkg
+</ul>
+<p><span id="more-3556"></span></p>
+<p>MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。<br />
+逆の場合は./flassall.sh が</p>
+<p><code><br />
+Did you plug and reboot your board?<br />
+</code><br />
+のまま進まない症状が出ました。</p>
+<p>備忘のため、コマンドとログをメモしておきます。</p>
+<p><code><br />
+$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Timed out while waiting for dfu device 8087:0a99<br />
+DEBUG: lsusb<br />
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820<br />
+Bus 020 Device 005: ID 0403:6001 Future Technology Devices International Limited FT232R USB UART  Serial: AJ035GT1<br />
+Bus 020 Device 018: ID 05ac:0259 Apple Inc. Apple Internal Keyboard / Trackpad<br />
+Bus 020 Device 002: ID 0a5c:4500 Broadcom Corp. BRCM20702 Hub<br />
+Bus 020 Device 004: ID 05ac:8289 Apple Inc. Bluetooth USB Host Controller<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+DEBUG: dfu-util -l<br />
+dfu-util 0.8</p>
+<p>Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.<br />
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt<br />
+This program is Free Software and has ABSOLUTELY NO WARRANTY<br />
+Please report bugs to dfu-util@lists.gnumonks.org</p>
+<p>Did you plug and reboot your board?<br />
+If yes, please try a recovery by calling this script with the --recovery option<br />
+taro:edison-iotdk-image-280915 tkawashita$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Flashing IFWI<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Transfer size must be specified<br />
+Flashing U-Boot<br />
+Flashing U-Boot Environment<br />
+Flashing U-Boot Environment Backup<br />
+Rebooting to apply partition changes<br />
+Now waiting for dfu device 8087:0a99<br />
+Flashing boot partition (kernel)<br />
+Flashing rootfs, (it can take up to 5 minutes... Please be patient)<br />
+Rebooting<br />
+U-boot &#038; Kernel System Flash Success...<br />
+Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.<br />
+</code></p>
+<p><code><br />
+*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:ifwi<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Partitioning already done...<br />
+Saving Environment to MMC...<br />
+Writing to MMC(0)... done<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0x6ad212b0<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0xb98db2f8<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+######################################################################################################################<br />
+DFU complete CRC32: 0x5601e158<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5434848 bytes read in 134 ms (38.7 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5419488 bytes)<br />
+Magic signature found<br />
+Kernel command line: "rootwait root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 g_multi.ethernet_config=rndis systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=8211587d07244d27cfb43ab8989dc867 g_multi.dev_addr=02:00:86:9d:c8:67 platform_mrfld_audio.audio_codec=dummy"</p>
+<p>Starting kernel ...</p>
+<p>[    1.602492] snd_soc_sst_platform: Enter:sst_soc_probe<br />
+[    2.006424] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    2.024564] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    2.024656] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device dev-ttyMFD2.device...<br />
+[  OK  ] Reached target Remote File Systems.<br />
+         Expecting device dev-disk-by\x2dpartlabel-rootfs.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-factory.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br />
+         Expecting device sys-subsystem-net-devices-usb0.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Created slice User and Session Slice.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Mounting Temporary Directory...<br />
+         Starting Load Kernel Modules...<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Starting udev Coldplug all Devices...<br />
+[  OK  ] Created slice system-getty.slice.<br />
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br />
+         Mounting Debug File System...<br />
+         Mounting POSIX Message Queue File System...<br />
+         Starting Apply Kernel Variables...<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+         Starting Load/Save Random Seed...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Mounting Configuration File System...<br />
+         Mounting FUSE Control File System...<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Reached target Local File Systems.<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Create Volatile Files and Directories...<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Found device /dev/ttyMFD2.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+         Starting Opkg first boot configure...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/factory.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/rootfs.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+[  OK  ] Started Opkg first boot configure.<br />
+         Mounting Mount for factory...<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Listening on RPCbind Server Activation Socket.<br />
+[  OK  ] Reached target Timers.<br />
+         Starting Restore Sound Card State...<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+[  OK  ] Mounted Mount for factory.<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting Edison PWR button handler...<br />
+[  OK  ] Started Edison PWR button handler.<br />
+         Starting Telephony service...<br />
+         Starting Daemon to load edison mcu app binary...<br />
+[  OK  ] Started Daemon to load edison mcu app binary.<br />
+         Starting Daemon to handle arduino sketches...<br />
+Application available at (physical) address 0x04819000<br />
+        VRL mapped to 0xff217000<br />
+        App size = 11508 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+[  OK  ] Started Daemon to handle arduino sketches.<br />
+         Starting Daemon to reset sketches...<br />
+[  OK  ] Started Daemon to reset sketches.<br />
+         Starting Bluetooth rf kill event daemon...<br />
+[  OK  ] Started Bluetooth rf kill event daemon.<br />
+         Starting Start or stop WiFI AP Mode in Edison...<br />
+[  OK  ] Started Start or stop WiFI AP Mode in Edison.<br />
+         Starting Login Service...<br />
+         Starting Permit User Sessions...<br />
+         Starting Post install service...<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Generate unique machine-id...<br />
+         Starting Cleanjournal service...<br />
+[  OK  ] Started Cleanjournal service.<br />
+         Starting D-Bus System Message Bus...<br />
+[    9.913329] sh[218]: Starting Post Install (try: 0)<br />
+[  OK  ] Started D-Bus System Message Bus.<br />
+[  OK  ] Started Telephony service.<br />
+         Starting Network Service...<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Started Permit User Sessions.<br />
+[  OK  ] Started Network Service.<br />
+[   10.368966] systemd-machine-id-setup[247]: Initializing machine ID from random generator.<br />
+[   10.682053] systemctl[250]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br />
+[  OK  ] Started Generate unique machine-id.<br />
+[  OK  ] Started Login Service.<br />
+         Starting Bluetooth service...<br />
+         Starting Edison Arduino board LED Blinker...<br />
+[  OK  ] Started Edison Arduino board LED Blinker.<br />
+         Starting Network Name Resolution...<br />
+[   11.864772] sh[218]: Backup home/root contents of rootfs : Success<br />
+         Starting PulseAudio Sound System...<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br />
+[  OK  ] Reached target Network.<br />
+         Starting Zero-configuration networking...<br />
+[   11.930911] sh[218]: mke2fs 1.42.9 (28-Dec-2013)<br />
+         Starting Mosquitto - lightweight server implementati...SN protocols...<br />
+         Starting Getty on tty1...<br />
+[  OK  ] Started Getty on tty1.<br />
+[  OK  ] Started Network Name Resolution.<br />
+[  OK  ] Started Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+[  OK  ] Started Bluetooth service.<br />
+[  OK  ] Started Zero-configuration networking.<br />
+[   12.552068] systemd-fsck[271]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[   12.554520] systemd-fsck[271]: /dev/mmcblk0p7: 5 files, 2742/2971 clusters<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+         Mounting /boot...<br />
+         Starting The Edison status and configuration service...<br />
+[  OK  ] Started The Edison status and configuration service.<br />
+         Starting Intel_XDK_Daemon...<br />
+[  OK  ] Started Intel_XDK_Daemon.<br />
+         Starting Hostname Service...<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started Hostname Service.<br />
+[   13.577704] sh[218]: Discarding device blocks: done<br />
+[   13.606481] sh[218]: Filesystem label=<br />
+[   13.649554] sh[218]: OS type: Linux<br />
+[   13.680311] sh[218]: Block size=4096 (log=2)<br />
+[   13.712396] sh[218]: Fragment size=4096 (log=2)<br />
+[   13.782400] sh[218]: Stride=0 blocks, Stripe width=0 blocks<br />
+[   13.815728] sh[218]: 87120 inodes, 348155 blocks<br />
+[   13.892418] sh[218]: 0 blocks (0.00%) reserved for the super user<br />
+[   13.982537] sh[218]: First data block=0<br />
+[   14.052355] sh[218]: Maximum filesystem blocks=356515840<br />
+[   14.082910] sh[218]: 11 block groups<br />
+[   14.152498] sh[218]: 32768 blocks per group, 32768 fragments per group<br />
+[   14.220999] sh[218]: 7920 inodes per group<br />
+[   14.272610] sh[218]: Superblock backups stored on blocks:<br />
+[   14.312192] sh[218]: 32768, 98304, 163840, 229376, 294912<br />
+[   14.344848] sh[218]: Allocating group tables: done<br />
+[   14.432545] sh[218]: Writing inode tables: done<br />
+[   14.508934] sh[218]: Creating journal (8192 blocks): done<br />
+[  OK  ] Started PulseAudio Sound System.<br />
+[   17.161726] sh[218]: Writing superblocks and filesystem accounting information: done<br />
+[   17.236067] sh[218]: Formatting home partition : Success<br />
+[   17.257604] sh[218]: Mount /home partition : Success<br />
+[   17.294885] sh[218]: Restore home/root contents on new /home partition : Success<br />
+[   17.327314] sh[218]: The number of cylinders for this disk is set to 24576.<br />
+[   17.346005] sh[218]: There is nothing wrong with that, but this is larger than 1024,<br />
+[   17.376037] sh[218]: and could in certain setups cause problems with:<br />
+[   17.423802] sh[218]: 1) software that runs at boot time (e.g., old versions of LILO)<br />
+[   17.451555] sh[218]: 2) booting and partitioning software from other OSs<br />
+[   17.493093] sh[218]: (e.g., DOS FDISK, OS/2 FDISK)<br />
+[   17.541465] sh[218]: Command (m for help): Command action<br />
+[   17.590630] sh[218]: e   extended<br />
+[   17.638059] sh[218]: p   primary partition (1-4)<br />
+[   17.700937] sh[218]: Partition number (1-4): Partition 1 is already defined, delete it before re-adding<br />
+[   17.732539] sh[218]: Command (m for help): Command (m for help): Command (m for help): Selected partition 1<br />
+[   17.812052] sh[218]: Hex code (type L to list codes):<br />
+[   17.882447] sh[218]: Command (m for help):<br />
+[   17.971526] sh[218]: Disk /dev/disk/by-partlabel/update: 805 MB, 805306368 bytes<br />
+[   18.032447] sh[218]: 4 heads, 16 sectors/track, 24576 cylinders<br />
+[   18.092569] sh[218]: Units = cylinders of 64 * 512 = 32768 bytes<br />
+[   18.106560] sh[218]: Device Boot      Start         End      Blocks  Id System<br />
+[   18.142419] sh[218]: /dev/disk/by-partlabel/update1               1       24576      786424   b Win95 FAT32<br />
+[   18.497023] sh[218]: Command (m for help): The partition table has been altered.<br />
+[   18.532201] sh[218]: Calling ioctl() to re-read partition table<br />
+[   18.582221] sh[218]: fdisk: WARNING: rereading partition table failed, kernel still uses old table: Invalid argument<br />
+[   18.668649] sh[218]: Formatting update partition Step 1 : Success<br />
+[   18.725650] sh[218]: Formatting update partition Step 2 : Success<br />
+[   18.803499] sh[218]: mkfs.vfat 2.11 (12 Mar 2005)<br />
+[   18.873781] sh[218]: Loop device does not match a floppy size, using default hd params<br />
+[   18.927481] sh[218]: Formatting update partition Step 3 : Success<br />
+[   18.978933] sh[218]: Formatting update partition Step 4 final : Success<br />
+[   32.565980] sh[218]: Generating sshd keys : Success<br />
+[   32.614420] sh[218]: Update file system table /etc/fstab : Success<br />
+[   33.892588] sh[218]: Generating Wifi Access Point SSID and passphrase : Success<br />
+[   33.955371] sh[218]: Post install success<br />
+[   34.075310] sh[218]: No journal files were found.<br />
+[   35.265506] systemctl[389]: rm '/etc/systemd/system/basic.target.wants/post-install.service'<br />
+[  OK  ] Started Post install service.<br />
+         Starting Serial Getty on ttyMFD2...<br />
+[  OK  ] Started Serial Getty on ttyMFD2.<br />
+[  OK  ] Reached target Login Prompts.<br />
+         Starting Increases rootfs image size to fit partition...<br />
+[   36.488949] resize2fs[400]: resize2fs 1.42.9 (28-Dec-2013)<br />
+[   36.556575] resize2fs[400]: Filesystem at /dev/disk/by-partlabel/rootfs is mounted on /; on-line resizing required<br />
+[   36.602177] resize2fs[400]: old_desc_blocks = 1, new_desc_blocks = 1<br />
+[   36.652218] resize2fs[400]: The filesystem on /dev/disk/by-partlabel/rootfs is now 393216 blocks long.<br />
+[   36.774761] systemctl[402]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br />
+[  OK  ] Started Increases rootfs image size to fit partition.<br />
+[  OK  ] Reached target Multi-User System.</p>
+<p>Poky (Yocto Project Reference Distro) 1.7.2 edison ttyMFD2</p>
+<p>edison login: root<br />
+root@edison:~# cat /etc/version<br />
+weekly-159.devkit-2.0<br />
+root@edison:~# uname -a<br />
+Linux edison 3.10.17-poky-edison+ #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015 i686 GNU/Linux<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li><li><a href="http://andbrowser.com/event/3567/potatotips-23/" rel="bookmark" class="wherego_title">第23回potatotips参加報告</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" />
+	</item>
+		<item>
+		<title>Edison で利用できる加速度センサーADXL345</title>
+		<link>http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/</link>
+		<comments>http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/#comments</comments>
+		<pubDate>Sat, 04 Jul 2015 08:51:36 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3500</guid>
+		<description><![CDATA[
+http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)
+お借りした3軸センサー
+http://akizukiden [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://andbrowser.com/wp-content/uploads/2015/07/391162f6a6452577745387a1fa18ee4b.png"><img src="http://andbrowser.com/wp-content/uploads/2015/07/391162f6a6452577745387a1fa18ee4b-300x264.png" alt="" title="スクリーンショット 2015-07-04 16.52.41" width="300" height="264" class="aligncenter size-medium wp-image-3501" /></a></p>
+<p><a href="http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)">http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)</a></p>
+<p>お借りした3軸センサー<br />
+<a href="http://akizukidenshi.com/catalog/g/gM-05153/">http://akizukidenshi.com/catalog/g/gM-05153/</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" />
+	</item>
+		<item>
+		<title>edison image ww18-15</title>
+		<link>http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/</link>
+		<comments>http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/#comments</comments>
+		<pubDate>Sat, 06 Jun 2015 15:56:00 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3496</guid>
+		<description><![CDATA[
+root@edison:~# cat /etc/version
+weekly-146
+root@edison:~# df
+Filesystem           1K-blocks      Used Availab [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+root@edison:~# cat /etc/version<br />
+weekly-146<br />
+root@edison:~# df<br />
+Filesystem           1K-blocks      Used Available Use% Mounted on<br />
+/dev/root              1458032    389236    990160  28% /<br />
+devtmpfs                491380         0    491380   0% /dev<br />
+tmpfs                   491688         0    491688   0% /dev/shm<br />
+tmpfs                   491688       520    491168   0% /run<br />
+tmpfs                   491688         0    491688   0% /sys/fs/cgroup<br />
+tmpfs                   491688         4    491684   0% /tmp<br />
+systemd-1                 5894      5434       460  92% /boot<br />
+tmpfs                   491688         0    491688   0% /var/volatile<br />
+/dev/mmcblk0p7            5894      5434       460  92% /boot<br />
+/dev/mmcblk0p10        1337936      2044   1319508   0% /home<br />
+/dev/mmcblk0p5            1003        19       913   2% /factory<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" rel="bookmark" class="wherego_title">ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" />
+	</item>
+		<item>
+		<title>ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</title>
+		<link>http://andbrowser.com/intel-edison/3477/prototyping-for-edison/</link>
+		<comments>http://andbrowser.com/intel-edison/3477/prototyping-for-edison/#comments</comments>
+		<pubDate>Fri, 01 May 2015 14:31:27 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3477</guid>
+		<description><![CDATA[Roland社のARM-10をお借りする機会が頂けたので、ためしに公開されているjenkinsの3D データを出力してみた。他にもいくつか出力してみたいものがあるので、また利用させてもらいに行こうと考えています。
+さて、 [...]]]></description>
+			<content:encoded><![CDATA[<p>Roland社の<a href="http://www.rolanddg.co.jp/product/3d/3d/arm-10/">ARM-10</a>をお借りする機会が頂けたので、ためしに公開されている<a href="http://jenkins-ci.org/content/jenkins-figure-available-shapeways">jenkinsの3D データ</a>を出力してみた。他にもいくつか出力してみたいものがあるので、また利用させてもらいに行こうと考えています。<br />
+さて、それとIntel Edison を組み合わせて何かやりたいと考えていて、ひとまず定番のLチカを試してみました。それだけでは面白くないので、edison にUSBカメラをつけて、jenkinsや人形に仕込んだLEDの様子をedison自身からストリーミング配信できるようにしてみました。配信の様子と仕組みは別途掲載予定です。<br />
+<span id="more-3477"></span></p>
+<h4>Intel EdisonとブレッドボードとUSBカメラで試作</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_edison-led.png"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_edison-led-300x186.png" alt="" title="s_edison-led" width="300" height="186" class="aligncenter size-medium wp-image-3478" /></a></p>
+<h4>ネコ人形に点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.11.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.11-300x168.jpg" alt="" title="s_2015-05-01 23.05.11" width="300" height="168" class="aligncenter size-medium wp-image-3480" /></a></p>
+<h4>Jenkinsおぢさんに点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.21.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.21-300x168.jpg" alt="" title="s_2015-05-01 23.05.21" width="300" height="168" class="aligncenter size-medium wp-image-3481" /></a></p>
+<h4>Jenkinsおぢさんとネコ人形に点灯</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.02.jpg"><img src="http://andbrowser.com/wp-content/uploads/2015/05/s_2015-05-01-23.05.02-300x168.jpg" alt="" title="s_2015-05-01 23.05.02" width="300" height="168" class="aligncenter size-medium wp-image-3479" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/" rel="bookmark" class="wherego_title">edison webcam利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3477/prototyping-for-edison/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" />
+	</item>
+		<item>
+		<title>A node.js BLE (Bluetooth low energy) central module</title>
+		<link>http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/</link>
+		<comments>http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/#comments</comments>
+		<pubDate>Sun, 12 Apr 2015 06:39:27 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3432</guid>
+		<description><![CDATA[A node.js BLE (Bluetooth low energy) central module
+https://github.com/sandeepmistry/noble
+このページを見た人は、以下のページも見 [...]]]></description>
+			<content:encoded><![CDATA[<p>A node.js BLE (Bluetooth low energy) central module<br />
+<a href="https://github.com/sandeepmistry/noble">https://github.com/sandeepmistry/noble</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" rel="bookmark" class="wherego_title">Crashlytics ライブラリの Android Studio対応</a></li><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/" />
+	</item>
+		<item>
+		<title>edison webcam利用方法</title>
+		<link>http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/</link>
+		<comments>http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/#comments</comments>
+		<pubDate>Sat, 11 Apr 2015 16:20:11 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3428</guid>
+		<description><![CDATA[以下のサイトに簡単な説明があります。
+http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E [...]]]></description>
+			<content:encoded><![CDATA[<p>以下のサイトに簡単な説明があります。</p>
+<p><a href="http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8811%EF%BC%89%E3%80%80%E7%B6%9A%E3%82%AB%E3%83%A1%E3%83%A9%E7%B7%A8/.html">http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8811%EF%BC%89%E3%80%80%E7%B6%9A%E3%82%AB%E3%83%A1%E3%83%A9%E7%B7%A8/.html</a></p>
+<p><a href="http://d.hatena.ne.jp/yoch/20150322">http://d.hatena.ne.jp/yoch/20150322</a></p>
+<p>Intel EdisonでUSBカメラを使ってみる(go言語実装）<br />
+<a href="http://dev.classmethod.jp/hardware/edison/intel-edison-using-usbcamera/">http://dev.classmethod.jp/hardware/edison/intel-edison-using-usbcamera/</a></p>
+<p>http://neuralassembly.blogspot.jp/2014/12/intel-edisonwebmjpg-streamer.html<a href="http://neuralassembly.blogspot.jp/2014/12/intel-edisonwebmjpg-streamer.html"></p>
+<p><a href="http://www.ideasonboard.org/uvc/">http://www.ideasonboard.org/uvc/</a></p>
+<p><a href="http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8813%EF%BC%89%E3%80%80ffmpeg%E3%81%AB%E3%82%88%E3%82%8B%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0/.html">http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%EF%BC%8813%EF%BC%89%E3%80%80ffmpeg%E3%81%AB%E3%82%88%E3%82%8B%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0/.html</a></p>
+<p><a href="https://github.com/drejkim/edi-cam">https://github.com/drejkim/edi-cam</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li><li><a href="http://andbrowser.com/uncategorized/3421/url-for-opkg/" rel="bookmark" class="wherego_title">url for opkg</a></li><li><a href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" rel="bookmark" class="wherego_title">mac で edison に flashall.shの失敗</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/" />
+	</item>
+		<item>
+		<title>windows flashall.bat execution log</title>
+		<link>http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/</link>
+		<comments>http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/#comments</comments>
+		<pubDate>Sun, 29 Mar 2015 03:27:52 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3423</guid>
+		<description><![CDATA[flashall.bat の実行ログ
+
+\edison-image-ww05-15>flashall.bat
+Using U-boot target: edison-blankrndis
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Dfu device found
+Flashing IFWI
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Flashing U-Boot
+Download    [...]]]></description>
+			<content:encoded><![CDATA[<p>flashall.bat の実行ログ</p>
+<p><code><br />
+\edison-image-ww05-15>flashall.bat<br />
+Using U-boot target: edison-blankrndis<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Dfu device found<br />
+Flashing IFWI<br />
+Download        [=========================] 100%      4194304 bytes<br />
+Download done.<br />
+Download        [=========================] 100%      4194304 bytes<br />
+Download done.<br />
+Flashing U-Boot<br />
+Download        [=========================] 100%       245760 bytes<br />
+Download done.<br />
+Flashing U-Boot Environment<br />
+Download        [=========================] 100%        65536 bytes<br />
+Download done.<br />
+Flashing U-Boot Environment Backup<br />
+Download        [=========================] 100%        65536 bytes<br />
+Download done.<br />
+Rebooting to apply partiton changes<br />
+Dfu device found<br />
+Flashing boot partition (kernel)<br />
+Download        [=========================] 100%      6029312 bytes<br />
+Download done.<br />
+Flashing rootfs, (it can take up to 5 minutes... Please be patient)<br />
+Download        [=========================] 100%    536870912 bytes<br />
+Download done.<br />
+Rebooting<br />
+U-boot &#038; Kernel System Flash Success...<br />
+Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.</p>
+<p>\edison-image-ww05-15><br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" rel="bookmark" class="wherego_title">ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</a></li><li><a href="http://andbrowser.com/device/3413/edison-root-partition-add/" rel="bookmark" class="wherego_title">edison /boot partition を増やす方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/" />
+	</item>
+		<item>
+		<title>edison /boot partition を増やす方法</title>
+		<link>http://andbrowser.com/device/3413/edison-root-partition-add/</link>
+		<comments>http://andbrowser.com/device/3413/edison-root-partition-add/#comments</comments>
+		<pubDate>Sun, 15 Mar 2015 02:22:32 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[device]]></category>
+		<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3413</guid>
+		<description><![CDATA[実施前
+
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs        [...]]]></description>
+			<content:encoded><![CDATA[<h4>実施前</h4>
+<pre>
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs                491736         0    491736   0% /dev
+tmpfs                   492048         0    492048   0% /dev/shm
+tmpfs                   492048       492    491556   0% /run
+tmpfs                   492048         0    492048   0% /sys/fs/cgroup
+tmpfs                   492048       492    491556   0% /etc/machine-id
+systemd-1                 5638      5184       454  92% /boot
+tmpfs                   492048         4    492044   0% /tmp
+systemd-1              2337308     22516   2298408   1% /home
+tmpfs                   492048         0    492048   0% /var/volatile
+/dev/mmcblk0p5            1003        19       913   2% /factory
+/dev/mmcblk0p10        2337308     22516   2298408   1% /home
+/dev/mmcblk0p7            5638      5184       454  92% /boot
+root@edison:~#
+</pre>
+<h4>実施後</h4>
+<pre>
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs                491736         0    491736   0% /dev
+tmpfs                   492048         0    492048   0% /dev/shm
+tmpfs                   492048       492    491556   0% /run
+tmpfs                   492048         0    492048   0% /sys/fs/cgroup
+tmpfs                   492048       492    491556   0% /etc/machine-id
+systemd-1                32686      5184     27502  16% /boot
+tmpfs                   492048         4    492044   0% /tmp
+systemd-1              2337308     27708   2293216   1% /home
+tmpfs                   492048         0    492048   0% /var/volatile
+/dev/mmcblk0p5            1003        19       913   2% /factory
+/dev/mmcblk0p10        2337308     27708   2293216   1% /home
+/dev/mmcblk0p7           32686      5184     27502  16% /boot
+</pre>
+<h4>コマンド</h4>
+<p><code><br />
+df<br />
+mkdir /home/root/boot-backup<br />
+cp -rp /boot/* /home/root/boot-backup/<br />
+umount /boot<br />
+mkfs.vfat -v -nboot -F16 /dev/mmcblk0p7<br />
+mount /boot<br />
+cp -rp /home/root/boot-backup/* /boot<br />
+df<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/device/3413/edison-root-partition-add/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/device/3413/edison-root-partition-add/" />
+	</item>
+		<item>
+		<title>See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</title>
+		<link>http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/</link>
+		<comments>http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/#comments</comments>
+		<pubDate>Tue, 10 Mar 2015 15:58:33 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3403</guid>
+		<description><![CDATA[http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html
+このページを見た人は、以下のページも見ています。Intel Edi [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html">http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/" rel="bookmark" class="wherego_title">Intel Edison の購入からww05ファームウェアの更新ログ</a></li><li><a href="http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/" rel="bookmark" class="wherego_title">edison flashall スクリプト利用時のエラー</a></li><li><a href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" rel="bookmark" class="wherego_title">mac で edison に flashall.shの失敗</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" />
+	</item>
+		<item>
+		<title>mac で edison に flashall.shの失敗</title>
+		<link>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/</link>
+		<comments>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/#comments</comments>
+		<pubDate>Tue, 10 Mar 2015 13:24:39 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3399</guid>
+		<description><![CDATA[
+MacBook-Pro:edison-image-ww05-15$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+dfu-util: Device has DFU interface, but has no DFU functional descriptor
+Flashing IFWI
+Flashing U-Boot
+Flashing U-Boot Environment
+Flashing U-Boot Environment Backup
+Rebooting to apply partition changes
+Now waiting for dfu device 8087:0a99
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+./flashall.sh: line 80: lsusb: command not found
+DEBUG:  [...]]]></description>
+			<content:encoded><![CDATA[<pre>
+MacBook-Pro:edison-image-ww05-15$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+dfu-util: Device has DFU interface, but has no DFU functional descriptor
+Flashing IFWI
+Flashing U-Boot
+Flashing U-Boot Environment
+Flashing U-Boot Environment Backup
+Rebooting to apply partition changes
+Now waiting for dfu device 8087:0a99
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+./flashall.sh: line 80: lsusb: command not found
+DEBUG: dfu-util -l
+dfu-util 0.8
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to dfu-util@lists.gnumonks.org
+
+MacBook-Pro:edison-image-ww05-15$
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/device/3413/edison-root-partition-add/" rel="bookmark" class="wherego_title">edison /boot partition を増やす方法</a></li><li><a href="http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/" rel="bookmark" class="wherego_title">Intel Edison の購入からww05ファームウェアの更新ログ</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" />
+	</item>
+		<item>
+		<title>edison flashall スクリプト利用時のエラー</title>
+		<link>http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</link>
+		<comments>http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/#comments</comments>
+		<pubDate>Sun, 08 Mar 2015 01:25:29 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3389</guid>
+		<description><![CDATA[Edionでファームアップ時に以下のエラーが発生するようになりました。
+まだ未解決です。
+flashallが検索対象の端末のVID,PIDが 8087:0a99 のようですが、edisonのほうが 8086:e005 の [...]]]></description>
+			<content:encoded><![CDATA[<p>Edionでファームアップ時に以下のエラーが発生するようになりました。<br />
+まだ未解決です。<br />
+flashallが検索対象の端末のVID,PIDが 8087:0a99 のようですが、edisonのほうが 8086:e005 のようです。どうやって edison 側のVID,PIDを変更するのでしょうか・・・<br />
+<span id="more-3389"></span></p>
+<h4>flassall.batの結果</h4>
+<p><code><br />
+C:\edison-image-ww05-15>flashall.bat<br />
+Using U-boot target: edison-blankrndis<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Dfu device not found Timeout<br />
+Did you plug and reboot your board?<br />
+If yes, please try a recovery by calling this script with the --recovery option</p>
+<p>C:\edison-image-ww05-15>flashall.bat --recovery<br />
+Starting Recovery mode<br />
+Please plug and reboot the board<br />
+Flashing IFWI<br />
+!!! You should install xfstk tools, please visit http://xfstk.sourceforge.net/</p>
+<p>C:\edison-image-ww05-15><br />
+</code></p>
+<h4>Intel Edison の情報</h4>
+<p><code><br />
+> lsusb<br />
+...<br />
+Bus 003 Device 028: ID 8086:e005 Intel Corp.<br />
+...<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/device/3413/edison-root-partition-add/" rel="bookmark" class="wherego_title">edison /boot partition を増やす方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/" />
+	</item>
+		<item>
+		<title>Intel Edison の購入からww05ファームウェアの更新ログ</title>
+		<link>http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/</link>
+		<comments>http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/#comments</comments>
+		<pubDate>Fri, 27 Feb 2015 16:34:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3382</guid>
+		<description><![CDATA[以下のログを記載
+
+
+******************************
+PSH KERNEL VERSION: b0182727
+                WR: 20104000
+******************************
+SCU IPC: 0x800000d0  0xfffce92c
+PSH miaHOB version: TNG.B0.VVBD.0000000c
+microkernel built 23:15:13 Apr 24 2014
+******* PSH loader *******
+PCM page cache size = 192 KB
+Cache Constraint = 0 Pages
+Arming IPC driver ..
+Adding page store pool ..
+PagestoreAddr(IMR Start Address)  [...]]]></description>
+			<content:encoded><![CDATA[<p>以下のログを記載<br />
+<span id="more-3382"></span></p>
+<p><code><br />
+******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Aug 20 2014 - 16:08:32)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5124192 bytes read in 129 ms (37.9 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@ncsndgbuild04) #1 SMP PREEMPT Wed Aug 20 16:09:18 CEST 2014<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5108832 bytes)<br />
+Magic signature found<br />
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=814fcaf161aadd6d4c9c90d53c037acf"</p>
+<p>Starting kernel ...</p>
+<p>[    1.659642] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    1.664928] pmic_ccsm pmic_ccsm: Battery Over heat exception</p>
+<p>Welcome to Linux!</p>
+<p>[  OK  ] Reached target Remote File Systems.<br />
+         Expecting device dev-ttyMFD2.device...<br />
+         Expecting device dev-mmcblk1p1.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Set up automount Arbitrary Executable File Formats F...utomount Point.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Set up automount home.automount.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on Syslog Socket.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Created slice User and Session Slice.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+         Starting Load Kernel Modules...<br />
+         Starting udev Coldplug all Devices...<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Mounting Debug File System...<br />
+         Starting Apply Kernel Variables...<br />
+         Mounting POSIX Message Queue File System...<br />
+[  OK  ] Created slice system-getty.slice.<br />
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+[  OK  ] Reached target Slices.<br />
+         Mounting Temporary Directory...<br />
+[  OK  ] Set up automount factory.automount.<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+         Mounting FUSE Control File System...<br />
+         Mounting Configuration File System...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Starting Load/Save Random Seed...<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Reached target Local File Systems.<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Create Volatile Files and Directories...<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Found device /dev/ttyMFD2.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Reached target Sound Card.<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Reached target Timers.<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting USB Ethernet gadget...<br />
+[    7.354964] dwc3-device dwc3-device.1: dwc3-gadget is already bound to g_multi<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Edison RM button handler...<br />
+[  OK  ] Started Edison RM button handler.<br />
+         Starting Kernel Logging Service...<br />
+[  OK  ] Started Kernel Logging Service.<br />
+         Starting Bluetooth rf kill event daemon...<br />
+[  OK  ] Started Bluetooth rf kill event daemon.<br />
+         Starting Daemon to handle arduino sketches...<br />
+[  OK  ] Started Daemon to handle arduino sketches.<br />
+         Starting Daemon to reset sketches...<br />
+[  OK  ] Started Daemon to reset sketches.<br />
+         Starting System Logging Service...<br />
+[  OK  ] Started System Logging Service.<br />
+         Starting Login Service...<br />
+         Starting Permit User Sessions...<br />
+         Starting D-Bus System Message Bus...<br />
+[  OK  ] Started D-Bus System Message Bus.<br />
+         Starting Network Service...<br />
+[  OK  ] Started Permit User Sessions.<br />
+[  OK  ] Started USB Ethernet gadget.<br />
+[  OK  ] Started Network Service.<br />
+[  OK  ] Reached target Network.<br />
+         Starting Mosquitto - lightweight server implementati...SN protocols...<br />
+[  OK  ] Started Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+         Starting Zero-configuration networking...<br />
+[  OK  ] Started Zero-configuration networking.<br />
+         Starting Intel_XDK_Daemon...<br />
+[  OK  ] Started Intel_XDK_Daemon.<br />
+         Starting Network Name Resolution...<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/factory...<br />
+         Starting Getty on tty1...<br />
+[  OK  ] Started Getty on tty1.<br />
+         Starting Serial Getty on ttyMFD2...<br />
+[  OK  ] Started Serial Getty on ttyMFD2.<br />
+[  OK  ] Reached target Login Prompts.<br />
+         Starting HSU runtime pm service...<br />
+[  OK  ] Started Network Name Resolution.<br />
+[  OK  ] Started HSU runtime pm service.<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/factory.<br />
+[  OK  ] Started Login Service.<br />
+[    9.461928] systemd-fsck[213]: /dev/mmcblk0p5: Superblock last mount time is in the future.<br />
+[    9.491522] systemd-fsck[213]: (by less than a day, probably due to the hardware clock being incorrectly set)  FIXED.<br />
+         Mounting /factory...<br />
+[    9.551725] systemd-fsck[213]: /dev/mmcblk0p5: clean, 13/128 files, 40/1024 blocks<br />
+[  OK  ] Mounted /factory.</p>
+<p>Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2</p>
+<p>edison login: root<br />
+[   46.103248] systemd-fsck[234]: /dev/mmcblk0p10: clean, 13/152608 files, 26868/610299 blocks<br />
+root@edison:~# cat /etc/version<br />
+edison-weekly_build_56_2014-08-20_15-54-05<br />
+root@edison:~#<br />
+root@edison:~#<br />
+root@edison:~#<br />
+root@edison:~#<br />
+root@edison:~# reboot ota<br />
+         Unmounting /factory...<br />
+         Unmounting /home...<br />
+[  OK  ] Stopped target Sound Card.<br />
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.<br />
+         Stopping Watchdog sample daemon...<br />
+[  OK  ] Stopped target Multi-User System.<br />
+         Stopping Edison RM button handler...<br />
+         Stopping Daemon to reset sketches...<br />
+         Stopping Kernel Logging Service...<br />
+         Stopping Bluetooth rf kill event daemon...<br />
+         Stopping Mosquitto - lightweight server implementati...SN protocols...<br />
+         Stopping Zero-configuration networking...<br />
+         Stopping System Logging Service...<br />
+         Stopping Intel_XDK_Daemon...<br />
+         Stopping Network Name Resolution...<br />
+[  OK  ] Stopped target Login Prompts.<br />
+         Stopping Getty on tty1...<br />
+         Stopping Serial Getty on ttyMFD2...<br />
+                  Stopping D-Bus System Message Bus...<br />
+[  OK  ] Stopped Watchdog sample daemon.<br />
+[  OK  ] Stopped Edison RM button handler.<br />
+[  OK  ] Stopped Kernel Logging Service.<br />
+[  OK  ] Stopped Bluetooth rf kill event daemon.<br />
+[  OK  ] Stopped Daemon to reset sketches.<br />
+[  OK  ] Stopped System Logging Service.<br />
+[  OK  ] Stopped Login Service.<br />
+[  OK  ] Stopped D-Bus System Message Bus.<br />
+[  OK  ] Stopped Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+[  OK  ] Stopped Zero-configuration networking.<br />
+[  OK  ] Stopped Intel_XDK_Daemon.<br />
+[  OK  ] Stopped Network Name Resolution.<br />
+[  OK  ] Stopped Getty on tty1.<br />
+[  OK  ] Stopped Serial Getty on ttyMFD2.<br />
+[  OK  ] Unmounted /factory.<br />
+[  OK  ] Failed unmounting /home.<br />
+[  OK  ] Removed slice system-serial\x2dgetty.slice.<br />
+[  OK  ] Removed slice system-getty.slice.<br />
+         Stopping Permit User Sessions...<br />
+[  OK  ] Stopped target Network.<br />
+         Stopping Daemon to handle arduino sketches...<br />
+[  OK  ] Stopped Daemon to handle arduino sketches.<br />
+[  OK  ] Stopped Permit User Sessions.<br />
+[  OK  ] Stopped target Remote File Systems.<br />
+[  OK  ] Stopped target Basic System.<br />
+[  OK  ] Stopped target Slices.<br />
+[  OK  ] Removed slice User and Session Slice.<br />
+[  OK  ] Stopped target Paths.<br />
+[  OK  ] Stopped target Timers.<br />
+[  OK  ] Stopped target Sockets.<br />
+[  OK  ] Closed sshd.socket.<br />
+[  OK  ] Closed Syslog Socket.<br />
+[  OK  ] Closed D-Bus System Message Bus Socket.<br />
+[  OK  ] Stopped target System Initialization.<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill2...<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill0...<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill1...<br />
+         Stopping Network Time Synchronization...<br />
+         Stopping Load Kernel Modules...<br />
+[  OK  ] Stopped Load Kernel Modules.<br />
+         Stopping Update UTMP about System Boot/Shutdown...<br />
+         Stopping Load/Save Random Seed...<br />
+         Stopping Apply Kernel Variables...<br />
+[  OK  ] Stopped Apply Kernel Variables.<br />
+[  OK  ] Stopped target Swap.<br />
+[  OK  ] Stopped Network Time Synchronization.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Stopped Load/Save Random Seed.<br />
+[  OK  ] Removed slice system-systemd\x2drfkill.slice.<br />
+         Stopping Create Volatile Files and Directories...<br />
+[  OK  ] Stopped Create Volatile Files and Directories.<br />
+[  OK  ] Stopped target Local File Systems.<br />
+         Unmounting /etc/machine-id...<br />
+[  OK  ] Unset automount factory.automount.<br />
+[  OK  ] Unset automount home.automount.<br />
+[  OK  ] Unset automount boot.automount.<br />
+         Unmounting /var/volatile...<br />
+         Unmounting Temporary Directory...<br />
+[  OK  ] Unmounted /etc/machine-id.<br />
+[  OK  ] Failed unmounting /var/volatile.<br />
+[  OK  ] Unmounted Temporary Directory.<br />
+[  OK  ] Reached target Unmount All Filesystems.<br />
+[  OK  ] Stopped target Local File Systems (Pre).<br />
+         Stopping Remount Root and Kernel File Systems...<br />
+[  OK  ] Stopped Remount Root and Kernel File Systems.<br />
+[  OK  ] Reached target Shutdown.</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Aug 20 2014 - 16:08:32)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+reading ota_update.scr<br />
+14747 bytes read in 28 ms (513.7 KiB/s)<br />
+## Executing script at 00100000<br />
+=== OTA update script ===<br />
+Validating Ota package<br />
+part find mmc 0 label:update u_part_num;<br />
+ota drive is mmc 0:9</p>
+<p>Validating edison_ifwi-dbg-00-dfu.bin hash for boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br />
+reading edison_ifwi-dbg-00-dfu.bin<br />
+4194304 bytes read in 104 ms (38.5 MiB/s)<br />
+hash sha1 0x6400000 400000 sha1_sum;<br />
+sha1 for 06400000 ... 067fffff ==> 16af670731ef43d8e415adebd93a841ab6763236<br />
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block</p>
+<p>Validating u-boot-edison.bin hash for u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br />
+reading u-boot-edison.bin<br />
+245760 bytes read in 37 ms (6.3 MiB/s)<br />
+part find mmc 0 label:u-boot0 u_part_num;<br />
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br />
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br />
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>hash sha1 0x6400000 3c000 sha1_sum;<br />
+sha1 for 06400000 ... 0643bfff ==> b7a923600f15c369602cd1911e9bc3eaf2ac348d</p>
+<p>Validating edison-image-edison.hddimg hash for boot partition<br />
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br />
+reading edison-image-edison.hddimg<br />
+6029312 bytes read in 156 ms (36.9 MiB/s)<br />
+part find mmc 0 label:boot u_part_num;<br />
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br />
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br />
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>hash sha1 0x6400000 5c0000 sha1_sum;<br />
+sha1 for 06400000 ... 069bffff ==> 4ad11552197f84f5f4abaebde55f43acb880f559</p>
+<p>Validating edison-image-edison.ext4 hash for rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br />
+reading edison-image-edison.ext4<br />
+536870912 bytes read in 11411 ms (44.9 MiB/s)<br />
+part find mmc 0 label:rootfs u_part_num;<br />
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br />
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br />
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>hash sha1 0x6400000 20000000 sha1_sum;<br />
+sha1 for 06400000 ... 263fffff ==> e541cc9f0c81b868942b4ae1e4133cdab41351bf</p>
+<p>Ota Pakage validated going to process it<br />
+## Executing script at 00100000<br />
+=== OTA update script ===<br />
+Processing Ota update<br />
+part find mmc 0 label:update u_part_num;<br />
+ota drive is mmc 0:9</p>
+<p>Update IFWI on boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br />
+reading edison_ifwi-dbg-00-dfu.bin<br />
+4194304 bytes read in 103 ms (38.8 MiB/s)<br />
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block<br />
+mmc dev 0 1;<br />
+switch to partitions #1, OK<br />
+mmc0(part 1) is current device<br />
+mmc write 0x6400000 0x0 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br />
+mmc dev 0 2;<br />
+switch to partitions #2, OK<br />
+mmc0(part 2) is current device<br />
+mmc write 0x6400000 0x00 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br />
+switch to partitions #0, OK<br />
+mmc0(part 0) is current device</p>
+<p>Update of edison_ifwi-dbg-00-dfu.bin to boot0 and boot1 partitions Done</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br />
+reading u-boot-edison.bin<br />
+245760 bytes read in 37 ms (6.3 MiB/s)<br />
+part find mmc 0 label:u-boot0 u_part_num;<br />
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br />
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br />
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>mmc write 0x6400000 800 1e0;</p>
+<p>MMC write: dev # 0, block # 2048, count 480 ... 480 blocks write: OK</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition  Done</p>
+<p>Update of edison-image-edison.hddimg to boot partition<br />
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br />
+reading edison-image-edison.hddimg<br />
+6029312 bytes read in 156 ms (36.9 MiB/s)<br />
+part find mmc 0 label:boot u_part_num;<br />
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br />
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br />
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>mmc write 0x6400000 10000 2e00;</p>
+<p>MMC write: dev # 0, block # 65536, count 11776 ... 11776 blocks write: OK</p>
+<p>Update of edison-image-edison.hddimg to boot partition  Done</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br />
+reading edison-image-edison.ext4<br />
+536870912 bytes read in 11410 ms (44.9 MiB/s)<br />
+part find mmc 0 label:rootfs u_part_num;<br />
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br />
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br />
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>mmc write 0x6400000 20000 100000;</p>
+<p>MMC write: dev # 0, block # 131072, count 1048576 ... 1048576 blocks write: OK</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition  Done</p>
+<p>Ota Success going to reboot<br />
+Saving Environment to MMC...<br />
+Writing to MMC(0)... done<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+resetting ...                                                                                                                                                                  �C�<br />
+******************************<br />
+PSH KERNEL VERSION: b0182929<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 10:14:01 Jan 13 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jan 30 2015 - 14:15:53)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5348960 bytes read in 132 ms (38.6 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jan 30 14:16:35 CET 2015<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5333600 bytes)<br />
+Magic signature found<br />
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=ota-update.target hardware_id=00 g_multi.iSerialNumber=814fcaf161aadd6d4c9c90d53c037acf"</p>
+<p>Starting kernel ...</p>
+<p>[    1.680392] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    1.691348] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    1.703818] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device sys-subsystem-net-devices-usb0.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Set up automount Arbitrary Executable File Formats F...utomount Point.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Starting Apply Kernel Variables...<br />
+         Starting udev Coldplug all Devices...<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+         Mounting Debug File System...<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Load Kernel Modules...<br />
+         Mounting POSIX Message Queue File System...<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+         Starting Create Volatile Files and Directories...<br />
+         Mounting Temporary Directory...<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+         Mounting FUSE Control File System...<br />
+         Mounting Configuration File System...<br />
+         Starting Load/Save Random Seed...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Opkg first boot configure...<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Started Opkg first boot configure.<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Reached target Timers.<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+         Starting Restore Sound Card State...<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+[  OK  ] Reached target Sound Card.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting OTA update service...<br />
+[  OK  ] Started OTA update service.<br />
+[  OK  ] Reached target OTA update target.<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+[    8.387376] sh[189]: ## Error: "ota_update_retry" not defined<br />
+         Starting Generate unique machine-id...<br />
+[    8.440996] sh[189]: Starting OTA update (try: 0)<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Cleanjournal service...<br />
+[  OK  ] Started Cleanjournal service.<br />
+[    8.680611] systemd-machine-id-setup[215]: Initializing machine ID from random generator.<br />
+[    8.814723] systemctl[222]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br />
+[  OK  ] Started Generate unique machine-id.<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br />
+         Starting OpenSSH Key Generation...<br />
+         Mounting Arbitrary Executable File Formats File System...<br />
+[    9.906592] systemd-fsck[232]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[    9.908927] systemd-fsck[232]: /dev/mmcblk0p7: 5 files, 2700/2931 clusters<br />
+[  OK  ] Mounted Arbitrary Executable File Formats File System.<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+         Mounting /boot...<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started OpenSSH Key Generation.<br />
+[   36.295960] sh[189]: Generating sshd keys : Success<br />
+[   36.335943] sh[189]: Update file system table /etc/fstab : Success<br />
+[   37.684482] sh[189]: Generating Wifi Access Point SSID and passphrase : Success<br />
+[   37.715267] sh[189]: OTA update success<br />
+[   37.742440] sh[189]: Rebooting....<br />
+[   37.792499] sh[189]: No journal files were found.<br />
+Application available at (physical) address 0x04819000<br />
+        VRL mapped to 0xff213000<br />
+        App size = 11484 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+[   38.809674] resize2fs[291]: resize2fs 1.42.9 (28-Dec-2013)<br />
+[   38.872221] resize2fs[291]: The filesystem is already 131072 blocks long.  Nothing to do!<br />
+[   39.361215] systemctl[320]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br />
+[   40.332051] systemd-fsck[346]: /dev/mmcblk0p10: clean, 14/152608 files, 26869/610299 blocks</p>
+<p>Poky (Yocto Project Reference Distro) 1.6.1 edison ttyMFD2</p>
+<p>edison login: root<br />
+root@edison:~# cat /etc/version<br />
+weekly-120</p>
+<p></code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3399/result-for-flashall-to-edison-on-mac/" rel="bookmark" class="wherego_title">mac で edison に flashall.shの失敗</a></li><li><a href="http://andbrowser.com/intel-edison/3389/edison-flashall-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/" rel="bookmark" class="wherego_title">edison flashall スクリプト利用時のエラー</a></li><li><a href="http://andbrowser.com/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/" rel="bookmark" class="wherego_title">Intel Edison 購入時のバージョン</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/" />
+	</item>
+		<item>
+		<title>Intel Edison 購入時のバージョン</title>
+		<link>http://andbrowser.com/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/</link>
+		<comments>http://andbrowser.com/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/#comments</comments>
+		<pubDate>Fri, 27 Feb 2015 16:26:48 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3380</guid>
+		<description><![CDATA[
+Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2
+edison login: root
+[   46.103248] systemd-fsck[234]: [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2</p>
+<p>edison login: root<br />
+[   46.103248] systemd-fsck[234]: /dev/mmcblk0p10: clean, 13/152608 files, 26868/610299 blocks<br />
+root@edison:~# cat /etc/version<br />
+edison-weekly_build_56_2014-08-20_15-54-05<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3382/intel-edison-buying-status-to-update-firmware-ww05/" rel="bookmark" class="wherego_title">Intel Edison の購入からww05ファームウェアの更新ログ</a></li><li><a href="http://andbrowser.com/intel-edison/3372/intel-edison-firmware-download-link/" rel="bookmark" class="wherego_title">Intel Edison firmware download link</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3380/intel-edison-%E8%B3%BC%E5%85%A5%E6%99%82%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3/" />
+	</item>
+		<item>
+		<title>Intel Edison firmware download link</title>
+		<link>http://andbrowser.com/intel-edison/3372/intel-edison-firmware-download-link/</link>
+		<comments>http://andbrowser.com/intel-edison/3372/intel-edison-firmware-download-link/#comments</comments>
+		<pubDate>Sat, 21 Feb 2015 02:52:19 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3372</guid>
+		<description><![CDATA[
+http://downloadmirror.intel.com/24271/eng/edison-image-ww36-14.zip
+http://downloadmirror.intel.com/24389/eng/ [...]]]></description>
+			<content:encoded><![CDATA[<ul>
+<li><a href="http://downloadmirror.intel.com/24271/eng/edison-image-ww36-14.zip">http://downloadmirror.intel.com/24271/eng/edison-image-ww36-14.zip</a>
+<li><a href="http://downloadmirror.intel.com/24389/eng/edison-image-rel1-maint-rel1-ww42-14.zip">http://downloadmirror.intel.com/24389/eng/edison-image-rel1-maint-rel1-ww42-14.zip</a>
+<li><a href="http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip">http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/" rel="bookmark" class="wherego_title">Intel Edison R2 announce postmortem</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3372/intel-edison-firmware-download-link/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3372/intel-edison-firmware-download-link/" />
+	</item>
+		<item>
+		<title>Intel Edison R2 announce postmortem</title>
+		<link>http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/</link>
+		<comments>http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/#comments</comments>
+		<pubDate>Fri, 13 Feb 2015 17:20:18 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3363</guid>
+		<description><![CDATA[少し前にIntel Edison R2 Firmware に関してのアナウンスを振りかえってみると、以下の資料が参考になります。
+
+元資料は以下です。
+http://akizukidenshi.com/download/ [...]]]></description>
+			<content:encoded><![CDATA[<p>少し前にIntel Edison R2 Firmware に関してのアナウンスを振りかえってみると、以下の資料が参考になります。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2015/02/akizukidenshi_com_download_ds_intel_edisonPB331179_001Edison101Presentation_pdf.png"><img src="http://andbrowser.com/wp-content/uploads/2015/02/akizukidenshi_com_download_ds_intel_edisonPB331179_001Edison101Presentation_pdf-1024x573.png" alt="" title="akizukidenshi_com_download_ds_intel_edisonPB331179_001Edison101Presentation_pdf" width="1024" height="573" class="aligncenter size-large wp-image-3364" /></a></p>
+<p>元資料は以下です。<br />
+<a href="http://akizukidenshi.com/download/ds/intel/edisonPB331179_001Edison101Presentation.pdf">http://akizukidenshi.com/download/ds/intel/edisonPB331179_001Edison101Presentation.pdf</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/" rel="bookmark" class="wherego_title">Intel Edison AC Addapter</a></li><li><a href="http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/" rel="bookmark" class="wherego_title">Intel Edison setup command line tool</a></li><li><a href="http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/" rel="bookmark" class="wherego_title">Intel Edison R2 beta firmware boot log</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/" />
+	</item>
+		<item>
+		<title>Intel Edison AC Addapter</title>
+		<link>http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/</link>
+		<comments>http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/#comments</comments>
+		<pubDate>Wed, 11 Feb 2015 12:47:49 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3359</guid>
+		<description><![CDATA[Intel Edison で利用できそうなACアダプタを調査しました。ただし実際に利用できるかどうかはわかりません。
+
+http://www.soundhouse.co.jp/products/detail/item/6 [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edison で利用できそうなACアダプタを調査しました。ただし実際に利用できるかどうかはわかりません。</p>
+<p><span id="more-3359"></span></p>
+<p><a href="http://www.soundhouse.co.jp/products/detail/item/69167/">http://www.soundhouse.co.jp/products/detail/item/69167/</a></p>
+<p>■DCアダプター<br />
+■9V<br />
+■1A<br />
+■センタープラス<br />
+■内径：2.1mm<br />
+■外径：5.5mm<br />
+■寸法：5.5&#215;5x8.5 cm</p>
+<p>トランスタイプだからさけたほうがいいか。。。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/" rel="bookmark" class="wherego_title">Intel Edison R2 announce postmortem</a></li><li><a href="http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/" rel="bookmark" class="wherego_title">Intel Edison setup command line tool</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/" />
+	</item>
+		<item>
+		<title>Intel Edison setup command line tool</title>
+		<link>http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/</link>
+		<comments>http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/#comments</comments>
+		<pubDate>Wed, 11 Feb 2015 12:03:44 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3353</guid>
+		<description><![CDATA[Intel Edison のファームアップや再セットアップ時にコマンドラインを備忘として掲載します。
+コピペしやすいように$は省いています。
+
+
+tee /etc/opkg/base-feeds.conf /dev/nu [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edison のファームアップや再セットアップ時にコマンドラインを備忘として掲載します。<br />
+コピペしやすいように$は省いています。</p>
+<p><span id="more-3353"></span></p>
+<p><code><br />
+tee /etc/opkg/base-feeds.conf << _EOF_ >/dev/null<br />
+src/gz all        http://repo.opkg.net/edison/repo/all<br />
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32<br />
+_EOF_<br />
+</code></p>
+<p><code><br />
+tee /etc/opkg/base-feeds.conf << _EOF_ >/dev/null<br />
+src/gz all        http://repo.opkg.net/edison/repo/all<br />
+src/gz edison     http://repo.opkg.net/edison/repo/edison<br />
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32<br />
+_EOF_<br />
+</code><br />
+<code><br />
+tee /etc/opkg/intel-iotdk.conf << _EOF_ >/dev/null<br />
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all<br />
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic<br />
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark<br />
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586<br />
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86<br />
+_EOF_<br />
+</code></p>
+<p><code><br />
+opkg update &#038;&#038; opkg upgrade<br />
+</code></p>
+<p><code><br />
+opkg install bash &#038;&#038; opkg install less &#038;&#038; opkg install git<br />
+</code><br />
+<code><br />
+opkg install bash<br />
+opkg install less<br />
+opkg install git<br />
+</code></p>
+<p><code><br />
+chsh -s /bin/bash<br />
+</code></p>
+<p><code><br />
+vi /lib/systemd/system/sshd.socket<br />
+</code></p>
+<p>add # to BindToDevice=usb0 with a #</p>
+<p><code><br />
+opkg install libmraa0<br />
+</code></p>
+<p><code><br />
+ifconfig usb0 down &#038;&#038; ifconfig wlan0 down &#038;&#038; ifconfig wlan0 up<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/" rel="bookmark" class="wherego_title">Intel Edison R2 announce postmortem</a></li><li><a href="http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/" rel="bookmark" class="wherego_title">Intel Edison R2 beta firmware boot log</a></li><li><a href="http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/" rel="bookmark" class="wherego_title">intel edison wifi status</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3353/intel-edison-setup-command-line-tool/" />
+	</item>
+		<item>
+		<title>Intel Edison R2 beta firmware boot log</title>
+		<link>http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/</link>
+		<comments>http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/#comments</comments>
+		<pubDate>Wed, 11 Feb 2015 11:28:41 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3349</guid>
+		<description><![CDATA[Intel Edison R2 beta firmware boot log です。
+
+******************************
+PSH KERNEL VERSION: b0182929
+                WR: 20104000
+******************************
+SCU IPC: 0&#215;800000d0  0xfffce92c
+PSH miaHOB version: TNG.B0.VVBD.0000000c
+microkernel built 10:14:01 Jan 13 2015
+******* PSH loader *******
+PCM page cache size = 192 KB
+Cache Constraint = 0 Pages
+Arming IPC driver  [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edison R2 beta firmware boot log です。<br />
+<span id="more-3349"></span></p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182929<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0&#215;800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 10:14:01 Jan 13 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0&#215;04899000<br />
+pageStoreSize(IMR Size)          = 0&#215;00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jan 30 2015 &#8211; 14:15:53)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done&#8230;<br />
+Flashing already done&#8230;<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5348960 bytes read in 132 ms (38.6 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0&#215;00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jan 30 14:16:35 CET 2015<br />
+Building boot_params at 0&#215;00090000<br />
+Loading bzImage at address 00100000 (5333600 bytes)<br />
+Magic signature found<br />
+Kernel command line: &#8220;root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=da3656a35eeffe3c5d0973e21496fc52&#8243;</p>
+<p>Starting kernel &#8230;</p>
+<p>[    1.696423] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    1.706240] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    1.706325] pmic_ccsm pmic_ccsm: Battery0 temperature inside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device dev-ttyMFD2.device&#8230;<br />
+         Expecting device sys-subsystem-net-devices-wlan0.device&#8230;<br />
+[  OK  ] Reached target Remote File Systems.<br />
+         Expecting device dev-disk-by\x2dpartlabel-factory.device&#8230;<br />
+         Expecting device sys-subsystem-net-devices-usb0.device&#8230;<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Set up automount Arbitrary Executable File Formats F&#8230;utomount Point.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Created slice User and Session Slice.<br />
+[  OK  ] Created slice System Slice.<br />
+         Starting Create list of required static device nodes&#8230;rrent kernel&#8230;<br />
+         Starting Apply Kernel Variables&#8230;<br />
+         Starting udev Coldplug all Devices&#8230;<br />
+         Starting Journal Service&#8230;<br />
+[  OK  ] Started Journal Service.<br />
+         Mounting Debug File System&#8230;<br />
+         Starting Load Kernel Modules&#8230;<br />
+         Mounting POSIX Message Queue File System&#8230;<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems&#8230;<br />
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br />
+[  OK  ] Created slice system-getty.slice.<br />
+         Mounting Temporary Directory&#8230;<br />
+[  OK  ] Set up automount home.automount.<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Create list of required static device nodes &#8230;current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+         Mounting FUSE Control File System&#8230;<br />
+         Mounting Configuration File System&#8230;<br />
+         Starting Load/Save Random Seed&#8230;<br />
+         Starting Create Static Device Nodes in /dev&#8230;<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+         Starting udev Kernel Device Manager&#8230;<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile&#8230;<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Reached target Local File Systems.<br />
+         Starting Trigger Flushing of Journal to Persistent Storage&#8230;<br />
+         Starting Create Volatile Files and Directories&#8230;<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device&#8230;<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+[  OK  ] Found device /dev/ttyMFD2.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/factory.<br />
+         Mounting Mount for factory&#8230;<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+         Starting File System Check on /dev/disk/by-partlabel/home&#8230;<br />
+[  OK  ] Mounted Mount for factory.<br />
+[  OK  ] Reached target Sound Card.<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/home.<br />
+         Mounting /home&#8230;<br />
+[  OK  ] Found device /sys/subsystem/net/devices/wlan0.<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Mounted /home.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2&#8230;<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0&#8230;<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1&#8230;<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[    7.914319] systemd-fsck[159]: /dev/mmcblk0p10: recovering journal<br />
+[    7.951288] systemd-fsck[159]: /dev/mmcblk0p10: clean, 877/152608 files, 31363/610299 blocks<br />
+         Starting Network Time Synchronization&#8230;<br />
+         Starting Update UTMP about System Boot/Shutdown&#8230;<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Reached target Timers.<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+         Starting Restore Sound Card State&#8230;<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting Watchdog sample daemon&#8230;<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting Edison PWR button handler&#8230;<br />
+[  OK  ] Started Edison PWR button handler.<br />
+         Starting Bluetooth rf kill event daemon&#8230;<br />
+[  OK  ] Started Bluetooth rf kill event daemon.<br />
+         Starting Daemon to load edison mcu app binary&#8230;<br />
+[  OK  ] Started Daemon to load edison mcu app binary.<br />
+Mх�ѥ����A��������cK�K{s�Kcc+��C˛KcK##�+����F���L��VRL mapped to 0xff213000<br />
+        App size = 11484 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+         Starting Daemon to handle arduino sketches&#8230;<br />
+[  OK  ] Started Daemon to handle arduino sketches.<br />
+         Starting Daemon to reset sketches&#8230;<br />
+[  OK  ] Started Daemon to reset sketches.<br />
+         Starting Permit User Sessions&#8230;<br />
+         Starting D-Bus System Message Bus&#8230;<br />
+[  OK  ] Started D-Bus System Message Bus.<br />
+         Starting Network Service&#8230;<br />
+         Starting Login Service&#8230;<br />
+         Starting Crashlog service&#8230;<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Cleanjournal service&#8230;<br />
+[  OK  ] Started Cleanjournal service.<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Started Permit User Sessions.<br />
+[  OK  ] Started Login Service.<br />
+         Starting Daemon to receive the wpa_supplicant event&#8230;<br />
+[  OK  ] Started Daemon to receive the wpa_supplicant event.<br />
+         Mounting Arbitrary Executable File Formats File System&#8230;<br />
+         Starting Serial Getty on ttyMFD2&#8230;<br />
+[  OK  ] Started Serial Getty on ttyMFD2.<br />
+         Starting Getty on tty1&#8230;<br />
+[  OK  ] Started Getty on tty1.<br />
+[  OK  ] Reached target Login Prompts.<br />
+         Starting PulseAudio Sound System&#8230;<br />
+[  OK  ] Mounted Arbitrary Executable File Formats File System.<br />
+[  OK  ] Started Network Service.<br />
+[  OK  ] Reached target Network.<br />
+         Starting Intel_XDK_Daemon&#8230;<br />
+[  OK  ] Started Intel_XDK_Daemon.<br />
+         Starting Zero-configuration networking&#8230;<br />
+         Starting Mosquitto &#8211; lightweight server implementati&#8230;SN protocols&#8230;<br />
+         Starting Network Name Resolution&#8230;<br />
+         Starting Daemon to receive the wpa_supplicant event&#8230;<br />
+[  OK  ] Started Daemon to receive the wpa_supplicant event.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot&#8230;<br />
+[  OK  ] Started Network Name Resolution.<br />
+[  OK  ] Started WPA supplicant service.<br />
+[  OK  ] Started Mosquitto &#8211; lightweight server implementatio&#8230;T-SN protocols.<br />
+[  OK  ] Started Zero-configuration networking.<br />
+[   11.206590] systemd-fsck[269]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[   11.208982] systemd-fsck[269]: /dev/mmcblk0p7: 5 files, 2700/2931 clusters<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+[  OK  ] Started PulseAudio Sound System.<br />
+         Stopping Daemon to receive the wpa_supplicant event&#8230;<br />
+[  OK  ] Stopped Daemon to receive the wpa_supplicant event.<br />
+         Starting Daemon to receive the wpa_supplicant event&#8230;<br />
+[  OK  ] Started Daemon to receive the wpa_supplicant event.<br />
+         Starting Bluetooth service&#8230;<br />
+         Mounting /boot&#8230;<br />
+         Starting The Edison status and configuration service&#8230;<br />
+[  OK  ] Started The Edison status and configuration service.<br />
+[  OK  ] Reached target Multi-User System.<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started Bluetooth service.</p>
+<p>Poky (Yocto Project Reference Distro) 1.6.1 redbull ttyMFD2</p>
+<p>redbull login:</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3363/intel-edison-r2-announce-postmortem/" rel="bookmark" class="wherego_title">Intel Edison R2 announce postmortem</a></li><li><a href="http://andbrowser.com/intel-edison/3320/intel-edison-r2-firmware-beta-remaining-issues/" rel="bookmark" class="wherego_title">Intel Edison R2 Firmware beta remaining issues</a></li><li><a href="http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/" rel="bookmark" class="wherego_title">intel edison wifi status</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/" />
+	</item>
+		<item>
+		<title>intel edison wifi status</title>
+		<link>http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/</link>
+		<comments>http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/#comments</comments>
+		<pubDate>Wed, 11 Feb 2015 11:20:24 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3346</guid>
+		<description><![CDATA[Intel Edisonでwifi の状態を知るためのコマンドです。
+
+
+$ wpa_cli status
+Selected interface 'wlan0'
+bssid=XX:XX:XX:XX:XX:XX
+ssid= [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edisonでwifi の状態を知るためのコマンドです。<br />
+<span id="more-3346"></span></p>
+<p><code><br />
+$ wpa_cli status<br />
+Selected interface 'wlan0'<br />
+bssid=XX:XX:XX:XX:XX:XX<br />
+ssid=XXXXXXX<br />
+id=0<br />
+mode=station<br />
+pairwise_cipher=CCMP<br />
+group_cipher=CCMP<br />
+key_mgmt=WPA2-PSK<br />
+wpa_state=COMPLETED<br />
+ip_address=192.168.XXX.XXX<br />
+p2p_device_address=XX:XX:XX:XX:XX:XX<br />
+address=XX:XX:XX:XX:XX:XX<br />
+<code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/" rel="bookmark" class="wherego_title">A node.js BLE (Bluetooth low energy) central module</a></li><li><a href="http://andbrowser.com/intel-edison/3349/intel-edison-r2-beta-firmware-boot-log/" rel="bookmark" class="wherego_title">Intel Edison R2 beta firmware boot log</a></li><li><a href="http://andbrowser.com/intel-edison/3342/intel-edison-r2-firmware/" rel="bookmark" class="wherego_title">Intel Edison R2 firmware</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/" />
+	</item>
+		<item>
+		<title>Intel Edison R2 firmware</title>
+		<link>http://andbrowser.com/intel-edison/3342/intel-edison-r2-firmware/</link>
+		<comments>http://andbrowser.com/intel-edison/3342/intel-edison-r2-firmware/#comments</comments>
+		<pubDate>Wed, 11 Feb 2015 11:17:50 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3342</guid>
+		<description><![CDATA[
+$ cat /etc/version
+edison-rel1-maint-weekly_build_16_2014-10-14_14-56-19
+
+
+
+$ reboot ota
+
+
+root@redbull:~# reboot ota
+         Unmounting /home...
+[  OK  ] Stopped target Sound Card.
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.
+         Stopping Daemon to receive the wpa_supplicant event...
+[  OK  ] Stopped target Multi-User System.
+  [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+$ cat /etc/version<br />
+edison-rel1-maint-weekly_build_16_2014-10-14_14-56-19<br />
+</code><br />
+<span id="more-3342"></span><br />
+<code><br />
+$ reboot ota<br />
+</code></p>
+<p><code><br />
+root@redbull:~# reboot ota<br />
+         Unmounting /home...<br />
+[  OK  ] Stopped target Sound Card.<br />
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.<br />
+         Stopping Daemon to receive the wpa_supplicant event...<br />
+[  OK  ] Stopped target Multi-User System.<br />
+         Stopping The Edison status and configuration service...<br />
+         Unmounting Mount for factory...<br />
+         Stopping Edison PWR button handler...<br />
+         Stopping Disable the Runtime power management of SPI...<br />
+         Stopping Intel_XDK_Daemon...<br />
+         Stopping Bluetooth rf kill event daemon...<br />
+         Stopping Mosquitto - lightweight server implementati...SN protocols...<br />
+         Stopping Daemon to reset sketches...<br />
+         Stopping Network Name Resolution...<br />
+         Stopping WPA supplicant service...<br />
+[  OK  ] Stopped target Login Prompts.<br />
+         Stopping Serial Getty on ttyMFD2...<br />
+bull ttyMFD2</p>
+<p>         Stopping Login Service...<br />
+         Stopping D-Bus System Message Bus...<br />
+         Stopping Kernel Logging Service...<br />
+         Stopping System Logging Service...<br />
+         Stopping Watchdog sample daemon...<br />
+[  OK  ] Stopped Edison PWR button handler.<br />
+[  OK  ] Stopped Bluetooth rf kill event daemon.<br />
+[  OK  ] Stopped Daemon to reset sketches.<br />
+[  OK  ] Stopped Login Service.<br />
+[  OK  ] Stopped D-Bus System Message Bus.<br />
+[  OK  ] Stopped Kernel Logging Service.<br />
+[  OK  ] Stopped System Logging Service.<br />
+[  OK  ] Stopped Watchdog sample daemon.<br />
+[  OK  ] Stopped Getty on tty1.<br />
+[  OK  ] Stopped Intel_XDK_Daemon.<br />
+[  OK  ] Stopped Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+[  OK  ] Stopped The Edison status and configuration service.<br />
+[  OK  ] Stopped Network Name Resolution.<br />
+[  OK  ] Stopped Serial Getty on ttyMFD2.<br />
+[  OK  ] Failed unmounting /home.<br />
+[  OK  ] Unmounted Mount for factory.<br />
+[  OK  ] Stopped Disable the Runtime power management of SPI.<br />
+[  OK  ] Removed slice system-serial\x2dgetty.slice.<br />
+         Stopping Zero-configuration networking...<br />
+[  OK  ] Removed slice system-getty.slice.<br />
+         Stopping Permit User Sessions...<br />
+         Stopping Daemon to handle arduino sketches...<br />
+[  OK  ] Stopped Daemon to handle arduino sketches.<br />
+[  OK  ] Stopped Daemon to receive the wpa_supplicant event.<br />
+[  OK  ] Stopped Permit User Sessions.<br />
+[  OK  ] Stopped WPA supplicant service.<br />
+[  OK  ] Stopped target Remote File Systems.<br />
+[  OK  ] Stopped Zero-configuration networking.<br />
+[  OK  ] Stopped target Basic System.<br />
+[  OK  ] Stopped target Slices.<br />
+[  OK  ] Removed slice User and Session Slice.<br />
+[  OK  ] Stopped target Paths.<br />
+[  OK  ] Stopped target Timers.<br />
+[  OK  ] Stopped target Sockets.<br />
+[  OK  ] Closed sshd.socket.<br />
+[  OK  ] Closed D-Bus System Message Bus Socket.<br />
+[  OK  ] Closed Syslog Socket.<br />
+[  OK  ] Stopped target System Initialization.<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill0...<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill2...<br />
+         Stopping Load/Save RF Kill Switch Status of rfkill1...<br />
+         Stopping Network Time Synchronization...<br />
+         Stopping Apply Kernel Variables...<br />
+[  OK  ] Stopped Apply Kernel Variables.<br />
+         Stopping Load/Save Random Seed...<br />
+         Stopping Update UTMP about System Boot/Shutdown...<br />
+         Stopping Load Kernel Modules...<br />
+[  OK  ] Stopped Load Kernel Modules.<br />
+[  OK  ] Stopped target Swap.<br />
+[  OK  ] Stopped target Network.<br />
+[  OK  ] Stopped Network Time Synchronization.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Stopped Load/Save Random Seed.<br />
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Removed slice system-systemd\x2drfkill.slice.<br />
+         Stopping Create Volatile Files and Directories...<br />
+[  OK  ] Stopped Create Volatile Files and Directories.<br />
+[  OK  ] Stopped target Local File Systems.<br />
+         Unmounting /etc/machine-id...<br />
+[  OK  ] Unset automount home.automount.<br />
+[  OK  ] Unset automount boot.automount.<br />
+         Unmounting /var/volatile...<br />
+         Unmounting Temporary Directory...<br />
+[  OK  ] Unmounted /etc/machine-id.<br />
+[  OK  ] Unmounted /var/volatile.<br />
+[  OK  ] Unmounted Temporary Directory.<br />
+[  OK  ] Reached target Unmount All Filesystems.<br />
+[  OK  ] Stopped target Local File Systems (Pre).<br />
+         Stopping Remount Root and Kernel File Systems...<br />
+[  OK  ] Stopped Remount Root and Kernel File Systems.<br />
+[  OK  ] Reached target Shutdown.</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182727<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 23:15:13 Apr 24 2014</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Oct 14 2014 - 15:19:04)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+reading ota_update.scr<br />
+14747 bytes read in 27 ms (533.2 KiB/s)<br />
+## Executing script at 00100000<br />
+=== OTA update script ===<br />
+Validating Ota package<br />
+part find mmc 0 label:update u_part_num;<br />
+ota drive is mmc 0:9</p>
+<p>Validating edison_ifwi-dbg-00-dfu.bin hash for boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br />
+reading edison_ifwi-dbg-00-dfu.bin<br />
+4194304 bytes read in 107 ms (37.4 MiB/s)<br />
+hash sha1 0x6400000 400000 sha1_sum;<br />
+sha1 for 06400000 ... 067fffff ==> 16af670731ef43d8e415adebd93a841ab6763236<br />
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block</p>
+<p>Validating u-boot-edison.bin hash for u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br />
+reading u-boot-edison.bin<br />
+245760 bytes read in 31 ms (7.6 MiB/s)<br />
+part find mmc 0 label:u-boot0 u_part_num;<br />
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br />
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br />
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>hash sha1 0x6400000 3c000 sha1_sum;<br />
+sha1 for 06400000 ... 0643bfff ==> b7a923600f15c369602cd1911e9bc3eaf2ac348d</p>
+<p>Validating edison-image-edison.hddimg hash for boot partition<br />
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br />
+reading edison-image-edison.hddimg<br />
+6029312 bytes read in 149 ms (38.6 MiB/s)<br />
+part find mmc 0 label:boot u_part_num;<br />
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br />
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br />
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>hash sha1 0x6400000 5c0000 sha1_sum;<br />
+sha1 for 06400000 ... 069bffff ==> 4ad11552197f84f5f4abaebde55f43acb880f559</p>
+<p>Validating edison-image-edison.ext4 hash for rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br />
+reading edison-image-edison.ext4<br />
+536870912 bytes read in 11939 ms (42.9 MiB/s)<br />
+part find mmc 0 label:rootfs u_part_num;<br />
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br />
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br />
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>hash sha1 0x6400000 20000000 sha1_sum;<br />
+sha1 for 06400000 ... 263fffff ==> e541cc9f0c81b868942b4ae1e4133cdab41351bf</p>
+<p>Ota Pakage validated going to process it<br />
+## Executing script at 00100000<br />
+=== OTA update script ===<br />
+Processing Ota update<br />
+part find mmc 0 label:update u_part_num;<br />
+ota drive is mmc 0:9</p>
+<p>Update IFWI on boot0 and boot1 partitions</p>
+<p>fatload mmc 0:9 0x6400000 edison_ifwi-dbg-00-dfu.bin;<br />
+reading edison_ifwi-dbg-00-dfu.bin<br />
+4194304 bytes read in 107 ms (37.4 MiB/s)<br />
+edison_ifwi-dbg-00-dfu.bin size is 0x400000 bytes and 0x2000 block<br />
+mmc dev 0 1;<br />
+switch to partitions #1, OK<br />
+mmc0(part 1) is current device<br />
+mmc write 0x6400000 0x0 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br />
+mmc dev 0 2;<br />
+switch to partitions #2, OK<br />
+mmc0(part 2) is current device<br />
+mmc write 0x6400000 0x00 2000;</p>
+<p>MMC write: dev # 0, block # 0, count 8192 ... 8192 blocks write: OK<br />
+switch to partitions #0, OK<br />
+mmc0(part 0) is current device</p>
+<p>Update of edison_ifwi-dbg-00-dfu.bin to boot0 and boot1 partitions Done</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition</p>
+<p>fatload mmc 0:9 0x6400000 u-boot-edison.bin;<br />
+reading u-boot-edison.bin<br />
+245760 bytes read in 31 ms (7.6 MiB/s)<br />
+part find mmc 0 label:u-boot0 u_part_num;<br />
+part info mmc 0:1 u_part_start u_part_sz u_part_blksz;<br />
+Partition u-boot0 Start:0x800 Size:0x1000 BlockSize:0x200<br />
+u-boot-edison.bin size is 0x3c000 bytes and 0x1e0 block</p>
+<p>mmc write 0x6400000 800 1e0;</p>
+<p>MMC write: dev # 0, block # 2048, count 480 ... 480 blocks write: OK</p>
+<p>Update of u-boot-edison.bin to u-boot0 partition  Done</p>
+<p>Update of edison-image-edison.hddimg to boot partition<br />
+fatload mmc 0:9 0x6400000 edison-image-edison.hddimg;<br />
+reading edison-image-edison.hddimg<br />
+6029312 bytes read in 149 ms (38.6 MiB/s)<br />
+part find mmc 0 label:boot u_part_num;<br />
+part info mmc 0:7 u_part_start u_part_sz u_part_blksz;<br />
+Partition boot Start:0x10000 Size:0x10000 BlockSize:0x200<br />
+edison-image-edison.hddimg size is 0x5c0000 bytes and 0x2e00 block</p>
+<p>mmc write 0x6400000 10000 2e00;</p>
+<p>MMC write: dev # 0, block # 65536, count 11776 ... 11776 blocks write: OK</p>
+<p>Update of edison-image-edison.hddimg to boot partition  Done</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition</p>
+<p>fatload mmc 0:9 0x6400000 edison-image-edison.ext4;<br />
+reading edison-image-edison.ext4<br />
+536870912 bytes read in 11939 ms (42.9 MiB/s)<br />
+part find mmc 0 label:rootfs u_part_num;<br />
+part info mmc 0:8 u_part_start u_part_sz u_part_blksz;<br />
+Partition rootfs Start:0x20000 Size:0x100000 BlockSize:0x200<br />
+edison-image-edison.ext4 size is 0x20000000 bytes and 0x100000 block</p>
+<p>mmc write 0x6400000 20000 100000;</p>
+<p>MMC write: dev # 0, block # 131072, count 1048576 ... 1048576 blocks write: OK</p>
+<p>Update of edison-image-edison.ext4 to rootfs partition  Done</p>
+<p>Ota Success going to reboot<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Saving Environment to MMC...<br />
+Writing to MMC(0)... done<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182929<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 10:14:01 Jan 13 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jan 30 2015 - 14:15:53)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5348960 bytes read in 132 ms (38.6 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jan 30 14:16:35 CET 2015<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5333600 bytes)<br />
+Magic signature found<br />
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 systemd.unit=ota-update.target hardware_id=00 g_multi.iSerialNumber=da3656a35eeffe3c5d0973e21496fc52"</p>
+<p>Starting kernel ...</p>
+<p>[    1.681610] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    1.688728] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    1.688818] pmic_ccsm pmic_ccsm: Battery0 temperature inside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device sys-subsystem-net-devices-usb0.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Set up automount Arbitrary Executable File Formats F...utomount Point.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Starting Apply Kernel Variables...<br />
+         Starting udev Coldplug all Devices...<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+         Mounting Debug File System...<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Load Kernel Modules...<br />
+         Mounting POSIX Message Queue File System...<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+         Starting Create Volatile Files and Directories...<br />
+         Mounting Temporary Directory...<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+         Starting Load/Save Random Seed...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Opkg first boot configure...<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Started Opkg first boot configure.<br />
+         Mounting Configuration File System...<br />
+         Mounting FUSE Control File System...<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Reached target Timers.<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+         Starting Restore Sound Card State...<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br />
+[  OK  ] Reached target Sound Card.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting OTA update service...<br />
+[  OK  ] Started OTA update service.<br />
+[  OK  ] Reached target OTA update target.<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting Generate unique machine-id...<br />
+[    8.423070] sh[189]: Starting OTA update (try: 0)<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Cleanjournal service...<br />
+[  OK  ] Started Cleanjournal service.<br />
+[    8.670760] systemd-machine-id-setup[219]: Initializing machine ID from random generator.<br />
+[    8.762509] systemctl[221]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br />
+[  OK  ] Started Generate unique machine-id.<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br />
+         Starting OpenSSH Key Generation...<br />
+         Mounting Arbitrary Executable File Formats File System...<br />
+[    9.819357] systemd-fsck[231]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[    9.872390] systemd-fsck[231]: /dev/mmcblk0p7: 5 files, 2700/2931 clusters<br />
+[  OK  ] Mounted Arbitrary Executable File Formats File System.<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+         Mounting /boot...<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started OpenSSH Key Generation.<br />
+[   22.265535] sh[189]: Generating sshd keys : Success<br />
+[   22.290726] sh[189]: Update file system table /etc/fstab : Success<br />
+[   23.674984] sh[189]: Generating Wifi Access Point SSID and passphrase : Success<br />
+[   23.703132] sh[189]: OTA update success<br />
+[   23.742610] sh[189]: Rebooting....<br />
+[   23.792403] sh[189]: No journal files were found.<br />
+Application available at (physical) address 0x04819000<br />
+        VRL mapped to 0xff213000<br />
+        App size = 11484 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+[   24.683861] resize2fs[288]: resize2fs 1.42.9 (28-Dec-2013)<br />
+[   24.883765] resize2fs[288]: The filesystem is already 131072 blocks long.  Nothing to do!<br />
+[   25.400353] systemctl[322]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br />
+[   26.361741] systemd-fsck[345]: /dev/mmcblk0p10: clean, 868/152608 files, 29308/610299 blocks</p>
+<p>Poky (Yocto Project Reference Distro) 1.6.1 edison ttyMFD2</p>
+<p>edison login:<br />
+</code></p>
+<p><code><br />
+root@edison:~# cat /etc/version<br />
+weekly-120<br />
+root@edison:~#</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3346/intel-edison-wifi-status/" rel="bookmark" class="wherego_title">intel edison wifi status</a></li><li><a href="http://andbrowser.com/intel-edison/3359/intel-edison-ac-addapter/" rel="bookmark" class="wherego_title">Intel Edison AC Addapter</a></li><li><a href="http://andbrowser.com/intel-edison/3332/intel-edison-r2-firmware-beta-known-issues/" rel="bookmark" class="wherego_title">Intel Edison R2 Firmware beta known issues</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/intel-edison/3342/intel-edison-r2-firmware/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/intel-edison/3342/intel-edison-r2-firmware/" />
+	</item>
+	</channel>
+</rss>

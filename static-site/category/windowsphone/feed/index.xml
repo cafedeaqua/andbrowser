@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; WindowsPhone</title>
+	<atom:link href="http://andbrowser.com/category/windowsphone/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/windowsphone/feed/" />
+		<item>
+		<title>[WP7] System.Windows.Interactivity.dll のエラー対処方法</title>
+		<link>http://andbrowser.com/windowsphone/1003/wp7-system-windows-interactivity-dll-erro/</link>
+		<comments>http://andbrowser.com/windowsphone/1003/wp7-system-windows-interactivity-dll-erro/#comments</comments>
+		<pubDate>Mon, 13 Aug 2012 14:14:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[WindowsPhone]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1003</guid>
+		<description><![CDATA[WindowsPhone7.1 SDK開発の System.Windows.Interactivity.dll のエラー対処方法]]></description>
+			<content:encoded><![CDATA[<p>WindowsPhone7.1 SDK を利用したWindowsPhone7.5端末向けアプリ開発ではまった点があったので、メモしておきます。</p>
+<p>Blend 4 でMouseDragElementBehavior をビヘイビアとして、Image に追加したあとに、Blend 上からビルドしようとすると以下のようなエラーが発生して、ビルドできませんでした。</p>
+<blockquote><p>
+Errors:</p>
+<p>Error 1 The property &#8216;Behaviors&#8217; does not exist on the type &#8216;Border&#8217; in the XML namespace &#8216;clr-namespace:System.Windows.Interactivity; assembly=System.Windows.Interactivity&#8217;. C:\&#8230;&#8230;\MyDocuments\Silverlight_Quickstarts\MouseDrag\MainPage.xaml 10 14 MouseDrag</p>
+<p>Error 2 The tag &#8216;MouseDragElementBehavior&#8217; does not exist in XML namespace &#8216;clr-namespace:Microsoft.Expression.Interactivity.Layout; assembly=Microsoft.Expression.Interactions&#8217;. C:\&#8230;&#8230;.\MyDocuments\Silverlight_Quickstarts\MouseDrag\MainPage.xaml 11 18 Mou
+</p></blockquote>
+<p>ネット上を調べていると、同様のエラーではまっている人が多数いました。</p>
+<p>特に以下の２つが解決に役に立ちました。<br />
+<span id="more-1003"></span><br />
+<a href="http://stackoverflow.com/questions/5755270/where-do-i-find-system-windows-interactivity-as-redistributable">http://stackoverflow.com/questions/5755270/where-do-i-find-system-windows-interactivity-as-redistributable</a><br />
+<a href="http://social.expression.microsoft.com/Forums/en-US/blend/thread/252007b8-1466-4c73-9680-3c19a08d50fc">http://social.expression.microsoft.com/Forums/en-US/blend/thread/252007b8-1466-4c73-9680-3c19a08d50fc</a></p>
+<p>結論からいうと<br />
+・.NET 3.5 のライブラリが必要<br />
+ということでした。</p>
+<p>というわけで、<br />
+<a href="http://www.microsoft.com/ja-jp/download/details.aspx?id=14422">http://www.microsoft.com/ja-jp/download/details.aspx?id=14422</a><br />
+ここから<br />
+MSChart.exe<br />
+をダウンロードして、インストールすると、Blend 3がインストールされます。</p>
+<p>と書いていて、ほんとにこれで Blend 3がインストールされるのか？という疑問が出てきました。<br />
+既に私の環境ではいまビルドが通る環境になってしまっているので、確かめようがありませんが<br />
+思い出して書いていると、これがBlend 3のインストールに関連しているようにみえます。</p>
+<p>Blend 3がインストールされると、以下のフォルダ(Windows 7環境の場合）に System.Windows.Interactivity.dll がインストールされるので<br />
+これを、いまのプロジェクトのSystem.Windows.Interactivity.dll　と置き換えれば、上記のエラーが発生せずにビルドできるようになります。</p>
+<blockquote><p>
+C:\Program Files (x86)\Microsoft SDKs\Expression\Blend 3\Interactivity\Libraries\WPF
+</p></blockquote>
+<p>再現性のないメモですが誰かに役に立っていれば幸いです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/" rel="bookmark" class="wherego_title">SDK Tools r15 の ant から proguard 利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/1016/android-market-google-play-apk-upload-error-integer-value-to-android-manifest/" rel="bookmark" class="wherego_title">AndroidMarket(Google Play)にアプリをアップロードが失敗する条件（未解決）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/windowsphone/1003/wp7-system-windows-interactivity-dll-erro/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/windowsphone/1003/wp7-system-windows-interactivity-dll-erro/" />
+	</item>
+	</channel>
+</rss>

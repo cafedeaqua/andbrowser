@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; eclipse</title>
+	<atom:link href="http://andbrowser.com/tag/eclipse/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/eclipse/feed/" />
+		<item>
+		<title>ADT(Android Developer Tools) ダウンロードURL一覧</title>
+		<link>http://andbrowser.com/development/918/old-adt-download-url/</link>
+		<comments>http://andbrowser.com/development/918/old-adt-download-url/#comments</comments>
+		<pubDate>Sun, 21 Dec 2014 05:00:56 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=918</guid>
+		<description><![CDATA[Android SDKの古いADTのダウンロードURLの一覧を記載
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/android_adt_plugin_old.png" alt="" title="android_adt_plugin_old" width="384" height="220" class="aligncenter size-full wp-image-921" /></p>
+<p>
+Android ADTは新しいバージョンが続々と登場してきます。そうすると、Android SDK の <a href="http://developer.android.com/sdk/installing/installing-adt.html">ADT install サイト</a>から古いもののダウンロードリンクが無くなってしまいます。但し、eclipseのバージョンや過去のプロジェクトを古いADTで急にバージョンアップしたい場合などに急に必要になることがあります。そのため、以下に古いADTのリンクを作成しておきます。これでいつでも素早く古いADTもダウンロードできます。<br />
+<span id="more-918"></span></p>
+<p>
+ADTの最新プレビュー版を利用したいという猛者の方は、<a href="http://tools.android.com/preview-channel">Android Tools Project Site Preview Channel</a> にダウンロード方法が記載しているのでご覧ください。</p>
+<p>
+最新版のADTをインストール後に問題が発生して、古いADTに戻したい場合は、<a href="http://www.sakc.jp/blog/archives/1186">[Android TIPS]　旧バージョンで開発環境を構築する</a>や<a href="http://futabooo.hatenablog.com/entry/2012/07/13/125443">AndroidSDKToolsのrevisionとADTのバージョンを下げる方法</a>の記事が参考になると思います。<a href="http://futabooo.hatenablog.com/entry/2012/06/28/235242">AndroidSDKToolsのrevision20にしたらエライ目にあった</a> という方も居られるようですので。
+</p>
+<h4> 過去のADT のダウンロードURL一覧</h4>
+<ul>
+<li>ADT 23.0.4(October 2014)
+<ul>
+<li><a href="https://dl.google.com/android/ADT-23.0.4.zip">https://dl.google.com/android/ADT-23.0.4.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.4(May 2014)
+<ul>
+<li>http://dl.google.com/android/ADT-22.6.4.zip（リンク先ファイル無し）
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.3(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.3.zip">http://dl.google.com/android/ADT-22.6.3.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.2(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.2.zip">http://dl.google.com/android/ADT-22.6.2.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.1 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.1.zip">http://dl.google.com/android/ADT-22.6.1.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.0 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.0.zip">http://dl.google.com/android/ADT-22.6.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6-linux.tgz">https://dl.google.com/android/android-sdk_r22.6-linux.tgz</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-6/">Android Development Tools(ADT) 22.6 更新情報</a>
+	</ul>
+</li>
+<li>ADT 22.3.0 (October 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.3.0.zip">http://dl.google.com/android/ADT-22.3.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.3-linux.tgz">https://dl.google.com/android/android-sdk_r22.3-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.2.1 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.1.zip">http://dl.google.com/android/ADT-22.2.1.zip</a>
+	</ul>
+</li>
+<li>ADT 22.2 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.0.zip">http://dl.google.com/android/ADT-22.2.0.zip</a>
+	</ul>
+</li>
+<li>ADT 22.0.5 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.5.zip</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.4 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.4.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-4/">Android Development Tools(ADT) 22.0.4 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.1 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.1.zip">http://dl.google.com/android/ADT-22.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-1/">Android Development Tools(ADT) 22.0.1 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.0 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.0.zip">http://dl.google.com/android/ADT-22.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-0/">Android Development Tools(ADT) 22.0.0 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 21.1.0 (February  2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.1.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/">Android Development Tools(ADT) 21.1.0 更新情報</a>
+	</ul>
+</li>
+<li>ADT 21.0.1 (December 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 20.0.0 (June 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-20.0.0.zip">http://dl.google.com/android/ADT-20.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/">Android Development Tools(ADT) 20.0.0 更新情報</a>
+<li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/">Android Development Tools(ADT) 20.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 18.0.0 (April 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-18.0.0.zip">http://dl.google.com/android/ADT-18.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 17.0.0 (March 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-17.0.0.zip">http://dl.google.com/android/ADT-17.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 16.0.1 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.1.zip">http://dl.google.com/android/ADT-16.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/">Android Development Tools(ADT) r16.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 16.0.0 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.0.zip">http://dl.google.com/android/ADT-16.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/">Android Development Tools(ADT) 16 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.1 (November 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.1.zip">http://dl.google.com/android/ADT-15.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/">Android Development Tools (ADT) 15.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.0.zip">http://dl.google.com/android/ADT-15.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 14.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-14.0.0.zip">http://dl.google.com/android/ADT-14.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 12.0.0 (July 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-12.0.0.zip">http://dl.google.com/android/ADT-12.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 11.0.0 (June 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-11.0.0.zip">http://dl.google.com/android/ADT-11.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.1 (March 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.1.zip">http://dl.google.com/android/ADT-10.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.0 (February 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.0.zip">http://dl.google.com/android/ADT-10.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 9.0.0 (January 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-9.0.0.zip">http://dl.google.com/android/ADT-9.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.1 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.1.zip">http://dl.google.com/android/ADT-8.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.0 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.0.zip">http://dl.google.com/android/ADT-8.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.9 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.9.zip">http://dl.google.com/android/ADT-0.9.9.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.8 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.8.zip">http://dl.google.com/android/ADT-0.9.8.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.7 (May 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.7.zip">http://dl.google.com/android/ADT-0.9.7.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.6 (March 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.6.zip">http://dl.google.com/android/ADT-0.9.6.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.5 (December 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.5.zip">http://dl.google.com/android/ADT-0.9.5.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.4 (October 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.4.zip">http://dl.google.com/android/ADT-0.9.4.zip</a>
+	</ul>
+</li>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.1 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/" rel="bookmark" class="wherego_title">ADT 22.6.3 and SDK Tools 22.6.3 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/918/old-adt-download-url/feed/</wfw:commentRss>
+		<slash:comments>30</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/918/old-adt-download-url/" />
+	</item>
+		<item>
+		<title>CrashlyticsでAndroidアプリの品質向上を実現</title>
+		<link>http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/</link>
+		<comments>http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/#comments</comments>
+		<pubDate>Wed, 07 May 2014 09:15:36 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2339</guid>
+		<description><![CDATA[CrashlyticsでAndroidアプリにEclipse Crashlytics plugin経由でインストールし、実際にクラッシュを発生させて活用方法を習得
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics.png" alt="" title="crashlytics" width="600" class="aligncenter size-full wp-image-2340" /></p>
+<h4>Crashlyticsとは？</h4>
+<p><a href="crashlytics.com">Crashlytics</a>はAndroid, iOSのアプリ開発向けにクラッシュレポートなどの情報をレポートしてくれるウェブサービスです。Android, iOS向けに簡単に組込みができるライブラリも準備されています。レポートを見る画面などは以下のようにとても綺麗にデザインされており、いま風なUIになっています。<br />
+<span id="more-2339"></span><br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_03.png" alt="" title="crashlytics_03" width="500" class="aligncenter size-medium wp-image-2341" /></p>
+<h4>アカウント作成</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_02.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_02.png" alt="" title="crashlytics_02" width="500" class="aligncenter size-full wp-image-2344" /></a><br />
+トップページの上記の項目に名前とメールアドレスを入力するとアカウント登録が行えます。但し、アカウント登録はすぐに完了するわけではなく、名前とメールアドレスを入力するとwaiting listに掲載されるようで、後日メールでアカウント登録の返事が届きます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_04.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_04.png" alt="" title="crashlytics_04" width="500" class="aligncenter size-full wp-image-2347" /></a></p>
+<p>私の場合は夜に実施して、翌朝起きたら以下のようなHTMLメールが届いていて、アカウント登録ができました。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_05.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_05.png" alt="" title="crashlytics_05" width="500" class="aligncenter size-full wp-image-2349" /></a></p>
+<h4>Android向けのSDKの入手</h4>
+<p>
+アカウント登録後にCrashlyticsにログインして、Android用のSDKを入手します。以下のようにAndroid Stdio用、Eclipse用、Intelli J用の3種類が用意されています。今回は Eclipse用を利用します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_10.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_10.png" alt="" title="crashlytics_10" width="600" class="aligncenter size-full wp-image-2359" /></a></p>
+<p>Eclipseの場合、eclipse pluginの形式でSDKが提供されます。インストールは簡単で、eclipse pluginをインストールする方法の<br />
+Eclipseのメニューの以下のように Help -> Install New Softwareから選択し、「https://crashlytics.com/download/eclipse」を入力します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_11.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_11.png" alt="" title="crashlytics_11" width="600" class="aligncenter size-full wp-image-2361" /></a></p>
+<p>あとは、Eclipse pluginの仕組みにのっとってインストールを行います。インストールが完了すると以下のようにツールバーに Crashlytics のアイコンが表示されます。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_12.png" alt="" title="crashlytics_12" width="480" height="275" class="aligncenter size-full wp-image-2363" /></p>
+<h4>Eclipse ProjectへのSDKの適用</h4>
+<p>アイコンをクリックして、Crashlytics にログインします。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_13.png" alt="" title="crashlytics_13" width="385" height="630" class="aligncenter size-full wp-image-2365" /></p>
+<p>Eclipse Package Explorer で表示されているプロジェクトが以下のように表示されるため、Crashlytics の SDKをインストールしたい Project を選択します。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_14.png" alt="" title="crashlytics_14" width="386" height="645" class="aligncenter size-full wp-image-2367" /></p>
+<p>ここからが素晴らしいポイントなのですが、このpluginは libs フォルダへのcrashlytics.jarのインストールだけでなく、いくつかの必要なコードの追加まで自動的に実施してくれます。但し、これによる副作用もあるため、それについては後述します。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_15.png" alt="" title="crashlytics_15" width="376" height="642" class="aligncenter size-full wp-image-2368" /></p>
+<p>自動的に追加してくれるコードは以下のものになります。</p>
+<ul>
+<li>AndroidManifest.xml の中に &lt;uses-permission android:name=&#8221;android.permission.INTERNET&#8221; /&gt;と  &lt;meta-data android:name=&#8221;com.crashlytics.ApiKey&#8221; android:value=&#8221;?????????&#8221;/&gt; の追加。(????の部分はpluginが自動的に適切な値をいれてくれます）
+<li>ホームアプリから起動されるActivity の onCreate() の中に Crashlyticsの初期化コードを追加。具体的には、Crashlytics.start(this); の1行。
+<li>res/values/com_crashlytics_export_strings.xml ファイルを自動的に追加。中身がビルドするたびに変更されるため、SCMの管理対象外とします（.gitignore に追加）
+</ul>
+<p>なお、追加される API key の発行がアプリ単位ではなく、Company 単位だそうです。</p>
+<p>自動的に追加された状態でアプリ内で発生した Exception などの情報をCrashlytics SDKが取得して裏でWebサービスへのアップロードを実施してくれます。自分の検証だけでは発見しづらい、環境面による Exception などの情報をウェブサービスや Pluginから見れるようになります。しかも、Daily でメールで1日のcrash情報のサマリーが送られてくるので忘れずに確認することができます。</p>
+<h4>注意点</h4>
+<p> Pluginが上記のように自動的に必要なコードを追加してくれるのはうれしいことなのですが、以下のような課題もあるため注意が必要です。</p>
+<ul>
+<li>文字化け対策
+<li>初期化コードの追加漏れの対策
+</ul>
+<h5>文字化け対策</h5>
+<p>コメントなどに日本語が入ったソースコード（UTF8で保存済）に対して、Eclupse Crashlytics pluginが自動的にコードが追加した場合に文字化けが発生。そのため、そのような場合は、手動で初期化コードを追加しましょう。Crashlytics.start(this);を追加する場所は、onCreate() の         super.onCreate(savedInstanceState); の後で         setContentView(R.layout.detail_main);の前に追加されるようなので、その場所がよいでしょう。</p>
+<h5>初期化コードの追加漏れの対策</h5>
+<p>ホームアプリから起動されるだけでなく、Intent 連携などで起動されるアプリの場合、その起動されるActivity(*2) の onCreate()などの中に手動でCrashlytics.start(this);を追加しましょう。起動されるActivity(*2) がホームアプリから起動されるActivity(*1) の次に呼び出される場合とIntent連携で直接呼び出される場合がある場合でも、Crashlytics.start(this);の中で適切な処理が実施されており、2回呼び出されても問題ないそうです。</p>
+<h4>試しに Crash を起こしてみる</h4>
+<p>正しく crash が通知されるかどうかを確かめるために、onCreate()の中でわざとexception を追加して、crash report を受領してみましょう。<br />
+以下のようなコードを onCreate()の最後に追加します。</p>
+<pre class="brush: java; first-line: 1;" >
+throw new RuntimeException("This is a crash");
+</pre>
+<p>追加したあとに eclipse からビルド、インストール、実行をすると起動時にexceptionが発生します。その後、<a href="http://www.crashlytics.com/">http://www.crashlytics.com/</a>にログインすると、以下のように確認できます。</p>
+<h5>レポートの中身</h5>
+<p>レポート画像には以下の情報が記載されます。</p>
+<ul>
+<li>クラッシュの発生日付と数
+<li>端末の種類
+<li>OS Version
+<li>端末のルート化の有無
+<li>内部ストレージの容量、割合
+<li>RAMの容量、割合
+<li>APP IN FOCUS(？）（想像：ユーザが利用中に発生した or 裏で発生したかどうか）
+<li>PROXIMITY IN（？）（近接センサーの設定有無）
+<li>端末の向き
+<li>バッテリー残量
+<li>クラッシュ時のスタックトレース
+</ul>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_20.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_20.png" alt="" title="crashlytics_20" width="600" class="aligncenter size-full wp-image-2372" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_21.png"><img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_21.png" alt="" title="crashlytics_21" width="600" class="aligncenter size-full wp-image-2373" /></a></p>
+<p>しかも、crash report はウェブサービスだけでなく、以下のように Eclipse の Crashlytics pluginからも閲覧可能です。pluginから該当する crash を選択するとウェブサービスのほうで詳細なレポートを確認できます。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/crashlytics_22.png" alt="" title="crashlytics_22" width="356" height="632" class="aligncenter size-full wp-image-2375" /></p>
+<h4>クラッシュレポート以外の利用方法</h4>
+<p>クラッシュレポート以上の使い方として、自由に任意のString, Bool, Double, Float, Int などを保存し、レポートに送信することもできるので、Google Analytics for Android のような特定のActivityが起動されたコンバージョンや閾値を超えた場合のレポートなどにも利用できます。</p>
+<pre class="brush: java; first-line: 1;" >
+Crashlytics.setString(key, value);
+</pre>
+<pre class="brush: java; first-line: 1;" >
+void setBool(String key, boolean value);
+void setDouble(String key, double value);
+void setFloat(String key, float value);
+void setInt(String key, int value);
+</pre>
+<pre class="brush: java; first-line: 1;" >
+Crashlytics.setInt("current_level", 3);
+Crashlytics.setString("last_UI_action", "logged_in");
+</pre>
+<h4>まとめ</h4>
+<p>このサービスをいれてクラッシュレポートが来ると、なぜだかうれしくなり、すぐに修正して、issue を close したくなりますね。それはつまり、いままでユーザの手元で起こっていたexceptionをいままで開発者が知ることもなしに、ユーザの満足度を下げていたことの表れだと思うとユーザに申し訳なく思いますし、会社のアプリだとするとそれだけで競争力の低下につながってしまいます。実際に利用してみるとプロジェクトへの適用の簡便さ、クラッシュレポートのリアルタイム性、レポートの見易さなどがとても良いと感じました。まだ小さな課題はいくつもあるものの、Android Stdio向けのサポートも用意しているということでまだまだ前に進んでいってくれるサービスだと思います。このCrashlyticsは<a href="https://blog.twitter.com/2013/crashlytics-update">twitter が買収した</a>こともあり、無料で商用レベルの機能が利用でき、大きな後ろ盾があるため、安心して利用していけると思います。これからのさらなる進化が楽しみです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" rel="bookmark" class="wherego_title">Crashlytics ライブラリの Android Studio対応</a></li><li><a href="http://andbrowser.com/intel-edison/3477/prototyping-for-edison/" rel="bookmark" class="wherego_title">ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 21.1.0 更新情報</title>
+		<link>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/</link>
+		<comments>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/#comments</comments>
+		<pubDate>Wed, 13 Mar 2013 18:13:12 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1578</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21.1.0 更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/03/person_adt_21.1.0.jpg" alt="Android Development Tools(ADT) 21.1.0" title="Android Development Tools(ADT) 21.1.0" width="640" height="427" class="aligncenter size-full wp-image-1581" /></p>
+<h4>ADT 21.1.0 <em>(2013年2月)</em></h4>
+<p><span id="more-1578"></span></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/03/adt_21.1.0.png"><img src="http://andbrowser.com/wp-content/uploads/2013/03/adt_21.1.0-300x255.png" alt="adt_21.1.0" title="adt_21.1.0" width="300" height="255" class="aligncenter size-medium wp-image-1583" /></a></p>
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>ADT 21.1.0 を利用するために Java 1.6 かそれ以降が必要</li>
+<li>ADT 21.1.0 を利用するためには Eclipse Helios (Version 3.6.2) かそれ以降が必要</li>
+<li>ADT 21.1.0 は、SDK tools r20.0.1 を利用するために設計されています。<a href="http://developer.android.com/tools/sdk/tools-notes.html">SDK Tools r21.1</a>. まだSDK Tools r21.1をインストールしていない場合は、SDK manager からインストールしてください。</li>
+</ul>
+</dd>
+<dt>一般連絡:</dt>
+<dd>
+<ul>
+<li>noticationsと brank fragment と list fragments の新しい<a href="http://andbrowser.com/tools/projects/templates.html">コードテンプレート</a>を追加</li>
+<li>リソースの名前変更のリファクタリングをサポート。XMLファイルや drawable アイコンや <code>R.</code>フィールド名やIDのレイアウトエディタ内のものに対するリファクタリングを実施すると参照しているものも更新されます。</li>
+<li>15以上の新しい Lint check を追加。古い APIの override に関するチェックや、XMLリソースの問題や、graphic asset に関する項目やmanifest タグに関するもの。
+<li><strong>Refactor &gt; Rename</strong>のメニューのようなリファクタリングのショートカットキーをXMLエディタに対して更新。</li>
+<li>ダブルクリックのハンドリングの改良をXMLエディタに対して実施</li>
+<li>カスタムビューやテーマ参照やクラス参照に関するコード補完を追加。例えば、<code>&lt;fragment android:name=””&gt;</code> タグに対して、フラグメントクラスの一覧を提案するようなものです。同様に、マニフェスト上で入力に対する最適な提案も行われます。</li>
+<li>すべてのインポートできるプロジェクトの一覧からプロジェクト名を編集できるようにするための <strong>Project Import</strong>ダイアログの更新。</li>
+<li>レイアウトエディタのlayout aliasesのサポートを追加</li>
+</ul>
+</dd>
+<dt>不具合修正:</dt>
+<dd>
+<ul>
+<li>パッケージやクラスの名前変更や移動に関するリファクタリングに関する項目を修正</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/1606/april-2-2013-android-platform-versions/" rel="bookmark" class="wherego_title">ICS以上で54%に増加。2013年4月2日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/1953/android-app-recommend-color-code/" rel="bookmark" class="wherego_title">Androidアプリ開発時に迷った場合にオススメのカラーコード</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/" />
+	</item>
+		<item>
+		<title>Android Lint 解析内容の詳細を調査</title>
+		<link>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/</link>
+		<comments>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/#comments</comments>
+		<pubDate>Sun, 25 Dec 2011 12:54:11 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=787</guid>
+		<description><![CDATA[Android Lint 解析内容の詳細を調査]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_android_list_check.png" alt="android lint check detail" title="android lint check detail" width="578" height="284" class="aligncenter size-full wp-image-809" /></p>
+<h4>Android Lintの解析内容の詳細</h4>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>については、<a href="http://andbrowser.com/development/knowhow/712/android-lint/">前のエントリ</a>をご参照ください。このエントリでは、以下の<code>lintコマンド</code>で表示される lint の解析内容をカテゴリごとに整理し、指摘事項の詳細をまとめました。。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show
+</pre>
+<p><span id="more-787"></span></p>
+<p>以下の詳細を見る前にいくつかポイントを整理しておきます。</p>
+<ul>
+<li>優先度(Priority)は数字が大きい（10が最大）ものが高いことを意味します。
+<li>重要性（severity)は変更可能。全プロジェクトのみではなく、各プロジェクトごとにも設定可能。変更は、eclipse > preference > Android > Lint Error Checking で実施。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/12/20111225_lint_detail.png" alt="android lint preference" title="android lint preference" width="105%"/></p>
+<li>セーブ時に一部チェックの自動適用の可否を設定可能
+<li>アプリパッケージ作成時のフルチェックの可否を設定可可能
+<li>指摘項目は適時更新されて追加しているため、掲載不足のものもあります。それらは、<code>lint --showコマンド</code>か preference の Lint Error Checking で詳細をご覧ください。
+<li>エラーが発生すると apk 作成を中止するため、重要性(severity)を警告からエラーにする場合は熟慮することをお薦めします。
+</ul>
+<h4>Lintの解析項目一覧</h4>
+<table width="100%" class="lint_detail">
+<tr>
+<th width="10%">カテゴリ<br />Category</th>
+<th width="5%">ID</th>
+<th width="15%">概要<br />Name</th>
+<th width="5%">優先度<br />Priority</th>
+<th width="5%">重要性<br />Severity</th>
+<th width="60%">詳細<br />Detail</th>
+</tr>
+<tr>
+<td>正確性</td>
+<td>AdapterViewChildren</td>
+<td>XML内の子Viewとして定義されていない AdapterView かどうかを調査</td>
+<td>10/10</td>
+<td>警告</td>
+<td>ListViewのようなAdapterViewは、ListAdapterのようなもので、Javaコードからデータを設定しなければなりません。より詳細は、<a href="http://developer.android.com/reference/android/widget/AdapterView.html">http://developer.android.com/reference/android/widget/AdapterView.html</a>を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>MissingPrefix</td>
+<td>Androidネームスペースで利用されていないXML属性を発見</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Android viewたちのほとんどは、Androidネームスペースの属性をもっています。これらの属性を参照する場合は、必ずネームスペースの接頭語をつけるべきです。さもないとカスタム属性として aapt に解釈されます。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>MissingTranslation</td>
+<td>全文字列が翻訳済みかどうかの完全性を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>もしアプリが１言語よりも多い言語をサポートする場合、１言語の全文字列が他の言語にも翻訳されているべきです。標準では、この検出は　言語の地域たちに提供されます。ちょど文字列のサブセットとして提供されたり、標準の言語文字列の代替になります。すべての地域に対して、完全な翻訳を提供するために ANDROID_LINT_COMPLETE_REGIONSという環境変数をセットすることによって、強制できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>Proguard</td>
+<td>proguard.cfg ファイルの問題を調査</td>
+<td>8/10</td>
+<td>エラー</td>
+<td>proguard.cfg ファイルで -keepclasseswithmembernames を利用することは、正しくありません。なぜなら、ADTの新しいバージョンで作成される proguard.cfg ファイルは異なるフォーマットになるためです。<br />-keepclasseswithmembernames の代わりにkeepclasseswithmembers を利用してください。なぜなら過去のフラグもまた、XMLからでJava(CustomViewsのようなもの)でなく参照されるシンボルのみの&quot;allow shrinking&quot;を示しているためです。<br />より詳細情報は、<a href="http://code.google.com/p/android/issues/detail?id=16384">http://code.google.com/p/android/issues/detail?id=16384</a> を見てください。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewCount</td>
+<td>ScrollViewが正しく子ウィジェットが保持しているかを調査</td>
+<td>8/10</td>
+<td>警告</td>
+<td>Scrollviewは1つの子ウィジェットのみを保持できます。もし２つ以上の子を持ちたければ、コンテナレイアウトにまとめて保持させましょう。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIds</td>
+<td>シングルレイアウトの中で同じIDが存在するかどうかの調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>レイアウトの中で、IDは一意であるべきです。さもないと findViewById() が予期せぬviewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>InconsistentArrays</td>
+<td>配列の要素数に矛盾がないかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>配列が他の地域向けに翻訳されるときに、一般的にはオリジナルな配列と同様の要素数にすべきです。配列を追加や削除したときに、すべての地域の更新を簡単に忘れてしまいます。そんため、lint の警告はこれらの矛盾を検出します。</p>
+<p>注意：しなしながら本当にそれぞれの設定において（例えば、存在するオプションに相当する配列やそれらのオプションが異なるレイアウトの向きやそれ上の違いがある場合）配列アイテムの要素数が異なるものを利用したい理由がある場合は、自らの判断でエラーかどうかを判断して利用してください。<br />もし間違ったエラーがプロジェクト内にある場合は、そのエラータイプを抑止できます。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>NestedScrolling</td>
+<td>スクロールするウィジェットが何かのスクロールするウィジェットの中に入っているかかどうかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollViewのようなスクロールするViewは、重要なユーザビリティ問題のため、何かのネストされたスクロールウィジェットを中に含めるべきではありません。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ScrollViewSize</td>
+<td>ScrollViewがスクロール範囲の中で WRAP_CONTENT を利用しているかどうかをチェック</td>
+<td>7/10</td>
+<td>警告</td>
+<td>ScrollView の子たちは、layout_width か layout_height 属性に wrap_content よりもむしろ fill_parent か match_parent をスクロール領域の中で指定すべきです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>DuplicateIncludedIds</td>
+<td>include tag を利用して結合したレイアウトにわたって同じIDが利用されているかどうかをチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>同じIDを２つの独立したレイアウトに利用することは良いことです。しかしながら、もしレイアウトを include tag して結合した場合、IDはincludeされたレイアウトの連鎖の中で一意な必要性がある、もしくはActivity#findViewById()は期待しないViewを返します。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>ExtraTranslation</td>
+<td>利用されていない（標準言語向け文字列で存在しない）ように見える翻訳をチェック</td>
+<td>6/10</td>
+<td>警告</td>
+<td>もし、ある文字列が特定の言語向けの翻訳ファイルで現れた場合で、標準の地域(locale)に同じ文字列が存在しない場合があれば、たぶんこの文字列は利用されていないだろう。（あなたのアプリが特別な地域(locale)のみで動作するように意図したものであれば、技術的にこの可能性がありますが、しかし代替を準備するよりはまだまだ良案です。）</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>ManifestOrder</td>
+<td>&lt;application&gt;タグの後ろに&lt;uses-sdk&gt;が存在するようなマニフェストの問題を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>&lt;application&gt;タグは、必要なversion情報やfeatureやlibrariesなどの宣言タグの後に現れるべきです。<br />&lt;application&gt;タグがいくつかの他のタグより前に現れたときは過去に複雑なバグが存在しました。<br />そのためロジカルな依存順序でマニフェストに並べるのがベストです。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>StateListReachable</td>
+<td>&lt;selector&gt;の中で到達できない状態(state)を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>selectorの中で、state list の最後の子のみが state修飾詞を除外すべきです。もしそうでなければ、リストのすべての次にくる項目は与えられた項目がすべてマッチするために無視されるでしょう。</td>
+</tr>
+<tr>
+<td>正確性</td>
+<td>GridLayout</td>
+<td>行と列が外部で宣言されているような場合のGridLayoutの潜在的なエラーを調査。</td>
+<td>4/10</td>
+<td>エラー</td>
+<td>GridLayoutのrowCountかcolumnCountのサイズの宣言が外部のlayout_rowやlayout_columnで定義されている場合、たいてい故意ではないエラーになります。</td>
+</tr>
+<tr class="odd">
+<td>正確性</td>
+<td>PxUsage</td>
+<td>&quot;px&quot;単位の利用を調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>パフォーマンスの理由とコードをシンプルに保つために、Androidシステムは指定された範囲のスタンダードなユニットや指定された値のためにピクセルを利用します。<br />この意味はviewの範囲はいつもピクセルを利用してコード上から設定されますが、しかしいつも現在のスクリーン density をベースに設定されます。例えば、もし、myView().getWidth() が10を返すとき、viewは現在の画面の10ピクセルの横の長さがありますが、しかしdensityの高い画面の端末の場合、15を返す可能性があります。もしアプリの中で現在のスクリーンdensityに拡大されないビットマップとともにピクセルの値を利用していると、自らのコードでビットマップリソースを画面に合うようにスケールさせる必要があります。</td>
+</tr>
+<tr>
+<td>セキュリティ</td>
+<td>ExportedService</td>
+<td>パーミッションを必要としない exported Service(&lt;service&gt;タグのandroid:exported=&quot;true&quot;の場合）を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>Exported services(exported=true か intent-filder を含んでいるか、exported=falseを明示していないか）はパーミッションを定義すべきです。これはサービスを起動するか、バインドするために必要です。これがない場合、アプリはこのサービスを利用できません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UseCompoundDrawables</td>
+<td>現在のノードが 複合（compound) drawable を利用した TextView に置き換えられるかどうかを調査</td>
+<td>6/10</td>
+<td>警告</td>
+<td>ImageViewとTextViewを含んだLinearLayoutは、結合したdrawableとして扱われて、パフォーマンスが向上します。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>MergeRootFrame</td>
+<td>ルーツの&lt;FrameLayout&gt;が&lt;merge&gt;タグで置き換えられるかどうかを調査</td>
+<td>4/10</td>
+<td>警告</td>
+<td>&lt;FrameLayout&gt;がレイアウトのルートであり、背景やパディングが提供されていない場合、パフォーマンス向上のために&lt;merge&gt;タグに入れ替えできます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>InefficientWeight</td>
+<td>LinearLayout内で無効な weight 指定を調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>LinearLayoutの中の１つのウィジェットしか weight を定義していないとき、残ったすべてのスペースを割り当てるために、0dpをwidth/heightに設定することによりパフォーマンス向上が見込める。Width/heightに 0dp が定義されている場合は、最初に自身のサイズは計算されません。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UnusedResources</td>
+<td>未使用リソースを調査</td>
+<td>3/10</td>
+<td>警告</td>
+<td>利用していないリソースは、アプリを大きくし、ビルド時の速度が遅くしてしまいます。</p>
+<p>制限事項：<br />-もしEclipseに関わらずコマンドラインからlintを実行している場合、Javaファイルの解析は正確なパースツリーを利用するよりむしろパターンパッチが適応されます。そのため、結果は正確ではありません。（この制限は将来対応予定です。）<br />-解析は、ライブラリプロジェクトで定義されているリソースやライブラリプロジェクトが参照しているリソースの間の依存関係を考慮できません。そのとき、リソースはまだ利用されていませんと通知されます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UselessLeaf</td>
+<td>削除可能な子要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子も背景も持たないレイアウトは、よりフラットにしたり効果的なレイアウト階層にするために削除できます（invisibleなため）。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>UselessParent</td>
+<td>削除可能な親要素かどうかを調査</td>
+<td>2/10</td>
+<td>警告</td>
+<td>子を持たないレイアウトは、ルートレイアウトか scrollview ではありませんし、背景を持たず、削除可能であり、子たちを親に移動させたり、より効果的なレイアウト階層に変更することができます。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>TooDeepLayout</td>
+<td>レイアウト階層が深すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>レイアウトのネストが深すぎる場合はパフォーマンスを低下させます。そのため（RelativeLayoutやGridLayoutのような）フラットなレイアウトの利用を検討してください。標準の最大の深さは10ですが、この設定は環境変数のANDROID_LINT_MAX_DEPTHで設定できます。</td>
+</tr>
+<tr class="odd">
+<td>パフォーマンス</td>
+<td>TooManyViews</td>
+<td>viewの数が多すぎるかどうかを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>１つのレイアウトにたくさんのViewを使うことは、パフォーマンスを低下させます。統合したdrawableや他の仕組みを利用して、レイアウトのviewの数を減らすように検討してください。</td>
+</tr>
+<tr>
+<td>パフォーマンス</td>
+<td>UnusedIds</td>
+<td>未使用のIDを調査</td>
+<td>1/10</td>
+<td>警告</td>
+<td>重要：この設定はデフォルトで無効です。有効にしたい場合は、&#8211;enable UnusedIds を　してください。</p>
+<p>リソースID定義は、どこからも参照されない場合は必要ありません。ID定義を行う場合は、たとえ利用しない場合であっても、レイアウトやメニュー上で簡単に動作するため、悪い考えであり必要ありません。そのため削除したほうがよいでしょう。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ</td>
+<td>TextFields</td>
+<td>inputTypeやヒント設定の間違ったテキストフィールドを調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>テキストフィールドにinputType属性が提供されていることは、ユーザビリティの改善に有効です。なぜなら入力されるデータが独立していて、最適なキーボードをユーザに提供できるためです（電話番号のための数字のみや文字のみのように）。同様に、ヒント属性はユーザにテキストフィールドに何を期待するかを表示することができます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconNoDpi</td>
+<td>nodpiフォルダとdpiフォルダの両方にアイコンが存在するかを調査</td>
+<td>7/10</td>
+<td>警告</td>
+<td>drawable-nodpiフォルダのビットマップは、Androidフレームワークによってスケールされません。もし同じ名前のdrawableリソースが drawable-hdpiのようなdpiフォルダと同様に-nodpiフォルダに存在する場合、あいまいであり、国際化できない振る舞いになります。<br />１つか他のものを削除して、他のアイコンを利用してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>GifUsage</td>
+<td>GIFファイル（非推奨）が利用されてる画像を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>.gifファイルフォーマットは非推奨です。.pngか.jpgの利用を検討してください。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDipSize</td>
+<td>densityごとのアイコンたちが概ね同じdensity-independentサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>複数のdensityに提供されるすべてのアイコンがチェックされて、すべてが同じdensity非依存ピクセル(dpi)サイズであることを計算します。これは画像が異なるフォルダに入っていたり、アイコンがいくつかのフォルダが忘れられて新しいサイズに変更されるエラーを検出します。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicatesConfig</td>
+<td>様々設定パラメータを通した同一のビットマップのアイコンを探索</td>
+<td>5/10</td>
+<td>警告</td>
+<td>もしアイコンがdrawable-hdpiか-v11のような異なる設定パラメータで提供された場合、それらは一般的に異なるものです。この検出は、同じアイコンが国際化ではなく異なる設定フォルダーに提供されている場合に動作します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconExpectedSize</td>
+<td>ランチャーアイコン、ノーティフィケーションアイコンなどが正しいサイズかどうかを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>ランチャーアイコンには事前に定義されたサイズがあります（それぞれのdensityごとに）。これらの規約に従う必要があり、アイコンをプラットフォームごとにフィットさせる必要があります。<br />より詳細は、<a href="http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size">http://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size</a> を参照してください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconLocation</td>
+<td>densityごとのdrawableフォルダに画像が配置されていないことを確認</td>
+<td>5/10</td>
+<td>警告</td>
+<td>res/drawableフォルダは、XML内にshapeで定義されたような density非依存なグラフィックスのために定義されています。ビットマップの場合、drawable-mdpiに移動したり、より高い解像度や低い解像度のものをdrawable-ldpiやdrawable-hdpiやdrawable-xhdpiに振り分ける検討を行いますもし、アイコンが&quot;本当に&quot;density 非依存の場合（たとえば、solid color）、drawable-nodpi フォルダに入れられます。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconDensities</td>
+<td>すべてのサポートされるdensity に対してアイコンのカスタムバージョンを提供することを確認する</td>
+<td>4/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、それぞれのアイコンたちが density の種別を完全にカバーしていないかどうかをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>ユーザビリティ：アイコン</td>
+<td>IconDuplicates</td>
+<td>他の名前でコピーされたアイコンを探索</td>
+<td>3/10</td>
+<td>警告</td>
+<td>もしアイコンが他の名前で再利用されている場合、統合して１つのみを利用するようにしたり、他を削除してアプリをより小さくできます。<br />しかしながら、複製されたアイコンは通常国際化されなかったり、ときどき上書きされたり、更新忘れが発生します。</td>
+</tr>
+<tr>
+<td>ユーザビリティ：アイコン</td>
+<td>IconMissingDensityFolder</td>
+<td>すべてのdensity フォルダが準備さされていることを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>アイコンは、主要な screen density class(low, medium, high, extra high)のそれぞれに対してカスタムバージョンを提供し、ベストな見栄えになります。このlintは、特定フォルダが drawable-hdpi のように間違っていたりすることをチェックします。<br />Low density は、あまり多く利用されていないため、このチェックは無視されます。それを強制的に適用させたい場合は、環境変数の値に、ANDROID_LINT_INCLUDE_LDPI=true と設定してください。現在の density の利用方法の詳細は、<a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a> を参照ください。<br />さらなる詳細情報は、<a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a> を参照ください。</td>
+</tr>
+<tr class="odd">
+<td>アクセシビリティ</td>
+<td>ContentDescription</td>
+<td>イメージウィジェットがコンテンツの説明を提供しているかどうかを確認</td>
+<td>3/10</td>
+<td>警告</td>
+<td>ImageViewやImageButtonのようなテキストではないウィジェットは、画面でよめたり、他のアクセサビリティツールが十分にユーザインタフェースを保持できるようにウィジェットのテキスト説明文で特定できるように、contentDescription属性を利用すべきです。</td>
+</tr>
+<tr>
+<td>国際化</td>
+<td>HardcodedText</td>
+<td>リソースに定義すべき、ハードコードされた文字列属性を調査</td>
+<td>5/10</td>
+<td>警告</td>
+<td>レイアウトファイル内で直接ハードコードされたテキスト属性は、以下のいくつかの理由により駄目です。<br />-コンフィルレーションの種類が作られたとき（例えば、landscapeかportraitかのような）には、正確なテキストを繰り返し利用すべきです。（変更時に最新の状態をキープするため）<br />-アプリは既存の文字列リソースを新しい言語に翻訳したいとときにすぐに、他の言語に翻訳できない。</td>
+</tr>
+</table>
+<p>Antoid Lint はまだまだ開発が並行して進んでいるため、上記のID以外にもこれからどんどん追加されていくと思います。このスピード感と様々なオープンテクノロジーの採用（Lintもそのうちの１つ）が Android 普及の鍵だと感じているので、もっと進んでいってもらいたいと個人的には思っています。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/2780/20140627_sdk_manager_material_ver3/" rel="bookmark" class="wherego_title">(2014/06/27時点)SDK Managerが取得するXMLデータ一覧（その３）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/" />
+	</item>
+		<item>
+		<title>Android Lint の利用方法</title>
+		<link>http://andbrowser.com/development/knowhow/712/android-lint/</link>
+		<comments>http://andbrowser.com/development/knowhow/712/android-lint/#comments</comments>
+		<pubDate>Sun, 18 Dec 2011 12:55:16 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[lint]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=712</guid>
+		<description><![CDATA[Android Lint の利用方法を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111218_AndroidLint.png" alt="Android Lint" title="Android Lint" width="508" height="274" class="aligncenter size-full wp-image-713" /></p>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://tools.android.com/tips/lint">Android Lint</a></h4>
+<p>Android Lintは、ADT16(とSDK Tools 16)のための新しいツールです。これは、Androidプロジェクトのソースコードの潜在的な不具合を発見するためのものです。このツールは、Eclipseに統合されて利用されます。アーキテクチャは、意図的に IDE と依存関係を持っていません。そのため、継続的インテグレーションシステム(CI)のようなシステムと同様に他のIDEやビルドツールにも統合されることが望まれています。</p>
+<p><span id="more-712"></span></p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-html-small.png" alt="" title="lint-html-small" width="330" height="294" class="aligncenter size-full wp-image-745" /></p>
+<p>以下に不具合の種類をいくつかの例を交えて紹介します。</p>
+<ul>
+<li>翻訳の失敗（と、利用されていない翻訳）
+<li>レイアウトパフォーマンスの問題（以前の layoutopt ツールで発見されていたものとそれより多くのもの）
+<li>未使用のリソース
+<li>矛盾する配列サイズ（配列がマルチ構成で定義されている場合）
+<li>アイコンに関する問題（densityの間違いやアイコンのコピーや間違ったサイズなど）
+<li>ユーザビリティに関する問題（テキストフィールドに入力種類が指定されていないのようなもの）
+<li>Manifestのエラーに関すること
+<li>その他、たくさんのこと
+</ul>
+<p>2011/11/24：<a href="http://tools.android.com/recent/newlintrules">いくつかの新しい lint ルールを追加</a></p>
+<p>この<a href="http://tools.android.com/tips/lint-checks">ドキュメント</a>を参照してください。これには lint で現在チェックされるすべての項目が掲載されています。<br />
+Lint はまだ開発中のため、このリストは将来追加されていきます。加えて、将来カスタムなチェック項目を（できる限り簡単に）追加できるようなAPIを開発しています。</p>
+<h4>コマンドライン利用方法</h4>
+<p><code>lint</code>というコマンドラインツールが SDK tools/ ディレクトリに提供されています。<br />
+もしSDK tools/ ディレクトリにパスが通っていれば “<code>lint</code>”を実行できます。<br />
+実行時にAndroidプロジェクトディレクトリを指定してください。任意のディレクトリが指定可能で、(Androidプロジェクトではない場合）再帰的に探索されますし、ディレクトリ内のすべてのプロジェクトがチェック対象になります。（さらにスペース区切りで複数のプロジェクトを指定することもできます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint /src/astrid/
+Scanning GreenDroid-GoogleAPIs: ..
+Scanning stream: ...
+Scanning api: ...........................
+Scanning GDCatalog: .......................
+Scanning GreenDroid: ...........................................................
+Scanning tests: ...
+Scanning filters: ....
+Scanning tests: .....
+Scanning astrid: ....................................................................................................................................................
+Scanning simple: .......
+api/res/values-ca: Error: Locale ca is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+astrid/res/values-ca: Error: Locale ca is missing translations for: DLG_cancel, DLG_dismiss, DLG_ok, EPr_deactivated... (117 more) [MissingTranslation]
+api/res/values-cs: Error: Locale cs is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+(many lines omitted)
+43 errors, 466 warnings
+</pre>
+<h5>チェックの無効化</h5>
+<p>エラーメッセージの後に、鍵括弧（[や]）でエラーの様々な種別を表す id が表示されます。<br />
+上記の “MissingTranslation” のようなものです。<br />
+指定したチェック項目やチェックのリストを &#8211;disable オプションを追加することによって無効化できます。<br />
+例えば以下のように。<br />
+<script class="brush: shell;" type="syntaxhighlighter">
+$ lint --disable MissingTranslation,UnusedIds,Usability:Icons /src/astrid/
+</script></p>
+<p>Usability カテゴリーの Icons サブカテゴリーのように、上記の “Usability:Icons” の記載を行い、カテゴリーリストを作成できます。<br />
+デフォルトではいくつかのチェックが無効化されています。それらは、 &#8211;enable フラグを追加することによって有効化できます。<br />
+最終的に、&#8211;check フラグを利用して正確に確認できます。以下のようにコードベース内の特定の問題を見つけられます。<br />
+<script class="brush: shell;" type="syntaxhighlighter">
+$ lint --check MissingPrefix /src/astrid/
+</script></p>
+<p>利用可能な id とカテゴリーは以下のように探せます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --list
+Valid issue categories:
+Correctness
+Security
+Performance
+Usability
+Usability:Icons
+Accessibility
+Internationalization
+
+Valid issue id's:
+"ContentDescription": Ensures that image widgets provide a contentDescription
+"DuplicateIds": Checks for duplicate ids within a single layout
+"StateListReachable": Looks for unreachable states in a &lt;selector&gt;
+"InefficientWeight": Looks for inefficient weight declarations in LinearLayouts
+"ScrollViewSize": Checks that ScrollViews use wrap_content in scrolling dimension
+"MergeRootFrame": Checks whether a root &lt;FrameLayout&gt; can be replaced with a &lt;merge&gt; tag
+...
+</pre>
+<p>各項目の利用方法を取得できます。&#8211;show コマンドオプションに id やカテゴリーを指定してください。（引数を省略するとすべての説明が見れます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show MissingPrefix
+MissingPrefix
+-------------
+Summary: Detect XML attributes not using the Android namespace
+
+Priority: 8 / 10
+Severity: Warning
+Category: Correctness
+
+Most Android views have attributes in the Android namespace. When
+referencing these attributes you *must* include the namespace prefix,
+or your attribute will be interpreted by aapt as just a custom
+attribute.
+</pre>
+<h5>HTML レポート</h5>
+<p>コマンドラインツールからHTMLレポートも作成できます。生の lint 出力よりもいくつかの以下の利点があります。</p>
+<ul>
+<li>各項目ごとにより詳細な説明が記載されます。それにハイパーリンクを用いて各項目の属性やより詳細情報を提供できます。
+<li>エラーが存在する実際のソースコードを掲載できます（エラーの周りの3行程度）
+<li>ソースファイルを結合するリンクを含められます。
+<li>アイコンエラー時に、比較できるようにそれぞれのアイコンをサポートされます。
+</ul>
+<p>HTMLレポートを作成するために、&#8211;html filename の引数を追加してください。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html
+</pre>
+<p>By default, links to source files will just use local file:// path resources. You can remap the URLs to a different prefix with the &#8211;url option. For example:</p>
+<p>デフォルトでは、ローカルファイルの file:// パスを利用してソースファイルをリンクします。&#8211;url オプションを利用して異なる接頭語を利用して URL にリンクできます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html --url /src/MyProj=http://buildserver/src/MyProj
+</pre>
+<h5>その他のコマンドラインオプション</h5>
+<p><code>"lint --help"</code>を実行すれば、詳細情報や利用可能なオプションが表示されます。</p>
+<h4>Eclipse での利用方法</h4>
+<p>Lint は ADT 16 に統合されています。これによって lint のコマンドラインバージョンの上記のような機能が提供されます。</p>
+<ul>
+<li>多数の警告の自動的修正。
+<li>Lint が様々な編集時に自動的に実行されます。
+<li>エラーの特定事例と同様にエラーを抑止する機能があります。
+<li>厳格に項目を設定する機能があります。
+<li>lint view から問題のソースコードに直接ジャンプできます。
+</ul>
+<h5>Lintの自動実行</h5>
+<p>Lint は以下の場合に自動的に実行されます。</p>
+<ul>
+<li>APKを作成時。この場合、lint は致命的なエラーのみの調査を行う特別なモード（高速に実行するため）で実行されます。そして、もし致命的なエラーが有る場合はapk作成が中止されます。この機能は Lint オプションで停止できます。
+<li>レイアウトファイルや manifest ファイルのようなXMLファイルを編集や保存した場合。この場合、すべてのファイル内で調査が実施されて、調査結果がエディタのマーカーとして表示されます。
+<li>レイアウトエディタを利用する場合。UI操作を行うたびに、ファイル内調査（layouoptの様々なルールのような）がレイアウトファイルに実行されて、lint window(レイアウトエディタの上部の左コーナーに表示されるエラーやマーカーから開いたり)が表示されます。
+</ul>
+<h5>Lint Window</h5>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-toolbar.png" alt="" title="lint-toolbar" width="399" height="228" class="aligncenter size-full wp-image-747" /></p>
+<p>プロジェクト上で Lint を実行するために、パッケージエクスプローラからプロジェクトを選択し、Lint ツールバーアクション（画像の左上）をクリックします。</p>
+<p>代わりの方法として、プロジェクト右クリックからAndroid Toolsのサブメニューから&#8221;Run Lint&#8221;を実行。これにより、Lint Windows が開かれてエラーが追加されます。エラーを選択すると、詳細説明が右のテキストエリアに表示されます。</p>
+<p>Lint View でエラーをダブルクリックするとソースファイルのエラーの箇所にジャンプします。それぞれの警告のアイコンは重要性を示しており、警告の修正方法（次のセクションで紹介）が小さな電球で表示されます。</p>
+<p>Windows にはアクションバーがあり（上部の右側の端の角）、以下のことをしてくれます。</p>
+<ul>
+<li>lintを再実行して、結果を更新できます。（更新中の間、ストップボタンで中止もできます）
+<li>もし修正を無視したければ、エラーを修正済みにできます。
+<li>警告のマーカーを削除します。
+<li>すべての警告マーカーを削除します。
+</ul>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-window2.png" alt="" title="lint-window2" width="738" height="285" class="aligncenter size-full wp-image-750" /></p>
+<h5>クイック修正</h5>
+<p>多数の lint 警告は自動修正機能を持っています。たとえば、様々な layoutopt 修正項目は修正候補を出してくれます（例：wap_contentを 0dp に置き換える）</p>
+<ul>
+<li>lint view から、電球をクリックして修正する
+<li>レイアウトエディタの警告から、Fixボタンを押して修正する
+<li>XMLソースエディタから、Quick Fix(Ctrl-1 or Command-1)を実行したり、警告に関連づけられている修正を選択する。
+</ul>
+<h5>エラーの抑止</h5>
+<p>エディタの Quick Fix メニューから以下の選択ができます。</p>
+<ul>
+<li>このファイル内のみ無視する
+<li>このプロジェクト内で無視する
+<li>ある期間、警告を無視する
+</ul>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-fix.png" alt="" title="lint-fix" width="659" height="174" class="aligncenter size-full wp-image-752" /></p>
+<p>（もし quickfix 上の lint 修正アクションが見つからなければ、既知の不具合を見てください。）</p>
+<p>これらの選択肢は、プロジェクトの lint.xml に保存されており、コマンドラインツールによって見ることができます。<br />
+このように、UI上から警告を無視することができ、ソースプロジェクトのlint.xml ファイルを確認し、lint実行時の他の項目も無視設定したものは、表示されなくなります。（たぶん、手動で検証したみた結果）</p>
+<h5>オプション</h5>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid > Lint Options を選択してください。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/lint-options2.png" alt="" title="lint-options2" width="576" height="545" class="aligncenter size-full wp-image-755" /></p>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid > Lint Options を選択してください。</p>
+<p>オプションの項目を選択した場合、右下のドロップダウンから Severity(厳密性）（訳者注釈：errorにするかwarningにするか）を設定できます。これによって正確に項目をエラーにするかどうかを設定できます。（例えば、ダイアログのトップ近くにあるAPK作成時に中止する。など）</p>
+<p>項目のチェックをオフにする場合は、severityで<code>“Ignore”</code>を選択してください。</p>
+<p>lint 設定をプロジェクト毎に編集しないように注意してください。プロジェクト設定ダイアログを開いて（プロジェクト上で右クリック）、Android Lint の設定ページを探してください。オプションダイアログで手動でSeverityを設定するとエラーを抑止すると共に lint.xml ファイルに記録されます。それから、チーム内の他の項目は、プロジェクト内で設定した同じものを利用できます。</p>
+<h5>インストール方法</h5>
+<p>いまわかっていることだけでいうと、ADT16に早くアクセスできるように計画しています。（訳者注：すでにADT16.0.1がリリースされています。）</p>
+<p>ソースコードが待ちきれないときは、git ソースコードリポジトリが sdk/lint フォルダーで利用できます。(手順は、<br />
+<a href="http://source.android.com/source/downloading.html">http://source.android.com/source/downloading.html</a>　をみてください。そして、マスターリポジトリからソースコードを取得してください。</p>
+<h5>既知の不具合</h5>
+<ul>
+<li>この項目(<a href="http://code.google.com/p/android/issues/detail?id=21124">21124</a>)はADT16で修正済み。
+<li>未使用のリソース：未使用のリソースの発見は、いくつかのリソースで利用されている場合に正しく動作しない場合があります。lintがコマンドラインから実行されたとき、リソース参照を探すため内に簡単な文字列分析を利用します。コメントや文字列リテラルなどを無視する間に、まだ切り替えが遅れるかもしれないためです。lintがeclipseで動作しているとき、より正しい結果になるようにパースツリーを利用します。このプランは、lintコアがどのようなところで実行したとしても正しく動作するようなフルパースに統合するためです。
+<li>Overdraw 検出：検出を利用していないような場合に、javaコードを分析する必要があり、現在主要なJavaパースツリーは動作していません。（リソース検出を利用していない場合と違って、eclipse 内で実行することはできます）
+</ul>
+<h4>Lint で解析対象になる項目</h4>
+<p>次のエントリの「<a href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/">Android Lint 解析内容の詳細を調査</a>」で紹介しているので参考にしてください。</p>
+<p>以上</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/712/android-lint/feed/</wfw:commentRss>
+		<slash:comments>19</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/712/android-lint/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) r16.0.1 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/</link>
+		<comments>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/#comments</comments>
+		<pubDate>Sun, 18 Dec 2011 04:05:26 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=697</guid>
+		<description><![CDATA[Android Development Tools(ADT) r16.0.1 の更新情報を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111218_adt16.0.1.png" alt="Android ADT 16.0.1" title="Android ADT 16.0.1" width="390" height="274" class="aligncenter size-full wp-image-698" /></p>
+<p><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT16.0.1</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4>Android Development Tools(ADT) 16.0.1リリース</h4>
+<p><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/">adt r16.0.0</a> がリリースされてから１週間の時間が経たない間にadt r16.0.1 がリリースされました。r16.0.0リリース後に問題やユーザへの影響の大きい不具合修正がメインのようです。</p>
+<p><span id="more-697"></span></p>
+<h4><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16.0.1</a> <em>(2011年12月)</em></h4>
+<dl>
+<dt>依存関係：</dt>
+<dd>
+<ul>
+<li>ADT 16.0.1 を利用するためには、Eclipse Helios (Version 3.6) や それ以上のバージョンが必須。</li>
+<li>ADT 16.0.1 は <a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools r16</a> を利用する前提で開発されています。もしまだ SDK Tools r16 をインストールしていない場合は、Android SDK Manager を利用してインストールしてください。</li>
+</ul>
+</dd>
+<dt>不具合修正：</dt>
+<dd>
+<ul>
+<li>9-patch は、いくつかのケースで通常のビットマップとしてパッケージされるようにビルドに関する項目を修正
+<li><a href="http://tools.android.com/recent/lint">Lint</a>ツールに関する項目を修正。
+<li>SDK Manager に関する項目を修正。
+    </ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 16 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/697/adt-r16-0-1/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 16 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/693/android-adt-16/</link>
+		<comments>http://andbrowser.com/development/knowhow/693/android-adt-16/#comments</comments>
+		<pubDate>Fri, 16 Dec 2011 10:03:13 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=693</guid>
+		<description><![CDATA[Android ADT 16.0.0 の更新情報を記載]]></description>
+			<content:encoded><![CDATA[<p><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT16.0.0</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16.0.0</a> <em>(2011年12月)</em></h4>
+<dl>
+<dt>依存関係：</dt>
+<dd>
+<ul>
+<li>ADT 16.0.0 を利用するためには、Eclipse Helios (Version 3.6) や それ以上のバージョンが必須。</li>
+<li>ADT 16.0.0 は <a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools r16</a> を利用する前提で開発されています。もしまだ SDK Tools r16 をインストールしていない場合は、Android SDK Manager を利用してインストールしてください。</li>
+</ul>
+</dd>
+<dt>改良の概要：</dt>
+<dd>
+<ul>
+<li>Android プロジェクト (詳細情報)にエラーを発見するための Lint ツールが追加されます。（<a href="http://andbrowser.com/development/knowhow/712/android-lint/">詳細の日本語訳はこちら</a>）（<a href="http://tools.android.com/recent/lint">原本（英語）の詳細情報はこちら</a>）</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/869/sdk-tools-r17/" rel="bookmark" class="wherego_title">SDK Tools Revision 17更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) r16.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/693/android-adt-16/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/693/android-adt-16/" />
+	</item>
+		<item>
+		<title>SDK Tools r16 更新情報</title>
+		<link>http://andbrowser.com/development/680/sdk-tools-r16/</link>
+		<comments>http://andbrowser.com/development/680/sdk-tools-r16/#comments</comments>
+		<pubDate>Thu, 15 Dec 2011 23:13:07 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=680</guid>
+		<description><![CDATA[Android SDK Tools r16リリース時の更新情報を記載。
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 16</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 16</a> <em>(2011年12月)</em></h4>
+<p class="caution"><strong>重要なお知らせ：</strong> Android SDK Manager から新しいAndroid 4.0 のシステムコンポーネントをダウンロードするために、SDK Tools をバージョン14かそれ以上に更新して、Android SDK Manager を再起動すべきです。もしAndroid 4.0 システムコンポーネントをダウンロードしなければ、必要ありません。</p>
+<dl>
+<dt>依存関係（利用上の前提条件）：</dt>
+<dd>
+<ul>
+<li>Android SDK Platform-tools がバージョン9かそれ以上</li>
+<li>もしEclipse(ADTを含めて）を利用する場合、注意点があります。SDK Tools r16は ADT 16やそれ以上を利用するように設計されています。ADTプラグインを<a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16</a>に更新することを強くお薦めします。</li>
+<li>もしEclipse以外で開発する場合、 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 かそれ以上を利用すべきです。</li>
+</ul>
+</dd>
+<dt>概要：</dt>
+<dd>
+<ul>
+<li>Android プロジェクト (<a href="http://tools.android.com/recent/lint">詳細情報</a>)にエラーを発見するための Lint ツールが追加されます。（著者追加：<a href="http://ja.wikipedia.org/wiki/Lint">Lintについてはこちら</a>）</li>
+<p><span id="more-680"></span></p>
+<li>センサーエミュレーションサポートが追加。物理的Androidデバイスからセンサーデータを読むために（データを）エミュレータに付与します。
+<li>Mac OS X 上でカメラをエミュレートするためにウェブカメラを利用可能なサポートを追加</li>
+</ul>
+</dd>
+<dt>不具合修正：</dt>
+<dd>
+<ul>
+<li>Android 4.0 システムイメージのためのスナップショット機能を提供
+<li>ビルドファイルに案するいくつかの項目を修正<br />
+    (<a href="http://code.google.com/p/android/issues/detail?id=21023">Issue 21023</a>, <a href="http://code.google.com/p/android/issues/detail?id=21267">Issue 21267</a>,  <a href="http://code.google.com/p/android/issues/detail?id=21465">Issue 21465</a>,  <a href="http://code.google.com/p/android/issues/detail?id=21525">Issue 21525</a>).</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 16 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/877/sdk-tools-r18/" rel="bookmark" class="wherego_title">SDK Tools Revision 18更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/883/sdk-tools-r19/" rel="bookmark" class="wherego_title">SDK Tools Revision 19更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/680/sdk-tools-r16/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/680/sdk-tools-r16/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT)15 更新内容</title>
+		<link>http://andbrowser.com/development/knowhow/543/android-adt15-update-info/</link>
+		<comments>http://andbrowser.com/development/knowhow/543/android-adt15-update-info/#comments</comments>
+		<pubDate>Sat, 29 Oct 2011 03:50:17 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=543</guid>
+		<description><![CDATA[android adt15の更新情報を掲載
+]]></description>
+			<content:encoded><![CDATA[<p>ADT14が出てからまだ1か月も立っていない間にADT15ができました。<br />
+以下のサイトによると変更点はこのようなものだそうです。<br />
+<a href="http://www.androidpolice.com/2011/10/27/for-developers-android-sdk-tools-r15-and-adt-15-bug-fixers-now-available/">http://www.androidpolice.com/2011/10/27/for-developers-android-sdk-tools-r15-and-adt-15-bug-fixers-now-available/</a></p>
+<h4>不具合修正</h4>
+<h5>ADT 15への修正</h5>
+<ul>
+<li>API レベルを11から13に指定しているプロジェクト内で Renderscript を利用しているときのビルド項目を修正 (Issue 21006).
+<li>既に存在するソースコードからプロジェクトを作成したときの不具合を修正
+<li>SDK Manager 内の不具合を修正 (<a href="http://code.google.com/p/android/issues/detail?id=20939">Issue 20939</a>, <a href="http://code.google.com/p/android/issues/detail?id=20607">Issue 20607</a>).
+<li>DDMS内の新しいLogcatパネルの中でスクロール中の不具合を修正
+</ul>
+<h5>SDK Tools r15への修正</h5>
+<h6>依存関係</h6>
+<ul>
+<li>Android SDK Platform-tools revision 9 以上が必要
+<li>eclipse と ADT で開発する場合は、ADT15以上が必要です。ADT 15 以上に更新することを強くお勧めします。.
+<li>eclipse 以外で開発する場合は、ant 1.8 以上が必須です。
+</ul>
+<h6>不具合修正</h6>
+<ul>
+<li>Webカメラ検出・追加に伴う Linux 上でのエミュレータの停止問題を修正(<a href="http://code.google.com/p/android/issues/detail?id=20952">Issue 20952</a>)
+<li>エミュレータ起動時の -wipe-data オプション指定時の不具合を修正
+<li>API レベルを11から13に指定しているプロジェクト内で Renderscript を利用しているときのビルド項目を修正 (Issue 21006)
+<li>GoogleTV add-on を利用時の AVD 作成時の不具合を修正(<a href="http://code.google.com/p/android/issues/detail?id=20963">Issue 20963</a>)
+<li>ant テストに関する不具合修正(<a href="http://code.google.com/p/android/issues/detail?id=20979">Issue 20979</a>)
+<li>andoirdコマンドの update project に関する不具合修正(<a href="http://code.google.com/p/android/issues/detail?id=20535">Issue 20535</a>)
+<li>DDMS内の新しいLogcatパネルの中でスクロール中の不具合を修正
+<li>MonkeyRunner に関する不具合修正(<a href="http://code.google.com/p/android/issues/detail?id=20964">Issue 20964</a>)
+<li>SDK Manager に関する不具合修正(<a href="http://code.google.com/p/android/issues/detail?id=20939">Issue 20939</a>, <a href="http://code.google.com/p/android/issues/detail?id=20607">Issue 20607</a>)
+</ul>
+<p>ADTはバージョンアップするごとに使いやすさが増していっているのでこれからの進化が楽しみです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/1747/android-development-tools-adt-22-0-0/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/" rel="bookmark" class="wherego_title">android SDK Tools r15 での and build のエラー対処方法</a></li><li><a href="http://andbrowser.com/development/680/sdk-tools-r16/" rel="bookmark" class="wherego_title">SDK Tools r16 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/543/android-adt15-update-info/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/543/android-adt15-update-info/" />
+	</item>
+		<item>
+		<title>Androidアプリ開発向け Eclipse XML Formatter</title>
+		<link>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/</link>
+		<comments>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/#comments</comments>
+		<pubDate>Sun, 11 Sep 2011 05:23:36 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=413</guid>
+		<description><![CDATA[EclipseのXML formatter のお薦め設定]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/09/eclipseXmlFormatterMain.png" alt="" title="eclipseXmlFormatterMain" width="456" height="338" class="alignleft size-full wp-image-414" /><Br clear="left"></p>
+<p>Androidアプリ開発でもっとも多く利用されている IDE は eclipse で、eclipse の便利な機能としてソースコードを整形（インデント位置やif前後のスペースや{}括りの位置、改行位置など）機能があります。詳しくは<a href="http://www.adakoda.com/adakoda/2009/01/eclipse-code-format-java-code-style-formatter.html">[Eclipse] ソースコード整形（Code Format / Java Code Style Formatter）</a>にも説明があります。</p>
+<h4>XMLのソースコード整形の問題点</h4>
+<p>上記のeclipseのjavaソースコード整形は大変便利なのですが、Androidアプリ開発でＵＩを作成する場合に利用するXMLファイルには同じ整形ルールが効きません。</p>
+<p>以下のようにXMLファイル上でマウス右クリック→「Source」→「Format」（キーボードショートカットの場合、Shift+Ctrl+f）を実行しても、以下のような結果となり1行に１つや2つのアトリビュートが入ったものとなり、見づらかったり、１アトリビュート削除や切り取り貼り付けが実施しづらいものになります。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/09/screenshot014.png" alt="EclipseXmlSourceFormat" title="EclipseXmlSourceFormat" width="640" height="480" class="aligncenter size-full wp-image-416" /></p>
+<h4>XMLフォーマッターの標準設定の場合</h4>
+<p>具体的には以下のように1行に２つの要素（アトリビュート）が入るため、切り貼りや削除がやりにくい状態です。<br />
+<script type="syntaxhighlighter" class="brush: xml"  title="Eclipse XML Formatter default setting">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical" android:layout_width="fill_parent"
+     android:layout_height="fill_parent" android:padding="10dp">
+     <TextView android:layout_height="wrap_content" android:id="@+id/textView1"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content" android:text="First Name"></TextView>
+     <EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+          android:layout_width="fill_parent">
+          <requestFocus></requestFocus>
+     </EditText>
+     <TextView android:layout_height="wrap_content" android:id="@+id/textView2"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content" android:text="Last Name"></TextView>
+     <EditText android:layout_height="wrap_content" android:id="@+id/editText2"
+          android:layout_width="fill_parent"></EditText>
+     <LinearLayout android:layout_height="wrap_content"
+          android:layout_width="fill_parent" android:id="@+id/linearLayout1"
+          android:orientation="horizontal" android:padding="10dp">
+          <Button android:layout_height="wrap_content"
+               android:layout_width="wrap_content" android:id="@+id/button2"
+               android:text="OK" android:layout_weight="1"></Button>
+          <Button android:layout_height="wrap_content"
+               android:layout_width="wrap_content" android:id="@+id/button1"
+               android:text="Cancel" android:layout_weight="1"></Button>
+     </LinearLayout>
+</LinearLayout>
+</script></p>
+<h4>XMLのソースコード整形ルールの設定</h4>
+<p>上記の問題は解決可能です。eclipse で XML ファイルのコード整形を実施する場合は、javaソースコードへの設定とは別に設定を行う必要があります。<br />
+設定場所は、メニューの[Window]→[Preference]でPreferenceを開いて、以下のキャプチャ画像のように[XML]→[XML Files]→[Editor]に存在します。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/09/screenshot015.png" alt="Eclipse XML Format Setting" title="Eclipse XML Format Setting" width="640" height="480" class="aligncenter size-full wp-image-420" /></p>
+<ul type="circle">
+<li>Split multiple attriutes each on a new line
+<ul type="circle">
+<li>複数の属性をそれぞ新規行に分割
+</ul>
+<li>Align final bracket in multi-line element tags
+<ul type="circle">
+<li>複数行要素タグに最終括弧を位置合わせ
+</ul>
+</ul>
+<p>(pleadesの翻訳参照)</p>
+<h4>「複数の属性をそれぞ新規行に分割」を設定ＯＮにした場合</h4>
+<p><script type="syntaxhighlighter" class="brush: xml"  title="Setting ON 1 item(Split multiple attriutes each on a new line)">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:padding="10dp">
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView1"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="First Name"></TextView>
+     <EditText
+          android:layout_height="wrap_content"
+          android:id="@+id/editText1"
+          android:layout_width="fill_parent">
+          <requestFocus></requestFocus>
+     </EditText>
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView2"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="Last Name"></TextView>
+     <EditText
+          android:layout_height="wrap_content"
+          android:id="@+id/editText2"
+          android:layout_width="fill_parent"></EditText>
+     <LinearLayout
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:id="@+id/linearLayout1"
+          android:orientation="horizontal"
+          android:padding="10dp">
+          <Button
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/button2"
+               android:text="OK"
+               android:layout_weight="1"></Button>
+          <Button
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/button1"
+               android:text="Cancel"
+               android:layout_weight="1"></Button>
+     </LinearLayout>
+</LinearLayout>
+</script></p>
+<h4>「複数の属性をそれぞ新規行に分割」と「複数行要素タグに最終括弧を位置合わせ」を設定ＯＮにした場合</h4>
+<p><script type="syntaxhighlighter" class="brush: xml"  title="Setting ON 2 items(Split multiple attriutes each on a new line, Align final bracket in multi-line element tags)">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:padding="10dp"
+>
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView1"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="First Name"
+     ></TextView>
+     <EditText
+          android:layout_height="wrap_content"
+          android:id="@+id/editText1"
+          android:layout_width="fill_parent"
+     >
+          <requestFocus></requestFocus>
+     </EditText>
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView2"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="Last Name"
+     ></TextView>
+     <EditText
+          android:layout_height="wrap_content"
+          android:id="@+id/editText2"
+          android:layout_width="fill_parent"
+     ></EditText>
+     <LinearLayout
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:id="@+id/linearLayout1"
+          android:orientation="horizontal"
+          android:padding="10dp"
+     >
+          <Button
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/button2"
+               android:text="OK"
+               android:layout_weight="1"
+          ></Button>
+          <Button
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/button1"
+               android:text="Cancel"
+               android:layout_weight="1"
+          ></Button>
+     </LinearLayout>
+</LinearLayout>
+</script></p>
+<h4>2つの設定の比較</h4>
+<p>２つの設定を抜粋して以下のように比較してみると、閉じるブラケット（>）の位置や閉じるタグ（</TextView>）の位置が異なります。</p>
+<p>切り貼りを行うことを考えると、両方ともＯＮの設定がおススメです。<br />
+<script type="syntaxhighlighter" class="brush: xml">
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView1"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="First Name"></TextView>
+</script><br />
+<script type="syntaxhighlighter" class="brush: xml">
+     <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/textView2"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="wrap_content"
+          android:text="Last Name"
+     ></TextView>
+</script></p>
+<h4>結論</h4>
+<p>Androidアプリ開発を行う場合、XML で UI を記載します。。画面数や機能が多くなってくるとこのレイアウトＸＭＬの数も増えていくと思います。そうなると、ＸＭＬ内での切り貼りや他のアプリに利用するためにレイアウトＸＭＬの一部だけを再利用したり、コピペで持っていきたいという場合が増えてくると思います。それ以外にも git や svn のような構成管理システムを利用している場合、システムに変更点を入力するまえに diff で確認するときに1行ごとに変更点が見えることは大変有益です。個人的にはこちらの効果のほうが協力だと思っています。XML Formatter の実行方法は、マウス右クリックからの
+<pre class="brush: plain; title: ; notranslate">[/source]</pre>
+<p>->[Format]もよいのですが、キーボードショートカットのShift+Ctrl+f が簡単でよいと思います。残念ながらJava エディターの Formatter のように save action に xml formatter の機能を付けることがいまの eclipse ではできない（？）ようなので、XMLを書き変えたら、XMLで何か編集したら、Shift+Ctrl+f を押す癖をつけておくとよいです。もし、eclipseで XML Formatter を保存時に適用する方法があれば教えてください。標準設定のままのＸＭＬ Formatter では、相当な手間が発生するため、今回ご紹介した２つの設定は、常にＯＮにしておくことをお勧めします。</p>
+<h4>おまけ</h4>
+<p>今回の設定項目の4つ目の「Clear all blank lines」については、一人で開発する場合はON,OFFどちらでもいいと思いますが、複数人で開発する場合は、ONにして全体のＸＭＬで統一できるようにしておいたほうが個人的にはよいと思います。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/" rel="bookmark" class="wherego_title">twitter fabric maven library location</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/feed/</wfw:commentRss>
+		<slash:comments>15</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/413/android-eclipse-xml-formatter/" />
+	</item>
+		<item>
+		<title>メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法</title>
+		<link>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/</link>
+		<comments>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/#comments</comments>
+		<pubDate>Thu, 18 Aug 2011 10:22:38 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[leak]]></category>
+		<category><![CDATA[mat]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=289</guid>
+		<description><![CDATA[
+「メモリリークを発見！Androidアプリのメモリ解析手法」でEclipse Memory Analyzer(MAT)のインストール方法と使い方の紹介をしました。今回は、Eclipse Memory Analyzer  [...]]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat.jpg" alt="Eclipse Memory Analyzer (MAT)のサイト画像" title="Eclipse Memory Analyzer (MAT)" width="450" height="300" class="size-medium wp-image-290" align="center" /></p>
+<p>「<a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/">メモリリークを発見！Androidアプリのメモリ解析手法</a>」でEclipse Memory Analyzer(MAT)のインストール方法と使い方の紹介をしました。今回は、Eclipse Memory Analyzer (MAT)のさらに踏み込んだ使い方を紹介します。</p>
+<h4>Eclipse Memory Analyzer(MAT)のインストール方法</h4>
+<p>MATがまだインストールしていない場合は、以下の手順でインストールしてください。</p>
+<ul>
+<li>Eclipseのメニューバーの（日本語化済みの場合）「ヘルプ」⇒「新規ソフトウェアのインストール」
+<ul>
+<li>作業対象：&#8211;すべての使用可能なサイト&#8211;
+<li>フィルター入力：memory
+</ul>
+<div class="wp-caption alignnone" style="width: 641px"><img src="http://andbrowser.com/wp-content/uploads/2011/08/02.jpg" alt="Memory Analyzer (MAT)インストール画面" title="Memory Analyzer (MAT)インストール画面" width="450" class="size-full wp-image-294" /><p class="wp-caption-text">Memory Analyzer (MAT)インストール画面</p></div>
+<li>「Memory Analyzer」 と 「Memory Analyzer(Charts)[オプション]」にチェックをいれて、「次へ」を選択し、インストールを継続
+<li>まだ再起動せずに、続いて、 「Memory Analyzer(Charts)[オプション]」で利用する図作成ライブラリ（BIRT)をインストール。これをいれておくとメモリ利用状況がMAT上で綺麗な図で表示されます。是非インストールしておきましょう。<br />
+<div id="attachment_296" class="wp-caption alignnone" style="width: 641px"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-birt..jpg" alt="Memory Analyzer Charts向け図作成ライブラリBIRTインストール" title="Memory Analyzer Charts向け図作成ライブラリBIRTインストール" width="631" height="594" class="size-full wp-image-296" /><p class="wp-caption-text">Memory Analyzer Charts向け図作成ライブラリBIRTインストール</p></div></p>
+<li>インストール後は、eclipse 再起動を求められるので、再起動しましょう。
+</ul>
+<h4>OQL (Object Query Language)利用方法</h4>
+<p>Eclipse Memory Analyzer(MAT)には、以下の主要な機能があり、OQLはクラスオブジェクトの任意の抽出方法を定義でできるものです。</p>
+<ul>
+<li>アクション
+<ul>
+<li>ヒストグラム(Histgram)：クラスごとのインスタンス数を表示
+<li>クラスオブジェクトごとの木構造(Dominator Tree)：もっとも大きなクラスとそれらの存在期間を表示
+<li>上位の消費者(Top Consumers)：クラスごととパッケージごとにもっともメモリを利用しているクラスを表示
+<li>クラスの複製(Duplicate Classes)：複数のクラスローダからロードされているクラスを発見（レビューコメント頂いたkare様、ありがとうございました）
+</ul>
+<li>レポート
+<ul>
+<li>メモリリーク予想(Leak Suspects)：メモリリークの予想とシステム概要をレポート
+<li>上位のコンポーネント(Leak Suspects)：全体のヒープの1%よりも大きなコンポーネントをレポートする機能
+</ul>
+<p>OQL (Object Query Language):は、Javaヒープの検索をするために利用できるＳＱＬのような問い合わせ言語です。OQLはJAVAヒープから必要な情報を選択したり、フィルターしたりすることができます。ＯＱＬは、JavaScrip埋め込み型言語（JavaScript Expression Language)をベースとしています。OQLのクエリー定義は以下のようなものです。</p>
+<pre class="brush:java">
+select &lt;JavaScript expression to select&gt;
+   [ from [instanceof] &lt;class name&gt; &lt;identifier&gt;
+   [ where &lt;JavaScript boolean expression to filter&gt; ] ]
+</pre>
+<p> class name にはフルパスの Javaクラス名（例えば、 java.lang.String）を指定します。</p>
+<p>OQLは、以下のMATのメニューから選択できます。<br />
+<div id="attachment_311" class="wp-caption alignnone" style="width: 310px"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-2-300x93.jpg" alt="Eclipse Memory Analyzer(MAT) OQL選択画面" title="Eclipse Memory Analyzer(MAT) OQL選択画面" width="300" height="93" class="size-medium wp-image-311" /><p class="wp-caption-text">Eclipse Memory Analyzer(MAT) OQL選択画面</p></div></p>
+<p>OQLは特定のクラスオブジェクト検索を行えるものです。具体例として、100文字以上のString を保持しているオブジェクトを検索したい場合は以下のようなSQLに近いコマンドを実行します。OQLのテキストボックスに以下のコマンドを記載し、「！」ボタンをクリックすると実行されます。</p>
+<div id="attachment_313" class="wp-caption alignnone" style="width: 310px"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-3-300x139.jpg" alt="Eclipse Memory Analyzer(MAT) OQL実行方法" title="Eclipse Memory Analyzer(MAT) OQL実行方法" width="300" height="139" class="size-medium wp-image-313" /><p class="wp-caption-text">Eclipse Memory Analyzer(MAT) OQL実行方法</p></div>
+<pre class="brush:sql">
+SELECT s FROM java.lang.String s WHERE (s.count >= 100)
+</pre>
+<p>実行結果は以下のようになります。<br />
+<div id="attachment_309" class="wp-caption alignnone" style="width: 310px"><a href="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-1.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-1-300x214.jpg" alt="Eclipse Memory Analyzer(MAT)のOQL実行結果" title="Eclipse Memory Analyzer(MAT)のOQL実行結果" width="300" height="214" class="size-medium wp-image-309" /></a><p class="wp-caption-text">Eclipse Memory Analyzer(MAT)のOQL実行結果</p></div></p>
+<p>さらに、以下のようなクラスオブジェクトの中身の値も表示することができます。以下の例は、Fileオブジェクトの持っている path フィールドの中身の値を一覧で表示する例です。</p>
+<pre class="brush:sql">
+select file.path.value.toString() from java.io.File file
+</pre>
+<p>実行結果は以下のようになります。</p>
+<div id="attachment_315" class="wp-caption alignnone" style="width: 310px"><a href="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-4.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-4-300x297.jpg" alt="Eclipse Memory Analyzer(MAT) OQL実行例 Fileオブジェクトのpathを表示" title="Eclipse Memory Analyzer(MAT) OQL実行例 Fileオブジェクトのpathを表示" width="300" height="297" class="size-medium wp-image-315" /></a><p class="wp-caption-text">Eclipse Memory Analyzer(MAT) OQL実行例 Fileオブジェクトのpathを表示</p></div>
+<p><pre class="brush:sql">
+SELECT cl FROM INSTANCEOF java.lang.ClassLoader cl
+</pre>
+<p>実行結果は以下のようになります。<br />
+<div id="attachment_321" class="wp-caption alignnone" style="width: 308px"><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-7-298x300.jpg" alt="Eclipse Memory Analyzer(MAT) OQL実行結果" title="Eclipse Memory Analyzer(MAT) OQL実行結果" width="298" height="300" class="size-medium wp-image-321" /><p class="wp-caption-text">Eclipse Memory Analyzer(MAT) OQL実行結果</p></div></p>
+<p>プリミティブ配列を利用する場合は以下のように利用します。</p>
+<pre class="brush:sql">
+select a from int[] a where a.length >= 256
+</pre>
+<h4>Android的なOQLの利用方法</h4>
+<p>Android開発でOQLを利用する方法としては、まだ良いものは思いついていませんが１つ紹介します。</p>
+<p>以下の例は、Activity を継承したクラスの一覧を表示するOQLです。いくつかの画面遷移を行うアプリの場合、ライフサイクルの管理をきちんと行っている前提で、画面遷移した直後やメモリを消費する処理を行った場合にヒープダンプを保存しておいて、後から以下のコメントでどのＡｃｔｉｖｉｔｙが残っているかを調査するのに役立ちます。</p>
+<pre class="brush:sql">
+SELECT ac FROM INSTANCEOF android.app.Activity ac
+</pre>
+<p><img src="http://andbrowser.com/wp-content/uploads/2011/08/eclipse-mat-oql-6-300x248.jpg" alt="Eclipse Memory Analyzer (MAT) OQL for Activity" title="Eclipse Memory Analyzer (MAT) OQL for Activity" width="300" height="248" class="size-medium wp-image-319" /></p>
+<p>今回のテストで利用したソースは以下です。ボタンを押すと、ActivityContextActivity⇒ActivityContext2Activity⇒ActivityContext3Activity ⇒ActivityContext4Activity の順番にActivityを立ち上げていくのみのサンプルで、ActivityContext4Activityまで画面遷移してから実行した結果です。</p>
+<pre class="brush:java">
+public class ActivityContextActivity extends Activity {
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+
+    public void onClickButton(View v) {
+        Intent intent = new Intent(this, ActivityContext2Activity.class);
+        startActivity(intent);
+    }
+}
+</pre>
+<pre class="brush:xml">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/button1" android:text="Button"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:onClick="onClickButton"></Button>
+</LinearLayout>
+</pre>
+<h4>OQLを利用してみた感想</h4>
+<p>javaの世界では一般的な本ツールも、Androidの世界ではまだ Memory Analyzer ですら利用されていない状況ですが、Eclipse を利用したAndroid開発を進めていくうえで、Eclipse で提供されている JAVA テクノロジーには大変良いものが多く、是非活用していきたいと思っています。OQL以外にもまだまだ利用できるものがありそうなので調べていきたいと思います。</p>
+<p>Android開発でMemory Analyzer やOQLの便利使い方をご存じの方は是非コメント頂ければうれしいです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/361/android_market_how_to_update_new_version/" rel="bookmark" class="wherego_title">新しいタイル表示版Android Market の取得方法</a></li><li><a href="http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/" rel="bookmark" class="wherego_title">Android 開発アンチパターン勉強会 #1</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/feed/</wfw:commentRss>
+		<slash:comments>17</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/" />
+	</item>
+		<item>
+		<title>メモリリークを発見！Androidアプリのメモリ解析手法</title>
+		<link>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/</link>
+		<comments>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/#comments</comments>
+		<pubDate>Sun, 03 Apr 2011 04:50:19 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[leak]]></category>
+		<category><![CDATA[mat]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=65</guid>
+		<description><![CDATA[Androidアプリ開発術の１つである。Androidアプリのメモリ解析手法の紹介です。特にメモリリーク対策が重要。Memory Analysis for Android Applications」の翻訳。]]></description>
+			<content:encoded><![CDATA[<p><a href="http://andbrowser.com/wp-content/uploads/2011/04/memory-leak-top.png"><img src="http://andbrowser.com/wp-content/uploads/2011/04/memory-leak-top-1024x682.png" alt="" title="memory-leak-top" width="500"  class="aligncenter size-large wp-image-3339" /></a><br />
+<br clear="all"></p>
+<p>googleのAndroid開発者向け ブログに「<a href="http://android-developers.blogspot.com/2011/03/memory-analysis-for-android.html" target="_blank">Memory Analysis for Android Applications</a>」という記事があったため、自分のために訳しました。参考になれば幸いです。本エントリを見るうえで、eclipse の基本的な使い方を理解している必要があります。</p>
+<h1>Androidアプリのメモリ解析手法</h1>
+<p>Dalvikランタイムは、ガベージコレクトしてくれるかもしれませんが、それはメモリ管理を行わなくてもよいというわけではありません。モバイル端末上でのメモリ利用状況は特に注意を払わなければなりません。本投稿では、開発するアプリのメモリ利用状況の把握を支援する Android SDK で提供しているメモリプロファイリングツール群のいくつかを紹介させて頂きます。</p>
+<p>メモリ利用時の問題はいくつか明らかになっています。例えば、もしあなたのアプリがユーザの画面タッチ操作のたびにメモリリークするとすると、最終的には <span style="color: #008000;">OutOfMemoryError</span> のきっかけになる可能性が高いでしょう。他の問題はもっと複雑で、（あなたのアプリがガベージコレクトが頻繁に発生し、かつ長い時間発生すると）そのアプリと全体のシステムの両方のパフォーマンスを下げる原因になるかもしれません。</p>
+<h1>解析・分析のためのツール</h1>
+<p>Android SDK はアプリのメモリ利用状況をプロファイリングする手法として、2つの方法を提供します。DDMSの&#8221;Allocation Tracker&#8221;タブとヒープダンプです(heap dums)。Allocation Tracker は、与えられた時間間隔の中で発生しているメモリ割り当ての種類を知りたいときに便利です。Allocation Trackerについてもっと情報が必要な場合は、<a title="Tracking Memory Allocations" href="http://developer.android.com/resources/articles/track-mem.html" target="_blank">Tracking Memory Allocations</a> を見てください。<br />
+しかし、それらはアプリケーションヒープの概要の状態に関する情報しか提供されません。本投稿の趣旨は、より強力なメモリ解析・分析のツールであるヒープの表示（dump）にフォーカスをあてていく予定です。</p>
+<p>ヒープダンプは、HPROF と言われているバイナリフォーマットの形式で保存されるスナップショット（ある瞬間の情報（点としての情報））です。Dalvik は似たようなフォーマットを利用しますが、<a title="HPROF tool in Java" href="http://java.sun.com/developer/technicalArticles/Programming/HPROF.html" target="_blank">java の HPROF Tool</a>とまったく同じではありません。実行中のAndroidアプリのヒープダンプを生成するいくつかの方法があります。１つは DDMS の HPROF ファイルに保存する機能です。もし、あなたがもっと正確にダンプを作成したいときは<a title="dumpHprofData() Method" href="http://developer.android.com/reference/android/os/Debug.html#dumpHprofData(java.lang.String)" target="_blank">android.os.Debug.dumpHprofData()</a> メソッドを利用してプログラム上からヒープダンプを作成することもできます。</p>
+<p>ヒープダンプを解析するために、<a href="http://download.oracle.com/javase/6/docs/technotes/tools/share/jhat.html" target="_blank">jhat</a>や<a title="Eclipse Memory Analyzer (MAT)" href="http://www.eclipse.org/mat/" target="_blank">Eclipse Memory Analyzer (MAT)</a>のような一般的なツールも利用できます。<br />
+しなしながら、最初に .hprof(拡張子）ファイルを Dalvik フォーマットから J2SE HPROF フォーマットに変換する必要がでてきます。<br />
+そのためにAndroid SDK の中で提供されている <span style="color: #008000;">hprof-conv</span> ツールを利用できます。</p>
+<p>たとえば、</p>
+<blockquote><p>hprof-conv dump.hprof converted-dump.hprof</p></blockquote>
+<p>というコマンドで実行できます。</p>
+<h1>例：メモリリークをデバッグする</h1>
+<p>Dalvikランタイムの中で、プログラマは明示的にフリーなメモリを割り当てることはできません、そのため　C や C++ の言語のように本当にメモリがリークしているかどうかを知ることができません。</p>
+<p>ソースコード上にある&#8221;メモリリーク&#8221;は、不必要に長い間オブジェクトを参照し続けた場合に発生します。たまに 単一参照（single reference)は、大きな（大量な）オブジェクト群のガベージコレクタの実行を妨げることができます。</p>
+<p>Android SDKの中にある <a href="http://developer.android.com/resources/samples/HoneycombGallery/" target="_blank">Honeycomb の Gallary Sample アプリ</a>を利用して、実例を用いて理解していきましょう。これは新しいHoneycomb API群のいくつかの使い方を知るためのシンプルな写真閲覧アプリです。</p>
+<p>ビルド方法とサンプルコードのダウンロード方法は、<a href="http://developer.android.com/resources/samples/get.html" target="_blank">手順書</a>(Android 開発者サイトのサンプルの取得方法）をご覧ください。</p>
+<p>どのようにデバッグできるかの手法を紹介するためにこのアプリに故意にメモリリークを追加しました。</p>
+<p><a href="http://1.bp.blogspot.com/-85BU4dyekEk/Uzc926b_KYI/AAAAAAAAAWQ/4durHgt-Lx0/s400/honeycomb-gallery.png"><img alt="" src="http://1.bp.blogspot.com/-85BU4dyekEk/Uzc926b_KYI/AAAAAAAAAWQ/4durHgt-Lx0/s400/honeycomb-gallery.png" title="Debugging a memory leak" class="aligncenter" width="400" height="250" /></a><br />
+ネットワーク上から画像を取得するために、このアプリを修正したいと考えてみてください。よりレスポンスをよくするために、最近閲覧した画像を保持するキャッシュの実装を決めたとします。 ContentFragmen.java ファイルにいくつかの小さな変更を行ってみましょう。クラスの上部に新しいスタティック変数を追加しましょう。</p>
+<blockquote><p>private static HashMap&lt;String,Bitmap&gt; sBitmapCache = new HashMap&lt;String,Bitmap&gt;();</p></blockquote>
+<p>これは、ネットワークからロードするビットマップ群のキャッシュです。続いて <span style="color: #008000;">updateContentAndRecycleBitmap() </span>メソッドをネットワークからロードする前にキャッシュに存在するかどうかの確認を行うために変更し、ロード後にキャッシュにビットマップを追加します。</p>
+<pre class="brush:java">    void updateContentAndRecycleBitmap(int category, int position) {
+        if (mCurrentActionMode != null) {
+            mCurrentActionMode.finish();
+        }
+
+        // 描画するためのビットマップを取得し、ImageViewを更新
+
+        // キャッシュにビットマップが存在するかどうかを確認
+        String bitmapId = "" + category + "." + position;
+        mBitmap = sBitmapCache.get(bitmapId);
+
+        if (mBitmap == null) {
+            // キャッシュにない場合、ビットマップをロードし、キャッシュに追加
+            // 危険・注意！ 常にビットマップを削除することなしにキャッシュにアイテムを追加
+            mBitmap = Directory.getCategory(category).getEntry(position)
+                .getBitmap(getResources());
+            sBitmapCache.put(bitmapId, mBitmap);
+        }
+        ((ImageView) getView().findViewById(R.id.image)).setImageBitmap(mBitmap);
+    }</pre>
+<p>私はここで故意にいれたメモリリークを紹介します。常にキャッシュを削除することなしに ビットマップをキャッシュに追加します。実際にアプリでこのような実装する場合は、いくつかの方法でキャッシュサイズに制限をかけたいを考えるでしょう。</p>
+<h1>DDMSを利用してヒープの利用状況を確認</h1>
+<p>Dalvik Debug Monitor Server (DDMS) は、主要なAndroidデバッグツールの１つです。DDMSは <a href="http://developer.android.com/sdk/eclipse-adt.html" target="_blank">ADT Eclupse プラグイン</a>の一部で、単体動作版はAndroid SDKの <span style="color: #008000;">tools/</span> ディレクトリの中にあります。DDMSに関する情報をもっと知りたい場合は、<a href="http://developer.android.com/guide/developing/debugging/ddms.html" target="_blank">DDMSを利用</a>してみましょう。</p>
+<p>それでは、このアプリのヒープ利用状況を確認するためにDDMSを利用しましょう。DDMSを起動する方法は2つあり、そのどちらでも起動できます。</p>
+<ul>
+<li>Eclipse上からメニューバーを以下の順序で選択する方法</li>
+</ul>
+<p style="padding-left: 60px;">Windows &gt; Open Perspective &gt; Other &#8230; &gt; DDMS</p>
+<ul>
+<li>コマンドライン上から <span style="color: #008000;">tools/</span> ディレクトリの中にある <span style="color: #008000;">ddms </span>を起動する。</li>
+</ul>
+<p style="padding-left: 60px;">（追記：Windowsの場合は、ddms.bat が起動され、Mac/Linux の場合は、ddmsが起動される。（それぞれに PATH を通している必要があります））</p>
+<p><a href="http://2.bp.blogspot.com/-DCj7FoBepAQ/Uzc9u18ARPI/AAAAAAAAATU/jOHOLCGsKCw/s1600/ddms-toolbar.png"><img alt="" src="http://2.bp.blogspot.com/-DCj7FoBepAQ/Uzc9u18ARPI/AAAAAAAAATU/jOHOLCGsKCw/s1600/ddms-toolbar.png" title="Examing heap usage in DDMS-1" class="aligncenter" width="400" height="312" /></a></p>
+<p>左のパネルから<span style="color: #008000;">com.example.android.hcgallery</span>プロセスを選択して、ツールバー上の&#8221;Show heap updates&#8221;ボタンをクリックします。<br />
+それから DDMS の VM Heap タブに切り替えます。</p>
+<p>ヒープメモリ利用状況について GC毎に更新されるいくつかの基本情報が見れます。最初の更新を行うために、&#8221;Cause GC&#8221;ボタンをクリックします。</p>
+<p><a href="http://1.bp.blogspot.com/-iYqRtBzuPEw/Uzc9uqm3yyI/AAAAAAAAATY/RJQm-z0ySUI/s1600/ddms-heap-usage.png"><img alt="" src="http://1.bp.blogspot.com/-iYqRtBzuPEw/Uzc9uqm3yyI/AAAAAAAAATY/RJQm-z0ySUI/s1600/ddms-heap-usage.png" title="Examining heap usage in DDMS-2" class="aligncenter" width="400" height="212" /></a></p>
+<p>我々は live setという（割り当てメモリ列）8MBを少し超えるものをみることができます。サンプルアプリの写真をフリックすると、数字が増加していくのが見れます。このアプリは13枚の写真しかありませんが、リークしたメモリの容量が割り当てられていきます。このような場合リークの最悪のパターンが訪れます。しかしながら我々は決して リークすることにより <span style="color: #008000;">OutOfMemoryError</span> を起こしてはいけません。</p>
+<h1>ヒープダンプ(heap dumps)を作成</h1>
+<p>問題を追うためにヒープダンプを作ってみましょう。DDMSツールバーのDump HPRPF fileボタンをクリックして、保存場所を選択して、それから <span style="color: #008000;">hprof-conv</span> でコンバートしてください。この例では、MAT(Ver 1.0.1)のスタンドアローンバージョン(Stand alone version)を利用しています。これは<a href="http://www.eclipse.org/mat/downloads.php" target="_blank">MATダウンロードサイト</a>で提供されています。</p>
+<p>もし、ADT(DDMSのプラグインの親元)が実行している場合や Eclipse に MAT がインストールされている場合は、&#8221;dump HPROF&#8221;ボタンを押すと自動的にコンバート（hprof-convを実行）してくれ、Eclipse内（MATでオープンされる）で変換された hprof ファイルを開いてくれます。</p>
+<h2>MATを利用したヒープダンプの解析・分析</h2>
+<p>MATを実行し、いま先ほど作成したコンバート済みの HPROF ファイルをロードしてください。（上記のように必要なツールがインストールされていれば、自動的にコンバートとMAT起動を行ってくれます）。MATは強力なツールですべての機能を説明するためには本投稿の範囲を超えてしまいます。そのためいまはリークを発見するために利用する１つの方法として、Histogram View（ヒストグラムビュー）を紹介します。ヒストグラムビューはインスタンスの数でソートされたクラスのリストと表面上のヒープ（表層ヒープ：shallow heap）（すべてのインスタンスで利用しているメモリの総合計）と保持されたヒープ（保持ヒープ：retained heap）（他のオブジェクトへの参照をもっているオブジェクトを含めたすべてのインスタンスで生きているメモリの総合計）を表示します。</p>
+<p><a href="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png"><img alt="" src="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png" title="analyzing heap dump using MAT-1" class="aligncenter" width="400" height="316" /></a></p>
+<p>もし shallow heap でソートすれば、<span style="color: #008000;">byte配列</span>のインスタンスが上部に表示されます。Android 3.0(ハニカム）の場合、ビットマップオブジェクトのピクセルデータは <span style="color: #008000;">byte配列</span>に保存されます。（以前は Dalvik heap に保存されませんでした）<br />
+そして、それらのオブジェクトのサイズを参考にして、メモリリークしたビットマップのための裏にあるメモリだと賭けても(bet)あっている(safe)でしょう。</p>
+<p>byte[] クラス上で右クリックで押して、<br />
+List Objects → incoming references<br />
+を選択します。これは、ヒープの中に byte 配列のすべてをリストで表示したもので、Shallow Heapの利用状況をベースにソートすることのできます。</p>
+<p>大きなオブジェクトの一つを選び、ドリルダウンしていきましょう。これは、オブジェクトのrootからの path を見せてくれます。生存しているオブジェクト参照のつながりを表しています。ほら、我々のビットマップキャッシュがありますね。</p>
+<p><a href="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png"><img alt="" src="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png" title="analyzing heap dumps using MAT-2" class="alignnone" width="400" height="316" /></a></p>
+<p>MATはこれがリークかどうかを教えてはくれません。なぜなら、それが必要なものか、そうでないかがわからないためです。それはプログラマのみができることなのです。今回の場合、キャッシュは比較的アプリの休憩中（ユーザが操作していない場合）にメモリの大きな容量を使っています。そのためキャッシュのサイズの上限を検討しないといけません。</p>
+<h1>MATでヒープダンプを比較</h1>
+<p>メモリリークをデバッグしているとき、2つの異なったポイントのヒープ利用状況を比較すると、とても有益です。それを行うために、2つの異なる HPRPOF ファイルを作成する必要があります。（<span style="color: #008000;">hprof-conv</span>を使ってコンバートは忘れずに！）</p>
+<p>では、ここでどうやって MAT で2つのヒープダンプを比較すればよいかをお伝えします。（少し重ねればよいのです）</p>
+<ol>
+<li> 最初のHPROFファイルを開く（Fie &gt; Open Heap Dump)</li>
+<li> ヒストグラムビュー(Histogram view)を開く</li>
+<li> Navigation History view（eclipe のメニューのWindow &gt; Navigation History。なければ Window &gt; Other&#8230; &gt; Memory Analyzer Views &lt; Navigation Historyで選択）の中の histogram を選択し、右クリックして「Add to Compare Basket」を選ぶ</li>
+<li>2つ目の HPROF ファイルをステップ2と3を繰り返してください</li>
+<li>「Compare Basket view」に切り替えて、Compare the Results（Compare Basket viewの上部の右上にある赤い！アイコン）をクリック</li>
+</ol>
+<h1>結論</h1>
+<p>本投稿ではどのように allocation Tracker と ヒープダンプ(heap dumps)はアプリのメモリ利用状況のよりより見え方・感じ方を得るための方法を紹介しました。私はまた どのよに Eclipse Memory Analyzer(MAT) がアプリのメモリリークを追う方法を紹介しました。MATは強力なツールであり、私もこのツールで何ができるかの表面しか紹介しませんでした。</p>
+<p>もしあなたがよりもっと学びたいとお考えなら、以下のURLのいくつかを読むことをお勧めします。</p>
+<ul>
+<li><a href="http://dev.eclipse.org/blogs/memoryanalyzer/" target="_blank">Memory Analyzer News</a>（英語）
+<ul>
+<li>Eclipse MAT プロジェクトの公式ブログ</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> <a href="http://kohlerm.blogspot.com/" target="_blank">Markus Kohler&#8217;s Java Performance blog</a>（英語）
+<ul>
+<li>多くの役に立ち記事があります。ここには <a href="http://kohlerm.blogspot.com/2010/02/android-memory-usage-analysis-slides.html" target="_blank">Eclipse Memory Analyzer を利用したAndroidアプリのメモリ利用分析</a>があったり、<a href="http://kohlerm.blogspot.com/2009/07/eclipse-memory-analyzer-10-useful.html" target="_blank">Eclipse Memory Analyzerのための10個の役に立つ開発術</a>があります。</li>
+</ul>
+</li>
+</ul>
+<h1>メモリリークを避けるためにお薦め本</h1>
+<table>
+<tbody>
+<tr>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/489471499X/ref=as_li_tf_il?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=489471499X"><img src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;Format=_SL110_&amp;ASIN=489471499X&amp;MarketPlace=JP&amp;ID=AsinImage&amp;WS=1&amp;tag=andbrowser001-22&amp;ServiceVersion=20070822" border="0" /></a><img src="http://www.assoc-amazon.jp/e/ir?t=andbrowser001-22&amp;l=as2&amp;o=9&amp;a=489471499X" border="0" width="1" height="1" style="border: none !important; margin: 0px !important;" /></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/489471499X/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=489471499X">Effective Java 第2版</a></p>
+<p>まだお持ちでないなら、メモリリークを避けるためにも必読です。</td>
+</tr>
+<tr>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797327030/ref=as_li_tf_il?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797327030"><img src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;Format=_SL110_&amp;ASIN=4797327030&amp;MarketPlace=JP&amp;ID=AsinImage&amp;WS=1&amp;tag=andbrowser001-22&amp;ServiceVersion=20070822" border="0" /></a><img src="http://www.assoc-amazon.jp/e/ir?t=andbrowser001-22&amp;l=as2&amp;o=9&amp;a=4797327030" border="0" width="1" height="1" style="border: none !important; margin: 0px !important;" /></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797327030/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797327030">増補改訂版Java言語で学ぶデザインパターン入門 </a><img src="http://www.assoc-amazon.jp/e/ir?t=andbrowser001-22&amp;l=as2&amp;o=9&amp;a=4797327030" border="0" width="1" height="1" style="border: none !important; margin: 0px !important;" /></p>
+<p>先人の知恵であるパターンを利用することによって大幅にメモリリークを避けられるようになります。</td>
+</tr>
+<tr>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797331623/ref=as_li_tf_il?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797331623"><img src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;Format=_SL110_&amp;ASIN=4797331623&amp;MarketPlace=JP&amp;ID=AsinImage&amp;WS=1&amp;tag=andbrowser001-22&amp;ServiceVersion=20070822" border="0" /></a><img src="http://www.assoc-amazon.jp/e/ir?t=andbrowser001-22&amp;l=as2&amp;o=9&amp;a=4797331623" border="0" width="1" height="1" style="border: none !important; margin: 0px !important;" /></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797331623/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797331623">増補改訂版 Java言語で学ぶデザインパターン入門 マルチスレッド編 </a><img src="http://www.assoc-amazon.jp/e/ir?t=andbrowser001-22&amp;l=as2&amp;o=9&amp;a=4797331623" border="0" width="1" height="1" style="border: none !important; margin: 0px !important;" /></p>
+<p>マルチスレッド環境ではメモリリークが発生しやすくなります。マルチスレッドを扱う場合は必読です。</td>
+</tr>
+</tbody>
+</table>
+<p><script type="text/javascript">// <![CDATA[
+ google_ad_client = "ca-pub-1843419744371828"; /* androidメモリリーク横長 */ google_ad_slot = "9590468322"; google_ad_width = 468; google_ad_height = 60;
+// ]]&gt;</script><br />
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+</script></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/development/knowhow/712/android-lint/" rel="bookmark" class="wherego_title">Android Lint の利用方法</a></li><li><a href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/" rel="bookmark" class="wherego_title">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/feed/</wfw:commentRss>
+		<slash:comments>120</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" />
+	</item>
+	</channel>
+</rss>

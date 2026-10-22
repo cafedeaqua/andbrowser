@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; 4.1</title>
+	<atom:link href="http://andbrowser.com/tag/4-1/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/4-1/feed/" />
+		<item>
+		<title>Android4.1で追加された7インチレイアウトをソースコードから調査</title>
+		<link>http://andbrowser.com/development/925/7inch_layout_survey_from_sourcecode/</link>
+		<comments>http://andbrowser.com/development/925/7inch_layout_survey_from_sourcecode/#comments</comments>
+		<pubDate>Sun, 08 Jul 2012 17:06:24 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[4.1]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[JellyBean]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=925</guid>
+		<description><![CDATA[Android4.1(Jelly Bean)で追加された7インチレイアウトをソースコードから調査しました。]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/Android4.1_7inch_layout.png" alt="Android4.1 7inch layout" title="Android4.1_7inch_layout" width="712" height="575" class="size-full wp-image-949" /></p>
+<h4>７インチ向けレイアウトとは？</h4>
+<p><a href="http://liliputing.com/2012/07/android-4-1-ui-is-different-for-7-10-inch-tablets.html">Android 4.1 UI is different for 7, 10 inch tablets</a>の記事によると7インチ向けに新しいレイアウトが提示されたという記載がありました。どのようなレイアウトなのかをソースコードから調査してみました。</p>
+<h4>対象ソースコード</h4>
+<p>以下のようにAndroidの一部のソースコードはSDK Manager から提供されていますので、そこから該当するソースコードを探しました。<br />
+<span id="more-925"></span><br />
+<img src="http://andbrowser.com/wp-content/uploads/2012/07/android4.1_source_code.png" alt="android4.1 SDKで提供されているソースコードの取得方法" title="android4.1 SDKで提供されているソースコードの取得方法" width="640" height="480" class="aligncenter size-full wp-image-953" /></p>
+<p>ここで取得したソースコードは、[Android SDKのインストールパス] android-sdk-windows\sources\ 以下に保存されます。Android4.1の場合は、android-16 のため、android-sdk-windows\sources\android-16 以下が該当するソースコードです。</p>
+<p>この中の</p>
+<pre class="brush: java; first-line: 1;" >
+\com\android\internal\policy\impl\PhoneWindowManager.java
+</pre>
+<p>が今回の調査対象にしました。</p>
+<p>ざっと見ていくと、以下のメソッドの中にサイズごとにレイアウトを分けている部分がありました。<br />
+<script type="syntaxhighlighter"   class="brush: java; first-line: 956;"  title="PhoneWindowManager.java　snippet">
+    public void setInitialDisplaySize(Display display, int width, int height) {
+        mDisplay = display;
+</script></p>
+<pre class="brush: java; first-line: 1012;"  title="PhoneWindowManager.java　snippet">
+        // SystemUI (status bar) layout policy
+        int shortSizeDp = shortSize
+                * DisplayMetrics.DENSITY_DEFAULT
+                / DisplayMetrics.DENSITY_DEVICE;
+
+        if (shortSizeDp < 600) {
+            // 0-599dp: "phone" UI with a separate status &#038; navigation bar
+            mHasSystemNavBar = false;
+            mNavigationBarCanMove = true;
+        } else if (shortSizeDp < 720) {
+            // 600-719dp: "phone" UI with modifications for larger screens
+            mHasSystemNavBar = false;
+            mNavigationBarCanMove = false;
+        } else {
+            // 720dp: "tablet" UI with a single combined status &#038; navigation bar
+            mHasSystemNavBar = true;
+            mNavigationBarCanMove = false;
+        }
+
+        if (!mHasSystemNavBar) {
+            mHasNavigationBar = mContext.getResources().getBoolean(
+                    com.android.internal.R.bool.config_showNavigationBar);
+            // Allow a system property to override this. Used by the emulator.
+            // See also hasNavigationBar().
+            String navBarOverride = SystemProperties.get("qemu.hw.mainkeys");
+            if (! "".equals(navBarOverride)) {
+                if      (navBarOverride.equals("1")) mHasNavigationBar = false;
+                else if (navBarOverride.equals("0")) mHasNavigationBar = true;
+            }
+        } else {
+            mHasNavigationBar = false;
+        }
+</pre>
+<p><script type="syntaxhighlighter"   class="brush: java; first-line: 306;"  title="PhoneWindowManager.java　snippet">
+    boolean mHasSystemNavBar;
+</script></p>
+<p><script type="syntaxhighlighter"   class="brush: java; first-line: 311;"  title="PhoneWindowManager.java　snippet">
+    boolean mNavigationBarCanMove = false; // can the navigation bar ever move to the side?
+</script></p>
+<h4>調査結果</h4>
+<p>レイアウトごとにわけている条件を整理すると以下の表のようになります。<br />
+1031行目から1040行目までの実装内容については<a href="http://blog.sola-dolphin-1.net/archives/4026377.html">こちらのブログ</a>にわかりやすい説明がありますのでこちらを参照ください。</p>
+<table summary="追加レイアウトのシステムバーとナビゲーションバーの取扱いについて">
+<caption>Android 4.1で新しく追加された7イント向けの追加レイアウト</caption>
+<tr>
+<th>対象デバイス</th>
+<th>短い辺の長さ</th>
+<th>システムバー</th>
+<th>説明</th>
+</tr>
+<tr>
+<td>Phone向け</td>
+<td>600dp未満</td>
+<td>false</td>
+<td>主に Phone 向けレイアウト。バックボタン、ホームボタン、Recentボタンを提供するためにナビゲーションバーが必要</td>
+</tr>
+<tr>
+<td>7インチタブレット</td>
+<td>600dp～719dpの間</td>
+<td>false</td>
+<td>今回追加になった7インチ向けレイアウト。操作ボタンを提供するためにナビゲーションバーが必要</td>
+</tr>
+<tr>
+<td>10インチ（以上）タブレット</td>
+<td>720dp以上</td>
+<td><strong>true</strong></td>
+<td>大画面タブレット向けのためシステムバーが必要。ナビゲーションボタンはシステムバーの中で提供</td>
+</tr>
+</table>
+<h4>まとめ</h4>
+<p>新しく追加された７インチ向けレイアウトをシステムバーとナビゲーションバーの提供方法という視点で調査を行いました。<br />
+７インチレイアウトでは、基本的にはPhoneレイアウトに近いシステムバーやナビゲーションバーの提供がなされますが、landscape持ちの場合は2ペインで左にリスト、右の詳細画面という（iPadでいうと Master/Detail 構造）レイアウトも可能です（もちろん Fragment の利用が必須）。<br />
+だからといって無暗に２ペインにせずにユーザにとって本当に使いやすいレイアウトを考えて、それに最適なレイアウトを提供するようにすべきです。<br />
+まだまだこれから解像度も上がってくると思いますからこの７インチ系のレイアウトの進化は楽しみです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/development/2850/android-stdio-0-8-7/" rel="bookmark" class="wherego_title">Android Studio 0.8.7 リリース（邦訳）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/925/7inch_layout_survey_from_sourcecode/feed/</wfw:commentRss>
+		<slash:comments>40</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/925/7inch_layout_survey_from_sourcecode/" />
+	</item>
+	</channel>
+</rss>

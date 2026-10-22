@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; Titanium</title>
+	<atom:link href="http://andbrowser.com/category/titanium/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/titanium/feed/" />
+		<item>
+		<title>Titanium Mobileのインストール</title>
+		<link>http://andbrowser.com/titanium/48/titanium-mobile-install/</link>
+		<comments>http://andbrowser.com/titanium/48/titanium-mobile-install/#comments</comments>
+		<pubDate>Sat, 26 Feb 2011 15:11:01 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Titanium]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=48</guid>
+		<description><![CDATA[Titanium Mobile インストール時の javascriptmodule.dll のエラーについて]]></description>
+			<content:encoded><![CDATA[<p>最近、Titanium Mobile に注目が集まっています。<br />
+<a href="http://developer.appcelerator.com/">http://developer.appcelerator.com/</a></p>
+<p>スマートフォンという携帯のカテゴリが一般に認知されてきて、様々な雑誌やテレビでスマートフォンがあればこんなに便利という話を見ない日はありません。ただ一言でスマートフォンというと簡単なのですが、詳しく中身を見てみると、iPhoneやAndroidやBlackBerryやWindows Phone 7 といったOSの違いがあり、それ向けにアプリを開発するとなると、それぞれに対応したPCを準備したり、プログラミング言語や各種ツールの使い方を新たに習得したりする必要があります。<br />
+それらを特に個人開発者が準備したり、習得したりするのは大変なコストをかけないといけないのですが、それを開発するものとして Titanium Mobile が注目されています。</p>
+<p>Titanium Mobile については詳しい話は他のブログや書籍で紹介されているので、そちらに任せたいと思います。私のほうでは私のメインの開発環境である Android + Windows PC という視点で情報提供していきたいと思っています。<br />
+Titanium Mobileは iPhone と Android と BlackBerryのアプリが開発できることが大きな売りの１つなので、iPhoneアプリ開発ができない Windows PCでの開発に使う人はほとんどいないのでしょう。<br />
+それでも、私のようにまだ MAC に手を出したことがない人は多いと思いますので、情報展開していきたいと思っています。</p>
+<p>まず最初に、環境構築時にはまったポイントを紹介します。</p>
+<p>本家で同じ質問があがっていますが回答はついてませんでした。</p>
+<blockquote><p>Can&#8217;t INstall on Windows &#8211; Bad Image after INstall<br />
+<a href="http://developer.appcelerator.com/question/102251/cant-install-on-windows---bad-image-after-install">http://developer.appcelerator.com/question/102251/cant-install-on-windows&#8212;bad-image-after-install</a>
+</p></blockquote>
+<p>症状としては、Titanium Developer インストール後のTitanium Developer起動時に以下のようなエラーが発生して、Titanium Developer が起動せず開発ができないというものです。<br />
+（正しい文章はメモっていませんでしたが、以下のようなイメージの内容です）</p>
+<blockquote><p>C:\Documents and Settings\All Users\Application Data\Titanium\modules\win32\javascript\1.0.0\javascriptmodule.dll がありません。<br />
+なんたらのイメージが異なっています</p></blockquote>
+<p>原因は、Titanium Developerがインストール時にネットから必要なファイルをダウンロードしてインストールを進めるのですが、このダウンロードがネットワーク環境の影響でうまくいかないことがあり、インストール成功後も javascriptmodule.dll が 0byteになってしまうことでした。<br />
+そのため、対策としては一度 Titanium Developer をアンインストールして（アンインストール後にC:\Documents and Settings\All Users\Application Data\Titanium\が削除されていることを確認すること。削除されていなければ、手動で削除）、ネットワークが安定的に接続されている環境で再度 Titanium Developer のインストールを行うことです。<br />
+インストール環境後は再起動し、javascriptmodule.dll が 0byte でないことが確認できれば、Titanium Developer が正しく起動すると思います。</p>
+<p>同じ現象の方は、上記の方法で試してみてください。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2014/galaxy-android-device-art-generator/" rel="bookmark" class="wherego_title">Galaxy版 Androidアプリのウェブ掲載やプレゼン資料に最適！Device Art Generator</a></li><li><a href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/" rel="bookmark" class="wherego_title">Androidタブレット向けアプリ開発方法　その２</a></li><li><a href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/" rel="bookmark" class="wherego_title">Android Development Tools (ADT) 15.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/titanium/48/titanium-mobile-install/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/titanium/48/titanium-mobile-install/" />
+	</item>
+	</channel>
+</rss>

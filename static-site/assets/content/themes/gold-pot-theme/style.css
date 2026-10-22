@@ -1,0 +1,633 @@
+/*
+Theme Name: Gold Pot Theme
+Theme URI: http://www.etrecos.com/index.php/themes/
+Description: A yellow and white pastel tones, two-columns layout simple, clean and minimalist theme full of energy and good vibe to inspire and complement all your texts. Also RTL-languages friendly!
+Version: 2.1
+Author: Catarina Yamamoto
+Author URI: http://www.etrecos.com/
+Tags: yellow, tan, white, light, two-columns, fixed-width, left-sidebar
+
+Gold Pot v2.1 | http://www.etrecos.com/index.php/themes/
+Gold Pot theme and its files are copyright(2009) Catarina Yamamoto. All rights reserved.
+Gold Pot theme and its files are released and distributed under GPL: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/* generic styles */
+body {
+	font-size: 1.0em;
+	font-family: sans-serif,Arial, Helvetica;
+
+	background:#fff url(/assets/content/themes/gold-pot-theme/images/img_bg.png) repeat-x 0 0;
+	color: #666666;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #ff5328;
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p{margin:0 0 10px 0;}
+
+acronym, abbr {
+	border-bottom: 1px dashed #333;
+}
+
+acronym, abbr, span.caps {
+	font-size: 90%;
+	letter-spacing: .07em;
+}
+
+acronym, abbr {
+	cursor: help;
+}
+
+blockquote {
+	border-left: 5px solid #ccc;
+	margin-left: 1.5em;
+	padding-left: 5px;
+}
+
+
+cite {
+	font-size: 90%;
+	font-style: normal;
+}
+
+h1{
+	margin-top:0;
+}
+
+h2 {
+	margin: 15px 0 2px 0;
+	padding-bottom: 2px;
+	font-size:19px;
+	font-weight: normal;
+	color:#878787;
+}
+
+h3 {
+	margin-top: 0;
+}
+
+ol#comments li p {
+	font-size: 100%;
+}
+
+p, li, .feedback {
+	font-size: 12px;
+	line-height:2.0em;
+}
+
+
+/* top bar styles */
+
+#topHeader{height: 33px; min-width: 990px;}
+#topContainer{ padding: 4px;}
+
+ul#web2{margin:0; padding:0; list-style:none;}
+ul#web2 li{float: left; margin-right:5px;}
+
+#topHeader #searchBox{
+	float: right;
+	padding-top:2px;
+	padding-left:3px;
+}
+
+#topHeader #searchBox form{margin:0; padding:0;}
+#topHeader #searchBox input{
+	font-size: 0.7em; 
+	font-family: Verdana, Arial, Sans-Serif;
+}
+
+.hidden{display: none;}
+
+/* content container styles */
+form{margin:0;}
+
+#rap{
+	width: 990px;
+	background: url(/assets/content/themes/gold-pot-theme/images/img_bg_swirl.png) no-repeat 198px 0px;
+	position:relative;
+}
+
+/* header styles */
+
+#header {
+	margin: 0;
+	padding: 58px 0 0 250px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 33px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#header a, #header a:hover{color: #333333; text-decoration:none;}
+
+#header span.description{
+	font-size: 14px;
+	color: #333;
+	font-style:italic;
+	font-weight: normal;
+	position: absolute;
+	top: 45px;
+	left:250px;
+}
+
+/* content styles */
+#content { width:990px;}
+#contentContainer { padding: 35px 50px 0 250px;}
+
+
+/* menu styles */
+#menu {
+	background: #fff url(/assets/content/themes/gold-pot-theme/images/sidebar.jpg) no-repeat right 0;
+	padding: 20px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	min-height: 600px;
+}
+
+#menu form {
+	margin: 0 0 0 13px;
+}
+
+#menu input#s {
+	width: 80%;
+	background: #eee;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#menu ul {
+	font-weight: normal;
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#menu ul li {
+	margin-bottom: 15px;
+	color: #a9ac99;
+	font-size: 1em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+#menu ul li a:hover{text-decoration: underline;}
+
+#menu ul ul {
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 100%;
+/*	list-style-type: none; */
+	list-style-type: circle;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	border:0;
+	margin-top:2px ;
+}
+
+#menu ul ul li {
+	border: 0;
+	letter-spacing: 0;
+	margin-bottom: 0;
+	padding: 0;
+	padding-left: 10px;
+	color: #333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 11px;
+	line-height:1.4em;
+}
+
+#menu ul ul li a {
+	color: #333;
+	text-decoration: none;
+}
+
+#menu ul ul ul{border:0;
+	margin-top:0px;}
+
+#menu ul ul ul.children {
+	padding-left: 4px;
+}
+
+
+/* classes used by the_meta() */
+
+.post{margin-bottom: 25px;}
+
+ul.post-meta {
+	list-style: none;
+}
+
+ul.post-meta span.post-meta-key {
+	font-weight: bold;
+}
+
+.credit {
+	font-size: 1em;
+	margin: 10px 0 0 0;
+	padding: 3px;
+	text-align: center;
+}
+
+.credit a:link, .credit a:hover {
+	color: #fff;
+}
+
+.feedback {
+	color: #ccc;
+	text-align: right;
+	clear: both;
+}
+
+.meta{
+	font-size: .7em;
+}
+
+.meta li, ul.post-meta li {
+	display: inline;
+}
+
+.meta ul {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.meta, .meta a {
+	font-weight: normal;
+	color: #878787;
+}
+.meta{margin-left: 8px;}
+.meta a {text-decoration:underline;}
+
+.storytitle {
+	margin: 0;
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+.storytitle a {
+	text-decoration: none;
+	color: #333;	
+}
+
+.storytitle span.titleDate{
+	color: #333;
+	background-color:#ffe07c;
+	display:block;
+	float:left;
+	font-size:0.55em;
+	margin-right:7px;
+	margin-top:2px;
+	padding:3px 5px 6px;
+}
+
+.storytitle span.comment{ display:block; float: right; margin-top: -23px; background-color:#e5e5e5;}
+
+.storytitle{color:#feba04;}
+.storytitle span.postDate{padding-left:27px;}
+
+.ispage .nocomments{display:none;}
+.ispage .postcomments{padding-top:25px;}
+.postcomments{padding-top:10px;}
+
+
+.page .postDate, .singlepost .postDate{padding-left:0px !important;}
+.page .meta, .singlepost .meta{margin-left:0px;}
+.storytitle span.titleName{color:#333333;}
+.storytitle span.authorname{color:#a9ac99;}
+.storytitle span.storyComment{position:relative; color:#999;}
+.storytitle span.storyComment .on{ display:block; background: url(/assets/content/themes/gold-pot-theme/images/comment.gif) no-repeat 0 0; height:20px; width:22px; font-size:10px;text-align:center;padding-top:1px; position:relative; letter-spacing: -1px; margin-left: 0px; position:absolute;top:-15px; left:0;}
+.storytitle span.storyComment span span{color: #a9ac99; margin-left:-2px; letter-spacing: 0;}
+
+h2#comments, h2#postcomment, p.sorry{font-size:12px; font-weight:bold; color:#878787;}
+.nocomments{font-style: italic;}
+
+.storycontent{color: #333333; padding-left: 8px;margin-top: 15px; font-size:11px;}
+.storycontent ul, .storycontent ol{padding-left: 20px; margin-left:0;}
+.singlepost {padding-left:0;}
+
+.navi{font-size: 11px; margin-top:20px; display:block; padding-bottom:30px;}
+.searchtitle{margin-top:0; margin-bottom: 0px;}
+.queryBlog{ margin-bottom: 20px;}
+
+#commentform #author, #commentform #email, #commentform #url, #commentform textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: .2em;
+}
+
+#commentform textarea {
+	width: 60%;
+	height:100px;
+}
+
+.comment {border-top:solid 3px #f3f3f3; padding-top: 5px;}
+.comment p {font-size: 1em; padding-left: 45px;}
+.comment p.comHeader {padding-left: 0px;}
+.comHeader a{color: #666; text-decoration: underline;}
+.comHeader .editH a{color: #FF5328; }
+
+#commentlist{list-style: none; margin:5px 0 10px; padding:0;}
+p.commentfeed{margin-bottom:25px;}
+
+#commentlist li ul {
+	border-left: 1px solid #ddd;
+	font-size: 110%;
+	list-style-type: none;
+}
+
+#commentlist li .avatar {
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+/* more styles */
+
+#wp-calendar {
+	border: 1px solid #ddd;
+	empty-cells: show;
+	font-size: 14px;
+	margin: 0;
+	width: 100%;
+}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#wp-calendar a {
+	display: block;
+	text-decoration: none;
+}
+
+#wp-calendar a:hover {
+	background: #eee;
+	text-decoration: none !important;
+	color: #333;
+}
+
+#wp-calendar caption {
+	color: #999;
+	font-size: 16px;
+	text-align: left;
+}
+
+#wp-calendar td {
+	color: #666;
+	font: normal 11px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: normal;
+	padding: 2px 0;
+	text-align: center;
+}
+
+#wp-calendar td.pad:hover {
+	background: #fff;
+}
+
+#wp-calendar #today {
+	background: #eee;
+	color: #333;
+}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+/* Captions & aligment */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	background-color: #fff;
+	padding: 4px;
+	margin: 10px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 3px;
+	border: 1px solid #e5e5e5;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 3px 4px 0;
+	margin: 0;
+	color: #666;
+}
+/* End captions & aligment */
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-bottom:  30px;
+	font-size:0.7em;
+	margin-top: -20px;
+	}
+
+table.table001 {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  width: 570px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 100%;
+  text-align: center;
+}
+
+table.table001 caption {
+  margin-top: 1em;
+  text-align: left;
+}
+
+table.table001 th,
+table.table001 td {
+  padding: 4px 6px;
+}
+
+table.table001 th {
+  background: #1B3AB4;
+  white-space: nowrap;
+  font-size: 92%;
+  color: #FFF;
+}
+
+table.table001 td {
+  background: #E5EAFF;
+  white-space: nowrap;
+}
+
+h4 {
+  font-size: 120%;
+  border-left: 5px solid #FFBF00;
+  border-bottom: 1px dotted #FFBF00;
+  font-weight: bold;
+  padding: 3px 2px 3px 8px;
+  margin-top: 25px;
+}
+
+h5 {
+  font-size: 110%;
+  border-left: 5px solid #FFFFAA;
+  padding: 0px 0px 0px 8px;
+  margin-top: 25px;
+}
+
+h5 {
+  font-size: 110%;
+  border-left: 5px solid #FFFFAA;
+  padding: 0px 0px 0px 10px;
+  margin-top: 25px;
+}
+
+h6 {
+  font-size: 110%;
+  border-left: 5px solid #FFAAAA;
+  padding: 0px 0px 0px 15px;
+  margin-top: 25px;
+}
+
+h4,
+h5,
+h6 {
+  margin-left: 0px;
+}
+
+p.note, div.note,
+p.caution, div.caution,
+p.warning, div.warning {
+  margin: 1em;
+  padding: 0 0 0 .5em;
+  border-left: 4px solid;
+}
+
+
+p.caution,
+div.caution {
+  border-color: #ffcf00;
+}
+
+p.note,
+div.note {
+ border-color: #99aacc;
+}
+
+li .note,
+li .caution,
+li .warning {
+  margin: .5em 0 0 0;
+  padding: .2em .5em .2em .9em;
+}
+
+/* Makes sure the first paragraph does not add top-whitespace within the box*/
+li .note>p:first-child,
+li .caution>p:first-child,
+li .warning>p:first-child {
+  margin-top:0;
+  padding-top:0;
+}
+
+code, pre {
+  color:#007000;
+  font-family:monospace;
+  line-height:1em;
+}
+
+pre {
+  border:1px solid #ccc;
+  background-color:#fafafa;
+  padding:10px;
+  margin:0 0 1em 1em;
+  overflow:auto;
+  line-height:inherit; /* fixes vertical scrolling in webkit */
+}
+li pre, li table, li img {
+  margin:.5em 0 0 1em;
+}
+
+  pre {
+    /* these allow lines to break (if there's a white space) */
+    overflow: visible;
+    text-wrap: unrestricted;
+    white-space: -moz-pre-wrap; /* Moz */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: pre-wrap; /* CSS3  */
+    word-wrap: break-word; /* IE 5.5+ */
+  }
+
+#lint_detail2  table, td, th{
+border: 2px #2b2b2b solid; 
+border-collapse: collapse;
+
+}
+
+table.lint_detail{
+    border-top:1px solid #663300;
+    border-left:1px solid #663300;
+    border-collapse:collapse;
+    border-spacing:0;
+    background-color:#ffffff;
+    empty-cells:show;
+}
+.lint_detail th{
+color: #ffffff;
+    border-right:1px solid #663300;
+    border-bottom:1px solid #663300;
+    background-color:#d2691e;
+    background-position:left top;
+    padding:0.3em 1em;
+    text-align:center;
+}
+.lint_detail td{
+    border-right:1px solid #663300;
+    border-bottom:1px solid #663300;
+    padding:0.3em 1em;
+}
+
+.lint_detail .odd{
+	background: #fafad2;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>edison arduino board PWM ジャンパーピン設定方法 へのコメント</title>
+	<atom:link href="http://andbrowser.com/intel-edison/3243/edison-arduino-board-pwm-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%83%94%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/intel-edison/3243/edison-arduino-board-pwm-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%83%94%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	</channel>
+</rss>

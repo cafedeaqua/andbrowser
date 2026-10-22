@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="ADT16から提供されているAndroid Lintの利用方法を記載しています。 実行方法、インストール方法、オプション指定方法、既知の不具合などの情報を記載しています。" name="description"/>
+
+<meta content="android, develop, adt16,lint,eclipse" name="keywords"/>
+<title>Android Lint の利用方法を記載 | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/development/knowhow/712/android-lint/feed/index.xml" rel="alternate" title="Bescottee » Android Lint の利用方法 のコメントのフィード" type="application/rss+xml"/>
+<link href="/development/knowhow/712/android-lint/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/development/knowhow/697/adt-r16-0-1/index.html" rel="prev" title="Android Development Tools(ADT) r16.0.1 更新情報"/>
+<link href="/development/knowhow/770/android-support-package-r6/index.html" rel="next" title="Android Support Package Rivision6 更新情報"/>
+<link href="/development/knowhow/712/android-lint/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-bu" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/development/knowhow/697/adt-r16-0-1/index.html" rel="prev">Android Development Tools(ADT) r16.0.1 更新情報</a></div>
+<div class="alignright"><a href="/development/knowhow/770/android-support-package-r6/index.html" rel="next">Android Support Package Rivision6 更新情報</a> »</div>
+</div>
+<div class="post-712 post hentry category-knowhow category-development tag-android tag-eclipse tag-lint" id="post-712">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">12.18.11</span> <span class="titleName"><a href="/development/knowhow/712/android-lint/index.html" rel="bookmark">Android Lint の利用方法</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/knowhow/index.html" rel="category tag" title="KnowHow の投稿をすべて表示">KnowHow</a>, <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/eclipse/index.html" rel="tag">eclipse</a>, <a href="/tag/lint/index.html" rel="tag">lint</a></span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p><img alt="Android Lint" class="aligncenter size-full wp-image-713" height="274" src="/assets/content/uploads/2011/12/20111218_AndroidLint.png" title="Android Lint" width="508"/></p>
+<p><a href="http://tools.android.com/tips/lint">Android Lint</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://tools.android.com/tips/lint">Android Lint</a></h4>
+<p>Android Lintは、ADT16(とSDK Tools 16)のための新しいツールです。これは、Androidプロジェクトのソースコードの潜在的な不具合を発見するためのものです。このツールは、Eclipseに統合されて利用されます。アーキテクチャは、意図的に IDE と依存関係を持っていません。そのため、継続的インテグレーションシステム(CI)のようなシステムと同様に他のIDEやビルドツールにも統合されることが望まれています。</p>
+<p><span id="more-712"></span></p>
+<p><img alt="" class="aligncenter size-full wp-image-745" height="294" src="/assets/content/uploads/2011/12/lint-html-small.png" title="lint-html-small" width="330"/></p>
+<p>以下に不具合の種類をいくつかの例を交えて紹介します。</p>
+<ul>
+<li>翻訳の失敗（と、利用されていない翻訳）
+<li>レイアウトパフォーマンスの問題（以前の layoutopt ツールで発見されていたものとそれより多くのもの）
+<li>未使用のリソース
+<li>矛盾する配列サイズ（配列がマルチ構成で定義されている場合）
+<li>アイコンに関する問題（densityの間違いやアイコンのコピーや間違ったサイズなど）
+<li>ユーザビリティに関する問題（テキストフィールドに入力種類が指定されていないのようなもの）
+<li>Manifestのエラーに関すること
+<li>その他、たくさんのこと
+</li></li></li></li></li></li></li></li></ul>
+<p>2011/11/24：<a href="http://tools.android.com/recent/newlintrules">いくつかの新しい lint ルールを追加</a></p>
+<p>この<a href="http://tools.android.com/tips/lint-checks">ドキュメント</a>を参照してください。これには lint で現在チェックされるすべての項目が掲載されています。<br/>
+Lint はまだ開発中のため、このリストは将来追加されていきます。加えて、将来カスタムなチェック項目を（できる限り簡単に）追加できるようなAPIを開発しています。</p>
+<h4>コマンドライン利用方法</h4>
+<p><code>lint</code>というコマンドラインツールが SDK tools/ ディレクトリに提供されています。<br/>
+もしSDK tools/ ディレクトリにパスが通っていれば “<code>lint</code>”を実行できます。<br/>
+実行時にAndroidプロジェクトディレクトリを指定してください。任意のディレクトリが指定可能で、(Androidプロジェクトではない場合）再帰的に探索されますし、ディレクトリ内のすべてのプロジェクトがチェック対象になります。（さらにスペース区切りで複数のプロジェクトを指定することもできます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint /src/astrid/
+Scanning GreenDroid-GoogleAPIs: ..
+Scanning stream: ...
+Scanning api: ...........................
+Scanning GDCatalog: .......................
+Scanning GreenDroid: ...........................................................
+Scanning tests: ...
+Scanning filters: ....
+Scanning tests: .....
+Scanning astrid: ....................................................................................................................................................
+Scanning simple: .......
+api/res/values-ca: Error: Locale ca is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+astrid/res/values-ca: Error: Locale ca is missing translations for: DLG_cancel, DLG_dismiss, DLG_ok, EPr_deactivated... (117 more) [MissingTranslation]
+api/res/values-cs: Error: Locale cs is missing translations for: sync_SPr_bgwifi_key, sync_SPr_forget_key, sync_SPr_interval_values, sync_SPr_logged_in_prefix... (2 more) [MissingTranslation]
+(many lines omitted)
+43 errors, 466 warnings
+</pre>
+<h5>チェックの無効化</h5>
+<p>エラーメッセージの後に、鍵括弧（[や]）でエラーの様々な種別を表す id が表示されます。<br/>
+上記の “MissingTranslation” のようなものです。<br/>
+指定したチェック項目やチェックのリストを –disable オプションを追加することによって無効化できます。<br/>
+例えば以下のように。<br/>
+</p>
+<p>Usability カテゴリーの Icons サブカテゴリーのように、上記の “Usability:Icons” の記載を行い、カテゴリーリストを作成できます。<br/>
+デフォルトではいくつかのチェックが無効化されています。それらは、 –enable フラグを追加することによって有効化できます。<br/>
+最終的に、–check フラグを利用して正確に確認できます。以下のようにコードベース内の特定の問題を見つけられます。<br/>
+</p>
+<p>利用可能な id とカテゴリーは以下のように探せます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --list
+Valid issue categories:
+Correctness
+Security
+Performance
+Usability
+Usability:Icons
+Accessibility
+Internationalization
+
+Valid issue id's:
+"ContentDescription": Ensures that image widgets provide a contentDescription
+"DuplicateIds": Checks for duplicate ids within a single layout
+"StateListReachable": Looks for unreachable states in a &lt;selector&gt;
+"InefficientWeight": Looks for inefficient weight declarations in LinearLayouts
+"ScrollViewSize": Checks that ScrollViews use wrap_content in scrolling dimension
+"MergeRootFrame": Checks whether a root &lt;FrameLayout&gt; can be replaced with a &lt;merge&gt; tag
+...
+</pre>
+<p>各項目の利用方法を取得できます。–show コマンドオプションに id やカテゴリーを指定してください。（引数を省略するとすべての説明が見れます）</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --show MissingPrefix
+MissingPrefix
+-------------
+Summary: Detect XML attributes not using the Android namespace
+
+Priority: 8 / 10
+Severity: Warning
+Category: Correctness
+
+Most Android views have attributes in the Android namespace. When
+referencing these attributes you *must* include the namespace prefix,
+or your attribute will be interpreted by aapt as just a custom
+attribute.
+</pre>
+<h5>HTML レポート</h5>
+<p>コマンドラインツールからHTMLレポートも作成できます。生の lint 出力よりもいくつかの以下の利点があります。</p>
+<ul>
+<li>各項目ごとにより詳細な説明が記載されます。それにハイパーリンクを用いて各項目の属性やより詳細情報を提供できます。
+<li>エラーが存在する実際のソースコードを掲載できます（エラーの周りの3行程度）
+<li>ソースファイルを結合するリンクを含められます。
+<li>アイコンエラー時に、比較できるようにそれぞれのアイコンをサポートされます。
+</li></li></li></li></ul>
+<p>HTMLレポートを作成するために、–html filename の引数を追加してください。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html
+</pre>
+<p>By default, links to source files will just use local file:// path resources. You can remap the URLs to a different prefix with the –url option. For example:</p>
+<p>デフォルトでは、ローカルファイルの file:// パスを利用してソースファイルをリンクします。–url オプションを利用して異なる接頭語を利用して URL にリンクできます。</p>
+<pre class="brush: bash; highlight: [1]; title: ; notranslate" title="">
+$ lint --html /tmp/report.html --url /src/MyProj=http://buildserver/src/MyProj
+</pre>
+<h5>その他のコマンドラインオプション</h5>
+<p><code>"lint --help"</code>を実行すれば、詳細情報や利用可能なオプションが表示されます。</p>
+<h4>Eclipse での利用方法</h4>
+<p>Lint は ADT 16 に統合されています。これによって lint のコマンドラインバージョンの上記のような機能が提供されます。</p>
+<ul>
+<li>多数の警告の自動的修正。
+<li>Lint が様々な編集時に自動的に実行されます。
+<li>エラーの特定事例と同様にエラーを抑止する機能があります。
+<li>厳格に項目を設定する機能があります。
+<li>lint view から問題のソースコードに直接ジャンプできます。
+</li></li></li></li></li></ul>
+<h5>Lintの自動実行</h5>
+<p>Lint は以下の場合に自動的に実行されます。</p>
+<ul>
+<li>APKを作成時。この場合、lint は致命的なエラーのみの調査を行う特別なモード（高速に実行するため）で実行されます。そして、もし致命的なエラーが有る場合はapk作成が中止されます。この機能は Lint オプションで停止できます。
+<li>レイアウトファイルや manifest ファイルのようなXMLファイルを編集や保存した場合。この場合、すべてのファイル内で調査が実施されて、調査結果がエディタのマーカーとして表示されます。
+<li>レイアウトエディタを利用する場合。UI操作を行うたびに、ファイル内調査（layouoptの様々なルールのような）がレイアウトファイルに実行されて、lint window(レイアウトエディタの上部の左コーナーに表示されるエラーやマーカーから開いたり)が表示されます。
+</li></li></li></ul>
+<h5>Lint Window</h5>
+<p><img alt="" class="aligncenter size-full wp-image-747" height="228" src="/assets/content/uploads/2011/12/lint-toolbar.png" title="lint-toolbar" width="399"/></p>
+<p>プロジェクト上で Lint を実行するために、パッケージエクスプローラからプロジェクトを選択し、Lint ツールバーアクション（画像の左上）をクリックします。</p>
+<p>代わりの方法として、プロジェクト右クリックからAndroid Toolsのサブメニューから”Run Lint”を実行。これにより、Lint Windows が開かれてエラーが追加されます。エラーを選択すると、詳細説明が右のテキストエリアに表示されます。</p>
+<p>Lint View でエラーをダブルクリックするとソースファイルのエラーの箇所にジャンプします。それぞれの警告のアイコンは重要性を示しており、警告の修正方法（次のセクションで紹介）が小さな電球で表示されます。</p>
+<p>Windows にはアクションバーがあり（上部の右側の端の角）、以下のことをしてくれます。</p>
+<ul>
+<li>lintを再実行して、結果を更新できます。（更新中の間、ストップボタンで中止もできます）
+<li>もし修正を無視したければ、エラーを修正済みにできます。
+<li>警告のマーカーを削除します。
+<li>すべての警告マーカーを削除します。
+</li></li></li></li></ul>
+<p><img alt="" class="aligncenter size-full wp-image-750" height="285" src="/assets/content/uploads/2011/12/lint-window2.png" title="lint-window2" width="738"/></p>
+<h5>クイック修正</h5>
+<p>多数の lint 警告は自動修正機能を持っています。たとえば、様々な layoutopt 修正項目は修正候補を出してくれます（例：wap_contentを 0dp に置き換える）</p>
+<ul>
+<li>lint view から、電球をクリックして修正する
+<li>レイアウトエディタの警告から、Fixボタンを押して修正する
+<li>XMLソースエディタから、Quick Fix(Ctrl-1 or Command-1)を実行したり、警告に関連づけられている修正を選択する。
+</li></li></li></ul>
+<h5>エラーの抑止</h5>
+<p>エディタの Quick Fix メニューから以下の選択ができます。</p>
+<ul>
+<li>このファイル内のみ無視する
+<li>このプロジェクト内で無視する
+<li>ある期間、警告を無視する
+</li></li></li></ul>
+<p><img alt="" class="aligncenter size-full wp-image-752" height="174" src="/assets/content/uploads/2011/12/lint-fix.png" title="lint-fix" width="659"/></p>
+<p>（もし quickfix 上の lint 修正アクションが見つからなければ、既知の不具合を見てください。）</p>
+<p>これらの選択肢は、プロジェクトの lint.xml に保存されており、コマンドラインツールによって見ることができます。<br/>
+このように、UI上から警告を無視することができ、ソースプロジェクトのlint.xml ファイルを確認し、lint実行時の他の項目も無視設定したものは、表示されなくなります。（たぶん、手動で検証したみた結果）</p>
+<h5>オプション</h5>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid &gt; Lint Options を選択してください。</p>
+<p><img alt="" class="aligncenter size-full wp-image-755" height="545" src="/assets/content/uploads/2011/12/lint-options2.png" title="lint-options2" width="576"/></p>
+<p>すべてのプロジェクトで利用されるオプションのlint 全体オプションを編集するには、通常のEclipse オプションのndroid &gt; Lint Options を選択してください。</p>
+<p>オプションの項目を選択した場合、右下のドロップダウンから Severity(厳密性）（訳者注釈：errorにするかwarningにするか）を設定できます。これによって正確に項目をエラーにするかどうかを設定できます。（例えば、ダイアログのトップ近くにあるAPK作成時に中止する。など）</p>
+<p>項目のチェックをオフにする場合は、severityで<code>“Ignore”</code>を選択してください。</p>
+<p>lint 設定をプロジェクト毎に編集しないように注意してください。プロジェクト設定ダイアログを開いて（プロジェクト上で右クリック）、Android Lint の設定ページを探してください。オプションダイアログで手動でSeverityを設定するとエラーを抑止すると共に lint.xml ファイルに記録されます。それから、チーム内の他の項目は、プロジェクト内で設定した同じものを利用できます。</p>
+<h5>インストール方法</h5>
+<p>いまわかっていることだけでいうと、ADT16に早くアクセスできるように計画しています。（訳者注：すでにADT16.0.1がリリースされています。）</p>
+<p>ソースコードが待ちきれないときは、git ソースコードリポジトリが sdk/lint フォルダーで利用できます。(手順は、<br/>
+<a href="http://source.android.com/source/downloading.html">http://source.android.com/source/downloading.html</a>　をみてください。そして、マスターリポジトリからソースコードを取得してください。</p>
+<h5>既知の不具合</h5>
+<ul>
+<li>この項目(<a href="http://code.google.com/p/android/issues/detail?id=21124">21124</a>)はADT16で修正済み。
+<li>未使用のリソース：未使用のリソースの発見は、いくつかのリソースで利用されている場合に正しく動作しない場合があります。lintがコマンドラインから実行されたとき、リソース参照を探すため内に簡単な文字列分析を利用します。コメントや文字列リテラルなどを無視する間に、まだ切り替えが遅れるかもしれないためです。lintがeclipseで動作しているとき、より正しい結果になるようにパースツリーを利用します。このプランは、lintコアがどのようなところで実行したとしても正しく動作するようなフルパースに統合するためです。
+<li>Overdraw 検出：検出を利用していないような場合に、javaコードを分析する必要があり、現在主要なJavaパースツリーは動作していません。（リソース検出を利用していない場合と違って、eclipse 内で実行することはできます）
+</li></li></li></ul>
+<h4>Lint で解析対象になる項目</h4>
+<p>次のエントリの「<a href="/development/knowhow/787/android-lint-check-rule-detail/index.html">Android Lint 解析内容の詳細を調査</a>」で紹介しているので参考にしてください。</p>
+<p>以上</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" rel="bookmark">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a class="wherego_title" href="/development/3583/hvc-c2wsdk/index.html" rel="bookmark">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a class="wherego_title" href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" rel="bookmark">Edison で利用できる加速度センサーADXL345</a></li></ul></div> </div>
+</div>
+
+<div class="postcomments">
+<h2 id="comments">19件のコメント			<a href="/development/knowhow/712/android-lint/index.html#postcomment" title="コメントをどうぞ">»</a>
+</h2>
+<ol id="commentlist">
+<li class="comment even thread-even depth-1 hatena" id="comment-hatena-3">
+<div class="comment-body" id="div-comment-hatena-3">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/712/android-lint/" rel="external nofollow">graceful_life</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>頑張ってるよなぁ，誰なんだろう？</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 hatena" id="comment-hatena-2">
+<div class="comment-body" id="div-comment-hatena-2">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/712/android-lint/" rel="external nofollow">patorash</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>最近ちょくちょく見かけるので気になってた</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="comment-tweet-">
+<div class="comment-body" id="div-comment-tweet-">
+<div class="comment-author vcard">
+<cite class="fn">axcel_rss</cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>[hatena antenna] Android Lint の利用方法を記載 | Bescottee <a href="http://t.co/p5DxYIAH" rel="nofollow">http://t.co/p5DxYIAH</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 hatena" id="comment-hatena-1">
+<div class="comment-body" id="div-comment-hatena-1">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/712/android-lint/" rel="external nofollow">kawa_xxx</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>新しい物が追加されたのか…</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-153484320340848641">
+<div class="comment-body" id="div-comment-tweet-153484320340848641">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/kawa_xxx/status/153484320340848641" rel="external nofollow">kawa_xxx</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>[android][tools]新しい物が追加されたのか… / “Android Lint の利用方法を記載 | Bescottee” <a href="http://t.co/8bNuKqRc" rel="nofollow">http://t.co/8bNuKqRc</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-159071111173251072">
+<div class="comment-body" id="div-comment-tweet-159071111173251072">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/zak_raw/status/159071111173251072" rel="external nofollow">zak_raw</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android Lint の利用方法 <a href="http://t.co/vl39COZb" rel="nofollow">http://t.co/vl39COZb</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 hatena" id="comment-hatena-0">
+<div class="comment-body" id="div-comment-hatena-0">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://b.hatena.ne.jp/entry/andbrowser.com/development/knowhow/712/android-lint/" rel="external nofollow">dd0125</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Lintの解説</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-159565387548209152">
+<div class="comment-body" id="div-comment-tweet-159565387548209152">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/dd0125/status/159565387548209152" rel="external nofollow">dd0125</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Lintの解説 / “Android Lint の利用方法を記載 | Bescottee” <a href="http://t.co/Kc6jIAdY" rel="nofollow">http://t.co/Kc6jIAdY</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-164165012225662976">
+<div class="comment-body" id="div-comment-tweet-164165012225662976">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/cota2n/status/164165012225662976" rel="external nofollow">cota2n</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>"Android Lint の利用方法を記載 | Bescottee" – <a href="http://t.co/l2TBYCGX" rel="nofollow">http://t.co/l2TBYCGX</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-167450285139169281">
+<div class="comment-body" id="div-comment-tweet-167450285139169281">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/sakaneya/status/167450285139169281" rel="external nofollow">sakaneya</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>TLで流れてきた Android Lintの紹介記事 ｲｲ(・∀・)ね、レポートはHTMLにするのが見やすい感じ <a href="http://t.co/Lgzu390W" rel="nofollow">http://t.co/Lgzu390W</a> <a href="http://t.co/HWm2oNnE" rel="nofollow">http://t.co/HWm2oNnE</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-167470788851675136">
+<div class="comment-body" id="div-comment-tweet-167470788851675136">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/honjo2/status/167470788851675136" rel="external nofollow">honjo2</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>TLで流れてきた Android Lintの紹介記事 ｲｲ(・∀・)ね、レポートはHTMLにするのが見やすい感じ <a href="http://t.co/Lgzu390W" rel="nofollow">http://t.co/Lgzu390W</a> <a href="http://t.co/HWm2oNnE" rel="nofollow">http://t.co/HWm2oNnE</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-172004134776619010">
+<div class="comment-body" id="div-comment-tweet-172004134776619010">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/yoktys/status/172004134776619010" rel="external nofollow">yoktys</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android Lint の利用方法 <a href="http://t.co/raS11UNE" rel="nofollow">http://t.co/raS11UNE</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-182086410583552002">
+<div class="comment-body" id="div-comment-tweet-182086410583552002">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/yuuto/status/182086410583552002" rel="external nofollow">yuuto</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>久しぶりにAndroidの環境構築したらAndroid Lintなるものが出てきた。どうやらAndroid版FireBugsのようなものっぽい。| Android Lint の利用方法を記載 | Bescottee – <a href="http://t.co/4HWCMjAI" rel="nofollow">http://t.co/4HWCMjAI</a> #FukInfra</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-182834409685258240">
+<div class="comment-body" id="div-comment-tweet-182834409685258240">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/sakebook/status/182834409685258240" rel="external nofollow">sakebook</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android Lint の利用方法 <a href="http://t.co/2pEmZFTZ" rel="nofollow">http://t.co/2pEmZFTZ</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 friendfeed" id="comment-friendfeed-4">
+<div class="comment-body" id="div-comment-friendfeed-4">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/blacksheepjp/d470ed52/android-lint-bescottee" rel="external nofollow">blacksheep</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>[android] / “Android Lint の利用方法を記載 | Bescottee” <a href="http://t.co/lkLnlIN0" rel="nofollow" title="http://andbrowser.com/development/knowhow/712/android-lint/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-185197708309573632">
+<div class="comment-body" id="div-comment-tweet-185197708309573632">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/neiraza/status/185197708309573632" rel="external nofollow">neiraza</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>[android] / “Android Lint の利用方法を記載 | Bescottee” <a href="http://t.co/lkLnlIN0" rel="nofollow">http://t.co/lkLnlIN0</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 googleplus" id="comment-googleplus-4">
+<div class="comment-body" id="div-comment-googleplus-4">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="https://plus.google.com/102342946250278951276/posts/ePQP2LdVJVt" rel="external nofollow">kazumi hayashida</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>lint.xmlってなんだろう？、とぐぐってみた アプリの不具合を(ある程度)起動前検出するものらしい</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 tweet" id="comment-tweet-226221696338759680">
+<div class="comment-body" id="div-comment-tweet-226221696338759680">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/modal_soul/status/226221696338759680" rel="external nofollow">modal_soul</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>“Android Lint の利用方法を記載 | Bescottee” <a href="http://t.co/dB0toLfT" rel="nofollow">http://t.co/dB0toLfT</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-245688288025911297">
+<div class="comment-body" id="div-comment-tweet-245688288025911297">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/modal_soul/status/245688288025911297" rel="external nofollow">modal_soul</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>Android LintのSecurityカテゴリのissueって、どの程度の範囲・精度ってどのくらいなんだろうか？ <a href="http://t.co/jasecVu0" rel="nofollow">http://t.co/jasecVu0</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+</ol>
+<p class="commentfeed"><a href="/development/knowhow/712/android-lint/feed/index.xml">このコメント欄の <abbr title="Really Simple Syndication">RSS</abbr> フィード</a> <a href="/development/knowhow/712/android-lint/trackback/index.html" rel="trackback">トラックバック <abbr title="Universal Resource Locator">URL</abbr></a>
+</p>
+
+</div>
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,885 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,396 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,555 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+
+<script src="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/scripts/core-min.js" type="text/javascript"></script>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shCore-min.css" id="ash_core-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shThemeDefault-min.css" id="ash_theme_default-css" media="all" rel="stylesheet" type="text/css"/>
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

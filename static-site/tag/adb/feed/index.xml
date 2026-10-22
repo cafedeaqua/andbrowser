@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; adb</title>
+	<atom:link href="http://andbrowser.com/tag/adb/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/adb/feed/" />
+		<item>
+		<title>ANDROID 3RD PARTY USB VENDOR ID LIST &#8212; DO NOT EDIT</title>
+		<link>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/</link>
+		<comments>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/#comments</comments>
+		<pubDate>Fri, 28 Nov 2014 02:33:36 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adb]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2959</guid>
+		<description><![CDATA[adb_usb.iniの更新方法
+androidアプリ開発に必要な adb 接続時が必要です。まず以下のコマンドで adb の再起動を試してみても認識しない場合は、adb_usb.ini を更新する必要があります。
+
+
+ [...]]]></description>
+			<content:encoded><![CDATA[<h4>adb_usb.iniの更新方法</h4>
+<p>androidアプリ開発に必要な adb 接続時が必要です。まず以下のコマンドで adb の再起動を試してみても認識しない場合は、adb_usb.ini を更新する必要があります。<br />
+<span id="more-2959"></span></p>
+<p><code><br />
+adb kill-server<br />
+adb start-server<br />
+</code></p>
+<p>但し、adb_usb.ini の中身を見てみると、以下のように DO NOT EDIT と書かれていて直接このファイルを更新しないようにと記載があります。直接更新せずに &#8216;android update adb&#8217; を叩いて更新させなさいと説明されています。</p>
+<p><code><br />
+$ cat ~/.android/adb_usb.ini<br />
+# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.<br />
+# USE 'android update adb' TO GENERATE.<br />
+# 1 USB VENDOR ID PER LINE.<br />
+</code></p>
+<p>上記のように書かれていても、以下の EPSON Moverio BT-200 の技術資料(<a href="https://moverio.epson.biz/jsp/developer/dev_login.jsp">https://moverio.epson.biz/jsp/developer/dev_login.jsp</a> 資料を見るには要ログイン。)では、adb_usb.ini を直接書き換えましょうという説明があったりします。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/11/moverio-adb-usb.png"><img src="http://andbrowser.com/wp-content/uploads/2014/11/moverio-adb-usb.png" alt="" title="moverio-adb-usb" width="638" height="471" class="aligncenter size-full wp-image-2961" /></a></p>
+<p>正しい更新方法は、${ANDROID_SDK_HOME}/add-on/${DEVICE}/manifest.ini というファイルを作成して、以下のように記載します。</p>
+<p><code><br />
+name=ASUS Nexus 7 2013 Android Unofficial USB-Vendor add-on<br />
+vendor=ASUS<br />
+description=Adds USB support for ASUS Nexus7 (Vendor id:0x18d1)<br />
+api=19<br />
+revision=1<br />
+usb-vendor=0x18d1<br />
+</code></p>
+<p>上記の usb-vendor に入れる値は、デバイスをmacに接続して、以下のコマンドで確認できます。<br />
+<code><br />
+system_profiler SPUSBDataType<br />
+</code></p>
+<p>mac に Nexus5 を接続した場合は以下のような結果が出力されます。該当する情報は、 Vendor ID: 0&#215;18d1  (Google Inc.) です。</p>
+<p><code><br />
+$ system_profiler SPUSBDataType<br />
+USB:</p>
+<p>    USB 3.0 SuperSpeed Bus:</p>
+<p>      Host Controller Location: Built-in USB<br />
+      Host Controller Driver: AppleUSBXHCI<br />
+      PCI Device ID: 0x9c31<br />
+      PCI Revision ID: 0x0004<br />
+      PCI Vendor ID: 0x8086<br />
+      Bus Number: 0x0a</p>
+<p>        Internal Memory Card Reader:</p>
+<p>          Product ID: 0x8406<br />
+          Vendor ID: 0x05ac  (Apple Inc.)<br />
+          Version: 8.20<br />
+          Serial Number: 000000000820<br />
+          Speed: Up to 5 Gb/sec<br />
+          Manufacturer: Apple<br />
+          Location ID: 0x15300000 / 2<br />
+          Current Available (mA): 900<br />
+          Current Required (mA): 896<br />
+          Built-In: Yes</p>
+<p>    USB 3.0 Hi-Speed Bus:</p>
+<p>      Host Controller Location: Built-in USB<br />
+      Host Controller Driver: AppleUSBXHCI<br />
+      PCI Device ID: 0x9c31<br />
+      PCI Revision ID: 0x0004<br />
+      PCI Vendor ID: 0x8086<br />
+      Bus Number: 0x0a</p>
+<p>        Nexus 5:</p>
+<p>          Product ID: 0x4ee2<br />
+          Vendor ID: 0x18d1  (Google Inc.)<br />
+          Version: 2.32<br />
+          Serial Number: 037c658f2152b5a9<br />
+          Speed: Up to 480 Mb/sec<br />
+          Manufacturer: LGE<br />
+          Location ID: 0x14100000 / 11<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 500</p>
+<p>        BRCM20702 Hub:</p>
+<p>          Product ID: 0x4500<br />
+          Vendor ID: 0x0a5c  (Broadcom Corp.)<br />
+          Version: 1.00<br />
+          Speed: Up to 12 Mb/sec<br />
+          Manufacturer: Apple Inc.<br />
+          Location ID: 0x14300000 / 3<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 94<br />
+          Built-In: Yes</p>
+<p>            Bluetooth USB Host Controller:</p>
+<p>              Product ID: 0x8289<br />
+              Vendor ID: 0x05ac  (Apple Inc.)<br />
+              Version: 0.99<br />
+              Speed: Up to 12 Mb/sec<br />
+              Manufacturer: Apple Inc.<br />
+              Location ID: 0x14330000 / 4<br />
+              Current Available (mA): 500<br />
+              Current Required (mA): 0<br />
+              Built-In: Yes</p>
+<p>        Apple Internal Keyboard / Trackpad:</p>
+<p>          Product ID: 0x0259<br />
+          Vendor ID: 0x05ac  (Apple Inc.)<br />
+          Version: 2.24<br />
+          Speed: Up to 12 Mb/sec<br />
+          Manufacturer: Apple Inc.<br />
+          Location ID: 0x14500000 / 13<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 40<br />
+          Built-In: Yes<br />
+</code></p>
+<p>記載後に以下のandroid commandを実施します。</p>
+<p><code><br />
+android update adb<br />
+</code></p>
+<h4>補足情報</h4>
+<p>上記を実施すると SDK-manager に以下のように情報が増えます。紙が割れているように見えるのは、add-onにいれる場合に必要な ddon-google_apis-google-19 などのように emulator image などの必要なファイルがないためで、支障は内容なので気にしなくてよいでしょう。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/11/adb-usb-sdk-manager.png"><img src="http://andbrowser.com/wp-content/uploads/2014/11/adb-usb-sdk-manager.png" alt="" title="adb-usb-sdk-manager" width="619" height="159" class="aligncenter size-full wp-image-2963" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/" rel="bookmark" class="wherego_title">Android 開発アンチパターン勉強会 #1</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/" />
+	</item>
+		<item>
+		<title>adb shell pm list コマンドの端末ごとの違いについて</title>
+		<link>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/</link>
+		<comments>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/#comments</comments>
+		<pubDate>Sat, 03 Dec 2011 16:17:01 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adb]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[IS03]]></category>
+		<category><![CDATA[nexus s]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=647</guid>
+		<description><![CDATA[adb shell pm list コマンドによって、端末やOSバージョンごとの違いを調査]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111204_pm_list_command.png" alt="pm list コマンド" title="pm list コマンド" width="371" height="232" class="aligncenter size-full wp-image-663" /></p>
+<h4>pm list コマンド</h4>
+<p>androidアプリ開発をしている場合は、adb コマンドは必須でしょう。adbコマンド以外にもいくつも<a href="http://developer.android.com/guide/developing/tools/index.html">Android SDK DevGuide Tools</a>に記載されているようなコマンドが提供されています。</p>
+<p>今回紹介する pm list コマンドは、上記のようなSDKが提供しているコマンドではなく、端末内で提供されているコマンドです。これはどういう意味かというと、端末のバージョンや開発元（HTCやSamsungなど）によって利用できるものが異なるということです。</p>
+<h4>３台の端末（emulator込み）の比較</h4>
+<p>Androidバージョンの異なる２台の端末とエミュレータで pm list コマンドのオプションの比較を行います。差分は、<strong><span style="color: #ff0000;">pm list libraries コマンド</span></strong>のみ(pm clear PACKAGEはあまり利用しないだろうと独断と偏見で除外）がAndroidVersion 2.3（今回の場合、Nexus Sとエミュレータ（2.3.3)で提供されていました。<br />
+<span id="more-647"></span></p>
+<h5>Nexus S(Version:2.3.6, Build number:GRK39F)と Emulator(Version:2.3.3)</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list
+Error: didn't specify type of data to list
+usage: pm [list|path|install|uninstall]
+       pm list packages [-f] [-d] [-e] [-u] [FILTER]
+       pm list permission-groups
+       pm list permissions [-g] [-f] [-d] [-u] [GROUP]
+       pm list instrumentation [-f] [TARGET-PACKAGE]
+       pm list features
+       pm list libraries
+       pm path PACKAGE
+       pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+       pm uninstall [-k] PACKAGE
+       pm clear PACKAGE
+       pm enable PACKAGE_OR_COMPONENT
+       pm disable PACKAGE_OR_COMPONENT
+       pm setInstallLocation [0/auto] [1/internal] [2/external]
+---snip---
+</script></p>
+<h5>IS03(Version:2.2.1, Build number:01.01.08)</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list
+Error: didn't specify type of data to list
+usage: pm [list|path|install|uninstall]
+       pm list packages [-f]
+       pm list permission-groups
+       pm list permissions [-g] [-f] [-d] [-u] [GROUP]
+       pm list instrumentation [-f] [TARGET-PACKAGE]
+       pm list features
+       pm path PACKAGE
+       pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+       pm uninstall [-k] PACKAGE
+       pm enable PACKAGE_OR_COMPONENT
+       pm disable PACKAGE_OR_COMPONENT
+       pm setInstallLocation [0/auto] [1/internal] [2/external]
+---snip---
+</script></p>
+<h4>pm list libraries コマンド</h4>
+<p>このコマンドは何を表示してくれるものかというと以下の実行結果のように端末の中に入っているライブラリを一覧表示してくれます。このライブラリを必要とするアプリ（Google Maps を利用しているアプリやusb.accessoryを利用しているアプリなど）は、インストーラーが端末側に利用するライブラリが存在するかどうかを確認し、存在しなければ以下のようなエラーメッセージ(INSTALL_FAILED_MISSING_SHARED_LIBRARY)が表示されて、アプリのインストールが失敗します。</p>
+<h5>必要なライブラリが端末に存在しない場合のエラーメッセージ（例として、ADKのサンプルアプリDemoKitLaunchをlibrary:com.android.future.usb.accessory が搭載されていない端末にインストールした場合） </h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+#adb install DemoKitLaunch.apk
+1233 KB/s (2648492 bytes in 2.096s)
+        pkg: /data/local/tmp/DemoKitLaunch.apk
+Failure [INSTALL_FAILED_MISSING_SHARED_LIBRARY]
+</script></p>
+<h5>Nexus S への pm list libraries コマンド</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list libraries
+library:android.test.runner
+library:com.android.future.usb.accessory
+library:com.android.location.provider
+library:com.google.android.maps
+library:com.google.android.nfc_extras
+library:javax.obex
+</script></p>
+<h5>Android Emulator(Version;2.3.3) （作成時のtarget は、Google APIs ではない方） </h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+library:android.test.runner
+library:com.android.location.provider
+library:javax.obex
+</script></p>
+<h4>結論</h4>
+<ul>
+<li>今回の調査対象とした Nexus S(2.3.6)や emulator(2.3.3)にはpm list に追加オプション(libraries)が存在
+<li>但し、2.3(GB)の全端末で提供されているかどうかは不明。（ありそうな気がしますが・・・）
+<li>アプリインストール時に利用ライブラリがないエラーがでた場合に、pm list libraries で調査が可能
+<li>2.2以下でpm list libraries が提供されていない場合の調査方法は不明。（adb install してみるしかない？）
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/feed/</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/" />
+	</item>
+	</channel>
+</rss>

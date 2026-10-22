@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; ViewPager</title>
+	<atom:link href="http://andbrowser.com/tag/viewpager/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/viewpager/feed/" />
+		<item>
+		<title>Android Support Package Rivision6 更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/770/android-support-package-r6/</link>
+		<comments>http://andbrowser.com/development/knowhow/770/android-support-package-r6/#comments</comments>
+		<pubDate>Thu, 22 Dec 2011 03:10:46 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[support package]]></category>
+		<category><![CDATA[ViewPager]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=770</guid>
+		<description><![CDATA[Android Support Package Rivision6の更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/andoird_support_package_r6.png" alt="Andoird Support Package Rivision 6" title="Andoird Support Package Rivision 6" width="480" height="316" class="aligncenter size-full wp-image-774" /></p>
+<h4>
+<p><a href="http://developer.android.com/sdk/compatibility-library.html">サポートパッケージ, リビジョン 6</a> (2011年12月)</p>
+</h4>
+<p><a href="http://developer.android.com/sdk/compatibility-library.html">Support Package, r6</a> の意訳です。完璧な自信はありませんので原文と一緒にご覧ください。</p>
+<p class="note"><strong>重要:</strong> サポートライブラリAPIのリファレンスは、フレームワークのリファレンスと一緒に現在提供されています。例：<br />
+<code><a href="http://developer.android.com/reference/android/support/v4/app/package-summary.html">android.support.v4.app</a></code></p>
+<p><span id="more-770"></span></p>
+<dl>
+<h5>
+<dt>v4 サポートライブラリの更新情報：</dt>
+</h5>
+<dd>
+<ul>
+<li>ViewPagerの変更点：
+<ul>
+<li><code><a href="http://developer.android.com/reference/android/support/v4/view/ViewPager.html">ViewPager</a></code>に特別な装飾用の view support を追加。装飾用Viewは、XMLレイアウト内でページャーの子ビューとして提供されるだろう。</li>
+<li>ページにタイトル文字列を取得するために<code><a href="http://developer.android.com/reference/android/support/v4/view/PagerAdapter.html#getPageTitle(int)">PagerAdapter.getPageTitle()</a></code>を追加。各ページのデフォルト値はありません。</li>
+<li><code><a href="http://developer.android.com/reference/android/support/v4/view/PagerTitleStrip.html">PagerTitleStrip</a></code>を追加。簡単なタイトルの分解(strip)を行い、ViewPager の子として追加できます。開発者はテキスト装飾(appearance)とカラーをレイアウトのサイズや重力(gravity)情報と同様に設定できます。</li>
+<li>アダプタの実装においてクラスのキャストを避けるため View よりもむしろ ViewGroup オブジェクトに対応できるように<code><a href="http://developer.android.com/reference/android/support/v4/view/PagerAdapter.html">PagerAdapter</a></code> メソッドを更新。</li>
+<li>Launcher-styleという（フリックで）投げるような振る舞いを利用するために<code><a href="http://developer.android.com/reference/android/support/v4/view/ViewPager.html">ViewPager</a></code>を更新。</li>
+<li>ユーザ員らフェースやテストの自動化に関する不具合を修正。</li>
+</ul>
+</li>
+<li>Fragmentのサポート：
+<ul>
+<li><code>setStartDeferred()</code> メソッドを<code><a href="http://developer.android.com/reference/android/support/v4/app/Fragment.html#setUserVisibleHint(boolean)">setUserVisibleHint(boolean)</a></code>に変更。</li>
+<li>オフスクリーンページのための遅延スタートを追加。パフォーマンス改善のため。</li>
+</ul>
+</li>
+<li>アクセサビリティAPIのサポート：
+<ul>
+<li>nullの代わりに空リストが返るように<code><a href="http://developer.android.com/reference/android/support/v4/view/AccessibilityDelegateCompat.html">AccessibilityDelegateCompat</a></code> メソッドを更新。</li>
+<li>v4サンプルに新しいAPIを追加。</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/knowhow/787/android-lint-check-rule-detail/" rel="bookmark" class="wherego_title">Android Lint 解析内容の詳細を調査</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/770/android-support-package-r6/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/770/android-support-package-r6/" />
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; git</title>
+	<atom:link href="http://andbrowser.com/category/git/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/git/feed/" />
+		<item>
+		<title>gitのファイルトラッキングの制限</title>
+		<link>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/</link>
+		<comments>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/#comments</comments>
+		<pubDate>Sun, 29 Jun 2014 11:36:58 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2823</guid>
+		<description><![CDATA[一時ファイルやパスを除外されたファイルの一覧を取得
+
+
+git ls-files --other --ignored --exclude-standard
+
+
+このページを見た人は、以下のページも見ています。.gitco [...]]]></description>
+			<content:encoded><![CDATA[<p>一時ファイルやパスを除外されたファイルの一覧を取得</p>
+<pre>
+<code>
+git ls-files --other --ignored --exclude-standard
+</code>
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/git/2730/gitconfig/" rel="bookmark" class="wherego_title">.gitconfig</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2823/git-exclude-tracking-file-list/" />
+	</item>
+		<item>
+		<title>cygwinでgit2.0のビルド方法</title>
+		<link>http://andbrowser.com/git/2666/cygwin-git2-build/</link>
+		<comments>http://andbrowser.com/git/2666/cygwin-git2-build/#comments</comments>
+		<pubDate>Fri, 27 Jun 2014 09:27:55 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2666</guid>
+		<description><![CDATA[
+
+apt-cyg install git
+apt-cyg install make
+apt-cyg install autoconf
+apt-cyg install gcc-core
+apt-cyg install z [...]]]></description>
+			<content:encoded><![CDATA[<pre>
+<code>
+apt-cyg install git
+apt-cyg install make
+apt-cyg install autoconf
+apt-cyg install gcc-core
+apt-cyg install zlib-devel
+apt-cyg install libiconv
+apt-cyg install libiconv-devel
+
+git clone git://github.com/git/git.git
+
+cd git/
+make configure
+./configure --prefix=/usr/local
+make all
+make install
+</code>
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/git/2823/git-exclude-tracking-file-list/" rel="bookmark" class="wherego_title">gitのファイルトラッキングの制限</a></li><li><a href="http://andbrowser.com/git/2730/gitconfig/" rel="bookmark" class="wherego_title">.gitconfig</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2666/cygwin-git2-build/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2666/cygwin-git2-build/" />
+	</item>
+		<item>
+		<title>.gitconfig</title>
+		<link>http://andbrowser.com/git/2730/gitconfig/</link>
+		<comments>http://andbrowser.com/git/2730/gitconfig/#comments</comments>
+		<pubDate>Wed, 25 Jun 2014 19:42:00 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2730</guid>
+		<description><![CDATA[http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804でbrowse-remoteが紹介されています。それを加えてい、以下の便利な alias も紹介されている [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804">http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804</a>でbrowse-remoteが紹介されています。それを加えてい、以下の便利な alias も紹介されているので備忘として引用させて頂きます。<br />
+<--more--></p>
+<pre>
+<code>
+[alias]
+    # http://oli.jp/2012/git-powerup/
+    # http://blog.blindgaenger.net/advanced_git_aliases.html
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+    b = branch -a
+    br = browse-remote
+    ci = commit
+    co = checkout
+    d = diff
+    dc = diff --cached
+    di = diff
+    dic = diff --cached
+    f = fetch --prune
+    fs = !git f &#038;&#038; git su
+    ignore = !([ ! -e .gitignore ] &#038;&#038; touch .gitignore) | echo $1 >> .gitignore
+    info = remote show origin
+    l = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+    ll = log --stat --abbrev-commit
+    ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
+    lp = log --oneline -n 20 -p
+    ls = log --stat --abbrev-commit -n 1 # display previous log
+    s = status --short --branch
+    st = status
+    su = submodule update
+</code>
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2727/android-stdio-usefulshotcut/" rel="bookmark" class="wherego_title">Android Stdio 便利ショートカット(emacs設定中）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2730/gitconfig/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2730/gitconfig/" />
+	</item>
+		<item>
+		<title>git add,commitのあとに .gitignore にファイルを追加したときの対処方法</title>
+		<link>http://andbrowser.com/git/2692/how-to-remove-already-git-add-commit-file-filder/</link>
+		<comments>http://andbrowser.com/git/2692/how-to-remove-already-git-add-commit-file-filder/#comments</comments>
+		<pubDate>Mon, 16 Jun 2014 00:29:33 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2692</guid>
+		<description><![CDATA[対象を同時に削除する場合
+ファイルの場合
+
+
+git rm -f app/app.iml
+
+
+フォルダの場合
+
+
+git rm -rf app/build/
+
+
+対象をローカルに保持したまま、git管理対象から削除する場 [...]]]></description>
+			<content:encoded><![CDATA[<h4>対象を同時に削除する場合</h4>
+<h5>ファイルの場合</h5>
+<pre>
+<code>
+git rm -f app/app.iml
+</code>
+</pre>
+<h5>フォルダの場合</h5>
+<pre>
+<code>
+git rm -rf app/build/
+</code>
+</pre>
+<h4>対象をローカルに保持したまま、git管理対象から削除する場合</h4>
+<h5>ファイルの場合</h5>
+<pre>
+<code>
+git rm --cached -f app/app.iml
+</code>
+</pre>
+<h5>フォルダの場合</h5>
+<pre>
+<code>
+git rm --cached -rf app/build/
+</code>
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/" rel="bookmark" class="wherego_title">Android 開発アンチパターン勉強会 #1</a></li><li><a href="http://andbrowser.com/android-sdk/2770/20140627_sdk_manager_material_ver2/" rel="bookmark" class="wherego_title">(2014/06/27時点)SDK Managerが取得するXMLデータ一覧（その２）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2692/how-to-remove-already-git-add-commit-file-filder/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2692/how-to-remove-already-git-add-commit-file-filder/" />
+	</item>
+		<item>
+		<title>LF will be replaced by CRLF in gradlew.</title>
+		<link>http://andbrowser.com/git/2690/lf-will-be-replaced-by-crlf-in-gradlew/</link>
+		<comments>http://andbrowser.com/git/2690/lf-will-be-replaced-by-crlf-in-gradlew/#comments</comments>
+		<pubDate>Mon, 16 Jun 2014 00:26:33 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2690</guid>
+		<description><![CDATA[
+LF will be replaced by CRLF in gradlew.
+
+LF will be replaced by CRLF in gradlew.のエラーが出て時の対処方法
+
+git config --l [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+LF will be replaced by CRLF in gradlew.<br />
+</code></p>
+<p>LF will be replaced by CRLF in gradlew.のエラーが出て時の対処方法</p>
+<p><code><br />
+git config --local core.autocrlf false<br />
+</code></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2690/lf-will-be-replaced-by-crlf-in-gradlew/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2690/lf-will-be-replaced-by-crlf-in-gradlew/" />
+	</item>
+		<item>
+		<title>間違った名前、メールアドレスでのcommitの修正方法</title>
+		<link>http://andbrowser.com/git/2674/how-to-modify-wrong-username-email-for-git-commit/</link>
+		<comments>http://andbrowser.com/git/2674/how-to-modify-wrong-username-email-for-git-commit/#comments</comments>
+		<pubDate>Sun, 15 Jun 2014 03:11:03 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2674</guid>
+		<description><![CDATA[複数のgit repositoryを利用していると、間違った名前、メールアドレスでcommitしてしまい、logに残ってします場合がよくあります。
+その場合の修正方法は以下になります。
+以下のHEADの~は必要な数つけて [...]]]></description>
+			<content:encoded><![CDATA[<p>複数のgit repositoryを利用していると、間違った名前、メールアドレスでcommitしてしまい、logに残ってします場合がよくあります。<br />
+その場合の修正方法は以下になります。</p>
+<p>以下のHEADの~は必要な数つけてください。今回は2つのコミットを修正します。<br />
+<code></p>
+<pre>
+git rebase -i HEAD~~
+</pre>
+<p></code><br />
+<span id="more-2674"></span></p>
+<p>以下のように rebase を対話型でエディタが開きます。<br />
+<code></p>
+<pre>
+pick aa4455b Cosmetic change
+pick bb7788d Code golf
+
+# Rebase cc1122d..dd3344fe onto ee5566f
+
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x <cmd>, exec <cmd> = Run a shell command <cmd>, and stop if it fails
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+</pre>
+<p></code></p>
+<p>名前、メールアドレスを変更したいコミットに対して、edit or e を行頭に入力します。下から最新のコミットです。logの表示時とコミットの表示順序が異なるので注意してください。eはeditの省略表記です。<br />
+<code></p>
+<pre>
+edit aa4455b Cosmetic change
+e bb7788d Code golf
+
+# Rebase cc1122d..dd3344fe onto ee5566f
+
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x , exec  = Run a shell command , and stop if it fails
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+</pre>
+<p></code></p>
+<p>まず、最初のコミット(aa4455b)のコミットメッセージは変更あえずに author だけを変更します。以下のように amend オプションと author オプションを利用します。<br />
+<code></p>
+<pre>
+git commit --amend --author="user.name &lt;user.name@domain.com&gt;"
+</pre>
+<p></code></p>
+<p>最初のコミット(aa4455b)の修正が完了したことを rebase に通知します。<br />
+<code></p>
+<pre>
+git rebase --continue
+</pre>
+<p></code></p>
+<p>２つめのコミットに対しても、authorを変更します。<br />
+<code></p>
+<pre>
+git commit --amend --author="user.name &lt;user.name@domain.com&gt;"
+</pre>
+<p></code></p>
+<p>２つめのコミットに対して、修正を完了したことを通知します。<br />
+<code></p>
+<pre>
+git rebase --continue
+</pre>
+<p></code></p>
+<p>これで２つのコミットのauthorが変更できました。</p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2674/how-to-modify-wrong-username-email-for-git-commit/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2674/how-to-modify-wrong-username-email-for-git-commit/" />
+	</item>
+		<item>
+		<title>github git workshop</title>
+		<link>http://andbrowser.com/git/2663/github-git-workshop/</link>
+		<comments>http://andbrowser.com/git/2663/github-git-workshop/#comments</comments>
+		<pubDate>Sat, 07 Jun 2014 01:29:38 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2663</guid>
+		<description><![CDATA[http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html
+
+ ]]></description>
+			<content:encoded><![CDATA[<p><a href="http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html<br />
+">http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html<br />
+</a></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2663/github-git-workshop/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2663/github-git-workshop/" />
+	</item>
+		<item>
+		<title>github製エディタ Atom for Windows 入手方法（非公式ビルド）</title>
+		<link>http://andbrowser.com/git/2637/github-the-hackable-editor-atom-for-windows/</link>
+		<comments>http://andbrowser.com/git/2637/github-the-hackable-editor-atom-for-windows/#comments</comments>
+		<pubDate>Fri, 06 Jun 2014 11:18:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2637</guid>
+		<description><![CDATA[
+github The Hacker editor Atom
+githubから The hackable editor Atom というエディターが公開されました。早速利用してみようと思ったのですが、まだ Mac 向けの [...]]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2014/06/01.png" alt="" title="The hackable editor atom" width="600" class="aligncenter size-full wp-image-2638" /></p>
+<h4>github The Hacker editor Atom</h4>
+<p>githubから <a href="http://atom.io">The hackable editor Atom </a>というエディターが公開されました。早速利用してみようと思ったのですが、まだ Mac 向けの Build しか提供されていませんでした。WindowsやLinuxで利用したい場合は、以下のように自分で Build しなければません。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/06/02.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/02.png" alt="" title="02" width="600" class="aligncenter size-full wp-image-2640" /></a></p>
+<h4>Atom for Windows(非公式版）</h4>
+<p>がしかし、さすがインターネットの世界、既に Build したものを提供してくれているサイトがあります。<br />
+<a href="http://atom.someguy123.com/#sthash.qFfvJCrT.dpbs">http://atom.someguy123.com/#sthash.qFfvJCrT.dpbs</a><br />
+のサイトで Stable版（安定版。ただし古いビルドの可能性あり）、Unstable版（不安定版。ただし最新ビルド）のビルドが提供されています。もちろん、非公式のため、サポートなどありませんし、Stable版といいながらもうまく利用できない場合もありますが、それは覚悟のうえでご利用ください。<br />
+<span id="more-2637"></span></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/04.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/04-1024x775.png" alt="" title="atom-for-windows-build" width="600" class="aligncenter size-large wp-image-2643" /></a></p>
+<p>ひとまず、上記の「Download Latest Stable Build(.zip)」を選んでダウロードします。ダウンロードは、MEGA というファイル配信・共有サービスを利用します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/06/10.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/10-1024x741.png" alt="" title="atom-for-windows-from-mega" width="600" class="aligncenter size-large wp-image-2646" /></a></p>
+<p>2014/06/06時点で Atom 0.99.0-ea0773e.rar がダウンロードできました。これを解凍すると、以下のようにファイル群が得られます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/06/11.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/11.png" alt="" title="11" width="600" class="aligncenter size-full wp-image-2648" /></a></p>
+<p>解凍したファイルの中から、atom.exe を実行すると以下のように起動できました。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/06/12.png"><img src="http://andbrowser.com/wp-content/uploads/2014/06/12.png" alt="" title="atom-for-windows-run" width="600" class="aligncenter size-full wp-image-2650" /></a></p>
+<h4>トラブルシューティング</h4>
+<h5>エラー「MSVCP100.DLL が見つかりません」がでる場合</h5>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=5555">32-bit MSVC 2010 Runtime</a>をダウンロードしてインストールしてください。</p>
+<h5>ファイルパスが長すぎます</h5>
+<p>解凍した atom.exe が深い階層に置かれている場合に発生する場合があります。解凍したフォルダを C:\atom のような浅い場所に変更してください。</p>
+<p>これを見た皆様がエラーなくご利用頂けることを祈っております。</p>
+<h4>Atom紹介資料@githubkaigi</h4>
+<p><a href="https://www.dropbox.com/s/utaud80bk5egse3/Atom%20%E2%80%93%20GitHub%20Kaigi_jp.pdf<br />
+">githabkaigi での atom の紹介</a></h5>
+<p>の資料があるのでご参照ください。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/event/2580/atend-githubkaigi/" rel="bookmark" class="wherego_title">githubkaigiに参加。発表資料リンク追加</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2637/github-the-hackable-editor-atom-for-windows/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2637/github-the-hackable-editor-atom-for-windows/" />
+	</item>
+	</channel>
+</rss>

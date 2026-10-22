@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; development</title>
+	<atom:link href="http://andbrowser.com/category/development/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/development/feed/" />
+		<item>
+		<title>家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</title>
+		<link>http://andbrowser.com/development/3583/hvc-c2wsdk/</link>
+		<comments>http://andbrowser.com/development/3583/hvc-c2wsdk/#comments</comments>
+		<pubDate>Fri, 15 Jan 2016 13:26:22 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3583</guid>
+		<description><![CDATA[
+https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android
+で公開されている家族目線(HVC-C2W)SDKを試用してみました。
+見守りカメラセンサ「家族 [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://plus-sensing.omron.co.jp/egg-project/__wp/wp-content/uploads/fordeveloper20151113_sdk-monitor01.jpg"><img alt="" src="http://plus-sensing.omron.co.jp/egg-project/__wp/wp-content/uploads/fordeveloper20151113_sdk-monitor01.jpg" title="HVC_C2W" class="alignnone" width="600" /></a></p>
+<p><a href="https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android">https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android</a><br />
+で公開されている家族目線(HVC-C2W)SDKを試用してみました。</p>
+<p><a href="http://plus-sensing.omron.co.jp/kazoku-mesen/<br />
+">見守りカメラセンサ「家族目線」</a>というもののSDKです。<br />
+<span id="more-3583"></span></p>
+<p><code><br />
+$ git clone git@github.com:OmronSensingEggProject/HVC_C2W_SDK_Android.git<br />
+</code></p>
+<h1>サンプルアプリのビルド方法</h1>
+<p>サンプルアプリをAndroid Studioとコマンドラインでビルドする方法を紹介します。</p>
+<h2>Android Studio</h2>
+<p>
+Android Studioの Open an existing Android Studio project で HVC_C2W_SDK_Android/sample/demo/base/<br />
+ を選択。よくあるAndroidアプリの場合、git clone して出来たフォルダを指定すればよいが、家族目線(HVC-C2W)SDKの場合はアプリだけの提供だけでなく、docやlibrary も git repository で提供しているため、このような構成になっているようです。</p>
+<p>
+Android Studioへの取込ができれば以下のようになり、Build メニューの Make Project でビルドができます。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2016/01/as01.png"><img src="http://andbrowser.com/wp-content/uploads/2016/01/as01-300x250.png" alt="" title="as01" width="300" height="250" class="aligncenter size-medium wp-image-3588" /></a></p>
+<h2>コマンドライン</h2>
+<p>
+続いてコマンドラインからビルドする方法を紹介します。コマンドラインからのビルドは gradle というビルドツールをします。この gradle のインストールなどを行わなくてもいいような wrapper が用意されています。Windows向けが gradlew.bat で MAC/Linux向けのものが gradlew というコマンドです。このコマンドの中で gradle のダウンロードとその後のビルドを実施してくれます。まずは以下のコマンドでビルドしてみましょう。</p>
+<p><code><br />
+$ cd HVC_C2W_SDK_Android/sample/demo/base/<br />
+$ ./gradlew assemble<br />
+or<br />
+$ gradlew.bat assemble<br />
+</code></p>
+<p>
+コマンドのオプションが他に何があるかどうかを知りたい場合は以下のコマンドで説明が出てきます。</p>
+<p><code><br />
+$ ./gradlew tasks<br />
+</code></p>
+<h1>API keyの設定</h1>
+<p>アプリを動作させるために API key が必要です。取得のうえ、以下の場所に追加を行います。これでアプリを利用できる準備が整いました。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2016/01/as02.png"><img src="http://andbrowser.com/wp-content/uploads/2016/01/as02-300x121.png" alt="" title="as02" width="300" height="121" class="aligncenter size-medium wp-image-3596" /></a></p>
+<p>このAPI Key は何に利用されるかというとクラウドサービスとして提供される HVC-C2W　WebAPIの認証のために利用されます。このWebAPIの詳細についてはHVC-C2W WebAPI仕様書に記載されています。このファイルは、HVC_C2W_SDK_Android/doc/ に以下の2つが提供されており、HVC-C2W_WebAPI仕様書_B.pdfが該当するものです。</p>
+<ul>
+<li>HVC-C2W_OKAOAPI仕様書_A.pdf
+<li>HVC-C2W_WebAPI仕様書_B.pdf
+</ul>
+<p>
+今後サンプルアプリの中身について記載していきたいと思います。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/" rel="bookmark" class="wherego_title">Edison で利用できる加速度センサーADXL345</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/3583/hvc-c2wsdk/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/3583/hvc-c2wsdk/" />
+	</item>
+		<item>
+		<title>spoon android maven library URL(as of 20150904)</title>
+		<link>http://andbrowser.com/development/3513/spoon-android-maven-library-url/</link>
+		<comments>http://andbrowser.com/development/3513/spoon-android-maven-library-url/#comments</comments>
+		<pubDate>Thu, 03 Sep 2015 12:26:54 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[maven]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3513</guid>
+		<description><![CDATA[spoon android maven library URLです。
+https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/
+
+0.10.0/
+ [...]]]></description>
+			<content:encoded><![CDATA[<p>spoon android maven library URLです。</p>
+<p><a href="https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/">https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/</a><br />
+<code><br />
+0.10.0/<br />
+0.14.0/<br />
+0.14.1/<br />
+0.9.0/<br />
+0.9.1/<br />
+0.9.2/<br />
+0.9.3/<br />
+0.9.4/<br />
+0.9.5/<br />
+0.9.6/<br />
+1.0.0/<br />
+1.0.1/<br />
+1.0.2/<br />
+1.0.3/<br />
+maven-metadata.xml<br />
+</code></p>
+<h1>2015/09/06時点</h1>
+<p><a href="https://jcenter.bintray.com/com/squareup/spoon/spoon-client/">https://jcenter.bintray.com/com/squareup/spoon/spoon-client/</a><code><br />
+1.0.0/<br />
+1.0.1/<br />
+1.0.2/<br />
+1.0.3/<br />
+1.0.4/<br />
+1.0.5/<br />
+1.1.0/<br />
+1.1.1/<br />
+1.1.10/<br />
+1.1.2/<br />
+1.1.3/<br />
+1.1.4/<br />
+1.1.5/<br />
+1.1.6/<br />
+1.1.7/<br />
+1.1.8/<br />
+1.1.9/<br />
+1.2.0/<br />
+maven-metadata.xml<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" rel="bookmark" class="wherego_title">2015/11/21時点の Intel Edison Firmware</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/3513/spoon-android-maven-library-url/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/" />
+	</item>
+		<item>
+		<title>support-annotaion and espresso library differentation</title>
+		<link>http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/</link>
+		<comments>http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/#comments</comments>
+		<pubDate>Sat, 15 Aug 2015 15:21:51 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3516</guid>
+		<description><![CDATA[以下のようなエラーがでる場合があります。これは、espressoのライブラリが古いandroid support anotations library を指定しているためです。
+
+Warning:Conflict wit [...]]]></description>
+			<content:encoded><![CDATA[<p>以下のようなエラーがでる場合があります。これは、espressoのライブラリが古いandroid support anotations library を指定しているためです。</p>
+<p><code><br />
+Warning:Conflict with dependency 'com.android.support:support-annotations'. Resolved versions for app (22.2.1) and test app (22.2.0) differ.<br />
+</code></p>
+<p>build.gradleに以下を記載すれば解決できます。</p>
+<p><code><br />
+androidTestCompile('com.android.support.test:runner:0.3') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+androidTestCompile('com.android.support.test:rules:0.3') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {<br />
+    exclude module: 'support-annotations'<br />
+}<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3520/3520/" rel="bookmark" class="wherego_title"></a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" />
+	</item>
+		<item>
+		<title>twitter fabric maven library location</title>
+		<link>http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/</link>
+		<comments>http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/#comments</comments>
+		<pubDate>Fri, 14 Aug 2015 12:04:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[crashlitics]]></category>
+		<category><![CDATA[fablic]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3509</guid>
+		<description><![CDATA[Crashliticsのライブラリをfabric に移行するために build.gradle の対応をしながら、 fabric の最新ライブラリのバージョンが知りたかったので、2015/08/13 時点のmaven repository を以下のように覗いてみました。
+https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/
+
+Index of public/io/fabric/tools/gradle
+Name                Last modified      Size
+../
+1.14.0/              16-Oct-2014 20:46    -
+1.14.1/    [...]]]></description>
+			<content:encoded><![CDATA[<p>Crashliticsのライブラリをfabric に移行するために build.gradle の対応をしながら、 fabric の最新ライブラリのバージョンが知りたかったので、2015/08/13 時点のmaven repository を以下のように覗いてみました。</p>
+<p><a href="https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/">https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/</a></p>
+<p><code><br />
+Index of public/io/fabric/tools/gradle</p>
+<p>Name                Last modified      Size<br />
+../<br />
+1.14.0/              16-Oct-2014 20:46    -<br />
+1.14.1/              16-Oct-2014 21:19    -<br />
+1.14.3/              31-Oct-2014 19:23    -<br />
+1.14.4/              24-Nov-2014 15:17    -<br />
+1.15.0/              06-Feb-2015 19:20    -<br />
+1.15.1/              06-Feb-2015 20:50    -<br />
+1.15.2/              10-Feb-2015 17:12    -<br />
+1.16.0/              18-Mar-2015 14:04    -<br />
+1.17.0/              19-Mar-2015 20:26    -<br />
+1.18.0/              24-Mar-2015 20:33    -<br />
+1.19.0/              06-May-2015 17:34    -<br />
+1.19.1/              25-May-2015 21:49    -<br />
+1.19.2/              29-Jun-2015 19:59    -<br />
+maven-metadata.xml  29-Jun-2015 19:59  715 bytes<br />
+</code></p>
+<p><a href="https://twittersdk.artifactoryonline.com/twittersdk/public/com/crashlytics/sdk/android/crashlytics/">https://twittersdk.artifactoryonline.com/twittersdk/public/com/crashlytics/sdk/android/crashlytics/</a></p>
+<p><code><br />
+Index of public/com/crashlytics/sdk/android/crashlytics</p>
+<p>Name                     Last modified      Size<br />
+../<br />
+2.0.0/                    21-Oct-2014 17:30    -<br />
+2.0.1/                    30-Oct-2014 23:46    -<br />
+2.1.0/                    20-Nov-2014 22:10    -<br />
+2.2.0/                    15-Dec-2014 19:13    -<br />
+2.2.1/                    27-Jan-2015 19:04    -<br />
+2.2.2/                    26-Feb-2015 05:10    -<br />
+2.2.3/                    02-Apr-2015 22:27    -<br />
+2.2.4/                    06-May-2015 20:36    -<br />
+2.3.0/                    22-May-2015 20:56    -<br />
+2.3.1/                    27-May-2015 21:12    -<br />
+2.3.2/                    29-May-2015 15:50    -<br />
+2.4.0/                    23-Jun-2015 19:20    -<br />
+2.5.0/                    22-Jul-2015 16:51    -<br />
+2.5.1/                    10-Aug-2015 22:13    -<br />
+maven-metadata.xml       11-Aug-2015 17:39  775 bytes<br />
+maven-metadata.xml.md5   11-Aug-2015 17:39  32 bytes<br />
+maven-metadata.xml.sha1  11-Aug-2015 17:39  40 bytes<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/" rel="bookmark" class="wherego_title">spoon android maven library URL(as of 20150904)</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/" />
+	</item>
+		<item>
+		<title>Crashlytics ライブラリの Android Studio対応</title>
+		<link>http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/</link>
+		<comments>http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/#comments</comments>
+		<pubDate>Mon, 13 Apr 2015 12:24:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3171</guid>
+		<description><![CDATA[CrashlyticsのAndroid向けライブラリのバージョンを以下から確認できます。
+as of 2015/04/25
+http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml
+
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+&#60;metadata&#62;
+&#60;groupId&#62;com.crashlytics.tools.gradle&#60;/groupId&#62;
+&#60;artifactId&#62;crashlytics-gradle&#60;/artifactId&#62;
+&#60;versioning&#62;
+&#60;release&#62;1.16.0&#60;/release&#62;
+&#60;versions&#62;
+&#60;version&#62;1.0.0&#60;/version&#62;
+&#60;version&#62;1.0.1&#60;/version&#62;
+&#60;version&#62;1.0.2&#60;/version&#62;
+&#60;version&#62;1.0.3&#60;/version&#62;
+&#60;version&#62;1.0.4&#60;/version&#62;
+&#60;version&#62;1.0.5&#60;/version&#62;
+&#60;version&#62;1.0.6&#60;/version&#62;
+&#60;version&#62;1.0.7&#60;/version&#62;
+&#60;version&#62;1.0.8&#60;/version&#62;
+&#60;version&#62;1.0.9&#60;/version&#62;
+&#60;version&#62;1.1.0&#60;/version&#62;
+&#60;version&#62;1.1.1&#60;/version&#62;
+&#60;version&#62;1.2.0&#60;/version&#62;
+&#60;version&#62;1.2.1&#60;/version&#62;
+&#60;version&#62;1.3.0&#60;/version&#62;
+&#60;version&#62;1.3.1&#60;/version&#62;
+&#60;version&#62;1.3.2&#60;/version&#62;
+&#60;version&#62;1.3.3&#60;/version&#62;
+&#60;version&#62;1.3.4&#60;/version&#62;
+&#60;version&#62;1.4.0&#60;/version&#62;
+&#60;version&#62;1.5.0&#60;/version&#62;
+&#60;version&#62;1.6.1&#60;/version&#62;
+&#60;version&#62;1.7.0&#60;/version&#62;
+&#60;version&#62;1.8.0&#60;/version&#62;
+&#60;version&#62;1.8.1&#60;/version&#62;
+&#60;version&#62;1.9.0&#60;/version&#62;
+&#60;version&#62;1.9.1&#60;/version&#62;
+&#60;version&#62;1.10.1&#60;/version&#62;
+&#60;version&#62;1.10.2&#60;/version&#62;
+&#60;version&#62;1.10.3&#60;/version&#62;
+&#60;version&#62;1.10.5&#60;/version&#62;
+&#60;version&#62;1.10.6&#60;/version&#62;
+&#60;version&#62;1.10.7&#60;/version&#62;
+&#60;version&#62;1.11.0&#60;/version&#62;
+&#60;version&#62;1.11.1&#60;/version&#62;
+&#60;version&#62;1.11.2&#60;/version&#62;
+&#60;version&#62;1.11.3&#60;/version&#62;
+&#60;version&#62;1.11.4&#60;/version&#62;
+&#60;version&#62;1.12.0&#60;/version&#62;
+&#60;version&#62;1.13.0&#60;/version&#62;
+&#60;version&#62;1.13.1&#60;/version&#62;
+&#60;version&#62;1.14.2&#60;/version&#62;
+&#60;version&#62;1.14.3&#60;/version&#62;
+&#60;version&#62;1.14.4&#60;/version&#62;
+&#60;version&#62;1.14.6&#60;/version&#62;
+&#60;version&#62;1.14.7&#60;/version&#62;
+&#60;version&#62;1.16.0&#60;/version&#62;
+&#60;/versions&#62;
+&#60;lastUpdated&#62;20150318172805&#60;/lastUpdated&#62;
+&#60;/versioning&#62;
+&#60;/metadata&#62;
+
+http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml
+
+&#60;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&#62;
+&#60;metadata&#62;
+  &#60;groupId&#62;com.crashlytics.android&#60;/groupId&#62;
+  &#60;artifactId&#62;crashlytics&#60;/artifactId&#62;
+  &#60;versioning&#62;
+    &#60;release&#62;1.0.4&#60;/release&#62;
+    &#60;versions&#62;
+      &#60;version&#62;1.0.0&#60;/version&#62;
+      &#60;version&#62;1.0.1&#60;/version&#62;
+       [...]]]></description>
+			<content:encoded><![CDATA[<p>CrashlyticsのAndroid向けライブラリのバージョンを以下から確認できます。</p>
+<p>as of 2015/04/25</p>
+<p><a href="http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml">http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml</a></p>
+<p><code><br />
+This XML file does not appear to have any style information associated with it. The document tree is shown below.<br />
+&lt;metadata&gt;<br />
+&lt;groupId&gt;com.crashlytics.tools.gradle&lt;/groupId&gt;<br />
+&lt;artifactId&gt;crashlytics-gradle&lt;/artifactId&gt;<br />
+&lt;versioning&gt;<br />
+&lt;release&gt;1.16.0&lt;/release&gt;<br />
+&lt;versions&gt;<br />
+&lt;version&gt;1.0.0&lt;/version&gt;<br />
+&lt;version&gt;1.0.1&lt;/version&gt;<br />
+&lt;version&gt;1.0.2&lt;/version&gt;<br />
+&lt;version&gt;1.0.3&lt;/version&gt;<br />
+&lt;version&gt;1.0.4&lt;/version&gt;<br />
+&lt;version&gt;1.0.5&lt;/version&gt;<br />
+&lt;version&gt;1.0.6&lt;/version&gt;<br />
+&lt;version&gt;1.0.7&lt;/version&gt;<br />
+&lt;version&gt;1.0.8&lt;/version&gt;<br />
+&lt;version&gt;1.0.9&lt;/version&gt;<br />
+&lt;version&gt;1.1.0&lt;/version&gt;<br />
+&lt;version&gt;1.1.1&lt;/version&gt;<br />
+&lt;version&gt;1.2.0&lt;/version&gt;<br />
+&lt;version&gt;1.2.1&lt;/version&gt;<br />
+&lt;version&gt;1.3.0&lt;/version&gt;<br />
+&lt;version&gt;1.3.1&lt;/version&gt;<br />
+&lt;version&gt;1.3.2&lt;/version&gt;<br />
+&lt;version&gt;1.3.3&lt;/version&gt;<br />
+&lt;version&gt;1.3.4&lt;/version&gt;<br />
+&lt;version&gt;1.4.0&lt;/version&gt;<br />
+&lt;version&gt;1.5.0&lt;/version&gt;<br />
+&lt;version&gt;1.6.1&lt;/version&gt;<br />
+&lt;version&gt;1.7.0&lt;/version&gt;<br />
+&lt;version&gt;1.8.0&lt;/version&gt;<br />
+&lt;version&gt;1.8.1&lt;/version&gt;<br />
+&lt;version&gt;1.9.0&lt;/version&gt;<br />
+&lt;version&gt;1.9.1&lt;/version&gt;<br />
+&lt;version&gt;1.10.1&lt;/version&gt;<br />
+&lt;version&gt;1.10.2&lt;/version&gt;<br />
+&lt;version&gt;1.10.3&lt;/version&gt;<br />
+&lt;version&gt;1.10.5&lt;/version&gt;<br />
+&lt;version&gt;1.10.6&lt;/version&gt;<br />
+&lt;version&gt;1.10.7&lt;/version&gt;<br />
+&lt;version&gt;1.11.0&lt;/version&gt;<br />
+&lt;version&gt;1.11.1&lt;/version&gt;<br />
+&lt;version&gt;1.11.2&lt;/version&gt;<br />
+&lt;version&gt;1.11.3&lt;/version&gt;<br />
+&lt;version&gt;1.11.4&lt;/version&gt;<br />
+&lt;version&gt;1.12.0&lt;/version&gt;<br />
+&lt;version&gt;1.13.0&lt;/version&gt;<br />
+&lt;version&gt;1.13.1&lt;/version&gt;<br />
+&lt;version&gt;1.14.2&lt;/version&gt;<br />
+&lt;version&gt;1.14.3&lt;/version&gt;<br />
+&lt;version&gt;1.14.4&lt;/version&gt;<br />
+&lt;version&gt;1.14.6&lt;/version&gt;<br />
+&lt;version&gt;1.14.7&lt;/version&gt;<br />
+&lt;version&gt;1.16.0&lt;/version&gt;<br />
+&lt;/versions&gt;<br />
+&lt;lastUpdated&gt;20150318172805&lt;/lastUpdated&gt;<br />
+&lt;/versioning&gt;<br />
+&lt;/metadata&gt;<br />
+</code></p>
+<p><a href="http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml">http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml</a></p>
+<p><code><br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
+&lt;metadata&gt;<br />
+  &lt;groupId&gt;com.crashlytics.android&lt;/groupId&gt;<br />
+  &lt;artifactId&gt;crashlytics&lt;/artifactId&gt;<br />
+  &lt;versioning&gt;<br />
+    &lt;release&gt;1.0.4&lt;/release&gt;<br />
+    &lt;versions&gt;<br />
+      &lt;version&gt;1.0.0&lt;/version&gt;<br />
+      &lt;version&gt;1.0.1&lt;/version&gt;<br />
+      &lt;version&gt;1.0.2&lt;/version&gt;<br />
+      &lt;version&gt;1.0.3&lt;/version&gt;<br />
+      &lt;version&gt;1.0.4&lt;/version&gt;<br />
+      &lt;version&gt;1.1.5&lt;/version&gt;<br />
+      &lt;version&gt;1.1.7&lt;/version&gt;<br />
+      &lt;version&gt;1.1.8&lt;/version&gt;<br />
+      &lt;version&gt;1.1.9&lt;/version&gt;<br />
+      &lt;version&gt;1.1.10&lt;/version&gt;<br />
+      &lt;version&gt;1.1.11&lt;/version&gt;<br />
+      &lt;version&gt;1.1.12&lt;/version&gt;<br />
+      &lt;version&gt;1.1.13&lt;/version&gt;<br />
+    &lt;/versions&gt;<br />
+    &lt;lastUpdated&gt;20140909201431&lt;/lastUpdated&gt;<br />
+  &lt;/versioning&gt;<br />
+&lt;/metadata&gt;</p>
+<p></code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" rel="bookmark" class="wherego_title">See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/" />
+	</item>
+		<item>
+		<title>ADT(Android Developer Tools) ダウンロードURL一覧</title>
+		<link>http://andbrowser.com/development/918/old-adt-download-url/</link>
+		<comments>http://andbrowser.com/development/918/old-adt-download-url/#comments</comments>
+		<pubDate>Sun, 21 Dec 2014 05:00:56 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=918</guid>
+		<description><![CDATA[Android SDKの古いADTのダウンロードURLの一覧を記載
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/07/android_adt_plugin_old.png" alt="" title="android_adt_plugin_old" width="384" height="220" class="aligncenter size-full wp-image-921" /></p>
+<p>
+Android ADTは新しいバージョンが続々と登場してきます。そうすると、Android SDK の <a href="http://developer.android.com/sdk/installing/installing-adt.html">ADT install サイト</a>から古いもののダウンロードリンクが無くなってしまいます。但し、eclipseのバージョンや過去のプロジェクトを古いADTで急にバージョンアップしたい場合などに急に必要になることがあります。そのため、以下に古いADTのリンクを作成しておきます。これでいつでも素早く古いADTもダウンロードできます。<br />
+<span id="more-918"></span></p>
+<p>
+ADTの最新プレビュー版を利用したいという猛者の方は、<a href="http://tools.android.com/preview-channel">Android Tools Project Site Preview Channel</a> にダウンロード方法が記載しているのでご覧ください。</p>
+<p>
+最新版のADTをインストール後に問題が発生して、古いADTに戻したい場合は、<a href="http://www.sakc.jp/blog/archives/1186">[Android TIPS]　旧バージョンで開発環境を構築する</a>や<a href="http://futabooo.hatenablog.com/entry/2012/07/13/125443">AndroidSDKToolsのrevisionとADTのバージョンを下げる方法</a>の記事が参考になると思います。<a href="http://futabooo.hatenablog.com/entry/2012/06/28/235242">AndroidSDKToolsのrevision20にしたらエライ目にあった</a> という方も居られるようですので。
+</p>
+<h4> 過去のADT のダウンロードURL一覧</h4>
+<ul>
+<li>ADT 23.0.4(October 2014)
+<ul>
+<li><a href="https://dl.google.com/android/ADT-23.0.4.zip">https://dl.google.com/android/ADT-23.0.4.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r23.0.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.4(May 2014)
+<ul>
+<li>http://dl.google.com/android/ADT-22.6.4.zip（リンク先ファイル無し）
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.4-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.3(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.3.zip">http://dl.google.com/android/ADT-22.6.3.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-windows.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-macosx.zip</a>
+<li><a href="https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip">https://dl-ssl.google.com/android/repository/tools_r22.6.3-linux.zip</a>
+	</ul>
+</li>
+<li>ADT 22.6.2(March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.2.zip">http://dl.google.com/android/ADT-22.6.2.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.2-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.1 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.1.zip">http://dl.google.com/android/ADT-22.6.1.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz">https://dl.google.com/android/android-sdk_r22.6.1-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.6.0 (March 2014)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.6.0.zip">http://dl.google.com/android/ADT-22.6.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.6-linux.tgz">https://dl.google.com/android/android-sdk_r22.6-linux.tgz</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-6/">Android Development Tools(ADT) 22.6 更新情報</a>
+	</ul>
+</li>
+<li>ADT 22.3.0 (October 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.3.0.zip">http://dl.google.com/android/ADT-22.3.0.zip</a>
+<li><a href="https://dl.google.com/android/android-sdk_r22.3-linux.tgz">https://dl.google.com/android/android-sdk_r22.3-linux.tgz</a>
+	</ul>
+</li>
+<li>ADT 22.2.1 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.1.zip">http://dl.google.com/android/ADT-22.2.1.zip</a>
+	</ul>
+</li>
+<li>ADT 22.2 (JSeptember 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.2.0.zip">http://dl.google.com/android/ADT-22.2.0.zip</a>
+	</ul>
+</li>
+<li>ADT 22.0.5 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.5.zip</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.4 (July 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.4.zip">http://dl.google.com/android/ADT-22.0.4.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-4/">Android Development Tools(ADT) 22.0.4 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.1 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.1.zip">http://dl.google.com/android/ADT-22.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-1/">Android Development Tools(ADT) 22.0.1 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 22.0.0 (May 2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-22.0.0.zip">http://dl.google.com/android/ADT-22.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-22-0-0/">Android Development Tools(ADT) 22.0.0 更新情報</a>
+	</ul>
+</li>
+</ul>
+<ul>
+<li>ADT 21.1.0 (February  2013)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.1.0.zip</a>
+<li><a href="http://andbrowser.com/development/1578/android-development-tools-adt-21-1-0-2/">Android Development Tools(ADT) 21.1.0 更新情報</a>
+	</ul>
+</li>
+<li>ADT 21.0.1 (December 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-21.0.1.zip">http://dl.google.com/android/ADT-21.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 20.0.0 (June 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-20.0.0.zip">http://dl.google.com/android/ADT-20.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/">Android Development Tools(ADT) 20.0.0 更新情報</a>
+<li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/">Android Development Tools(ADT) 20.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 18.0.0 (April 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-18.0.0.zip">http://dl.google.com/android/ADT-18.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 17.0.0 (March 2012)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-17.0.0.zip">http://dl.google.com/android/ADT-17.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 16.0.1 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.1.zip">http://dl.google.com/android/ADT-16.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/">Android Development Tools(ADT) r16.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 16.0.0 (December 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-16.0.0.zip">http://dl.google.com/android/ADT-16.0.0.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/">Android Development Tools(ADT) 16 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.1 (November 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.1.zip">http://dl.google.com/android/ADT-15.0.1.zip</a>
+<li><a href="http://andbrowser.com/development/knowhow/638/adt-15-0-1-update-info/">Android Development Tools (ADT) 15.0.1 更新情報</a>
+	</ul>
+</li>
+<li>ADT 15.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-15.0.0.zip">http://dl.google.com/android/ADT-15.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 14.0.0 (October 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-14.0.0.zip">http://dl.google.com/android/ADT-14.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 12.0.0 (July 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-12.0.0.zip">http://dl.google.com/android/ADT-12.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 11.0.0 (June 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-11.0.0.zip">http://dl.google.com/android/ADT-11.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.1 (March 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.1.zip">http://dl.google.com/android/ADT-10.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 10.0.0 (February 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-10.0.0.zip">http://dl.google.com/android/ADT-10.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 9.0.0 (January 2011)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-9.0.0.zip">http://dl.google.com/android/ADT-9.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.1 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.1.zip">http://dl.google.com/android/ADT-8.0.1.zip</a>
+	</ul>
+</li>
+<li>ADT 8.0.0 (December 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-8.0.0.zip">http://dl.google.com/android/ADT-8.0.0.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.9 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.9.zip">http://dl.google.com/android/ADT-0.9.9.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.8 (September 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.8.zip">http://dl.google.com/android/ADT-0.9.8.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.7 (May 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.7.zip">http://dl.google.com/android/ADT-0.9.7.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.6 (March 2010)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.6.zip">http://dl.google.com/android/ADT-0.9.6.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.5 (December 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.5.zip">http://dl.google.com/android/ADT-0.9.5.zip</a>
+	</ul>
+</li>
+<li>ADT 0.9.4 (October 2009)
+<ul>
+<li><a href="http://dl.google.com/android/ADT-0.9.4.zip">http://dl.google.com/android/ADT-0.9.4.zip</a>
+	</ul>
+</li>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/975/android-development-tools-adt-20-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.1 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/" rel="bookmark" class="wherego_title">ADT 22.6.3 and SDK Tools 22.6.3 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/918/old-adt-download-url/feed/</wfw:commentRss>
+		<slash:comments>30</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/918/old-adt-download-url/" />
+	</item>
+		<item>
+		<title>ANDROID 3RD PARTY USB VENDOR ID LIST &#8212; DO NOT EDIT</title>
+		<link>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/</link>
+		<comments>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/#comments</comments>
+		<pubDate>Fri, 28 Nov 2014 02:33:36 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adb]]></category>
+		<category><![CDATA[Android]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2959</guid>
+		<description><![CDATA[adb_usb.iniの更新方法
+androidアプリ開発に必要な adb 接続時が必要です。まず以下のコマンドで adb の再起動を試してみても認識しない場合は、adb_usb.ini を更新する必要があります。
+
+
+ [...]]]></description>
+			<content:encoded><![CDATA[<h4>adb_usb.iniの更新方法</h4>
+<p>androidアプリ開発に必要な adb 接続時が必要です。まず以下のコマンドで adb の再起動を試してみても認識しない場合は、adb_usb.ini を更新する必要があります。<br />
+<span id="more-2959"></span></p>
+<p><code><br />
+adb kill-server<br />
+adb start-server<br />
+</code></p>
+<p>但し、adb_usb.ini の中身を見てみると、以下のように DO NOT EDIT と書かれていて直接このファイルを更新しないようにと記載があります。直接更新せずに &#8216;android update adb&#8217; を叩いて更新させなさいと説明されています。</p>
+<p><code><br />
+$ cat ~/.android/adb_usb.ini<br />
+# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.<br />
+# USE 'android update adb' TO GENERATE.<br />
+# 1 USB VENDOR ID PER LINE.<br />
+</code></p>
+<p>上記のように書かれていても、以下の EPSON Moverio BT-200 の技術資料(<a href="https://moverio.epson.biz/jsp/developer/dev_login.jsp">https://moverio.epson.biz/jsp/developer/dev_login.jsp</a> 資料を見るには要ログイン。)では、adb_usb.ini を直接書き換えましょうという説明があったりします。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/11/moverio-adb-usb.png"><img src="http://andbrowser.com/wp-content/uploads/2014/11/moverio-adb-usb.png" alt="" title="moverio-adb-usb" width="638" height="471" class="aligncenter size-full wp-image-2961" /></a></p>
+<p>正しい更新方法は、${ANDROID_SDK_HOME}/add-on/${DEVICE}/manifest.ini というファイルを作成して、以下のように記載します。</p>
+<p><code><br />
+name=ASUS Nexus 7 2013 Android Unofficial USB-Vendor add-on<br />
+vendor=ASUS<br />
+description=Adds USB support for ASUS Nexus7 (Vendor id:0x18d1)<br />
+api=19<br />
+revision=1<br />
+usb-vendor=0x18d1<br />
+</code></p>
+<p>上記の usb-vendor に入れる値は、デバイスをmacに接続して、以下のコマンドで確認できます。<br />
+<code><br />
+system_profiler SPUSBDataType<br />
+</code></p>
+<p>mac に Nexus5 を接続した場合は以下のような結果が出力されます。該当する情報は、 Vendor ID: 0&#215;18d1  (Google Inc.) です。</p>
+<p><code><br />
+$ system_profiler SPUSBDataType<br />
+USB:</p>
+<p>    USB 3.0 SuperSpeed Bus:</p>
+<p>      Host Controller Location: Built-in USB<br />
+      Host Controller Driver: AppleUSBXHCI<br />
+      PCI Device ID: 0x9c31<br />
+      PCI Revision ID: 0x0004<br />
+      PCI Vendor ID: 0x8086<br />
+      Bus Number: 0x0a</p>
+<p>        Internal Memory Card Reader:</p>
+<p>          Product ID: 0x8406<br />
+          Vendor ID: 0x05ac  (Apple Inc.)<br />
+          Version: 8.20<br />
+          Serial Number: 000000000820<br />
+          Speed: Up to 5 Gb/sec<br />
+          Manufacturer: Apple<br />
+          Location ID: 0x15300000 / 2<br />
+          Current Available (mA): 900<br />
+          Current Required (mA): 896<br />
+          Built-In: Yes</p>
+<p>    USB 3.0 Hi-Speed Bus:</p>
+<p>      Host Controller Location: Built-in USB<br />
+      Host Controller Driver: AppleUSBXHCI<br />
+      PCI Device ID: 0x9c31<br />
+      PCI Revision ID: 0x0004<br />
+      PCI Vendor ID: 0x8086<br />
+      Bus Number: 0x0a</p>
+<p>        Nexus 5:</p>
+<p>          Product ID: 0x4ee2<br />
+          Vendor ID: 0x18d1  (Google Inc.)<br />
+          Version: 2.32<br />
+          Serial Number: 037c658f2152b5a9<br />
+          Speed: Up to 480 Mb/sec<br />
+          Manufacturer: LGE<br />
+          Location ID: 0x14100000 / 11<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 500</p>
+<p>        BRCM20702 Hub:</p>
+<p>          Product ID: 0x4500<br />
+          Vendor ID: 0x0a5c  (Broadcom Corp.)<br />
+          Version: 1.00<br />
+          Speed: Up to 12 Mb/sec<br />
+          Manufacturer: Apple Inc.<br />
+          Location ID: 0x14300000 / 3<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 94<br />
+          Built-In: Yes</p>
+<p>            Bluetooth USB Host Controller:</p>
+<p>              Product ID: 0x8289<br />
+              Vendor ID: 0x05ac  (Apple Inc.)<br />
+              Version: 0.99<br />
+              Speed: Up to 12 Mb/sec<br />
+              Manufacturer: Apple Inc.<br />
+              Location ID: 0x14330000 / 4<br />
+              Current Available (mA): 500<br />
+              Current Required (mA): 0<br />
+              Built-In: Yes</p>
+<p>        Apple Internal Keyboard / Trackpad:</p>
+<p>          Product ID: 0x0259<br />
+          Vendor ID: 0x05ac  (Apple Inc.)<br />
+          Version: 2.24<br />
+          Speed: Up to 12 Mb/sec<br />
+          Manufacturer: Apple Inc.<br />
+          Location ID: 0x14500000 / 13<br />
+          Current Available (mA): 500<br />
+          Current Required (mA): 40<br />
+          Built-In: Yes<br />
+</code></p>
+<p>記載後に以下のandroid commandを実施します。</p>
+<p><code><br />
+android update adb<br />
+</code></p>
+<h4>補足情報</h4>
+<p>上記を実施すると SDK-manager に以下のように情報が増えます。紙が割れているように見えるのは、add-onにいれる場合に必要な ddon-google_apis-google-19 などのように emulator image などの必要なファイルがないためで、支障は内容なので気にしなくてよいでしょう。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/11/adb-usb-sdk-manager.png"><img src="http://andbrowser.com/wp-content/uploads/2014/11/adb-usb-sdk-manager.png" alt="" title="adb-usb-sdk-manager" width="619" height="159" class="aligncenter size-full wp-image-2963" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/event/2994/android-%E9%96%8B%E7%99%BA%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%8B%89%E5%BC%B7%E4%BC%9A-1/" rel="bookmark" class="wherego_title">Android 開発アンチパターン勉強会 #1</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/" />
+	</item>
+		<item>
+		<title>Picasssoサンプルアプリのビルドエラー解決方法</title>
+		<link>http://andbrowser.com/development/knowhow/2859/how-to-resolve-to-build-android-picasso-sample-app/</link>
+		<comments>http://andbrowser.com/development/knowhow/2859/how-to-resolve-to-build-android-picasso-sample-app/#comments</comments>
+		<pubDate>Mon, 22 Sep 2014 06:44:16 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2859</guid>
+		<description><![CDATA[Androidの画像のダウンロードやキャッシングを行うpicassoライブラリのサンプルアプリのビルド方法を紹介
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://andbrowser.com/wp-content/uploads/2014/09/picasso.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picasso-300x223.png" alt="" title="picasso" width="300" height="223" class="aligncenter size-medium wp-image-2861" /></a></p>
+<h4>Picasso</h4>
+<p><span id="more-2859"></span></p>
+<p>Picassoは言わずと知れた Android アプリ向けの画像のダウンロード、キャッシングを簡単に利用できるようになるライブラリです。カード決済のスタートアップの<a href="https://squareup.com/jp">Squire</a>という会社の<a href="https://twitter.com/JakeWharton">JakeWharton</a>さんが開発し、OSSとして<a href="https://github.com/square/picasso">https://github.com/square/picasso</a>に公開されているものです。</p>
+<p>ひさしぶりに利用してみようとしたところ、サンプルアプリを動かす時にいくつかエラーが発生したのでその対処方法をメモしておきます。</p>
+<h4>サンプルアプリのインポートでエラー発生</h4>
+<p>github から clone して、eclipse にインポートします。サンプルアプリにライブラリが入っていないため、インポート前に<a href="http://square.github.io/picasso/#download">picasso-?.?.?.jarのダウンロード</a>からダウンロードして libs フォルダにコピーしておきましょう。</p>
+<p>project.properties がないため、インポート時に各環境でダウンロードされているSDKから対応するSDK Versionに該当するAndroid SDK が選択されます。私の環境では、以下のように SDK Version : 10(GB環境)が選択されて、ビルドエラーが発生しました。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error1.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error1.png" alt="" title="picassa_error1" width="600" class="aligncenter size-full wp-image-2867" /></a></p>
+<p>エラーの発生原因は、android:fontFamily という値が Android SDK Version 10 では提供されていないというものです。<br />
+これはAndroid SDK version 16以降で提供されているものだからです。</p>
+<p><a href="http://developer.android.com/reference/android/R.attr.html#fontFamily<br />
+">http://developer.android.com/reference/android/R.attr.html#fontFamily<br />
+</a></p>
+<p>というわけで、プロジェクトを右クリックして、Properties から Android を選択し、API Level: 16 なもの（たとえば、Android 4.1.2 など）を選びましょう。<br />
+エラーが消えない場合は、Project を Clean しましょう。android:fontFamily のエラーは解決されます。</p>
+<h5>またエラー発生</h5>
+<p>これで解決と思っておりましたが、次は別のところでエラーが発生しました。</p>
+<p><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error3.png" alt="" title="picassa_error3" width="616" height="259" class="aligncenter size-full wp-image-2873" /></p>
+<p>widgetCategory というアトリビュートがないということで再度調べてみると、これは以下のように API Level 17から提供されているものでした。<br />
+というわけで、また Properties -> Android から API Level 17(Android 4.2.2 など）に変更します。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error2.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error2.png" alt="" title="picassa_error2" width="600"  class="aligncenter size-full wp-image-2870" /></a></p>
+<h5>またまたエラー発生</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error5.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error5.png" alt="" title="picassa_error5" width="683" height="433" class="aligncenter size-full wp-image-2876" /></a></p>
+<p>これで解決と思っておりましたが、次は別のところでエラーが発生しました。support library v4がないということで、ADTのGUIメニューから以下のようにインストールします。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error6.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error6.png" alt="" title="picassa_error6" width="684" height="645" class="aligncenter size-full wp-image-2877" /></a></p>
+<h5>またまたエラー発生</h5>
+<p>これが最後と信じながら、以下のパッケージ名に関するエラーを解決します。なぜか java ソースコードの配置が package name と異なるところに import されてしまっています。パッケージ名のフォルダの名前変更から main.java を削除します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error7.png"><img src="http://andbrowser.com/wp-content/uploads/2014/09/picassa_error7.png" alt="" title="picassa_error7" width="683" height="100" class="aligncenter size-full wp-image-2880" /></a></p>
+<h4>まとめ</h4>
+<p>というわけで、Picassoのサンプルアプリを利用するには以下の対応をしましょう。</p>
+<ul>
+<li>picasso-?.?.?.jar を libs にコピー(Eclipseの場合のみ。AndroidStdioの方は gradle dependencies compile でもっと簡単でしょう）
+<li>Support library v4 のインストール
+<li>Android SDK の API Level を 17以上にする
+<li>javaソースのパッケージ名フォルダの名前変更（環境によっては必要ないかもしれません）
+</ul>
+<h4>参考情報：Volley</h4>
+<p>Picassoと同じようなライブラリに Google が出している <a href="https://android.googlesource.com/platform/frameworks/volley/">Volley</a> もとても便利です。こちらは使い方が「<a href="http://www.amazon.co.jp/gp/product/4844335340/ref=as_li_qf_sp_asin_tl?ie=UTF8&#038;camp=247&#038;creative=1211&#038;creativeASIN=4844335340&#038;linkCode=as2&#038;tag=andbrowser001-22">Effective Android</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=andbrowser001-22&#038;l=as2&#038;o=9&#038;a=4844335340" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /><br />
+」の「第22章 Volleyでネットワークプログラミングを学ぶ」に紹介されているので興味のある方はご覧ください。<br />
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=andbrowser001-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=4844335340&#038;ref=qf_sp_asin_til&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=FF4800&#038;bc1=FFFFFF&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/2859/how-to-resolve-to-build-android-picasso-sample-app/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/2859/how-to-resolve-to-build-android-picasso-sample-app/" />
+	</item>
+		<item>
+		<title>Android Studio 0.8.7 リリース（邦訳）</title>
+		<link>http://andbrowser.com/development/2850/android-stdio-0-8-7/</link>
+		<comments>http://andbrowser.com/development/2850/android-stdio-0-8-7/#comments</comments>
+		<pubDate>Sun, 24 Aug 2014 03:16:45 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[Android Stdio]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2850</guid>
+		<description><![CDATA[Android Studio 0.8.7 Releasedが公開されたため、メモっておきます。
+Android Studio 0.8.7 Released
+
+Android Studio 0.8.7 を canary c [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://tools.android.com/recent/androidstudio087released">Android Studio 0.8.7 Released</a>が公開されたため、メモっておきます。</p>
+<h4>Android Studio 0.8.7 Released</h4>
+<p>
+Android Studio 0.8.7 を canary channel にリリースしました。本バージョンには、多数の不具合修正や以下の注目すべき新しい機能があります。
+</p>
+<h4>翻訳エディタ(Translation Editor)</h4>
+<p><span id="more-2850"></span></p>
+<p>
+最初に、新しい Translation Editor を紹介します。これはあなたのアプリの strings を見たり、編集したりすることができます。&#8221;string.xml&#8221; を右クリックしてオープンすると、Open Traslation Editor(将来のリリースで他の起動方法も提供する予定。それぞれのリソースエディタにリンクを追加するなど)がオープンできます。<br />
+
+</p>
+<p><img border="0" src="http://tools.android.com/_/rsrc/1408658785723/recent/androidstudio087released/translations1.png" /></p>
+<p>
+新規の空プロジェクトのように以下のようにみれます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658785796/recent/androidstudio087released/translations5b.png" /></p>
+<p>
+地球アイコンから追加の言語を設定できます。プラスアイコンで追加の文言を設定できます。<br />
+個別の文言を編集するために、テーブルのセルを選択し、以下のテーブルの詳細パネルで編集できます。（将来のリリースでテーブル上で直接編集できる予定）</p>
+<p>
+I/Oスケジュールアプリでより完全なプロジェクトをご確認いただけます。
+</p>
+<p><img border="0" src="http://tools.android.com/_/rsrc/1408658785758/recent/androidstudio087released/translations4.png" /></p>
+<p>
+注意点：赤く表示されたメッセージはすべての言語向けに翻訳されていないことを示すものです。空のセルは別の色で表示されます。マウスをホバーすると、提供されていない言語のリストが確認できます。この機能は多数の言語をもっている場合や各言語は現在の水平状態でスクロールされるviewportで見ることができない場合に有効です。<br />
+さらに多数の言語をもっている場合、テーブルヘッダーをクリックすると、個別の言語のカラムに拡大されます。たとえば、イタリア語をクリックして拡大できますし、再度クリックすると戻せます。
+</p>
+<h4>Bitmap rendering in the debugger</h4>
+<p>デバッグ中に、Bitmapタイプの variable を右クリックして、View Bitmap を実行できます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658785833/recent/androidstudio087released/view-bitmap.png" /></p>
+<p>デバッグプロセスから結合されたデータにフェッチされ、デバッガーのこの場所で bitmap がレンダリングされます。<br />
+<img border="0" src="http://tools.android.com/_/rsrc/1408658786124/recent/androidstudio087released/view-bitmap2.png" /><br />
+新しい lint チェックとして、カスタムビューの中で提供されるものがあります。クラス名と同じベース名を利用しているカスタムビューでdeclare-styleable なもの、コード慣習から利用されるものとして例えば、アトリビュートの補完やリファクタリング更新をするものなど。</p>
+<h4>インストール方法</h4>
+<p>
+既にAndroid Stdio version 0.8.x を利用中なら、再起動するか、Help->Check for Updateを手動で選択してください。差分パッチがダウンロードsされてインストールされます。以前のバージョンを利用したい場合は、<a href="http://tools.android.com/download/studio">ダウンロードページ</a>からフルサイズのダウンロードが必要です。</p>
+<p>注意点：0.8.7は現在 canary channelでしか提供されていません。Android Stdio は標準では beta channel から更新されるようになっています。そのため、更新したい場合は、preferenceの Update category を設定を変更してください。</p>
+<h4>問題がある場合</h4>
+<p>問題があった場合、<a href="http://tools.android.com/knownissues">既知のイシュー</a>をご確認ください。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2839/20140713_sdk_manager_material/" rel="bookmark" class="wherego_title">(2014/07/14時点)SDK Managerが取得するXMLデータ一覧</a></li><li><a href="http://andbrowser.com/android-sdk/2733/what-key-point-of-eclipse-export-to-android-stdio-build/" rel="bookmark" class="wherego_title">eclipseの既存アプリをAndroid Stdio形式に変更する場合のポイント</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2850/android-stdio-0-8-7/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2850/android-stdio-0-8-7/" />
+	</item>
+		<item>
+		<title>Docker Meetup Tokyo #3の資料リンク</title>
+		<link>http://andbrowser.com/development/2832/docker-meetup-tokyo-3/</link>
+		<comments>http://andbrowser.com/development/2832/docker-meetup-tokyo-3/#comments</comments>
+		<pubDate>Sat, 05 Jul 2014 03:02:10 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2832</guid>
+		<description><![CDATA[大人気のイベントDocker Meetup Tokyo #3に参加してきたので資料をまとめました。
+アジェンダ
+
+
+18:30 開場
+18:50 挨拶(@stanaka)
+19:00 @philwhln &#8211;  [...]]]></description>
+			<content:encoded><![CDATA[<p>大人気のイベント<a href="http://connpass.com/event/6998/">Docker Meetup Tokyo #3</a>に参加してきたので資料をまとめました。</p>
+<h4>アジェンダ</h4>
+<p><span id="more-2832"></span></p>
+<ul>
+<li>18:30 開場
+<li>18:50 挨拶(@stanaka)
+<li>19:00 @philwhln &#8211; Orchestration Tools
+<li>19:30  @stanaka &#8211; Dockerでデプロイ&#038;モニタリング
+<li>20:00 @mainyaa &#8211;  Dive into Dockerネットワーク
+<li>20:20 @deeeet &#8211;  flynnの時代
+<li>21:00 LT（1人5分）
+<li>@mopemope &#8211; How to Impl lib swarm backend
+<li>@peryaudo &#8211; Docker+CoreOS+GCEで自動スケール分散レイトレ
+<li>@kzys &#8211; Porting Docker to FreeBSD
+<li>@nasunom &#8211; perfomance Evaluation of Docker
+<li>@y_matsuwitter &#8211; Docker at Gunosy
+</ul>
+<h4>Orchestration Tools / @philwhln</h4>
+<p>資料公開後に掲載</p>
+<h4>Dockerでデプロイ&#038;モニタリング / @stanaka</h4>
+<p>資料公開後に掲載</p>
+<h4>Dive into Dockerネットワーク / @mainyaa</h4>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/36622210" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/mainya/dive-into-docker-36622210" title="Dive into dockerネットワーク" target="_blank">Dive into dockerネットワーク</a> </strong> from <strong><a href="http://www.slideshare.net/mainya" target="_blank">Kazuyuki Mori</a></strong> </div>
+<h4>flynnの時代 / @deeeet</h4>
+<p><script async class="speakerdeck-embed" data-id="3e5fba00e59601314f771288f3080752" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4> How to Impl lib swarm backend / @mopemope </h4>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/36624126" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/YutakaMatsubara/out-36624126" title="How to impl libswarm backend" target="_blank">How to impl libswarm backend</a> </strong> from <strong><a href="http://www.slideshare.net/YutakaMatsubara" target="_blank">Yutaka Matsubara</a></strong> </div>
+<h4>Docker+CoreOS+GCEで自動スケール分散レイトレ</h4>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/36624592" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/peryaudo/dockercoreosgce" title="Docker+CoreOS+GCEで自動スケール分散レイトレ" target="_blank">Docker+CoreOS+GCEで自動スケール分散レイトレ</a> </strong> from <strong><a href="http://www.slideshare.net/peryaudo" target="_blank">peryaudo</a></strong> </div>
+<h4>Porting Docker to FreeBSD / @kzys</h4>
+<p>資料公開後に掲載</p>
+<h4>perfomance Evaluation of Docker / @nasunom</h4>
+<p><script async class="speakerdeck-embed" data-id="4e3f9300e58201314f761288f3080752" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>Docker at Gunosy / @y_matsuwitter </h4>
+<p>資料未公開</p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2832/docker-meetup-tokyo-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2832/docker-meetup-tokyo-3/" />
+	</item>
+		<item>
+		<title>WWDC振り返り勉強会の資料まとめ</title>
+		<link>http://andbrowser.com/development/2707/wwdc-report-at-cookpad/</link>
+		<comments>http://andbrowser.com/development/2707/wwdc-report-at-cookpad/#comments</comments>
+		<pubDate>Mon, 23 Jun 2014 10:55:06 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2707</guid>
+		<description><![CDATA[WWDC振り返り勉強会の資料をまとめておきます。
+NAD情報は無しで以下の公開情報をもとに報告がされてました。
+
+Appleから公開されている情報
+
+https://developer.apple.com/wwdc/
+h [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://connpass.com/event/6877/">WWDC振り返り勉強会</a>の資料をまとめておきます。</p>
+<p>NAD情報は無しで以下の公開情報をもとに報告がされてました。</p>
+<ul>
+<li>Appleから公開されている情報
+<ul>
+<li><a href="https://developer.apple.com/wwdc/">https://developer.apple.com/wwdc/</a>
+<li><a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11">https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11</a>
+</ul>
+</ul>
+<h4>WWDC2014 これだけ押さえておけば間違い無し!おすすめセッションTOP10</h4>
+<p><span id="more-2707"></span><br />
+<script async class="speakerdeck-embed" data-id="5dd92320daa80131c6a27202678817e0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>iOS 8時代のUIViewController</h4>
+<p>捜索中。</p>
+<h4>Swift時代のインターフェイス設計</h4>
+<p><script async class="speakerdeck-embed" data-id="1d8b35f0da9901310a6236f9d2e151d0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
+<h4>App Extensionについて</h4>
+<p><a href="http://www.toyship.org/archives/1825"><img src="http://andbrowser.com/wp-content/uploads/2014/06/101-300x290.png" alt="" title="10" width="300" height="290" class="aligncenter size-medium wp-image-2716" /></a></p>
+<h4>Swift がいまいちイケてない 10 のコト</h4>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/36106311" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/taketo1024/swift-10" title="Swift がいまいちイケてない 10 のコト" target="_blank">Swift がいまいちイケてない 10 のコト</a> </strong> from <strong><a href="http://www.slideshare.net/taketo1024" target="_blank">Taketo Sano</a></strong> </div>
+<h4>CIKernelでカスタムフィルタ作成</h4>
+<p>後日アップの予定。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2703/android-stdio-gradle-library-dependencies/" rel="bookmark" class="wherego_title">Android Stdio向けGradleで利用できるlibraryのdependencies一覧</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2707/wwdc-report-at-cookpad/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2707/wwdc-report-at-cookpad/" />
+	</item>
+		<item>
+		<title>Android Stdio向けGradleで利用できるlibraryのdependencies一覧</title>
+		<link>http://andbrowser.com/development/2703/android-stdio-gradle-library-dependencies/</link>
+		<comments>http://andbrowser.com/development/2703/android-stdio-gradle-library-dependencies/#comments</comments>
+		<pubDate>Sat, 21 Jun 2014 07:22:52 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2703</guid>
+		<description><![CDATA[Gradle, please
+http://gradleplease.appspot.com/
+
+以下のライブラリのdependenciesの記載方法が簡単にわかります。(2014/06/21時点）
+
+gson
+acti [...]]]></description>
+			<content:encoded><![CDATA[<h4>Gradle, please</h4>
+<p><a href="http://gradleplease.appspot.com/">http://gradleplease.appspot.com/<br />
+</a><br />
+以下のライブラリのdependenciesの記載方法が簡単にわかります。(2014/06/21時点）</p>
+<ul>
+<li>gson
+<li>actionbarsherlock</li>
+<li>joda-time</li>
+<li>picasso
+<li>otto</li>
+<li>slf4j
+<li>crouton
+<li>nineoldandroids
+<li>butterknife
+<li>guava
+<li>okhttp
+<li>dagger
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2700/android-wear-install/" rel="bookmark" class="wherego_title">Android Wear</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2703/android-stdio-gradle-library-dependencies/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2703/android-stdio-gradle-library-dependencies/" />
+	</item>
+		<item>
+		<title>Android Wear</title>
+		<link>http://andbrowser.com/development/2700/android-wear-install/</link>
+		<comments>http://andbrowser.com/development/2700/android-wear-install/#comments</comments>
+		<pubDate>Wed, 18 Jun 2014 16:42:15 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2700</guid>
+		<description><![CDATA[サンプルアプリとライブラリ
+https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk
+
+Android Wear P [...]]]></description>
+			<content:encoded><![CDATA[<h4>サンプルアプリとライブラリ</h4>
+<p><a href="https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk">https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk<br />
+</a></p>
+<h4>Android Wear Preview(Android app from Google play)</h4>
+<p><a href="https://play.google.com/apps/testing/com.google.android.wearablepreview.app<br />
+">https://play.google.com/apps/testing/com.google.android.wearablepreview.app<br />
+</a></p>
+<h4>Android Wear Development Start</h4>
+<p><a href="http://developer.android.com/wear/preview/start.html">http://developer.android.com/wear/preview/start.html</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/git/2692/how-to-remove-already-git-add-commit-file-filder/" rel="bookmark" class="wherego_title">git add,commitのあとに .gitignore にファイルを追加したときの対処方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2700/android-wear-install/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2700/android-wear-install/" />
+	</item>
+		<item>
+		<title>githubのreadme.mdへのアクセス解析サービス</title>
+		<link>http://andbrowser.com/development/2670/github-readme-analytics/</link>
+		<comments>http://andbrowser.com/development/2670/github-readme-analytics/#comments</comments>
+		<pubDate>Sat, 14 Jun 2014 10:37:00 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2670</guid>
+		<description><![CDATA[https://bitdeli.com/
+ ]]></description>
+			<content:encoded><![CDATA[<blockquote><p><a href="https://bitdeli.com/">https://bitdeli.com/</a></p></blockquote>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2670/github-readme-analytics/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2670/github-readme-analytics/" />
+	</item>
+		<item>
+		<title>Android Wear Sample and library download</title>
+		<link>http://andbrowser.com/development/2668/android-wear-sample-and-library-download/</link>
+		<comments>http://andbrowser.com/development/2668/android-wear-sample-and-library-download/#comments</comments>
+		<pubDate>Fri, 13 Jun 2014 21:45:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2668</guid>
+		<description><![CDATA[以下のGoogle Driveからダウンロードできます。
+https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk
+ [...]]]></description>
+			<content:encoded><![CDATA[<p>以下のGoogle Driveからダウンロードできます。</p>
+<p><a href="https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk">https://drive.google.com/uc?export=download&#038;id=0B39_TcfZ2v6NajZ3Q3UwdU5SQVk</a></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2668/android-wear-sample-and-library-download/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2668/android-wear-sample-and-library-download/" />
+	</item>
+		<item>
+		<title>Groovy on Android</title>
+		<link>http://andbrowser.com/development/2631/groovy-on-android/</link>
+		<comments>http://andbrowser.com/development/2631/groovy-on-android/#comments</comments>
+		<pubDate>Thu, 05 Jun 2014 04:43:08 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2631</guid>
+		<description><![CDATA[
+ ]]></description>
+			<content:encoded><![CDATA[<p><script async class="speakerdeck-embed" data-id="e8e58fc0cdee0131f20616308848c4b8" data-ratio="1.6" src="//speakerdeck.com/assets/embed.js"></script></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2631/groovy-on-android/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2631/groovy-on-android/" />
+	</item>
+		<item>
+		<title>TextView.setText(null)の挙動</title>
+		<link>http://andbrowser.com/development/2562/android-textview-settext-api-to-null/</link>
+		<comments>http://andbrowser.com/development/2562/android-textview-settext-api-to-null/#comments</comments>
+		<pubDate>Sat, 31 May 2014 04:37:50 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2562</guid>
+		<description><![CDATA[
+
+
+#479994033 / gettyimages.com
+
+ふと、TextView.setText(null)の挙動が気になったので調査しました。
+
+http://tools.oesf.biz/android-4. [...]]]></description>
+			<content:encoded><![CDATA[<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:464px;">
+<div style="overflow:hidden;position:relative;height:0;padding:79.525862% 0 49px 0;width:100%;"><iframe src="//embed.gettyimages.com/embed/479994033?et=brjQoCW2Q0d8T-4xjOWejw&#038;sig=JCl1iIXZgyAxCUmDT3OYFQiJe7Ps-V0DCrUkrO8qhj8=" width="464" height="418" scrolling="no" frameborder="0" style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+<p style="margin:0;">
+<div style="padding:0;margin:0 0 0 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/479994033" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#479994033</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<p>ふと、TextView.setText(null)の挙動が気になったので調査しました。<br />
+<span id="more-2562"></span></p>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/core/java/android/widget/TextView.java">http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/core/java/android/widget/TextView.java</a></p>
+<pre class="brush: java; first-line: 3644;" >
+    @android.view.RemotableViewMethod
+     public final void setText(CharSequence text) {
+         setText(text, mBufferType);
+     }
+</pre>
+<p>上記が developer との APIの界面です。これは、以下のsetText(CharSequence text, BufferType type)を呼んでいます。</p>
+<pre class="brush: java; first-line: 3670;" >
+     public void setText(CharSequence text, BufferType type) {
+         setText(text, type, true, 0);
+
+         if (mCharWrapper != null) {
+             mCharWrapper.mChars = null;
+         }
+     }
+</pre>
+<p>さらに、setTextsetText(CharSequence text, BufferType type,boolean notifyBefore, int oldlen)を呼び出しています。</p>
+<pre class="brush: java; first-line: 3678;" >
+    private void setText(CharSequence text, BufferType type,
+                          boolean notifyBefore, int oldlen) {
+         if (text == null) {
+             text = "";
+         }
+</pre>
+<p>その中で text が null の場合、&#8221;"(空文字）が入っているので、安全のようです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2562/android-textview-settext-api-to-null/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2562/android-textview-settext-api-to-null/" />
+	</item>
+		<item>
+		<title>コマンドラインのgradlewへのproxy設定</title>
+		<link>http://andbrowser.com/development/2554/command-line-gradlew-add-proxy/</link>
+		<comments>http://andbrowser.com/development/2554/command-line-gradlew-add-proxy/#comments</comments>
+		<pubDate>Thu, 29 May 2014 07:25:13 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2554</guid>
+		<description><![CDATA[
+JAVA_OPTS="-DproxyHost=proxy.foo.bar.com -DproxyPort=8080"; ./gradlew
+
+このページを見た人は、以下のページも見ています。メモリリークを発見！Andr [...]]]></description>
+			<content:encoded><![CDATA[<pre class="brush: java; first-line: 1;" >
+JAVA_OPTS="-DproxyHost=proxy.foo.bar.com -DproxyPort=8080"; ./gradlew
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2554/command-line-gradlew-add-proxy/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2554/command-line-gradlew-add-proxy/" />
+	</item>
+		<item>
+		<title>Android開発向けに役に立つサイト一覧</title>
+		<link>http://andbrowser.com/development/2515/android-dev-useful-site/</link>
+		<comments>http://andbrowser.com/development/2515/android-dev-useful-site/#comments</comments>
+		<pubDate>Mon, 26 May 2014 13:11:05 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2515</guid>
+		<description><![CDATA[
+
+#91873556 / gettyimages.com
+
+Android Views
+
+http://www.androidviews.net/
+
+
+Android ProTips: Blur Images Efficiently using Renderscript
+
+https://plus.google.com/+MarioViviani/posts/fhuzYkji9zz
+
+http://www.genymotion.com/
+
+http://www.genymotion.com/
+
+Flinto
+
+https://www.flinto.com/
+
+Android Views
+
+http://www.androidviews.net/
+
+Android Libraries Portal
+
+http://www.androidviews.net/category/libraries/
+
+Android Snippets
+
+http://androidweekly.net/toolbox
+
+Android Snippets
+
+http://www.androidsnippets.com/
+
+UI &#038; Custom Views
+Crouton
+
+https://github.com/keyboardsurfer/Crouton
+
+Staggered GridView
+
+https://github.com/etsy/AndroidStaggeredGrid
+
+ProgressBar
+
+https://github.com/mrwonderman/android-square-progressbar
+
+Sticky List Headers
+
+https://github.com/emilsjolander/StickyListHeaders
+
+Card UI
+
+https://github.com/gabrielemariotti/cardslib
+
+Fading ActionBar
+
+https://github.com/ManuelPeinado/FadingActionBar
+
+Swipe ListView
+
+http://www.tutecentral.com/android-swipe-listview/
+
+Networking
+REST Clients
+Spring for android
+
+http://projects.spring.io/spring-android/
+
+Retrofit
+
+https://github.com/square/retrofit
+
+Async Requests
+OKHttp
+
+http://square.github.io/okhttp/
+
+Volley
+
+https://github.com/mcxiaoke/android-volley
+
+Asynchronouse Image Loading
+Picasso
+
+https://github.com/square/picasso
+
+Universal Image Loader(Nostra)
+
+https://github.com/nostra13/Android-Universal-Image-Loader
+
+UrlImageViewHelper &#038; ion(Koush)
+
+https://github.com/koush/UrlImageViewHelper
+
+Database
+Ormlite
+
+http://ormlite.com/
+
+greenDAO
+
+http://greendao-orm.com/
+
+SQL cipher
+
+http://sqlcipher.net/
+
+Dependency Injection
+Dagger
+
+https://github.com/square/dagger
+
+Butter Knife
+
+https://github.com/JakeWharton/butterknife
+
+RoboGuice
+
+https://github.com/roboguice/roboguice
+
+Android Annotations
+
+http://androidannotations.org/
+
+Mockup design tool
+
+https://www.fluidui.com/
+
+Shrink icon/image
+
+https://tinypng.com/
+
+Android Action Bar Style Generator
+
+http://jgilfelt.github.io/android-actionbarstylegenerator/
+
+Android Asset Studio
+
+http://romannurik.github.io/AndroidAssetStudio/index.html
+
+Android Launcher Icon Generator
+
+http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
+Device Art Generator
+
+http://developer.android.com/distribute/tools/promote/device-art.html
+
+Android Holo Colors Generator
+
+http://android-holo-colors.com/
+
+Gradle,  [...]]]></description>
+			<content:encoded><![CDATA[<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;"><iframe src="//embed.gettyimages.com/embed/91873556?et=mUW5tAM3SVJWsAFJlSDLGg&#038;sig=XPHczOJ5EqlDVHtVG_TgLWUmb8bkgjCJU8XLDP2Vs6U=" width="507" height="398" scrolling="no" frameborder="0" style="display:inline-block;"></iframe>
+<p style="margin:0;"></p>
+<div style="padding:0;margin:-6px 0 4px 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/91873556" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#91873556</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<h4>Android Views</h4>
+<ul>
+<li><a href="http://www.androidviews.net/">http://www.androidviews.net/</a>
+</ul>
+<p><span id="more-2515"></span></p>
+<h4>Android ProTips: Blur Images Efficiently using Renderscript</h4>
+<ul>
+<li><a href="https://plus.google.com/+MarioViviani/posts/fhuzYkji9zz">https://plus.google.com/+MarioViviani/posts/fhuzYkji9zz</a>
+</ul>
+<h4>http://www.genymotion.com/</h4>
+<ul>
+<li><a href="http://www.genymotion.com/">http://www.genymotion.com/</a>
+</ul>
+<h4>Flinto</h4>
+<ul>
+<li><a href="https://www.flinto.com/">https://www.flinto.com/</a>
+</ul>
+<h4>Android Views</h4>
+<ul>
+<li><a href="http://www.androidviews.net/">http://www.androidviews.net/</a>
+</ul>
+<h4>Android Libraries Portal</h4>
+<ul>
+<li><a href="http://www.androidviews.net/category/libraries/">http://www.androidviews.net/category/libraries/</a>
+</ul>
+<h4>Android Snippets</h4>
+<ul>
+<li><a href="http://androidweekly.net/toolbox">http://androidweekly.net/toolbox</a>
+</ul>
+<h4>Android Snippets</h4>
+<ul>
+<li><a href="http://www.androidsnippets.com/">http://www.androidsnippets.com/</a>
+</ul>
+<h4>UI &#038; Custom Views</h4>
+<h4>Crouton</h4>
+<ul>
+<li><a href="https://github.com/keyboardsurfer/Crouton">https://github.com/keyboardsurfer/Crouton</a>
+</ul>
+<h4>Staggered GridView</h4>
+<ul>
+<li><a href="https://github.com/etsy/AndroidStaggeredGrid">https://github.com/etsy/AndroidStaggeredGrid</a>
+</ul>
+<h4>ProgressBar</h4>
+<ul>
+<li><a href="https://github.com/mrwonderman/android-square-progressbar">https://github.com/mrwonderman/android-square-progressbar</a>
+</ul>
+<h4>Sticky List Headers</h4>
+<ul>
+<li><a href="https://github.com/emilsjolander/StickyListHeaders">https://github.com/emilsjolander/StickyListHeaders</a>
+</ul>
+<h4>Card UI</h4>
+<ul>
+<li><a href="https://github.com/gabrielemariotti/cardslib">https://github.com/gabrielemariotti/cardslib</a>
+</ul>
+<h4>Fading ActionBar</h4>
+<ul>
+<li><a href="https://github.com/ManuelPeinado/FadingActionBar">https://github.com/ManuelPeinado/FadingActionBar</a>
+</ul>
+<h4>Swipe ListView</h4>
+<ul>
+<li><a href="http://www.tutecentral.com/android-swipe-listview/">http://www.tutecentral.com/android-swipe-listview/</a>
+</ul>
+<h4>Networking</h4>
+<h4>REST Clients</h4>
+<h4>Spring for android</h4>
+<ul>
+<li><a href="http://projects.spring.io/spring-android/">http://projects.spring.io/spring-android/</a>
+</ul>
+<h4>Retrofit</h4>
+<ul>
+<li><a href="https://github.com/square/retrofit">https://github.com/square/retrofit</a>
+</ul>
+<h4>Async Requests</h4>
+<h4>OKHttp</h4>
+<ul>
+<li><a href="http://square.github.io/okhttp/">http://square.github.io/okhttp/</a>
+</ul>
+<h4>Volley</h4>
+<ul>
+<li><a href="https://github.com/mcxiaoke/android-volley">https://github.com/mcxiaoke/android-volley</a>
+</ul>
+<h4>Asynchronouse Image Loading</h4>
+<h4>Picasso</h4>
+<ul>
+<li><a href="https://github.com/square/picasso">https://github.com/square/picasso</a>
+</ul>
+<h4>Universal Image Loader(Nostra)</h4>
+<ul>
+<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader">https://github.com/nostra13/Android-Universal-Image-Loader</a>
+</ul>
+<h4>UrlImageViewHelper &#038; ion(Koush)</h4>
+<ul>
+<li><a href="https://github.com/koush/UrlImageViewHelper">https://github.com/koush/UrlImageViewHelper</a>
+</ul>
+<h4>Database</h4>
+<h4>Ormlite</h4>
+<ul>
+<li><a href="http://ormlite.com/">http://ormlite.com/</a>
+</ul>
+<h4>greenDAO</h4>
+<ul>
+<li><a href="http://greendao-orm.com/">http://greendao-orm.com/</a>
+</ul>
+<h4>SQL cipher</h4>
+<ul>
+<li><a href="http://sqlcipher.net/">http://sqlcipher.net/</a>
+</ul>
+<h4>Dependency Injection</h4>
+<h4>Dagger</h4>
+<ul>
+<li><a href="https://github.com/square/dagger">https://github.com/square/dagger</a>
+</ul>
+<h4>Butter Knife</h4>
+<ul>
+<li><a href="https://github.com/JakeWharton/butterknife">https://github.com/JakeWharton/butterknife</a>
+</ul>
+<h4>RoboGuice</h4>
+<ul>
+<li><a href="https://github.com/roboguice/roboguice">https://github.com/roboguice/roboguice</a>
+</ul>
+<h4>Android Annotations</h4>
+<ul>
+<li><a href="http://androidannotations.org/">http://androidannotations.org/</a>
+</ul>
+<h4>Mockup design tool</h4>
+<ul>
+<li><a href="https://www.fluidui.com/">https://www.fluidui.com/</a>
+</ul>
+<h4>Shrink icon/image</h4>
+<ul>
+<li><a href="https://tinypng.com/">https://tinypng.com/</a>
+</ul>
+<h4>Android Action Bar Style Generator</h4>
+<ul>
+<li><a href="http://jgilfelt.github.io/android-actionbarstylegenerator/">http://jgilfelt.github.io/android-actionbarstylegenerator/</a>
+</ul>
+<h4>Android Asset Studio</h4>
+<ul>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/index.html">http://romannurik.github.io/AndroidAssetStudio/index.html</a>
+</ul>
+<h4>Android Launcher Icon Generator</h4>
+<ul>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html">http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html</a>
+</ul>
+<h4>Device Art Generator</h4>
+<ul>
+<li><a href="http://developer.android.com/distribute/tools/promote/device-art.html">http://developer.android.com/distribute/tools/promote/device-art.html</a>
+</ul>
+<h4>Android Holo Colors Generator</h4>
+<ul>
+<li><a href="http://android-holo-colors.com/">http://android-holo-colors.com/</a>
+</ul>
+<h4>Gradle, please</h4>
+<ul>
+<li><a href="http://gradleplease.appspot.com/">http://gradleplease.appspot.com/</a>
+</ul>
+<h4>Android Button Maker</h4>
+<ul>
+<li><a href="http://angrytools.com/android/button/">http://angrytools.com/android/button/</a>
+</ul>
+<h4>Android Layout Finder</h4>
+<ul>
+<li><a href="https://www.buzzingandroid.com/tools/android-layout-finder/">https://www.buzzingandroid.com/tools/android-layout-finder/</a>
+</ul>
+<h4>android dpi calculator</h4>
+<ul>
+<li><a href="http://coh.io/adpi/">http://coh.io/adpi/</a>
+</ul>
+<h4>JSON Schema to POJO</h4>
+<ul>
+<li><a href="http://www.jsonschema2pojo.org/">http://www.jsonschema2pojo.org/</a>
+</ul>
+<h4>JSON Lint</h4>
+<ul>
+<li><a href="http://jsonlint.com/">http://jsonlint.com/</a>
+</ul>
+<h4>Online Json viewer</h4>
+<ul>
+<li><a href="http://jsonviewer.stack.hu/">http://jsonviewer.stack.hu/</a>
+</ul>
+<h4>Android Bootstrap</h4>
+<ul>
+<li><a href="http://www.androidbootstrap.com/">http://www.androidbootstrap.com/</a>
+</ul>
+<h4>Android kickstartR</h4>
+<ul>
+<li><a href="http://androidkickstartr.com/">http://androidkickstartr.com/</a>
+</ul>
+<h4>Google I/O Event Schedule app</h4>
+<ul>
+<li><a href="https://code.google.com/p/iosched/">https://code.google.com/p/iosched/</a>
+</ul>
+<h4>Wordpress for Android</h4>
+<ul>
+<li><a href="https://github.com/wordpress-mobile/WordPress-Android">https://github.com/wordpress-mobile/WordPress-Android</a>
+</ul>
+<h4>Andorid Open Source</h4>
+<ul>
+<li><a href="http://www.aopensource.com/">http://www.aopensource.com/</a>
+</ul>
+<h4>Android Open Source Application(wikipedia)</h4>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_free_and_open-source_Android_applications">http://en.wikipedia.org/wiki/List_of_free_and_open-source_Android_applications</a>
+</ul>
+<h4>Android App Patterns</h4>
+<ul>
+<li><a href="http://www.android-app-patterns.com/">http://www.android-app-patterns.com/</a>
+</ul>
+<h4>Android Patterns</h4>
+<ul>
+<li><a href="http://androidpttrns.com/">http://androidpttrns.com/</a>
+</ul>
+<h4>http://android.inspired-ui.com/</h4>
+<ul>
+<li><a href="http://android.inspired-ui.com/">http://android.inspired-ui.com/</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2554/command-line-gradlew-add-proxy/" rel="bookmark" class="wherego_title">コマンドラインのgradlewへのproxy設定</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/2850/android-stdio-0-8-7/" rel="bookmark" class="wherego_title">Android Studio 0.8.7 リリース（邦訳）</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2515/android-dev-useful-site/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2515/android-dev-useful-site/" />
+	</item>
+		<item>
+		<title>Google Play Services 4.4（邦訳）</title>
+		<link>http://andbrowser.com/development/2502/google-play-services-4-4/</link>
+		<comments>http://andbrowser.com/development/2502/google-play-services-4-4/#comments</comments>
+		<pubDate>Wed, 21 May 2014 06:00:30 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2502</guid>
+		<description><![CDATA[Google Play services, Version 4.4 (2014年5月)
+
+
+#168808905 / gettyimages.com
+
+4.4 ハイライト
+
+Google Play service 4.4 [...]]]></description>
+			<content:encoded><![CDATA[<h4>Google Play services, Version 4.4</a> <em>(2014年5月)</em></h4>
+<div style="background-color:#fff;display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;color:#a7a7a7;font-size:11px;"><iframe src="//embed.gettyimages.com/embed/168808905?et=ECdIMioTRB9ONHxF39MCgA&#038;sig=PWqgI2hizvak6iiFA52FsYabK9mBtLnYPwhjLOsqQO0=" width="594" height="444" scrolling="no" frameborder="0" style="display:inline-block;"></iframe>
+<p style="margin:0;"></p>
+<div style="padding:0;margin:-6px 0 4px 10px;text-align:left;"><a href="http://www.gettyimages.com/detail/168808905" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">#168808905</a> / <a href="http://www.gettyimages.com" target="_blank" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;">gettyimages.com</a></div>
+</div>
+<h5>4.4 ハイライト</h5>
+<dd>
+<p>Google Play service 4.4のサマリーは <a href="http://android-developers.blogspot.com/2014/05/google-play-services-44.html" class="external-link">こちらのブログ</a>をご参照ください。
+</p>
+<p><span id="more-2502"></span></p>
+<ul>
+<li><strong>Maps</strong> ストリートビューやインドアマップのコントロール機能が追加
+<ul>
+<li><a href="http://developers.google.com/maps/documentation/android/streetview.html" class="external-link">ストリートビュー Developer ガイド</a> &#8211; ストリートビューをあなたのアプリに追加したり、ユーザによるコントロールを提供
+<li><a href="http://developers.google.com/maps/documentation/android/map.html#indoor_maps" class="external-link">インドアマップ Developer ガイド</a> &#8211; レベルピッカーをカスタマイズしたり、ビルのactive levelを指定できます<br />
+</a>
+  </ul>
+</li>
+<li><strong>Activity recognition（行動認識）</strong> &#8211; Location APIが更新されて、新しくランニングやウォーキングの行動を認識できるようになりました。
+<ul>
+<li><a href="http://andbrowser.com/reference/com/google/android/gms/location/DetectedActivity.html"><code>DetectedActivity</code> クラスを参照</a>
+    </ul>
+</li>
+<li><strong>Mobile Ads（モバイル広告）</strong> &#8211; 新しいアプリ内課金API は広告主に アプリ内課金広告を表示し、ユーザが直接アイテムを購入できるようになりました。
+<ul>
+<li><a href="https://developers.google.com/mobile-ads-sdk/docs/admob/advanced#play-inapppurchaselistener" class="external-link">In-app purchase APIs developer guide</a> &#8211; アプリ内課金APIを利用して、広告のアプリ内課金を有効化
+<li><a href="http://andbrowser.com/reference/com/google/android/gms/ads/purchase/package-summary.html">In-app purchase API reference</a>
+    </ul>
+</li>
+<li><strong>Wallet Fragment</strong> &#8211; 新しい Wallet Fragment API は既存のアプリに Google Wallet Instant Buyを簡単に統合できるようになりました。
+<ul>
+<li><a href="http://developers.google.com/wallet/instant-buy/android/tutorial.html#about_walletfragment" class="external-link">About Wallet Fragment</a> &#8211; チュートリアル：ユーザイベントの処理や購入ライフサイクルのキー処理の自動化に関するwallet fragmentの利用方法
+<li><a href="http://developers.google.com/wallet/instant-buy/diagrams.html#detailed_api_process_flow" class="external-link">詳細は、API プロセスフローを参照</a>
+  </ul>
+</li>
+</ul>
+</dd>
+<h4>利用方法</h4>
+<h4 id="client-lib">Google Play services クライアントライブラリ</h4>
+<p>
+クライアントライブラリは、個々のGoogle serviceに含まれており、認証やクレデンシャルを用いたアクセス権の獲得などの利用が許可されています。<br />
+それに加えて、Google Play Service APKが実行時の失敗や無効化などの対応を実施してくれます。クライアントライブラリは<a href="http://developer.android.com/tools/help/proguard.html">ProGuard</a> 利用の場合に、軽量サイズになり、アプリのファイルサイズに影響を及ぼしません。
+</p>
+<p>
+これらの新機能を利用したい場合は、新しいバージョンのクライアントライブラリに更新してください。<br />
+新機能や不具合修正が必要ない場合は更新の必要はありません。これからもGoogle servicesは継続的に新機能を開発していきますので引き継ぎき更新情報をみていってください。
+</p>
+<div class="layout-content-row">
+<div class="layout-content-col span-6">
+<h4 id="apk">The Google Play services APK</h4>
+<p>
+Google Play Services APKは個々のGoogle servicesが含まれており、Android OS上でバックグラウンドで動作します。<br />
+クライアントライブラリを通して、このバックグラウンドサービスに作用します。<br />
+簡単に認証が各Google Serviceの獲得できたり、与えたりが継続的にできます。
+    </p>
+<p>
+Google Play Services APK は、Google Play Storeから提供さて、通信キャリアや端末メーカーのシステムイメージに依存せずに更新されます。<br />
+概ね、Android2.3(Gingerbread)以降の動作する端末に対して、数日でGoogle Play Store Appからインストールされます。<br />
+Android エコシステムが提供されるものに対して、最新のAPIがご利用できます。(Android2.3より古いものや、Google Play Store appが提供されていないものは除く）
+    </p>
+</p></div>
+<div class="layout-content-col span-6">
+<img src="http://andbrowser.com/wp-content/uploads/2014/05/play-services-diagram.png" alt="" title="play-services-diagram" width="334" height="350" class="aligncenter size-full wp-image-2507" /></p>
+<p class="img-caption"><em>Google PlayServices APKをユーザが一定の間隔で更新さて、新APIや新機能や不具合修正が提供されます。</em></p>
+</p></div>
+</div>
+<h4 id="benefits">アプリ向けのメリット</h4>
+<p>Google Play servicesはデバイスサポートなしに新しいAPIや主要なGoogle Play servicesを自由に利用することができます。<br />
+Google Play servicesのアップデートはGoogle Play Storeから自動的に配信されて、クライアントライブラリは Android SDK Manager経由で配信されます。これにより、最も重要なUX（ユーザエクスペリエンス）に注力できます。
+</p>
+<p>始めるためには、<a href="http://developer.android.com/google/play-services/setup.html">セットアップ</a> SDKやGoogle Play service Platformをご覧ください。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/" rel="bookmark" class="wherego_title">AndroidStdio 0.8.0 から0.8.1への更新方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2502/google-play-services-4-4/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2502/google-play-services-4-4/" />
+	</item>
+	</channel>
+</rss>

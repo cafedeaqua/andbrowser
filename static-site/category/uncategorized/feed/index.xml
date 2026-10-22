@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; Uncategorized</title>
+	<atom:link href="http://andbrowser.com/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/category/uncategorized/feed/" />
+		<item>
+		<title>2015/11/21時点の Intel Edison Firmware</title>
+		<link>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/</link>
+		<comments>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/#comments</comments>
+		<pubDate>Fri, 20 Nov 2015 18:28:40 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[intel edison]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3556</guid>
+		<description><![CDATA[Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。
+Intel® Edison Board Software Downloadsから以下をダウンロードしました。
+
+PhoneFlashToolLite_5.3.2.0_mac64.pkg
+m_iot_dev_kit_2015.0.023.tar.gz
+edison-iotdk-image-280915.zip
+HoRNDIS-rel7.pkg
+
+
+MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。
+逆の場合は./flassall.sh が
+
+Did you plug and reboot your board?
+
+のまま進まない症状が出ました。
+備忘のため、コマンドとログをメモしておきます。
+
+$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820
+Bus 020 Device  [...]]]></description>
+			<content:encoded><![CDATA[<p>Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。</p>
+<p><a href="https://software.intel.com/en-us/iot/hardware/edison/downloads">Intel® Edison Board Software Downloads</a>から以下をダウンロードしました。</p>
+<ul>
+<li>PhoneFlashToolLite_5.3.2.0_mac64.pkg
+<li>m_iot_dev_kit_2015.0.023.tar.gz
+<li>edison-iotdk-image-280915.zip
+<li>HoRNDIS-rel7.pkg
+</ul>
+<p><span id="more-3556"></span></p>
+<p>MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。<br />
+逆の場合は./flassall.sh が</p>
+<p><code><br />
+Did you plug and reboot your board?<br />
+</code><br />
+のまま進まない症状が出ました。</p>
+<p>備忘のため、コマンドとログをメモしておきます。</p>
+<p><code><br />
+$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+Timed out while waiting for dfu device 8087:0a99<br />
+DEBUG: lsusb<br />
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820<br />
+Bus 020 Device 005: ID 0403:6001 Future Technology Devices International Limited FT232R USB UART  Serial: AJ035GT1<br />
+Bus 020 Device 018: ID 05ac:0259 Apple Inc. Apple Internal Keyboard / Trackpad<br />
+Bus 020 Device 002: ID 0a5c:4500 Broadcom Corp. BRCM20702 Hub<br />
+Bus 020 Device 004: ID 05ac:8289 Apple Inc. Bluetooth USB Host Controller<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br />
+DEBUG: dfu-util -l<br />
+dfu-util 0.8</p>
+<p>Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.<br />
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt<br />
+This program is Free Software and has ABSOLUTELY NO WARRANTY<br />
+Please report bugs to dfu-util@lists.gnumonks.org</p>
+<p>Did you plug and reboot your board?<br />
+If yes, please try a recovery by calling this script with the --recovery option<br />
+taro:edison-iotdk-image-280915 tkawashita$ ./flashall.sh<br />
+Using U-Boot target: edison-blankcdc<br />
+Now waiting for dfu device 8087:0a99<br />
+Please plug and reboot the board<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Flashing IFWI<br />
+dfu-util: Device has DFU interface, but has no DFU functional descriptor<br />
+Transfer size must be specified<br />
+Flashing U-Boot<br />
+Flashing U-Boot Environment<br />
+Flashing U-Boot Environment Backup<br />
+Rebooting to apply partition changes<br />
+Now waiting for dfu device 8087:0a99<br />
+Flashing boot partition (kernel)<br />
+Flashing rootfs, (it can take up to 5 minutes... Please be patient)<br />
+Rebooting<br />
+U-boot &#038; Kernel System Flash Success...<br />
+Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.<br />
+</code></p>
+<p><code><br />
+*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:ifwi<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Partitioning already done...<br />
+Saving Environment to MMC...<br />
+Writing to MMC(0)... done<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0x6ad212b0<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+#<br />
+DFU complete CRC32: 0x9cb56567<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Writing to redundant MMC(0)... done<br />
+Writing to MMC(0)... done<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning using GPT<br />
+Writing GPT: success!<br />
+Saving Environment to MMC...<br />
+Writing to redundant MMC(0)... done<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+#<br />
+DFU complete CRC32: 0xb98db2f8<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+######################################################################################################################<br />
+DFU complete CRC32: 0x5601e158<br />
+DOWNLOAD ... OK<br />
+Ctrl+C to exit ...<br />
+resetting ...</p>
+<p>******************************<br />
+PSH KERNEL VERSION: b0182b2b<br />
+                WR: 20104000<br />
+******************************</p>
+<p>SCU IPC: 0x800000d0  0xfffce92c</p>
+<p>PSH miaHOB version: TNG.B0.VVBD.0000000c</p>
+<p>microkernel built 11:24:08 Feb  5 2015</p>
+<p>******* PSH loader *******<br />
+PCM page cache size = 192 KB<br />
+Cache Constraint = 0 Pages<br />
+Arming IPC driver ..<br />
+Adding page store pool ..<br />
+PagestoreAddr(IMR Start Address) = 0x04899000<br />
+pageStoreSize(IMR Size)          = 0x00080000</p>
+<p>*** Ready to receive application ***</p>
+<p>U-Boot 2014.04 (Jun 19 2015 - 12:05:55)</p>
+<p>       Watchdog enabled<br />
+DRAM:  980.6 MiB<br />
+MMC:   tangier_sdhci: 0<br />
+In:    serial<br />
+Out:   serial<br />
+Err:   serial<br />
+Hit any key to stop autoboot:  0<br />
+Target:blank<br />
+Partitioning already done...<br />
+Flashing already done...<br />
+GADGET DRIVER: usb_dnl_dfu<br />
+reading vmlinuz<br />
+5434848 bytes read in 134 ms (38.7 MiB/s)<br />
+Valid Boot Flag<br />
+Setup Size = 0x00003c00<br />
+Magic signature found<br />
+Using boot protocol version 2.0c<br />
+Linux kernel version 3.10.17-poky-edison+ (sys_dswci@tlsndgbuild004) #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015<br />
+Building boot_params at 0x00090000<br />
+Loading bzImage at address 00100000 (5419488 bytes)<br />
+Magic signature found<br />
+Kernel command line: "rootwait root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk=ttyMFD2,keep loglevel=4 g_multi.ethernet_config=rndis systemd.unit=multi-user.target hardware_id=00 g_multi.iSerialNumber=8211587d07244d27cfb43ab8989dc867 g_multi.dev_addr=02:00:86:9d:c8:67 platform_mrfld_audio.audio_codec=dummy"</p>
+<p>Starting kernel ...</p>
+<p>[    1.602492] snd_soc_sst_platform: Enter:sst_soc_probe<br />
+[    2.006424] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk<br />
+[    2.024564] pmic_ccsm pmic_ccsm: Battery Over heat exception<br />
+[    2.024656] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary</p>
+<p>Welcome to Linux!</p>
+<p>         Expecting device dev-ttyMFD2.device...<br />
+[  OK  ] Reached target Remote File Systems.<br />
+         Expecting device dev-disk-by\x2dpartlabel-rootfs.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-factory.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-update.device...<br />
+         Expecting device dev-disk-by\x2dpartlabel-home.device...<br />
+         Expecting device sys-subsystem-net-devices-usb0.device...<br />
+[  OK  ] Reached target Paths.<br />
+[  OK  ] Reached target Swap.<br />
+[  OK  ] Created slice Root Slice.<br />
+[  OK  ] Created slice User and Session Slice.<br />
+[  OK  ] Listening on Delayed Shutdown Socket.<br />
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.<br />
+[  OK  ] Listening on udev Control Socket.<br />
+[  OK  ] Listening on udev Kernel Socket.<br />
+[  OK  ] Listening on Journal Socket.<br />
+[  OK  ] Created slice System Slice.<br />
+         Mounting Temporary Directory...<br />
+         Starting Load Kernel Modules...<br />
+         Starting Create list of required static device nodes...rrent kernel...<br />
+         Starting udev Coldplug all Devices...<br />
+[  OK  ] Created slice system-getty.slice.<br />
+[  OK  ] Created slice system-serial\x2dgetty.slice.<br />
+         Mounting Debug File System...<br />
+         Mounting POSIX Message Queue File System...<br />
+         Starting Apply Kernel Variables...<br />
+         Starting Journal Service...<br />
+[  OK  ] Started Journal Service.<br />
+[  OK  ] Reached target Slices.<br />
+         Starting Remount Root and Kernel File Systems...<br />
+[  OK  ] Set up automount boot.automount.<br />
+[  OK  ] Mounted POSIX Message Queue File System.<br />
+[  OK  ] Mounted Debug File System.<br />
+[  OK  ] Mounted Temporary Directory.<br />
+[  OK  ] Started Load Kernel Modules.<br />
+[  OK  ] Started Create list of required static device nodes ...current kernel.<br />
+[  OK  ] Started Apply Kernel Variables.<br />
+[  OK  ] Started Remount Root and Kernel File Systems.<br />
+[  OK  ] Started udev Coldplug all Devices.<br />
+         Starting Load/Save Random Seed...<br />
+         Starting Create Static Device Nodes in /dev...<br />
+         Mounting Configuration File System...<br />
+         Mounting FUSE Control File System...<br />
+[  OK  ] Mounted FUSE Control File System.<br />
+[  OK  ] Mounted Configuration File System.<br />
+[  OK  ] Started Load/Save Random Seed.<br />
+[  OK  ] Started Create Static Device Nodes in /dev.<br />
+         Starting udev Kernel Device Manager...<br />
+[  OK  ] Reached target Local File Systems (Pre).<br />
+         Mounting /var/volatile...<br />
+[  OK  ] Started udev Kernel Device Manager.<br />
+[  OK  ] Mounted /var/volatile.<br />
+[  OK  ] Reached target Local File Systems.<br />
+         Starting Trigger Flushing of Journal to Persistent Storage...<br />
+         Starting Create Volatile Files and Directories...<br />
+[  OK  ] Started Create Volatile Files and Directories.<br />
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.<br />
+[  OK  ] Found device /sys/subsystem/net/devices/usb0.<br />
+[  OK  ] Found device /dev/ttyMFD2.<br />
+[  OK  ] Created slice system-systemd\x2drfkill.slice.<br />
+         Starting Load/Save RF Kill Switch Status of rfkill2...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill0...<br />
+         Starting Load/Save RF Kill Switch Status of rfkill1...<br />
+         Starting Opkg first boot configure...<br />
+         Starting Network Time Synchronization...<br />
+         Starting Update UTMP about System Boot/Shutdown...<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.<br />
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.<br />
+[  OK  ] Started Network Time Synchronization.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/factory.<br />
+[  OK  ] Started Update UTMP about System Boot/Shutdown.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/update.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/rootfs.<br />
+[  OK  ] Found device /dev/disk/by-partlabel/home.<br />
+[  OK  ] Started Opkg first boot configure.<br />
+         Mounting Mount for factory...<br />
+[  OK  ] Reached target System Initialization.<br />
+[  OK  ] Listening on RPCbind Server Activation Socket.<br />
+[  OK  ] Reached target Timers.<br />
+         Starting Restore Sound Card State...<br />
+[  OK  ] Listening on D-Bus System Message Bus Socket.<br />
+[  OK  ] Mounted Mount for factory.<br />
+[  OK  ] Listening on sshd.socket.<br />
+[  OK  ] Reached target Sockets.<br />
+[  OK  ] Reached target Basic System.<br />
+         Starting Edison PWR button handler...<br />
+[  OK  ] Started Edison PWR button handler.<br />
+         Starting Telephony service...<br />
+         Starting Daemon to load edison mcu app binary...<br />
+[  OK  ] Started Daemon to load edison mcu app binary.<br />
+         Starting Daemon to handle arduino sketches...<br />
+Application available at (physical) address 0x04819000<br />
+        VRL mapped to 0xff217000<br />
+        App size = 11508 bytes</p>
+<p>        App Authentication feature is disabled!<br />
+        Resetting IPC</p>
+<p>*** Ready to receive application ***<br />
+[  OK  ] Started Daemon to handle arduino sketches.<br />
+         Starting Daemon to reset sketches...<br />
+[  OK  ] Started Daemon to reset sketches.<br />
+         Starting Bluetooth rf kill event daemon...<br />
+[  OK  ] Started Bluetooth rf kill event daemon.<br />
+         Starting Start or stop WiFI AP Mode in Edison...<br />
+[  OK  ] Started Start or stop WiFI AP Mode in Edison.<br />
+         Starting Login Service...<br />
+         Starting Permit User Sessions...<br />
+         Starting Post install service...<br />
+         Starting Watchdog sample daemon...<br />
+[  OK  ] Started Watchdog sample daemon.<br />
+         Starting Crashlog service...<br />
+[  OK  ] Started Crashlog service.<br />
+         Starting Generate unique machine-id...<br />
+         Starting Cleanjournal service...<br />
+[  OK  ] Started Cleanjournal service.<br />
+         Starting D-Bus System Message Bus...<br />
+[    9.913329] sh[218]: Starting Post Install (try: 0)<br />
+[  OK  ] Started D-Bus System Message Bus.<br />
+[  OK  ] Started Telephony service.<br />
+         Starting Network Service...<br />
+[  OK  ] Started Restore Sound Card State.<br />
+[  OK  ] Started Permit User Sessions.<br />
+[  OK  ] Started Network Service.<br />
+[   10.368966] systemd-machine-id-setup[247]: Initializing machine ID from random generator.<br />
+[   10.682053] systemctl[250]: rm '/etc/systemd/system/basic.target.wants/edison-machine-id.service'<br />
+[  OK  ] Started Generate unique machine-id.<br />
+[  OK  ] Started Login Service.<br />
+         Starting Bluetooth service...<br />
+         Starting Edison Arduino board LED Blinker...<br />
+[  OK  ] Started Edison Arduino board LED Blinker.<br />
+         Starting Network Name Resolution...<br />
+[   11.864772] sh[218]: Backup home/root contents of rootfs : Success<br />
+         Starting PulseAudio Sound System...<br />
+[  OK  ] Created slice system-systemd\x2dfsck.slice.<br />
+         Starting File System Check on /dev/disk/by-partlabel/boot...<br />
+[  OK  ] Reached target Network.<br />
+         Starting Zero-configuration networking...<br />
+[   11.930911] sh[218]: mke2fs 1.42.9 (28-Dec-2013)<br />
+         Starting Mosquitto - lightweight server implementati...SN protocols...<br />
+         Starting Getty on tty1...<br />
+[  OK  ] Started Getty on tty1.<br />
+[  OK  ] Started Network Name Resolution.<br />
+[  OK  ] Started Mosquitto - lightweight server implementatio...T-SN protocols.<br />
+[  OK  ] Started Bluetooth service.<br />
+[  OK  ] Started Zero-configuration networking.<br />
+[   12.552068] systemd-fsck[271]: dosfsck 2.11, 12 Mar 2005, FAT32, LFN<br />
+[   12.554520] systemd-fsck[271]: /dev/mmcblk0p7: 5 files, 2742/2971 clusters<br />
+[  OK  ] Started File System Check on /dev/disk/by-partlabel/boot.<br />
+         Mounting /boot...<br />
+         Starting The Edison status and configuration service...<br />
+[  OK  ] Started The Edison status and configuration service.<br />
+         Starting Intel_XDK_Daemon...<br />
+[  OK  ] Started Intel_XDK_Daemon.<br />
+         Starting Hostname Service...<br />
+[  OK  ] Mounted /boot.<br />
+[  OK  ] Started Hostname Service.<br />
+[   13.577704] sh[218]: Discarding device blocks: done<br />
+[   13.606481] sh[218]: Filesystem label=<br />
+[   13.649554] sh[218]: OS type: Linux<br />
+[   13.680311] sh[218]: Block size=4096 (log=2)<br />
+[   13.712396] sh[218]: Fragment size=4096 (log=2)<br />
+[   13.782400] sh[218]: Stride=0 blocks, Stripe width=0 blocks<br />
+[   13.815728] sh[218]: 87120 inodes, 348155 blocks<br />
+[   13.892418] sh[218]: 0 blocks (0.00%) reserved for the super user<br />
+[   13.982537] sh[218]: First data block=0<br />
+[   14.052355] sh[218]: Maximum filesystem blocks=356515840<br />
+[   14.082910] sh[218]: 11 block groups<br />
+[   14.152498] sh[218]: 32768 blocks per group, 32768 fragments per group<br />
+[   14.220999] sh[218]: 7920 inodes per group<br />
+[   14.272610] sh[218]: Superblock backups stored on blocks:<br />
+[   14.312192] sh[218]: 32768, 98304, 163840, 229376, 294912<br />
+[   14.344848] sh[218]: Allocating group tables: done<br />
+[   14.432545] sh[218]: Writing inode tables: done<br />
+[   14.508934] sh[218]: Creating journal (8192 blocks): done<br />
+[  OK  ] Started PulseAudio Sound System.<br />
+[   17.161726] sh[218]: Writing superblocks and filesystem accounting information: done<br />
+[   17.236067] sh[218]: Formatting home partition : Success<br />
+[   17.257604] sh[218]: Mount /home partition : Success<br />
+[   17.294885] sh[218]: Restore home/root contents on new /home partition : Success<br />
+[   17.327314] sh[218]: The number of cylinders for this disk is set to 24576.<br />
+[   17.346005] sh[218]: There is nothing wrong with that, but this is larger than 1024,<br />
+[   17.376037] sh[218]: and could in certain setups cause problems with:<br />
+[   17.423802] sh[218]: 1) software that runs at boot time (e.g., old versions of LILO)<br />
+[   17.451555] sh[218]: 2) booting and partitioning software from other OSs<br />
+[   17.493093] sh[218]: (e.g., DOS FDISK, OS/2 FDISK)<br />
+[   17.541465] sh[218]: Command (m for help): Command action<br />
+[   17.590630] sh[218]: e   extended<br />
+[   17.638059] sh[218]: p   primary partition (1-4)<br />
+[   17.700937] sh[218]: Partition number (1-4): Partition 1 is already defined, delete it before re-adding<br />
+[   17.732539] sh[218]: Command (m for help): Command (m for help): Command (m for help): Selected partition 1<br />
+[   17.812052] sh[218]: Hex code (type L to list codes):<br />
+[   17.882447] sh[218]: Command (m for help):<br />
+[   17.971526] sh[218]: Disk /dev/disk/by-partlabel/update: 805 MB, 805306368 bytes<br />
+[   18.032447] sh[218]: 4 heads, 16 sectors/track, 24576 cylinders<br />
+[   18.092569] sh[218]: Units = cylinders of 64 * 512 = 32768 bytes<br />
+[   18.106560] sh[218]: Device Boot      Start         End      Blocks  Id System<br />
+[   18.142419] sh[218]: /dev/disk/by-partlabel/update1               1       24576      786424   b Win95 FAT32<br />
+[   18.497023] sh[218]: Command (m for help): The partition table has been altered.<br />
+[   18.532201] sh[218]: Calling ioctl() to re-read partition table<br />
+[   18.582221] sh[218]: fdisk: WARNING: rereading partition table failed, kernel still uses old table: Invalid argument<br />
+[   18.668649] sh[218]: Formatting update partition Step 1 : Success<br />
+[   18.725650] sh[218]: Formatting update partition Step 2 : Success<br />
+[   18.803499] sh[218]: mkfs.vfat 2.11 (12 Mar 2005)<br />
+[   18.873781] sh[218]: Loop device does not match a floppy size, using default hd params<br />
+[   18.927481] sh[218]: Formatting update partition Step 3 : Success<br />
+[   18.978933] sh[218]: Formatting update partition Step 4 final : Success<br />
+[   32.565980] sh[218]: Generating sshd keys : Success<br />
+[   32.614420] sh[218]: Update file system table /etc/fstab : Success<br />
+[   33.892588] sh[218]: Generating Wifi Access Point SSID and passphrase : Success<br />
+[   33.955371] sh[218]: Post install success<br />
+[   34.075310] sh[218]: No journal files were found.<br />
+[   35.265506] systemctl[389]: rm '/etc/systemd/system/basic.target.wants/post-install.service'<br />
+[  OK  ] Started Post install service.<br />
+         Starting Serial Getty on ttyMFD2...<br />
+[  OK  ] Started Serial Getty on ttyMFD2.<br />
+[  OK  ] Reached target Login Prompts.<br />
+         Starting Increases rootfs image size to fit partition...<br />
+[   36.488949] resize2fs[400]: resize2fs 1.42.9 (28-Dec-2013)<br />
+[   36.556575] resize2fs[400]: Filesystem at /dev/disk/by-partlabel/rootfs is mounted on /; on-line resizing required<br />
+[   36.602177] resize2fs[400]: old_desc_blocks = 1, new_desc_blocks = 1<br />
+[   36.652218] resize2fs[400]: The filesystem on /dev/disk/by-partlabel/rootfs is now 393216 blocks long.<br />
+[   36.774761] systemctl[402]: rm '/etc/systemd/system/default.target.wants/resize-rootfs.service'<br />
+[  OK  ] Started Increases rootfs image size to fit partition.<br />
+[  OK  ] Reached target Multi-User System.</p>
+<p>Poky (Yocto Project Reference Distro) 1.7.2 edison ttyMFD2</p>
+<p>edison login: root<br />
+root@edison:~# cat /etc/version<br />
+weekly-159.devkit-2.0<br />
+root@edison:~# uname -a<br />
+Linux edison 3.10.17-poky-edison+ #1 SMP PREEMPT Fri Jun 19 12:06:40 CEST 2015 i686 GNU/Linux<br />
+root@edison:~#<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li><li><a href="http://andbrowser.com/event/3567/potatotips-23/" rel="bookmark" class="wherego_title">第23回potatotips参加報告</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/" />
+	</item>
+		<item>
+		<title>git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*</title>
+		<link>http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/</link>
+		<comments>http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/#comments</comments>
+		<pubDate>Wed, 26 Aug 2015 12:57:47 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/</guid>
+		<description><![CDATA[
+git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*
+
+このページを見た人は、以下のページも見ています。au one Ma [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*<br />
+</code></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/" />
+	</item>
+		<item>
+		<title></title>
+		<link>http://andbrowser.com/uncategorized/3520/3520/</link>
+		<comments>http://andbrowser.com/uncategorized/3520/3520/#comments</comments>
+		<pubDate>Wed, 26 Aug 2015 11:46:19 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3520</guid>
+		<description><![CDATA[
+export GOPATH=~/
+#export GOROOT=${GOPATH}
+function peco-src () {
+    local selected_dir=$(ghq list -p &#124; peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^[' peco-src
+
+ ]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+export GOPATH=~/<br />
+#export GOROOT=${GOPATH}</p>
+<p>function peco-src () {<br />
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")<br />
+    if [ -n "$selected_dir" ]; then<br />
+	BUFFER="cd ${selected_dir}"<br />
+	zle accept-line<br />
+    fi<br />
+    zle clear-screen<br />
+}<br />
+zle -N peco-src<br />
+bindkey '^[' peco-src<br />
+</code></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3520/3520/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3520/3520/" />
+	</item>
+		<item>
+		<title>url for opkg</title>
+		<link>http://andbrowser.com/uncategorized/3421/url-for-opkg/</link>
+		<comments>http://andbrowser.com/uncategorized/3421/url-for-opkg/#comments</comments>
+		<pubDate>Sun, 15 Mar 2015 12:43:02 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/uncategorized/3421/url-for-opkg/</guid>
+		<description><![CDATA[
+tee /etc/opkg/base-feeds.conf /dev/null
+src/gz all        http://repo.opkg.net/edison/repo/all
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32
+_EOF_
+
+src/gz edison     http://repo.opkg.net/edison/repo/edison
+を削除。
+
+tee /etc/opkg/intel-iotdk.conf /dev/null
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86
+_EOF_
+
+
+echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf
+opkg update
+opkg  [...]]]></description>
+			<content:encoded><![CDATA[<p><code><br />
+tee /etc/opkg/base-feeds.conf << _EOF_ >/dev/null<br />
+src/gz all        http://repo.opkg.net/edison/repo/all<br />
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32<br />
+_EOF_<br />
+</code></p>
+<p>src/gz edison     http://repo.opkg.net/edison/repo/edison<br />
+を削除。</p>
+<p><code><br />
+tee /etc/opkg/intel-iotdk.conf << _EOF_ >/dev/null<br />
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all<br />
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic<br />
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark<br />
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586<br />
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86<br />
+_EOF_<br />
+</code></p>
+<p><code><br />
+echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf<br />
+opkg update<br />
+opkg install<br />
+opkg install libmraa0<br />
+</code></p>
+<p>opkg update &#038;&#038; opkg upgrade</p>
+<p>opkg install bash &#038;&#038; opkg install less &#038;&#038; opkg install git</p>
+<p>opkg install bash<br />
+opkg install less<br />
+opkg install git</p>
+<p>chsh -s /bin/bash</p>
+<p>vi /lib/systemd/system/sshd.socket</p>
+<p>add # to BindToDevice=usb0 with a #</p>
+<p>opkg install libmraa0</p>
+<p>ifconfig usb0 down &#038;&#038; ifconfig wlan0 down &#038;&#038; ifconfig wlan0 up</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3421/url-for-opkg/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3421/url-for-opkg/" />
+	</item>
+		<item>
+		<title>http://iotdk.intel.com/sdk/upm-update/</title>
+		<link>http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/</link>
+		<comments>http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/#comments</comments>
+		<pubDate>Wed, 11 Mar 2015 14:23:40 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3409</guid>
+		<description><![CDATA[http://iotdk.intel.com/sdk/mraa-update/
+http://iotdk.intel.com/sdk/upm-update/
+http://iotdk.intel.com/sdk/1.1/ [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://iotdk.intel.com/sdk/mraa-update/">http://iotdk.intel.com/sdk/mraa-update/</a><br />
+<a href="http://iotdk.intel.com/sdk/upm-update/">http://iotdk.intel.com/sdk/upm-update/</a><br />
+<a href="http://iotdk.intel.com/sdk/1.1/">http://iotdk.intel.com/sdk/1.1/</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/" rel="bookmark" class="wherego_title">windows flashall.bat execution log</a></li><li><a href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" rel="bookmark" class="wherego_title">See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/" />
+	</item>
+		<item>
+		<title>Intel Edison R2 Firmware beta resolved issue</title>
+		<link>http://andbrowser.com/uncategorized/3326/intel-edison-r2-firmware-beta-resolved-issue/</link>
+		<comments>http://andbrowser.com/uncategorized/3326/intel-edison-r2-firmware-beta-resolved-issue/#comments</comments>
+		<pubDate>Sun, 08 Feb 2015 09:27:57 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=3326</guid>
+		<description><![CDATA[Inten Edison R2ファームウェアで解決済みなissueは以下です。
+
+EDISON-1801
+
+Wi-Fi latency is higher than expected.
+	
+
+
+
+EDISON-1803
+
+No option available to exit Wi-Fi setup in configure_edison.
+	
+
+
+EDISON-1810
+
+Unable to pair with BLE-enabled Wahoo fitness cheststrap.
+	
+
+
+EDISON-1812
+
+Unable to connect Intel® Edison via Intel® Edison Wi-Fi AP mode.
+	
+
+
+EDISON-1815
+
+FTDI USB serial not recognized in Windows 8.1 host.
+	
+
+
+EDISON-1827
+
+Warning at boot: dwc3-device dwc3-device.1: dwc3-gadget is already bound to g_multi.
+	
+
+
+EDISON-1848
+
+Kernel traces duplicated in the  [...]]]></description>
+			<content:encoded><![CDATA[<p>Inten Edison R2ファームウェアで解決済みなissueは以下です。</p>
+<ul>
+<li>EDISON-1801
+<ul>
+<li>Wi-Fi latency is higher than expected.
+	</ul>
+</ul>
+<p><span id="more-3326"></span></p>
+<ul>
+<li>EDISON-1803
+<ul>
+<li>No option available to exit Wi-Fi setup in configure_edison.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1810
+<ul>
+<li>Unable to pair with BLE-enabled Wahoo fitness cheststrap.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1812
+<ul>
+<li>Unable to connect Intel® Edison via Intel® Edison Wi-Fi AP mode.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1815
+<ul>
+<li>FTDI USB serial not recognized in Windows 8.1 host.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1827
+<ul>
+<li>Warning at boot: dwc3-device dwc3-device.1: dwc3-gadget is already bound to g_multi.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1848
+<ul>
+<li>Kernel traces duplicated in the journal.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1864
+<ul>
+<li>sshd doesn’t autostart and will not manually start.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1866
+<ul>
+<li>Linux-Arduino sketch sharing.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1872
+<ul>
+<li>Error while generating/copying u-boot upstream patch on Jenkins.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1880
+<ul>
+<li>Using the breakout board with Bluetooth* and Wi-Fi enabled, a Bluetooth* scan causes a reboot.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1882
+<ul>
+<li>Wi-Fi: Fix netmask option in udhcp conf for hostapd.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1890
+<ul>
+<li>Windows 8.1 and FTDI USB serial not recognized.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1902
+<ul>
+<li>Close POODLE SSLv3 security vulnerability (CVE-2014-3566).
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1904
+<ul>
+<li>Wi-Fi: Align hostapd.conf with the default AP mode in the firmware.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1905
+<ul>
+<li>rfcomm tool leads to a crash.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1908
+<ul>
+<li>Crash while switching OTG with ACS.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1911
+<ul>
+<li>SEGFAULT is received when SD card is removed from the SD card slot.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1912
+<ul>
+<li>iotkit-admin components returns nothing.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1913
+<ul>
+<li>systemctl status iotkit-agent shows status as failed.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1915
+<ul>
+<li>configure_edison script doesn’t print clean countdown msg during scan.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1916
+<ul>
+<li>Time is changed at NTP activation without NTP server.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1918
+<ul>
+<li>Wi-Fi errors at boot.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1920
+<ul>
+<li>Can’t flash a different rootfs size without xfstk installed.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1922
+<ul>
+<li>MDNS daemon error on startup.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1923
+<ul>
+<li>XDK daemon needs to restart if mdns daemon restarts.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1956
+<ul>
+<li>Local commit on kernel and u-boot are not taken into account while creating src_package.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1977
+<ul>
+<li>libreadline: Segmentation fault.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1993
+<ul>
+<li>Unicode conversion failed.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-1997
+<ul>
+<li>Reboot OTA fails to load g_multi module.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2008
+<ul>
+<li>Missing cross-compile toolchain for Win32 and Win64 SDK.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2009
+<ul>
+<li>PWM is not working properly when accessed through MRAA.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2014
+<ul>
+<li>Long pulse on SPI SCK is back again.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2015
+<ul>
+<li>Journal log file grows after each reboot, leading to roots getting full.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2034
+<ul>
+<li>Medium and maximal frequency on PWM0 generate rebounds.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2132
+<ul>
+<li>Option order matters in flashall command.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2139
+<ul>
+<li>UART and SSH console is broken after exiting connmanctl with Ctrl+C.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2140
+<ul>
+<li>Problem flashing images using the flashall script due to missing .js handler.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2144
+<ul>
+<li>NPM fails to fetch some packages.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2153
+<ul>
+<li>iotkit-comm-c file missing in documentation.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2162
+<ul>
+<li>Wi-Fi: IBSS mode not working.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2165
+<ul>
+<li>FTP transfer during Wi-Fi failover roaming.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2175
+<ul>
+<li>&#8220;mesg&#8221; command missing but referred to in /etc/skel/.profile.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2194
+<ul>
+<li>Unable to generate authentication keys using iotkit-comm setupAuthentication.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2213
+<ul>
+<li>&#8220;bitbake -c [devshell | menuconfig] linux-yocto&#8221; nonfunctional.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2226
+<ul>
+<li>Fails to start the systemd-hostnamed service.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2227
+<ul>
+<li>wpa_supplicant is flooding the syslog.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2229
+<ul>
+<li>P2P multirole is unstable.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2238
+<ul>
+<li>BT connection over FTP Is failing.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2248
+<ul>
+<li>iotkit-lib-c: warning: Incompatible implicit declaration of built-in function.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2249
+<ul>
+<li>ZMQ server client fails to communicate after setupAuthentication is completed.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2263
+<ul>
+<li>Wi-Fi: P2P connection issue when country code XV/23 or XV25 is used.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2264
+<ul>
+<li>BT-PAN connection failed using connman.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2275
+<ul>
+<li>[AUDIO] Alsactl complains about unsupported control.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2278
+<ul>
+<li>Wi-Fi: Missing driver parameter when loading the driver with P2P support.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2289
+<ul>
+<li>Change OOBE license file.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2301
+<ul>
+<li>Wi-Fi: Connection breaks after soft unblocking BT.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2302
+<ul>
+<li>Cloud data subscription feature doesn’t work.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2308
+<ul>
+<li>FOTA update does not work due to /etc/version format change.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2310
+<ul>
+<li>Can&#8217;t send SPI message for SPI 32-bit test.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2324
+<ul>
+<li>Flashall.bat does not handle errors well.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2330
+<ul>
+<li>Wi-Fi: Connman connection takes sometimes 30 seconds.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2331
+<ul>
+<li>OTA firmware upgrade does not work.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2332
+<ul>
+<li>configure_edison &#8211;version command is not returning the current version of the Intel® Edison device’s firmware.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2333
+<ul>
+<li>Wi-Fi Scan list from configure_edison &#8211;wifi or &#8211;setup shows invalid SSID name/characters(\x00 \x00).
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2337
+<ul>
+<li>ZMQ/MQTT server client fails to communicate after setupAuthentication is completed.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2339
+<ul>
+<li>Unable to browse device contents after using obex connect.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2342
+<ul>
+<li>XDK-daemon error: dns service error: Bad reference is continuously seen in journal log.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2343
+<ul>
+<li>Secure mqtt client does not connect to mqtt service on LAN.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2345
+<ul>
+<li>configure_edison &#8211;version.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2349
+<ul>
+<li>Increase rootfs size.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2351
+<ul>
+<li>The notice “board need reboot twice” is still on command line, since the board is only booting once.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2359
+<ul>
+<li>systemd home.mount warning after flashing the board.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2360
+<ul>
+<li>UART used for BT chip communication doesn’t resume.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2364
+<ul>
+<li>Cloud data subscription feature doesn’t work in iotkit-comm-c.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2365
+<ul>
+<li>No command prompt after flashing engineering build 1888.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2367
+<ul>
+<li>Debian image generation broken and does not increase rootfs size.
+	</ul>
+</ul>
+<ul>
+<li>EDISON-2379
+<ul>
+<li>Wi-Fi: create IBSS works, but join an existing IBSS does not work.
+	</ul>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/" rel="bookmark" class="wherego_title">edison image ww18-15</a></li><li><a href="http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/" rel="bookmark" class="wherego_title">See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</a></li><li><a href="http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/" rel="bookmark" class="wherego_title">edison webcam利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/3326/intel-edison-r2-firmware-beta-resolved-issue/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/3326/intel-edison-r2-firmware-beta-resolved-issue/" />
+	</item>
+		<item>
+		<title>サイトマップ</title>
+		<link>http://andbrowser.com/uncategorized/856/sitemap/</link>
+		<comments>http://andbrowser.com/uncategorized/856/sitemap/#comments</comments>
+		<pubDate>Thu, 31 Dec 2009 16:01:27 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=856</guid>
+		<description><![CDATA[
+このページを見た人は、以下のページも見ています。メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法Androidタブレット向けアプリ開発方法 [...]]]></description>
+			<content:encoded><![CDATA[<p><!-- SITEMAP CONTENT REPLACE POINT --></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法</a></li><li><a href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/" rel="bookmark" class="wherego_title">Androidタブレット向けアプリ開発方法　その２</a></li><li><a href="http://andbrowser.com/development/96/androiddeveloperlab2011-adl11jp/" rel="bookmark" class="wherego_title">「Android デベロッパーラボ 東京 2011」参加報告</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/uncategorized/856/sitemap/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/uncategorized/856/sitemap/" />
+	</item>
+	</channel>
+</rss>

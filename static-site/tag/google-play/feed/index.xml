@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; google play</title>
+	<atom:link href="http://andbrowser.com/tag/google-play/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/google-play/feed/" />
+		<item>
+		<title>Developer console で dlxj という謎の端末を発見</title>
+		<link>http://andbrowser.com/android-sdk/1729/what-is-dlxj-on-google-play-developer-console/</link>
+		<comments>http://andbrowser.com/android-sdk/1729/what-is-dlxj-on-google-play-developer-console/#comments</comments>
+		<pubDate>Sun, 12 May 2013 11:48:16 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[google play]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1729</guid>
+		<description><![CDATA[Developer console で dlxj という謎の端末を発見]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/05/dlxj.png" alt="what-is-dlxj-on-google-play-developer-console" title="what-is-dlxj-on-google-play-developer-console" width="513" height="230" class="aligncenter size-full wp-image-1730" /></p>
+<h4>Google Play Developer Console に謎の端末名が？</h4>
+<p><span id="more-1729"></span></p>
+<p>
+上記のキャプチャのように<strong>「dlxj」</strong>という謎の端末が表示されていました。気になったので調べてみると、以下のように「HTC J Butterfly」のコードネームということがわかりました。<br />
+「HTC DLX_J」というのが正式なコードネームで、その短縮形のようです。</p>
+<p>
+こういうコードネームは、商品リリース時の最終ファームや開発の安定してきた段階で変更することが多いのですが、この端末の場合はこの名前のままだしてしまったということですね。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/05/dlxj_search.png"><img src="http://andbrowser.com/wp-content/uploads/2013/05/dlxj_search.png" alt="google search dlxj" title="google search dlxj" width="705" height="809" class="aligncenter size-full wp-image-1731" /></a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/1729/what-is-dlxj-on-google-play-developer-console/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/1729/what-is-dlxj-on-google-play-developer-console/" />
+	</item>
+	</channel>
+</rss>

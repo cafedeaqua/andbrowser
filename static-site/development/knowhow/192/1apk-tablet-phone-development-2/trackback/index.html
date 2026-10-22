@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="「1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法」で紹介した1apkにするためにタブレットとスマートフォンの判断ロジックを紹介。判断ロジックがなぜそのような実装になっているかを紹介。" name="description"/>
+
+<meta content="android,fragment,honeycomb,apk,tablet" name="keywords"/>
+<title>タブレットとスマートフォン向けのAndroidアプリ開発手法 | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/development/knowhow/192/1apk-tablet-phone-development-2/feed/index.xml" rel="alternate" title="Bescottee » 1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２ のコメントのフィード" type="application/rss+xml"/>
+<link href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/development/knowhow/186/1apk-tablet-phone-development/index.html" rel="prev" title="1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法"/>
+<link href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="next" title="1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３"/>
+<link href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-36" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/development/knowhow/186/1apk-tablet-phone-development/index.html" rel="prev">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></div>
+<div class="alignright"><a href="/development/knowhow/226/1apk-tablet-phone-development-3/index.html" rel="next">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３</a> »</div>
+</div>
+<div class="post-192 post hentry category-knowhow category-development tag-android tag-honeycomb tag-tablet" id="post-192">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">07.18.11</span> <span class="titleName"><a href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" rel="bookmark">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/knowhow/index.html" rel="category tag" title="KnowHow の投稿をすべて表示">KnowHow</a>, <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/honeycomb/index.html" rel="tag">honeycomb</a>, <a href="/tag/tablet/index.html" rel="tag">tablet</a></span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p>「<a href="/development/knowhow/186/1apk-tablet-phone-development/index.html">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a>」で紹介した1apkにするためにタブレットとスマートフォンの判断ロジックを準備する必要があると紹介しました。前回紹介した判断ロジックがなぜそのような実装になっているかを紹介します。</p>
+<pre class="brush:java">
+public static boolean isHoneycomb() {
+    return Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.HONEYCOMB;
+}
+
+public static boolean isHoneycombTablet(Context context) {
+    return isHoneycomb() &amp;&amp; (context.getResources().getConfiguration().screenLayout
+            &amp; Configuration.SCREENLAYOUT_SIZE_MASK)
+            == Configuration.SCREENLAYOUT_SIZE_XLARGE;
+}
+</pre>
+<p>上記の isHoneycomb()と isHoneycombTablet() の判断ロジックを解説するために、以下の表で端末の対応APIバージョンと端末のインチサイズの関係を整理しました。(1)から(6)についてそれぞれ紹介します。世の中に対応端末が多い順番に紹介します。</p>
+<style>
+table {
+	border-collapse: collapse;
+}
+th {
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #FFEAEA;
+}
+th.codename{
+	background-color: #D5FFDF;
+}
+th.apilevel{
+	background-color: #FFFFBF;
+}
+td {
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #ffffff;
+}
+td.empty{
+	background-color: #aaaaaa;
+}
+</style>
+<table>
+<thead>
+<tr>
+<th colspan="2">
+				端末インチサイズ
+			</th>
+<th>
+				xlarge(Extra large)<br/>
+				7～10インチ
+			</th>
+<th>
+				xlarge以外（large,normal,small)<br/>
+				2～7インチ
+			</th>
+</tr>
+<tr>
+<th colspan="2">
+				端末説明
+			</th>
+<th>
+				タブレット画面
+			</th>
+<th>
+				スマートフォン画面
+			</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="codename">
+				コードネーム
+			</th>
+<th class="apilevel">
+				APIレベル
+			</th>
+<td class="empty">
+</td>
+<td class="empty">
+</td>
+</tr>
+<tr>
+<th class="codename">
+				GigerBread(GB)(2.3.4)系とそれ以前
+			</th>
+<th class="apilevel">
+				10 以下
+			</th>
+<td>
+				(1) 現在存在しないが、今後発売される可能性がある
+			</td>
+<td>
+				(2) 多数存在する
+			</td>
+</tr>
+<tr>
+<th class="codename">
+				Honeycomb(HC)(3.0)系
+			</th>
+<th class="apilevel">
+				11 以上
+			</th>
+<td>
+				(3) いくつか存在する
+			</td>
+<td>
+				(4) 存在しない
+			</td>
+</tr>
+<tr>
+<th class="codename">
+				IceCreamSandwich(ICS)(バージョン番号未定）系
+			</th>
+<th class="apilevel">
+				?? 以上
+			</th>
+<td>
+				(5) 発売予定
+			</td>
+<td>
+				(6) 発売予定
+			</td>
+</tr>
+</tbody>
+</table>
+<p>xlargeなどの詳細な説明は、<a href="http://developer.android.com/guide/practices/screens_support.html">公式ドキュメント（英語）のSupporting Multiple Screens</a>の「Range of screens supported」を読んでみてください。<a href="http://www.techdoctranslator.com/android/practices/screens_support">ソフトウェア技術ドキュメントを勝手に翻訳(2. 多様な画面のサポート)</a>に日本語訳がありますのでこちらもお役に立つと思います。</p>
+<p>(2)は、現在発売されているAndroid端末のほとんどが該当するものでいまAndroidマーケットにあるアプリのこの端末サイズに対応しているものがほとんどです。</p>
+<p>(3)は最近発売されたAndroidタブレット端末で、xoom や Galaxy tab 10.1 や Optimus pad が該当します。</p>
+<p>(4)は、該当する端末が今も将来も発売されません。理由はグーグルが honeycomb 3.0 系はタブレット向けのみでスマートフォン向けのリリースは実施しない、スマートフォン向けの次期OSは、IceCreamSandwich(ICS)(バージョン番号未定）で対応するという発表を行っているためです。</p>
+<p>(1)は、現在のGBの最新バージョンが2.3.4ですが、GBも今後アップデートされる可能性があり、端末メーカーから発売される可能性があるためアプリ開発者としては対応しておく必要があります。（発売後に対応してもよいですが、事前に準備できることはしておきましょう）</p>
+<p>(5),(6)については、まだ発表もされていませんが、現段階でわかっていることは、APIバージョンは11以上の数字が割り当てられますし、タブレット向けとスマートフォン向けのインチサイズの両方に対応されるということです。</p>
+<p>では、 isHoneycomb()と isHoneycombTablet() の判断ロジックがどれに対応しているかというと、以下のようになります。</p>
+<p>isHoneycomb()は、(3),(5),(6)を判断するために利用します。</p>
+<p>isHoneycombTablet() は、(3),(5)を判断するために利用します。</p>
+<p>isHoneycombTablet() の中で  isHoneycomb() と実行端末のスクリーンサイズの取得、比較を行っています。これによって、将来(6)の端末が出てきたときに   isHoneycomb() だけの判断ロジックではタブレット向けの画面レイアウトになってしまい、3インチのスマートフォン向けで2画面構成のアプリになり大変使いづらくなってしまいます。それをさけるために、  isHoneycomb()だけでなく、実行端末のスクリーンサイズを参照して、適切は画面レイアウトをユーザに提供する必要があります。</p>
+<p>もちろん、開発スピードを上げるために、いま出ている端末だけの対応に注力して、  isHoneycomb()のみを利用することもよいと思います。<br/>
+必ず上記のロジックを使わないといけないということではなく、きちんと開発するアプリの目的や対象端末、対象期間、対象とするユーザに応じて、適切な判断ロジックを利用して、1apkでタブレット向けとスマートフォン向けのアプリを開発していく必要があるということです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/development/knowhow/186/1apk-tablet-phone-development/index.html" rel="bookmark">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></li><li><a class="wherego_title" href="/android-sdk/platform-versions-android-sdk/2164/december-1-2013-android-platform-versions/index.html" rel="bookmark">KitKat登場。2013年12月2日時点のAndroid Platform バージョンの割合</a></li><li><a class="wherego_title" href="/android-sdk/platform-versions-android-sdk/2140/october-2-2013-android-platform-versions/index.html" rel="bookmark">JB 4.3が登場。2013年10月2日時点のAndroid Platform バージョンの割合</a></li></ul></div> </div>
+</div>
+
+<div class="postcomments">
+<h2 id="comments">3件のコメント			<a href="/development/knowhow/192/1apk-tablet-phone-development-2/trackback/index.html#postcomment" title="コメントをどうぞ">»</a>
+</h2>
+<ol id="commentlist">
+<li class="comment even thread-even depth-1 tweet" id="comment-tweet-93150179707977729">
+<div class="comment-body" id="div-comment-tweet-93150179707977729">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://twitter.com/tomorrowkey/status/93150179707977729" rel="external nofollow">tomorrowkey</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>タブレットとスマートフォン向けのAndroidアプリ開発手法 | Bescottee <a href="http://bit.ly/nqVnsP" rel="nofollow">http://bit.ly/nqVnsP</a></p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 friendfeed" id="comment-friendfeed-0">
+<div class="comment-body" id="div-comment-friendfeed-0">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://friendfeed.com/vvakame/7eaa6404/1apkandroid-2" rel="external nofollow">わかめ</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２ – <a href="/development/knowhow/192/1apk-tablet-phone-development-2/index.html" rel="nofollow" title="http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/"></a><a href="http://andbrowser.com/develop.." rel="nofollow">http://andbrowser.com/develop..</a>.</p>
+<div class="reply">
+</div>
+</div>
+</li>
+<li class="pingback even thread-even depth-1" id="comment-179">
+<div class="comment-body" id="div-comment-179">
+<div class="comment-author vcard">
+<cite class="fn"><a class="url" href="http://blog.shg25.com/?p=11" rel="external nofollow">スマートフォンの場合のみ縦固定に設定できるんじゃないかなって方法 – Android | ごろつきめも</a></cite> <span class="says">より:</span> </div>
+<div class="comment-meta commentmetadata"></div>
+<p>[...]  [...]</p>
+<div class="reply">
+</div>
+</div>
+</li>
+</ol>
+<p class="commentfeed"><a href="/development/knowhow/192/1apk-tablet-phone-development-2/feed/index.xml">このコメント欄の <abbr title="Really Simple Syndication">RSS</abbr> フィード</a> <a href="/development/knowhow/192/1apk-tablet-phone-development-2/trackback/index.html" rel="trackback">トラックバック <abbr title="Universal Resource Locator">URL</abbr></a>
+</p>
+
+</div>
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,884 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,396 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,554 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+
+<script src="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/scripts/core-min.js" type="text/javascript"></script>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shCore-min.css" id="ash_core-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shThemeDefault-min.css" id="ash_theme_default-css" media="all" rel="stylesheet" type="text/css"/>
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

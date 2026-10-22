@@ -1,0 +1,1179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<meta content="intel edison" name="keywords"/>
+<title>xdk-daemonのアップデート方法（XDK IOT Editionでエラーがでる場合） | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/intel-edison/3081/intel-xdk-iot-edition-connect-error/feed/index.xml" rel="alternate" title="Bescottee » xdk-daemonのアップデート方法（XDK IOT Editionでエラーがでる場合） のコメントのフィード" type="application/rss+xml"/>
+<link href="/intel-edison/3081/intel-xdk-iot-edition-connect-error/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/intel-edison/3060/opkg-command-help/index.html" rel="prev" title="opkg コマンドのヘルプ"/>
+<link href="/intel-edison/3084/mraa-convinient-library-upm/index.html" rel="next" title="mraaを便利に利用できるUPMライブラリ"/>
+<link href="/intel-edison/3081/intel-xdk-iot-edition-connect-error/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-NH" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/intel-edison/3060/opkg-command-help/index.html" rel="prev">opkg コマンドのヘルプ</a></div>
+<div class="alignright"><a href="/intel-edison/3084/mraa-convinient-library-upm/index.html" rel="next">mraaを便利に利用できるUPMライブラリ</a> »</div>
+</div>
+<div class="post-3081 post hentry category-intel-edison tag-intel-edison" id="post-3081">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">12.31.14</span> <span class="titleName"><a href="/intel-edison/3081/intel-xdk-iot-edition-connect-error/index.html" rel="bookmark">xdk-daemonのアップデート方法（XDK IOT Editionでエラーがでる場合）</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/intel-edison/index.html" rel="category tag" title="intel edison の投稿をすべて表示">intel edison</a> — Tags: <a href="/tag/intel-edison/index.html" rel="tag">intel edison</a></span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p>xdk-daemonが古い場合に、PC上のIntel XDK IOT Editionアプリから接続ができない場合があります。このような場合は、xdk-daemonをアップデートする必要があります。アップデート手順は以下です。<br/>
+<span id="more-3081"></span></p>
+<p><code><br/>
+$ wget --no-check-certificate http://download.xdk.intel.com/iot/xdk-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+$ bunzip2 xdk-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+$ tar xvf xdk-daemon-edison-precompiled-0.0.26.tar<br/>
+$ cd xdk-daemon-edison-precompiled-0.0.26/<br/>
+$ ./setup.sh<br/>
+</code></p>
+<p><code><br/>
+</code></p>
+<p><code><br/>
+</code></p>
+<h4>各種ログ情報</h4>
+<p><code></code></p>
+<p>root@edison:~# wget --no-check-certificate http://download.xdk.intel.com/iot/xdk<br/>
+-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+--2014-12-30 14:45:21--  http://download.xdk.intel.com/iot/xdk-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+Resolving download.xdk.intel.com... 54.192.109.79<br/>
+Connecting to download.xdk.intel.com|54.192.109.79|:80... connected.<br/>
+HTTP request sent, awaiting response... 301 Moved Permanently<br/>
+Location: https://download.xdk.intel.com/iot/xdk-daemon-edison-precompiled-0.0.26.tar.bz2 [following]<br/>
+--2014-12-30 14:45:21--  https://download.xdk.intel.com/iot/xdk-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+Connecting to download.xdk.intel.com|54.192.109.79|:443... connected.<br/>
+WARNING: cannot verify download.xdk.intel.com's certificate, issued by '/C=US/ST=CA/L=Santa Clara/O=Intel Corporation/CN=Intel External Basic Issuing CA 3A':<br/>
+  Self-signed certificate encountered.<br/>
+HTTP request sent, awaiting response... 200 OK<br/>
+Length: 637863 (623K) [application/x-bzip2]<br/>
+Saving to: 'xdk-daemon-edison-precompiled-0.0.26.tar.bz2'</p>
+<p>100%[======================================&gt;] 637,863      273KB/s   in 2.3s</p>
+<p>2014-12-30 14:45:24 (273 KB/s) - 'xdk-daemon-edison-precompiled-0.0.26.tar.bz2' saved [637863/637863]</p>
+<p>root@edison:~# mkdir xdk-daemon-0.0.23<br/>
+root@edison:~# cd xdk-daemon-0.0.23/<br/>
+root@edison:~/xdk-daemon-0.0.23# mv ../xdk-daemon-edison-precompiled-0.0.26.tar.<br/>
+bz2 .<br/>
+root@edison:~/xdk-daemon-0.0.23# cd ..<br/>
+root@edison:~# mv xdk-daemon-0.0.23/ xdk-daemon-update-file<br/>
+root@edison:~# cd xdk-daemon-update-file/<br/>
+root@edison:~/xdk-daemon-update-file# ls<br/>
+xdk-daemon-edison-precompiled-0.0.26.tar.bz2<br/>
+root@edison:~/xdk-daemon-update-file# bunzip2 xdk-daemon-edison-precompiled-0.0.<br/>
+26.tar.bz2<br/>
+root@edison:~/xdk-daemon-update-file# ls -la<br/>
+drwxr-xr-x    2 root     root          4096 Dec 30 14:46 .<br/>
+drwxr-xr-x    3 root     root          4096 Dec 30 14:46 ..<br/>
+-rw-r--r--    1 root     root       3888640 Dec 16 21:15 xdk-daemon-edison-precompiled-0.0.26.tar<br/>
+root@edison:~/xdk-daemon-update-file# tar xvf xdk-daemon-edison-precompiled-0.0.<br/>
+26.tar<br/>
+xdk-daemon-edison-precompiled-0.0.26/<br/>
+xdk-daemon-edison-precompiled-0.0.26/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/setup.sh<br/>
+xdk-daemon-edison-precompiled-0.0.26/xdk-daemon.service<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/InjectorServer.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/NetworkAgent.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/DebuggerAgent.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/PageAgent.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/FrontendCommandHandler.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/debug-server.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/DebuggerClient.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/ScriptFileStorage.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/BreakEventHandler.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/debugger.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/session.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/RuntimeAgent.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/InjectorClient.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/CallFramesProvider.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/FrontendClient.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/config.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/ScriptManager.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/convert.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/lib/callback.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/AUTHORS<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/docs/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/docs/embedding.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/opener/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/opener/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/opener/opener.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/opener/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/opener/LICENSE.txt<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/.bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/.bin/opener<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/.bin/wscat<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/.bin/rc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/.bin/which<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/builderror.log<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/WebSocketServer.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/ErrorCodes.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Validation.fallback.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/BufferUtil.fallback.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Sender.hixie.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/BufferPool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/WebSocket.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Receiver.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Receiver.hixie.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Sender.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/BufferUtil.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/Validation.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/lib/browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/src/bufferutil.cc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/src/validation.cc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/config.gypi<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/src/bufferutil.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/validation/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/validation/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/validation/src/validation.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/validation.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/validation.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/.deps/Release/bufferutil.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/bufferutil.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/validation.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/linker.lock<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/bufferutil/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/bufferutil/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/bufferutil/src/bufferutil.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/validation/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/validation/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/validation/src/validation.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/bufferutil.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/Release/obj.target/validation.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/binding.Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/bufferutil.target.mk<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/build/validation.target.mk<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/lib/options.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/options/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/example.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/tinycolor.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/tinycolor/.gitignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/include_dirs.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/.dntrc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/nan.h<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/build/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/build/config.gypi<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/nan/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/commander/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/commander/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/commander/Readme.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/node_modules/commander/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/binding.gyp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/bin/wscat<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/ws/History.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/lib/wordwrap.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/lib/minimist.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/line_count.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/strict.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/boolean_single.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/bool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/line_count_wrap.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/xup.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/line_count_options.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/divide.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/boolean_double.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/string.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/requires_arg.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/nonopt.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/default_singles.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/implies.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/short.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/demand_count.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/count.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/implies_hash.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/default_hash.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/example/usage-options.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/readme.markdown<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/example/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/example/parse.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/parse.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/long.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/bool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/whitespace.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/dotted.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/short.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/dash.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/default_bool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/num.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/test/parse_modified.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/node_modules/minimist/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/parse.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/parse_camelCase.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/usage.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/parse_defaults.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/whitespace.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/short.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/dash.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/_.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/mocha.opts<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/count.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/_/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/_/bin.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/parse_modified.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/test/config.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/yargs/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/lib/async.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/component.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/async/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/glob.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/inherits_browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/inherits.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/inherits/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/basic.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/sigmund/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/foreach.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/basic.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/minimatch.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/defaults.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/brace-expand.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/caching.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/test/basic.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/node_modules/minimatch/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/zz-cleanup.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/mark.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/00-setup.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/bash-comparison.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/bash-results.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/nocase-nomagic.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/globstar-match.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/pause-resume.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/root-nomount.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/cwd-test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/new-glob-optional-options.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/readme-issue.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/root.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/test/stat.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/examples/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/examples/usr-local.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/examples/g.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/glob/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/inspectionProfiles/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/inspectionProfiles/Project_Default.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/inspectionProfiles/profiles_settings.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/jsLinters/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/jsLinters/jshint.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/jsLibraryMappings.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/encodings.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/.name<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/misc.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/scopes/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/scopes/scope_settings.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/modules.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/data-uri.iml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/workspace.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.idea/vcs.xml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/node_modules/truncate/truncate.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/test/decode.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/strong-data-uri/.jshintrc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/LICENSE.BSD<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/lib/utils.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/LICENSE.MIT<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/test/index.spec.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/test/mocha.opts<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/deep-extend/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/ini.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/test/foo.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/test/fixtures/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/test/fixtures/foo.ini<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/test/bar.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/ini/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/readme.markdown<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/example/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/example/parse.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/parse.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/long.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/bool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/whitespace.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/dotted.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/short.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/dash.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/default_bool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/num.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/test/parse_modified.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/node_modules/minimist/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/LICENSE.APACHE2<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/test/ini.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/test/test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/rc/browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/which.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/bin/which<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/which/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/Readme.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/debug.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/ms/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/ms/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/ms/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/ms/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node_modules/ms/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/node.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/component.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/.jshintrc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/History.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/node_modules/debug/browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/.gitignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/ChangeLog<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/bin/node-debug.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/bin/run-repl.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/bin/inspector.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/MAINTAINERS.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node-inspector-server/config.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/daemonUtils.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/npmTool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/appDaemon.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/xdk-whitelist<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/appWrapper.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/lib/ncp.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/ncp.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/c<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/a<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/e<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/b<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/f<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/sub/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/sub/a<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/test/fixtures/src/sub/b<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/bin/ncp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ncp/LICENSE.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/.bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/.bin/ncp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/.bin/wscat<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/.bin/semver<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/lib/portfinder.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/.gitignore.rej<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/.gitignore.orig<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/.gitignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/test/race.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/test/mkdirp.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/test/rel.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/README.markdown<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/examples/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/examples/pow.js.rej<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/examples/pow.js.orig<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/examples/pow.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/node_modules/mkdirp/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/.gitignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/test/port-finder-socket-test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/test/port-finder-test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/test/fixtures/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/portfinder/test/fixtures/.gitkeep<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/builderror.log<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/WebSocketServer.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/ErrorCodes.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Validation.fallback.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/BufferUtil.fallback.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Sender.hixie.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/BufferPool.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/WebSocket.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Receiver.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Receiver.hixie.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Sender.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/BufferUtil.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/Validation.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/lib/browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/src/bufferutil.cc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/src/validation.cc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/config.gypi<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil/src/bufferutil.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/validation/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/validation/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/validation/src/validation.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/validation.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/obj.target/bufferutil.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/validation.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/.deps/Release/bufferutil.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/bufferutil.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/validation.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/linker.lock<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/bufferutil/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/bufferutil/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/bufferutil/src/bufferutil.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/validation/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/validation/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/validation/src/validation.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/bufferutil.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/Release/obj.target/validation.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/binding.Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/bufferutil.target.mk<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/build/validation.target.mk<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/doc/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/doc/ws.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/lib/options.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/options/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/example.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/tinycolor.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/tinycolor/.gitignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/nan.h<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/.index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/nan/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/lib/commander.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/Readme.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/node_modules/commander/History.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/binding.gyp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/Sender.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/Validation.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/hybi-common.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/BufferPool.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/Receiver.hixie.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/WebSocketServer.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/Receiver.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/Sender.hixie.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/key.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/ca1-key.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/ca1-cert.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/request.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/agent1-key.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/agent1-cert.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/textfile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/fixtures/certificate.pem<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/autobahn.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/testserver.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/WebSocket.integration.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/WebSocket.test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/test/autobahn-server.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats/public/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats/public/index.html<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats/server.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats-express_3/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats-express_3/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats-express_3/public/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats-express_3/public/index.html<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/serverstats-express_3/server.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/ssl.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/public/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/public/uploader.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/public/app.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/public/index.html<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/server.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/examples/fileapi/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bin/wscat<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/History.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bench/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bench/speed.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bench/sender.benchmark.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bench/util.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/ws/bench/parser.benchmark.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/avahi.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/advertisement.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/dns_sd.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/resolver_sequence_tasks.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/io_watcher.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/mdns.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/mdns_service.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/network_interface.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/lib/service_type.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_odd_ends.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_service_type.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_functional.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_dns_sd.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_network_interface.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/tests/test_browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/out/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/out/reports/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/out/reports/tests.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_process_result.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/network_interface.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_ref_sock_fd.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_ref_deallocate.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_get_length.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_deallocate.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_enumerate_domains.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/mdns_settings.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/mdns_utils.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_ref.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/mdns_utils.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_ref.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_buffer_to_object.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_set_value.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_register.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_resolve.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/demangle.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/mdns.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/skeleton.cpp_<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/socket_watcher.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_browse.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_ref.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/txt_record_create.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/socket_watcher.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_ref.hpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_sd.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/src/dns_service_get_addr_info.cpp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/wscript<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/config.gypi<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/dns_sd_bindings.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings.node.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/mdns_utils.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_ref.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_resolve.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_set_value.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_browse.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_deallocate.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_enumerate_domains.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_register.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_get_length.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_ref_sock_fd.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_ref.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/socket_watcher.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/network_interface.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_get_addr_info.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_ref_deallocate.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_buffer_to_object.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_service_process_result.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/txt_record_create.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/.deps/Release/obj.target/dns_sd_bindings/src/dns_sd.o.d<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/dns_sd_bindings.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/linker.lock<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_set_value.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_ref_sock_fd.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_buffer_to_object.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_register.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_resolve.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/socket_watcher.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_deallocate.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_get_length.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/network_interface.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_ref_deallocate.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_get_addr_info.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_ref.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_browse.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_ref.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_enumerate_domains.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/txt_record_create.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_sd.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/mdns_utils.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings/src/dns_service_process_result.o<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/Release/obj.target/dns_sd_bindings.node<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/binding.Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/build/dns_sd_bindings.target.mk<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/node-waf.bat<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/CHANGES<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/coverage<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/compiler.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/actors.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/lcov.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/bunch.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/view.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/mdns_test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/ncov.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/lib/obj.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/jsf<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/testrun<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/docpack<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/utils/render_report<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/README.textile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/binding.gyp<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/examples/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/examples/express_app.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/examples/osc_devices.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/mdns2/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/CHANGELOG.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/lib/jsonfile.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/jsonfile/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/core.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/Readme.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/asap/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/asap/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/asap/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/asap/asap.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/node_modules/asap/LICENSE.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/promise/.jshintrc<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/MIT-LICENSE.txt<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/colors.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/maps/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/maps/rainbow.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/maps/america.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/maps/random.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/maps/zebra.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/system/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/system/supports-colors.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/extendStringPrototype.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/custom/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/custom/zalgo.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/custom/trap.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/lib/styles.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/tests/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/tests/basic-test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/tests/safe-test.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/screenshots/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/screenshots/colors.png<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/ReadMe.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/themes/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/themes/generic-logging.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/safe.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/examples/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/examples/normal-usage.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/colors/examples/safe-string.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/Makefile<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/semver.browser.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/foot.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/semver.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/semver.browser.js.gz<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/semver.min.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/gtr.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/no-module.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/amd.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/test/ltr.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/bin/semver<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/semver.min.js.gz<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/node_modules/semver/head.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/startDebugProtocol.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/daemonUpdater.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/current/daemonConfig.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/main.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/lib/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/lib/ncp.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/.travis.yml<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/ncp.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/d<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/c<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/a<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/e<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/b<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/f<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/sub/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/sub/a<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/test/fixtures/src/sub/b<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/bin/ncp<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/ncp/LICENSE.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/.bin/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/.bin/ncp<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/core.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/.npmignore<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/Readme.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/asap/<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/asap/package.json<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/asap/README.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/asap/asap.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/node_modules/asap/LICENSE.md<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/index.js<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/node_modules/promise/.jshintrc<br/>
+xdk-daemon-edison-precompiled-0.0.26/README<br/>
+xdk-daemon-edison-precompiled-0.0.26/LICENSE<br/>
+xdk-daemon-edison-precompiled-0.0.26/xdk-daemon<br/>
+xdk-daemon-edison-precompiled-0.0.26/config.json<br/>
+root@edison:~/xdk-daemon-update-file# ls -la<br/>
+drwxr-xr-x    3 root     root          4096 Dec 30 14:46 .<br/>
+drwxr-xr-x    3 root     root          4096 Dec 30 14:46 ..<br/>
+drwxr-xr-x    4 root     root          4096 Dec 30 14:46 xdk-daemon-edison-precompiled-0.0.26<br/>
+-rw-r--r--    1 root     root       3888640 Dec 16 21:15 xdk-daemon-edison-precompiled-0.0.26.tar<br/>
+root@edison:~/xdk-daemon-update-file# cd xdk-daemon-edison-precompiled-0.0.26/<br/>
+root@edison:~/xdk-daemon-update-file/xdk-daemon-edison-precompiled-0.0.26# ls<br/>
+LICENSE             current             package.json        xdk-daemon.service<br/>
+README              main.js             setup.sh<br/>
+config.json         node_modules        xdk-daemon<br/>
+root@edison:~/xdk-daemon-update-file/xdk-daemon-edison-precompiled-0.0.26# ./set<br/>
+up.sh<br/>
+===================================================================<br/>
+ Installing Intel XDK Daemon<br/>
+===================================================================</p>
+<p> Installing modules for daemon version manager<br/>
+--------------------------------------------------------------------<br/>
+npm WARN package.json keepAlive@ No repository field.<br/>
+ DONE!</p>
+<p> Installing modules for application daemon component<br/>
+--------------------------------------------------------------------<br/>
+npm WARN package.json IoT_App_Daemon@ No repository field.<br/>
+npm WARN package.json IoT_App_Daemon@ No README data<br/>
+ DONE!</p>
+<p> Installing modules for debugger agent component<br/>
+--------------------------------------------------------------------<br/>
+ DONE!<br/>
+Copying main daemon to /opt/xdk-daemon<br/>
+DONE!</p>
+<p>Archiving current daemon as previous/recovery daemon<br/>
+DONE!</p>
+<p>Archiving current daemon as default<br/>
+DONE!</p>
+<p>Creating Application Slot<br/>
+DONE!</p>
+<p> Setting up whitelist utility<br/>
+--------------------------------------------------------------------<br/>
+ln: /usr/bin/xdk-whitelist: File exists</p>
+<p> Copying starup script<br/>
+--------------------------------------------------------------------<br/>
+Failed to execute operation: File exists<br/>
+Start Intel XDK Daemon now? (y/n)? ｙ</p>
+<p>xdk-daemon not started<br/>
+Type: 'systemctl start xdk-daemon' to start the xdk-daemon</p>
+<p>Setup complete!<br/>
+</p>
+<h4>参考リンク
+<ul>
+<li><a href="https://software.intel.com/en-us/html5/documentation/secure-communication-intel-xdk-iot-edition#updatedaemon">https://software.intel.com/en-us/html5/documentation/secure-communication-intel-xdk-iot-edition#updatedaemon</a>
+</li></ul>
+<p><iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://rcm-fe.amazon-adsystem.com/e/cm?t=andbrowser001-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00ND1KH42&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=FF4800&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;"></iframe><iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://rcm-fe.amazon-adsystem.com/e/cm?t=andbrowser001-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00OPTSZN6&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=FF4800&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;"></iframe></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/development/3509/twitter-fabric-maven-library-location/index.html" rel="bookmark">twitter fabric maven library location</a></li><li><a class="wherego_title" href="/uncategorized/3409/httpiotdk-intel-comsdkupm-update/index.html" rel="bookmark">http://iotdk.intel.com/sdk/upm-update/</a></li><li><a class="wherego_title" href="/intel-edison/3222/mraa-upm-update/index.html" rel="bookmark">mraa upm update</a></li></ul></div> </h4></div>
+</div>
+
+
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,888 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,397 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,557 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; jenkins</title>
+	<atom:link href="http://andbrowser.com/tag/jenkins/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/jenkins/feed/" />
+		<item>
+		<title>自分専用執事で快適なAndroidアプリ開発を実現</title>
+		<link>http://andbrowser.com/development/1064/only-my-jenkins-for-android-app-build/</link>
+		<comments>http://andbrowser.com/development/1064/only-my-jenkins-for-android-app-build/#comments</comments>
+		<pubDate>Fri, 21 Dec 2012 14:44:40 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[jenkins]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1064</guid>
+		<description><![CDATA[Androidアプリ開発向けにAmazon web services(AWS)に自分専用の執事（jenkins)を用意して、快適なアプリ開発環境を構築]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/12/small__6606385511.jpg" alt="" title="only-my-jenkins-for-android-app-build-small__6606385511" width="320" height="320" class="aligncenter size-full wp-image-1237" /><br />
+photo credit: <a href="http://www.flickr.com/photos/hotelfotograf/6606385511/">Hotelfotograf</a> via <a href="http://photopin.com">photopin</a> <a href="http://creativecommons.org/licenses/by-nd/2.0/">cc</a></p>
+<p>
+<a href="http://androidadvent.blogspot.jp/">Android Advent Calender 2012</a> 向けのエントリを書かせて頂います。<br />
+昨日は、表が<a href="http://twitter.com/stachibana">@stachibana</a>さんの <a href="http://stachibana.biz/?p=1678">【AndEngine】30分でカジュアルゲームを作ってみよう！</a>で、裏が <a href="https://twitter.com/katsummy">@katsummy</a>さんの<a href="http://creadorgranoeste.blogspot.jp/2012/12/viewholdervalidatorforandroid.html?spref=tw"> CREADOR GRANOESTE: ViewHolderとValidatorForAndroid</a> です。</p>
+<p>12/21の表は、<a href="https://twitter.com/out_of_kaya">@out_of_kaya</a>さんによる<a href="http://d.hatena.ne.jp/out-of-kaya/20121221/1356090929"> クズのクズによるクズの為のAndroid入門 &#8211; だらだらいこうぜ</a> です。</p>
+<p>現在のソフトウェア開発ではアジャイル、テスト駆動開発、リーンなどの概念が浸透し、様々な組織で活用されている状況になってきていますが、個人事業主やフリーランスやサンデープログラマーとして個人でソフトウェア開発を行っている方々はなかなか上記の環境を整えることが難しい状況にありました。しかしながら、様々なクラウドサービスなどが盛んになり、個人レベルでも組織に負けない環境が構築できるようになってきました。というわけで、今回はAndroidアプリ開発者向けに自分専用の継続的インテグレーション（CI:Continuous Integration) サーバを構築に挑戦してみます。</p>
+<p>利用するクラウドサービスは、<a href="http://aws.amazon.com/jp/">AWS(Amazon Web Service)</a>を利用します。AWSの利点は、他のクラウドサービスと比べるとコストが最も安くて、1年間の無料利用枠があり簡単に利用開始できるところです。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/01.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/01-300x170.png" alt="AWS-amazon-web-service" title="AWS-amazon-web-service" width="300" height="170" class="aligncenter size-medium wp-image-1065" /></a></p>
+<h4>AWSのインスタンス作成</h4>
+<p>ログインできたら、ダッシュボード(dashboard)という AWS 管理画面が起動します。この画面は、ウェブページなはずなのにアプリのように軽快に動きます。Windowsのように右クリックして、やりたい操作を選択することもできます！（いまの時代は当たり前か！？）<br />
+<span id="more-1064"></span></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0020.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0020-300x225.png" alt="amazon web service login" title="amazon web service login" width="300" height="225" class="aligncenter size-medium wp-image-1083" /></a></p>
+<p>この管理画面から、Create Instance を選択して、クラウド上に自分専用のサーバを構築します。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0030.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0030-300x225.png" alt="AWS create instance" title="AWS create instance" width="300" height="225" class="aligncenter size-medium wp-image-1084" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0040.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0040-300x225.png" alt="" title="aws create instance select OS" width="300" height="225" class="aligncenter size-medium wp-image-1086" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0050.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0050-300x225.png" alt="" title="aws create instance select os page2" width="300" height="225" class="aligncenter size-medium wp-image-1088" /></a></p>
+<p>以下のAvailability zone は日本国内のある３つのデータセンターのどれを選ぶかですが、最近できた C を選択します。（特に意味はありませんが利用者がまだ少なそうなので。）<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0070.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0070-300x225.png" alt="" title="AWS availability zone select" width="300" height="225" class="aligncenter size-medium wp-image-1089" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0080.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0080-300x225.png" alt="aws create instance detail" title="aws create instance detail" width="300" height="225" class="aligncenter size-medium wp-image-1091" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0090.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0090-300x225.png" alt="aws create instance storage" title="aws create instance storage" width="300" height="225" class="aligncenter size-medium wp-image-1092" /></a></p>
+<p>以下の Name には AWS コンソール上から一意に認識できる名前をつけます。今回は、「android_jenkins」という名前をつけておきます。この名前はあとからAWS console から変更可能です。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0100.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0100-300x225.png" alt="aws create instance add name" title="aws create instance add name" width="300" height="225" class="aligncenter size-medium wp-image-1093" /></a></p>
+<p>以下の公開鍵の作成についてです。以下の私の画面では既に作成済みの key を指定しましたが、まだ未作成の場合は、「Create new key pair」を選んで作成してください。なおこの鍵は、なくしてしまうと二度と同じものは作成できないため、create instance したサーバにアクセスすることができなくなり削除しかできなくなります。大事に保管しておきましょう。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0110.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0110-300x225.png" alt="" title="aws create instance key pair" width="300" height="225" class="aligncenter size-medium wp-image-1095" /></a></p>
+<p>次に Security Group についてです。これは、サーバのどのポートを空けるかどうかの設定です。今回の実験のために、8080を確実にあけておくようにしてください。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/12.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/12-300x202.png" alt="" title="aws create instance security group" width="300" height="202" class="aligncenter size-medium wp-image-1096" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0130.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0130-300x225.png" alt="aws create instance final detail" title="aws create instance final detail" width="300" height="225" class="aligncenter size-medium wp-image-1097" /></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/14.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/14-300x153.png" alt="aws create instalce final" title="aws create instalce final" width="300" height="153" class="aligncenter size-medium wp-image-1098" /></a></p>
+<p>上記でAWSの新規インスタンスが作成できました。AWS console から android_jenkins を選択してこのサーバの DNS Address を調達します。これがわからないとこれから何もできませんので。探し方は、以下の画像のような場所に表示されます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0150.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0150-300x225.png" alt="aws console search dns address" title="aws console search dns address" width="300" height="225" class="aligncenter size-medium wp-image-1099" /></a></p>
+<p>上記で得たDNS address に対して、以下のコマンドでクラウド上の自分専用のサーバにログインします。key.pem というのはペア作成した暗号鍵のほうです。こちらがないとサーバにログインできないため、確実に指定します。</p>
+<pre class="brush: xml; first-line: 1;" >
+ssh -i key.pem ec2-user@[server.name.com]
+</pre>
+<p>[server.name.com]の部分は、各自自分の DNS name に変えてください。私が実験したときは以下の名前でした。<br />
+なお今回は Amazon linux を利用したので、ユーザ名が ec2-user ですが、他のOS( ubunto 11や ubuntu 12 )などを利用した場合は、ubuntu@ や root@ になるので注意が必要です。</p>
+<p>（以下は例で示しているもので、実際にアクセスはできません。）</p>
+<pre class="brush: xml; first-line: 1;" >
+ssh -i key.pem ec2-user@ec2-54-248-187-221.ap-northeast-1.compute.amazonaws.com
+</pre>
+<h4> Oracle Java のインストール</h4>
+<p>Amazon の標準OSからOSを作成すると、様々な環境が入っていますが、１つだけ注意点があります。それは、インストールされているjavaが OpenJDK なのです。<br />
+Androidは Oracle java を環境として指定しているので、これに変更しなければなりません。<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk6u38-downloads-1877406.html">Oracle java development kit(JDK) ダウンロードサイト</a>から jdk-6u38-linux-x64-rpm.bin をダウンロードします。以下の画像が参考になります。ダウンロード時に利用規約への合意が必要なため、wgetなどではダウンロードできません。自分のPCにダウンロードしてから、scp などのコマンドで aws サーバにコピーしましょう。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0210.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0210-300x225.png" alt="oracle java download for linux 64bit" title="oracle java download for linux 64bit" width="300" height="225" class="aligncenter size-medium wp-image-1102" /></a></p>
+<p>例えば、私の場合は、以下のコマンドで転送しました。</p>
+<pre class="brush: xml; first-line: 1;" >
+scp jdk-6u35-linux-x64-rpm.bin -i key.pem ec2-user@ec2-176-34-12-92.ap-northeast-1.compute.amazonaws.com:~/
+</pre>
+<p>転送できたら、以下のコマンドで実行してインストールします。</p>
+<pre class="brush: xml; first-line: 1;" >
+sudo ./jdk-6u35-linux-x64-rpm.bin
+</pre>
+<p>インストールしただけではまだ最初からインストールされている OpenJDK が利用されますので、それを Oracle Java に変更しましょう。</p>
+<pre class="brush: xml; first-line: 1;" >
+sudo alternatives --install /usr/bin/java java /usr/java/jdk1.6.0_38/bin/java 200
+sudo alternatives --install /usr/bin/javac javac /usr/java/jdk1.6.0_38/bin/javac 200
+</pre>
+<pre class="brush: xml; first-line: 1;" >
+sudo alternatives --config java
+</pre>
+<p>を実行して、デフォルトのjavaコマンドにどれを利用するかを聞いてきますので、2を選びます。</p>
+<pre class="brush: xml; first-line: 1;" >
+[ec2-user@ip-10-120-18-224 ~]$ sudo alternatives --config java
+There are 2 programs which provide 'java'.
+  Selection    Command
+-----------------------------------------------
+*+ 1           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java
+   2           /usr/java/jdk1.6.0_38/bin/java
+Enter to keep the current selection[+], or type selection number:
+</pre>
+<p>以下のコマンドで正しく oracle java(旧 sun java) が利用できる状態になっていることを確認。</p>
+<pre class="brush: xml; first-line: 1;" >
+[ec2-user@ip-10-120-18-224 ~]$ java -version
+java version "1.6.0_38"
+Java(TM) SE Runtime Environment (build 1.6.0_38-b05)
+Java HotSpot(TM) 64-Bit Server VM (build 20.13-b02, mixed mode)
+[ec2-user@ip-10-120-18-224 ~]$
+</pre>
+<h4> Jenkins のインストール</h4>
+<p><a href="http://andbrowser.com/wp-content/uploads/2012/12/0220.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0220-300x225.png" alt="jenkins download" title="jenkins download" width="300" height="225" class="aligncenter size-medium wp-image-1105" /></a></p>
+<p>次に、jenkins のダウンロードを行います。</p>
+<pre class="brush: xml; first-line: 1;" >
+wget http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+</pre>
+<p>以下のようにダウンロード完了を待つ。100%になれば完了です。</p>
+<pre class="brush: xml; first-line: 1;" >
+[ec2-user@ip-10-120-18-224 ~]$ wget http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+--2012-12-21 07:37:02--  http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+Resolving mirrors.jenkins-ci.org... 63.246.20.93
+Connecting to mirrors.jenkins-ci.org|63.246.20.93|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://ftp-nyc.osuosl.org/pub/jenkins/war/1.494/jenkins.war [following]
+--2012-12-21 07:37:03--  http://ftp-nyc.osuosl.org/pub/jenkins/war/1.494/jenkins.war
+Resolving ftp-nyc.osuosl.org... 64.50.233.100
+Connecting to ftp-nyc.osuosl.org|64.50.233.100|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48627163 (46M)
+<pre class="brush: plain; title: ; notranslate">[/text]</pre>
+<p>Saving to: “jenkins.war”</p>
+<p>100%[======================================>] 48,627,163   789K/s   in 39s</p>
+<p>2012-12-21 07:37:43 (1.19 MB/s) - “jenkins.war” saved [48627163/48627163]</p>
+<p>[ec2-user@ip-10-120-18-224 ~]$
+</pre>
+<p>それでは、以下のコマンドで jenkins を起動します。OS起動時のサービスに登録すれば毎回以下のようなコマンドを撃ち込まなくてもよいのですが、今回はわかりやすくするためにあえて以下の方法で実行します。</p>
+<pre class="brush: xml; first-line: 1;" >
+ java -jar jenkins.war
+</pre>
+<p>これで起動するとサーバのURLの8080ポートで起動します。そのため、以下のようにブラウザから 8080 ポートを指定してアクセスすると jenkins のトップページが開きます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/023.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/023-300x192.png" alt="jenkins first start" title="jenkins first start" width="300" height="192" class="aligncenter size-medium wp-image-1107" /></a><br />
+（以下のアドレスは、適時自分のアドレスに置き換えてください。もちろん今アクセスしても何も表示されません。）</p>
+<pre class="brush: xml; first-line: 1;" >
+
+http://ec2-54-248-187-221.ap-northeast-1.compute.amazonaws.com:8080/
+</pre>
+<h4> Android SDKのインストール</h4>
+<p>以下のメインのAndroid SDK をダウンロードします。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0300.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0300-300x225.png" alt="android sdk cui download" title="android sdk cui download" width="300" height="225" class="aligncenter size-medium wp-image-1111" /></a></p>
+<pre class="brush: xml; first-line: 1;" >
+wget http://dl.google.com/android/android-sdk_r21.0.1-linux.tgz
+</pre>
+<p>これを解凍します。</p>
+<pre class="brush: xml; first-line: 1;" >
+tar zxvf android-sdk_r21.0.1-linux.tgz
+</pre>
+<p>解凍すると、android-sdk-linux ディレクトリに android sdk が展開されます。<br />
+さらに、SDK tool をダウンロードする必要があります。通常は、GUI環境でインストールしますが、今回はCUI環境しかないため SDK tool をダウンロードするには以下のコマンドを利用します。</p>
+<pre class="brush: xml; first-line: 1;" >
+cd android-sdk-linux/tools/
+./android update sdk -u -t tool,platform-tool
+</pre>
+<p>あと、androidのバージョンごとのplatform ライブラリが必要なため、今回は以下のandroid-17のものをダウンロードしてきます。</p>
+<pre class="brush: xml; first-line: 1;" >
+wget http://dl.google.com/android/repository/android-17_r01.zip
+</pre>
+<p>これを解凍するとandroid-4.2/ ディレクトリが展開されるのでこれを android-sdk-linux/platforms/ に移動します。<br />
+なお、このandroid-4.2/ という名前の指定が間違っているようで、正しくは、android-17 に変更する必要があります。<br />
+これは作成時のミスのようで詳細は、この<a href="https://groups.google.com/forum/#!msg/adt-dev/sKLdWYXy73I/-f-UgqIMkn8J">投稿</a>に記載されています。</p>
+<pre class="brush: xml; first-line: 1;" >
+unzip android-17_r01.zip
+mv android-4.2 android-17
+mv android-17 android-sdk-linux/platforms/
+</pre>
+<p>あと、ant もインストールされていないようなので、インストールします。</p>
+<pre class="brush: xml; first-line: 1;" >
+sudo yum install ant
+</pre>
+<h4> Jenkins の 初期設定</h4>
+<p>サーバの8080ポートにアクセスすると、jenkins が起動している状態です。ここから 新規のjob を作成しておきます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/023.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/023-300x192.png" alt="jenkins first start" title="jenkins first start" width="300" height="192" class="aligncenter size-medium wp-image-1107" /></a></p>
+<pre class="brush: xml; first-line: 1;" >
+
+http://ec2-54-248-187-221.ap-northeast-1.compute.amazonaws.com:8080/
+</pre>
+<p>インストール直後では、git plugin がインストールされていないため、まずこれをダウンロードしてきます。（私の環境は英語版になっているのでメッセージが英語になっています。適時読み替えてください）</p>
+<p>[ Manage Jenkins]->[Manage Plugins]の[Available]タブを選択し、Filterの中に「git plugin」を入力します。そうすると、git plugin がフィルターされるため、このチェックボックスを選択してインストールします。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0240.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0240-300x225.png" alt="jenkins add plugin" title="jenkins add plugin" width="300" height="225" class="aligncenter size-medium wp-image-1109" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0250.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0250-300x225.png" alt="jenkins add git plugin" title="jenkins add git plugin" width="300" height="225" class="aligncenter size-medium wp-image-1110" /></a></p>
+<h4> Jenkins の 新規ジョブ追加</h4>
+<p>git pluginインストール後に[New Job]を選択し、「Build a free-style software project」を選択して、「Job name」に今回は「HelloJenkins」という名前をつけてjobを作成します。</p>
+<p>「Git Repositories」 の Repository URL に実験用のAndroid Projectファイルが置いている以下のgithubリポジトリを利用します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0401.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0401-300x225.png" alt="jenkins test github repository" title="jenkins test github repository" width="300" height="225" class="aligncenter size-medium wp-image-1113" /></a></p>
+<pre class="brush: xml; first-line: 1;" >
+
+https://github.com/cafedeaqua/HelloJenkins.git
+</pre>
+<p>次に、「Build」の項目に追記を行います。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0402.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0402-300x225.png" alt.="jenkins build detail" title="jenkins build detail" width="300" height="225" <a href="https://groups.google.com/forum/#!msg/adt-dev/sKLdWYXy73I/-f-UgqIMkn8J">class=&#8221;aligncenter size-medium wp-image-1114&#8243; /></a></p>
+<p>「Target」に「clean debug」の２つを入力します。<br />
+続いて Advancesを開いて、「Build File」に「HelloJenkins/build.xml」を入力し、「Properties」に「sdk.dir=/home/ec2-user/android-sdk-linux」を入力します。</p>
+<p>これで「save」を行って、「Build Now」でビルドを実行すればAndroudアプリのビルドができます。</p>
+<p>といいたいところなのですが、実は今回のサーバは64bit環境で実施したため、以下のようなエラーが発生してしまい、今回は時間切れで解決できませんでした。<br />
+32bit環境ならこのエラーは起こらないようなのでもし同じことを試してみる方は32bit環境で環境構築をしていてください。</p>
+<pre class="brush: xml; first-line: 1;" >
+ [aapt] /home/ec2-user/android-sdk-linux/platform-tools/aapt: error while loading shared libraries: libstdc++.so.6: cannot open shared object file: No such file or directory
+</pre>
+<p>上記のエラーですが、解決しました。以下のライブラリをインストールすればビルドが成功しました。</p>
+<pre class="brush: xml; first-line: 1;" >
+sudo yum install libstdc++47.i686
+</pre>
+<h4>ビルド成果物の保存・取得</h4>
+<p>jenkinsのいいところは、ビルドのログや成果物を管理できることです。<br />
+以下の画像のような設定を追加しておくと、ビルドに成功したときに apk ファイルを保管して、jenkinsから取得できるようにできます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0403.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0403-300x225.png" alt="jenkins file to archive" title="jenkins file to archive" width="300" height="225" class="aligncenter size-medium wp-image-1118" /></a></p>
+<p>「Files to archive」に「HelloJenkins/**/*.apk」を記載します。</p>
+<p>保存結果は以下になります。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2012/12/0404.png"><img src="http://andbrowser.com/wp-content/uploads/2012/12/0404-300x225.png" alt="jenkins file to archive successful" title="jenkins file to archive successful" width="300" height="225" class="aligncenter size-medium wp-image-1119" /></a></p>
+<h4>雑感</h4>
+<p>自分のローカルPCで Jenkins で Androidアプリをビルドする例はありますが、クラウドのサーバを利用するパターンがあまりなかったたため、今回挑戦してみました。<br />
+今回の実験では、アクセス制限のようなセキュリティに関する施策はいれていないため、実際に自分のアプリ向けに構築する場合はこれらの仕組みも導入する必要があると思います。それでも月1000円～2000円ぐらいで簡単に冗長性の高いサーバを準備できることは大変良い時代になったと思いますし、その環境を利用しないをもったいないと思います。この記事が少しでの誰かのお役にたてればうれしく思います。</p>
+<h4>将来展開</h4>
+<p>今回の環境が構築できれば、さらに以下のようなこともチャレンジできると思います。</p>
+<ul>
+<li>release 版のビルド・secret.zipを利用した自動署名
+<li>emulator を利用した自動テスト
+<li>emmaを利用したコードカバレッジの調査
+<li>deloygate への自動リリース
+</ul>
+<p>では、明日以降のAndroid Advent Calender 2012 に繋がっていってください！12/22表は<a href="https://twitter.com/sobachanko">@sobachanko</a>さんの <a href="http://d.hatena.ne.jp/sobachanko/20121222/1356183050">全力少女の推し事 &#8211; そばとちゃんこの競</a>演 で、12/22裏は<a href="https://twitter.com/bols_blue">@bols_blue</a>さんの<a href="http://d.hatena.ne.jp/bols-blue/20121222/1356188246"> [android][hudson][jenkins] DeployGatePlugin</a> です。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2273/march-3-2014-android-platform-versions/" rel="bookmark" class="wherego_title">JBで60%超。2014年3月3日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1064/only-my-jenkins-for-android-app-build/feed/</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1064/only-my-jenkins-for-android-app-build/" />
+	</item>
+	</channel>
+</rss>

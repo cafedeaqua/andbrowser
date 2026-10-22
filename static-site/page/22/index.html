@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Androidのアプリ開発情報を記載 - Part 22</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/page/22/index.html" media="handheld" rel="alternate" type="text/html"/>
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/page/22/index.html" rel="canonical"/>
+<link href="http://wp.me/1H3Ev" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+<div class="post-96 post hentry category-development tag-fragment tag-honeycomb tag-tablet" id="post-96">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">07.02.11</span> <span class="titleName"><a href="/development/96/androiddeveloperlab2011-adl11jp/index.html" rel="bookmark">「Android デベロッパーラボ 東京 2011」参加報告</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> — Tags: <a href="/tag/fragment/index.html" rel="tag">fragment</a>, <a href="/tag/honeycomb/index.html" rel="tag">honeycomb</a>, <a href="/tag/tablet/index.html" rel="tag">tablet</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">「Android デベロッパーラボ 東京 2011」</a>に参加してきました。</p>
+<p>一番のサプライズは、Docomo様から <a href="http://www.nttdocomo.co.jp/product/foma/smart_phone/l06c/">Optimas Pad</a> のプレゼントがありました。<br/>
+これを利用して、コードラボのアプリ開発体験に参加できました。<br/>
+<div class="wp-caption alignnone" id="attachment_105" style="width: 160px"><a href="/assets/content/uploads/2011/07/OptimusPad.jpg"><img alt="Optimus Pad L-06C" class="size-thumbnail wp-image-105" height="150" src="/assets/content/uploads/2011/07/OptimusPad-150x150.jpg" title="OptimusPad" width="150"/></a><p class="wp-caption-text">Optimus Pad L-06C</p></div><br/>
+<br/>
+Honeycomb 3.0 のエミュレータが遅くて使い物にならないという状況もあり、実際にコードをいじってアプリを開発していくコードラボのために貸出ではなく、プレゼントということで大変ありがたいです。<br/>
+ほとんどの参加者が MAC でしたが、私も含めて数名の Windows での参加者はドライバのインストールで困ったことがありました。ＬＧからダウンロードしたドライバアプリをインストールしだだけではWindows 7 64bit版でドライバを認識させることができませんでした。問題解決は、以下のサイトで解説されていのたで、こちらを参考にしました。<br/>
+大変役に立ちました。ありがとうございました。</p>
+<p>■Optimus PadのUSBドライバ<br/>
+<a href="http://www.lg.com/jp/mobile-phones/download-page/L-06C/product-info-driver.jsp">http://www.lg.com/jp/mobile-phones/download-page/L-06C/product-info-driver.jsp</a><br/>
+<div class="wp-caption alignnone" id="attachment_107" style="width: 160px"><a href="/assets/content/uploads/2011/07/OptimusPadLgDriver.jpg"><img alt="OptimusPad Lg Driver" class="size-thumbnail wp-image-107" height="150" src="/assets/content/uploads/2011/07/OptimusPadLgDriver-150x150.jpg" title="OptimusPadLgDriver" width="150"/></a><p class="wp-caption-text">OptimusPad Lg Driver</p></div></p>
+<p>■Optimus PadのUSBドライバをインストールする<br/>
+<a href="http://darkroid.net/archives/928">http://darkroid.net/archives/928</a></p>
+<p>■Optimus PadのUSBドライバをインストールする その2<br/>
+<a href="http://darkroid.net/archives/933">http://darkroid.net/archives/933</a></p>
+<p>コードラボで開発したアプリは、昔懐かしい notepad アプリでした。<br/>
+スマートフォン版のnotepadアプリを Fragmet Technology を利用して、２ペインのタブレット向けアプリ化するというものでした。</p>
+<p>■当日の資料やアジェンダは以下にあります。<br/>
+<a href="http://j.mp/adltokyo2011">http://j.mp/adltokyo2011</a></p>
+<p>（※）イベント中に「なぜgoogleの中の人がgoo.gl じゃなくて j.mp を使うんですか？」と質問があり、<br/>
+「j.mp は後ろが自由に定義できるので利用している。それだけの理由です。」というやりとりがありました。</p>
+<p>■当日のQ&amp;Aは、以下の moderator にあります。<br/>
+<a href="https://www.google.com/moderator/#16/e=954eb">https://www.google.com/moderator/#16/e=954eb</a></p>
+<p>Honeycomb タブレットアプリ開発に参考になるリンクは以下です。</p>
+<p>■ドキュメント系<br/>
+<a href="http://developer.android.com/sdk/android-3.0.html">Android 3.0 Platformの紹介</a><br/>
+<a href="http://developer.android.com/guide/practices/optimizing-for-3.0.html">Optimizing Apps for Android 3.0（タブレット）向けのアプリ最適化</a></p>
+<p>■Google I/O 2011 セミナー動画、プレゼンテーション資料<br/>
+<a href="http://www.google.com/events/io/2011/sessions/honeycomb-highlights.html">Honeycomb ハイライト</a><br/>
+<a href="http://www.google.com/events/io/2011/sessions/android-protips-advanced-topics-for-expert-android-app-developers.html">Android Protips: さらに発展したトピック。。。</a><br/>
+<a href="http://www.google.com/events/io/2011/sessions/designing-and-implementing-android-uis-for-phones-and-tablets.html">スマートフォンとタブレット向けのUIデザインについて</a><br/>
+<a href="http://www.google.com/events/io/2011/sessions/android-market-for-developers.html">開発者向けのAndroidマーケット</a></p>
+<p>■参考になるサンプルプログラム<br/>
+<a href="http://code.google.com/p/iosched">Google I/O 2011 スケジュールアプリ</a><br/>
+ – セッション内容や参加会社情報などが見えるアプリ<br/>
+<a href="http://code.google.com/p/xlarge-demos">Photo Album (xlarge-demos)</a><br/>
+<a href="http://developer.android.com/resources/samples/HoneycombGallery/index.html">Honeycomb ギャラリー(Android SDKにソースコードがあります)</a></p>
+</div>
+</div>
+<div class="post-65 post hentry category-knowhow tag-android tag-eclipse tag-leak tag-mat" id="post-65">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">04.03.11</span> <span class="titleName"><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" rel="bookmark">メモリリークを発見！Androidアプリのメモリ解析手法</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/knowhow/index.html" rel="category tag" title="KnowHow の投稿をすべて表示">KnowHow</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/eclipse/index.html" rel="tag">eclipse</a>, <a href="/tag/leak/index.html" rel="tag">leak</a>, <a href="/tag/mat/index.html" rel="tag">mat</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><a href="/assets/content/uploads/2011/04/memory-leak-top.png"><img alt="" class="aligncenter size-large wp-image-3339" src="/assets/content/uploads/2011/04/memory-leak-top-1024x682.png" title="memory-leak-top" width="500"/></a><br/>
+<br clear="all"/></p>
+<p>googleのAndroid開発者向け ブログに「<a href="http://android-developers.blogspot.com/2011/03/memory-analysis-for-android.html" target="_blank">Memory Analysis for Android Applications</a>」という記事があったため、自分のために訳しました。参考になれば幸いです。本エントリを見るうえで、eclipse の基本的な使い方を理解している必要があります。</p>
+<h1>Androidアプリのメモリ解析手法</h1>
+<p>Dalvikランタイムは、ガベージコレクトしてくれるかもしれませんが、それはメモリ管理を行わなくてもよいというわけではありません。モバイル端末上でのメモリ利用状況は特に注意を払わなければなりません。本投稿では、開発するアプリのメモリ利用状況の把握を支援する Android SDK で提供しているメモリプロファイリングツール群のいくつかを紹介させて頂きます。</p>
+<p>メモリ利用時の問題はいくつか明らかになっています。例えば、もしあなたのアプリがユーザの画面タッチ操作のたびにメモリリークするとすると、最終的には <span style="color: #008000;">OutOfMemoryError</span> のきっかけになる可能性が高いでしょう。他の問題はもっと複雑で、（あなたのアプリがガベージコレクトが頻繁に発生し、かつ長い時間発生すると）そのアプリと全体のシステムの両方のパフォーマンスを下げる原因になるかもしれません。</p>
+<h1>解析・分析のためのツール</h1>
+<p>Android SDK はアプリのメモリ利用状況をプロファイリングする手法として、2つの方法を提供します。DDMSの”Allocation Tracker”タブとヒープダンプです(heap dums)。Allocation Tracker は、与えられた時間間隔の中で発生しているメモリ割り当ての種類を知りたいときに便利です。Allocation Trackerについてもっと情報が必要な場合は、<a href="http://developer.android.com/resources/articles/track-mem.html" target="_blank" title="Tracking Memory Allocations">Tracking Memory Allocations</a> を見てください。<br/>
+しかし、それらはアプリケーションヒープの概要の状態に関する情報しか提供されません。本投稿の趣旨は、より強力なメモリ解析・分析のツールであるヒープの表示（dump）にフォーカスをあてていく予定です。</p>
+<p>ヒープダンプは、HPROF と言われているバイナリフォーマットの形式で保存されるスナップショット（ある瞬間の情報（点としての情報））です。Dalvik は似たようなフォーマットを利用しますが、<a href="http://java.sun.com/developer/technicalArticles/Programming/HPROF.html" target="_blank" title="HPROF tool in Java">java の HPROF Tool</a>とまったく同じではありません。実行中のAndroidアプリのヒープダンプを生成するいくつかの方法があります。１つは DDMS の HPROF ファイルに保存する機能です。もし、あなたがもっと正確にダンプを作成したいときは<a href="http://developer.android.com/reference/android/os/Debug.html#dumpHprofData(java.lang.String)" target="_blank" title="dumpHprofData() Method">android.os.Debug.dumpHprofData()</a> メソッドを利用してプログラム上からヒープダンプを作成することもできます。</p>
+<p>ヒープダンプを解析するために、<a href="http://download.oracle.com/javase/6/docs/technotes/tools/share/jhat.html" target="_blank">jhat</a>や<a href="http://www.eclipse.org/mat/" target="_blank" title="Eclipse Memory Analyzer (MAT)">Eclipse Memory Analyzer (MAT)</a>のような一般的なツールも利用できます。<br/>
+しなしながら、最初に .hprof(拡張子）ファイルを Dalvik フォーマットから J2SE HPROF フォーマットに変換する必要がでてきます。<br/>
+そのためにAndroid SDK の中で提供されている <span style="color: #008000;">hprof-conv</span> ツールを利用できます。</p>
+<p>たとえば、</p>
+<blockquote><p>hprof-conv dump.hprof converted-dump.hprof</p></blockquote>
+<p>というコマンドで実行できます。</p>
+<h1>例：メモリリークをデバッグする</h1>
+<p>Dalvikランタイムの中で、プログラマは明示的にフリーなメモリを割り当てることはできません、そのため　C や C++ の言語のように本当にメモリがリークしているかどうかを知ることができません。</p>
+<p>ソースコード上にある”メモリリーク”は、不必要に長い間オブジェクトを参照し続けた場合に発生します。たまに 単一参照（single reference)は、大きな（大量な）オブジェクト群のガベージコレクタの実行を妨げることができます。</p>
+<p>Android SDKの中にある <a href="http://developer.android.com/resources/samples/HoneycombGallery/" target="_blank">Honeycomb の Gallary Sample アプリ</a>を利用して、実例を用いて理解していきましょう。これは新しいHoneycomb API群のいくつかの使い方を知るためのシンプルな写真閲覧アプリです。</p>
+<p>ビルド方法とサンプルコードのダウンロード方法は、<a href="http://developer.android.com/resources/samples/get.html" target="_blank">手順書</a>(Android 開発者サイトのサンプルの取得方法）をご覧ください。</p>
+<p>どのようにデバッグできるかの手法を紹介するためにこのアプリに故意にメモリリークを追加しました。</p>
+<p><a href="http://1.bp.blogspot.com/-85BU4dyekEk/Uzc926b_KYI/AAAAAAAAAWQ/4durHgt-Lx0/s400/honeycomb-gallery.png"><img alt="" class="aligncenter" height="250" src="http://1.bp.blogspot.com/-85BU4dyekEk/Uzc926b_KYI/AAAAAAAAAWQ/4durHgt-Lx0/s400/honeycomb-gallery.png" title="Debugging a memory leak" width="400"/></a><br/>
+ネットワーク上から画像を取得するために、このアプリを修正したいと考えてみてください。よりレスポンスをよくするために、最近閲覧した画像を保持するキャッシュの実装を決めたとします。 ContentFragmen.java ファイルにいくつかの小さな変更を行ってみましょう。クラスの上部に新しいスタティック変数を追加しましょう。</p>
+<blockquote><p>private static HashMap&lt;String,Bitmap&gt; sBitmapCache = new HashMap&lt;String,Bitmap&gt;();</p></blockquote>
+<p>これは、ネットワークからロードするビットマップ群のキャッシュです。続いて <span style="color: #008000;">updateContentAndRecycleBitmap() </span>メソッドをネットワークからロードする前にキャッシュに存在するかどうかの確認を行うために変更し、ロード後にキャッシュにビットマップを追加します。</p>
+<pre class="brush:java">    void updateContentAndRecycleBitmap(int category, int position) {
+        if (mCurrentActionMode != null) {
+            mCurrentActionMode.finish();
+        }
+
+        // 描画するためのビットマップを取得し、ImageViewを更新
+
+        // キャッシュにビットマップが存在するかどうかを確認
+        String bitmapId = "" + category + "." + position;
+        mBitmap = sBitmapCache.get(bitmapId);
+
+        if (mBitmap == null) {
+            // キャッシュにない場合、ビットマップをロードし、キャッシュに追加
+            // 危険・注意！ 常にビットマップを削除することなしにキャッシュにアイテムを追加
+            mBitmap = Directory.getCategory(category).getEntry(position)
+                .getBitmap(getResources());
+            sBitmapCache.put(bitmapId, mBitmap);
+        }
+        ((ImageView) getView().findViewById(R.id.image)).setImageBitmap(mBitmap);
+    }</pre>
+<p>私はここで故意にいれたメモリリークを紹介します。常にキャッシュを削除することなしに ビットマップをキャッシュに追加します。実際にアプリでこのような実装する場合は、いくつかの方法でキャッシュサイズに制限をかけたいを考えるでしょう。</p>
+<h1>DDMSを利用してヒープの利用状況を確認</h1>
+<p>Dalvik Debug Monitor Server (DDMS) は、主要なAndroidデバッグツールの１つです。DDMSは <a href="http://developer.android.com/sdk/eclipse-adt.html" target="_blank">ADT Eclupse プラグイン</a>の一部で、単体動作版はAndroid SDKの <span style="color: #008000;">tools/</span> ディレクトリの中にあります。DDMSに関する情報をもっと知りたい場合は、<a href="http://developer.android.com/guide/developing/debugging/ddms.html" target="_blank">DDMSを利用</a>してみましょう。</p>
+<p>それでは、このアプリのヒープ利用状況を確認するためにDDMSを利用しましょう。DDMSを起動する方法は2つあり、そのどちらでも起動できます。</p>
+<ul>
+<li>Eclipse上からメニューバーを以下の順序で選択する方法</li>
+</ul>
+<p style="padding-left: 60px;">Windows &gt; Open Perspective &gt; Other … &gt; DDMS</p>
+<ul>
+<li>コマンドライン上から <span style="color: #008000;">tools/</span> ディレクトリの中にある <span style="color: #008000;">ddms </span>を起動する。</li>
+</ul>
+<p style="padding-left: 60px;">（追記：Windowsの場合は、ddms.bat が起動され、Mac/Linux の場合は、ddmsが起動される。（それぞれに PATH を通している必要があります））</p>
+<p><a href="http://2.bp.blogspot.com/-DCj7FoBepAQ/Uzc9u18ARPI/AAAAAAAAATU/jOHOLCGsKCw/s1600/ddms-toolbar.png"><img alt="" class="aligncenter" height="312" src="http://2.bp.blogspot.com/-DCj7FoBepAQ/Uzc9u18ARPI/AAAAAAAAATU/jOHOLCGsKCw/s1600/ddms-toolbar.png" title="Examing heap usage in DDMS-1" width="400"/></a></p>
+<p>左のパネルから<span style="color: #008000;">com.example.android.hcgallery</span>プロセスを選択して、ツールバー上の”Show heap updates”ボタンをクリックします。<br/>
+それから DDMS の VM Heap タブに切り替えます。</p>
+<p>ヒープメモリ利用状況について GC毎に更新されるいくつかの基本情報が見れます。最初の更新を行うために、”Cause GC”ボタンをクリックします。</p>
+<p><a href="http://1.bp.blogspot.com/-iYqRtBzuPEw/Uzc9uqm3yyI/AAAAAAAAATY/RJQm-z0ySUI/s1600/ddms-heap-usage.png"><img alt="" class="aligncenter" height="212" src="http://1.bp.blogspot.com/-iYqRtBzuPEw/Uzc9uqm3yyI/AAAAAAAAATY/RJQm-z0ySUI/s1600/ddms-heap-usage.png" title="Examining heap usage in DDMS-2" width="400"/></a></p>
+<p>我々は live setという（割り当てメモリ列）8MBを少し超えるものをみることができます。サンプルアプリの写真をフリックすると、数字が増加していくのが見れます。このアプリは13枚の写真しかありませんが、リークしたメモリの容量が割り当てられていきます。このような場合リークの最悪のパターンが訪れます。しかしながら我々は決して リークすることにより <span style="color: #008000;">OutOfMemoryError</span> を起こしてはいけません。</p>
+<h1>ヒープダンプ(heap dumps)を作成</h1>
+<p>問題を追うためにヒープダンプを作ってみましょう。DDMSツールバーのDump HPRPF fileボタンをクリックして、保存場所を選択して、それから <span style="color: #008000;">hprof-conv</span> でコンバートしてください。この例では、MAT(Ver 1.0.1)のスタンドアローンバージョン(Stand alone version)を利用しています。これは<a href="http://www.eclipse.org/mat/downloads.php" target="_blank">MATダウンロードサイト</a>で提供されています。</p>
+<p>もし、ADT(DDMSのプラグインの親元)が実行している場合や Eclipse に MAT がインストールされている場合は、”dump HPROF”ボタンを押すと自動的にコンバート（hprof-convを実行）してくれ、Eclipse内（MATでオープンされる）で変換された hprof ファイルを開いてくれます。</p>
+<h2>MATを利用したヒープダンプの解析・分析</h2>
+<p>MATを実行し、いま先ほど作成したコンバート済みの HPROF ファイルをロードしてください。（上記のように必要なツールがインストールされていれば、自動的にコンバートとMAT起動を行ってくれます）。MATは強力なツールですべての機能を説明するためには本投稿の範囲を超えてしまいます。そのためいまはリークを発見するために利用する１つの方法として、Histogram View（ヒストグラムビュー）を紹介します。ヒストグラムビューはインスタンスの数でソートされたクラスのリストと表面上のヒープ（表層ヒープ：shallow heap）（すべてのインスタンスで利用しているメモリの総合計）と保持されたヒープ（保持ヒープ：retained heap）（他のオブジェクトへの参照をもっているオブジェクトを含めたすべてのインスタンスで生きているメモリの総合計）を表示します。</p>
+<p><a href="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png"><img alt="" class="aligncenter" height="316" src="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png" title="analyzing heap dump using MAT-1" width="400"/></a></p>
+<p>もし shallow heap でソートすれば、<span style="color: #008000;">byte配列</span>のインスタンスが上部に表示されます。Android 3.0(ハニカム）の場合、ビットマップオブジェクトのピクセルデータは <span style="color: #008000;">byte配列</span>に保存されます。（以前は Dalvik heap に保存されませんでした）<br/>
+そして、それらのオブジェクトのサイズを参考にして、メモリリークしたビットマップのための裏にあるメモリだと賭けても(bet)あっている(safe)でしょう。</p>
+<p>byte[] クラス上で右クリックで押して、<br/>
+List Objects → incoming references<br/>
+を選択します。これは、ヒープの中に byte 配列のすべてをリストで表示したもので、Shallow Heapの利用状況をベースにソートすることのできます。</p>
+<p>大きなオブジェクトの一つを選び、ドリルダウンしていきましょう。これは、オブジェクトのrootからの path を見せてくれます。生存しているオブジェクト参照のつながりを表しています。ほら、我々のビットマップキャッシュがありますね。</p>
+<p><a href="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png"><img alt="" class="alignnone" height="316" src="http://1.bp.blogspot.com/-GUy6M0jJnfw/Uzc9-4mMptI/AAAAAAAAAZA/J3mxtLxH014/s1600/mat-references.png" title="analyzing heap dumps using MAT-2" width="400"/></a></p>
+<p>MATはこれがリークかどうかを教えてはくれません。なぜなら、それが必要なものか、そうでないかがわからないためです。それはプログラマのみができることなのです。今回の場合、キャッシュは比較的アプリの休憩中（ユーザが操作していない場合）にメモリの大きな容量を使っています。そのためキャッシュのサイズの上限を検討しないといけません。</p>
+<h1>MATでヒープダンプを比較</h1>
+<p>メモリリークをデバッグしているとき、2つの異なったポイントのヒープ利用状況を比較すると、とても有益です。それを行うために、2つの異なる HPRPOF ファイルを作成する必要があります。（<span style="color: #008000;">hprof-conv</span>を使ってコンバートは忘れずに！）</p>
+<p>では、ここでどうやって MAT で2つのヒープダンプを比較すればよいかをお伝えします。（少し重ねればよいのです）</p>
+<ol>
+<li> 最初のHPROFファイルを開く（Fie &gt; Open Heap Dump)</li>
+<li> ヒストグラムビュー(Histogram view)を開く</li>
+<li> Navigation History view（eclipe のメニューのWindow &gt; Navigation History。なければ Window &gt; Other… &gt; Memory Analyzer Views &lt; Navigation Historyで選択）の中の histogram を選択し、右クリックして「Add to Compare Basket」を選ぶ</li>
+<li>2つ目の HPROF ファイルをステップ2と3を繰り返してください</li>
+<li>「Compare Basket view」に切り替えて、Compare the Results（Compare Basket viewの上部の右上にある赤い！アイコン）をクリック</li>
+</ol>
+<h1>結論</h1>
+<p>本投稿ではどのように allocation Tracker と ヒープダンプ(heap dumps)はアプリのメモリ利用状況のよりより見え方・感じ方を得るための方法を紹介しました。私はまた どのよに Eclipse Memory Analyzer(MAT) がアプリのメモリリークを追う方法を紹介しました。MATは強力なツールであり、私もこのツールで何ができるかの表面しか紹介しませんでした。</p>
+<p>もしあなたがよりもっと学びたいとお考えなら、以下のURLのいくつかを読むことをお勧めします。</p>
+<ul>
+<li><a href="http://dev.eclipse.org/blogs/memoryanalyzer/" target="_blank">Memory Analyzer News</a>（英語）
+<ul>
+<li>Eclipse MAT プロジェクトの公式ブログ</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> <a href="http://kohlerm.blogspot.com/" target="_blank">Markus Kohler’s Java Performance blog</a>（英語）
+<ul>
+<li>多くの役に立ち記事があります。ここには <a href="http://kohlerm.blogspot.com/2010/02/android-memory-usage-analysis-slides.html" target="_blank">Eclipse Memory Analyzer を利用したAndroidアプリのメモリ利用分析</a>があったり、<a href="http://kohlerm.blogspot.com/2009/07/eclipse-memory-analyzer-10-useful.html" target="_blank">Eclipse Memory Analyzerのための10個の役に立つ開発術</a>があります。</li>
+</ul>
+</li>
+</ul>
+<h1>メモリリークを避けるためにお薦め本</h1>
+<table>
+<tbody>
+<tr>
+<td style="border-style: none;"></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/489471499X/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=489471499X">Effective Java 第2版</a>
+<p>まだお持ちでないなら、メモリリークを避けるためにも必読です。</p></td>
+</tr>
+<tr>
+<td style="border-style: none;"></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797327030/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797327030">増補改訂版Java言語で学ぶデザインパターン入門 </a>
+<p>先人の知恵であるパターンを利用することによって大幅にメモリリークを避けられるようになります。</p></td>
+</tr>
+<tr>
+<td style="border-style: none;"></td>
+<td style="border-style: none;"><a href="http://www.amazon.co.jp/gp/product/4797331623/ref=as_li_tf_tl?ie=UTF8&amp;tag=andbrowser001-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797331623">増補改訂版 Java言語で学ぶデザインパターン入門 マルチスレッド編 </a>
+<p>マルチスレッド環境ではメモリリークが発生しやすくなります。マルチスレッドを扱う場合は必読です。</p></td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+</p>
+</div>
+</div>
+<div class="post-59 post hentry category-ageruapp tag-felica tag-4" id="post-59">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.27.11</span> <span class="titleName"><a href="/development/ageruapp/59/ageruapp-sb-intro/index.html" rel="bookmark">ソフトバンク様のアプリ情報ページで「あげる」アプリ紹介</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/ageruapp/index.html" rel="category tag" title="ageruApp の投稿をすべて表示">ageruApp</a> — Tags: <a href="/tag/felica/index.html" rel="tag">felica</a>, <a href="/tag/%E3%81%82%E3%81%92%E3%82%8B/index.html" rel="tag">あげる</a></span>   </div>
+</div>
+<div class="storycontent">
+<p>ソフトバンク様より連絡があり、以下のアプリ紹介ページで「あげる」アプリを取り上げて頂きました。</p>
+<p>■ソフトバンク様のおすすめアプリ情報ページ<br/>
+<a href="http://ent.mb.softbank.jp/promotion/constant/">http://ent.mb.softbank.jp/promotion/constant/</a></p>
+<p>■「あげる」アプリ紹介ページ<br/>
+<a href="http://ent.mb.softbank.jp/promotion/appli/indivisual/appli_1174/index.html">http://ent.mb.softbank.jp/promotion/appli/indivisual/appli_1174/index.html</a></p>
+<p>まだまだおサイフケーター搭載Android機器は少く、さらにpush通信を使ったアプリは認知度が低いのですが、このように一歩ずつでもユーザに知ってもらえる機会が増えてくれればと思っています。</p>
+</div>
+</div>
+<div class="post-48 post hentry category-titanium tag-titanium" id="post-48">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.27.11</span> <span class="titleName"><a href="/titanium/48/titanium-mobile-install/index.html" rel="bookmark">Titanium Mobileのインストール</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/titanium/index.html" rel="category tag" title="Titanium の投稿をすべて表示">Titanium</a> — Tags: <a href="/tag/titanium/index.html" rel="tag">Titanium</a></span>   </div>
+</div>
+<div class="storycontent">
+<p>最近、Titanium Mobile に注目が集まっています。<br/>
+<a href="http://developer.appcelerator.com/">http://developer.appcelerator.com/</a></p>
+<p>スマートフォンという携帯のカテゴリが一般に認知されてきて、様々な雑誌やテレビでスマートフォンがあればこんなに便利という話を見ない日はありません。ただ一言でスマートフォンというと簡単なのですが、詳しく中身を見てみると、iPhoneやAndroidやBlackBerryやWindows Phone 7 といったOSの違いがあり、それ向けにアプリを開発するとなると、それぞれに対応したPCを準備したり、プログラミング言語や各種ツールの使い方を新たに習得したりする必要があります。<br/>
+それらを特に個人開発者が準備したり、習得したりするのは大変なコストをかけないといけないのですが、それを開発するものとして Titanium Mobile が注目されています。</p>
+<p>Titanium Mobile については詳しい話は他のブログや書籍で紹介されているので、そちらに任せたいと思います。私のほうでは私のメインの開発環境である Android + Windows PC という視点で情報提供していきたいと思っています。<br/>
+Titanium Mobileは iPhone と Android と BlackBerryのアプリが開発できることが大きな売りの１つなので、iPhoneアプリ開発ができない Windows PCでの開発に使う人はほとんどいないのでしょう。<br/>
+それでも、私のようにまだ MAC に手を出したことがない人は多いと思いますので、情報展開していきたいと思っています。</p>
+<p>まず最初に、環境構築時にはまったポイントを紹介します。</p>
+<p>本家で同じ質問があがっていますが回答はついてませんでした。</p>
+<blockquote><p>Can’t INstall on Windows – Bad Image after INstall<br/>
+<a href="http://developer.appcelerator.com/question/102251/cant-install-on-windows---bad-image-after-install">http://developer.appcelerator.com/question/102251/cant-install-on-windows—bad-image-after-install</a>
+</p></blockquote>
+<p>症状としては、Titanium Developer インストール後のTitanium Developer起動時に以下のようなエラーが発生して、Titanium Developer が起動せず開発ができないというものです。<br/>
+（正しい文章はメモっていませんでしたが、以下のようなイメージの内容です）</p>
+<blockquote><p>C:\Documents and Settings\All Users\Application Data\Titanium\modules\win32\javascript\1.0.0\javascriptmodule.dll がありません。<br/>
+なんたらのイメージが異なっています</p></blockquote>
+<p>原因は、Titanium Developerがインストール時にネットから必要なファイルをダウンロードしてインストールを進めるのですが、このダウンロードがネットワーク環境の影響でうまくいかないことがあり、インストール成功後も javascriptmodule.dll が 0byteになってしまうことでした。<br/>
+そのため、対策としては一度 Titanium Developer をアンインストールして（アンインストール後にC:\Documents and Settings\All Users\Application Data\Titanium\が削除されていることを確認すること。削除されていなければ、手動で削除）、ネットワークが安定的に接続されている環境で再度 Titanium Developer のインストールを行うことです。<br/>
+インストール環境後は再起動し、javascriptmodule.dll が 0byte でないことが確認できれば、Titanium Developer が正しく起動すると思います。</p>
+<p>同じ現象の方は、上記の方法で試してみてください。</p>
+</div>
+</div>
+<div class="post-9 post hentry category-ageruapp tag-android tag-felica tag-4" id="post-9">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">02.01.11</span> <span class="titleName"><a href="/development/ageruapp/9/ageruapp-info/index.html" rel="bookmark">おサイフケータイで簡単コミュニケーション「あげる」アプリの詳細紹介</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/ageruapp/index.html" rel="category tag" title="ageruApp の投稿をすべて表示">ageruApp</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/felica/index.html" rel="tag">felica</a>, <a href="/tag/%E3%81%82%E3%81%92%E3%82%8B/index.html" rel="tag">あげる</a></span>   </div>
+</div>
+<div class="storycontent">
+<div class="title"><img alt="icon" class="size-full wp-image-12" height="36" src="/assets/content/uploads/2011/02/icon.png" title="icon" width="36"/>おサイフケータイで簡単コミュニケーション「あげる」アプリ</div>
+<h1>アプリ概要</h1>
+<p>本アプリは、おサイフケータイに掲載されている Felica の<a href="http://ap.pitsquare.jp/pc/developers/">push送信機能</a>を利用して、以下の情報を相手のケータイに送信することができます。<br/>
+相手のケータイにアプリをインストールしたり、赤外線のように受信動作を行わなくても簡単に送信ができます。</p>
+<ul>
+<li><a href="/page/22/index.html#url">URL の送信</a></li>
+<li><a href="/page/22/index.html#map">地図情報の送信</a></li>
+<li><a href="/page/22/index.html#youtube">youtube動画の送信</a></li>
+<li><a href="/page/22/index.html#tel">電話番号の送信</a></li>
+<li><a href="/page/22/index.html#mail">メールアドレスの送信</a></li>
+</ul>
+<h1>アプリの使い方</h1>
+<h2><a name="url"></a></h2>
+<p>現在、ブラウザで開いているウェブサイトのURLを送信できます。<br/>
+URLが表示されているところを長押ししてコンテキストメニューを表示</p>
+<p><img src="/assets/content/uploads/2011/02/01.jpg"/></p>
+<p>「ページの共有」を選択</p>
+<p><img src="/assets/content/uploads/2011/02/02.jpg"/></p>
+<p>「アプリケーションを選択」から「あげる」アプリを選択。<br/>
+英字から並ぶため、下のほうにあることが多いです。</p>
+<p><img src="/assets/content/uploads/2011/02/061.jpg"/></p>
+<p>カウントダウンが始まりますので、その間に相手のおサイフケータイにタッチをしてください。<br/>
+送信完了すると、送信側に受信ダイアログが表示され、OKを押すと送信したウェブサイトが開きます。</p>
+<p><img src="/assets/content/uploads/2011/02/01-3.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/01-2.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/01-1.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/01-0.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/01-9.jpg"/></p>
+<h3>その他の方法</h3>
+<p>ブラウザのメニューボタンから「その他」→「ページの共有」からでも同じことができます。</p>
+<p><img src="/assets/content/uploads/2011/02/04.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/06.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/07.jpg"/></p>
+<h2><a name="map"></a></h2>
+<p>マップアプリ上で送信したい場所を選択します。<br/>
+今回は、例として「六本木駅（東京）」を押します。</p>
+<p><img src="/assets/content/uploads/2011/02/10.jpg"/></p>
+<p>六本木駅の情報が表示されます。右上のボタンを押します。</p>
+<p><img src="/assets/content/uploads/2011/02/11.jpg"/></p>
+<p>この場所を共有を押すと、カウントダウンが開始され、相手にタッチすると地図情報が送信されます。<br/>
+受信側は、マップアプリで六本木駅（東京）が表示されます。</p>
+<p><img src="/assets/content/uploads/2011/02/13.jpg"/></p>
+<p><img src="/assets/content/uploads/2011/02/33.jpg"/></p>
+<h2><a name="youtube"></a></h2>
+<p>youtubeの動画を選択します。</p>
+<p><img src="/assets/content/uploads/2011/02/21.jpg"/></p>
+<p>youtube動画の再生中です。</p>
+<p><img src="/assets/content/uploads/2011/02/22.jpg"/></p>
+<p>再生中にメニューボタンを押して、「共有」を選択します。</p>
+<p><img src="/assets/content/uploads/2011/02/24.jpg"/></p>
+<p>あげるアプリを選択します。<br/>
+カウントダウンが始まり、相手側で同じ動画が再生されます。</p>
+<p><img src="/assets/content/uploads/2011/02/26.jpg"/></p>
+<h3>その他の方法</h3>
+<p>Youtubeのトップページの動画を長押しするとコンテキストメニューが表示されます。<br/>
+その中の「共有」から同じことができます。</p>
+<p><img src="/assets/content/uploads/2011/02/21-2.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/25-2.jpg"/><br/>
+<img class="sequence" src="/assets/content/uploads/2011/02/26-2.jpg"/></p>
+<h2><a name="tel"></a></h2>
+<p>電話帳アプリから送信したい人物を開いて、電話ボタンを押す。</p>
+<p><img src="/assets/content/uploads/2011/02/41.jpg"/></p>
+<p>アプリケーション選択画面が表示されるので、あげるアプリを選択する。<br/>
+カウントダウンが開始され、電話番号を送信できます。<br/>
+受信側で通話アプリが立ち上がり、通話を押してもらうと電話番号の交換ができます。</p>
+<p><img src="/assets/content/uploads/2011/02/43.jpg"/></p>
+<h2><a name="mail"></a></h2>
+<p>電話帳アプリから送信したい人物を開いて、メールボタンを押します。</p>
+<p><img src="/assets/content/uploads/2011/02/50.jpg"/></p>
+<p>アプリケーション選択画面が表示されるので、あげるアプリを選択します。<br/>
+カウントダウンが開始され、メールアドレスを送信できます。<br/>
+受信側でメールアプリを選択すれば、送信したメールアドレスが TO に入った状態で立ち上がり、そのまま送信ボタンを押してもらうと相手とメールアドレスの交換ができます。</p>
+<p><img src="/assets/content/uploads/2011/02/52.jpg"/></p>
+</div>
+</div>
+<div class="post-3 post hentry category-ageruapp tag-android tag-felica tag-4" id="post-3">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">01.09.11</span> <span class="titleName"><a href="/development/ageruapp/3/release-ageruapp/index.html" rel="bookmark">「あげる」アプリをリリース</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/development/ageruapp/index.html" rel="category tag" title="ageruApp の投稿をすべて表示">ageruApp</a> — Tags: <a href="/tag/android/index.html" rel="tag">Android</a>, <a href="/tag/felica/index.html" rel="tag">felica</a>, <a href="/tag/%E3%81%82%E3%81%92%E3%82%8B/index.html" rel="tag">あげる</a></span>   </div>
+</div>
+<div class="storycontent">
+<p><img alt="あげるアプリのアイコン" class="alignnone size-full wp-image-4" height="72" src="/assets/content/uploads/2011/01/icon72.png" title="icon72" width="72"/>「あげる」アプリをリリースしました。</p>
+<p>本アプリは、おサイフケータイに掲載されている Felica の<a href="http://ap.pitsquare.jp/pc/developers/">push送信機能</a>を利用して、以下の情報を相手のケータイに送信することができます。 相手のケータイにアプリをインストールしたり、赤外線のように受信動作を行わなくても簡単に送信ができます。</p>
+<ul>
+<li>URL の送信</li>
+<li>地図情報の送信</li>
+<li>youtube動画の送信</li>
+<li>電話番号の送信</li>
+<li>メールアドレスの送信</li>
+</ul>
+<p>以下のQRコードからもインストール可能です。</p>
+<p><img alt="" class="alignnone size-full wp-image-5" height="147" src="/assets/content/uploads/2011/01/qr_sharefelica.gif" title="qr_sharefelica" width="147"/></p>
+</div>
+</div>
+<div class="post-3604 post hentry category-privacy" id="post-3604">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">01.01.10</span> <span class="titleName"><a href="/privacy/3604/privacy_policy/index.html" rel="bookmark">Privacy Policy</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/privacy/index.html" rel="category tag" title="privacy の投稿をすべて表示">privacy</a> </span>   </div>
+</div>
+<div class="storycontent">
+<p>English is below</p>
+<h2>アプリやサイトに掲載されている広告について</h2>
+<p>
+アプリやサイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net、Amazonアソシエイト）を利用しています。<br/>
+このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他サイトへのアクセスに関する情報 『Cookie』(氏名、住所、メール アドレス、電話番号は含まれません) を使用することがあります。<br/>
+またGoogleアドセンスに関して、このプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、<a href="http://www.google.co.jp/policies/technologies/ads/">こちら</a>をご覧ください。</p>
+<h2>アプリやサイトが使用しているアクセス解析ツールについて</h2>
+<p>
+アプリやサイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。<br/>
+このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。<br/>
+このトラフィックデータは匿名で収集されており、個人を特定するものではありません。<br/>
+この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。<br/>
+この規約に関して、詳しくは<a href="http://www.google.com/analytics/terms/jp.html">こちら</a>をご覧ください。</p>
+<p>
+お客様の個人情報をお預かりするにあたり、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築します。<br<br></br<br>
+我々は個人情報に関する法令を遵守し、個人情報保護の重要性の認識と取組みを徹底し、個人情報の適切な取扱いと保護を推進致します。</p>
+<h2>個人情報の取得</h2>
+<p>
+我々は、適正に個人情報を取得いたします。</p>
+<p><h2>個人情報の管理</h2>
+<p>我々は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
+<p><h2>個人情報の利用目的</h2>
+<p>我々は、個人情報を以下の目的のために利用いたします。<br/>
+アプリやサイトの改良・改善のため<br/>
+新規サービス開発のため<br/>
+上記目的のためのお客様への問い合わせのため</p>
+<h2>個人情報の第三者への開示・提供の禁止</h2>
+<p>我々は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。<br/>
+お客さまの同意がある場合<br/>
+お客さまが希望されるサービスを行なうために我々が業務を委託する業者に対して開示する場合<br/>
+法令に基づき開示することが必要である場合</p>
+<h2>個人情報の安全管理</h2>
+<p>我々は、個人情報の漏えい・紛失防止のため、また正確性及び安全性確保のために、セキュリティに万全の対策を講じています。</p>
+<h2>ご本人の照会</h2>
+<p>お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。</p>
+<h2>法令、規範の遵守と見直し</h2>
+<p>我々は、保有する個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。お客様の個人情報をお預かりするにあたり、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築します。<br/>
+我々は個人情報に関する法令を遵守し、個人情報保護の重要性の認識と取組みを徹底し、個人情報の適切な取扱いと保護を推進致します。</p>
+<p>————————————–</p>
+<h2>About ads on apps and sites</h2>
+<p>
+For applications and sites, we use a third-party advertisement service (Google Adsense, A8.net, Amazon Associate).<br/>
+In order to display advertisements of products and services according to the interests of users, such advertisement distribution businesses include information “Cookie” (name, address, e-mail address, telephone number) related to access to this site and other sites We do not use it) may be used.<br/>
+Please also refer to Google Adsense regarding details of this process and how to prevent such information from being used by ad serving companies.</p>
+<h2>About access analysis tools used by applications and sites</h2>
+<p>
+On this site, we use “Google Analytics” access analysis tool by Google.<br/>
+This Google Analytics uses cookies to collect traffic data.<br/>
+This traffic data is collected anonymously, it does not identify individuals.<br/>
+Since this function can refuse collecting by invalidating cookie, please confirm the setting of your browser.<br/>
+For details on this policy, please click here.</p>
+<p>In keeping customer’s personal information, we will establish the personal information protection policy as follows and construct a mechanism for personal information protection.<br/>
+We will comply with laws concerning personal information, thoroughly recognize and address the importance of protecting personal information and promote appropriate handling and protection of personal information.</p>
+<h2>Acquisition of personal information</h2>
+<p>
+We will obtain personal information properly.</p>
+<h2>Management of personal information</h2>
+<p>
+In order to keep customers’ personal information accurate and up to date, to prevent unauthorized access to personal information, loss, damage, alteration, leakage, etc., we maintain a security system · development system · maintain employee education We take necessary measures such as thorough thorough, implement safety measures and strictly manage personal information.</p>
+<h2>Purpose of using personal information</h2>
+<p>
+We will use personal information for the following purposes.<br/>
+For improving and improving applications and sites<br/>
+For developing new services<br/>
+For inquiries to customers for the above purpose</p>
+<h2>Prohibition of disclosure and provision of personal information to third parties</h2>
+<p>
+We will properly manage personal information you keep from customers and will not disclose personal information to any third party unless it falls under any of the following.<br/>
+When there is customer consent<br/>
+When we disclose to the business entrusted to the business for the customer to do the desired service<br/>
+When it is necessary to disclose based on laws and regulations</p>
+<h2>Safety management of personal information</h2>
+<p>
+In order to prevent the leakage / loss of personal information and to ensure accuracy and safety, we take every possible measure for security.</p>
+<h2>Referrals of the principal</h2>
+<p>
+If you wish to inquire, modify or delete personal information of the person himself / herself, we will confirm that you are the principal and will respond.</p>
+<h2>Compliance with laws and regulations, norms and reviews</h2>
+<p>
+We will comply with Japanese laws applicable to the personal information we possess, review the contents of this policy from time to time and make efforts to improve it. In keeping customer’s personal information, we will establish the personal information protection policy as follows and construct a mechanism for personal information protection.<br/>
+We will comply with laws concerning personal information, thoroughly recognize and address the importance of protecting personal information and promote appropriate handling and protection of personal information.</p>
+</p></p></div>
+</div>
+<div class="post-856 post hentry category-uncategorized" id="post-856">
+<div class="storyheader">
+<h3 class="storytitle"><span class="postDate">01.01.10</span> <span class="titleName"><a href="/uncategorized/856/sitemap/index.html" rel="bookmark">サイトマップ</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/uncategorized/index.html" rel="category tag" title="Uncategorized の投稿をすべて表示">Uncategorized</a> </span>   </div>
+</div>
+<div class="storycontent">
+<p></p>
+</div>
+</div>
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"><a href="/page/21/index.html">Newer Entries »</a></div>
+</div>
+</div>
+</div>
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,888 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,397 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,557 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<script src="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/scripts/core-min.js" type="text/javascript"></script>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shCore-min.css" id="ash_core-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shThemeDefault-min.css" id="ash_theme_default-css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+</body>
+</html>

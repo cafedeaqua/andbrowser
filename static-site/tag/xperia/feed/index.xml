@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; xperia</title>
+	<atom:link href="http://andbrowser.com/tag/xperia/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/xperia/feed/" />
+		<item>
+		<title>2013年春モデル Xperia Z, Xperia Tablet Z ワールド　タッチ＆トライに参加しました</title>
+		<link>http://andbrowser.com/development/1256/xperia-z-world-touch-and-try/</link>
+		<comments>http://andbrowser.com/development/1256/xperia-z-world-touch-and-try/#comments</comments>
+		<pubDate>Sat, 02 Feb 2013 01:13:41 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[xperia]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1256</guid>
+		<description><![CDATA[2013年春モデル Xperia Z, Xperia Tablet Z ワールド　タッチ＆トライに参加報告]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/01/photo00.jpg" alt="Xperia z touch and try" title="Xperia z touch and try" width="400" height="300" class="aligncenter size-full wp-image-1274" /></p>
+<style>
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+}
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: #258;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;	
+}
+table th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #258;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+table tr:hover {
+  background: #bbd4ee;
+  cursor:pointer;
+}
+</style>
+<p>Xperia のブロガーイベントに参加してきました。<br />
+紹介があった機種は、</p>
+<ul>
+<li>NTT docomo向け Xperia Z SO-02E</li>
+<li>NTT docomo向け Xperia Tablet Z SO-03E</li>
+</ul>
+<p>の2機種です。</p>
+<h4>NTT docomo向け Xperia Z SO-02E</h4>
+<p>もっとも期待の高いスマートフォンの Xperia Z のスペックは以下の通りです。<br />
+<span id="more-1256"></span></p>
+<table>
+<tr>
+<th>高さ&times;幅&times;厚さ</th>
+<td colspan="2">約139mm×約71mm×約7.9mm</td>
+</tr>
+<tr>
+<th>重量</th>
+<td colspan="2">146g</td>
+</tr>
+<tr>
+<th rowspan="3">ディスプレイ</th>
+<td>種類</td>
+<td>フルHD Reality Display</td>
+</tr>
+<tr>
+<td>サイズ</td>
+<td>5.0インチ</td>
+</tr>
+<tr>
+<td>解像度</td>
+<td>Full HD 1920×1080</td>
+</tr>
+<tr>
+<th>CPU</th>
+<td colspan="2">1.5GHzクアッドコア</td>
+</tr>
+<tr>
+<th>電池容量</th>
+<td colspan="2">2330ｍAh <span class="small">(着脱不可)</span></td>
+</tr>
+<tr>
+<th>OS</th>
+<td colspan="2">Google Android 4.1</td>
+</tr>
+<tr>
+<th rowspan="2">メモリ</th>
+<td>RAM</td>
+<td>2GB</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>16GB</td>
+</tr>
+<tr>
+<th>Wi-Fi　ワイヤレスLAN</th>
+<td colspan="2">IEEE802.11a/b/g/n</td>
+</tr>
+<tr>
+<th>Bluetooth</th>
+<td colspan="2">Bluetooth4.0<br />（SPP、A2DP、AVRCP、HID、HFP、HSP、OPP、PBAP、PAN、HDP、PXP、DID、MAP）</td>
+</tr>
+<tr>
+<th>その他</th>
+<td colspan="2">DLNA、赤外線通信、ワンセグ、おサイフケータイ、Wi-Fiテザリング</td>
+</tr>
+</table>
+<p>
+カラーバリエーションは3種類。ブラック・パープル・ホワイトがありました。オムニバランスデザインで、防水防塵のため卓上ホルダも同梱。<br />
+7.9mmの薄型な本体で上記のような最新のスペックを搭載。1.5GHzクラッドコアCPUとRAM 2GBでハイパフォーマンスを実現し、フルHDディスプレイは素晴らしい。バッテリー2330mAh も期待できます。POBox Touch搭載により、サクサクに文章を入力が可能キーボードのサイズと位置を自分好みに調整できる機能も追加。ステレオヘッドセット&#8221;MH-EX300AP&#8221;が本体付属品のため、購入してすぐに高音質が体験できます。
+</p>
+<h5>Xperia Z のホーム画面</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-01.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-01-168x300.png" alt="" title="Xperia Z home 1" width="168" height="300" class="alignnone size-medium wp-image-1290" /></a><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-12.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-12-168x300.png" alt="" title="Xperia z home 2" width="168" height="300" class="alignnone size-medium wp-image-1293" /></a><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-20.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-20-168x300.png" alt="" title="Xperia Z home 3" width="168" height="300" class="alignnone size-medium wp-image-1295" /></a><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-27.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-02-27-168x300.png" alt="" title="Xperia Z home 4" width="168" height="300" class="alignnone size-medium wp-image-1296" /></a></p>
+<p>
+Walkmanアプリケーション、ムービーアプリケーション、アルバムアプリケーションなどは Xperia のみに搭載されているもので大変良くできていました。<br />
+サクサク動いて、動きもかっこいい！その他にもDocomoモデルということでキャリア向けのアプリケーションが多数搭載されています。
+</p>
+<h5>Xperia Z  Walkmanアプリケーション</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-47.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-47-168x300.png" alt="" title="Xperia Z Music 1" width="168" height="300" class="alignnone size-medium wp-image-1308" /></a><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-341.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-341-168x300.png" alt="" title="Xperia Z Music 2" width="168" height="300" class="alignnone size-medium wp-image-1309" /></a><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-41.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-03-41-168x300.png" alt="" title="Xperia Z Music 3" width="168" height="300" class="alignnone size-medium wp-image-1310" /></a></p>
+<h5>Xperia Tablet Z 端末情報</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-37-18.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-22-20-37-18-168x300.png" alt="" title="Xperia Z　About Phone" width="168" height="300" class="aligncenter size-medium wp-image-1312" /></a></p>
+<p>
+開発ブログとしては最重要な端末情報です。発売前からいつ4.2 になるのかが楽しみで仕方ありません。
+</p>
+<h5>まとめ</h5>
+<p>今回はXperia Z を重点的に触ってきましたが大変満足度の高いスマートフォンに仕上がっています。これだけの大画面で防水・防塵ということでどこでも力強く利用することができます。いまから発売が楽しみです。
+</p>
+<h5>Xperia Tablet Z の画面</h5>
+<p><a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-12-40.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-12-40-300x187.png" alt="" title="Xperia Tablet Z Home 1" width="300" height="187" class="aligncenter size-medium wp-image-1317" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-47.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-47-300x187.png" alt="" title="Xperia Tablet Z Home 2" width="300" height="187" class="aligncenter size-medium wp-image-1318" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-02.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-02-300x187.png" alt="" title="Xperia Tablet Z Home 3" width="300" height="187" class="aligncenter size-medium wp-image-1319" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-20.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-20-300x187.png" alt="" title="Xperia Tablet Z Home 4" width="300" height="187" class="aligncenter size-medium wp-image-1320" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-26.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-14-26-300x187.png" alt="" title="Xperia Tablet Z Home 5" width="300" height="187" class="aligncenter size-medium wp-image-1321" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-15-14.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-15-14-300x187.png" alt="" title="Xperia Tablet Z Home 6" width="300" height="187" class="aligncenter size-medium wp-image-1322" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-12-54.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-12-54-300x187.png" alt="" title="Xperia Tablet Z Walkman app" width="300" height="187" class="aligncenter size-medium wp-image-1323" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-01.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-01-300x187.png" alt="" title="Xperia Tablet Z Album app" width="300" height="187" class="aligncenter size-medium wp-image-1324" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-06.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-06-300x187.png" alt="" title="Xperia Tablet Z Album app 2" width="300" height="187" class="aligncenter size-medium wp-image-1325" /></a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-13.png"><img src="http://andbrowser.com/wp-content/uploads/2013/02/Screenshot_2013-01-18-19-13-13-300x187.png" alt="" title="Xperia Tablet Z Movie app" width="300" height="187" class="aligncenter size-medium wp-image-1326" /></a></p>
+<p>Xperia Tablet Z でも Xperia z と同じホームアプリ、ウォークマンアプリ、ムービーアプリ、アルバムアプリが搭載されており、使い勝手が同じため、iPhoneとiPadのように同じユーザ体験で利用することができるようになっています。昨年のXperia Tablet Sでは接続ケーブルが専用コネクタでしたが、Xperia Tablet Z では USB micro-Bコネクタで接続できるため、他のスマートフォンとケーブルが代用できるので便利になりました。便利になったというかそれがいまの時代の当たり前だと思いますが、ソニーはいつも独自仕様で専用コネクタを作るのが好きなようで、今回普通のコネクタに戻ってよかったと思います。
+</p>
+<h5>参加者の報告</h5>
+<ul>
+<li><a href="http://blog.8796.jp/8796kanri/2013/01/xperia%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%BF%E3%83%83%E3%83%81%EF%BC%86%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%AD%E3%82%AC%E3%83%BC%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.html">8796.jp管理日誌：Xperiaワールドタッチ＆トライブロガーミーティングに行ってきたよ</a></li>
+<li><a href="http://loosemobiler-shin11s.blogspot.jp/2013/01/xperia.html">気まぐれもばいらー。：Xperiaワールド タッチ＆トライ ブロガーミーティング参加レポ</a></li>
+<li><a href="http://xperia-freaks.org/2013/01/24/xperia-z-meeting/">XperiaにおけるAndrodアプリ考察：【コラム】Xperia?ワールド タッチ＆トライ ブロガーミーティング参加してきた</a></li>
+<li><a href="http://x-gadget.org/archives/76">Project Connect：Xperiaワールド タッチ＆トライ ブロガーミーティングに参加しました！</a></li>
+<li><a href="http://d.hatena.ne.jp/kws162/20130127/1359296567">my bright tomorrow：Xperia ZとXperia Tablet Zをしこたま触ってきました。</a></li>
+<li><a href="http://usklog.net/archives/2187">カギログ：[カギ] Xperia™ ワールド タッチ＆トライ ブロガーミーティングで触ったSRS-BTX300とLLS-201について</a></li>
+<li><a href="http://smasoku.mobi/2013/01/xperia-world-xperiaz-xperiatabletz/">すまふぉ速報：Xperiaのブロガーミーティングに行ってきました XperiaZ/TabletZレビュー</a></li>
+<li><a href="http://kage1208.seesaa.net/article/316441186.html">かげのぶろぐ：Xperia ワールド タッチ＆トライ ブロガーミーティング</a></li>
+<li><a href="http://myco801.jellybean.jp/?p=940">maichi&#8217;s precious treasure：Xperia(TM) ワールド タッチ＆トライ ブロガーミーティングに参加！</a></li>
+<li><a href="http://ameblo.jp/povtc/entry-11457299474.html">Blog of Mobile!!～最新ケータイ情報～ より：Sony Xperia Tablet Z SO-03E レビュー</a></li>
+<li><a href="http://ameblo.jp/povtc/entry-11457209465.html">Blog of Mobile!!～最新ケータイ情報～ より：Sony Xperia Z SO-02E レビュー</a></li>
+<li><a href="http://branson.blog.so-net.ne.jp/2013-01-22_xperia_z">★日常的出来事！：So-netブログ：2013 Xperiaワールド タッチ＆トライ ブロガーミーティングに参加</a></li>
+<li><a href="http://dadensi.blog.so-net.ne.jp/2013-01-25">堕電子ブログ：So-net blog：Xperia Z(SO-02E)ブロガーミーティングのお土産！ポータブル電源「CP-F1LSAVP」　</a></li>
+<li><a href="http://ameblo.jp/yukishi1694/entry-11456764716.html">秒速5センチメートル：Xperia(TM) ワールド　タッチ＆トライ　ブロガーミーティング</a></li>
+<li><a href="http://tunakko.net/?p=8782">ツブヤキ。 ：Xperia™ ワールド　タッチ＆トライ　ブロガーミーティングに参加してきた</a></li>
+<li><a href="http://tfstdio.blog85.fc2.com/blog-entry-185.html">We are creating it!：Xperiaのブロガーイベント参加してきました！</a></li>
+<li><a href="http://www.datacider.com/37131.php">ゼロから始めるスマートフォン：Xperiaブロガーミーティングに参加してXperia Zを見て来ました</a></li>
+<li><a href="http://www.relief.jp/itnote/archives/018269.php">インストラクターのネタ帳：AndroidタブレットPC・Xperia Tablet Zと、スマートフォンXperia Zを触ってみて</a></li>
+<li><a href="http://xpaaru5001.wordpress.com/2013/01/24/2013%E5%B9%B4%E5%BA%A6xperia%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%BF%E3%83%83%E3%83%81%EF%BC%86%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%AD%E3%82%AC%E3%83%BC%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3/">ASDArc：2013年度Xperiaワールドタッチ＆トライブロガーミーティングの報告</a></li>
+<li><a href="http://dadensi.blog.so-net.ne.jp/2013-01-24">堕電子ブログ：So-net blog：2013年ブロガーミーティングを終えて Xperia Z、Xperia Tablet Zの感想</a></li>
+<li><a href="http://saya.s145.xrea.com/archives/2013/01/xperia_z_tablet.html">Digital Life Innovator：Xperia ZとXperia Tablet Z やっぱりSONYは最高だZを目指すべき</a></li>
+<li><a href="http://jamming3x.blog135.fc2.com/blog-entry-77.html">JammingMixBlog(ジャムろぐ)：Xperia(TM)ワールド　タッチ＆トライ　 ブロガーミーティング</a></li>
+<li><a href="http://hemi-i11.blog.so-net.ne.jp/2013-01-24">とあるファンのブログ：So-netブログ：Xperia ブロガーミーティング　レポート２【Xperia Z編】</a></li>
+<li><a href="http://d.hatena.ne.jp/h-gocchi/20130124/p1">注）天然オイルは飲み物です：[android]SONY 【 Xperia Z（SO-02E） 】、【 Xperia Tablet Z（SO-03E）】タッチ＆トライ</a></li>
+<li><a href="http://graleful.blog89.fc2.com/blog-entry-69.html">Gadgetaria -ぷりんてんぷす銀座：ソニー「Xperia Tablet Z」レビュー</a></li>
+<li><a href="http://sakray06.blog.so-net.ne.jp/2013-01-23">ゲームと戯言記録簿：So-netブログ：Xperia のブロガーイベントに参加しました</a></li>
+<li><a href="http://blog.livedoor.jp/hinloli/archives/23121456.html">がじぇぶろ(仮)：SONYブロガーイベント参加リポート</a></li>
+<li><a href="http://blog.livedoor.jp/mensstudio/archives/54356605.html">め〜んずスタジオ：「Xperia Z SO-02E」の大きさ・厚さ・重さをiPhone5やGALAXY S3と比較！</a></li>
+<li><a href="http://www.dohzen.net/?page_id=12659">iPad、iPhone、パソコン、カメラ、地デジアンテナの評価とホームページの制作：Xperia Z SO-02E は気持ちが良いです</a></li>
+<li><a href="http://pocketgames.jp/blog/?p=36966">pocketgames PDA秘宝館：Xperia ワールド　タッチ＆トライ　ブロガーミーティングに参加してきました</a></li>
+<li><a href="http://kingyo-bachi.blogspot.jp/2013/01/xperia-zxperia-tablet-z.html">コチョナナバ：xperia Zとxperia tablet Zを触ってきたよ</a></li>
+<li><a href="http://d.hatena.ne.jp/itokoichi/20130123/p27">伊藤浩一のW-ZERO3応援団：[event]「Xperia(TM) ワールド　タッチ＆トライ　ブロガーミーティング」</a></li>
+<li><a href="http://d.hatena.ne.jp/sunoho/20130123/p1">まだへいき！：[ガジェット][イベント][Android]Xperia ZとXperia Tablet Zに触ってきたよ−フラッグシップ機として無難な作り</a></li>
+<li><a href="http://www.the-hikaku.com/mediatablet/sony/13xperia-tablet-z.html">コンピュータ周辺機器の比較：SONY XPERIA Tablet Zの展示機レビュー</a></li>
+<li><a href="http://www.youtube.com/watch?v=t5TYQsikggY">youtube動画：saya2926：XPERIA Z &#038; XPERIA Tablet Z</a></li>
+</ul>
+<p><iframe src="https://fansfans.jp/item/blogparts_new?type=iframe&#038;item_id=18079&#038;blogparts_type=normal&#038;blogparts_default_view=comment" scrolling="no" frameborder="0" style="border:none; width:300px; height:620px;"></iframe></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/1159/android-tablet-app-is-required-bigger-launcher-icon/" rel="bookmark" class="wherego_title">Androidタブレットアプリのホームアイコンは１段階大きなアイコンが必要</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1256/xperia-z-world-touch-and-try/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1256/xperia-z-world-touch-and-try/" />
+	</item>
+	</channel>
+</rss>

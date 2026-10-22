@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	>
+<channel>
+	<title>Androidタブレット向けアプリ開発方法 へのコメント</title>
+	<atom:link href="http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Tue, 11 Dec 2018 05:57:20 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>admin より</title>
+		<link>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/comment-page-1/#comment-26</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Thu, 07 Jul 2011 10:37:34 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=111#comment-26</guid>
+		<description>tomorrowkeyさん、コメントありがとうございます。
+こちらもいつもブログを参考にさせて頂いております。Google I/O 報告会も参加させて頂き、ありがとうございました。
+アカウントは別途ご連絡させて頂きました。</description>
+		<content:encoded><![CDATA[<p>tomorrowkeyさん、コメントありがとうございます。<br />
+こちらもいつもブログを参考にさせて頂いております。Google I/O 報告会も参加させて頂き、ありがとうございました。<br />
+アカウントは別途ご連絡させて頂きました。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>tomorrowkey より</title>
+		<link>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/comment-page-1/#comment-25</link>
+		<dc:creator>tomorrowkey</dc:creator>
+		<pubDate>Wed, 06 Jul 2011 06:42:25 +0000</pubDate>
+		<guid isPermaLink="false">http://andbrowser.com/?p=111#comment-25</guid>
+		<description>とてもよくADLの内容がまとまっていて、参考になりました。
+フィード登録させていただきました。
+よろしければ、twitterアカウントも教えていただけないでしょうか。</description>
+		<content:encoded><![CDATA[<p>とてもよくADLの内容がまとまっていて、参考になりました。<br />
+フィード登録させていただきました。<br />
+よろしければ、twitterアカウントも教えていただけないでしょうか。</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

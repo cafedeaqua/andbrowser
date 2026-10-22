@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; sdk tools</title>
+	<atom:link href="http://andbrowser.com/tag/sdk-tools/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/sdk-tools/feed/" />
+		<item>
+		<title>ADT 22.6.3 and SDK Tools 22.6.3 更新情報</title>
+		<link>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/</link>
+		<comments>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/#comments</comments>
+		<pubDate>Thu, 01 May 2014 08:16:59 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2332</guid>
+		<description><![CDATA[ADT 22.6.3 (2014年4月)
+SDK Tools, Revision 22.6.3 (2014年4月)
+
+
+依存関係
+
+
+Java 1.6 かそれ以降が必要
+Eclipse Indigo (Version 3 [...]]]></description>
+			<content:encoded><![CDATA[<h4>ADT 22.6.3</a> <em>(2014年4月)</em></h4>
+<h4>SDK Tools, Revision 22.6.3</a> <em>(2014年4月)</em></h4>
+<p><span id="more-2332"></span></p>
+<dl>
+<dt>依存関係</dt>
+<dd>
+<ul>
+<li>Java 1.6 かそれ以降が必要</li>
+<li>Eclipse Indigo (Version 3.7.2) かそれ以降が必要</li>
+<li>SDK Tools r22.6.3向けのため、あらかじめAndroid SDK Managerを利用してインストールしてください。</li>
+<li><a href="http://ant.apache.org/">Apache Ant 1.8</a>かそれ以降が必要
+    </ul>
+</dd>
+<dt>一般連絡</dt>
+<dd>
+<ul>
+<li>APIレベルが19以降のAndroid Wear の Virtual Device 作成時のAVD Managerの問題を修正
+<li>SDK ManagerのAndroid Wear システムイメージに説明文を修正
+    </ul>
+</dd>
+<dt>既知の情報</dt>
+<dd>
+<p>AVD ManagerでAndroid WearのVirtual Deviceを作ったときに、Target API Levelが19よりも低いものが設定されている場合があります。その場合、手動で19に変更してください。</p>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/2339/andrpid-app-use-crashlytics/" rel="bookmark" class="wherego_title">CrashlyticsでAndroidアプリの品質向上を実現</a></li><li><a href="http://andbrowser.com/mac/2913/mac-book-pro-13-retina-first-install-recommend-app/" rel="bookmark" class="wherego_title">Mac Book Pro 13 retinaにインストールする必須アプリ</a></li><li><a href="http://andbrowser.com/development/2459/sdk-tools-22-6-3-archieve-is-not-yet/" rel="bookmark" class="wherego_title">SDK Tools 22.6.3 archieve is not yet</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/2332/android-development-tools-adt-22-6-3/" />
+	</item>
+		<item>
+		<title>SDK Tools, Revision 22.6.2 更新情報</title>
+		<link>http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/</link>
+		<comments>http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/#comments</comments>
+		<pubDate>Thu, 27 Mar 2014 07:36:48 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2299</guid>
+		<description><![CDATA[ADT 22.6.2 (2014年3月)
+
+
+
+依存関係:
+
+
+Android SDK Platform-tools revision 18 かそれ以降が必要
+Java 1.6 かそれ以降が必要
+EclipseとADTを [...]]]></description>
+			<content:encoded><![CDATA[<h4>ADT 22.6.2</a> <em>(2014年3月)</em></h4>
+<p><span id="more-2299"></span></p>
+<div class="toggle-content-toggleme">
+<dl>
+<dt>依存関係:</dt>
+<dd>
+<ul>
+<li>Android SDK Platform-tools revision 18 かそれ以降が必要</li>
+<li>Java 1.6 かそれ以降が必要</li>
+<li>EclipseとADTを利用している場合は、ADT 22.6.0 かそれ以降をご利用ください。
+<li><a href="http://ant.apache.org/">Apache Ant 1.8</a>かそれ以降が必要
+      </ul>
+</dd>
+<dt>一般連絡</dt>
+<dd>
+<ul>
+<li>Android Wear のシステムイメージから作成した virtual device を削除したあとに、NullPointerExceptionが SDK Manager にスローされる問題を修正
+<li>Nexus 5の virtual device をコマンドラインからSDカードファイルを read only で作成した場合に発生する問題を修正
+      </ul>
+</dd>
+<h4>参考情報</h4>
+<p>JenkinsやTravis CIなどのツールからコマンドラインでダウンロードしたい場合は以下のURLが便利です。
+<ul>
+<li><a href="http://andbrowser.com/development/918/old-adt-download-url/">CUI環境からのADT, SDK toolsダウンロードURL一覧(ver 22.6.2情報追加）</a>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2306/april-2014-android-platform-versions/" rel="bookmark" class="wherego_title">KKが5%超。2014年4月1日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/android-sdk/2733/what-key-point-of-eclipse-export-to-android-stdio-build/" rel="bookmark" class="wherego_title">eclipseの既存アプリをAndroid Stdio形式に変更する場合のポイント</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/2299/android-development-toolsadt-22-6-2/" />
+	</item>
+		<item>
+		<title>古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧</title>
+		<link>http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/</link>
+		<comments>http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/#comments</comments>
+		<pubDate>Thu, 15 Aug 2013 00:49:25 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2031</guid>
+		<description><![CDATA[古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧]]></description>
+			<content:encoded><![CDATA[<p>Androidアプリ開発で開発環境を古いものに戻したい場合や、コマンドラインから取得したい場合のために、各種ツールのダウンロードURLを整理しました。<a href="http://andbrowser.com/development/918/old-adt-download-url/">Android SDKの古いADTのダウンロードURLの一覧を記載</a>にADTは記載済みでしたが、それ以外にものを掲載します。</p>
+<h4>Platform Tools</h4>
+<p><span id="more-2031"></span></p>
+<ul>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r18.0.1-windows.zip">http://dl.google.com/android/repository/platform-tools_r18.0.1-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r18.0.1-linux.zip">http://dl.google.com/android/repository/platform-tools_r18.0.1-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r18.0.1-macosx.zip">http://dl.google.com/android/repository/platform-tools_r18.0.1-macosx.zip</a>
+</ul>
+<ul>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r16.0.1-windows.zip">http://dl.google.com/android/repository/platform-tools_r16.0.1-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r16.0.1-linux.zip">http://dl.google.com/android/repository/platform-tools_r16.0.1-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/platform-tools_r16.0.1-macosx.zip">http://dl.google.com/android/repository/platform-tools_r16.0.1-macosx.zip</a>
+</ul>
+<h4>Build Tools</h4>
+<ul>
+<li><a href="http://dl.google.com/android/repository/build-tools_r17-windows.zip">http://dl.google.com/android/repository/build-tools_r17-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/build-tools_r17-linux.zip">http://dl.google.com/android/repository/build-tools_r17-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/build-tools_r17-macosx.zip">http://dl.google.com/android/repository/build-tools_r17-macosx.zip</a>
+</ul>
+<ul>
+<li><a href="http://dl.google.com/android/repository/build-tools_r18.0.1-windows.zip">http://dl.google.com/android/repository/build-tools_r18.0.1-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/build-tools_r18.0.1-linux.zip">http://dl.google.com/android/repository/build-tools_r18.0.1-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/build-tools_r18.0.1-macosx.zip">http://dl.google.com/android/repository/build-tools_r18.0.1-macosx.zip</a>
+</ul>
+<h4>Tools</h4>
+<ul>
+<li><a href="http://dl.google.com/android/repository/tools_r22.0.5-windows.zip">http://dl.google.com/android/repository/tools_r22.0.5-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/tools_r22.0.5-linux.zip">http://dl.google.com/android/repository/tools_r22.0.5-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/tools_r22.0.5-macosx.zip">http://dl.google.com/android/repository/tools_r22.0.5-macosx.zip</a>
+</ul>
+<h4>Android SDK Platform</h4>
+<h5>4.3(JB MR2)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-18_r01.zip">http://dl.google.com/android/repository/android-18_r01.zip</a>
+</ul>
+<h5>4.2(JB MR1)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-17_r01.zip">http://dl.google.com/android/repository/android-17_r01.zip</a>
+</ul>
+<h5>Android SDK Platform 4.1.2(JB)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-16_r04.zip">http://dl.google.com/android/repository/android-16_r04.zip</a>
+</ul>
+<h5>Android SDK Platform 4.0.3(ICS)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-15_r03.zip">http://dl.google.com/android/repository/android-15_r03.zip</a>
+</ul>
+<h5>4.0(ICS)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-14_r03.zip">http://dl.google.com/android/repository/android-14_r03.zip</a>
+</ul>
+<h5>3.2, revision 1</a>(Honeycomb)(July 15, 2011)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.2_r01-linux.zip">http://dl.google.com/android/repository/android-3.2_r01-linux.zip</a>
+</ul>
+<h5>Android SDK Platform 3.1, revision 3</a>(Honeycomb)(May 10, 2011)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.1_r03-linux.zip">http://dl.google.com/android/repository/android-3.1_r03-linux.zip</a>
+</ul>
+<h5>Android SDK Platform 3.0, revision 2</a>(Honeycomb)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-3.0_r02-linux.zip">http://dl.google.com/android/repository/android-3.0_r02-linux.zip</a>
+</ul>
+<h5>2.3.3._r2</a>(Gingerbread)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.3.3_r02-linux.zip">http://dl.google.com/android/repository/android-2.3.3_r02-linux.zip</a>
+</ul>
+<h5>2.2_r3</a>(Froyo)(May 20, 2010)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.2_r03-linux.zip">http://dl.google.com/android/repository/android-2.2_r03-linux.zip</a>
+</ul>
+<h5>2.3.1_r2</a>(Gingerbread)(December 6, 2010)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.3.1_r02-linux.zip">http://dl.google.com/android/repository/android-2.3.1_r02-linux.zip</a>
+</ul>
+<h5>2.1_r3</a>(Eclair)(July, 2011)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.1_r03-linux.zip">http://dl.google.com/android/repository/android-2.1_r03-linux.zip</a>
+</ul>
+<h5>Android SDK Platform 2.0, revision 1</a>(Eclair)(October 26, 2009)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-linux.zip">http://dl.google.com/android/repository/android-2.0_r01-linux.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-macosx.zip">http://dl.google.com/android/repository/android-2.0_r01-macosx.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-2.0_r01-windows.zip">http://dl.google.com/android/repository/android-2.0_r01-windows.zip</a>
+</ul>
+<h5>1.6_r2</a>(Donut)(September 15, 2009)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-windows.zip">http://dl.google.com/android/repository/android-1.6_r03-windows.zip</a>
+<ul>
+<li><a href="http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-windows.zip">http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-windows.zip</a>
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-macosx.zip">http://dl.google.com/android/repository/android-1.6_r03-macosx.zip</a>
+<ul>
+<li><a href="http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-linux.zip">http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-linux.zip</a>
+	</ul>
+<li><a href="http://dl.google.com/android/repository/android-1.6_r03-linux.zip">http://dl.google.com/android/repository/android-1.6_r03-linux.zip</a>
+<ul>
+<li><a href="http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-macosx.zip">http://dl-ssl.google.com/android/repository/platform-tools_r16.0.2-macosx.zip</a>
+	</ul>
+</ul>
+<h5>1.5_r3</a>(Cupcake)(April 30, 2009)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-windows.zip">http://dl.google.com/android/repository/android-1.5_r04-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-macosx.zip">http://dl.google.com/android/repository/android-1.5_r04-macosx.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-1.5_r04-linux.zip">http://dl.google.com/android/repository/android-1.5_r04-linux.zip</a>
+</ul>
+<h5>1.1_r1</a>(B?????：コードネーム未公開)(Feb 9, 2009)</h5>
+<ul>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-windows.zip">http://dl.google.com/android/repository/android-1.1_r1-windows.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-macosx.zip">http://dl.google.com/android/repository/android-1.1_r1-macosx.zip</a>
+<li><a href="http://dl.google.com/android/repository/android-1.1_r1-linux.zip">http://dl.google.com/android/repository/android-1.1_r1-linux.zip</a>
+</ul>
+<p><a href="http://neta-abc.blogspot.jp/2013/08/android.html">ネタ帳 A.B.C: Android開発環境ダウングレードメモ</a>でも同様のことが紹介されていました。参考になります。ありがとうございました。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/" rel="bookmark" class="wherego_title">support-annotaion and espresso library differentation</a></li><li><a href="http://andbrowser.com/development/3513/spoon-android-maven-library-url/" rel="bookmark" class="wherego_title">spoon android maven library URL(as of 20150904)</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/" />
+	</item>
+		<item>
+		<title>ADT 22 ,Tools 22 リリース情報</title>
+		<link>http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/</link>
+		<comments>http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/#comments</comments>
+		<pubDate>Sat, 25 May 2013 02:25:38 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1772</guid>
+		<description><![CDATA[Google I/O の開催中に新しいバージョンの ADT 22 と Tools 22 をリリース]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/05/20130525_adt22-300x284.png" alt="" title="ADT 22 and Tools 22 Released" width="300" height="284" class="alignleft size-medium wp-image-1773" /><br />
+<br clear="all"><br />
+<span id="more-1772"></span></p>
+<h4>ADT 22 と Tools 22</h4>
+<p>
+Google I/O の開催中に新しいバージョンの ADT 22 と Tools 22 をリリースしました。
+</p>
+<h5>リリースノート</h5>
+<p>以下のサイトに掲載されています。<br />
+<a href="http://developer.android.com/tools/sdk/eclipse-adt.html">http://developer.android.com/tools/sdk/eclipse-adt.html</a></p>
+<h5>更新情報</h5>
+<ul>
+<li><span style="line-height:1.6;font-size:10pt">SDKの構造を変更。 platform-sools ディレクトリの存在をベースにした SDK 構成を追加。<br />
+IDE バージョンと build tools のバージョンの独立性を維持し、IDE update 無しにtools を更新することができるようになります。</span></li>
+<li><span style="line-height:1.6;font-size:10pt">同じパッケージ名のアプリケーションを共有するためのライブラリを利用できるようにtoolsを更新。</span></li>
+<li><span style="line-height:1.6;font-size:10pt">draw9patch ツールのマーカー変更をより簡単にできるように更新。</span></li>
+<li><span style="line-height:1.6;font-size:10pt">新しい　lint check を追加。レイアウトの一貫性チェック、RelativeLayout の親子関係、Percel creater, JavaScript interfaces, Service casting, Quantity string(単数、複数などの書き方？）, manifest typos, layoutのorientation tags, 9-patchsのoverlapping names, class存在チェックなどです。</span></li>
+<li><span style="line-height:1.6;font-size:10pt">Sun JVM specific APIs上に関わらず、 BouncyCastle libraryを利用して、アプリケーションの署名を行えるようにした。</span></li>
+<li><span style="line-height:1.6;font-size:10pt"> 3rd patry 製のツール開発者のために Maven Central からいくつかのandroid tools をリリース。具体的には、manifest-merger, common/sdk_common, ddmlib, dvlib, layoutlib_api,sdklib, and lint など。</span></li>
+<li><span style="line-height:1.6;font-size:10pt">Android Stdio 環境に移行できるように、Gradle build への書き出しをサポート。 Gradle のコマンドラインビルドをセットアップするための環境もサポート。</span></li>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/2031/old-sdk-tools-and-sdk-platforms-tools-download-url/" rel="bookmark" class="wherego_title">古いSDK Tools, SDK Platform-tools, Build Toolsのダウンロードリンク一覧</a></li><li><a href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2 更新情報</a></li><li><a href="http://andbrowser.com/development/1869/android-development-tools-adt-22-0-4/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.0.4 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/" />
+	</item>
+		<item>
+		<title>Android Development Tools(ADT) 21 preview 2の更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/</link>
+		<comments>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/#comments</comments>
+		<pubDate>Mon, 27 Aug 2012 11:42:31 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1025</guid>
+		<description><![CDATA[Android Development Tools(ADT) 21 preview 2の更新情報を掲載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/08/adt21preview21.png" alt="Android Development Tools(ADT) 21 preview2" title="Android Development Tools(ADT) 21 preview2" width="609" height="342" class="aligncenter size-full wp-image-1034" /></p>
+<h4>ADT 21 Preview</h4>
+<p>2012年8月22日：ADT 21 と SDK Tools, r21 の preview2 向けビルドを更新のうえ、リリースしました。インストール方法は後述しています。</p>
+<h5>ADT 21 Preview 2 の新しいポイント</h5>
+<p>
+preview1のように preview2は不具合修正版リリースです。ADT20から様々な領域においてのたくさんの不具合修正を含んでいます。例えば、新しいテンプレートインフラストラクチャのように。<br />
+20.0.1や20.0.2や来たるべき20.0.3に含まれている少ないがクリティカルな不具合修正が含まれている一方、ADT21は非常にたくさんの不具合修正やインフラストラクチャの改良が含まれています。</p>
+<h5>新機能について</h5>
+<div>
+<ul>
+<li>
+JUnit test runner が接続されているすべてのデバイスに同時にテストを実行可能<br />
+<span id="more-1025"></span><br />
+<img border="0" src="http://tools.android.com/_/rsrc/1344561932557/download/adt-21-preview/fullscreen.png" style="display:inline;float:right;margin:5px 10px" /></li>
+<li>
+新しいテンプレートメカニズムの改良、既存のテンプレートや新しいテンプレートのクリーンナップ
+</li>
+<li>
+XMLコード補完がテーマ参照からすぐに実行可能。例えば、 <code>?android:attr/dividerHeight</code>のように。</p>
+<li>
+設定の選択がメニューや設定ダイアログなどからフルの言語やリージョン名(2文字コードでなく）をすぐに表示
+</li>
+<li>
+新しい lint チェック
+</li>
+<ul>
+<li>
+<code>WakeLock</code>の確かな種類を発見（不必要なバッテリー利用につなげるために）
+</li>
+<li>
+ソースフォルダの中のプライベートなキーファイルを発見（ .apk を分配するフォルダに対して）
+</li>
+<li>
+<code>SecureRandom</code>オブジェクトの間違った利用を発見（seedを初期化がなされているかどうか）
+</li>
+<li>
+無効な drawable selector ファイルを発見（あとの状態(state)が先の状態(state)を完全にカバーしている場合）(故にある状態に到達しない場合）
+</li>
+<li>
+フォントプロパティ<code>textSize</code>と一緒に<code>dp</code> ユニットの利用を発見（むしろ<code>sp</code>を利用すべき）
+</li>
+<li>
+stringリソースのtyposを発見。現在のチェックは、以下の言語に対応。英語、スペイン語、イタリア語、ドイツ語、ハンガリー語、ノルウェー語、ポルトガル語、トルコ語。我々は、他の言語のtypo辞書の構築の助けを必要としています。詳細は、<a href="https://plus.google.com/u/0/116539451797396019960/posts/MvxRsR75uNv">こちら</a>をみてください。
+</li>
+<li>
+いくつかのlintチェックが広がりました。例えば、<code>px</code> checkerは、style 装飾もみます。the String.format checker は<code>getResources(R.string.foo, args)</code>などもみます。
+</li>
+</ul>
+<li>
+たくさんのlint インフラの改良と不具合修正（たとえば、ライブラリプロジェクトはプロジェクト側のチェックに含まれたり、クラスファイルのフローを解析したり、偽反応(false positives)の数を減らしたり、新しい&#8221;<code>lint</code>&#8220;ターゲットをantビルドに追加したり、新しい <code>--sources</code> や <code>--classpath</code>引数を異なるディレクトリ構造のソースコードにlintを適用したり、 <a href="https://wiki.jenkins-ci.org/display/JENKINS/Android+Lint+Plugin" rel="nofollow">Jenkins Lint plugin</a>をサポートするために XML エクスポートを改良。
+</li>
+<li>
+<img border="0" src="http://tools.android.com/_/rsrc/1344562192227/download/adt-21-preview/relative.png" style="display:inline;margin:5px 10px;float:right" /><br />
+レイアウトエディターの中のRelativeLayout を改良、そのためドラッグ中のウィジェットの周りと削除は、直感的な結果が得られる。特に削除中のウィジェットは削除されたウィジェットを通る制約をうける。そして、移動中のウィジェットの制約は、いつでも有効である。（たとえば、cycleを作成していなくても）
+</li>
+<li>
+<b>Preview 2</b>は preview1に追加される機能はありません。不具合修正のみです。ADT21向けにはより機能追加が実施されますが、いくつかの重要な不具合修正は preview として素早く更新されます。
+</li>
+<li>
+<b>注意点:</b> &#8220;multiconfiguration editor&#8221;機能（詳細は<a href="https://plus.google.com/u/0/116539451797396019960/posts/2pjZ4udMZ2X">こちら</a>）は ADT21では提供されません。</li>
+</ul>
+<div>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/990/android-development-tools-adt-20-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.2 更新情報</a></li><li><a href="http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/" rel="bookmark" class="wherego_title">ADT 22 ,Tools 22 リリース情報</a></li><li><a href="http://andbrowser.com/android-sdk/1738/branch_for_adt_r22/" rel="bookmark" class="wherego_title">ADT r22まもなく？</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/1025/android-development-tools-adt-21-preview2/" />
+	</item>
+		<item>
+		<title>SDK Tools Revision 19更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/883/sdk-tools-r19/</link>
+		<comments>http://andbrowser.com/development/knowhow/883/sdk-tools-r19/#comments</comments>
+		<pubDate>Thu, 03 May 2012 03:07:56 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=883</guid>
+		<description><![CDATA[Android SDK Tools Revision 19 の更新情報をわかりやすく記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/05/android-sdk-tools-r19.png" alt="Android SDK Tools Revision 19" title="Android SDK Tools Revision 19" width="640" height="480" class="aligncenter size-full wp-image-884" /></p>
+<p><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 19</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 19<em>(2012年4月)</em></a> </h4>
+<p class="caution"><strong>重要なお知らせ：</strong> Android SDK Manager から新しいAndroid 4.0 のシステムコンポーネントをダウンロードするために、SDK Tools をバージョン14かそれ以上に更新して、Android SDK Manager を再起動すべきです。もしAndroid 4.0 システムコンポーネントをダウンロードしなければ、必要ありません。</p>
+<dl>
+<h5>
+<dt>依存関係（利用上の前提条件）：</dt>
+</h5>
+<dd>
+<ul>
+<li>Android SDK Platform-tools がバージョン9かそれ以上</li>
+<li>もしEclipse(ADTを含めて）を利用する場合、注意点があります。SDK Tools r19は ADT 18やそれ以上を利用するように設計されています。ADTプラグインを<a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 18</a>に更新することを強くお薦めします。</li>
+<li>もしEclipse以外で開発する場合、 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 かそれ以上を利用すべきです。</li>
+</ul>
+</dd>
+<h5>
+<dt>不具合修正：</dt>
+</h5>
+<dd>
+<ul>
+<li>GPUアクセラレーション機能を利用したエミュレータをいくつかの開発者が利用できないイシューを修正
+  </ul>
+</dd>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/android-sdk/1468/june-1-2012-android-platform-versions/" rel="bookmark" class="wherego_title">GB最強の65%。2012年6月1日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/883/sdk-tools-r19/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/883/sdk-tools-r19/" />
+	</item>
+		<item>
+		<title>SDK Tools Revision 18更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/877/sdk-tools-r18/</link>
+		<comments>http://andbrowser.com/development/knowhow/877/sdk-tools-r18/#comments</comments>
+		<pubDate>Thu, 03 May 2012 02:59:54 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=877</guid>
+		<description><![CDATA[Android SDK Tools Revision 18 の更新情報をわかりやすく記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/05/android-sdk-tools-r18.png" alt="Android SDK Tools Revision 18" title="Android SDK Tools Revision 18" width="640" height="480" class="aligncenter size-full wp-image-878" /></p>
+<p><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 18</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 18<em>(2012年4月)</em></a> </h4>
+<p class="caution"><strong>重要なお知らせ：</strong> Android SDK Manager から新しいAndroid 4.0 のシステムコンポーネントをダウンロードするために、SDK Tools をバージョン14かそれ以上に更新して、Android SDK Manager を再起動すべきです。もしAndroid 4.0 システムコンポーネントをダウンロードしなければ、必要ありません。</p>
+<dl>
+<h5>
+<dt>依存関係（利用上の前提条件）：</dt>
+</h5>
+<dd>
+<ul>
+<li>Android SDK Platform-tools がバージョン9かそれ以上</li>
+<li>もしEclipse(ADTを含めて）を利用する場合、注意点があります。SDK Tools r18は ADT 18やそれ以上を利用するように設計されています。ADTプラグインを<a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 18</a>に更新することを強くお薦めします。</li>
+<li>もしEclipse以外で開発する場合、 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 かそれ以上を利用すべきです。</li>
+</ul>
+</dd>
+<h5>
+<dt>概要：</dt>
+</h5>
+<p><span id="more-877"></span></p>
+<dd>
+<ul>
+<li>センサーとマルチタッチエミュレーション機能の両方を含めるために、SdkController アプリを更新</li>
+</ul>
+</dd>
+<p><!--more--></p>
+<h5>
+<dt>不具合修正：</dt>
+</h5>
+<dd>
+<ul>
+<li>いくつかのケースで libs/ フォルダ内のいくつかの jar ライブラリが含まれないAntに関するイシューを修正
+  </ul>
+</dd>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/990/android-development-tools-adt-20-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.2 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/697/adt-r16-0-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) r16.0.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/877/sdk-tools-r18/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/877/sdk-tools-r18/" />
+	</item>
+		<item>
+		<title>SDK Tools Revision 17更新情報</title>
+		<link>http://andbrowser.com/development/knowhow/869/sdk-tools-r17/</link>
+		<comments>http://andbrowser.com/development/knowhow/869/sdk-tools-r17/#comments</comments>
+		<pubDate>Thu, 03 May 2012 02:44:00 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=869</guid>
+		<description><![CDATA[Android SDK Tools Revision 17 の更新情報をわかりやすく記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2012/05/android-sdk-tools-r17.png" alt="" title="SDK tools revision 17" width="640" height="480" class="size-full wp-image-870" /><br />
+<a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 17</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 17<em>(2012年3月)</em></a> </h4>
+<p class="caution"><strong>重要なお知らせ：</strong> Android SDK Manager から新しいAndroid 4.0 のシステムコンポーネントをダウンロードするために、SDK Tools をバージョン14かそれ以上に更新して、Android SDK Manager を再起動すべきです。もしAndroid 4.0 システムコンポーネントをダウンロードしなければ、必要ありません。</p>
+<dl>
+<h5>
+<dt>依存関係（利用上の前提条件）：</dt>
+</h5>
+<dd>
+<ul>
+<li>Android SDK Platform-tools がバージョン9かそれ以上</li>
+<li>もしEclipse(ADTを含めて）を利用する場合、注意点があります。SDK Tools r16は ADT 16やそれ以上を利用するように設計されています。ADTプラグインを<a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16</a>に更新することを強くお薦めします。</li>
+<li>もしEclipse以外で開発する場合、 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 かそれ以上を利用すべきです。</li>
+</ul>
+</dd>
+<h5>
+<dt>更新情報：</dt>
+</h5>
+<dd>
+<ul>
+<li>エミュレータ
+<ul>
+<li>ハードウェアアクセラレートされるグラフィックレンダリングのサポートを追加。この機能を利用するためには、APIレベル15 リビジョン3かそれ以降のシステムイメージが必要です。(<a href="http://andbrowser.com/guide/developing/devices/emulator.html#accel-graphics">詳細情報はこちら（英語）</a>)
+            </li>
+<p><span id="more-869"></span></p>
+<li>WindowsとMac OS X 上の virtualization mode で x86システムイメージの動作をサポート(<a href="http://andbrowser.com/guide/developing/devices/emulator.html#accel-vm">詳細情報はこちら（英語）</a>)
+<p class="note"><strong>注意点：</strong> x86システムイメージをインストールするための Android SDK Manager の利用方法。Android x86 システムイメージは、すべてのAPIレベルで準備されておりません。</p>
+</li>
+<li>USB接続された物理Androidデバイスからの入力を受け取るために有効化したエミュレータにおいて、マルチタッチ入力のための実験的なサポートを追加。(<a href="http://tools.android.com/tips/hardware-emulation">詳細情報はこちら（英語）</a>)</li>
+</ul>
+</li>
+<li>DDMS上にアプリのリアルタイムな詳細なネットワーク利用情報の表示機能を追加(<a href="http://tools.android.com/recent/detailednetworkusageinddms">詳細情報はこちら（英語）</a>)</li>
+<li>ProGuard
+<ul>
+<li>バンドルされた ProGuard ツールを Version 4.7 に更新。多数の新機能が追加され、この追加でいつくかのユーザが経験していた「<code>Conversion to Dalvik format failed with error 1</code>」エラーが修正</li>
+<li>デフォルトの <code>proguard.cfg</code> ファイルにAndroid向けによりよい設定を標準で追加。</li>
+<li>ProGuard設定ファイルを分割。プロジェクト内のプロジェクト固有設定とツールから提供されたAndroid一般設定の２つに分割。</li>
+</ul>
+</li>
+<li>ビルド
+<ul>
+<li>デバッグモードで実行時のみコードが実行される機能を追加。ビルド向けに新しく作成された<code>BuildConfig</code>クラスに含まれている<code>DEBUG</code>定数を追加。これはビルド時のタイプ（リリースビルド、デバッグビルド）によって自動的に設定されます。<code>BuildConfig.DEBUG</code>定数は、デバッグモード時のみ有効化されます。</li>
+<li>プロジェクトとライブラリのライブラリフォルダのいくつかの jar ファイルに関するイシューを修正(<a href="http://tools.android.com/recent/dealingwithdependenciesinandroidprojects">詳細情報はこちら（英語）</a></li>
+<li>ライブラリ内にカスタム属性を保持しているカスタムビューのサポートを追加。カスタム属性を利用しているレイアウトは、アプリのパッケージ名に含まれているURIの代わりに必ずネームスペースURI（<code>http://schemas.android.com/apk/res-auto</code>）を利用すべきです。このURIはビルド時にアプリ固有なものに置き換えられます。</li>
+</ul>
+</li>
+<li>Lint
+<ul>
+<li>Androidアプリのソースコードへの Lint チェックを更新。以前のアプリケーションコードの中から検索をベース（未使用リソースのチェックのような）にした Lint ルールは、木構造をパースしたJavaスタイルをより正確に利用するために上書きされました。</li>
+<li>ライブラリプロジェクトをチェックする機能を追加。この変更は、ライブラリプロジェクトと参照されている下位のプロジェクトの中で宣言されているリソースの未使用リソースのようなルールを意味しています。</li>
+<li>JavaコードとXMLファイルの中で Lint 警告を抑制する機能として、<code>@SuppressLint</code> アノテーションを追加。例えば、ネームスペースと無視する属性に関して。(<a href="http://tools.android.com/recent/ignoringlintwarnings">詳細情報はこちら（英語）</a>)</li>
+<li>新しい Lint チェック：
+<ul>
+<li>サポート中の最小のAndroid Versionより高いAndroidバージョンを必要としているAndroid API コール向けのチェックを追加。システムバージョン状態をラップしたコードがある場合、警告を抑制するために新しい <code>@TargetApi</code> アノテーションが利用できます。(<a href="http://tools.android.com/recent/lintapicheck">詳細情報はこちら（英語）</a>)</li>
+<li><a href="http://tools.android.com/recent/lintperformancechecks">パフォーマンス</a>やXMLレイアウトやマニフェストやファイルハンドリングに関するチェックを含めた 20 を超える新しい Lint ルールを追加。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/development/knowhow/963/android-adt20/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.0 更新情報</a></li><li><a href="http://andbrowser.com/development/680/sdk-tools-r16/" rel="bookmark" class="wherego_title">SDK Tools r16 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/869/sdk-tools-r17/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/869/sdk-tools-r17/" />
+	</item>
+		<item>
+		<title>SDK Tools r16 更新情報</title>
+		<link>http://andbrowser.com/development/680/sdk-tools-r16/</link>
+		<comments>http://andbrowser.com/development/680/sdk-tools-r16/#comments</comments>
+		<pubDate>Thu, 15 Dec 2011 23:13:07 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[eclipse]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=680</guid>
+		<description><![CDATA[Android SDK Tools r16リリース時の更新情報を記載。
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 16</a>の意訳です。完璧な自信はありませんので原文も一緒にご参照ください。</p>
+<h4><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools, Revision 16</a> <em>(2011年12月)</em></h4>
+<p class="caution"><strong>重要なお知らせ：</strong> Android SDK Manager から新しいAndroid 4.0 のシステムコンポーネントをダウンロードするために、SDK Tools をバージョン14かそれ以上に更新して、Android SDK Manager を再起動すべきです。もしAndroid 4.0 システムコンポーネントをダウンロードしなければ、必要ありません。</p>
+<dl>
+<dt>依存関係（利用上の前提条件）：</dt>
+<dd>
+<ul>
+<li>Android SDK Platform-tools がバージョン9かそれ以上</li>
+<li>もしEclipse(ADTを含めて）を利用する場合、注意点があります。SDK Tools r16は ADT 16やそれ以上を利用するように設計されています。ADTプラグインを<a href="http://developer.android.com/sdk/eclipse-adt.html">ADT 16</a>に更新することを強くお薦めします。</li>
+<li>もしEclipse以外で開発する場合、 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 かそれ以上を利用すべきです。</li>
+</ul>
+</dd>
+<dt>概要：</dt>
+<dd>
+<ul>
+<li>Android プロジェクト (<a href="http://tools.android.com/recent/lint">詳細情報</a>)にエラーを発見するための Lint ツールが追加されます。（著者追加：<a href="http://ja.wikipedia.org/wiki/Lint">Lintについてはこちら</a>）</li>
+<p><span id="more-680"></span></p>
+<li>センサーエミュレーションサポートが追加。物理的Androidデバイスからセンサーデータを読むために（データを）エミュレータに付与します。
+<li>Mac OS X 上でカメラをエミュレートするためにウェブカメラを利用可能なサポートを追加</li>
+</ul>
+</dd>
+<dt>不具合修正：</dt>
+<dd>
+<ul>
+<li>Android 4.0 システムイメージのためのスナップショット機能を提供
+<li>ビルドファイルに案するいくつかの項目を修正<br />
+    (<a href="http://code.google.com/p/android/issues/detail?id=21023">Issue 21023</a>, <a href="http://code.google.com/p/android/issues/detail?id=21267">Issue 21267</a>,  <a href="http://code.google.com/p/android/issues/detail?id=21465">Issue 21465</a>,  <a href="http://code.google.com/p/android/issues/detail?id=21525">Issue 21525</a>).</li>
+</ul>
+</dd>
+</dl>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/693/android-adt-16/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 16 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/877/sdk-tools-r18/" rel="bookmark" class="wherego_title">SDK Tools Revision 18更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/883/sdk-tools-r19/" rel="bookmark" class="wherego_title">SDK Tools Revision 19更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/680/sdk-tools-r16/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/680/sdk-tools-r16/" />
+	</item>
+		<item>
+		<title>SDK Tools r15 の ant から proguard 利用方法</title>
+		<link>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/</link>
+		<comments>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/#comments</comments>
+		<pubDate>Thu, 10 Nov 2011 01:04:54 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adt]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=589</guid>
+		<description><![CDATA[androud 開発環境のSDK Tools r15 の ant から proguard を利用する方法を記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/20111108_android-sdk-tools-r15-ant-proguard-error.png" alt="Android SDK tools-r15 ant proguard error" title="Android SDK tools-r15 ant proguard error" width="640" height="480" class="aligncenter size-full wp-image-593" /></p>
+<p>android SDK Tools r15 での and build に興味がある方は、まず<a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/">android SDK Tools r15 での and build のエラー対処方法</a>を見てみてください。</p>
+<p>このエントリでは、その次のフェーズとして、proguard を利用したい場合の紹介をします。<br />
+<span id="more-589"></span></p>
+<p>既に ant build できる環境が構築できている場合は、以下のどちらかのコマンドを実行したと思います。</p>
+<blockquote><p>android update project</p></blockquote>
+<p>もしくは</p>
+<blockquote><p>android create project</p></blockquote>
+<p>これらのコマンドが成功していれば、例えば以下のように proguard.cfg というファイルが生成されているはずです。</p>
+<blockquote><p>
+# android.bat update project -p ./<br />
+Updated local.properties<br />
+Added file <repo_directory>\toGmail\proguard.cfg
+</p></blockquote>
+<p>このファイルは proguard を利用するうえで、大変重要なファイルです。中身は以下のような内容になっています。<br />
+中身の詳細説明は、<a href="http://d.hatena.ne.jp/hyoromo/20101120/1290216449">ProGuardを使っての難読化方法</a>に詳しい解説がありますのでこちらをご覧ください。</p>
+<blockquote><p>
+# cat proguard.cfg<br />
+-optimizationpasses 5<br />
+-dontusemixedcaseclassnames<br />
+-dontskipnonpubliclibraryclasses<br />
+-dontpreverify<br />
+-verbose<br />
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*</p>
+<p>-keep public class * extends android.app.Activity<br />
+-keep public class * extends android.app.Application<br />
+-keep public class * extends android.app.Service<br />
+-keep public class * extends android.content.BroadcastReceiver<br />
+-keep public class * extends android.content.ContentProvider<br />
+-keep public class * extends android.app.backup.BackupAgentHelper<br />
+-keep public class * extends android.preference.Preference<br />
+-keep public class com.android.vending.licensing.ILicensingService</p>
+<p>-keepclasseswithmembernames class * {<br />
+    native <methods>;<br />
+}</p>
+<p>-keepclasseswithmembers class * {<br />
+    public <init>(android.content.Context, android.util.AttributeSet);<br />
+}</p>
+<p>-keepclasseswithmembers class * {<br />
+    public <init>(android.content.Context, android.util.AttributeSet, int);<br />
+}</p>
+<p>-keepclassmembers class * extends android.app.Activity {<br />
+   public void *(android.view.View);<br />
+}</p>
+<p>-keepclassmembers enum * {<br />
+    public static **[] values();<br />
+    public static ** valueOf(java.lang.String);<br />
+}</p>
+<p>-keep class * implements android.os.Parcelable {<br />
+  public static final android.os.Parcelable$Creator *;<br />
+}
+</p></blockquote>
+<p>まずは特に proguard.cfg はいじらずに標準設定のままで利用するのがよいでしょう。利用方法は以下になります。<br />
+まず、ant.properties の中に以下の１行を追加します。これによって、ant release ビルドのときに proguard が有効になりビルドプロセスの中に組これます。</p>
+<blockquote><p>proguard.config=proguard.cfg</p></blockquote>
+<p>なんとこれだけです。SDK Tools r14 以前では、<a href="http://d.hatena.ne.jp/bs-android/20101129/1291008438">ここ</a>や<a href="http://android-developers.blogspot.com/2010/09/proguard-android-and-licensing-server.html">ここ</a>のように必要なxmlファイルをダウンロードしてきたり、build.xml に追記が必要だったりしましたが、r15（r14からの機能かもしれませんが）からは断然簡単になりました。</p>
+<p>標準状態で作成された ant の target では、releaseビルド時のみ proguard が有効になるため、出来上がった apk には適切な署名でサインしてからインストールしましょう。</p>
+<h4>結論</h4>
+<p>標準設定のままなら proguard を書けるのは大変簡単！ソフトウェア資産を守るだけでなく、バイナリサイズも小さくなるというユーザへのメリットもあるため（Android Market からのダウンロード時間の短縮や、データ通信料の削減（世の中の流れはデータ通信の定額化の廃止のため））是非活用していきましょう。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/" rel="bookmark" class="wherego_title">android SDK Tools r15 での and build のエラー対処方法</a></li><li><a href="http://andbrowser.com/development/2134/android-development-toolsadt-22-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2 更新情報</a></li><li><a href="http://andbrowser.com/development/2148/android-development-toolsadt-22-2-1/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 22.2.1 更新情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/589/android-sdk-tools-r15-ant-proguard/" />
+	</item>
+		<item>
+		<title>android SDK Tools r15 での and build のエラー対処方法</title>
+		<link>http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/</link>
+		<comments>http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/#comments</comments>
+		<pubDate>Tue, 08 Nov 2011 04:17:15 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sdk tools]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=559</guid>
+		<description><![CDATA[android SDK Tools r15 を導入したときに過去の SDK Tool で作成していたコンパイル環境の and build ではエラーが発生します。
+その対処方法を記載しています。
+]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/11/20111108_android_sdk_tools_r15.png" alt="Android SDK Tools r15" title="20111108_android_sdk_tools_r15" width="640" class="aligncenter size-medium wp-image-591" /></p>
+<p><a href="http://developer.android.com/sdk/tools-notes.html">SDK Tools r15</a> がリリースされましたが、r14以前の環境で構築したant build環境（build.xmlなど）において、以下のようにビルド時にエラーが発生して、うまくビルドできませんでした。</p>
+<p><script type="syntaxhighlighter" class="brush: shell;"  title="sdk tools r15 build error">
+# ant debug
+Buildfile: <repo_directory>\toGmail\build.xml
+　
+BUILD FAILED
+<repo_directory>\toGmail\build.xml:37: The following error occurred while executing this line:
+<sdk_directory>\tools\ant\pre_setup.xml:4: Your build.xml file is outdated. Delete it and regenerate it with 'android update project'
+　
+Total time: 12 seconds
+</script></p>
+<p>もしかすると本現象は、SDK Tools r14 からでも発生していたかもしれません。私は、r14のときは eclipse でビルドを行っていたため、ant build 環境の動作を試したのが今回の r15 からでした。</p>
+<p>このまま放置しておくと後々痛い目を見ることは明らかのため、修正することにしました。</p>
+<p>まずエラー内容に書かれているように</p>
+<blockquote><p>
+android update project
+</p></blockquote>
+<p>しなさいということなので、以下のコマンドを実施します。</p>
+<p>なお、私の環境は、Windows 7 上のcygwin or コマンドプロンプト上で実施しています。linux, MAC の方はそれぞれ読み替えてください。</p>
+<blockquote><p>
+android update project -p ./
+</p></blockquote>
+<p>上記コマンドをプロジェクトの build.xml のあるディレクトリ上で実行すると以下のような結果が出ます。</p>
+<p><script type="syntaxhighlighter" class="brush: shell;">
+<repo_directory>\toGmail>android update project -p ./
+Updated and renamed default.properties to project.properties
+Updated local.properties
+Renamed build.properties to ant.properties
+----------
+build.xml: Failed to find version-tag string. File must be updated.
+In order to not erase potential customizations, the file will not be automatical
+ly regenerated.
+If no changes have been made to the file, delete it manually and run the command
+ again.
+If you have made customizations to the build process, the file must be manually
+updated.
+It is recommended to:
+        * Copy current file to a safe location.
+        * Delete original file.
+        * Run command again to generate a new file.
+        * Port customizations to the new file, by looking at the new rules file
+          located at <SDK>/tools/ant/build.xml
+        * Update file to contain
+              version-tag: custom
+          to prevent file from being rewritten automatically by the SDK tools.
+----------
+Updated file <repo_directory>\toGmail\proguard.cfg
+</script></p>
+<p>実行結果から以下のようなことがわかります。</p>
+<ul>
+<li>default.propertics が更新され、さらに project.properties に名前変更← <strong>名前変更のみ。中身の変更なし</strong>
+<li>local.properties が更新 ← <strong>中身の変更なし</strong>
+<li>build.properties から ant.properties に名前変更 ← <strong>中身の変更なし</strong>
+<li>build.xml は様々なエラーによって<strong>更新できず</strong>
+<li>proguard.cfg が更新</li>
+</ul>
+<p>r14以前の環境で各種ファイルをカスタマイズしている人は、中身の更新があるのかもしれません。私の環境の場合は上記のような結果でした。</p>
+<p>私の環境の場合は、build.xml に特に手を入れていないため、新しく作成することにしました。一度、build.xml を削除して、再度 [android update project -p ./ ]コマンドを実行します。</p>
+<p><script type="syntaxhighlighter" class="brush: shell;">
+<repo_directory>\toGmail>android update project -p ./
+Updated local.properties
+No project name specified, using Activity name 'ToGmailPreferenceActivity'.
+If you wish to change it, edit the first line of build.xml.
+Added file <repo_directory>\toGmail\build.xml
+Updated file <repo_directory>\toGmail\proguard.cfg
+</script></p>
+<p> 5行目のとおり、build.xml が追加されました。</p>
+<p>3行目で表示されているメッセージは、android update project の引数にプロジェクト名（オプション：-n [Project name] or -name [Project name])を指定しなかったため、アプリケーションを起動したときに表示される Activity の名前を build.xml の中の name に使用したよ。気に入らないなら、build.xml の１行目を変更してね。というものです。</p>
+<p>これで、無事に ant debug が実行できました。</p>
+<p> この更新で ant の target（installd, installr, installi, installtなど) も以下のように増えたようで、antを利用した開発がより便利になりそうです。</p>
+<p><script type="syntaxhighlighter" class="brush: shell;">
+# ant
+help:
+     [echo] Android Ant Build. Available targets:
+     [echo]    help:      Displays this help.
+     [echo]    clean:     Removes output files created by other targets.
+     [echo]               The 'all' target can be used to clean dependencies
+     [echo]               (tested projects and libraries)at the same time
+     [echo]               using: 'ant all clean'
+     [echo]    debug:     Builds the application and signs it with a debug key.
+     [echo]    release:   Builds the application. The generated apk file must be
+     [echo]               signed before it is published.
+     [echo]    instrument:Builds an instrumented package and signs it with a
+     [echo]               debug key.
+     [echo]    test:      Runs the tests. Project must be a test project and
+     [echo]               must have been built. Typical usage would be:
+     [echo]                   ant [emma] debug installt test
+     [echo]    emma:      Transiently enables code coverage for subsequent
+     [echo]               targets.
+     [echo]    install:   Installs the newly build package. Must either be used
+     [echo]               in conjunction with a build target (debug/release/
+     [echo]               instrument) or with the proper suffix indicating
+     [echo]               which package to install (see below).
+     [echo]               If the application was previously installed, the
+     [echo]               application is reinstalled if the signature matches.
+     [echo]    installd:  Installs (only) the debug package.
+     [echo]    installr:  Installs (only) the release package.
+     [echo]    installi:  Installs (only) the instrumented package.
+     [echo]    installt:  Installs (only) the test and tested packages.
+     [echo]    uninstall: Uninstalls the application from a running emulator or
+     [echo]               device.
+</script></p>
+<h4>結論</h4>
+<ul>
+<li>build.xml は作りなしたほうが手間が少なそう</li>
+<li>default.properties と build.properties はそれぞれ project.properties と ant.properties に名前が変更になった</li>
+<li>これは個人的には大変便利だと思います。コマンドラインでの tab の補完が b の場合、build.xml と build.properties と２つがあり、煩わしかったのですが、これが解決されました。さらに、default.properties に関しては、何のデフォルト？といつもファイル名から意味が理解できませんでしたが、今回の変更でプロジェクトに関する定義ということが明確になり、直感的に理解しやすくなりました。</li>
+<li>ant の target が増えた！！</li>
+<li>eclipse がなくても、xemacs+ant のみで開発ができそうな予感（まだチャレンジしていませんが・・・）</li>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/" rel="bookmark" class="wherego_title">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*</a></li><li><a href="http://andbrowser.com/android-sdk/2727/android-stdio-usefulshotcut/" rel="bookmark" class="wherego_title">Android Stdio 便利ショートカット(emacs設定中）</a></li><li><a href="http://andbrowser.com/development/1246/how-to-remove-developer-options-for-android-4-2/" rel="bookmark" class="wherego_title">Android 4.2の「開発者向けオプション」を削除する方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/559/android-sdk-tools-r15-ant-build-error/" />
+	</item>
+	</channel>
+</rss>

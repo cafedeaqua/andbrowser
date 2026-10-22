@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; asm</title>
+	<atom:link href="http://andbrowser.com/tag/asm/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/asm/feed/" />
+		<item>
+		<title>ASM(AndroidScreenMonitor)をexe化する方法</title>
+		<link>http://andbrowser.com/development/1978/asm-jar-is-created-windows-exe-runtime/</link>
+		<comments>http://andbrowser.com/development/1978/asm-jar-is-created-windows-exe-runtime/#comments</comments>
+		<pubDate>Sun, 11 Aug 2013 05:37:25 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[Android SDK]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[asm]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=1978</guid>
+		<description><![CDATA[ASM(AndroidScreenMonitor)をexe化する方法]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2013/08/asm_eye-catch.png" alt="" title="Asm-android-screen-monitor" width="600"  class="aligncenter size-full wp-image-1979" /></p>
+<h4>ASM</h4>
+<p>Androidアプリ開発者なら一度は利用したことがある<a href="http://www.adakoda.com/adakoda/android/asm/">ASM(AndroidScreenMonitor)</a>は <a href="http://www.adakoda.com/adakoda/">adakoda </a>さんが開発されている大変便利なアプリです。まだ利用したことがない方は是非利用してみてください。</p>
+<h4>ASM利用デモ時の困ったこと</h4>
+<p><span id="more-1978"></span></p>
+<p>このアプリは Java Archive( .jar ) として提供されているので、自分の開発者PC以外で利用する場合に、JAVA runtime環境が準備されていなかったり、デモPCの準備担当者がそもそも .jar ファイルの知識がなく、widnows上でダブルクリックすると、開くアプリケーションは？とWindowsから聞かれてしまい戸惑って諦めてしまうということがありました。<br />
+この問題を以下の Launch4j で解決します。</p>
+<h4>Launch4j で exe化</h4>
+<p><a href="http://d.hatena.ne.jp/seraphy/20130810">JavaアプリをExe化するLaunch4jの使い方と仕組み</a>に詳細が記載されているので、そちらをご覧ください。<br />
+ポイントは以下になります。</p>
+<ul>
+<li>アプリケーションアイコンを設定可能</li>
+<li>スプラッシュ画像を追加可能</li>
+<li>但し、Exe化しても、JREのインストールは必要</li>
+<li>JREがインストールされていない場合は、スタブが起動して、JREインストールを促してくれる。</li>
+</ul>
+<h4>Launch4j の利用方法</h4>
+<p>以下のサイトからモジュールのダウンロードを行います。<a href="http://launch4j.sourceforge.net/">http://launch4j.sourceforge.net/</a>からたどれます。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j.png" alt="" title="launch4j" width="500" class="aligncenter size-full wp-image-1984" /></a></p>
+<p>今回は、<a href="http://sourceforge.net/projects/launch4j/files/launch4j-3/3.1.0-beta1/launch4j-3.1.0-beta1-win32.zip/download">launch4j-3.1.0-beta1-win32.zip</a> をダウンロードします。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-02.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-02.png" alt="" title="launch4j-02" width="500" class="aligncenter size-full wp-image-1985" /></a></p>
+<p>ダウンロードしたアーカイブを解凍して、launch4j.exe を実行します。(2)はlaunch4jのスプラッシュ画面です。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-10.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-10.png" alt="" title="launch4j-10" width="500" class="aligncenter size-full wp-image-1986" /></a></p>
+<p>[Basic]の設定の Jar: に asm.jar を選択し、Output file:に同じディレクトリに asm.exe を作るように入力します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-11.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-11.png" alt="" title="launch4j-11" width="500" class="aligncenter size-full wp-image-1987" /></a></p>
+<p>スプラッシュ画像を追加するために、[Splash]タブから Splash file: を入力します。今回はひとまず<a href="http://www.adakoda.com/adakoda/">adakoda</a>さんの<a href="http://www.adakoda.com/adakoda/android/asm/">ASM</a>サイトにのっている画像を勝手に拝借します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-12.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-12.png" alt="" title="launch4j-12" width="500" class="aligncenter size-full wp-image-1988" /></a></p>
+<p>何かアイコンをつけたかったので、以下のサイトからダウンロードしたものを１つ使わせて頂きます。<a href="http://www.smashingmagazine.com/2008/09/02/simplicio-a-free-icon-set/">http://www.smashingmagazine.com/2008/09/02/simplicio-a-free-icon-set/</a><br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-121.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-121.png" alt="" title="launch4j-121" width="500" class="aligncenter size-full wp-image-1996" /></a></p>
+<p>JREのバージョンの記載が必要なため、JREタブで「 1.5.0 」を入力<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-13.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-13.png" alt="" title="launch4j-13" width="500" class="aligncenter size-full wp-image-1989" /></a></p>
+<p> 以下の(1)の設定の保存を行い、(2)のexe化を実行をクリックすれば、asm.exe が完成します。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-14.png"><img src="http://andbrowser.com/wp-content/uploads/2013/08/launch4j-14.png" alt="" title="launch4j-14" width="500" class="aligncenter size-full wp-image-1990" /></a></p>
+<p>完成した asm.exe(exeのままではセキュリティ的にダウンロードできないかもしれないので、zip化してます）をアップしましたので興味がある方はダウンロードしてみてください。JREがない環境でのテストはしていないので、もし試された方はコメント頂けるとうれしいです。<br />
+ダウンロードファイルは、<a href='http://andbrowser.com/wp-content/uploads/2013/08/asm.zip'>asm.zip</a>です。</p>
+<p>adakodaさんのASMは本当に素晴らしいツールでいつも利用させて頂いております。ありがとうございます！！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/903/au-market-app-install/" rel="bookmark" class="wherego_title">auマーケットの簡単インストール方法</a></li><li><a href="http://andbrowser.com/?p=3003" rel="bookmark" class="wherego_title">Android Studio, Gradle Plugin, Gradleの互換性保持のための約束事</a></li><li><a href="http://andbrowser.com/development/2959/android-3rd-party-usb-vendor-id-list-do-not-edit/" rel="bookmark" class="wherego_title">ANDROID 3RD PARTY USB VENDOR ID LIST &#8212; DO NOT EDIT</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/1978/asm-jar-is-created-windows-exe-runtime/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/1978/asm-jar-is-created-windows-exe-runtime/" />
+	</item>
+	</channel>
+</rss>

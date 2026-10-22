@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- generator="WordPress/2.9.2" -->
+<rss version="0.92">
+<channel>
+	<title>Bescottee</title>
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<docs>http://backend.userland.com/rss092</docs>
+	<language>en</language>
+	
+	<item>
+		<title>家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</title>
+		<description><![CDATA[
+https://github.com/OmronSensingEggProject/HVC_C2W_SDK_Android
+で公開されている家族目線(HVC-C2W)SDKを試用してみました。
+見守りカメラセンサ「家族 [...]]]></description>
+		<link>http://andbrowser.com/development/3583/hvc-c2wsdk/</link>
+			</item>
+	<item>
+		<title>第23回potatotips参加報告</title>
+		<description><![CDATA[
+http://connpass.com/event/21750/
+第23回potatotips参加報告
+件名の通り参加してきたのでそのご報告になります。私がAndroidしかできないのと、Android Blog枠とい [...]]]></description>
+		<link>http://andbrowser.com/event/3567/potatotips-23/</link>
+			</item>
+	<item>
+		<title>2015/11/21時点の Intel Edison Firmware</title>
+		<description><![CDATA[Intel Edison のファームウェアが更新されたという情報を得たので、焼いてみました。
+Intel® Edison Board Software Downloadsから以下をダウンロードしました。
+
+PhoneFlashToolLite_5.3.2.0_mac64.pkg
+m_iot_dev_kit_2015.0.023.tar.gz
+edison-iotdk-image-280915.zip
+HoRNDIS-rel7.pkg
+
+
+MBP の左のUSBポートに電源向けUSB、右のポートにシリアルコンソール向けUSBを挿したら ./flashall.sh がうまく動きました。
+逆の場合は./flassall.sh が
+
+Did you plug and reboot your board?
+
+のまま進まない症状が出ました。
+備忘のため、コマンドとログをメモしておきます。
+
+$ ./flashall.sh
+Using U-Boot target: edison-blankcdc
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Timed out while waiting for dfu device 8087:0a99
+DEBUG: lsusb
+Bus 021 Device 001: ID 05ac:8406 Apple Inc. Internal Memory Card Reader  Serial: 000000000820
+Bus 020 Device  [...]]]></description>
+		<link>http://andbrowser.com/uncategorized/3556/20151121-intel-edison-firmware/</link>
+			</item>
+	<item>
+		<title>spoon android maven library URL(as of 20150904)</title>
+		<description><![CDATA[spoon android maven library URLです。
+https://jcenter.bintray.com/com/stanfy/spoon/spoon-gradle-plugin/
+
+0.10.0/
+ [...]]]></description>
+		<link>http://andbrowser.com/development/3513/spoon-android-maven-library-url/</link>
+			</item>
+	<item>
+		<title>git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*</title>
+		<description><![CDATA[
+git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*
+
+このページを見た人は、以下のページも見ています。au one Ma [...]]]></description>
+		<link>http://andbrowser.com/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/</link>
+			</item>
+	<item>
+		<title></title>
+		<description><![CDATA[
+export GOPATH=~/
+#export GOROOT=${GOPATH}
+function peco-src () {
+    local selected_dir=$(ghq list -p &#124; peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^[' peco-src
+
+ ]]></description>
+		<link>http://andbrowser.com/uncategorized/3520/3520/</link>
+			</item>
+	<item>
+		<title>support-annotaion and espresso library differentation</title>
+		<description><![CDATA[以下のようなエラーがでる場合があります。これは、espressoのライブラリが古いandroid support anotations library を指定しているためです。
+
+Warning:Conflict wit [...]]]></description>
+		<link>http://andbrowser.com/development/3516/support-annotaion-and-espresso-library-differentation/</link>
+			</item>
+	<item>
+		<title>twitter fabric maven library location</title>
+		<description><![CDATA[Crashliticsのライブラリをfabric に移行するために build.gradle の対応をしながら、 fabric の最新ライブラリのバージョンが知りたかったので、2015/08/13 時点のmaven repository を以下のように覗いてみました。
+https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/
+
+Index of public/io/fabric/tools/gradle
+Name                Last modified      Size
+../
+1.14.0/              16-Oct-2014 20:46    -
+1.14.1/    [...]]]></description>
+		<link>http://andbrowser.com/development/3509/twitter-fabric-maven-library-location/</link>
+			</item>
+	<item>
+		<title>Edison で利用できる加速度センサーADXL345</title>
+		<description><![CDATA[
+http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)
+お借りした3軸センサー
+http://akizukiden [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3500/accelerometer-adxl345-for-edison/</link>
+			</item>
+	<item>
+		<title>https://jcenter.bintray.com/com/android/tools/build/gradle/</title>
+		<description><![CDATA[https://jcenter.bintray.com/com/android/tools/build/gradle/
+
+このページを見た人は、以下のページも見ています。Edison で利用できる加速度センサーADXL3 [...]]]></description>
+		<link>http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/</link>
+			</item>
+	<item>
+		<title>edison image ww18-15</title>
+		<description><![CDATA[
+root@edison:~# cat /etc/version
+weekly-146
+root@edison:~# df
+Filesystem           1K-blocks      Used Availab [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3496/edison-image-ww18-15/</link>
+			</item>
+	<item>
+		<title>ARM-10の3Dデータ出力とIntel EdisonによるLED装飾とUSBカメラ配信</title>
+		<description><![CDATA[Roland社のARM-10をお借りする機会が頂けたので、ためしに公開されているjenkinsの3D データを出力してみた。他にもいくつか出力してみたいものがあるので、また利用させてもらいに行こうと考えています。
+さて、 [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3477/prototyping-for-edison/</link>
+			</item>
+	<item>
+		<title>Crashlytics ライブラリの Android Studio対応</title>
+		<description><![CDATA[CrashlyticsのAndroid向けライブラリのバージョンを以下から確認できます。
+as of 2015/04/25
+http://download.crashlytics.com/maven/com/crashlytics/tools/gradle/crashlytics-gradle/maven-metadata.xml
+
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+&#60;metadata&#62;
+&#60;groupId&#62;com.crashlytics.tools.gradle&#60;/groupId&#62;
+&#60;artifactId&#62;crashlytics-gradle&#60;/artifactId&#62;
+&#60;versioning&#62;
+&#60;release&#62;1.16.0&#60;/release&#62;
+&#60;versions&#62;
+&#60;version&#62;1.0.0&#60;/version&#62;
+&#60;version&#62;1.0.1&#60;/version&#62;
+&#60;version&#62;1.0.2&#60;/version&#62;
+&#60;version&#62;1.0.3&#60;/version&#62;
+&#60;version&#62;1.0.4&#60;/version&#62;
+&#60;version&#62;1.0.5&#60;/version&#62;
+&#60;version&#62;1.0.6&#60;/version&#62;
+&#60;version&#62;1.0.7&#60;/version&#62;
+&#60;version&#62;1.0.8&#60;/version&#62;
+&#60;version&#62;1.0.9&#60;/version&#62;
+&#60;version&#62;1.1.0&#60;/version&#62;
+&#60;version&#62;1.1.1&#60;/version&#62;
+&#60;version&#62;1.2.0&#60;/version&#62;
+&#60;version&#62;1.2.1&#60;/version&#62;
+&#60;version&#62;1.3.0&#60;/version&#62;
+&#60;version&#62;1.3.1&#60;/version&#62;
+&#60;version&#62;1.3.2&#60;/version&#62;
+&#60;version&#62;1.3.3&#60;/version&#62;
+&#60;version&#62;1.3.4&#60;/version&#62;
+&#60;version&#62;1.4.0&#60;/version&#62;
+&#60;version&#62;1.5.0&#60;/version&#62;
+&#60;version&#62;1.6.1&#60;/version&#62;
+&#60;version&#62;1.7.0&#60;/version&#62;
+&#60;version&#62;1.8.0&#60;/version&#62;
+&#60;version&#62;1.8.1&#60;/version&#62;
+&#60;version&#62;1.9.0&#60;/version&#62;
+&#60;version&#62;1.9.1&#60;/version&#62;
+&#60;version&#62;1.10.1&#60;/version&#62;
+&#60;version&#62;1.10.2&#60;/version&#62;
+&#60;version&#62;1.10.3&#60;/version&#62;
+&#60;version&#62;1.10.5&#60;/version&#62;
+&#60;version&#62;1.10.6&#60;/version&#62;
+&#60;version&#62;1.10.7&#60;/version&#62;
+&#60;version&#62;1.11.0&#60;/version&#62;
+&#60;version&#62;1.11.1&#60;/version&#62;
+&#60;version&#62;1.11.2&#60;/version&#62;
+&#60;version&#62;1.11.3&#60;/version&#62;
+&#60;version&#62;1.11.4&#60;/version&#62;
+&#60;version&#62;1.12.0&#60;/version&#62;
+&#60;version&#62;1.13.0&#60;/version&#62;
+&#60;version&#62;1.13.1&#60;/version&#62;
+&#60;version&#62;1.14.2&#60;/version&#62;
+&#60;version&#62;1.14.3&#60;/version&#62;
+&#60;version&#62;1.14.4&#60;/version&#62;
+&#60;version&#62;1.14.6&#60;/version&#62;
+&#60;version&#62;1.14.7&#60;/version&#62;
+&#60;version&#62;1.16.0&#60;/version&#62;
+&#60;/versions&#62;
+&#60;lastUpdated&#62;20150318172805&#60;/lastUpdated&#62;
+&#60;/versioning&#62;
+&#60;/metadata&#62;
+
+http://download.crashlytics.com/maven/com/crashlytics/android/crashlytics/maven-metadata.xml
+
+&#60;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&#62;
+&#60;metadata&#62;
+  &#60;groupId&#62;com.crashlytics.android&#60;/groupId&#62;
+  &#60;artifactId&#62;crashlytics&#60;/artifactId&#62;
+  &#60;versioning&#62;
+    &#60;release&#62;1.0.4&#60;/release&#62;
+    &#60;versions&#62;
+      &#60;version&#62;1.0.0&#60;/version&#62;
+      &#60;version&#62;1.0.1&#60;/version&#62;
+       [...]]]></description>
+		<link>http://andbrowser.com/development/3171/how-to-import-from-crashlytics-android-library-to-android-studio/</link>
+			</item>
+	<item>
+		<title>A node.js BLE (Bluetooth low energy) central module</title>
+		<description><![CDATA[A node.js BLE (Bluetooth low energy) central module
+https://github.com/sandeepmistry/noble
+このページを見た人は、以下のページも見 [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3432/a-node-js-ble-bluetooth-low-energy-central-module/</link>
+			</item>
+	<item>
+		<title>edison webcam利用方法</title>
+		<description><![CDATA[以下のサイトに簡単な説明があります。
+http://iot-jp.com/iotsummary/iottech/intel-edison/intel-edison%E3%82%92%E5%8B%95%E3%81%8B%E [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3428/edison-webcam-how-to-use/</link>
+			</item>
+	<item>
+		<title>windows flashall.bat execution log</title>
+		<description><![CDATA[flashall.bat の実行ログ
+
+\edison-image-ww05-15>flashall.bat
+Using U-boot target: edison-blankrndis
+Now waiting for dfu device 8087:0a99
+Please plug and reboot the board
+Dfu device found
+Flashing IFWI
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Download        [=========================] 100%      4194304 bytes
+Download done.
+Flashing U-Boot
+Download    [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3423/windows-flashall-bat-execution-log/</link>
+			</item>
+	<item>
+		<title>url for opkg</title>
+		<description><![CDATA[
+tee /etc/opkg/base-feeds.conf /dev/null
+src/gz all        http://repo.opkg.net/edison/repo/all
+src/gz core2-32   http://repo.opkg.net/edison/repo/core2-32
+_EOF_
+
+src/gz edison     http://repo.opkg.net/edison/repo/edison
+を削除。
+
+tee /etc/opkg/intel-iotdk.conf /dev/null
+src intel-all     http://iotdk.intel.com/repos/1.1/iotdk/all
+src intel-iotdk   http://iotdk.intel.com/repos/1.1/intelgalactic
+src intel-quark   http://iotdk.intel.com/repos/1.1/iotdk/quark
+src intel-i586    http://iotdk.intel.com/repos/1.1/iotdk/i586
+src intel-x86     http://iotdk.intel.com/repos/1.1/iotdk/x86
+_EOF_
+
+
+echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf
+opkg update
+opkg  [...]]]></description>
+		<link>http://andbrowser.com/uncategorized/3421/url-for-opkg/</link>
+			</item>
+	<item>
+		<title>edison /boot partition を増やす方法</title>
+		<description><![CDATA[実施前
+
+root@edison:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root               475080    335540    102844  77% /
+devtmpfs        [...]]]></description>
+		<link>http://andbrowser.com/device/3413/edison-root-partition-add/</link>
+			</item>
+	<item>
+		<title>http://iotdk.intel.com/sdk/upm-update/</title>
+		<description><![CDATA[http://iotdk.intel.com/sdk/mraa-update/
+http://iotdk.intel.com/sdk/upm-update/
+http://iotdk.intel.com/sdk/1.1/ [...]]]></description>
+		<link>http://andbrowser.com/uncategorized/3409/httpiotdk-intel-comsdkupm-update/</link>
+			</item>
+	<item>
+		<title>See &#8217;systemctl status systemd-modules-load.service&#8217; for details.の対処方法</title>
+		<description><![CDATA[http://matsup.blogspot.jp/2015/03/intel-edison-opkg-upgrade-windows-usb.html
+このページを見た人は、以下のページも見ています。Intel Edi [...]]]></description>
+		<link>http://andbrowser.com/intel-edison/3403/see-systemctl-status-systemd-modules-load-service-for-details/</link>
+			</item>
+</channel>
+</rss>

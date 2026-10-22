@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; git</title>
+	<atom:link href="http://andbrowser.com/tag/git/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/git/feed/" />
+		<item>
+		<title>gitのファイルトラッキングの制限</title>
+		<link>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/</link>
+		<comments>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/#comments</comments>
+		<pubDate>Sun, 29 Jun 2014 11:36:58 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2823</guid>
+		<description><![CDATA[一時ファイルやパスを除外されたファイルの一覧を取得
+
+
+git ls-files --other --ignored --exclude-standard
+
+
+このページを見た人は、以下のページも見ています。.gitco [...]]]></description>
+			<content:encoded><![CDATA[<p>一時ファイルやパスを除外されたファイルの一覧を取得</p>
+<pre>
+<code>
+git ls-files --other --ignored --exclude-standard
+</code>
+</pre>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/git/2730/gitconfig/" rel="bookmark" class="wherego_title">.gitconfig</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2823/git-exclude-tracking-file-list/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2823/git-exclude-tracking-file-list/" />
+	</item>
+		<item>
+		<title>github git workshop</title>
+		<link>http://andbrowser.com/git/2663/github-git-workshop/</link>
+		<comments>http://andbrowser.com/git/2663/github-git-workshop/#comments</comments>
+		<pubDate>Sat, 07 Jun 2014 01:29:38 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[git]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=2663</guid>
+		<description><![CDATA[http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html
+
+ ]]></description>
+			<content:encoded><![CDATA[<p><a href="http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html<br />
+">http://training.github.com/classnotes/2014-06-06-tokyo-workshop.html<br />
+</a></p>
+<div id="wherego_related"> </div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/git/2663/github-git-workshop/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/git/2663/github-git-workshop/" />
+	</item>
+	</channel>
+</rss>

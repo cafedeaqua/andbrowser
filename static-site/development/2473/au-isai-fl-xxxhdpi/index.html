@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>au isai FL は XXX High DPI 端末！4.4ソースコード調査 | Bescottee</title>
+<link href="/feed/index.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
+<link href="/feed/rss/index.xml" rel="alternate" title="RSS .92" type="text/xml"/>
+<link href="/feed/atom/index.xml" rel="alternate" title="Atom 1.0" type="application/atom+xml"/>
+<link href="/development/2473/au-isai-fl-xxxhdpi/feed/index.xml" rel="alternate" title="Bescottee » au isai FL は XXX High DPI 端末！4.4ソースコード調査 のコメントのフィード" type="application/rss+xml"/>
+<link href="/development/2473/au-isai-fl-xxxhdpi/index.html" media="handheld" rel="alternate" type="text/html"/>
+
+
+
+<link href="/index.html" rel="index" title="Bescottee"/>
+<link href="/development/ageruapp/3/release-ageruapp/index.html" rel="start" title="「あげる」アプリをリリース"/>
+<link href="/android-sdk/2327/android-xml-tools-attributes/index.html" rel="prev" title="Android XML Tools Attributes"/>
+<link href="/development/2502/google-play-services-4-4/index.html" rel="next" title="Google Play Services 4.4（邦訳）"/>
+<link href="/development/2473/au-isai-fl-xxxhdpi/index.html" rel="canonical"/>
+<link href="http://wp.me/p1H3Ev-DT" rel="shortlink"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/assets/content/themes/gold-pot-theme/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/cache/head-cleaner/css/ddf92d639d83d28ab17220ad9857cdb3.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="/assets/content/cache/head-cleaner/js/24da16251c39d025373e932d8bd601fb.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<div id="topHeader">
+<div id="topContainer">
+<ul id="web2">
+<li><a href="/index.html"><img alt="Go to Homepage" src="/assets/content/themes/gold-pot-theme/images/home.gif"/></a></li>
+<li><a href="/feed/index.xml"><img alt="My RSS" src="/assets/content/themes/gold-pot-theme/images/feed_icon.gif"/></a></li>
+<li><a href="http://twitter.com/" id="wp_twitter_id"><img alt="My Twitter" src="/assets/content/themes/gold-pot-theme/images/twitter_feed.gif"/></a></li>
+<li><a href="http://www.facebook.com/" id="wp_facebook_id"><img alt="My Facebook" src="/assets/content/themes/gold-pot-theme/images/facebook_icon.gif"/></a></li>
+</ul>
+
+</div>
+</div>
+<div id="rap">
+<h1 id="header"><a href="/index.html">Bescottee</a><span class="description">苦しいときは伸びてるとき、楽なときは伸びていないとき</span></h1>
+<div id="content">
+<div id="contentContainer">
+
+<div class="navigation">
+<div class="alignleft">« <a href="/android-sdk/2327/android-xml-tools-attributes/index.html" rel="prev">Android XML Tools Attributes</a></div>
+<div class="alignright"><a href="/development/2502/google-play-services-4-4/index.html" rel="next">Google Play Services 4.4（邦訳）</a> »</div>
+</div>
+<div class="post-2473 post hentry category-android-sdk category-development" id="post-2473">
+<div class="storyheader singlepost">
+<h3 class="storytitle"><span class="postDate">05.12.14</span> <span class="titleName"><a href="/development/2473/au-isai-fl-xxxhdpi/index.html" rel="bookmark">au isai FL は XXX High DPI 端末！4.4ソースコード調査</a></span>
+</h3>
+<div class="meta"><span class="">admin to <a href="/category/android-sdk/index.html" rel="category tag" title="Android SDK の投稿をすべて表示">Android SDK</a>, <a href="/category/development/index.html" rel="category tag" title="development の投稿をすべて表示">development</a> </span>   </div>
+</div>
+<div class="storycontent singlepost">
+<p><img alt="" class="aligncenter size-full wp-image-2474" src="/assets/content/uploads/2014/05/isai_xxxhdpi.png" title="isai_xxxhdpi" width="600"/></p>
+<h4>Isai FL</h4>
+<p>「au 発表会 2014 Summer」で発表された <a href="http://www.au.kddi.com/mobile/product/selection/isai/">isai FL</a> という端末が発表されました。この端末は以下の資料のように640(XXX High DPI)のDensityを持つもので、国内では初めてのXXX High DPI の端末です。<br/>
+<span id="more-2473"></span></p>
+<p><a href="/assets/content/uploads/2014/05/isai_fl_dpi.png"><img alt="" class="aligncenter size-full wp-image-2476" src="/assets/content/uploads/2014/05/isai_fl_dpi.png" title="isai_fl_dpi" width="600"/></a></p>
+<p>その発売を記念して、該当するAndroid 4.4 のソースコードを調査してみたいと思います。<br/>
+Android 公式ドキュメントでは、<a href="http://developer.android.com/design/style/metrics-grids.html">Metrics and Grids</a>で紹介されています。</p>
+<p><a href="/assets/content/uploads/2014/05/isai_fl_android4.4.png"><img alt="" class="aligncenter size-full wp-image-2477" src="/assets/content/uploads/2014/05/isai_fl_android4.4.png" title="isai_fl_android4.4" width="500"/></a></p>
+<h4>4.4ソースコード調査</h4>
+<p>XXX High DPI が定義、利用されているソースコードは以下のもののようです。</p>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/core/java/android/util/DisplayMetrics.java">http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/core/java/android/util/DisplayMetrics.java</a></p>
+<pre class="brush: java; first-line: 29;">
+public class DisplayMetrics {
+    /**
+     * Standard quantized DPI for low-density screens.
+     */
+    public static final int DENSITY_LOW = 120;
+
+    /**
+     * Standard quantized DPI for medium-density screens.
+     */
+    public static final int DENSITY_MEDIUM = 160;
+
+    /**
+     * This is a secondary density, added for some common screen configurations.
+     * It is recommended that applications not generally target this as a first
+     * class density -- that is, don't supply specific graphics for this
+     * density, instead allow the platform to scale from other densities
+     * (typically {@link #DENSITY_HIGH}) as
+     * appropriate.  In most cases (such as using bitmaps in
+     * {@link android.graphics.drawable.Drawable}) the platform
+     * can perform this scaling at load time, so the only cost is some slight
+     * startup runtime overhead.
+     *
+     *
+
+This density was original introduced to correspond with a
+     * 720p TV screen: the density for 1080p televisions is
+     * {@link #DENSITY_XHIGH}, and the value here provides the same UI
+     * size for a TV running at 720p.  It has also found use in 7" tablets,
+     * when these devices have 1280x720 displays.
+     */
+    public static final int DENSITY_TV = 213;
+
+    /**
+     * Standard quantized DPI for high-density screens.
+     */
+    public static final int DENSITY_HIGH = 240;
+
+    /**
+     * Standard quantized DPI for extra-high-density screens.
+     */
+    public static final int DENSITY_XHIGH = 320;
+
+    /**
+     * Intermediate density for screens that sit somewhere between
+     * {@link #DENSITY_XHIGH} (320dpi) and {@link #DENSITY_XXHIGH} (480 dpi).
+     * This is not a density that applications should target, instead relying
+     * on the system to scale their {@link #DENSITY_XXHIGH} assets for them.
+     */
+    public static final int DENSITY_400 = 400;
+
+    /**
+     * Standard quantized DPI for extra-extra-high-density screens.  Applications
+     * should not generally worry about this density; relying on XHIGH graphics
+     * being scaled up to it should be sufficient for almost all cases.
+     */
+    public static final int DENSITY_XXHIGH = 480;
+
+    /**
+     * Standard quantized DPI for extra-extra-extra-high-density screens.  Applications
+     * should not generally worry about this density; relying on XHIGH graphics
+     * being scaled up to it should be sufficient for almost all cases.  A typical
+     * use of this density would be 4K television screens -- 3840x2160, which
+     * is 2x a traditional HD 1920x1080 screen which runs at DENSITY_XHIGH.
+     */
+    public static final int DENSITY_XXXHIGH = 640;
+</pre>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/include/androidfw/ResourceTypes.h">http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/include/androidfw/ResourceTypes.h</a></p>
+<pre class="brush: java; first-line: 854;">
+enum {
+    DENSITY_DEFAULT = ACONFIGURATION_DENSITY_DEFAULT,
+    DENSITY_LOW = ACONFIGURATION_DENSITY_LOW,
+    DENSITY_MEDIUM = ACONFIGURATION_DENSITY_MEDIUM,
+    DENSITY_TV = ACONFIGURATION_DENSITY_TV,
+    DENSITY_HIGH = ACONFIGURATION_DENSITY_HIGH,
+    DENSITY_XHIGH = ACONFIGURATION_DENSITY_XHIGH,
+    DENSITY_XXHIGH = ACONFIGURATION_DENSITY_XXHIGH,
+    DENSITY_XXXHIGH = ACONFIGURATION_DENSITY_XXXHIGH,
+    DENSITY_NONE = ACONFIGURATION_DENSITY_NONE
+};
+</pre>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/native/include/android/configuration.h">http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/native/include/android/configuration.h</a></p>
+<pre class="brush: java; first-line: 26;">
+struct AConfiguration;
+typedef struct AConfiguration AConfiguration;
+
+enum {
+    ACONFIGURATION_ORIENTATION_ANY  = 0x0000,
+    ACONFIGURATION_ORIENTATION_PORT = 0x0001,
+    ACONFIGURATION_ORIENTATION_LAND = 0x0002,
+    ACONFIGURATION_ORIENTATION_SQUARE = 0x0003,
+
+    ACONFIGURATION_TOUCHSCREEN_ANY  = 0x0000,
+    ACONFIGURATION_TOUCHSCREEN_NOTOUCH  = 0x0001,
+    ACONFIGURATION_TOUCHSCREEN_STYLUS  = 0x0002,
+    ACONFIGURATION_TOUCHSCREEN_FINGER  = 0x0003,
+
+    ACONFIGURATION_DENSITY_DEFAULT = 0,
+    ACONFIGURATION_DENSITY_LOW = 120,
+    ACONFIGURATION_DENSITY_MEDIUM = 160,
+    ACONFIGURATION_DENSITY_TV = 213,
+    ACONFIGURATION_DENSITY_HIGH = 240,
+    ACONFIGURATION_DENSITY_XHIGH = 320,
+    ACONFIGURATION_DENSITY_XXHIGH = 480,
+    ACONFIGURATION_DENSITY_XXXHIGH = 640,
+</pre>
+<h4>おまけとしてツールやテストコードも調査</h4>
+<h5>aaptツールのコード</h5>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/tools/aapt/AaptAssets.cpp">http://tools.oesf.biz/android-4.4.2_r1.0/xref/frameworks/base/tools/aapt/AaptAssets.cpp</a></p>
+<pre class="brush: java; first-line: 1192;">
+bool AaptGroupEntry::getDensityName(const char* name,
+                                    ResTable_config* out)
+{
+    if (strcmp(name, kWildcardName) == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_DEFAULT;
+        return true;
+    }
+
+    if (strcmp(name, "nodpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_NONE;
+        return true;
+    }
+
+    if (strcmp(name, "ldpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_LOW;
+        return true;
+    }
+
+    if (strcmp(name, "mdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_MEDIUM;
+        return true;
+    }
+
+    if (strcmp(name, "tvdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_TV;
+        return true;
+    }
+
+    if (strcmp(name, "hdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_HIGH;
+        return true;
+    }
+
+    if (strcmp(name, "xhdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_XHIGH;
+        return true;
+    }
+
+    if (strcmp(name, "xxhdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_XXHIGH;
+        return true;
+    }
+
+    if (strcmp(name, "xxxhdpi") == 0) {
+        if (out) out-&gt;density = ResTable_config::DENSITY_XXXHIGH;
+        return true;
+    }
+
+    char* c = (char*)name;
+    while (*c &gt;= '0' &amp;&amp; *c &lt;= '9') {
+        c++;
+    }
+
+    // check that we have 'dpi' after the last digit.
+    if (toupper(c[0]) != 'D' ||
+            toupper(c[1]) != 'P' ||
+            toupper(c[2]) != 'I' ||
+            c[3] != 0) {
+        return false;
+    }
+
+    // temporarily replace the first letter with \0 to
+    // use atoi.
+    char tmp = c[0];
+    c[0] = '\0';
+
+    int d = atoi(name);
+    c[0] = tmp;
+
+    if (d != 0) {
+        if (out) out-&gt;density = d;
+        return true;
+    }
+
+    return false;
+}
+</pre>
+<h5>holo向けCTS(Compatibility Test Suite)のテストコード</h5>
+<p><a href="http://tools.oesf.biz/android-4.4.2_r1.0/xref/cts/tests/tests/holo/src/android/holo/cts/DisplayInfoActivity.java">http://tools.oesf.biz/android-4.4.2_r1.0/xref/cts/tests/tests/holo/src/android/holo/cts/DisplayInfoActivity.java</a></p>
+<pre class="brush: java; first-line: 28;">
+ public class DisplayInfoActivity extends Activity {
+
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.display_info);
+
+         WindowManager windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
+         Display display = windowManager.getDefaultDisplay();
+         DisplayMetrics metrics = new DisplayMetrics();
+         display.getMetrics(metrics);
+
+         DisplayMetrics dm = getResources().getDisplayMetrics();
+         int width = Math.round(dm.widthPixels / dm.density);
+         int height = Math.round(dm.heightPixels / dm.density);
+
+         TextView text = (TextView) findViewById(R.id.text);
+         text.setText(getString(R.string.display_info_text, metrics.densityDpi,
+                 getScreenDensityBucket(metrics), width, height));
+     }
+
+     private String getScreenDensityBucket(DisplayMetrics metrics) {
+         switch (metrics.densityDpi) {
+             case DisplayMetrics.DENSITY_LOW:
+                 return "ldpi";
+
+             case DisplayMetrics.DENSITY_MEDIUM:
+                 return "mdpi";
+
+             case DisplayMetrics.DENSITY_HIGH:
+                 return "hdpi";
+
+             case DisplayMetrics.DENSITY_XHIGH:
+                 return "xdpi";
+
+             case DisplayMetrics.DENSITY_XXHIGH:
+                 return "xxdpi";
+
+             case DisplayMetrics.DENSITY_XXXHIGH:
+                 return "xxxdpi";
+
+             case DisplayMetrics.DENSITY_TV:
+                 return "tvdpi";
+
+             default:
+                 return "" + metrics.densityDpi;
+         }
+     }
+ }
+</pre>
+<h4>au Isai FL向けのアプリアイコン</h4>
+<p><img alt="" class="aligncenter size-full wp-image-2492" height="192" src="/assets/content/uploads/2014/05/icon_xxxhdpi.png" title="icon_xxxhdpi" width="490"/></p>
+<p><img alt="" class="alignright size-full wp-image-2494" height="564" src="/assets/content/uploads/2014/05/launcher_play_xxxhdpi.png" title="launcher_play_xxxhdpi" width="267"/><br/>
+</p>
+<p>アプリアイコンは、通常の4倍の大きさの192×192 px の必要だそうです。ただ、以下のようにGoogle Play向けに512×512 px のアイコンを作っておいて、そこから各DPIごとのアイコンを生成していると思いますので問題ないかとは思います。アプリの機能を変更しないのに、versionCodeをあげて、google play に apkをアップしなおさないといけないのは少し手間ですね。Google Playにアップした512×512 px アイコンから自動的に各DPIごとのアイコンを生成して、配布するapkにいれてくれればいいのになぁと思ってしまいました。<br clear="all"/></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a class="wherego_title" href="/development/2502/google-play-services-4-4/index.html" rel="bookmark">Google Play Services 4.4（邦訳）</a></li><li><a class="wherego_title" href="/development/knowhow/712/android-lint/index.html" rel="bookmark">Android Lint の利用方法</a></li><li><a class="wherego_title" href="/development/knowhow/393/android-fragment2activity/index.html" rel="bookmark">Android FragmentからのActivity呼び出し方法</a></li></ul></div> </div>
+</div>
+
+
+<div class="navi">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+</div>
+
+</div>
+
+<div id="menu">
+<ul>
+<li class="widget widget_views" id="views-3">人気記事ベスト5<ul>
+<li><a href="/development/knowhow/612/android-ndk-r7-release/index.html" title="Android NDK r7 の更新情報">Android NDK r7 の更新情報</a>- 904,884 views</li><li><a href="/android-sdk/2048/sdk-manager-get-from-xml-file/index.html" title="SDK Managerが取得するxmlファイル(2013/08/15時点)">SDK Managerが取得するxmlファイル(2013/08/15時点)</a>- 695,334 views</li><li><a href="/au-kddi/903/au-market-app-install/index.html" title="auマーケットの簡単インストール方法">auマーケットの簡単インストール方法</a>- 214,796 views</li><li><a href="/au-kddi/525/au-one-market-reinstall/index.html" title="au one Marketアプリの再インストール方法">au one Marketアプリの再インストール方法</a>- 168,396 views</li><li><a href="/development/knowhow/65/eclipse-android-memory-leak-mat/index.html" title="メモリリークを発見！Androidアプリのメモリ解析手法">メモリリークを発見！Androidアプリのメモリ解析手法</a>- 132,554 views</li></ul>
+</li> <li class="widget widget_recent_entries" id="recent-posts-4">		最近の投稿		<ul>
+<li><a href="/development/3583/hvc-c2wsdk/index.html" title="家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法 </a></li>
+<li><a href="/event/3567/potatotips-23/index.html" title="第23回potatotips参加報告">第23回potatotips参加報告 </a></li>
+<li><a href="/uncategorized/3556/20151121-intel-edison-firmware/index.html" title="2015/11/21時点の Intel Edison Firmware">2015/11/21時点の Intel Edison Firmware </a></li>
+<li><a href="/development/3513/spoon-android-maven-library-url/index.html" title="spoon android maven library URL(as of 20150904)">spoon android maven library URL(as of 20150904) </a></li>
+<li><a href="/uncategorized/3523/git-config-alias-fetch-pullsfetch-origin-refspullrefsremotespull/index.html" title="git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/*">git config alias.fetch-pulls=fetch origin +refs/pull/*:refs/remotes/pull/* </a></li>
+<li><a href="/uncategorized/3520/3520/index.html" title="3520">3520 </a></li>
+<li><a href="/development/3516/support-annotaion-and-espresso-library-differentation/index.html" title="support-annotaion and espresso library differentation">support-annotaion and espresso library differentation </a></li>
+<li><a href="/development/3509/twitter-fabric-maven-library-location/index.html" title="twitter fabric maven library location">twitter fabric maven library location </a></li>
+<li><a href="/intel-edison/3500/accelerometer-adxl345-for-edison/index.html" title="Edison で利用できる加速度センサーADXL345">Edison で利用できる加速度センサーADXL345 </a></li>
+<li><a href="/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/index.html" title="https://jcenter.bintray.com/com/android/tools/build/gradle/">https://jcenter.bintray.com/com/android/tools/build/gradle/ </a></li>
+</ul>
+</li><li class="widget widget_categories" id="categories-3">カテゴリー		<ul>
+<li class="cat-item cat-item-35"><a href="/category/android-sdk/index.html" title="Android SDK に含まれる投稿をすべて表示">Android SDK</a>
+<ul class="children">
+<li class="cat-item cat-item-40"><a href="/category/android-sdk/platform-versions-android-sdk/index.html" title="Platform Versions に含まれる投稿をすべて表示">Platform Versions</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-17"><a href="/category/au-kddi/index.html" title="au KDDI に含まれる投稿をすべて表示">au KDDI</a>
+</li>
+<li class="cat-item cat-item-12"><a href="/category/development/index.html" title="development に含まれる投稿をすべて表示">development</a>
+<ul class="children">
+<li class="cat-item cat-item-7"><a href="/category/development/ageruapp/index.html" title="ageruApp に含まれる投稿をすべて表示">ageruApp</a>
+</li>
+<li class="cat-item cat-item-11"><a href="/category/development/knowhow/index.html" title="KnowHow に含まれる投稿をすべて表示">KnowHow</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-46"><a href="/category/device/index.html" title="device に含まれる投稿をすべて表示">device</a>
+</li>
+<li class="cat-item cat-item-49"><a href="/category/event/index.html" title="event に含まれる投稿をすべて表示">event</a>
+</li>
+<li class="cat-item cat-item-50"><a href="/category/git/index.html" title="git に含まれる投稿をすべて表示">git</a>
+</li>
+<li class="cat-item cat-item-53"><a href="/category/intel-edison/index.html" title="intel edison に含まれる投稿をすべて表示">intel edison</a>
+</li>
+<li class="cat-item cat-item-52"><a href="/category/mac/index.html" title="mac に含まれる投稿をすべて表示">mac</a>
+</li>
+<li class="cat-item cat-item-57"><a href="/category/privacy/index.html" title="privacy に含まれる投稿をすべて表示">privacy</a>
+</li>
+<li class="cat-item cat-item-5"><a href="/category/titanium/index.html" title="Titanium に含まれる投稿をすべて表示">Titanium</a>
+</li>
+<li class="cat-item cat-item-1"><a href="/category/uncategorized/index.html" title="Uncategorized に含まれる投稿をすべて表示">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-31"><a href="/category/windowsphone/index.html" title="WindowsPhone に含まれる投稿をすべて表示">WindowsPhone</a>
+</li>
+</ul>
+</li><li class="widget widget_archive" id="archives-3">アーカイブ		<ul>
+<li><a href="/date/2016/01/index.html" title="2016年1月">2016年1月</a> (1)</li>
+<li><a href="/date/2015/11/index.html" title="2015年11月">2015年11月</a> (2)</li>
+<li><a href="/date/2015/09/index.html" title="2015年9月">2015年9月</a> (1)</li>
+<li><a href="/date/2015/08/index.html" title="2015年8月">2015年8月</a> (4)</li>
+<li><a href="/date/2015/07/index.html" title="2015年7月">2015年7月</a> (1)</li>
+<li><a href="/date/2015/06/index.html" title="2015年6月">2015年6月</a> (2)</li>
+<li><a href="/date/2015/05/index.html" title="2015年5月">2015年5月</a> (1)</li>
+<li><a href="/date/2015/04/index.html" title="2015年4月">2015年4月</a> (3)</li>
+<li><a href="/date/2015/03/index.html" title="2015年3月">2015年3月</a> (7)</li>
+<li><a href="/date/2015/02/index.html" title="2015年2月">2015年2月</a> (18)</li>
+<li><a href="/date/2015/01/index.html" title="2015年1月">2015年1月</a> (16)</li>
+<li><a href="/date/2014/12/index.html" title="2014年12月">2014年12月</a> (11)</li>
+<li><a href="/date/2014/11/index.html" title="2014年11月">2014年11月</a> (4)</li>
+<li><a href="/date/2014/10/index.html" title="2014年10月">2014年10月</a> (1)</li>
+<li><a href="/date/2014/09/index.html" title="2014年9月">2014年9月</a> (2)</li>
+<li><a href="/date/2014/08/index.html" title="2014年8月">2014年8月</a> (1)</li>
+<li><a href="/date/2014/07/index.html" title="2014年7月">2014年7月</a> (2)</li>
+<li><a href="/date/2014/06/index.html" title="2014年6月">2014年6月</a> (23)</li>
+<li><a href="/date/2014/05/index.html" title="2014年5月">2014年5月</a> (10)</li>
+<li><a href="/date/2014/04/index.html" title="2014年4月">2014年4月</a> (2)</li>
+<li><a href="/date/2014/03/index.html" title="2014年3月">2014年3月</a> (4)</li>
+<li><a href="/date/2014/02/index.html" title="2014年2月">2014年2月</a> (3)</li>
+<li><a href="/date/2014/01/index.html" title="2014年1月">2014年1月</a> (3)</li>
+<li><a href="/date/2013/12/index.html" title="2013年12月">2013年12月</a> (2)</li>
+<li><a href="/date/2013/11/index.html" title="2013年11月">2013年11月</a> (1)</li>
+<li><a href="/date/2013/10/index.html" title="2013年10月">2013年10月</a> (2)</li>
+<li><a href="/date/2013/09/index.html" title="2013年9月">2013年9月</a> (2)</li>
+<li><a href="/date/2013/08/index.html" title="2013年8月">2013年8月</a> (10)</li>
+<li><a href="/date/2013/07/index.html" title="2013年7月">2013年7月</a> (3)</li>
+<li><a href="/date/2013/06/index.html" title="2013年6月">2013年6月</a> (3)</li>
+<li><a href="/date/2013/05/index.html" title="2013年5月">2013年5月</a> (7)</li>
+<li><a href="/date/2013/04/index.html" title="2013年4月">2013年4月</a> (4)</li>
+<li><a href="/date/2013/03/index.html" title="2013年3月">2013年3月</a> (5)</li>
+<li><a href="/date/2013/02/index.html" title="2013年2月">2013年2月</a> (4)</li>
+<li><a href="/date/2013/01/index.html" title="2013年1月">2013年1月</a> (1)</li>
+<li><a href="/date/2012/12/index.html" title="2012年12月">2012年12月</a> (4)</li>
+<li><a href="/date/2012/11/index.html" title="2012年11月">2012年11月</a> (1)</li>
+<li><a href="/date/2012/10/index.html" title="2012年10月">2012年10月</a> (1)</li>
+<li><a href="/date/2012/09/index.html" title="2012年9月">2012年9月</a> (2)</li>
+<li><a href="/date/2012/08/index.html" title="2012年8月">2012年8月</a> (4)</li>
+<li><a href="/date/2012/07/index.html" title="2012年7月">2012年7月</a> (5)</li>
+<li><a href="/date/2012/06/index.html" title="2012年6月">2012年6月</a> (1)</li>
+<li><a href="/date/2012/05/index.html" title="2012年5月">2012年5月</a> (3)</li>
+<li><a href="/date/2011/12/index.html" title="2011年12月">2011年12月</a> (7)</li>
+<li><a href="/date/2011/11/index.html" title="2011年11月">2011年11月</a> (5)</li>
+<li><a href="/date/2011/10/index.html" title="2011年10月">2011年10月</a> (2)</li>
+<li><a href="/date/2011/09/index.html" title="2011年9月">2011年9月</a> (2)</li>
+<li><a href="/date/2011/08/index.html" title="2011年8月">2011年8月</a> (2)</li>
+<li><a href="/date/2011/07/index.html" title="2011年7月">2011年7月</a> (6)</li>
+<li><a href="/date/2011/04/index.html" title="2011年4月">2011年4月</a> (1)</li>
+<li><a href="/date/2011/02/index.html" title="2011年2月">2011年2月</a> (3)</li>
+<li><a href="/date/2011/01/index.html" title="2011年1月">2011年1月</a> (1)</li>
+<li><a href="/date/2010/01/index.html" title="2010年1月">2010年1月</a> (2)</li>
+</ul>
+</li><li class="widget widget_links" id="linkcat-2">Blogroll
+	<ul class="xoxo blogroll">
+<li><a href="/privacy/3604/privacy_policy/index.html">Privacy Policy</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/download.html" target="">おサイフケータイ対応Android携帯電話 Push送信機能のご紹介</a></li>
+<li><a href="http://ap.pitsquare.jp/pc/developers/" target="">フェリカネットワークスのFelica Push通信の紹介</a></li>
+</ul>
+</li>
+<li>Powered by
+	<ul>
+
+<li><a href="http://www.etrecos.com/" title="Gold Pot Theme created by eTrecos">Gold Pot Theme</a></li>
+</ul></li>
+</ul>
+</div>
+
+</div>
+
+<script src="/assets/includes/js/tw-sack.js" type="text/javascript"></script>
+
+
+
+
+<script src="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/scripts/core-min.js" type="text/javascript"></script>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shCore-min.css" id="ash_core-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/assets/content/plugins/auto-syntaxhighlighter/SyntaxHighlighter/build/styles/shThemeDefault-min.css" id="ash_theme_default-css" media="all" rel="stylesheet" type="text/css"/>
+
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js" type="text/javascript"></script>
+<script src="/assets/content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js" type="text/javascript"></script>
+
+</body>
+</html>

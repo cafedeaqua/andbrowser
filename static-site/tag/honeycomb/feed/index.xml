@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; honeycomb</title>
+	<atom:link href="http://andbrowser.com/tag/honeycomb/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/honeycomb/feed/" />
+		<item>
+		<title>Android FragmentからのActivity呼び出し方法</title>
+		<link>http://andbrowser.com/development/knowhow/393/android-fragment2activity/</link>
+		<comments>http://andbrowser.com/development/knowhow/393/android-fragment2activity/#comments</comments>
+		<pubDate>Thu, 08 Sep 2011 04:22:19 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=393</guid>
+		<description><![CDATA[Android Fragment から Activityを呼び出す正しい方法について記載]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/09/Fragment2ActivityMain.png" alt="FragmentからActivity呼び出し方法のメイン画像" title="Fragment2ActivityMain" width="600" height="300" class="aligncenter size-full wp-image-407" /></p>
+<p>以前のエントリの「 <a href="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３</a>」の「FragmentとActivityの役割分担」でFragmentとActivityの関係について記載し、上の図のように Fragment が導入されたからといっても、Fragment はActivityに依存しないように機能をモジュール化できる機能であり、以下の図のように他のActivityと依存関係を持たせることは良くないため避けるべきと記載をしました。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/09/Fragment-Activity.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/09/Fragment-Activity.jpg" alt="" title="Fragment-Activity" width="600"/></a></p>
+<p>それについて、FragmentのAPIで依存しないような機能が提供されていることが判明しました。それについて記載したいと思います。以下で解説を行うAPIは、compatibility v4ベースで行います。Fragment クラスのAPIとして以下の2つのAPIが提供されています。Androidアプリ開発者にはなじみ深いAPIだと思います。</p>
+<pre class="brush:java; highlight:[1, 3]">
+ void	startActivity(Intent intent)
+          Call Activity#startActivity(Intent) on the fragment's containing Activity.
+ void	startActivityForResult(Intent intent, int requestCode)
+          Call Activity#startActivityForResult(Intent, int) on the fragment's containing Activity.
+</pre>
+<h4>Fragment.java で提供される API</h4>
+<p>Fragment.java のソースコードは、（Windowsの場合）以下にあります。Linux, MAC の方はそれぞれの環境に読みかえてください。存在しない場合は、SDK Tool で Compatibility Package をダウンロードしてください。</p>
+<pre class="brush:java">
+...\android-sdk-windows\extras\android\compatibility\v4\src\java\android\support\v4\app\Fragment.java
+</pre>
+<p>Fragment.java の startActivity()メソッドとstartActivityForResult()メソッドをそれぞれ具体的に見ていきたいと思います。<br />
+それぞれのメソッドの抜粋が以下のようなものです。</p>
+<pre class="brush:java; first-line:723  highlight:[727,731]">
+    /**
+     * Call {@link Activity#startActivity(Intent)} on the fragment's
+     * containing Activity.
+     */
+    public void startActivity(Intent intent) {
+        if (mActivity == null) {
+            throw new IllegalStateException("Fragment " + this + " not attached to Activity");
+        }
+        mActivity.startActivityFromFragment(this, intent, -1);
+    }
+</pre>
+<pre class="brush:java; first-line:733  highlight:[737,741]">
+    /**
+     * Call {@link Activity#startActivityForResult(Intent, int)} on the fragment's
+     * containing Activity.
+     */
+    public void startActivityForResult(Intent intent, int requestCode) {
+        if (mActivity == null) {
+            throw new IllegalStateException("Fragment " + this + " not attached to Activity");
+        }
+        mActivity.startActivityFromFragment(this, intent, requestCode);
+    }
+</pre>
+<p>上記の抜粋をみると、mActivityのメソッドを呼び出していることがわかります。<br />
+それ以外はただの初期化状態の確認（nullチェック）だけです。<br />
+ここで startActivityFromFragment()メソッドという見慣れないメソッドが呼び出されています。<br />
+これは何でしょうか？それを探るために、mAcitivyt が何者かを調査します。</p>
+<h4>FragmentActivity.java で提供される API</h4>
+<pre class="brush:java; first-line:254">
+    // Activity this fragment is attached to.
+    FragmentActivity mActivity;
+</pre>
+<p>すると、225行目で mActivity の宣言がありました。ここから FragmentActivity クラスということがわかりました。<br />
+続いて、Fragment.java と同じディレクトリにある FragmentActivity.java の中身を見ていきます。</p>
+<p>FragmentActivity.java の643行目に startActivityFromFragment() メソッドがありました。</p>
+<pre class="brush:java; first-line:631  highlight:[634,643]">
+    /**
+     * Called by Fragment.startActivityForResult() to implement its behavior.
+     */
+    public void startActivityFromFragment(Fragment fragment, Intent intent,
+            int requestCode) {
+        if (requestCode == -1) {
+            super.startActivityForResult(intent, -1);
+            return;
+        }
+        if ((requestCode&#038;0xffff0000) != 0) {
+            throw new IllegalArgumentException("Can only use lower 16 bits for requestCode");
+        }
+        super.startActivityForResult(intent, ((fragment.mIndex+1)<<16) + (requestCode&#038;0xffff));
+    }
+</pre>
+<p>ここでの super は何かというと、FragmentActivity.java の class 宣言で以下のように記載があり、Activity クラスということがわかりました。<br />
+つまり、startActivityFromFragment() メソッドで行っていることは、Android開発では一般的な Activity の startActivityForResult()メソッドか startActivityForResult()メソッドを リクエストコード（requestCode)の有無によって、切り替えて実行していることがわかりました。</p>
+<pre class="brush:java  highlight:[1]">
+public class FragmentActivity extends Activity {
+    private static final String TAG = "FragmentActivity";
+
+    private static final String FRAGMENTS_TAG = "android:support:fragments";
+</pre>
+<h4>結論</h4>
+<p>以前のエントリで Fragment から startActivity() すべきでないと書きましたが、よく分析してみると Fragment で startActivity()しても以下の図のように上位のActivity の startActivyt()メソッドが呼び出される仕組みがあるため、Fragment からでも実施して問題ありません。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/09/Fragment-ActivityNo2.jpg" alt="FragmentからのActivity呼び出しの正しい方法" title="Fragment-ActivityNo2" width="600" class="aligncenter size-full wp-image-399" /></p>
+<p>Honeycomb はソースコードが公開されておらずこのような調査・分析ができませんが、Compatibility package に関してはソースコードが公開されているのでこのように調査できることは大変有益だと思います。<br />
+Fragmentは、Honeycomb と Compatibility package のそれぞれで提供されているAPIが一部異なっているものがあります。<br />
+具体的には、ActivityとFragmentActivity や getFragmentMangaer() とgetSupportFragmentManager() などです。</p>
+<p>それでも、本ソースコードと Honeycomb 内に実装が大きく異なっているとは考えづらいため、この Compativility package のソースコードから Honeycomb の実装が一部見えてくると思います。早くICSになってソースコードが公開されることを楽しみにしています！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li><li><a href="http://andbrowser.com/android-sdk/2804/how-to-update-android-stdio-from-0-8-0-to-0-8-1/" rel="bookmark" class="wherego_title">AndroidStdio 0.8.0 から0.8.1への更新方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/393/android-fragment2activity/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" />
+	</item>
+		<item>
+		<title>1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その３</title>
+		<link>http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/</link>
+		<comments>http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/#comments</comments>
+		<pubDate>Sun, 24 Jul 2011 14:48:49 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=226</guid>
+		<description><![CDATA[Android デベロッパーラボ 東京 2011のコードラボで作成したアプリをさらに改良して、Androidタブレットとスマートフォンの両対応可能なアプリを開発する
+]]></description>
+			<content:encoded><![CDATA[<p>「<a href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a>」で完成後のクラス図を記載しましたが、「<a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">Android デベロッパーラボ 東京 2011</a>」のコードラボ向けソースコードをベースに今回の目的である1apkでタブレット向けとスマートフォン向けアプリを実現するために、大幅な変更が必要なことが判明しました。</p>
+<h4>設計方針の変更</h4>
+<p>そのため、今回はまず1apkでタブレット向けとスマートフォン向けアプリを実現するために、簡素化して実装を進めることにしました。</p>
+<p>以下のものがそのクラス図です。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_1apk.png"><img src="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_1apk.png" alt="" title="1apkでタブレット向けとスマートフォン向けアプリを実現するクラス図" width="600" class="size-full wp-image-227" /></a></p>
+<p>緑色のクラスが新規作成のクラスで、青色が変更を行う必要があるクラスです。</p>
+<p>変更のステップは以下のような流れです。</p>
+<ol>
+<li>起動Activityのタブレット、スマートフォンの両対応向けの準備
+<li>スマートフォン向けレイアウト作成
+<li>スマートフォン向けノート編集画面の作成
+<li>Fragment クラスへの機能追加
+</ol>
+<h4>起動Activityのタブレット、スマートフォンの両対応向けの準備</h4>
+<h5>スマートフォン向けレイアウトを res/layout におくために、コードラボ完了時のタブレット向け画面レイアウトを res/layout-xlarge-v11 に名前変更を実施</h5>
+<p>起動Activityをタブレット向けとスマートフォン向けの両対応させるためには、Androidプラットフォームがどのようにレイアウトの切り替えを行っているかを知っておく必要があります。以下のアクティビティ図をもとに紹介します。Activity が起動されると onCreate() が呼び出されて、この中でレイアウトファイルを setContentView() するというのがAndroidのもっとも一般的な画面の作り方です。setContentView()を行うとAndroidの仕組みによって端末の固有情報をもとに読みだすレイアウト xmlファイルの読み出し先のディレクトリを変更してくれます。もっと詳しく知りたい場合は<a href="http://developer.android.com/guide/topics/ui/declaring-layout.html#load">、Android SDK:Load the XML Resource（英語）</a>を参照ください。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/07/ActivityDiagram_NotepadActivityStart.png"><img src="http://andbrowser.com/wp-content/uploads/2011/07/ActivityDiagram_NotepadActivityStart.png" alt="" title="初期起動ActivityのonCreate()のアクティビティ図" width="600" class="alignnone size-medium wp-image-236" /></a></p>
+<h5>layout フォルダの使い方</h5>
+<p>今回の場合は setContentView(R.layout.notepad); と指定しているので、スマートフォンの場合、layout/notepad.xml が対象となり、タブレットの場合は、layout-xlarge-v11/notepad.xml が対象になり、対応したレイアウトファイルを読み込んでくれます。そのため、コードラボ完了時のレイアウトファイルのフォルダを以下のように変更してから、スマートフォン向けのnotepad.xml を新規作成します。</p>
+<table class="table001">
+<caption>表：レイアウトフォルダの変更</caption>
+<tr>
+<th scope="col">変更前のフォルダ</th>
+<th scope="col">変更後のフォルダ</th>
+</tr>
+<tr>
+<td>/res/layout/</td>
+<td>/res/layout-xlarge-v11/</td>
+</tr>
+<tr>
+<td>/res/layout-port/</td>
+<td>/res/layout-xlarge-port-v11/</td>
+</tr>
+</table>
+<p>（※）layoutより後ろに続く識別子（xlargeやportやv11など）の順番は正しい順序で指定しないと正しく動作しません。詳細な項目や並べる順番を知りたい場合は、<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#Compatibility">Providing the Best Device Compatibility with Resources（英語）</a>や<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#BestMatch">How Android Finds the Best-matching Resource（英語）</a>を参照してください。</p>
+<p>続いて、新規作成するスマートフォン向けのレイアウトファイルを紹介します。中身はタブレット向けのものとあまり変化はなく、以下のようになります。</p>
+<p><script type="syntaxhighlighter" class="brush: xml" >
+<![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <fragment android:name="com.example.android.honeypad.NoteListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
+]]&gt;
+</script></p>
+<p>タブレット向けの /res/layout-xlarge-v11/notepad.xml と比較してみるために以下の掲載します。</p>
+<p><script type="syntaxhighlighter" class="brush: xml" ><![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<fragment android:name="com.example.android.honeypad.NoteListFragment"
+		android:id="@+id/list" android:layout_weight="1" android:layout_width="0dp"
+		android:layout_height="match_parent" />
+	<LinearLayout android:id="@+id/note_detail_container"
+		android:orientation="horizontal" android:layout_weight="2"
+		android:layout_width="0dp" android:layout_height="match_parent" />
+</LinearLayout>
+]]&gt;</script></p>
+<p>もともとの notepad.xml では、２ペイン構成で左側にノートリストがあって、右側に編集画面がでてくるものでした。スマートフォン向けの画面の場合は画面サイズが小さいため、2ペイン構成にはできないため１ペインで画面遷移を発生させるユーザインタフェースにします。そのため、タブレットのレイアウトファイルの &lt;fragment &#8230;. NoteListFragment  のみを抜き出したものがスマートフォンの起動画面のノートリストのレイアウトになります。</p>
+<p>タブレット向けのレイアウトファイルのnotepad.xml の中の &lt;LinearLayout android:id=&#8221;@+id/note_detail_container&#8221; という部分はまだ Fragment 指定になっていないため、あとから Fragment の指定に変更します。コートラボの課題では問題になりませんでしたが、せっかく NoteEdit を Fragment 化したので、ここも Fragment 指定にするように課題に入っていたほうがよかったですね。</p>
+<h5>スマフォでの実行</h5>
+<p>この状態でスマートフォンで実行してみましょう。ノートが１つもないため、真っ黒な画面になると思います。ここでノートを追加するためにメニューボタンを押すと Exception が発生して落ちてしまいます。</p>
+<p>onCreateOptionsMenu() の中のadd.setShowAsAction() で落ちます。理由は、このメソッドは Honeycomb 3.0(API Level 11)からのAPIのため、API Levelが 10 以下のスマートフォンでは提供されておらず、実行時に Exception が発生してしまいます。</p>
+<p>これを避けるために、実行時にAPIレベルの判断ロジックを呼び出して実行するかどうかを制御します。具体的な判断ロジックについては、前回のエントリ「<a href="http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a>」を参照ください。今回やりたいことはAPIレベルの判断のため、UIUtils.isHoneycomb() を利用して、add.setShowAsAction() メソッドをコールするかどうかを判定します。</p>
+<p>NotepadActivity.java の具体例は以下のようになります。</p>
+<p><script type="syntaxhighlighter" class="brush: java" >
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuItem add = menu.add(0, MENU_ADD_ID, 0, R.string.menu_add);
+        if (UIUtils.isHoneycomb()) {
+            add.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM
+                    | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        }
+        add.setIcon(R.drawable.ic_menu_add);
+        return true;
+    }
+</script></p>
+<h5>スマフォ向け対応</h5>
+<p>続いて、「スマートフォンの場合に画面遷移が必要なため、それ向け対応」を行います。</p>
+<p>メニューボタンを押して「Add Note」を実行したときに、タブレットの場合は画面遷移を行わずに右側に新規ノート画面を表示していましたが、スマートフォンの場合はノート編集画面を新しく起動するようにします。「Add Note」を実行したときには、onMenuItemSelected() がコールされるため、その中でタブレットかスマートフォンかの判断ロジックを利用して、処理の振り分けを行います。具体的には以下のようなコードになります。</p>
+<p><script type="syntaxhighlighter" class="brush: java" >
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        switch (item.getItemId()) {
+        case MENU_ADD_ID:
+            if (UIUtils.isHoneycombTablet(this)) {
+                showNote(null);
+            } else {
+                showNotePhone(null);
+            }
+            return true;
+        }
+        return super.onMenuItemSelected(featureId, item);
+    }
+</script></p>
+<p><script type="syntaxhighlighter" class="brush: java" >
+    // for phone api
+    private void showNotePhone(final Uri noteUri) {
+        Intent i = new Intent(this, NoteEditActivity.class);
+        startActivity(i);
+    }
+</script></p>
+<p>いまの状態では、スマートフォン向けのノート編集画面(NoteEditActivity)がないため、コンパイルエラーのままなので、これを新規作成します。</p>
+<p>NoteEditActivity はスマートフォン向けのみのActivityのため、明確にわかるように所属するパッケージを変更します。<br />
+パッケージ名：com.example.android.honeypad.phone の中に以下のように NoteEditActivity.java を新規作成します。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/07/NoteEditActivityPackage.png.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/07/NoteEditActivityPackage.png-300x234.jpg" alt="" title="NoteEditActivityのPackage名" width="300" height="234" class="alignnone size-medium wp-image-265" /></a></p>
+<p>現時点で作成される NoteEditActivity は以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditActivity extends FragmentActivity implements
+        NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.note_edit_phone);
+
+        FragmentManager fm = getSupportFragmentManager();
+        NoteEditFragment edit = new NoteEditFragment();
+        // add the NoteEditFragment to the container
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.note_detail_container, edit, "Edit");
+        ft.commit();
+
+    }
+}
+</pre>
+<p> 続いて、NoteEditActivity で参照しているレイアウトファイル(R.layout.note_edit_phone)を以下のように作成します。</p>
+<p><script type="syntaxhighlighter" class="brush: xml" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <fragment
+        android:name="com.example.android.honeypad.NoteEditFragment"
+        android:id="@+id/note_detail_container"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>
+</script></p>
+<p>上記の res/layout/note_edit_phone.xml の中身は、res/layout-xlarge-port-v11/notepad.xml の &lt;LinearLayout android:id=&#8221;@+id/note_detail_container&#8221; の部分を Fragment 指定に変更したものです。そのためこの機会に res/layout-xlarge-port-v11/notepad.xml の &lt;LinearLayout android:id=&#8221;@+id/note_detail_container&#8221; の部分をFragment 指定に変更しておきましょう。変更後の res/layout-xlarge-port-v11/notepad.xml は以下のようになります。</p>
+<p><script type="syntaxhighlighter" class="brush: xml" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <fragment
+        android:name="com.example.android.honeypad.NoteListFragment"
+        android:id="@+id/list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <fragment
+        android:name="com.example.android.honeypad.NoteEditFragment"
+        android:id="@+id/note_detail_container"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>
+</script></p>
+<p>これでスマートフォンの起動画面（ノートリスト画面）（NotepadActivity)からノート編集画面に遷移することができました。ここでTitleとBodyに文章をいれて、Confirm ボタンを押すと保存されますが、ノートリスト画面に戻りません。これはNoteEdit を Fragment 対応したときにタブレット向けしか想定しておらず、Confirm ボタンを押したときの動作として、保存を行うことしか実装されていないためです。タブレットの場合は、左側にノートリスト画面があるため、保存すればすぐに新しいノートのタイトルが追加されて反映されるので問題ないですが、スマートフォン向けの場合は保存を行ったあとにノートリスト画面に戻ってほしいため、この機能を NoteEditFragment に追加します。</p>
+<p>さて、この機能はどのように実現すればよいでしょうか？何も考えずに実現しようとすると、NoteEditFragment にタブレットかスマートフォンかの判断ロジックをいれて、スマートフォンの場合に Activity を finish() するという以下のような実装を行いそうです。ここで判断ロジックにisHoneycombTablet() を使っている理由は、、前回のエントリ「<a href="http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a>」を参照ください。</p>
+<pre class="brush:java">
+    private void saveNote() {
+        // save/update the note
+        ContentValues values = new ContentValues(2);
+        values.put(NotesProvider.KEY_TITLE, mTitleText.getText().toString());
+        values.put(NotesProvider.KEY_BODY, mBodyText.getText().toString());
+        if (mCurrentNote != null) {
+            getActivity().getContentResolver().update(mCurrentNote, values,
+                    null, null);
+        } else {
+            getActivity().getContentResolver().insert(
+                    NotesProvider.CONTENT_URI, values);
+        }
+        Toast.makeText(getActivity(), "Note Saved", Toast.LENGTH_SHORT).show();
+        if( UIUtils.isHoneycombTablet(getActivity()) ){
+                getActivity().finish();
+        }
+    }
+</pre>
+<h5>FragmentとActivityの役割分担</h5>
+<p>この方法でも実現は可能ですが、Fragment の導入された目的に照らし合わせるとよろしくありません。</p>
+<p>ここで今一度、ActivityとFragmentの関係について考えてみたいと思います。Fragmentが導入された経緯は、スマートフォンとタブレットという画面サイズが大幅に異なる２つの製品群に対して、いままでのActivityで画面を開発していくというスタイルのままではスマートフォン向けアプリとタブレット向けアプリに対してそれぞれの画面レイアウトをもったActivityを２つ開発していく必要があり、開発者にとっては大変な負担になっていくところでした。</p>
+<p>そこで、honeycomb （<a href="http://android-developers.blogspot.com/2011/03/fragments-for-all.html">Gingerbread 以下向けにも互換パッケージを提供</a>）から Fragment という概念を導入し、画面を構成するActivityよりも概念的に小さく、ユーザに提供する機能単位で実装を行えるFragment の提供を開始しました。</p>
+<p> Fragment はユーザに提供する機能を実装し、ActivityはFragmentの要素をいつ、どこに利用するかの管理や、Androidのお家芸であるIntentの処理を担当することによって、ソフトウェアのコンポーネント化を進めて、再利用性を向上し、ユーザに有用なアプリを提供していけるようになる仕組みです。</p>
+<p>ということから考えると、上記のFragmentのなかでUtils.isHoneycombTablet()の判断ロジックをもって、Activityの画面遷移を操作していることは、Fragment が Activity の役割である画面遷移やIntentの処理を行っていることになり、本来の趣旨から外れてしまいます。</p>
+<p>そのため、これらの処理は、Activity 側で実装を行い、Fragment 側はActivity の機能を呼び出す仕組みにします。</p>
+<p>具体的なやり方としては、Fragment内でコールバックメソッドを定義し、Activityがそのコールバックメソッドを必ず実装するように定義することによって実現します。</p>
+<p>この仕組みについては、<a href="http://developer.android.com/guide/topics/fundamentals/fragments.html#EventCallbacks">Creating event callbacks to the activity（英語）</a>か<a href="http://www.techdoctranslator.com/android/guide/activities/fragments#EventCallbacks">ソフトウェア技術ドキュメントを勝手に翻訳：アクティビティとのやり取り：アクティビティへのイベントコールバックの作成</a>に紹介があります。</p>
+<p>NoteEditFragment.java に追加するコールバックメソッドは以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditFragment extends Fragment {
+
+    public interface OnNoteSavedListener {
+        public void onNoteSaved();
+    }
+</pre>
+<p>これを Activity で implements して実装します。注意点としては、Activityに対して実装を強制するため NoteEditFragment 内でこのコールバックメソッドが実装されていなければ、ClassCastException を発行して実行時例外が発生し、実行できないようにしています。</p>
+<p>上記の実行時例外の発行は、以下のようなコードで実現しています。</p>
+<pre class="brush:java">
+public class NoteEditFragment extends Fragment {
+...
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnNoteSavedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnNoteSavedListener");
+        }
+
+    }
+</pre>
+<p>NoteEditFragment にコールバックインタフェースに追加ができれば、以下のようにそのコールバックを呼び出すように変更します。</p>
+<pre class="brush:java">
+    private void saveNote() {
+        // save/update the note
+        ContentValues values = new ContentValues(2);
+        values.put(NotesProvider.KEY_TITLE, mTitleText.getText().toString());
+        values.put(NotesProvider.KEY_BODY, mBodyText.getText().toString());
+        if (mCurrentNote != null) {
+            getActivity().getContentResolver().update(mCurrentNote, values,
+                    null, null);
+        } else {
+            getActivity().getContentResolver().insert(
+                    NotesProvider.CONTENT_URI, values);
+        }
+        Toast.makeText(getActivity(), "Note Saved", Toast.LENGTH_SHORT).show();
+        // イベントをホストのアクティビティに送信する
+        mListener.onNoteSaved();
+    }
+</pre>
+<p>NoteEditFragment でコールバックの実装を強制することによって、それを利用する２つのActivityで implements する必要がでてきました。</p>
+<p>NoteEditActivity では、本来やりたかった保存時にActivityを終了して、ノートリスト画面に戻るという機能を実現したいため、以下のように onNoteSaved() 内で Activity を終了する finish() を実行します。</p>
+<p><script type="syntaxhighlighter" class="brush: java" >
+public class NoteEditActivity extends FragmentActivity implements
+        NoteEditFragment.OnNoteSavedListener {
+    @Override
+    public void onNoteSaved() {
+        finish();
+    }
+</script></p>
+<p>NotepadActivity では、現状通り特になにもすることはないので、以下のように空のまま実装します。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    public void onNoteSaved() {
+        // do nothing
+    }
+</pre>
+<p>これでスマートフォンとタブレットの両方でノート編集画面でノートを追加することができるようになりました。</p>
+<p>次は、スマートフォンの起動画面のノートリスト画面ですでに作成済みのノートをクリックした場合に追加編集できる機能を実現します。</p>
+<p>現状では、ノートリストを選択した場合、NoteListFragment の onListItemClick() メソッドが呼び出されます。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+...
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Uri noteUri = ContentUris.withAppendedId(NotesProvider.CONTENT_URI, id);
+        mContainerCallback.onNoteSelected(noteUri);
+    }
+</pre>
+<p>onListItemClick() メソッドの中でさきほどもあったような mContainerCallback.onNoteSelected(noteUri); のようにコールバックインタフェースを実行しています。このコールバックは以下のように定義されています。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+
+    public interface NoteListEventsCallback {
+        public void onNoteSelected(Uri noteUri);
+
+        public void onNoteDeleted();
+    }
+</pre>
+<p>このコールバックインターフェースは誰が実装しているかを調べてみると、NoteListFragment を利用している Activity で実装していることが以下からわかります。</p>
+<pre class="brush:java">
+public class NoteListFragment extends ListFragment {
+...
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            // check that the containing activity implements our callback
+            mContainerCallback = (NoteListEventsCallback) activity;
+        } catch (ClassCastException e) {
+            activity.finish();
+            throw new ClassCastException(activity.toString()
+                    + " must implement NoteSelectedCallback");
+        }
+    }
+</pre>
+<p>NoteListFragment を利用しているActivityは、NotepadActivity１つのため、こちらを見てみます。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+...
+    @Override
+    public void onNoteSelected(Uri noteUri) {
+            showNote(noteUri);
+    }
+
+    private void showNote(final Uri noteUri) {
+        // check if the NoteEditFragment has been added
+        FragmentManager fm = getFragmentManager();
+        NoteEditFragment edit = (NoteEditFragment) fm.findFragmentByTag("Edit");
+        if (edit == null) {
+            // add the NoteEditFragment to the container
+            FragmentTransaction ft = fm.beginTransaction();
+            edit = new NoteEditFragment();
+            ft.add(R.id.note_detail_container, edit, "Edit");
+            ft.commit();
+        } else if (noteUri == null) {
+            edit.clear();
+        }
+
+        if (noteUri != null) {
+            edit.loadNote(noteUri);
+        }
+    }
+</pre>
+<p> NoteListFragment のリスト項目のクリックから onNoteSelected() コールバックインタフェースが実行されて、showNote(noteUri);が実行されます。</p>
+<p>この中で FragmentManager を利用して fragment の管理を行っています。この処理は、2ペイン構成の場合の処理がモロに記載されているため、スマートフォン向けには不必要な処理です。</p>
+<p>そのため、onNoteSelected() コールバックインタフェース内でスマートフォンかタブレット判断ロジックを利用して、処理を分岐させます。分岐させたスマートフォン側の処理では、ノート編集画面を起動するように実装します。</p>
+<pre class="brush:java">
+public class NotepadActivity extends FragmentActivity implements
+        NoteListEventsCallback, NoteEditFragment.OnNoteSavedListener {
+...
+    @Override
+    public void onNoteSelected(Uri noteUri) {
+        if (UIUtils.isHoneycombTablet(this)) {
+            showNote(noteUri);
+        } else {
+            showNotePhone(noteUri);
+        }
+    }
+
+    // for phone api
+    private void showNotePhone(final Uri noteUri) {
+        Intent i = new Intent(this, NoteEditActivity.class);
+        i.setData(noteUri);
+        startActivity(i);
+    }
+</pre>
+<p>これでスマートフォンのノートリスト画面からノート編集画面に uri を渡して起動することができました。動作確認を行ってみると、どのノートリストを選択しても、TitleとBodyは表示されずに新規作成扱いになってしまいます。</p>
+<p>これはまだNoteEditActivity 側で受信した Intent の処理を行っていないためです。</p>
+<p>Activity と Fragment の役割分担の上記で話をしましたが、今回のようなバグを追うときにも Intent の処理の場合は、基本的に Activity が担当するため、呼び出す前のActivityが正しく送っていることが確認できていれば、デバッグを呼び出した後のActivityに注力することができます。</p>
+<p><p>NoteEditActivity の onCreate() 内で Intent の受信を行っていないことが原因と判明したため、以下のようなロジックを onCreate() 内に追加します。</p>
+<p><script type="syntaxhighlighter" class="brush: java" >
+Intent intent = getIntent();
+Uri uri = intent.getData();
+...
+NoteEditFragment edit = new NoteEditFragment();
+edit.loadNote(uri);
+</script></p>
+<p>追加後のNoteEditActivity は以下のようになります。</p>
+<pre class="brush:java">
+public class NoteEditActivity extends FragmentActivity implements
+        NoteEditFragment.OnNoteSavedListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.note_edit_phone);
+        Intent intent = getIntent();
+        Uri uri = intent.getData();
+
+        FragmentManager fm = getSupportFragmentManager();
+        NoteEditFragment edit = new NoteEditFragment();
+        edit.loadNote(uri);
+        // add the NoteEditFragment to the container
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.note_detail_container, edit, "Edit");
+        ft.commit();
+
+    }
+
+    @Override
+    public void onNoteSaved() {
+        finish();
+    }
+
+}
+</pre>
+<h4>おわりに</h4>
+<p>これで目的の1apkでタブレット向けとスマートフォン向けのアプリを作成することができました。今回のコードラボのアプリがActivityベースのスマートフォン向けアプリをスマートフォン向け構成を維持しないままにタブレット向けアプリにするというものでした。そして Fragment 実装に置き換えたうえで２ペイン対応のタブレット向けアプリにするというものでした。それをあとから、1apkでスマートフォンとタブレットの両対応アプリにするという一直線ではなく、横道にそれて一度喫茶店で休憩したあとに戻りながら目的地に歩いていくというやり方でした。</p>
+<p>本来なら、Activity ベースのスマートフォン向けアプリがベースになるなら、スマートフォン向けアプリのままで Fragment 対応を実施して、スマートフォン向け動作を確保しながら、徐々にタブレット向けアプリを開発していくというスタイルがよいと思います。</p>
+<p>今回作ったアプリは eclipse のプロジェクト形式で整理したうえ（まだぐちゃぐちゃなので）で公開したいと思います。もし急ぎでほしいという方は（そんな人いないと思いますが）ご連絡頂ければ先に展開させて頂きます。</p>
+<p>「Android Layout Cookbook アプリの価値を高める開発テクニック」の作者の方も<a href="http://y-anz-m.blogspot.com/2011/07/android-developer-lab-2011-tokyo.html">Y.A.M の 雑記帳：Android Developer Lab Tokyo 2011 のノートパッドをカスタマイズしてみた。</a>（こちらのほうが相当レベルは上ですが。。。大変勉強になります。）でカスタマイズされています。</p>
+<p>Fragment についてはまだ日本でAndroidタブレットが普及していない事情もあり、利用されているアプリは少ないと思います。Fragmentは、画面を持たないものも開発可能ということでタブレットアプリとスマートフォンアプリの両方で利用できる汎用ライブラリ的なものを作るプラットフォームにもなれるのではないかと考えています。ADL2011で google の android developer Advocate の方が次期バージョンの IceCreamSandwich(ICS) でも Fragment は推進していくのでどんどん Fragment を利用すいてアプリを開発してくださいとおっしゃっていました。そういうことを踏まえると、今後Androidアプリを開発していくにあたって Fragment は避けて通れないものになっていく予感がしますし、使いこなせるようになれば大変強い武器になっていくのではないかと考えています。</p>
+<p>今後の色々と調査結果を紹介していければと思っています。Fragment使ってAndroidアプリを作っていきましょう！！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/393/android-fragment2activity/" rel="bookmark" class="wherego_title">Android FragmentからのActivity呼び出し方法</a></li><li><a href="http://andbrowser.com/android-sdk/2733/what-key-point-of-eclipse-export-to-android-stdio-build/" rel="bookmark" class="wherego_title">eclipseの既存アプリをAndroid Stdio形式に変更する場合のポイント</a></li><li><a href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/" rel="bookmark" class="wherego_title">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/feed/</wfw:commentRss>
+		<slash:comments>17</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/226/1apk-tablet-phone-development-3/" />
+	</item>
+		<item>
+		<title>1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</title>
+		<link>http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/</link>
+		<comments>http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/#comments</comments>
+		<pubDate>Mon, 18 Jul 2011 03:37:01 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=192</guid>
+		<description><![CDATA[「1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法」で紹介した1apkにするためにタブレットとスマートフォンの判断ロジックを準備する必要があると紹介しました。前回紹介した判断ロジックがなぜそ [...]]]></description>
+			<content:encoded><![CDATA[<p>「<a href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a>」で紹介した1apkにするためにタブレットとスマートフォンの判断ロジックを準備する必要があると紹介しました。前回紹介した判断ロジックがなぜそのような実装になっているかを紹介します。</p>
+<pre class="brush:java">
+public static boolean isHoneycomb() {
+    return Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB;
+}
+
+public static boolean isHoneycombTablet(Context context) {
+    return isHoneycomb() &#038;&#038; (context.getResources().getConfiguration().screenLayout
+            &#038; Configuration.SCREENLAYOUT_SIZE_MASK)
+            == Configuration.SCREENLAYOUT_SIZE_XLARGE;
+}
+</pre>
+<p>上記の isHoneycomb()と isHoneycombTablet() の判断ロジックを解説するために、以下の表で端末の対応APIバージョンと端末のインチサイズの関係を整理しました。(1)から(6)についてそれぞれ紹介します。世の中に対応端末が多い順番に紹介します。</p>
+<style>
+table {
+	border-collapse: collapse;
+}
+th {
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #FFEAEA;
+}
+th.codename{
+	background-color: #D5FFDF;
+}
+th.apilevel{
+	background-color: #FFFFBF;
+}
+td {
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #ffffff;
+}
+td.empty{
+	background-color: #aaaaaa;
+}
+</style>
+<table>
+<thead>
+<tr>
+<th colspan="2">
+				端末インチサイズ
+			</th>
+<th>
+				xlarge(Extra large)<br />
+				7～10インチ
+			</th>
+<th>
+				xlarge以外（large,normal,small)<br />
+				2～7インチ
+			</th>
+</tr>
+<tr>
+<th colspan="2">
+				端末説明
+			</th>
+<th>
+				タブレット画面
+			</th>
+<th>
+				スマートフォン画面
+			</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="codename">
+				コードネーム
+			</th>
+<th class="apilevel">
+				APIレベル
+			</th>
+<td class="empty">
+			</td>
+<td class="empty">
+			</td>
+</tr>
+<tr>
+<th class="codename">
+				GigerBread(GB)(2.3.4)系とそれ以前
+			</th>
+<th class="apilevel">
+				10 以下
+			</th>
+<td>
+				(1) 現在存在しないが、今後発売される可能性がある
+			</td>
+<td>
+				(2) 多数存在する
+			</td>
+</tr>
+<tr>
+<th class="codename">
+				Honeycomb(HC)(3.0)系
+			</th>
+<th class="apilevel">
+				11 以上
+			</th>
+<td>
+				(3) いくつか存在する
+			</td>
+<td>
+				(4) 存在しない
+			</td>
+</tr>
+<tr>
+<th class="codename">
+				IceCreamSandwich(ICS)(バージョン番号未定）系
+			</th>
+<th class="apilevel">
+				?? 以上
+			</th>
+<td>
+				(5) 発売予定
+			</td>
+<td>
+				(6) 発売予定
+			</td>
+</tr>
+</tbody>
+</table>
+<p>xlargeなどの詳細な説明は、<a href="http://developer.android.com/guide/practices/screens_support.html">公式ドキュメント（英語）のSupporting Multiple Screens</a>の「Range of screens supported」を読んでみてください。<a href="http://www.techdoctranslator.com/android/practices/screens_support">ソフトウェア技術ドキュメントを勝手に翻訳(2. 多様な画面のサポート)</a>に日本語訳がありますのでこちらもお役に立つと思います。</p>
+<p>(2)は、現在発売されているAndroid端末のほとんどが該当するものでいまAndroidマーケットにあるアプリのこの端末サイズに対応しているものがほとんどです。</p>
+<p>(3)は最近発売されたAndroidタブレット端末で、xoom や Galaxy tab 10.1 や Optimus pad が該当します。</p>
+<p>(4)は、該当する端末が今も将来も発売されません。理由はグーグルが honeycomb 3.0 系はタブレット向けのみでスマートフォン向けのリリースは実施しない、スマートフォン向けの次期OSは、IceCreamSandwich(ICS)(バージョン番号未定）で対応するという発表を行っているためです。</p>
+<p>(1)は、現在のGBの最新バージョンが2.3.4ですが、GBも今後アップデートされる可能性があり、端末メーカーから発売される可能性があるためアプリ開発者としては対応しておく必要があります。（発売後に対応してもよいですが、事前に準備できることはしておきましょう）</p>
+<p>(5),(6)については、まだ発表もされていませんが、現段階でわかっていることは、APIバージョンは11以上の数字が割り当てられますし、タブレット向けとスマートフォン向けのインチサイズの両方に対応されるということです。</p>
+<p>では、 isHoneycomb()と isHoneycombTablet() の判断ロジックがどれに対応しているかというと、以下のようになります。</p>
+<p>isHoneycomb()は、(3),(5),(6)を判断するために利用します。</p>
+<p>isHoneycombTablet() は、(3),(5)を判断するために利用します。</p>
+<p>isHoneycombTablet() の中で  isHoneycomb() と実行端末のスクリーンサイズの取得、比較を行っています。これによって、将来(6)の端末が出てきたときに   isHoneycomb() だけの判断ロジックではタブレット向けの画面レイアウトになってしまい、3インチのスマートフォン向けで2画面構成のアプリになり大変使いづらくなってしまいます。それをさけるために、  isHoneycomb()だけでなく、実行端末のスクリーンサイズを参照して、適切は画面レイアウトをユーザに提供する必要があります。</p>
+<p>もちろん、開発スピードを上げるために、いま出ている端末だけの対応に注力して、  isHoneycomb()のみを利用することもよいと思います。<br />
+必ず上記のロジックを使わないといけないということではなく、きちんと開発するアプリの目的や対象端末、対象期間、対象とするユーザに応じて、適切な判断ロジックを利用して、1apkでタブレット向けとスマートフォン向けのアプリを開発していく必要があるということです。</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/" rel="bookmark" class="wherego_title">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></li><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2164/december-1-2013-android-platform-versions/" rel="bookmark" class="wherego_title">KitKat登場。2013年12月2日時点のAndroid Platform バージョンの割合</a></li><li><a href="http://andbrowser.com/android-sdk/platform-versions-android-sdk/2140/october-2-2013-android-platform-versions/" rel="bookmark" class="wherego_title">JB 4.3が登場。2013年10月2日時点のAndroid Platform バージョンの割合</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/" />
+	</item>
+		<item>
+		<title>1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</title>
+		<link>http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/</link>
+		<comments>http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/#comments</comments>
+		<pubDate>Thu, 14 Jul 2011 16:03:34 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=186</guid>
+		<description><![CDATA[「Android デベロッパーラボ 東京 2011」に参加して、Androidタブレット向けアプリ開発方法を聞いてきました。その１とその２で内容を紹介しています。
+このイベントの codelab ではスマートフォン向けア [...]]]></description>
+			<content:encoded><![CDATA[<p>「Android デベロッパーラボ 東京 2011」に参加して、Androidタブレット向けアプリ開発方法を聞いてきました。<a href="http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/">その１</a>と<a href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/">その２</a>で内容を紹介しています。</p>
+<p>このイベントの codelab ではスマートフォン向けアプリをタブレット向けアプリに変更する実践を行いました。さらにそれを発展させて、1apkでタブレット向けとスマートフォン向けアプリに対応させる方法を検討してみました。<br />
+codelab でスマートフォン向けアプリをタブレット向けアプリに変更して、以下のようなクラス図になりました。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_step7End2.png" alt="adl2011jpのstep7時点のクラス図" title="ClassDiagram_step7End2" width="962" height="474" class="alignnone size-full wp-image-182" /></p>
+<p>1apkで両対応させるために、以下の方針でクラス設計を行います。<br />
+タブレット向けアプリ： 1 Acrivity に 複数の Fragment を割り当てる（変更なし）<br />
+スマートフォン向けアプリ： 1 Activity に 1つの Fragment を割り当てる</p>
+<p>更新したクラス図は以下のようになる予定です。タブレット向けとスマートフォン向けのActivity が明確になるように、パッケージをそれぞれ tablet と phone を追加して、そのパッケージ内に Activity をいれました。緑色のところが今回のために追加・変更した部分です。Fragment を実装した各画面パーツはそのまま上位のパッケージのままとしました。<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_notepad_phonetablet.png" alt="" title="ClassDiagram_notepad_phone&amp;tablet" width="905" height="784" class="alignnone size-full wp-image-187" /></p>
+<p>ここで１つ重大な課題が発生しました。1apkのため、アプリ起動時に起動した端末がタブレットかスマートフォンかを判定するロジックが必要になりました。<br />
+これについては、
+<p>Google IO 2011 のスケジュールアプリ(<a href="http://code.google.com/p/iosched/">http://code.google.com/p/iosched/</a>)の中で Honeycomb 3.1かつ大画面タブレット と それ以外（大半がSDK Version 10(GingerBread 2.3.3)以内でしょうが）の判定ロジックがあり、参考になります。今回はこのあり方を採用させて頂くことになると思います。</p>
+<p>年末に出るといわれている Ice Cream Sandwich (ICS)(バージョン番号不明）ではタブレットとスマートフォンの両方に標準対応するそうで、このあたりの判定ロジックも提供されると思うので、それまではこのやり方が利用できそうです。</p>
+<pre class="brush:java">
+public static boolean isHoneycomb() {
+    return Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB;
+}
+
+public static boolean isHoneycombTablet(Context context) {
+    return isHoneycomb() &#038;&#038; (context.getResources().getConfiguration().screenLayout
+            &#038; Configuration.SCREENLAYOUT_SIZE_MASK)
+            == Configuration.SCREENLAYOUT_SIZE_XLARGE;
+}
+</pre>
+<p>クラス設計を行ったクラスの具体的な実装はまた後日紹介する予定です。</p>
+<p>以上</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/" rel="bookmark" class="wherego_title">Androidタブレット向けアプリ開発方法　その２</a></li><li><a href="http://andbrowser.com/development/knowhow/192/1apk-tablet-phone-development-2/" rel="bookmark" class="wherego_title">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法　その２</a></li><li><a href="http://andbrowser.com/android-sdk/1772/android-development-tools-adt-22-release-info/" rel="bookmark" class="wherego_title">ADT 22 ,Tools 22 リリース情報</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/feed/</wfw:commentRss>
+		<slash:comments>15</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/" />
+	</item>
+		<item>
+		<title>Androidタブレット向けアプリ開発方法　その２</title>
+		<link>http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/</link>
+		<comments>http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/#comments</comments>
+		<pubDate>Fri, 08 Jul 2011 01:29:52 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=140</guid>
+		<description><![CDATA[Android Developer Lab 2011のコードラボに参加。Google io boot camp でのタブレットアプリ開発のネタの簡易版のトレーニングの全体像がわかるようなに解説をいれました。
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">「Android デベロッパーラボ 東京 2011」</a>に参加して、Androidタブレット向けアプリ開発方法を聞いてきました。<a href="http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/">その１</a>では、codelab で実際に利用した資料を使って、スマートフォン向けアプリをタブレット向けアプリに変更する実践を行いました。</p>
+<h4>クラス図で全体像を把握しよう</h4>
+<p>資料だけでは全体像がわかりづらいため、トレーニングの全体像を把握するために変更前のスマートフォンアプリのクラス図と変更後のタブレット向けのクラス図を書きました。これをみてわかるように、既存のActivityはFragmentを継承したクラスに変更され、新しくActivity(NotepadActivity)(android-support-v4.jarを利用する場合はFragmentActivityを継承すること)を作成しています。</p>
+<p>スマートフォン向けに作っていた Activity はタブレット向けアプリでは Fragment に相当していて、ListActivity は ListFragment に相当しています。<br />
+ContentProvider 関連は変更がないため、スマートフォン向けアプリで利用していたものがそのまま再利用できるということがわかります。<br />
+いままでスマートフォン向けにアプリを開発していてDBを作成していた方には朗報ですね。</p>
+<p>今回のトレーニングでは、スマートフォン向けアプリをタブレット向けアプリに変更するというものでしたが、１つのアプリでスマートフォン向けとタブレット向けに両対応することも可能なようです。</p>
+<p>Google IO 2011 のスケジュールアプリ(<a href="http://code.google.com/p/iosched/">http://code.google.com/p/iosched/</a>)はそのような作りになっています。このアプリは嬉しいことにオープンソースになっているので中身を見ることができます。<br />
+スマートフォン向けとタブレット向けの両対応しているアプリとして大変参考になります。</p>
+<p>いきなりソースコードから見始めると全体像がつかめずわかりづらいと思います。幸運なことに全体像をつかむのに有効な資料を公開してくれている方がおられます。<a href="http://www.slideshare.net/tkawashita/iosched">Iosched読書会向け資料</a>（途中で力つきられたようで途中までの分析のようですが）で全体像を掴んでからソースコードを見ていくとよいと思います。</p>
+<h4>変更前と変更後のクラス図</h4>
+<p>■（変更前）スマートフォン向けノートパッドサンプルアプリのクラス図<br />
+<img class="alignnone size-thumbnail wp-image-141" title="ClassDiagram_step1_adl2011jp" src="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_start.png" alt="adl2011jp STEP1時点のクラス図" /></p>
+<p>■（変更後）タブレット向けノートパッドサンプルアプリのクラス図<br />
+<img src="http://andbrowser.com/wp-content/uploads/2011/07/ClassDiagram_step7End2.png" alt="adl2011jpのstep7時点のクラス図" title="ClassDiagram_step7End2" width="962" height="474" class="alignnone size-full wp-image-182" /></p>
+<p>Fragmentについては以下のサイトが役に立ちます。</p>
+<ul>
+<li><a href="http://developer.android.com/reference/android/app/Fragment.html">Android SDK &gt; Fragment(英語）</a></li>
+<li><a href="http://www.techdoctranslator.com/android/guide/activities/fragments">ソフトウェア技術ドキュメントを勝手に翻訳: Android 開発ガイド&gt;1.1 フラグメント</a></li>
+<li><a href="http://techbooster.jpn.org/andriod/application/3220/">Techbooster: Fragmentを使ってMenuを動的に作成する</a></li>
+<li><a href="http://techbooster.jpn.org/andriod/application/3483/">Techbooster: Fragmentを動的に変化させる</a></li>
+<li><a href="http://y-anz-m.blogspot.com/2011/02/android-30-fragments-api.html">Y.A.M の 雑記帳: The Android 3.0 Fragments API</a></li>
+<li><a href="http://y-anz-m.blogspot.com/2011/05/androidfragment_19.html">Y.A.M の 雑記帳: Android　Fragment を使う</a></li>
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/au-kddi/525/au-one-market-reinstall/" rel="bookmark" class="wherego_title">au one Marketアプリの再インストール方法</a></li><li><a href="http://andbrowser.com/development/knowhow/1016/android-market-google-play-apk-upload-error-integer-value-to-android-manifest/" rel="bookmark" class="wherego_title">AndroidMarket(Google Play)にアプリをアップロードが失敗する条件（未解決）</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/" />
+	</item>
+		<item>
+		<title>Androidタブレット向けアプリ開発方法</title>
+		<link>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/</link>
+		<comments>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/#comments</comments>
+		<pubDate>Mon, 04 Jul 2011 11:57:30 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=111</guid>
+		<description><![CDATA[Android Developer Lab 2011のコードラボに参加しました。ドコモ様からもらったoptimus pad を使って、Google io boot camp でのタブレットアプリ開発のネタの簡易版を実践しました。
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">「Android デベロッパーラボ 東京 2011」</a>に参加して、Androidタブレット向けアプリ開発方法を聞いてきました。</p>
+<p>ハッシュタグは<br />
+#adl2011jp<br />
+です。</p>
+<p>Togetterは<br />
+<a href="http://togetter.com/li/156662">#adl11jp Android Developer Lab 2011 7/2-3</a><br />
+です。</p>
+<p>以下のソースコードをベースに既存のスマートフォン向けのアプリ（Activityベース）をタブレット向けに変更していきます。<br />
+<a href="http://dl.dropbox.com/u/231329/android/HoneypadADLTokyo.zip">コードラボ向けソースコード</a><br />
+をダウンロードしてください。</p>
+<p>手順は<a href="https://docs.google.com/document/pub?id=1S_qckjHViEnZUAcQAlocdIxRjfCwKHE0YCNnrT-Okzc">Honeypad Codelab Steps — Tokyo 2011</a>に書かれていますが自分の復習のために以下に記載しておきます。<br />
+以下の情報だけでは今回のトレーニングの全体像がつかみづらく、いま何をしているのかがわかりにくいため、<a href="http://andbrowser.com/development/140/androiddeveloperlab2011-adl11jp-codelab-part2/">Androidタブレット向けアプリ開発方法その２</a>に全体像がわかるように変更前と変更後のクラス図を記載しておきました。参考にしてください。</p>
+<p><h4><strong>Honeypad コードラボ 東京2011　目次</strong></h4>
+<ul>
+<li><a href="#step1">Step 1. ターゲットをHoneycombにしよう</a></li>
+<li><a href="#step2">Step 2. アクションバーを利用しよう</a></li>
+<li><a href="#step3">Step 3. Fragments（Honeycomb 3.0からの新機能）を利用して新しいActivityを作成しよう</a></li>
+<li><a href="#step4">Step 4. Fragment対応するために NoteEdit クラスを変更しよう</a></li>
+<li><a href="#step5">Step 5. Fragment対応するために Notepad クラスを変更しよう</a></li>
+<li><a href="#step6">Step 6. 新しいActivityのために Manifest を更新しよう</a></li>
+<li><a href="#step7">Step 7. Activityと Fragments をつなげよう。パート１</a></li>
+<li><a href="#step8">Step 8. Activityと Fragments をつなげよう。パート２</a></li>
+<li><a href="#step9">Step 9. 縦画面レイアウトに対応しよう</a></li>
+<li><a href="#step10">最終のクラス図とレイアウト図</a></li>
+</ul>
+<h4><a name="step1">Step 1. ターゲットをHoneycombにしよう</a></h4>
+<p><strong>Step1のゴール</strong></p>
+<ul>
+<li>プロジェクトのビルドターゲットをAPI level 11に変更する
+<li>minSdkVersionを API level 11 として明記する
+<li>Set the android &#8220;Theme.Holo.Light&#8221; theme on the application
+<li>アプリケーションのテーマを &#8220;Theme.Holo.Light&#8221;に設定する
+<li>おまけ（余裕があれば）：ハードウェアアクセラレーションをオンにする
+</ul>
+<p><strong>実施手順</strong></p>
+<ul>
+<li>AndroidManifest.xml の  タグのコメントを外す
+<pre class="brush:java">
+&lt;uses-sdk android:minSdkVersion="11" /&gt;
+&lt;activity android:name=".Notepad"
+          android:label="@string/app_name"
+          android:theme="@android:style/Theme.Holo.Light"
+          android:hardwareAccelerated="true"&gt;
+</pre>
+</ul>
+<h4><a name="step2">Step 2. アクションバーを利用しよう</a></h4>
+<p><strong>Step2のゴール</strong></p>
+<ul>
+<li>アクションとテキストを&#8217;Add Note&#8217; オプションメニューを表示する
+<li>適切なアイコンを追加する
+</ul>
+<p><strong>実施手順</strong></p>
+<ul>
+<li>Notepad.java から古いonCreateOptionsMenuを削除して、新しいonCreateOptionsMenuのコメントを削除する
+<pre class="brush:java">
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuItem add = menu.add(0, MENU_ADD_ID, 0, R.string.menu_add);
+        add.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM
+                        | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        add.setIcon(R.drawable.ic_menu_add);
+        return true;
+}
+</pre>
+<li>おまけ（余裕があれば）：メニューをXMLで定義する
+</ul>
+<h4><a name="step3">Step 3. Fragments（Honeycomb 3.0からの新機能）を利用して新しいActivityを作成しよう</a></h4>
+<p><strong>Step3のゴール</strong></p>
+<ul>
+<li>NotepadActivityを作成する
+<li>プロジェクトに入っているレイアウトファイルの notepad.xml を利用する
+<li>NotepadActivityの onCreate メソッドをオーバーライドする
+<li>notepad.xml を content view にセットする
+</ul>
+<p><strong>実施手順</strong></p>
+<ul>
+<li>NotepadActivity.java の中で、クラス定義と onCreate() メソッドのコメントを外す。
+<li>（注）onCreate() メソッド以外のメソッドのコメントは外さないでください！！
+<pre class="brush:java">
+public class NotepadActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.notepad);
+    }
+}
+</pre>
+</ul>
+<h4><a name="step4">Step 4. Fragment対応するために NoteEdit クラスを変更しよう</a></h4>
+<p><strong>概要</strong></p>
+<ul>
+<li>Fragmentクラスを継承する
+<li>空のコンストラクタを追加する
+<li>onCreateView()を実装する
+<li>目的のレイアウトをインフレートして、それを返す
+<pre class="brush:java">
+   View v = inflater.inflate(R.layout.note_edit, container, false);
+</pre>
+<li>これでsetContentViewを呼ぶ必要はない
+<li>onCreateView()に初期化ロジックを移動して、onCreate()メソッドを削除する
+<li>１つのスクリーン向けに setTitle() を行う必要はないでしょう
+<li>findViewById() メソッドコールを実施して、view を利用する
+<li>Fragmentは、Context を拡張するものではありません。例えば、Content Resolver にアクセスするために必要な場合など。
+<li>Context にアクセスする必要な場合は、上位（親の）Activityから取得する
+<li>NoteEdit スクリーンを閉じるためにコードを削除する
+<li>intent で起動されるのではなく、起動intent によって特定された Data Uri の蓄積も削除する
+<li>NoteEditをNoteEditFragment に名前変更する
+</ul>
+<p><strong>実施事項</strong></p>
+<ul>
+<li>NoteEdit.javaの中で、loadNote()とclear()メソッド以外のすべてのコメントを外す
+<li>NoteEdit を NoteEditFragment に名前変更する
+<li>おまけ（余裕があれば）：タブレット向けの fragment を widgets に最適化する
+<li>テキスト書体とパディングを適切に設定する
+<li>widgetにバックグラウンドボーダーを設定する
+</ul>
+<h4><a name="step5">Step 5. Fragment対応するために Notepad クラスを変更しよう</a></h4>
+<p><strong>概要</strong></p>
+<ul>
+<li>ListFragment を継承する
+<li>空のコンストラクタを追加する
+<li>viewが作成された後の初期化場所を変更する
+<li>onActivityCreated() メソッドをオーバーライドする
+<li>onCreate()メソッドから初期化ロジックを移動する
+<li>onCreate()メソッドを削除する
+<pre class="brush:java">
+  @Override
+  public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        fillData();
+        registerForContextMenu(getListView());
+  }
+</pre>
+<li>Fragment は Context を継承していません。そのため、Content Resolver を得るためには、上位（親の）Activityから取得する必要あり。
+<li>オプションメニューのメソッド(onCreateOptionsMenu() &#038; onMenuItemSelected() ) を NotepadActivity クラスに移動する
+<li>メニューのアイテムIDも移動すること
+<li>createNote()メソッドコールを削除する
+<li>createNote() メソッドを削除する
+<li>Notepad　クラスを NoteListFragment クラスに名前変更する
+</ul>
+<p><strong>実施事項</strong></p>
+<ul>
+<li>Notepad.javaの中で、NoteListEventsCallback インタフェース, mContainerCallback フィールド, onAttach() メソッド以外のコードのほとんどのコメントを外す
+<li>NoteListFragment クラスに名前変更する
+<li>createNote()メソッドを削除する
+<li>おまけ（余裕があれば）：タブレット向けの notes_row エントリに最適化する
+<li>&#8216;activated&#8217; として選択済み row を設定する
+</ul>
+<h4><a name="step6">Step 6. 新しいActivityのために Manifest を更新しよう</a></h4>
+<p><strong>step6のゴール</strong></p>
+<ul>
+<li>NotepadActivityをメインアクティビティに変更する
+<li>NoteEditFragment のActivity 継承を削除する
+</ul>
+<p><strong>実施事項</strong></p>
+<ul>
+<li>AndroidManifest.xml の中で、２つめの<application>タグのコメントを外して、NoteEditFragment 向けの<activity>タグを削除する
+<pre class="brush:java">
+<activity android:name="NotepadActivity"
+          android:label="@string/app_name"
+          android:theme="@android:style/Theme.Holo.Light"
+          android:hardwareAccelerated="true">
+</pre>
+</ul>
+<h4><a name="step7">Step 7. Activityと Fragments をつなげよう。パート１</a></h4>
+<p><strong>設計上の留意点</strong></p>
+<ul>
+<li>追加した大半の部品を接続するための実装（コンポーネントを接続するためのコード）
+<li>次のようなUIイベントのルーティングを実施： Fragment (NoteList) &#8211;> Activity &#8211;> Fragment (NoteEdit).
+<li>このルーティングを実装するために、NotepadActivity　にインタフェース定義を実装を追加
+<li>もう１つ（概要より少ない）の方法は NoteList を得るためにNoteEditに直接アクセスする方法。しかし、それでは密結合である。
+<li>コンポーネントを疎結合にするために、NotepadActivity がここでルーターの役割を担う。
+<li>Step7のPart1では、NoteListからNotepadActivityへの接続を実装する
+<li>Step8のPart2では、NotepadActivityからNoteEditへの接続を実装する
+</ul>
+<p><strong>概要</strong></p>
+<ul>
+<li>リスト上のNoteの選択と削除のイベント処理のための(NoteListEventsCallbackを呼ぶために）コールバックインタフェースを定義する
+<pre class="brush:java">
+public interface NoteListEventsCallback {
+        public void onNoteSelected(Uri noteUri);
+        public void onNoteDeleted();
+}
+</pre>
+<li>NotepadActivityの中でインタフェースを実装する
+<li>NoteListFragment は含まれているアクティビティに接続されるときに、インタフェース実装と参照補助を確認する
+<li>この参照のコールバックを実行可能にする
+<pre class="brush:java">
+@Override
+public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+                // check that the containing activity implements our callback
+                mContainerCallback = (NoteListEventsCallback) activity;
+        } catch (ClassCastException e) {
+                activity.finish();
+                throw new ClassCastException(activity.toString()
+                                + " must implement NoteSelectedCallback");
+        }
+}
+</pre>
+<li>Call the relevant callback when a note is selected from the list
+<li>リストからノートが選択されたときに、関連するコールバックを呼び出す
+<pre class="brush:java">
+@Override
+public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Uri noteUri = ContentUris.withAppendedId(NotesProvider.CONTENT_URI, id);
+        mContainerCallback.onNoteSelected(noteUri);
+}
+</pre>
+<li>リストからノートが削除されたときに、関連するコールバックを呼び出す
+<pre class="brush:java">
+@Override
+public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case DELETE_ID:
+                AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
+                                .getMenuInfo();
+                getActivity().getContentResolver().delete(
+                                ContentUris.withAppendedId(NotesProvider.CONTENT_URI,
+                                                info.id), null, null);
+                fillData();
+                mContainerCallback.onNoteDeleted();
+                return true;
+        }
+        return super.onContextItemSelected(item);
+}
+</pre>
+</ul>
+<p><strong>実施事項</strong></p>
+<ul>
+<li>NoteListFragment.java の中で、インタフェース定義をコメントを外す
+<li>NoteListFragment.java の中で、onAttach() メソッドとmContainerCallback フィールドのコメントを外す
+</ul>
+<h4><a name="step8">Step 8. Activityと Fragments をつなげよう。パート２</a></h4>
+<p><strong>概要</strong></p>
+<ul>
+<li>与えられたUriでノートが開くように NoteEditFragment にメソッドを追加する
+<li>関連するメンバの値を Uri に保持する
+<li>フィールドの値を代入する
+<li>もし fragmentが初期化されたときにこのメソッドを呼びたい場合のみ、onCreateView()メソッドの中で状態の初期化を行う前にコールされないようにガードしてください。
+<pre class="brush:java">
+protected void loadNote(Uri noteUri) {
+        mCurrentNote = noteUri;
+        if (isAdded()) {
+                populateFields();
+        }
+}
+</pre>
+<li>NoteEditFragment にテキストフィールドをクリアするためのメソッドを追加する
+<pre class="brush:java">
+protected void clear() {
+        mTitleText.setText(null);
+        mBodyText.setText(null);
+        mCurrentNote = null;
+}
+</pre>
+<li>NotepadActivityの中で、リストからノートが選択されたときにノートの詳細を表示するためにNoteEditFragmentを呼び出す。
+<li>もし NoteEditFragment がアクティビティに追加されていれば、FragmentManager をチェックに利用する
+<li>ヒント：与えられたタグでFragmentをチェックする
+<li>もし、Fragment が見つけられなければ、コンテナーに追加を行う
+<li>タグ上の note_detail_container に NoteEditFragmentの新しいインスタンスを追加するためにFragmentTransaction を利用する
+<li>選択したノートを表示するために NoteEditFragment の新しいメソッドを呼び出す
+<li>もしユーザが&#8217;Add Note&#8217;をクリックした場合は、edit fragment をクリアする
+<pre class="brush:java">
+@Override
+public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        switch (item.getItemId()) {
+        case MENU_ADD_ID:
+                showNote(null);
+                return true;
+        }
+        return super.onMenuItemSelected(featureId, item);
+}
+</pre>
+<pre class="brush:java">
+private void showNote(final Uri noteUri) {
+        // check if the NoteEditFragment has been added
+        FragmentManager fm = getFragmentManager();
+        NoteEditFragment edit = (NoteEditFragment) fm
+                                .findFragmentByTag("Edit");
+        if (edit == null) {
+                // add the NoteEditFragment to the container
+                FragmentTransaction ft = fm.beginTransaction();
+                edit = new NoteEditFragment();
+                ft.add(R.id.note_detail_container, edit, "Edit");
+                ft.commit();
+        } else if (noteUri == null) {
+                edit.clear();
+        }
+
+        if (noteUri != null) {
+                edit.loadNote(noteUri);
+        }
+}
+</pre>
+<li>もし、ユーザがノートを削除する場合、NoteEditFragment を取り除く。
+<pre class="brush:java">
+public void onNoteDeleted() {
+        // remove the NoteEditFragment after a deletion
+        FragmentManager fm = getFragmentManager();
+        NoteEditFragment edit = (NoteEditFragment) fm
+                        .findFragmentByTag("Edit");
+        if (edit != null) {
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.remove(edit);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                ft.commit();
+        }
+}
+</pre>
+<li>おまけ（余裕があれば）：いくつかの画面では UI スレッド上でディスクアクセスを実行している。
+<li>StrictMode上でこれらの場所を発見してみてください。
+<li>そして、これらを修正してください。
+</ul>
+<h4><a name="step9">Step 9. 縦画面レイアウトに対応しよう</a></h4>
+<p><strong>Step9のゴール</strong></p>
+<ul>
+<li>縦画面用のレイアウト向けのフォルダを作成する
+<li>すでに存在する notepad.xml レイアウトをコピーして、縦画面になったときにリストが詳細画面の上に配置されるように修正する
+<li>widthとheightを適切な値に設定する
+</ul>
+<p><strong>実施事項</strong></p>
+<ul>
+<li>コメントアウトされていないところの場合、layout-port/notepad.xml の中で記載されているセクションで vertial(portrait)版に変更する
+</ul>
+<h4><a name="step10">最終のクラス図とレイアウト図</a></h4>
+<p><img src="https://docs.google.com/document/pubimage?id=1S_qckjHViEnZUAcQAlocdIxRjfCwKHE0YCNnrT-Okzc&amp;image_id=1Exhr3DlONkW1PjKQcOWR08QEHPui6vk" alt="" width="480" /></p>
+<p>以上、これであなたも honeycomb マスター！！</p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/android-sdk/1562/receive-admob-profit-for-android-app-no2/" rel="bookmark" class="wherego_title">Androidアプリのadmob収益の受領方法　その２</a></li><li><a href="http://andbrowser.com/development/925/7inch_layout_survey_from_sourcecode/" rel="bookmark" class="wherego_title">Android4.1で追加された7インチレイアウトをソースコードから調査</a></li><li><a href="http://andbrowser.com/development/knowhow/289/eclipse-android-memory-leak-mat-oql/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法　その２ OQL (Object Query Language)利用方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/" />
+	</item>
+		<item>
+		<title>「Android デベロッパーラボ 東京 2011」参加報告</title>
+		<link>http://andbrowser.com/development/96/androiddeveloperlab2011-adl11jp/</link>
+		<comments>http://andbrowser.com/development/96/androiddeveloperlab2011-adl11jp/#comments</comments>
+		<pubDate>Sat, 02 Jul 2011 08:05:14 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[fragment]]></category>
+		<category><![CDATA[honeycomb]]></category>
+		<category><![CDATA[tablet]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=96</guid>
+		<description><![CDATA[Android　Developer Lab 2011に参加してきました。ドコモ様からoptimus pad をもらいました。これでタブレットアプリを開発しまくれます。]]></description>
+			<content:encoded><![CDATA[<p><a href="http://googledevjp.blogspot.com/2011/06/android-2011.html">「Android デベロッパーラボ 東京 2011」</a>に参加してきました。</p>
+<p>一番のサプライズは、Docomo様から <a href="http://www.nttdocomo.co.jp/product/foma/smart_phone/l06c/">Optimas Pad</a> のプレゼントがありました。<br />
+これを利用して、コードラボのアプリ開発体験に参加できました。<br />
+<div id="attachment_105" class="wp-caption alignnone" style="width: 160px"><a href="http://andbrowser.com/wp-content/uploads/2011/07/OptimusPad.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/07/OptimusPad-150x150.jpg" alt="Optimus Pad L-06C" title="OptimusPad" width="150" height="150" class="size-thumbnail wp-image-105" /></a><p class="wp-caption-text">Optimus Pad L-06C</p></div><br />
+<br />
+Honeycomb 3.0 のエミュレータが遅くて使い物にならないという状況もあり、実際にコードをいじってアプリを開発していくコードラボのために貸出ではなく、プレゼントということで大変ありがたいです。<br />
+ほとんどの参加者が MAC でしたが、私も含めて数名の Windows での参加者はドライバのインストールで困ったことがありました。ＬＧからダウンロードしたドライバアプリをインストールしだだけではWindows 7 64bit版でドライバを認識させることができませんでした。問題解決は、以下のサイトで解説されていのたで、こちらを参考にしました。<br />
+大変役に立ちました。ありがとうございました。</p>
+<p>■Optimus PadのUSBドライバ<br />
+<a href="http://www.lg.com/jp/mobile-phones/download-page/L-06C/product-info-driver.jsp">http://www.lg.com/jp/mobile-phones/download-page/L-06C/product-info-driver.jsp</a><br />
+<div id="attachment_107" class="wp-caption alignnone" style="width: 160px"><a href="http://andbrowser.com/wp-content/uploads/2011/07/OptimusPadLgDriver.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/07/OptimusPadLgDriver-150x150.jpg" alt="OptimusPad Lg Driver" title="OptimusPadLgDriver" width="150" height="150" class="size-thumbnail wp-image-107" /></a><p class="wp-caption-text">OptimusPad Lg Driver</p></div></p>
+<p>■Optimus PadのUSBドライバをインストールする<br />
+<a href="http://darkroid.net/archives/928">http://darkroid.net/archives/928</a></p>
+<p>■Optimus PadのUSBドライバをインストールする その2<br />
+<a href="http://darkroid.net/archives/933">http://darkroid.net/archives/933</a></p>
+<p>コードラボで開発したアプリは、昔懐かしい notepad アプリでした。<br />
+スマートフォン版のnotepadアプリを Fragmet Technology を利用して、２ペインのタブレット向けアプリ化するというものでした。</p>
+<p>■当日の資料やアジェンダは以下にあります。<br />
+<a href="http://j.mp/adltokyo2011">http://j.mp/adltokyo2011</a></p>
+<p>（※）イベント中に「なぜgoogleの中の人がgoo.gl じゃなくて j.mp を使うんですか？」と質問があり、<br />
+「j.mp は後ろが自由に定義できるので利用している。それだけの理由です。」というやりとりがありました。</p>
+<p>■当日のQ&#038;Aは、以下の moderator にあります。<br />
+<a href="https://www.google.com/moderator/#16/e=954eb">https://www.google.com/moderator/#16/e=954eb</a></p>
+<p>Honeycomb タブレットアプリ開発に参考になるリンクは以下です。</p>
+<p>■ドキュメント系<br />
+<a href="http://developer.android.com/sdk/android-3.0.html">Android 3.0 Platformの紹介</a><br />
+<a href="http://developer.android.com/guide/practices/optimizing-for-3.0.html">Optimizing Apps for Android 3.0（タブレット）向けのアプリ最適化</a></p>
+<p>■Google I/O 2011 セミナー動画、プレゼンテーション資料<br />
+<a href="http://www.google.com/events/io/2011/sessions/honeycomb-highlights.html">Honeycomb ハイライト</a><br />
+<a href="http://www.google.com/events/io/2011/sessions/android-protips-advanced-topics-for-expert-android-app-developers.html">Android Protips: さらに発展したトピック。。。</a><br />
+<a href="http://www.google.com/events/io/2011/sessions/designing-and-implementing-android-uis-for-phones-and-tablets.html">スマートフォンとタブレット向けのUIデザインについて</a><br />
+<a href="http://www.google.com/events/io/2011/sessions/android-market-for-developers.html">開発者向けのAndroidマーケット</a></p>
+<p>■参考になるサンプルプログラム<br />
+<a href="http://code.google.com/p/iosched">Google I/O 2011 スケジュールアプリ</a><br />
+ &#8211; セッション内容や参加会社情報などが見えるアプリ<br />
+<a href="http://code.google.com/p/xlarge-demos">Photo Album (xlarge-demos)</a><br />
+<a href="http://developer.android.com/resources/samples/HoneycombGallery/index.html">Honeycomb ギャラリー(Android SDKにソースコードがあります)</a></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/111/androiddeveloperlab2011-adl11jp-codelab/" rel="bookmark" class="wherego_title">Androidタブレット向けアプリ開発方法</a></li><li><a href="http://andbrowser.com/development/knowhow/186/1apk-tablet-phone-development/" rel="bookmark" class="wherego_title">1apkでAndroidタブレット向けとスマートフォン向けアプリを実現する方法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/96/androiddeveloperlab2011-adl11jp/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/96/androiddeveloperlab2011-adl11jp/" />
+	</item>
+	</channel>
+</rss>

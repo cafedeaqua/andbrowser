@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+<channel>
+	<title>Bescottee &#187; nexus s</title>
+	<atom:link href="http://andbrowser.com/tag/nexus-s/feed/" rel="self" type="application/rss+xml" />
+	<link>http://andbrowser.com</link>
+	<description>苦しいときは伸びてるとき、楽なときは伸びていないとき</description>
+	<lastBuildDate>Sat, 06 Jan 2018 14:12:26 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/tag/nexus-s/feed/" />
+		<item>
+		<title>adb shell pm list コマンドの端末ごとの違いについて</title>
+		<link>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/</link>
+		<comments>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/#comments</comments>
+		<pubDate>Sat, 03 Dec 2011 16:17:01 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[adb]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[IS03]]></category>
+		<category><![CDATA[nexus s]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=647</guid>
+		<description><![CDATA[adb shell pm list コマンドによって、端末やOSバージョンごとの違いを調査]]></description>
+			<content:encoded><![CDATA[<p><img src="http://andbrowser.com/wp-content/uploads/2011/12/20111204_pm_list_command.png" alt="pm list コマンド" title="pm list コマンド" width="371" height="232" class="aligncenter size-full wp-image-663" /></p>
+<h4>pm list コマンド</h4>
+<p>androidアプリ開発をしている場合は、adb コマンドは必須でしょう。adbコマンド以外にもいくつも<a href="http://developer.android.com/guide/developing/tools/index.html">Android SDK DevGuide Tools</a>に記載されているようなコマンドが提供されています。</p>
+<p>今回紹介する pm list コマンドは、上記のようなSDKが提供しているコマンドではなく、端末内で提供されているコマンドです。これはどういう意味かというと、端末のバージョンや開発元（HTCやSamsungなど）によって利用できるものが異なるということです。</p>
+<h4>３台の端末（emulator込み）の比較</h4>
+<p>Androidバージョンの異なる２台の端末とエミュレータで pm list コマンドのオプションの比較を行います。差分は、<strong><span style="color: #ff0000;">pm list libraries コマンド</span></strong>のみ(pm clear PACKAGEはあまり利用しないだろうと独断と偏見で除外）がAndroidVersion 2.3（今回の場合、Nexus Sとエミュレータ（2.3.3)で提供されていました。<br />
+<span id="more-647"></span></p>
+<h5>Nexus S(Version:2.3.6, Build number:GRK39F)と Emulator(Version:2.3.3)</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list
+Error: didn't specify type of data to list
+usage: pm [list|path|install|uninstall]
+       pm list packages [-f] [-d] [-e] [-u] [FILTER]
+       pm list permission-groups
+       pm list permissions [-g] [-f] [-d] [-u] [GROUP]
+       pm list instrumentation [-f] [TARGET-PACKAGE]
+       pm list features
+       pm list libraries
+       pm path PACKAGE
+       pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+       pm uninstall [-k] PACKAGE
+       pm clear PACKAGE
+       pm enable PACKAGE_OR_COMPONENT
+       pm disable PACKAGE_OR_COMPONENT
+       pm setInstallLocation [0/auto] [1/internal] [2/external]
+---snip---
+</script></p>
+<h5>IS03(Version:2.2.1, Build number:01.01.08)</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list
+Error: didn't specify type of data to list
+usage: pm [list|path|install|uninstall]
+       pm list packages [-f]
+       pm list permission-groups
+       pm list permissions [-g] [-f] [-d] [-u] [GROUP]
+       pm list instrumentation [-f] [TARGET-PACKAGE]
+       pm list features
+       pm path PACKAGE
+       pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+       pm uninstall [-k] PACKAGE
+       pm enable PACKAGE_OR_COMPONENT
+       pm disable PACKAGE_OR_COMPONENT
+       pm setInstallLocation [0/auto] [1/internal] [2/external]
+---snip---
+</script></p>
+<h4>pm list libraries コマンド</h4>
+<p>このコマンドは何を表示してくれるものかというと以下の実行結果のように端末の中に入っているライブラリを一覧表示してくれます。このライブラリを必要とするアプリ（Google Maps を利用しているアプリやusb.accessoryを利用しているアプリなど）は、インストーラーが端末側に利用するライブラリが存在するかどうかを確認し、存在しなければ以下のようなエラーメッセージ(INSTALL_FAILED_MISSING_SHARED_LIBRARY)が表示されて、アプリのインストールが失敗します。</p>
+<h5>必要なライブラリが端末に存在しない場合のエラーメッセージ（例として、ADKのサンプルアプリDemoKitLaunchをlibrary:com.android.future.usb.accessory が搭載されていない端末にインストールした場合） </h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+#adb install DemoKitLaunch.apk
+1233 KB/s (2648492 bytes in 2.096s)
+        pkg: /data/local/tmp/DemoKitLaunch.apk
+Failure [INSTALL_FAILED_MISSING_SHARED_LIBRARY]
+</script></p>
+<h5>Nexus S への pm list libraries コマンド</h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+$ adb shell pm list libraries
+library:android.test.runner
+library:com.android.future.usb.accessory
+library:com.android.location.provider
+library:com.google.android.maps
+library:com.google.android.nfc_extras
+library:javax.obex
+</script></p>
+<h5>Android Emulator(Version;2.3.3) （作成時のtarget は、Google APIs ではない方） </h5>
+<p><script class="brush: shell;" type="syntaxhighlighter">
+library:android.test.runner
+library:com.android.location.provider
+library:javax.obex
+</script></p>
+<h4>結論</h4>
+<ul>
+<li>今回の調査対象とした Nexus S(2.3.6)や emulator(2.3.3)にはpm list に追加オプション(libraries)が存在
+<li>但し、2.3(GB)の全端末で提供されているかどうかは不明。（ありそうな気がしますが・・・）
+<li>アプリインストール時に利用ライブラリがないエラーがでた場合に、pm list libraries で調査が可能
+<li>2.2以下でpm list libraries が提供されていない場合の調査方法は不明。（adb install してみるしかない？）
+</ul>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li><li><a href="http://andbrowser.com/development/3583/hvc-c2wsdk/" rel="bookmark" class="wherego_title">家族目線(HVC-C2W)SDKのAndroid版サンプルアプリ利用方法</a></li><li><a href="http://andbrowser.com/android-sdk/3498/httpsjcenter-bintray-comcomandroidtoolsbuildgradle/" rel="bookmark" class="wherego_title">https://jcenter.bintray.com/com/android/tools/build/gradle/</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/feed/</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/647/adb-shell-pm-list/" />
+	</item>
+		<item>
+		<title>新しいタイル表示版Android Market の取得方法</title>
+		<link>http://andbrowser.com/development/knowhow/361/android_market_how_to_update_new_version/</link>
+		<comments>http://andbrowser.com/development/knowhow/361/android_market_how_to_update_new_version/#comments</comments>
+		<pubDate>Sun, 21 Aug 2011 17:12:58 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[KnowHow]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[nexus s]]></category>
+
+		<guid isPermaLink="false">http://andbrowser.com/?p=361</guid>
+		<description><![CDATA[新しいタイル表示版のAndroidMarketアプリの更新方法を記載。USのSIMカードとキャッシュ消去で更新可能。
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012027.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012027-180x300.png" alt="AndroidMarketNewVersion1" title="AndroidMarketNewVersion1" width="180" height="300" class="alignleft size-medium wp-image-362" style="margin-left: 10px"/></a><a href="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012151.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012151-180x300.png" alt="AndroidMarketNewVersion1" title="AndroidMarketNewVersion2" width="180" height="300" class="alignleft size-medium wp-image-363" style="margin-left: 10px"/></a><br />
+<br clear="left"></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012110.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012110-180x300.png" alt="AndroidMarketNewVersion3" title="AndroidMarketNewVersion3" width="180" height="300" class="alignleft size-medium wp-image-367" style="margin-left: 10px"/></a><a href="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012118.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/device-2011-08-22-012118-180x300.png" alt="AndroidMarketNewVersion4" title="AndroidMarketNewVersion4" width="180" height="300" class="alignleft size-medium wp-image-368" style="margin-left: 10px"/></a><br />
+<br clear="left"></p>
+<h4>取得方法</h4>
+<h5>必要なもの</h5>
+<ul>
+<li>SIMフリーなAndroid端末（対応Android Versionは不明）
+<ul>
+<li>私の場合は、Nexus S(2.3.4)でした
+	</ul>
+<li>USのSIMカード
+<ul>
+<li>私の場合は、NexusS購入時についてきた以下の写真のT-MobileのSIMカードを利用しました
+	</ul>
+</ul>
+<p>※他の国のSIMカードでも可能かもしれませんが、試していないのでわかりません。<br />
+<a href="http://andbrowser.com/wp-content/uploads/2011/08/ENIMAGE1313942955348.jpg"><img src="http://andbrowser.com/wp-content/uploads/2011/08/ENIMAGE1313942955348-300x225.jpg" alt="T-Mobile SIM Card" title="T-Mobile SIM Card" width="300" height="225" class="alignleft size-medium wp-image-379" /></a><br />
+<br clear="left"></p>
+<h5>手順</h5>
+<ol>
+<li>USのSIMカードを刺して端末を起動。Wifi で Internet に接続状態にしておくこと。
+<li>「設定」アプリ→アプリケーション→アプリケーションの管理（スクリーンショットあり）→マーケット（スクリーンショットあり）に移動して、「キャッシュの消去」を実行
+<li>ホームに戻って、1,2分待ってからAndroid Market を起動すると新しいタイル表示版Android Market に更新済み。
+<li>Android Market 更新中にホーム上のショートカットから起動しようとすると「アプリケーションがありません」と言われます。こうなると更新中に間違いないありません。（Android Market アプリはシステムアプリなのでユーザは削除できないため）
+</ol>
+<p>人によっては、キャッシュの消去を実施しなくても新しいタイル表示版Android Marketに更新された人もいるようですが、私の場合は、更新されなかったため、この方法を試してみてうまくいきました。USのSIMが無い方は、周りにもっている人がいれば少しだけ借りて、AndroidMarketを更新したあとに返すという方法もあります。</p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/08/screenshot008.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/screenshot008-180x300.png" alt="AndroidMarket How to update new version" title="AndroidMarket How to update new version" width="180" height="300" class="alignleft size-medium wp-image-380"  style="margin-left: 10px"/></a></p>
+<p><a href="http://andbrowser.com/wp-content/uploads/2011/08/screenshot007.png"><img src="http://andbrowser.com/wp-content/uploads/2011/08/screenshot007-180x300.png" alt="AndroidMarket How to update new version2" title="AndroidMarket How to update new version2" width="180" height="300" class="alignleft size-medium wp-image-381" style="margin-left: 10px" /></a><br />
+<br clear="left"></p>
+<div id="wherego_related"><h3>このページを見た人は、以下のページも見ています。</h3><ul><li><a href="http://andbrowser.com/development/knowhow/869/sdk-tools-r17/" rel="bookmark" class="wherego_title">SDK Tools Revision 17更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/990/android-development-tools-adt-20-0-2/" rel="bookmark" class="wherego_title">Android Development Tools(ADT) 20.0.2 更新情報</a></li><li><a href="http://andbrowser.com/development/knowhow/65/eclipse-android-memory-leak-mat/" rel="bookmark" class="wherego_title">メモリリークを発見！Androidアプリのメモリ解析手法</a></li></ul></div>]]></content:encoded>
+			<wfw:commentRss>http://andbrowser.com/development/knowhow/361/android_market_how_to_update_new_version/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<xhtml:link rel="alternate" media="handheld" type="text/html" href="http://andbrowser.com/development/knowhow/361/android_market_how_to_update_new_version/" />
+	</item>
+	</channel>
+</rss>
